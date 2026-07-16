@@ -1,7 +1,7 @@
 # 📚 Referências Bibliográficas Consolidadas
 ## Repositório de Sociologia - Ensino Médio
 
-**Compilação final de todas as fontes** consultadas no desenvolvimento do site. Cobre os 11 tópicos pesquisados em profundidade (P1-P4) e os 12 tópicos originais, padronizados com bibliografia clássica coerente com seu conteúdo.
+**Compilação final de todas as fontes** consultadas no desenvolvimento do site. Cobre todos os 31 tópicos — os 23 originais/pesquisados em profundidade (P1-P4) e os 8 novos tópicos adicionados a partir do esquema da apostila.
 Formato: ABNT. Última atualização: Julho de 2026.
 
 ---
@@ -243,5 +243,67 @@ Os 12 tópicos que já existiam no site antes desta fase de desenvolvimento não
 
 ---
 
+---
+
+## Novos Tópicos — Parte do Esquema da Apostila (acréscimo Julho 2026)
+
+### Tópico 8 — Cultura, Arte e Comunicação
+- ADORNO, T.; HORKHEIMER, M. **Dialética do Esclarecimento**. Rio de Janeiro: Zahar, 1985 [1944].
+- BENJAMIN, W. A obra de arte na era de sua reprodutibilidade técnica. In: **Magia e Técnica, Arte e Política**. São Paulo: Brasiliense, 1994 [1936].
+- BOURDIEU, P. **A Distinção: crítica social do julgamento**. São Paulo: Edusp, 2008 [1979].
+- MCLUHAN, M. **Os Meios de Comunicação como Extensões do Homem**. São Paulo: Cultrix, 1964.
+- MARCUSE, H. **O Homem Unidimensional**. São Paulo: Edipro, 2015 [1964].
+
+### Tópico 10 — Religiões no Mundo Contemporâneo
+- IBGE. **Censo Demográfico 2022**. Rio de Janeiro: IBGE, 2023.
+- MARIANO, R. **Neopentecostais: sociologia do novo pentecostalismo no Brasil**. São Paulo: Loyola, 1999.
+- PIERUCCI, A. F.; PRANDI, R. **A Realidade Social das Religiões no Brasil**. São Paulo: Hucitec, 1996.
+- GIDDENS, A. **Para Além da Esquerda e da Direita**. São Paulo: Editora UNESP, 1996.
+- NASCIMENTO, A. P. Racismo religioso. In: **Terreiros e Territórios**. Salvador: EDUFBA, 2016.
+
+### Tópico 11 — Raça
+- ALMEIDA, S. **Racismo Estrutural**. São Paulo: Sueli Carneiro; Pólen, 2019.
+- CRENSHAW, K. Demarginalizing the Intersection of Race and Sex. **University of Chicago Legal Forum**, 1989.
+- FERNANDES, F. **A Integração do Negro na Sociedade de Classes**. São Paulo: Dominus, 1965.
+- HASENBALG, C. **Discriminação e Desigualdades Raciais no Brasil**. Rio de Janeiro: Graal, 1979.
+- MUNANGA, K. **Rediscutindo a Mestiçagem no Brasil**. Belo Horizonte: Autêntica, 2004.
+
+### Tópico 13 — Corporalidade e Afetos
+- FOUCAULT, M. **Vigiar e Punir**. Petrópolis: Vozes, 1987 [1975].
+- FOUCAULT, M. **História da Sexualidade, v. 1: A Vontade de Saber**. Rio de Janeiro: Graal, 1988 [1976].
+- GIDDENS, A. **A Transformação da Intimidade**. São Paulo: Editora UNESP, 1993 [1992].
+- BUTLER, J. **Problemas de Gênero**. Rio de Janeiro: Civilização Brasileira, 2003 [1990].
+- LOURO, G. L. **Gênero, Sexualidade e Educação**. Petrópolis: Vozes, 1997.
+
+### Tópico 16 — Culturas Juvenis
+- ARIÈS, P. **História Social da Criança e da Família**. Rio de Janeiro: LTC, 1981 [1960].
+- MANNHEIM, K. O problema das gerações. In: **Sociologia do Conhecimento**. Porto: Rés, 1982 [1928].
+- VAN GENNEP, A. **Os Ritos de Passagem**. Petrópolis: Vozes, 1978 [1909].
+- HEBDIGE, D. **Subculture: The Meaning of Style**. Londres: Methuen, 1979.
+- ABRAMO, H. W. **Cenas Juvenis**. São Paulo: Scritta, 1994.
+
+### Tópico 25 — Sistema Capitalista
+- MARX, K. **O Capital: crítica da economia política**. Livro I. São Paulo: Boitempo, 2013 [1867].
+- MARX, K.; ENGELS, F. **Manifesto do Partido Comunista**. São Paulo: Boitempo, 1998 [1848].
+- LÊNIN, V. I. **Imperialismo, Fase Superior do Capitalismo**. São Paulo: Global, 1987 [1917].
+- WOOD, E. M. **A Origem do Capitalismo**. Rio de Janeiro: Jorge Zahar, 2001.
+- BRAVERMAN, H. **Trabalho e Capital Monopolista**. Rio de Janeiro: LTC, 1974.
+
+### Tópico 27 — Economia e Sociedade Contemporânea
+- HARVEY, D. **A Condição Pós-Moderna**. São Paulo: Loyola, 1992 [1989].
+- HARVEY, D. **O Neoliberalismo: história e implicações**. São Paulo: Loyola, 2008 [2005].
+- CASTELLS, M. **A Sociedade em Rede**. São Paulo: Paz e Terra, 1999 [1996].
+- ANTUNES, R. **Coronavírus: o trabalho sob fogo cruzado**. São Paulo: Boitempo, 2020.
+- ABÍLIO, L. C. Uberização: a era do trabalhador just-in-time. **Estudos Avançados**, São Paulo, v. 34, n. 98, 2020.
+
+### Tópico 31 — Migrações e Deslocamentos Humanos
+- ACNUR. **Tendências Globais: Deslocamento Forçado 2023**. Genebra: ACNUR, 2024.
+- SAYAD, A. **A Imigração ou os Paradoxos da Alteridade**. São Paulo: Edusp, 1998.
+- SASSEN, S. **Expulsões: brutalidade e complexidade na economia global**. Rio de Janeiro: Paz e Terra, 2016.
+- BAENINGER, R. (org.). **Imigração Boliviana no Brasil**. Campinas: NEPO/UNICAMP, 2012.
+- CAVALCANTI, L.; OLIVEIRA, T.; SILVA, B. G. **Relatório Anual 2022: Migrações e Refúgio no Brasil**. Brasília: OBMigra, 2022.
+
+---
+
 *Documento compilado em Julho de 2026 | Branch `claude/sociology-content-org-ia5lfq`*
-*Total: 23 tópicos com referências (11 com pesquisa profunda P1-P4 + 12 padronizados), ~55 autores, 70+ obras e fontes institucionais*
+*Total: 31 tópicos com referências (23 originais + 8 novos tópicos do esquema da apostila), ~75 autores, 100+ obras e fontes institucionais*

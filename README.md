@@ -12,7 +12,7 @@ Site SPA (Single Page Application) com conteúdo estruturado de Sociologia para 
 - ✅ **Interface moderna e responsiva** - Funciona em desktop, tablet e mobile
 - ✅ **Buscador em tempo real** - Encontre tópicos instantaneamente
 - ✅ **Navegação fluida** - SPA sem recarregamento de página
-- ✅ **23 tópicos completos** - Conteúdo com rigor acadêmico e transposição didática
+- ✅ **31 tópicos completos** - Conteúdo com rigor acadêmico e transposição didática
 - ✅ **Referências bibliográficas** - ABNT em todos os tópicos
 - ✅ **Design minimalista** - Inspirado no Notion, sem distrações
 - ✅ **Sem dependências externas** - Apenas Tailwind CSS via CDN
@@ -41,7 +41,7 @@ open index.html
 xdg-open index.html
 ```
 
-## 📋 Tópicos Disponíveis (23/23 ✅)
+## 📋 Tópicos Disponíveis (31/31 ✅)
 
 1. **Indivíduo e Sociedade** — Imaginação sociológica, socialização, grupos e instituições
 2. **A Sociologia como Ciência** — Comte, Iluminismo, positivismo e método científico
@@ -50,22 +50,30 @@ xdg-open index.html
 5. **Populações do Brasil** — Urbanização, indígenas, quilombolas, diversidade
 6. **A Sociedade Brasileira** — Formação histórica, intérpretes, patrimonialismo
 7. **Diversidade Cultural no Brasil** — Mito da democracia racial, relações étnico-raciais
-8. **Política e Poder** — Estado, democracia, cidadania, partidos e representação
+8. **Cultura, Arte e Comunicação** — Escola de Frankfurt, indústria cultural, mídias
 9. **Religião e Sociedade** — Weber, Durkheim, Marx, neopentecostalismo no Brasil
-10. **Movimentos Sociais** — Teorias, ciclos, MST, feminismo, LGBTQIA+
-11. **Educação e Socialização** — Bourdieu, Paulo Freire, cotas, educação no Brasil
+10. **Religiões no Mundo Contemporâneo** — Pluralismo, laicidade, fundamentalismo
+11. **Raça** — Construção social, racismo científico, abolição, racismo estrutural
 12. **Gênero e Sexualidade** — Feminismo, performatividade, movimento LGBTQIA+
-13. **Saúde e Sociedade** — Determinantes sociais, SUS, desigualdades em saúde
-14. **Comunicação de Massa** — Mídia, opinião pública, fake news, redes sociais
-15. **Família** — Modelos familiares, transformações históricas, diversidade familiar
-16. **Desvio Social e Controle** — Durkheim, Goffman, encarceramento, estigma
-17. **Conflito e Mudança Social** — Teorias do conflito, revoluções, reforma agrária
-18. **Identidade Social** — Identidade nacional, juventude, pertencimento e diferença
-19. **Trabalho** — Formas históricas, fordismo, precarização, movimentos trabalhistas
-20. **Envelhecimento e Ciclos de Vida** — Gerontologia social, terceira idade, políticas
-21. **Classes e Desigualdade Social** — Durkheim, Weber, Bourdieu, mobilidade social
-22. **Pobreza e Desigualdade no Brasil** — Gini, IDH, Bolsa Família, políticas sociais
-23. **Globalização e Sociedade** — Neoliberalismo, fluxos globais, identidades
+13. **Corporalidade e Afetos** — Foucault, biopoder, Giddens, heterocisnorma
+14. **Família** — Modelos familiares, transformações históricas, diversidade familiar
+15. **Envelhecimento e Ciclos de Vida** — Gerontologia social, terceira idade, políticas
+16. **Culturas Juvenis** — Juventude como construção social, gerações X/Y/Z, subculturas
+17. **Educação e Socialização** — Bourdieu, Paulo Freire, cotas, educação no Brasil
+18. **Saúde e Sociedade** — Determinantes sociais, SUS, desigualdades em saúde
+19. **Comunicação de Massa** — Mídia, opinião pública, fake news, redes sociais
+20. **Política e Poder** — Estado, democracia, cidadania, partidos e representação
+21. **Movimentos Sociais** — Teorias, ciclos, MST, feminismo, LGBTQIA+
+22. **Identidade Social** — Identidade nacional, juventude, pertencimento e diferença
+23. **Desvio Social e Controle** — Durkheim, Goffman, encarceramento, estigma
+24. **Conflito e Mudança Social** — Teorias do conflito, revoluções, reforma agrária
+25. **Sistema Capitalista** — Origens, fases históricas, mais-valia, Marx
+26. **Trabalho** — Formas históricas, fordismo, precarização, movimentos trabalhistas
+27. **Economia e Sociedade Contemporânea** — Neoliberalismo, financeirização, uberização
+28. **Globalização e Sociedade** — Fluxos globais, identidades, imperialismo cultural
+29. **Classes e Desigualdade Social** — Durkheim, Weber, Bourdieu, mobilidade social
+30. **Pobreza e Desigualdade no Brasil** — Gini, IDH, Bolsa Família, políticas sociais
+31. **Migrações e Deslocamentos Humanos** — Refugiados, xenofobia, migração brasileira
 
 ## 🛠️ Tecnologias
 
@@ -143,4 +151,4 @@ Tem alguma sugestão? Encontrou um erro? Abra uma [Issue](https://github.com/gus
 
 **Última atualização:** Julho de 2026
 
-**Status:** 🟢 23 tópicos completos
+**Status:** 🟢 31 tópicos completos
