@@ -1,14 +1,15 @@
 # 📚 Referências Bibliográficas Consolidadas
 ## Repositório de Sociologia - Ensino Médio
 
-**Compilação final de todas as fontes** consultadas no desenvolvimento dos 11 tópicos (P1-P4).
+**Compilação final de todas as fontes** consultadas no desenvolvimento do site. Cobre os 11 tópicos pesquisados em profundidade (P1-P4) e os 12 tópicos originais, padronizados com bibliografia clássica coerente com seu conteúdo.
 Formato: ABNT. Última atualização: Julho de 2026.
 
 ---
 
 ## 📖 Como Este Documento Está Organizado
 
-- **Parte 1:** Obras clássicas e teóricas (livros/autores fundamentais), por tópico
+- **Parte 1:** Obras clássicas e teóricas dos 11 tópicos com pesquisa profunda (P1-P4)
+- **Parte 1.1:** Referências dos 12 tópicos originais (padronização)
 - **Parte 2:** Fontes de dados e institucionais (IBGE, Fiocruz, órgãos oficiais)
 - **Parte 3:** Índice de autores citados no site
 
@@ -94,6 +95,86 @@ Formato: ABNT. Última atualização: Julho de 2026.
 
 ---
 
+# PARTE 1.1 — REFERÊNCIAS DOS 12 TÓPICOS ORIGINAIS (PADRONIZAÇÃO)
+
+Os 12 tópicos que já existiam no site antes desta fase de desenvolvimento não possuíam seção de referências. Para padronizar o repositório, cada um recebeu uma bibliografia clássica coerente com o conteúdo já publicado.
+
+## Tópico 1 — Indivíduo e Sociedade
+
+- MILLS, C. W. **A Imaginação Sociológica**. Rio de Janeiro: Zahar, 1959.
+- ELIAS, N. **A Sociedade dos Indivíduos**. Rio de Janeiro: Zahar, 1939.
+- BERGER, P.; LUCKMANN, T. **A Construção Social da Realidade**. Petrópolis: Vozes, 1966.
+
+## Tópico 2 — A Sociologia como Ciência
+
+- COMTE, A. **Curso de Filosofia Positiva**. 1830-1842.
+- QUINTANEIRO, T.; BARBOSA, M. L.; OLIVEIRA, M. G. **Um Toque de Clássicos: Marx, Durkheim e Weber**. Belo Horizonte: Editora UFMG, 2002.
+- GIDDENS, A.; SUTTON, P. **Conceitos Essenciais da Sociologia**. São Paulo: Editora UNESP, 2016.
+
+## Tópico 3 — Os Fundadores da Sociologia
+
+- DURKHEIM, É. **As Regras do Método Sociológico**. 1895.
+- DURKHEIM, É. **O Suicídio**. 1897.
+- MARX, K. **O Capital: crítica da economia política**. 1867.
+- WEBER, M. **A Ética Protestante e o Espírito do Capitalismo**. 1905.
+
+## Tópico 4 — Cultura e Sociedade
+
+- TYLOR, E. B. **Primitive Culture**. Londres: John Murray, 1871.
+- GEERTZ, C. **A Interpretação das Culturas**. Rio de Janeiro: LTC, 1973.
+- LARAIA, R. de B. **Cultura: um conceito antropológico**. Rio de Janeiro: Zahar, 1986.
+
+## Tópico 5 — Populações do Brasil
+
+- IBGE. **Censo Demográfico 2022**. Rio de Janeiro: IBGE, 2023.
+- SANTOS, M. **A Urbanização Brasileira**. São Paulo: Hucitec, 1993.
+- RIBEIRO, D. **O Povo Brasileiro: a formação e o sentido do Brasil**. São Paulo: Companhia das Letras, 1995.
+
+## Tópico 6 — A Sociedade Brasileira
+
+- HOLANDA, S. B. de. **Raízes do Brasil**. Rio de Janeiro: José Olympio, 1936.
+- PRADO JR., C. **Formação do Brasil Contemporâneo**. São Paulo: Brasiliense, 1942.
+- FERNANDES, F. **A Revolução Burguesa no Brasil**. Rio de Janeiro: Zahar, 1975.
+
+## Tópico 7 — Diversidade Cultural no Brasil
+
+- FERNANDES, F. **A Integração do Negro na Sociedade de Classes**. São Paulo: Dominus, 1965.
+- HASENBALG, C. **Discriminação e Desigualdades Raciais no Brasil**. Rio de Janeiro: Graal, 1979.
+- DAMATTA, R. **O que faz o brasil, Brasil?**. Rio de Janeiro: Rocco, 1986.
+
+## Tópico 9 — Religião e Sociedade
+
+- WEBER, M. **A Ética Protestante e o Espírito do Capitalismo**. 1905.
+- DURKHEIM, É. **As Formas Elementares da Vida Religiosa**. 1912.
+- MARX, K. **Crítica da Filosofia do Direito de Hegel** (Introdução). 1843.
+
+## Tópico 12 — Gênero e Sexualidade
+
+- BUTLER, J. **Problemas de Gênero: feminismo e subversão da identidade**. 1990.
+- SCOTT, J. Gênero: uma categoria útil de análise histórica. **Educação & Realidade**, 1986.
+- CRENSHAW, K. **Demarginalizing the Intersection of Race and Sex**. 1989.
+- hooks, b. **Teoria Feminista: da margem ao centro**. 1984.
+
+## Tópico 19 — Trabalho
+
+- MARX, K. **O Capital**, Livro I. 1867.
+- BRAVERMAN, H. **Trabalho e Capital Monopolista**. Rio de Janeiro: LTC, 1974.
+- ANTUNES, R. **Os Sentidos do Trabalho**. São Paulo: Boitempo, 1999.
+
+## Tópico 21 — Classes e Desigualdade Social
+
+- MARX, K.; ENGELS, F. **Manifesto do Partido Comunista**. 1848.
+- WEBER, M. **Economia e Sociedade**. 1922.
+- DURKHEIM, É. **Da Divisão do Trabalho Social**. 1893.
+
+## Tópico 22 — Pobreza e Desigualdade no Brasil
+
+- IBGE. **Síntese de Indicadores Sociais**. Rio de Janeiro: IBGE.
+- IPEA. Dados e estudos sobre pobreza e desigualdade no Brasil.
+- REGO, W. L.; PINZANI, A. **Vozes do Bolsa Família**. São Paulo: Editora UNESP, 2013.
+
+---
+
 # PARTE 2 — FONTES DE DADOS E INSTITUCIONAIS
 
 ## Institutos e Órgãos Oficiais
@@ -163,4 +244,4 @@ Formato: ABNT. Última atualização: Julho de 2026.
 ---
 
 *Documento compilado em Julho de 2026 | Branch `claude/sociology-content-org-ia5lfq`*
-*Total: 11 tópicos desenvolvidos, 30 autores, 40+ obras e fontes institucionais*
+*Total: 23 tópicos com referências (11 com pesquisa profunda P1-P4 + 12 padronizados), ~55 autores, 70+ obras e fontes institucionais*
