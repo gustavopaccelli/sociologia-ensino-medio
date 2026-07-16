@@ -1,0 +1,1197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repositório de Sociologia | Ensino Médio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        * {
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+        }
+        
+        .sidebar-bg {
+            background-color: #fbfbfa;
+        }
+        
+        .toggle-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-in-out;
+        }
+        
+        .toggle-content.active {
+            max-height: 500px;
+        }
+        
+        .callout {
+            border-left: 4px solid;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            background-color: rgba(0,0,0,0.02);
+        }
+        
+        .callout.info {
+            border-color: #3b82f6;
+            background-color: #eff6ff;
+        }
+        
+        .callout.success {
+            border-color: #10b981;
+            background-color: #ecfdf5;
+        }
+        
+        .callout.warning {
+            border-color: #f59e0b;
+            background-color: #fffbeb;
+        }
+        
+        .callout.critical {
+            border-color: #ef4444;
+            background-color: #fef2f2;
+        }
+        
+        .breadcrumb-divider {
+            color: #d1d5db;
+            margin: 0 0.5rem;
+        }
+        
+        .content-main {
+            animation: fadeIn 0.3s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .nav-item {
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-item.active {
+            background-color: #f3f4f6;
+            border-left: 3px solid #1f2937;
+        }
+        
+        .nav-item:hover {
+            background-color: #f9fafb;
+        }
+        
+        .hamburger {
+            display: none;
+        }
+        
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+            
+            .sidebar {
+                position: fixed;
+                left: -100%;
+                top: 0;
+                height: 100vh;
+                width: 280px;
+                transition: left 0.3s;
+                z-index: 50;
+                overflow-y: auto;
+            }
+            
+            .sidebar.open {
+                left: 0;
+            }
+            
+            .sidebar-overlay {
+                display: none;
+            }
+            
+            .sidebar-overlay.open {
+                display: block;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0,0,0,0.5);
+                z-index: 40;
+            }
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <div class="flex h-screen">
+        <!-- SIDEBAR -->
+        <div class="sidebar sidebar-bg w-72 border-r border-gray-200 flex flex-col">
+            <div class="p-6 border-b border-gray-200">
+                <h1 class="text-xl font-bold text-gray-900 mb-4">📚 Sociologia</h1>
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    placeholder="Buscar tópicos..." 
+                    class="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-gray-400"
+                >
+            </div>
+            
+            <nav class="flex-1 overflow-y-auto p-4">
+                <div id="navContainer"></div>
+            </nav>
+            
+            <div class="p-4 border-t border-gray-200 text-xs text-gray-500 text-center">
+                <p>Estruturado para ENEM e Vestibulares</p>
+            </div>
+        </div>
+        
+        <!-- SIDEBAR OVERLAY (mobile) -->
+        <div class="sidebar-overlay" id="sidebarOverlay"></div>
+        
+        <!-- MAIN CONTENT -->
+        <div class="flex-1 flex flex-col overflow-hidden">
+            <!-- TOP BAR WITH HAMBURGER -->
+            <div class="border-b border-gray-200 px-6 py-4 flex items-center justify-between bg-white">
+                <button class="hamburger text-2xl text-gray-700" id="hamburgerBtn">☰</button>
+                <div id="breadcrumbContainer" class="flex-1 ml-4"></div>
+            </div>
+            
+            <!-- CONTENT AREA -->
+            <div class="flex-1 overflow-y-auto">
+                <div class="max-w-4xl mx-auto px-8 py-12 content-main" id="contentArea">
+                    <div class="text-center text-gray-400 py-20">
+                        <p class="text-lg">Selecione um tópico na barra lateral para começar</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // DATA STRUCTURE
+        const topicsData = [
+            {
+                id: "individuo-sociedade",
+                title: "1. Indivíduo e sociedade",
+                emoji: "👥",
+                parent: null,
+                content: `
+                    <h2 class="text-3xl font-bold mb-2 text-gray-900">Indivíduo e Sociedade</h2>
+                    <p class="text-gray-500 mb-6">Uma das questões centrais da Sociologia</p>
+                    
+                    <div class="callout info mb-6">
+                        <p class="font-semibold mb-2">💡 Conceito-chave</p>
+                        <p>A Sociologia explora como os indivíduos não existem isolados, mas inseridos em contextos sociais que moldam suas ações, pensamentos e identidades.</p>
+                    </div>
+                    
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Relação entre Indivíduo e Sociedade</h3>
+                    <p class="mb-4 text-gray-700">A relação entre indivíduo e sociedade é dialética: a sociedade molda o indivíduo através da socialização, enquanto os indivíduos também transformam a sociedade através de suas ações. Não há antinomia real entre eles.</p>
+                    
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle1">
+                            <span>📖 Imaginação Sociológica (C. Wright Mills)</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle1">
+                            <p class="text-gray-700 mt-4">A imaginação sociológica é a capacidade de conectar experiências pessoais com contextos históricos e sociais mais amplos. Mills argumenta que problemas privados são, muitas vezes, questões públicas e vice-versa.</p>
+                            <p class="text-gray-700 mt-2"><strong>Exemplo:</strong> Desemprego individual pode parecer um problema pessoal, mas é reflexo de transformações na economia global.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle2">
+                            <span>👨‍👩‍👧 O Grupo e a Construção da Identidade</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle2">
+                            <p class="text-gray-700 mt-4">Os grupos sociais são fundamentais na construção de identidades. Através da interação em grupos (família, escola, comunidades), desenvolvemos auto-conceito, valores e comportamentos.</p>
+                            <p class="text-gray-700 mt-2"><strong>Tipos de grupos:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li><strong>Grupos primários:</strong> Relações face-a-face, íntimas (família, amigos)</li>
+                                <li><strong>Grupos secundários:</strong> Relações formais, impessoais (escola, trabalho)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle3">
+                            <span>🎓 Processo de Socialização</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle3">
+                            <p class="text-gray-700 mt-4">A socialização é o processo contínuo mediante o qual as pessoas aprendem a se comportar de acordo com as normas sociais. Ocorre em diferentes etapas da vida:</p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li><strong>Socialização primária:</strong> Infância, principalmente pela família</li>
+                                <li><strong>Socialização secundária:</strong> Adolescência e vida adulta, pela escola, trabalho, grupos</li>
+                                <li><strong>Ressocialização:</strong> Mudanças significativas de contexto (prisão, migração)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="callout success mt-8">
+                        <p class="font-semibold mb-2">✓ Para lembrar</p>
+                        <p>Indivíduo e sociedade não são opostos; são interdependentes. A sociedade existe porque indivíduos agem coletivamente, e os indivíduos são moldados pela sociedade.</p>
+                    </div>
+                `
+            },
+            {
+                id: "sociologia-ciencia",
+                title: "2. A Sociologia como Ciência",
+                emoji: "🔬",
+                parent: null,
+                content: `
+                    <h2 class="text-3xl font-bold mb-2 text-gray-900">A Sociologia como Ciência</h2>
+                    <p class="text-gray-500 mb-6">O surgimento de uma nova forma de compreender a sociedade</p>
+                    
+                    <div class="callout critical mb-6">
+                        <p class="font-semibold mb-2">📍 Contexto Histórico</p>
+                        <p>A Sociologia surge no século XIX, em meio às transformações causadas pela Revolução Industrial, urbanização acelerada e revoluções políticas.</p>
+                    </div>
+                    
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Matrizes Pré-Sociológicas</h3>
+                    <p class="mb-4 text-gray-700">Antes da Sociologia científica, o pensamento social já se desenvolveu através de:</p>
+                    
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle4">
+                            <span>🏛️ Filosofia Social Grega e Medieval</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle4">
+                            <p class="text-gray-700 mt-4">Platão e Aristóteles pensaram sobre a organização social, enquanto pensadores medievais refletiram sobre a ordem feudal e a hierarquia social sob perspectiva religiosa.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle5">
+                            <span>💡 Iluminismo e Pensamento Racional</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle5">
+                            <p class="text-gray-700 mt-4">O Iluminismo (séc. XVIII) enfatizou a razão, a ciência e o progresso. Pensadores como Locke, Rousseau e Voltaire questionaram a ordem tradicional e abriram caminho para análises racionais da sociedade.</p>
+                            <p class="text-gray-700 mt-2"><strong>Contribuição:</strong> Ideia de que a sociedade é passível de estudo sistemático e reformas racionais.</p>
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Positivismo de Augusto Comte</h3>
+                    <p class="mb-4 text-gray-700">Augusto Comte (1798-1857) é considerado o pai da Sociologia científica. Propôs que:</p>
+                    
+                    <ul class="list-disc ml-6 text-gray-700 mb-4">
+                        <li>A sociedade segue leis naturais, assim como a física</li>
+                        <li>O conhecimento passa por três estágios: teológico, metafísico e positivo</li>
+                        <li>A Sociologia deve usar observação, experimentação e comparação</li>
+                        <li>O termo "Sociologia" foi cunhado por Comte</li>
+                    </ul>
+                    
+                    <div class="callout warning">
+                        <p class="font-semibold mb-2">⚠️ Crítica</p>
+                        <p>Embora Comte tenha formalizado a Sociologia como ciência, seu positivismo foi criticado por ser demasiadamente rígido e por ignorar a subjetividade humana.</p>
+                    </div>
+                    
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Sociologia como Ciência Social</h3>
+                    <p class="mb-4 text-gray-700">A Sociologia moderna é consensualmente aceita como ciência social que:</p>
+                    <ul class="list-disc ml-6 text-gray-700">
+                        <li>Estuda empiricamente os fenômenos sociais</li>
+                        <li>Usa métodos científicos (quantitativos e qualitativos)</li>
+                        <li>Busca compreender padrões e estruturas sociais</li>
+                        <li>Contribui para a reflexão sobre a organização societária</li>
+                    </ul>
+                `
+            },
+            {
+                id: "fundadores",
+                title: "3. Os Fundadores da Sociologia",
+                emoji: "👨‍🎓",
+                parent: null,
+                content: `
+                    <h2 class="text-3xl font-bold mb-2 text-gray-900">Os Fundadores da Sociologia</h2>
+                    <p class="text-gray-500 mb-6">Três pensadores clássicos que moldaram o campo</p>
+                    
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Émile Durkheim (1858-1917)</h3>
+                    
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle6">
+                            <span>Fato Social e Método Sociológico</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle6">
+                            <p class="text-gray-700 mt-4"><strong>Conceito fundamental:</strong> Fato social é "toda maneira de fazer, fixada ou não, suscetível de exercer sobre o indivíduo uma influência coercitiva."</p>
+                            <p class="text-gray-700 mt-2">Durkheim propôs estudar os fatos sociais como coisas externas, objetivas, independentes da vontade individual.</p>
+                            <p class="text-gray-700 mt-2"><strong>Exemplo:</strong> A língua que falamos é um fato social que nos coage.</p>
+                            <p class="text-gray-700 mt-2"><strong>Obra importante:</strong> "O Suicídio" (1897) - mostrou que até atos aparentemente individuais têm causas sociais.</p>
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Karl Marx (1818-1883)</h3>
+                    
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle7">
+                            <span>Materialismo Histórico e Luta de Classes</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle7">
+                            <p class="text-gray-700 mt-4"><strong>Ideia central:</strong> A história é movida não por ideias abstratas, mas pelas condições materiais de produção.</p>
+                            <p class="text-gray-700 mt-2"><strong>Conceito de classes:</strong> A sociedade capitalista é dividida entre burguesia (detentores dos meios de produção) e proletariado (trabalhadores).</p>
+                            <p class="text-gray-700 mt-2"><strong>Luta de classes:</strong> O conflito entre classes é o motor da transformação histórica.</p>
+                            <p class="text-gray-700 mt-2"><strong>Mais-valia:</strong> O lucro capitalista vem da apropriação do excedente de trabalho dos operários.</p>
+                            <p class="text-gray-700 mt-2"><strong>Obras principais:</strong> "O Capital" (1867), "Manifesto Comunista" (1848)</p>
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Max Weber (1864-1920)</h3>
+                    
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle8">
+                            <span>Sociologia Compreensiva e Ação Social</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle8">
+                            <p class="text-gray-700 mt-4"><strong>Abordagem:</strong> Weber propôs a "Verstehen" (compreensão), enfatizando que o sociólogo deve compreender o significado subjetivo das ações humanas.</p>
+                            <p class="text-gray-700 mt-2"><strong>Tipos de ação social:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li><strong>Racional-instrumental:</strong> Direcionada a fins (meios são calculados)</li>
+                                <li><strong>Racional-valorativa:</strong> Orientada por valores e princípios</li>
+                                <li><strong>Afetiva:</strong> Movida por emoções</li>
+                                <li><strong>Tradicional:</strong> Baseada em costumes e hábitos</li>
+                            </ul>
+                            <p class="text-gray-700 mt-2"><strong>Obra importante:</strong> "A Ética Protestante e o Espírito do Capitalismo" (1905)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="callout info">
+                        <p class="font-semibold mb-2">📊 Comparação dos Três</p>
+                        <table class="w-full text-sm mt-3">
+                            <tr class="border-b">
+                                <td class="font-bold text-gray-800 py-2">Foco Principal</td>
+                                <td><strong>Durkheim:</strong> Coesão social</td>
+                                <td><strong>Marx:</strong> Conflito de classes</td>
+                                <td><strong>Weber:</strong> Ação significativa</td>
+                            </tr>
+                            <tr class="border-b">
+                                <td class="font-bold text-gray-800 py-2">Método</td>
+                                <td>Objetivo/Positivista</td>
+                                <td>Crítico-dialético</td>
+                                <td>Compreensivo/Interpretativo</td>
+                            </tr>
+                        </table>
+                    </div>
+                `
+            },
+            {
+                id: "cultura-sociedade",
+                title: "4. Cultura e Sociedade",
+                emoji: "🎭",
+                parent: null,
+                content: `
+                    <h2 class="text-3xl font-bold mb-2 text-gray-900">Cultura e Sociedade</h2>
+                    <p class="text-gray-500 mb-6">Significados compartilhados que estruturam grupos humanos</p>
+                    
+                    <div class="callout info mb-6">
+                        <p class="font-semibold mb-2">📌 Definição</p>
+                        <p><strong>Cultura</strong> (definição antropológica): Conjunto de conhecimentos, crenças, artes, leis, morais, costumes e habilidades adquiridas por um grupo social. É transmitida socialmente e não é inata.</p>
+                    </div>
+                    
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Componentes da Cultura</h3>
+                    
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle9">
+                            <span>💬 Símbolos e Linguagem</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle9">
+                            <p class="text-gray-700 mt-4"><strong>Símbolos:</strong> Objetos, gestos ou palavras que representam algo além de seu significado literal. Exemplo: uma bandeira representa a nação.</p>
+                            <p class="text-gray-700 mt-2"><strong>Linguagem:</strong> Sistema de símbolos que permite a comunicação e transmissão de conhecimento. Essencial para a cultura.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle10">
+                            <span>📏 Normas e Valores</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle10">
+                            <p class="text-gray-700 mt-4"><strong>Normas:</strong> Regras de comportamento esperadas. Podem ser formais (leis) ou informais (costumes).</p>
+                            <p class="text-gray-700 mt-2"><strong>Valores:</strong> Princípios morais e ideais que um grupo considera importante. Exemplo: honestidade, liberdade, igualdade.</p>
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">O Darwinismo Social e Herança do Colonialismo</h3>
+                    
+                    <p class="mb-4 text-gray-700">O darwinismo social (séc. XIX) aplicou conceitos de evolução biológica à sociedade, argumentando que algumas culturas e raças eram "superiores". Isso legitimou:</p>
+                    
+                    <ul class="list-disc ml-6 text-gray-700 mb-4">
+                        <li>Colonialismo e imperialismo europeu</li>
+                        <li>Hierarquização de povos e culturas</li>
+                        <li>Racismo científico</li>
+                    </ul>
+                    
+                    <div class="callout critical">
+                        <p class="font-semibold mb-2">❌ Crítica Moderna</p>
+                        <p>Nenhuma cultura é "inferior" ou "superior". Todas têm lógicas internas válidas. O darwinismo social foi pseudociência usada para justificar opressão.</p>
+                    </div>
+                    
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Etnicidade e Relativismo Cultural</h3>
+                    
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle11">
+                            <span>🌍 Relativismo Cultural</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle11">
+                            <p class="text-gray-700 mt-4">O relativismo cultural afirma que cada cultura deve ser compreendida em seus próprios termos, não julgada pelos padrões de outra cultura.</p>
+                            <p class="text-gray-700 mt-2"><strong>Diferença importante:</strong> Relativismo ≠ Tolerância cega. Podemos respeitar diferenças e ainda questionar práticas que violam direitos humanos.</p>
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Diversidade Cultural e Multiculturalismo</h3>
+                    
+                    <p class="mb-4 text-gray-700">O multiculturalismo reconhece que sociedades modernas são plurais, com múltiplas culturas coexistindo. Questões atuais incluem:</p>
+                    <ul class="list-disc ml-6 text-gray-700">
+                        <li>Direitos de minorias culturais</li>
+                        <li>Educação multicultural</li>
+                        <li>Integração vs. assimilação</li>
+                        <li>Política de identidade</li>
+                    </ul>
+                `
+            },
+            {
+                id: "populacoes-brasil",
+                title: "5. Populações do Brasil",
+                emoji: "🗺️",
+                parent: null,
+                content: `
+                    <h2 class="text-3xl font-bold mb-2 text-gray-900">Populações do Brasil</h2>
+                    <p class="text-gray-500 mb-6">Diversidade e dinâmicas socioterritoriais</p>
+                    
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Brasil Urbano e Brasil Rural</h3>
+                    
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle12">
+                            <span>🏙️ Urbanização Brasileira</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle12">
+                            <p class="text-gray-700 mt-4">O Brasil passou de uma sociedade majoritariamente rural (1960: 55% urbana) para predominantemente urbana (2020: 88% urbana).</p>
+                            <p class="text-gray-700 mt-2"><strong>Características da urbanização brasileira:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>Acelerada e desordenada</li>
+                                <li>Gerou favelas e periferias</li>
+                                <li>Concentração em grandes metrópoles</li>
+                                <li>Migração do campo para a cidade</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle13">
+                            <span>🌾 O Brasil Rural Contemporâneo</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle13">
+                            <p class="text-gray-700 mt-4">Embora minoritário numericamente, o Brasil rural continua significativo. Caracteriza-se por:</p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>Grande propriedade (latifúndio) vs. pequena propriedade</li>
+                                <li>Agronegócio mecanizado e exportação</li>
+                                <li>Conflitos por terra (MST, sem-terra)</li>
+                                <li>Êxodo rural contínuo</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Indígenas, Quilombolas e Populações Tradicionais</h3>
+                    
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle14">
+                            <span>🏹 Povos Indígenas</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle14">
+                            <p class="text-gray-700 mt-4">Estima-se que existam cerca de 900 mil indígenas no Brasil, distribuídos em aproximadamente 300 etnias diferentes.</p>
+                            <p class="text-gray-700 mt-2"><strong>Situação atual:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>Vulnerabilidade socio-econômica e sanitária</li>
+                                <li>Conflitos com agronegócio e mineração</li>
+                                <li>Terras indígenas demarcadas, mas invadidas</li>
+                                <li>Movimento de afirmação identitária</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle15">
+                            <span>🏘️ Comunidades Quilombolas</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle15">
+                            <p class="text-gray-700 mt-4">Comunidades formadas por descendentes de escravizados que fugiram e se organizaram. Reconhecidas constitucionalmente (1988).</p>
+                            <p class="text-gray-700 mt-2"><strong>Características:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>Resistência histórica à escravidão</li>
+                                <li>Preservação de cultura afro-brasileira</li>
+                                <li>Lutam por titulação de terras</li>
+                                <li>Enfrentam racismo e marginalização</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Territorialidade e Direitos</h3>
+                    
+                    <p class="mb-4 text-gray-700">A territorialidade é fundamental para populações tradicionais. Envolve:</p>
+                    <ul class="list-disc ml-6 text-gray-700">
+                        <li><strong>Direito coletivo à terra:</strong> Não apenas propriedade individual</li>
+                        <li><strong>Conhecimentos ancestrais:</strong> Práticas de uso sustentável</li>
+                        <li><strong>Conflitos:</strong> Agronegócio, mineração, infraestrutura</li>
+                        <li><strong>Políticas afirmativas:</strong> Reconhecimento de direitos (ainda limitadas)</li>
+                    </ul>
+                `
+            },
+            {
+                id: "sociedade-brasileira",
+                title: "6. A Sociedade Brasileira",
+                emoji: "🇧🇷",
+                parent: null,
+                content: `
+                    <h2 class="text-3xl font-bold mb-2 text-gray-900">A Sociedade Brasileira</h2>
+                    <p class="text-gray-500 mb-6">Formação histórica e projetos de nação</p>
+                    
+                    <div class="callout info mb-6">
+                        <p class="font-semibold mb-2">📖 Contexto</p>
+                        <p>A sociedade brasileira é marcada por colonialismo, escravidão, modernização conservadora e desigualdades estruturais.</p>
+                    </div>
+                    
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Formação Histórica da Sociedade Brasileira</h3>
+                    
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle16">
+                            <span>🏛️ Período Colonial e Escravidão</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle16">
+                            <p class="text-gray-700 mt-4">Brasil colônia (1500-1822): Exportação de recursos naturais, latifúndio, e escravidão de africanos (cerca de 4,9 milhões trazidos até 1888).</p>
+                            <p class="text-gray-700 mt-2"><strong>Estrutura social:</strong> Senhores de terra, escravizados, indígenas, mestizos pobres.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle17">
+                            <span>🇧🇷 Independência e Império</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle17">
+                            <p class="text-gray-700 mt-4">Independência (1822): Brasil permanece monarquia; elite colonial mantém poder. Abolição (1888): Última nação das Américas a abolir escravidão, sem políticas de reparação.</p>
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Intérpretes do Brasil: Ensaísmo dos Anos 1930</h3>
+                    
+                    <p class="mb-4 text-gray-700">Obras importantes que buscaram compreender a identidade e formação brasileira:</p>
+                    
+                    <ul class="list-disc ml-6 text-gray-700 mb-4">
+                        <li><strong>Raízes do Brasil (Sérgio Buarque de Holanda, 1936):</strong> Conceito de "homem cordial" como traço brasileiro</li>
+                        <li><strong>O Povo Brasileiro (Darcy Ribeiro, 1995):</strong> Formação através de povos indígenas, europeus e africanos</li>
+                        <li><strong>Formação da Burguesia Brasileira (Nelson Werneck Sodré, 1976):</strong> Perspectiva marxista</li>
+                    </ul>
+                    
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Caráter Brasileiro e Identidade Nacional</h3>
+                    
+                    <div class="callout warning">
+                        <p class="font-semibold mb-2">⚠️ Cuidado com Essencialismos</p>
+                        <p>Conceitos como "caráter brasileiro" ou "alma brasileira" podem ser problemáticos. A identidade nacional é construída, não inata, e mascara diversidades e conflitos reais.</p>
+                    </div>
+                    
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Formação da Sociologia Brasileira</h3>
+                    
+                    <p class="mb-4 text-gray-700">Pensadores brasileiros importante incluem:</p>
+                    <ul class="list-disc ml-6 text-gray-700">
+                        <li><strong>Florestan Fernandes:</strong> Crítico social, pesquisa sobre relações raciais</li>
+                        <li><strong>Octavio Ianni:</strong> Estudos sobre raça e desenvolvimento</li>
+                        <li><strong>Carlos Nelson Coutinho:</strong> Materialismo histórico aplicado ao Brasil</li>
+                    </ul>
+                    
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Teorias do Desenvolvimento e Dependência</h3>
+                    
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle18">
+                            <span>📊 Teoria da Dependência</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle18">
+                            <p class="text-gray-700 mt-4">Surgiu nos anos 1960-70 (André Gunder Frank, Fernando Henrique Cardoso). Argumenta que:</p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>Economia global é hierarquizada entre centros (desenvolvidos) e periferias (subdesenvolvidas)</li>
+                                <li>Brasil é economicamente dependente do exterior</li>
+                                <li>Desenvolvimento não é linear; há bloqueios estruturais</li>
+                            </ul>
+                        </div>
+                    </div>
+                `
+            },
+            {
+                id: "diversidade-cultural-brasil",
+                title: "7. Diversidade Cultural no Brasil",
+                emoji: "🎨",
+                parent: null,
+                content: `
+                    <h2 class="text-3xl font-bold mb-2 text-gray-900">Diversidade Cultural no Brasil</h2>
+                    <p class="text-gray-500 mb-6">Sínteses, conflitos e reinvenções</p>
+                    
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Mitos Fundadores da Cultura Nacional</h3>
+                    
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle19">
+                            <span>🌈 Mito da Democracia Racial</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle19">
+                            <p class="text-gray-700 mt-4">Narrativa que apresentava o Brasil como livre de preconceito racial, harmonioso na mistura de raças. Construída especialmente nos anos 1930-50.</p>
+                            <p class="text-gray-700 mt-2"><strong>Crítica:</strong> Mascara desigualdades raciais reais. Sociólogos como Florestan Fernandes e Carlos Hasenbalg mostraram que desigualdades raciais persistem mesmo após abolição.</p>
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Nacionalismo e Regionalismos</h3>
+                    
+                    <p class="mb-4 text-gray-700">Tensão entre identidade nacional brasileira e identidades regionais. Diferenças históricas e culturais entre:</p>
+                    <ul class="list-disc ml-6 text-gray-700 mb-4">
+                        <li><strong>Nordeste:</strong> Identidade forte, história de seca, migração interna, cultura popular rica</li>
+                        <li><strong>Sudeste:</strong> Centro econômico, industrialização, imigração europeia</li>
+                        <li><strong>Sul:</strong> Imigração europeia, clima diferente, gauchismo</li>
+                        <li><strong>Centro-Oeste:</strong> Expansão de fronteira, agronegócio</li>
+                        <li><strong>Norte:</strong> Amazônia, populações indígenas, extrativismo</li>
+                    </ul>
+                    
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Cultura Popular e Folcloristas</h3>
+                    
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle20">
+                            <span>📚 Folclore Brasileiro</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle20">
+                            <p class="text-gray-700 mt-4">Folcloristas como Câmara Cascudo estudaram tradições populares: lendas, festas, músicas, danças.</p>
+                            <p class="text-gray-700 mt-2"><strong>Exemplos:</strong> Bumba meu boi, Festa de São João, Samba, Cordel.</p>
+                            <p class="text-gray-700 mt-2"><strong>Questão:</strong> Esses saberes populares estão sendo preservados ou desaparecendo com modernização?</p>
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Miscigenação, Mestiçagem e Antropofagia</h3>
+                    
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle21">
+                            <span>🔀 Conceitos de Síntese Cultural</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle21">
+                            <p class="text-gray-700 mt-4"><strong>Miscigenação:</strong> Mistura biológica de povos.</p>
+                            <p class="text-gray-700 mt-2"><strong>Mestiçagem:</strong> Processo cultural de síntese. Obra "Casa-grande & Senzala" (Gilberto Freyre, 1933) romantiza este processo, sendo depois criticada.</p>
+                            <p class="text-gray-700 mt-2"><strong>Antropofagia cultural (Oswald de Andrade):</strong> Metáfora de "devoração" criativa de influências externas para criar algo novo.</p>
+                            <p class="text-gray-700 mt-2"><strong>Crítica moderna:</strong> Essas narrativas muitas vezes ocultam violência, desigualdade e hierarquias.</p>
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">O Brasil Visto por Estrangeiros</h3>
+                    
+                    <p class="mb-4 text-gray-700">Estereótipos e percepções externas:</p>
+                    <ul class="list-disc ml-6 text-gray-700">
+                        <li><strong>Séculos XVIII-XIX:</strong> "Selvageria tropical" e exotismo</li>
+                        <li><strong>Século XX:</strong> Brasil como "democracia racial" e carnaval</li>
+                        <li><strong>Atualmente:</strong> Sustentabilidade (Amazônia) vs. conflitos ambientais e de direitos humanos</li>
+                    </ul>
+                    
+                    <div class="callout success">
+                        <p class="font-semibold mb-2">✓ Reflexão</p>
+                        <p>Como narrativas externas sobre o Brasil influenciam a auto-imagem dos brasileiros? Qual é a diferença entre um Brasil idealizado e um Brasil real?</p>
+                    </div>
+                `
+            },
+            {
+                id: "trabalho",
+                title: "19. Trabalho",
+                emoji: "💼",
+                parent: null,
+                content: `
+                    <h2 class="text-3xl font-bold mb-2 text-gray-900">Trabalho</h2>
+                    <p class="text-gray-500 mb-6">Dimensão central da vida social e econômica</p>
+                    
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Origem do Trabalho</h3>
+                    
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle28">
+                            <span>🔨 Trabalho na História</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle28">
+                            <p class="text-gray-700 mt-4">O trabalho é atividade humana fundamental. Diferenças importantes:</p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li><strong>Caça e coleta:</strong> Trabalho direto pela subsistência</li>
+                                <li><strong>Agricultura:</strong> Sedentarismo, apropriação de terra</li>
+                                <li><strong>Manufatura:</strong> Divisão do trabalho inicial</li>
+                                <li><strong>Capitalismo:</strong> Trabalho como mercadoria (força de trabalho)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Formas Históricas de Trabalho Coercitivo</h3>
+                    
+                    <p class="mb-4 text-gray-700">Análise de Marx e historiadores:</p>
+                    <ul class="list-disc ml-6 text-gray-700 mb-4">
+                        <li><strong>Servidão (feudal):</strong> Trabalhador preso à terra, semi-livre</li>
+                        <li><strong>Escravidão:</strong> Trabalhador como propriedade, coerção total (ocorreu séculos XVII-XIX)</li>
+                        <li><strong>Trabalho assalariado:</strong> Trabalhador "livre" vende sua força de trabalho por salário (capitalismo)</li>
+                    </ul>
+                    
+                    <div class="callout warning">
+                        <p class="font-semibold mb-2">⚠️ Crítica Marxista</p>
+                        <p>Marx argumentava que mesmo o trabalho assalariado é exploração: o trabalhador recebe menos que o valor que produz (mais-valia).</p>
+                    </div>
+                    
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Organização do Trabalho nas Sociedades Capitalistas</h3>
+                    
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle29">
+                            <span>⚙️ Fordismo e Pós-Fordismo</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle29">
+                            <p class="text-gray-700 mt-4"><strong>Fordismo:</strong> Modelo de produção em massa (século XX), com linha de produção, divisão rígida do trabalho, sindicatos fortes.</p>
+                            <p class="text-gray-700 mt-2"><strong>Pós-fordismo (flexível):</strong> Produção descentralizada, terceirização, precarização, enfraquecimento sindical (desde 1980s).</p>
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Movimentos dos Trabalhadores</h3>
+                    
+                    <p class="mb-4 text-gray-700">Trabalhadores organizaram-se para conquistar direitos:</p>
+                    <ul class="list-disc ml-6 text-gray-700">
+                        <li>Luddismo (destruição de máquinas) - século XIX</li>
+                        <li>Sindicalismo e greves</li>
+                        <li>Partidos de esquerda</li>
+                        <li>Movimentos contemporâneos (precarização, trabalho digital)</li>
+                    </ul>
+                    
+                    <div class="callout info">
+                        <p class="font-semibold mb-2">🔴 Brasil</p>
+                        <p>No Brasil, o movimento sindical é importante, com CUT, Força Sindical, etc. Mas enfrenta desafios: informalidade, terceirização, reforma trabalhista de 2017.</p>
+                    </div>
+                `
+            },
+            {
+                id: "classes-desigualdade",
+                title: "21. Classes e Desigualdade Social",
+                emoji: "📊",
+                parent: null,
+                content: `
+                    <h2 class="text-3xl font-bold mb-2 text-gray-900">Classes e Desigualdade Social</h2>
+                    <p class="text-gray-500 mb-6">Estrutura e mobilidade na sociedade estratificada</p>
+                    
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Conceitos Fundamentais de Estratificação</h3>
+                    
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle22">
+                            <span>👑 Castas, Estamentos e Classes</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle22">
+                            <p class="text-gray-700 mt-4"><strong>Castas:</strong> Grupos fechados, rigidamente hierarquizados, herdados (ex: sistema de castas hindu).</p>
+                            <p class="text-gray-700 mt-2"><strong>Estamentos:</strong> Grupos com privilégios ou restrições legais, mas com alguma mobilidade (ex: nobreza, clero, povo na Idade Média).</p>
+                            <p class="text-gray-700 mt-2"><strong>Classes:</strong> Grupos definidos pela relação com meios de produção e consumo, teoricamente com mobilidade (ex: burguesia, proletariado no capitalismo).</p>
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Teorias de Classe e Desigualdade</h3>
+                    
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle23">
+                            <span>💬 Durkheim: Solidariedade Mecânica e Orgânica</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle23">
+                            <p class="text-gray-700 mt-4">Durkheim enfatizava coesão social mais que conflito. Distinguia entre:</p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li><strong>Solidariedade mecânica:</strong> Sociedades simples, semelhança, divisão do trabalho mínima</li>
+                                <li><strong>Solidariedade orgânica:</strong> Sociedades complexas, diferenciação, interdependência</li>
+                            </ul>
+                            <p class="text-gray-700 mt-2">Desigualdade era vista como consequência natural da divisão do trabalho.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle24">
+                            <span>🔴 Weber: Três Dimensões de Estratificação</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle24">
+                            <p class="text-gray-700 mt-4">Weber ampliou Marx, propondo que desigualdade não é apenas econômica. Há três dimensões:</p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li><strong>Classe (econômica):</strong> Riqueza e propriedade</li>
+                                <li><strong>Status (prestígio):</strong> Honra e respeito social</li>
+                                <li><strong>Poder (político):</strong> Capacidade de impor vontade</li>
+                            </ul>
+                            <p class="text-gray-700 mt-2">Uma pessoa pode ter alta classe mas baixo status (ricão endinheirado), ou vice-versa.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle25">
+                            <span>🎓 Bourdieu: Capital Cultural e Habitus</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle25">
+                            <p class="text-gray-700 mt-4">Bourdieu (1930-2002) desenvolveu conceitos que explicam como desigualdade se reproduz:</p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li><strong>Capital cultural:</strong> Conhecimentos, diplomas, preferências artísticas herdadas da família</li>
+                                <li><strong>Habitus:</strong> Conjunto de disposições duráveis que estruturam comportamento e percepção</li>
+                                <li><strong>Reprodução social:</strong> Famílias ricas passam vantagens (capital econômico, cultural e social) aos filhos</li>
+                            </ul>
+                            <p class="text-gray-700 mt-2"><strong>Implicação:</strong> Desigualdade não é apenas material; é inscrita nas disposições das pessoas.</p>
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Mobilidade Social</h3>
+                    
+                    <p class="mb-4 text-gray-700">Mobilidade social é a possibilidade de mudar de posição social. Pode ser:</p>
+                    <ul class="list-disc ml-6 text-gray-700 mb-4">
+                        <li><strong>Vertical ascendente:</strong> Melhorar de posição (ex: filho de operário vira executivo)</li>
+                        <li><strong>Vertical descendente:</strong> Piorar de posição</li>
+                        <li><strong>Horizontal:</strong> Mudar de ocupação mantendo status similar</li>
+                    </ul>
+                    
+                    <div class="callout info">
+                        <p class="font-semibold mb-2">🔍 Pergunta Crítica</p>
+                        <p>No Brasil, a mobilidade social é real ou ilusória? Quantos filhos de pobres chegam a classe alta? Que mecanismos (educação, redes sociais) facilitam mobilidade?</p>
+                    </div>
+                `
+            },
+            {
+                id: "pobreza-brasil",
+                title: "22. Pobreza e Desigualdade no Brasil",
+                emoji: "💔",
+                parent: null,
+                content: `
+                    <h2 class="text-3xl font-bold mb-2 text-gray-900">Pobreza e Desigualdade no Brasil</h2>
+                    <p class="text-gray-500 mb-6">Dados, indicadores e dimensões</p>
+                    
+                    <div class="callout critical mb-6">
+                        <p class="font-semibold mb-2">📌 Realidade Brasileira</p>
+                        <p>Brasil é uma das nações mais desiguais do mundo. A renda se concentra em poucos, enquanto milhões vivem em pobreza.</p>
+                    </div>
+                    
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Concentração de Renda</h3>
+                    
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle26">
+                            <span>📈 Índice de Gini e Coeficientes</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle26">
+                            <p class="text-gray-700 mt-4"><strong>Índice de Gini:</strong> Medida de desigualdade (0 = igualdade perfeita; 1 = desigualdade máxima).</p>
+                            <p class="text-gray-700 mt-2">Brasil apresenta Gini em torno de 0,53-0,54 (muito alto). Para comparação, países escandinavos têm Gini ~0,25-0,27.</p>
+                            <p class="text-gray-700 mt-2"><strong>Razão decil:</strong> Os 10% mais ricos ganham cerca de 30-40 vezes mais que os 10% mais pobres no Brasil.</p>
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Definições de Pobreza</h3>
+                    
+                    <p class="mb-4 text-gray-700">Não há uma definição única de pobreza. Diferentes abordagens:</p>
+                    
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle27">
+                            <span>💰 Pobreza Absoluta vs. Relativa</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle27">
+                            <p class="text-gray-700 mt-4"><strong>Pobreza absoluta:</strong> Incapacidade de satisfazer necessidades básicas (alimento, moradia). Medida por linha de pobreza (renda mínima).</p>
+                            <p class="text-gray-700 mt-2"><strong>Pobreza relativa:</strong> Estar significativamente abaixo do padrão de vida do grupo (por exemplo, ganhar menos que 60% da renda média).</p>
+                            <p class="text-gray-700 mt-2">No Brasil, estima-se que ~25-30% vive em pobreza (várias definições).</p>
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Indicadores de Desenvolvimento Humano (IDH)</h3>
+                    
+                    <p class="mb-4 text-gray-700">O IDH combina três dimensões:</p>
+                    <ul class="list-disc ml-6 text-gray-700 mb-4">
+                        <li><strong>Longevidade:</strong> Expectativa de vida ao nascer</li>
+                        <li><strong>Educação:</strong> Anos de estudo</li>
+                        <li><strong>Renda:</strong> PIB per capita (PPC)</li>
+                    </ul>
+                    
+                    <p class="text-gray-700 mb-4">Brasil tem IDH ~0,754 (2021), classificado como "desenvolvimento humano muito alto", mas com grande variação regional (regiões mais pobres têm IDH bem menor).</p>
+                    
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Acesso a Bens de Consumo</h3>
+                    
+                    <p class="mb-4 text-gray-700">Indicadores de qualidade de vida incluem:</p>
+                    <ul class="list-disc ml-6 text-gray-700">
+                        <li>Acesso a água potável, saneamento, energia elétrica</li>
+                        <li>Posse de telefone, internet, computador</li>
+                        <li>Tipo de moradia (alvenaria vs. favela)</li>
+                        <li>Acesso a educação e saúde</li>
+                    </ul>
+                    
+                    <div class="callout success">
+                        <p class="font-semibold mb-2">📊 Avanços</p>
+                        <p>Nas décadas de 2000-2010, políticas redistributivas (Bolsa Família, aumentos de salário mínimo) reduziram pobreza. Mas a crise econômica pós-2014 reverteu ganhos.</p>
+                    </div>
+                `
+            },
+            {
+                id: "genero-sexualidade",
+                title: "12. Gênero e Sexualidade",
+                emoji: "⚖️",
+                parent: null,
+                content: `
+                    <h2 class="text-3xl font-bold mb-2 text-gray-900">Gênero e Sexualidade</h2>
+                    <p class="text-gray-500 mb-6">Categorias sociais fundamentais</p>
+                    
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Sexo, Sexualidade e Gênero</h3>
+                    
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle30">
+                            <span>🔬 Definições Importantes</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle30">
+                            <p class="text-gray-700 mt-4"><strong>Sexo:</strong> Categoria biológica (genital, cromossômica). Binário tradicional: masculino/feminino.</p>
+                            <p class="text-gray-700 mt-2"><strong>Sexualidade:</strong> Desejo, atração e práticas sexuais/afetivas. Não é binária (heterossexual, homossexual, bissexual, assexual, etc.).</p>
+                            <p class="text-gray-700 mt-2"><strong>Gênero:</strong> Construção social sobre papéis, comportamentos, características atribuídos a homens e mulheres. Não é determinado apenas por sexo biológico.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="callout success mb-6">
+                        <p class="font-semibold mb-2">✓ Conceito-chave</p>
+                        <p>Gênero é social, não biológico. Diferentes culturas e épocas definiram masculinidade e feminilidade de formas distintas.</p>
+                    </div>
+                    
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Movimento Feminista e Conquistas das Mulheres</h3>
+                    
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle31">
+                            <span>👊 Ondas do Feminismo</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle31">
+                            <p class="text-gray-700 mt-4"><strong>Primeira onda (final séc. XIX - início XX):</strong> Direito ao voto, educação, propriedade.</p>
+                            <p class="text-gray-700 mt-2"><strong>Segunda onda (1960s-1980s):</strong> Direitos reprodutivos, igualdade no trabalho, violência doméstica.</p>
+                            <p class="text-gray-700 mt-2"><strong>Terceira onda (1990s-2000s):</strong> Diversidade, interseccionalidade, crítica ao feminismo branco/classe média.</p>
+                            <p class="text-gray-700 mt-2"><strong>Quarta onda (2010s-atual):</strong> Movimento #MeToo, feminismo negro, trans, digital.</p>
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Gênero, Trabalho e Direitos Sociais</h3>
+                    
+                    <p class="mb-4 text-gray-700">Desigualdades de gênero persistem:</p>
+                    <ul class="list-disc ml-6 text-gray-700 mb-4">
+                        <li><strong>Trabalho:</strong> Mulheres ganham menos, concentram-se em setores precarizados</li>
+                        <li><strong>Dupla jornada:</strong> Trabalho remunerado + trabalho doméstico e cuidados</li>
+                        <li><strong>Violência:</strong> Femicídio, assédio sexual, violência doméstica</li>
+                        <li><strong>Política:</strong> Subrepresentação em cargos de poder</li>
+                    </ul>
+                    
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Teoria Feminista Contemporânea</h3>
+                    
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle32">
+                            <span>📚 Autoras Importantes</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle32">
+                            <p class="text-gray-700 mt-4"><strong>Judith Butler:</strong> "Performatividade do gênero" - gênero é repetição de atos, não essência.</p>
+                            <p class="text-gray-700 mt-2"><strong>Nancy Fraser:</strong> Justiça como redistribuição, reconhecimento e representação.</p>
+                            <p class="text-gray-700 mt-2"><strong>Feminismo Negro:</strong> Kimberlé Crenshaw, bell hooks, Patricia Hill Collins - interseccionalidade de raça, gênero, classe.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="callout info">
+                        <p class="font-semibold mb-2">🏳️‍🌈 Sexualidades Dissidentes</p>
+                        <p>Movimentos LGBTQIA+ questionam heteronormatividade. Brasil tem alto índice de violência contra LGBTQIA+, apesar de avanços legais recentes.</p>
+                    </div>
+                `
+            },
+            {
+                id: "religiao-sociedade",
+                title: "9. Religião e Sociedade",
+                emoji: "🙏",
+                parent: null,
+                content: `
+                    <h2 class="text-3xl font-bold mb-2 text-gray-900">Religião e Sociedade</h2>
+                    <p class="text-gray-500 mb-6">Sistemas de crença e organização social</p>
+                    
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Religiões e Sistemas de Crença</h3>
+                    
+                    <p class="mb-4 text-gray-700">Religião é sistema de crenças e práticas compartilhadas sobre o sagrado. Funções sociais:</p>
+                    <ul class="list-disc ml-6 text-gray-700 mb-4">
+                        <li>Criar coesão social</li>
+                        <li>Ofertar significado e consolo</li>
+                        <li>Estabelecer normas morais</li>
+                        <li>Reproduzir hierarquias sociais</li>
+                    </ul>
+                    
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Perspectivas Clássicas</h3>
+                    
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle33">
+                            <span>📖 Weber: Desencantamento do Mundo</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle33">
+                            <p class="text-gray-700 mt-4">Weber argumentava que modernidade envolveu "desencantamento": perda de magia, mistério e significado transcendental.</p>
+                            <p class="text-gray-700 mt-2">Religião pré-moderna explicava tudo; modernidade/ciência secularizou conhecimento.</p>
+                            <p class="text-gray-700 mt-2"><strong>Paradoxo:</strong> Religião persiste mesmo em sociedades modernas.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle34">
+                            <span>💬 Durkheim: Vida Religiosa</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle34">
+                            <p class="text-gray-700 mt-4">Durkheim enfatizava que religião cria comunidade. Rituais produzem solidariedade.</p>
+                            <p class="text-gray-700 mt-2">Religião não é sobre verdade sobrenatural, mas sobre coesão social.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle35">
+                            <span>🔴 Marx: Religião e Ideologia</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle35">
+                            <p class="text-gray-700 mt-4">Marx via religião como "ópio do povo" - legitima desigualdade e consola os oprimidos sem resolver problemas materiais reais.</p>
+                            <p class="text-gray-700 mt-2">Promessa de vida após morte distrai das injustiças deste mundo.</p>
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Religiões no Brasil Contemporâneo</h3>
+                    
+                    <p class="mb-4 text-gray-700">Diversidade religiosa crescente:</p>
+                    <ul class="list-disc ml-6 text-gray-700">
+                        <li>Catolicismo (ainda maioria, mas em declínio: ~64% em 2010 vs. ~89% em 1991)</li>
+                        <li>Protestantismo/Evangélicos (crescimento explosivo: ~22% em 2010)</li>
+                        <li>Espiritismo</li>
+                        <li>Religiões afro-brasileiras (Candomblé, Umbanda) - muitas vezes marginalizadas</li>
+                        <li>Sem religião/ateus (crescente)</li>
+                    </ul>
+                    
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Estado Laico e Liberdade de Crença</h3>
+                    
+                    <p class="mb-4 text-gray-700">Brasil é constitucionalmente laico (art. 19, VI CF/88): Estado não favorece nenhuma religião.</p>
+                    
+                    <div class="callout warning">
+                        <p class="font-semibold mb-2">⚠️ Desafios Atuais</p>
+                        <p>Na prática, há violações: intolerância religiosa contra religiões afro-brasileiras, influência evangélica em políticas públicas, proselitismo em espaços estatais.</p>
+                    </div>
+                `
+            }
+        ];
+
+        // Initialize app
+        const app = {
+            currentTopic: null,
+            allTopics: topicsData,
+            filteredTopics: topicsData,
+
+            init() {
+                this.renderNavigation();
+                this.setupEventListeners();
+                this.setupToggleListeners();
+            },
+
+            renderNavigation() {
+                const navContainer = document.getElementById('navContainer');
+                navContainer.innerHTML = '';
+                
+                this.filteredTopics.forEach(topic => {
+                    const navItem = document.createElement('div');
+                    navItem.className = 'nav-item p-3 rounded-lg mb-2';
+                    navItem.innerHTML = `<span class="mr-2">${topic.emoji}</span>${topic.title}`;
+                    navItem.addEventListener('click', () => this.selectTopic(topic.id));
+                    navContainer.appendChild(navItem);
+                });
+            },
+
+            selectTopic(topicId) {
+                const topic = this.allTopics.find(t => t.id === topicId);
+                if (!topic) return;
+
+                this.currentTopic = topicId;
+                this.updateContent(topic);
+                this.updateBreadcrumb(topic);
+                this.closeSidebarMobile();
+            },
+
+            updateContent(topic) {
+                const contentArea = document.getElementById('contentArea');
+                contentArea.innerHTML = topic.content;
+                this.setupToggleListeners();
+                
+                // Scroll to top
+                contentArea.parentElement.scrollTop = 0;
+            },
+
+            updateBreadcrumb(topic) {
+                const breadcrumbContainer = document.getElementById('breadcrumbContainer');
+                breadcrumbContainer.innerHTML = `
+                    <span class="text-gray-600">📚 Sociologia</span>
+                    <span class="breadcrumb-divider">/</span>
+                    <span class="font-semibold text-gray-900">${topic.title}</span>
+                `;
+            },
+
+            setupToggleListeners() {
+                const toggleButtons = document.querySelectorAll('.toggle-btn');
+                toggleButtons.forEach(btn => {
+                    btn.removeEventListener('click', this.handleToggle);
+                    btn.addEventListener('click', this.handleToggle);
+                });
+            },
+
+            handleToggle(e) {
+                const toggleId = e.currentTarget.getAttribute('data-toggle');
+                const content = document.getElementById(toggleId);
+                if (!content) return;
+                
+                content.classList.toggle('active');
+                const icon = e.currentTarget.querySelector('span:last-child');
+                icon.textContent = content.classList.contains('active') ? '−' : '+';
+            },
+
+            filterTopics(query) {
+                query = query.toLowerCase().trim();
+                if (!query) {
+                    this.filteredTopics = this.allTopics;
+                } else {
+                    this.filteredTopics = this.allTopics.filter(topic =>
+                        topic.title.toLowerCase().includes(query) ||
+                        topic.id.toLowerCase().includes(query)
+                    );
+                }
+                this.renderNavigation();
+            },
+
+            closeSidebarMobile() {
+                const sidebar = document.querySelector('.sidebar');
+                const overlay = document.getElementById('sidebarOverlay');
+                sidebar.classList.remove('open');
+                overlay.classList.remove('open');
+            }
+        };
+
+        // Search functionality
+        document.getElementById('searchInput').addEventListener('input', (e) => {
+            app.filterTopics(e.target.value);
+        });
+
+        // Hamburger menu
+        document.getElementById('hamburgerBtn').addEventListener('click', () => {
+            const sidebar = document.querySelector('.sidebar');
+            const overlay = document.getElementById('sidebarOverlay');
+            sidebar.classList.toggle('open');
+            overlay.classList.toggle('open');
+        });
+
+        document.getElementById('sidebarOverlay').addEventListener('click', () => {
+            app.closeSidebarMobile();
+        });
+
+        // Initialize on load
+        window.addEventListener('DOMContentLoaded', () => {
+            app.init();
+        });
+    </script>
+</body>
+</html>

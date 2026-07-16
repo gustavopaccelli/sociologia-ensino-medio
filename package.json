@@ -1,0 +1,34 @@
+{
+  "name": "sociologia-ensino-medio",
+  "version": "1.0.0",
+  "description": "Site SPA de Sociologia para Ensino Médio - Conteúdo educacional estruturado para ENEM e Vestibulares",
+  "main": "index.html",
+  "scripts": {
+    "start": "open index.html",
+    "dev": "echo 'Abra index.html no navegador para desenvolvimento local'",
+    "build": "echo 'Este é um projeto SPA puro HTML/CSS/JS, sem build necessário'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gustavopaccelli/sociologia-ensino-medio.git"
+  },
+  "keywords": [
+    "sociologia",
+    "ensino-medio",
+    "enem",
+    "vestibular",
+    "educacao",
+    "spa",
+    "javascript",
+    "tailwind-css"
+  ],
+  "author": "Gustavo Paccelli",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gustavopaccelli/sociologia-ensino-medio/issues"
+  },
+  "homepage": "https://gustavopaccelli.github.io/sociologia-ensino-medio",
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
