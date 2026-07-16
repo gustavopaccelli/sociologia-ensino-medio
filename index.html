@@ -229,12 +229,181 @@
     }
 ];
 
+        const groupsData = [
+    {
+        "id": "individuo-soc",
+        "title": "Indivíduo e sociedade",
+        "emoji": "👥"
+    },
+    {
+        "id": "sociologia-ciencia",
+        "title": "A Sociologia como Ciência",
+        "emoji": "🔬"
+    },
+    {
+        "id": "fundadores",
+        "title": "Os fundadores da Sociologia",
+        "emoji": "👨‍🎓"
+    },
+    {
+        "id": "cultura-soc",
+        "title": "Cultura e sociedade",
+        "emoji": "🎭"
+    },
+    {
+        "id": "populacoes-brasil",
+        "title": "Populações do Brasil",
+        "emoji": "🌎"
+    },
+    {
+        "id": "soc-brasileira",
+        "title": "A sociedade brasileira",
+        "emoji": "🇧🇷"
+    },
+    {
+        "id": "diversidade-brasil",
+        "title": "Diversidade cultural no Brasil",
+        "emoji": "🎨"
+    },
+    {
+        "id": "cultura-arte-com",
+        "title": "Cultura, arte e comunicação",
+        "emoji": "📺"
+    },
+    {
+        "id": "religiao-soc",
+        "title": "Religião e sociedade",
+        "emoji": "⛪"
+    },
+    {
+        "id": "religioes-mundo",
+        "title": "Religiões no mundo contemporâneo",
+        "emoji": "🕌"
+    },
+    {
+        "id": "raca",
+        "title": "Raça",
+        "emoji": "✊"
+    },
+    {
+        "id": "genero",
+        "title": "Gênero e sexualidade",
+        "emoji": "⚧️"
+    },
+    {
+        "id": "corporalidade",
+        "title": "Corporalidade e afetos",
+        "emoji": "💃"
+    },
+    {
+        "id": "familia",
+        "title": "Família e espaço doméstico",
+        "emoji": "🏠"
+    },
+    {
+        "id": "geracao",
+        "title": "Geração e etapas da vida",
+        "emoji": "👶"
+    },
+    {
+        "id": "educacao",
+        "title": "Educação e juventude",
+        "emoji": "🎓"
+    },
+    {
+        "id": "sistema-cap",
+        "title": "Sistema capitalista",
+        "emoji": "💰"
+    },
+    {
+        "id": "trabalho",
+        "title": "Trabalho",
+        "emoji": "💼"
+    },
+    {
+        "id": "economia-contemp",
+        "title": "Economia e sociedade contemporânea",
+        "emoji": "📊"
+    },
+    {
+        "id": "classes-desig",
+        "title": "Classes e desigualdade social",
+        "emoji": "⚖️"
+    },
+    {
+        "id": "pobreza-brasil",
+        "title": "Pobreza e desigualdade no Brasil",
+        "emoji": "🏘️"
+    },
+    {
+        "id": "migracoes",
+        "title": "Migrações e deslocamentos humanos",
+        "emoji": "🚶"
+    },
+    {
+        "id": "poder-domin",
+        "title": "Poder e dominação",
+        "emoji": "👑"
+    },
+    {
+        "id": "estado-demo",
+        "title": "Estado, governo e democracia",
+        "emoji": "🏛️"
+    },
+    {
+        "id": "sistema-pol-br",
+        "title": "Sistema político brasileiro",
+        "emoji": "🗳️"
+    },
+    {
+        "id": "justica-punicao",
+        "title": "Justiça, punição e controle social",
+        "emoji": "⚖️"
+    },
+    {
+        "id": "movimentos-soc",
+        "title": "Movimentos sociais e ação coletiva",
+        "emoji": "✊"
+    },
+    {
+        "id": "sociabilidades-dig",
+        "title": "Sociabilidades do mundo digital",
+        "emoji": "📱"
+    },
+    {
+        "id": "ciencia-tech",
+        "title": "Ciência e tecnologia",
+        "emoji": "🔭"
+    },
+    {
+        "id": "consumo",
+        "title": "Consumo e estilos de vida",
+        "emoji": "🛒"
+    },
+    {
+        "id": "ambiente",
+        "title": "Sociedade e meio ambiente",
+        "emoji": "🌿"
+    },
+    {
+        "id": "saude-doenca",
+        "title": "Saúde e doença",
+        "emoji": "⚕️"
+    },
+    {
+        "id": "futuro",
+        "title": "Futuro",
+        "emoji": "🔮"
+    }
+];
+
         const topicsData = [
 {
                 id: "individuo-sociedade",
                 title: "Indivíduo e Sociedade",
                 emoji: "👥",
-                parent: "fundamentos",
+                parent: "individuo-soc",
+                
                 content: `
                     <h2 class="text-3xl font-bold mb-2 text-gray-900">Indivíduo e Sociedade</h2>
                     <p class="text-gray-500 mb-6">Uma das questões centrais da Sociologia</p>
@@ -306,7 +475,8 @@
                 id: "sociologia-ciencia",
                 title: "A Sociologia como Ciência",
                 emoji: "🔬",
-                parent: "fundamentos",
+                parent: "sociologia-ciencia",
+                
                 content: `
                     <h2 class="text-3xl font-bold mb-2 text-gray-900">A Sociologia como Ciência</h2>
                     <p class="text-gray-500 mb-6">O surgimento de uma nova forma de compreender a sociedade</p>
@@ -377,7 +547,8 @@
                 id: "fundadores",
                 title: "Os Fundadores da Sociologia",
                 emoji: "👨‍🎓",
-                parent: "fundamentos",
+                parent: "fundadores",
+                
                 content: `
                     <h2 class="text-3xl font-bold mb-2 text-gray-900">Os Fundadores da Sociologia</h2>
                     <p class="text-gray-500 mb-6">Três pensadores clássicos que moldaram o campo</p>
@@ -465,7 +636,8 @@
                 id: "cultura-sociedade",
                 title: "Cultura e Sociedade",
                 emoji: "🎭",
-                parent: "cultura-id",
+                parent: "cultura-soc",
+                
                 content: `
                     <h2 class="text-3xl font-bold mb-2 text-gray-900">Cultura e Sociedade</h2>
                     <p class="text-gray-500 mb-6">Significados compartilhados que estruturam grupos humanos</p>
@@ -550,7 +722,8 @@
                 id: "populacoes-brasil",
                 title: "Populações do Brasil",
                 emoji: "🗺️",
-                parent: "cultura-id",
+                parent: "populacoes-brasil",
+                
                 content: `
                     <h2 class="text-3xl font-bold mb-2 text-gray-900">Populações do Brasil</h2>
                     <p class="text-gray-500 mb-6">Diversidade e dinâmicas socioterritoriais</p>
@@ -649,7 +822,8 @@
                 id: "sociedade-brasileira",
                 title: "A Sociedade Brasileira",
                 emoji: "🇧🇷",
-                parent: "cultura-id",
+                parent: "soc-brasileira",
+                
                 content: `
                     <h2 class="text-3xl font-bold mb-2 text-gray-900">A Sociedade Brasileira</h2>
                     <p class="text-gray-500 mb-6">Formação histórica e projetos de nação</p>
@@ -738,7 +912,8 @@
                 id: "diversidade-cultural-brasil",
                 title: "Diversidade Cultural no Brasil",
                 emoji: "🎨",
-                parent: "cultura-id",
+                parent: "diversidade-brasil",
+                
                 content: `
                     <h2 class="text-3xl font-bold mb-2 text-gray-900">Diversidade Cultural no Brasil</h2>
                     <p class="text-gray-500 mb-6">Sínteses, conflitos e reinvenções</p>
@@ -823,7 +998,8 @@
                 id: "cultura-arte-comunicacao",
                 title: "Cultura, Arte e Comunicação",
                 emoji: "🎨",
-                parent: "cultura-id",
+                parent: "cultura-arte-com",
+                
                 content: `
                     <h2 class="text-3xl font-bold mb-2 text-gray-900">Cultura, Arte e Comunicação</h2>
                     <p class="text-gray-500 mb-6">Compreender como a arte, a cultura e os meios de comunicação moldam a vida social</p>
@@ -948,7 +1124,8 @@
                 id: "religiao-sociedade",
                 title: "Religião e Sociedade",
                 emoji: "🙏",
-                parent: "religiao",
+                parent: "religiao-soc",
+                
                 content: `
                     <h2 class="text-3xl font-bold mb-2 text-gray-900">Religião e Sociedade</h2>
                     <p class="text-gray-500 mb-6">Sistemas de crença e organização social</p>
@@ -1032,7 +1209,8 @@
                 id: "religioes-mundo-contemporaneo",
                 title: "Religiões no Mundo Contemporâneo",
                 emoji: "🌍",
-                parent: "religiao",
+                parent: "religioes-mundo",
+                
                 content: `
                     <h2 class="text-3xl font-bold mb-2 text-gray-900">Religiões no Mundo Contemporâneo</h2>
                     <p class="text-gray-500 mb-6">Diversidade religiosa, laicidade, fundamentalismo e o lugar da fé na sociedade globalizada</p>
@@ -1149,7 +1327,8 @@
                 id: "raca",
                 title: "Raça",
                 emoji: "✊",
-                parent: "raca-genero",
+                parent: "raca",
+                
                 content: `
                     <h2 class="text-3xl font-bold mb-2 text-gray-900">Raça</h2>
                     <p class="text-gray-500 mb-6">Entender raça como construção social, suas bases históricas e os efeitos do racismo</p>
@@ -1265,7 +1444,8 @@
                 id: "genero-sexualidade",
                 title: "Gênero e Sexualidade",
                 emoji: "⚖️",
-                parent: "raca-genero",
+                parent: "genero",
+                
                 content: `
                     <h2 class="text-3xl font-bold mb-2 text-gray-900">Gênero e Sexualidade</h2>
                     <p class="text-gray-500 mb-6">Categorias sociais fundamentais</p>
@@ -1347,7 +1527,8 @@
                 id: "corporalidade-afetos",
                 title: "Corporalidade e Afetos",
                 emoji: "💬",
-                parent: "raca-genero",
+                parent: "corporalidade",
+                
                 content: `
                     <h2 class="text-3xl font-bold mb-2 text-gray-900">Corporalidade e Afetos</h2>
                     <p class="text-gray-500 mb-6">O corpo como espaço social, as transformações da intimidade e as sexualidades dissidentes</p>
@@ -1454,7 +1635,8 @@
                 id: "familia",
                 title: "Família",
                 emoji: "👨‍👩‍👧‍👦",
-                parent: "familia-edu",
+                parent: "familia",
+                
                 content: `
                     <h2 class="text-3xl font-bold mb-2 text-gray-900">Família</h2>
                     <p class="text-gray-500 mb-6">O que conta como "família" e por que isso muda?</p>
@@ -1589,7 +1771,8 @@
                 id: "envelhecimento-ciclos",
                 title: "Envelhecimento e Ciclos de Vida",
                 emoji: "👴",
-                parent: "familia-edu",
+                parent: "geracao",
+                
                 content: `
                     <h2 class="text-3xl font-bold mb-2 text-gray-900">Envelhecimento e Ciclos de Vida</h2>
                     <p class="text-gray-500 mb-6">Como a sociedade define e trata cada fase da vida?</p>
@@ -1698,7 +1881,8 @@
                 id: "culturas-juvenis",
                 title: "Culturas Juvenis",
                 emoji: "🎤",
-                parent: "familia-edu",
+                parent: "geracao",
+                
                 content: `
                     <h2 class="text-3xl font-bold mb-2 text-gray-900">Culturas Juvenis</h2>
                     <p class="text-gray-500 mb-6">A juventude como construção social, ritos de passagem e a diversidade das culturas jovens</p>
@@ -1816,7 +2000,8 @@
                 id: "educacao-socializacao",
                 title: "Educação e Socialização",
                 emoji: "🎓",
-                parent: "familia-edu",
+                parent: "educacao",
+                
                 content: `
                     <h2 class="text-3xl font-bold mb-2 text-gray-900">Educação e Socialização</h2>
                     <p class="text-gray-500 mb-6">A escola que temos vs. a escola que queremos</p>
@@ -2050,7 +2235,8 @@
                 id: "sistema-capitalista",
                 title: "Sistema Capitalista",
                 emoji: "🏦",
-                parent: "trabalho-eco",
+                parent: "sistema-cap",
+                
                 content: `
                     <h2 class="text-3xl font-bold mb-2 text-gray-900">Sistema Capitalista</h2>
                     <p class="text-gray-500 mb-6">Origens, desenvolvimento histórico e a crítica marxiana do capitalismo</p>
@@ -2171,7 +2357,8 @@
                 id: "trabalho",
                 title: "Trabalho",
                 emoji: "💼",
-                parent: "trabalho-eco",
+                parent: "trabalho",
+                
                 content: `
                     <h2 class="text-3xl font-bold mb-2 text-gray-900">Trabalho</h2>
                     <p class="text-gray-500 mb-6">Dimensão central da vida social e econômica</p>
@@ -2249,7 +2436,8 @@
                 id: "economia-sociedade-contemporanea",
                 title: "Economia e Sociedade Contemporânea",
                 emoji: "📈",
-                parent: "trabalho-eco",
+                parent: "economia-contemp",
+                
                 content: `
                     <h2 class="text-3xl font-bold mb-2 text-gray-900">Economia e Sociedade Contemporânea</h2>
                     <p class="text-gray-500 mb-6">Neoliberalismo, financeirização, acumulação flexível e precarização do trabalho</p>
@@ -2357,7 +2545,8 @@
     id: "consumo-estilos-vida",
     title: "Consumo e Estilos de Vida",
     emoji: "🛒",
-    parent: "trabalho-eco",
+                parent: "consumo",
+    
     content: `
                     <h2 class="text-3xl font-bold mb-2 text-gray-900">Consumo e Estilos de Vida</h2>
                     <p class="text-gray-500 mb-6">Distinção, identidade e consumerismo na sociedade moderna</p>
@@ -2440,7 +2629,8 @@
                 id: "globalizacao-sociedade",
                 title: "Globalização e Sociedade",
                 emoji: "🌍",
-                parent: "trabalho-eco",
+                parent: "economia-contemp",
+                
                 content: `
                     <h2 class="text-3xl font-bold mb-2 text-gray-900">Globalização e Sociedade</h2>
                     <p class="text-gray-500 mb-6">A globalização une o mundo ou aprofunda as divisões?</p>
@@ -2554,7 +2744,8 @@
                 id: "classes-desigualdade",
                 title: "Classes e Desigualdade Social",
                 emoji: "📊",
-                parent: "trabalho-eco",
+                parent: "classes-desig",
+                
                 content: `
                     <h2 class="text-3xl font-bold mb-2 text-gray-900">Classes e Desigualdade Social</h2>
                     <p class="text-gray-500 mb-6">Estrutura e mobilidade na sociedade estratificada</p>
@@ -2649,7 +2840,8 @@
                 id: "pobreza-brasil",
                 title: "Pobreza e Desigualdade no Brasil",
                 emoji: "💔",
-                parent: "trabalho-eco",
+                parent: "pobreza-brasil",
+                
                 content: `
                     <h2 class="text-3xl font-bold mb-2 text-gray-900">Pobreza e Desigualdade no Brasil</h2>
                     <p class="text-gray-500 mb-6">Dados, indicadores e dimensões</p>
@@ -2728,7 +2920,8 @@
     id: "poder-dominacao",
     title: "Poder e Dominação",
     emoji: "⚡",
-    parent: "poder-estado",
+                parent: "poder-domin",
+    
     content: `
                     <h2 class="text-3xl font-bold mb-2 text-gray-900">Poder e Dominação</h2>
                     <p class="text-gray-500 mb-6">Weber, Foucault, Bourdieu e as teorias das elites</p>
@@ -2814,7 +3007,8 @@
     id: "estado-governo-democracia",
     title: "Estado, Governo e Democracia",
     emoji: "🏛️",
-    parent: "poder-estado",
+                parent: "estado-demo",
+    
     content: `
                     <h2 class="text-3xl font-bold mb-2 text-gray-900">Estado, Governo e Democracia</h2>
                     <p class="text-gray-500 mb-6">Do Estado moderno às disputas pela democracia no século XXI</p>
@@ -2901,7 +3095,8 @@
     id: "sistema-politico-brasileiro",
     title: "Sistema Político Brasileiro",
     emoji: "🗳️",
-    parent: "poder-estado",
+                parent: "sistema-pol-br",
+    
     content: `
                     <h2 class="text-3xl font-bold mb-2 text-gray-900">Sistema Político Brasileiro</h2>
                     <p class="text-gray-500 mb-6">Federalismo, presidencialismo de coalizão e redemocratização</p>
@@ -2985,7 +3180,8 @@
                 id: "politica-poder",
                 title: "Política e Poder",
                 emoji: "🏛️",
-                parent: "poder-estado",
+                parent: "poder-domin",
+                
                 content: `
                     <h2 class="text-3xl font-bold mb-2 text-gray-900">Política e Poder</h2>
                     <p class="text-gray-500 mb-6">Entender o poder e como as sociedades se organizam politicamente</p>
@@ -3184,7 +3380,8 @@
                 id: "movimentos-sociais",
                 title: "Movimentos Sociais",
                 emoji: "✊",
-                parent: "poder-estado",
+                parent: "movimentos-soc",
+                
                 content: `
                     <h2 class="text-3xl font-bold mb-2 text-gray-900">Movimentos Sociais</h2>
                     <p class="text-gray-500 mb-6">Quando coletividades se mobilizam por mudança</p>
@@ -3441,7 +3638,8 @@
     id: "formas-contemporaneas-mobilizacao",
     title: "Formas Contemporâneas de Mobilização",
     emoji: "✊",
-    parent: "poder-estado",
+                parent: "movimentos-soc",
+    
     content: `
                     <h2 class="text-3xl font-bold mb-2 text-gray-900">Formas Contemporâneas de Mobilização</h2>
                     <p class="text-gray-500 mb-6">Primavera Árabe, Junho de 2013 e o ativismo digital</p>
@@ -3525,7 +3723,8 @@
                 id: "identidade-social",
                 title: "Identidade Social",
                 emoji: "🎭",
-                parent: "poder-estado",
+                parent: "cultura-soc",
+                
                 content: `
                     <h2 class="text-3xl font-bold mb-2 text-gray-900">Identidade Social</h2>
                     <p class="text-gray-500 mb-6">Como nos tornamos quem somos — e por que a sociedade nos classifica?</p>
@@ -3654,7 +3853,8 @@
                 id: "desvio-controle",
                 title: "Desvio Social e Controle",
                 emoji: "🚔",
-                parent: "poder-estado",
+                parent: "justica-punicao",
+                
                 content: `
                     <h2 class="text-3xl font-bold mb-2 text-gray-900">Desvio Social e Controle</h2>
                     <p class="text-gray-500 mb-6">Quem decide o que é crime e quem vai preso?</p>
@@ -3765,7 +3965,8 @@
                 id: "conflito-mudanca",
                 title: "Conflito e Mudança Social",
                 emoji: "🔄",
-                parent: "poder-estado",
+                parent: "poder-domin",
+                
                 content: `
                     <h2 class="text-3xl font-bold mb-2 text-gray-900">Conflito e Mudança Social</h2>
                     <p class="text-gray-500 mb-6">A mudança é abrupta (revolução) ou gradual (reforma)?</p>
@@ -3877,7 +4078,8 @@
                 id: "comunicacao-massa",
                 title: "Comunicação de Massa",
                 emoji: "📺",
-                parent: "tech-ambiente",
+                parent: "cultura-arte-com",
+                
                 content: `
                     <h2 class="text-3xl font-bold mb-2 text-gray-900">Comunicação de Massa e Opinião Pública</h2>
                     <p class="text-gray-500 mb-6">A mídia nos liberta ou nos controla?</p>
@@ -4013,7 +4215,8 @@
     id: "sociabilidades-mundo-digital",
     title: "Sociabilidades do Mundo Digital",
     emoji: "📱",
-    parent: "tech-ambiente",
+                parent: "sociabilidades-dig",
+    
     content: `
                     <h2 class="text-3xl font-bold mb-2 text-gray-900">Sociabilidades do Mundo Digital</h2>
                     <p class="text-gray-500 mb-6">Redes sociais, vigilância e identidades na era digital</p>
@@ -4099,7 +4302,8 @@
     id: "ciencia-tecnologia",
     title: "Ciência e Tecnologia",
     emoji: "🔭",
-    parent: "tech-ambiente",
+                parent: "ciencia-tech",
+    
     content: `
                     <h2 class="text-3xl font-bold mb-2 text-gray-900">Ciência e Tecnologia</h2>
                     <p class="text-gray-500 mb-6">A ciência como campo social e os impactos sociais da tecnologia</p>
@@ -4184,7 +4388,8 @@
     id: "sociedade-meio-ambiente",
     title: "Sociedade e Meio Ambiente",
     emoji: "🌿",
-    parent: "tech-ambiente",
+                parent: "ambiente",
+    
     content: `
                     <h2 class="text-3xl font-bold mb-2 text-gray-900">Sociedade e Meio Ambiente</h2>
                     <p class="text-gray-500 mb-6">Riscos ambientais, conflitos socioambientais e sustentabilidade</p>
@@ -4268,7 +4473,8 @@
                 id: "saude-sociedade",
                 title: "Saúde e Sociedade",
                 emoji: "🏥",
-                parent: "saude-futuro",
+                parent: "saude-doenca",
+                
                 content: `
                     <h2 class="text-3xl font-bold mb-2 text-gray-900">Saúde e Sociedade</h2>
                     <p class="text-gray-500 mb-6">Por que grupos sociais adoecem e morrem de formas diferentes?</p>
@@ -4413,7 +4619,8 @@
                 id: "migracoes-deslocamentos",
                 title: "Migrações e Deslocamentos Humanos",
                 emoji: "🌎",
-                parent: "saude-futuro",
+                parent: "migracoes",
+                
                 content: `
                     <h2 class="text-3xl font-bold mb-2 text-gray-900">Migrações e Deslocamentos Humanos</h2>
                     <p class="text-gray-500 mb-6">Fluxos migratórios, refugiados, xenofobia e os direitos das pessoas em movimento</p>
@@ -4529,7 +4736,8 @@
     id: "futuro",
     title: "Futuro",
     emoji: "🔮",
-    parent: "saude-futuro",
+                parent: "futuro",
+    
     content: `
                     <h2 class="text-3xl font-bold mb-2 text-gray-900">Futuro</h2>
                     <p class="text-gray-500 mb-6">Tendências contemporâneas, limites do crescimento e o papel da Sociologia</p>
@@ -4626,33 +4834,55 @@
             renderNavigation() {
                 const navContainer = document.getElementById('navContainer');
                 navContainer.innerHTML = '';
+
+                // If searching, show flat list
                 const isFiltered = this.filteredTopics.length !== this.allTopics.length;
                 if (isFiltered) {
                     this.filteredTopics.forEach(topic => {
                         const navItem = document.createElement('div');
-                        navItem.className = `nav-item pl-3 pr-3 py-2 rounded-lg mb-1 text-sm${this.currentTopic === topic.id ? ' active' : ''}`;
+                        navItem.className = `nav-item p-3 rounded-lg mb-1 text-sm${this.currentTopic === topic.id ? ' active' : ''}`;
                         navItem.innerHTML = `<span class="mr-2">${topic.emoji}</span>${topic.title}`;
                         navItem.addEventListener('click', () => this.selectTopic(topic.id));
                         navContainer.appendChild(navItem);
                     });
                     return;
                 }
+
+                // Group view
                 groupsData.forEach(group => {
                     const groupTopics = this.allTopics.filter(t => t.parent === group.id);
                     if (groupTopics.length === 0) return;
+
                     const groupEl = document.createElement('div');
-                    groupEl.className = 'nav-group mb-1';
+                    groupEl.className = 'nav-group';
+
+                    // Group header
                     const header = document.createElement('div');
                     header.className = 'nav-group-header';
-                    header.textContent = group.title;
+                    header.innerHTML = `<span>${group.emoji} ${group.title}</span><span class="nav-group-toggle">▼</span>`;
+                    header.addEventListener('click', () => {
+                        groupEl.classList.toggle('collapsed');
+                        this.saveGroupState(group.id, groupEl.classList.contains('collapsed'));
+                    });
                     groupEl.appendChild(header);
+
+                    // Group content
+                    const content = document.createElement('div');
+                    content.className = 'nav-group-content';
                     groupTopics.forEach(topic => {
                         const navItem = document.createElement('div');
-                        navItem.className = `nav-item pl-4 pr-3 py-2 rounded-lg mb-1 text-sm${this.currentTopic === topic.id ? ' active' : ''}`;
-                        navItem.innerHTML = `<span class="mr-2">${topic.emoji}</span>${topic.title}`;
+                        navItem.className = `nav-item nav-item-child p-2 rounded mb-1${this.currentTopic === topic.id ? ' active' : ''}`;
+                        navItem.innerHTML = `<span class="mr-2">${topic.emoji}</span><span>${topic.title}</span>`;
                         navItem.addEventListener('click', () => this.selectTopic(topic.id));
-                        groupEl.appendChild(navItem);
+                        content.appendChild(navItem);
                     });
+                    groupEl.appendChild(content);
+
+                    // Load collapsed state
+                    if (this.getGroupState(group.id)) {
+                        groupEl.classList.add('collapsed');
+                    }
+
                     navContainer.appendChild(groupEl);
                 });
             },
@@ -4688,6 +4918,17 @@
                 `;
             },
 
+
+            saveGroupState(groupId, collapsed) {
+                const states = JSON.parse(localStorage.getItem('groupStates') || '{}');
+                states[groupId] = collapsed;
+                localStorage.setItem('groupStates', JSON.stringify(states));
+            },
+
+            getGroupState(groupId) {
+                const states = JSON.parse(localStorage.getItem('groupStates') || '{}');
+                return states[groupId] || false;
+            },
             setupToggleListeners() {
                 const toggleButtons = document.querySelectorAll('.toggle-btn');
                 toggleButtons.forEach(btn => {
