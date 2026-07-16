@@ -12,7 +12,8 @@ Site SPA (Single Page Application) com conteúdo estruturado de Sociologia para 
 - ✅ **Interface moderna e responsiva** - Funciona em desktop, tablet e mobile
 - ✅ **Buscador em tempo real** - Encontre tópicos instantaneamente
 - ✅ **Navegação fluida** - SPA sem recarregamento de página
-- ✅ **Conteúdo estruturado** - 16+ tópicos com abordagem clara
+- ✅ **23 tópicos completos** - Conteúdo com rigor acadêmico e transposição didática
+- ✅ **Referências bibliográficas** - ABNT em todos os tópicos
 - ✅ **Design minimalista** - Inspirado no Notion, sem distrações
 - ✅ **Sem dependências externas** - Apenas Tailwind CSS via CDN
 
@@ -40,32 +41,31 @@ open index.html
 xdg-open index.html
 ```
 
-## 📋 Tópicos Disponíveis
+## 📋 Tópicos Disponíveis (23/23 ✅)
 
-### Implementados ✅
-1. **Indivíduo e sociedade** - Imaginação sociológica, socialização, grupos
-2. **A Sociologia como Ciência** - Comte, Iluminismo, positivismo
-3. **Os Fundadores** - Durkheim, Marx, Weber
-4. **Cultura e Sociedade** - Relativismo, multiculturalismo, darwinismo social
-5. **Populações do Brasil** - Urbanização, indígenas, quilombolas
-6. **A Sociedade Brasileira** - Formação histórica, intérpretes, dependência
-7. **Diversidade Cultural** - Mito da democracia racial, antropofagia
-9. **Religião e Sociedade** - Weber, Durkheim, Marx, Brasil contemporâneo
-12. **Gênero e Sexualidade** - Feminismo, performatividade, movimento LGBTQIA+
-19. **Trabalho** - Formas históricas, fordismo, movimentos trabalhadores
-21. **Classes e Desigualdade** - Durkheim, Weber, Bourdieu, mobilidade
-22. **Pobreza e Desigualdade no Brasil** - Gini, IDH, pobreza absoluta/relativa
-
-### Planejados 📋
-- Política e Poder
-- Movimentos Sociais
-- Educação e Socialização
-- Saúde e Sociedade
-- Comunicação de Massa
-- Família
-- Mobilidade Social
-- Mudança Social
-- Outros tópicos temáticos
+1. **Indivíduo e Sociedade** — Imaginação sociológica, socialização, grupos e instituições
+2. **A Sociologia como Ciência** — Comte, Iluminismo, positivismo e método científico
+3. **Os Fundadores da Sociologia** — Durkheim, Marx, Weber e suas contribuições
+4. **Cultura e Sociedade** — Relativismo cultural, multiculturalismo, etnocentrismo
+5. **Populações do Brasil** — Urbanização, indígenas, quilombolas, diversidade
+6. **A Sociedade Brasileira** — Formação histórica, intérpretes, patrimonialismo
+7. **Diversidade Cultural no Brasil** — Mito da democracia racial, relações étnico-raciais
+8. **Política e Poder** — Estado, democracia, cidadania, partidos e representação
+9. **Religião e Sociedade** — Weber, Durkheim, Marx, neopentecostalismo no Brasil
+10. **Movimentos Sociais** — Teorias, ciclos, MST, feminismo, LGBTQIA+
+11. **Educação e Socialização** — Bourdieu, Paulo Freire, cotas, educação no Brasil
+12. **Gênero e Sexualidade** — Feminismo, performatividade, movimento LGBTQIA+
+13. **Saúde e Sociedade** — Determinantes sociais, SUS, desigualdades em saúde
+14. **Comunicação de Massa** — Mídia, opinião pública, fake news, redes sociais
+15. **Família** — Modelos familiares, transformações históricas, diversidade familiar
+16. **Desvio Social e Controle** — Durkheim, Goffman, encarceramento, estigma
+17. **Conflito e Mudança Social** — Teorias do conflito, revoluções, reforma agrária
+18. **Identidade Social** — Identidade nacional, juventude, pertencimento e diferença
+19. **Trabalho** — Formas históricas, fordismo, precarização, movimentos trabalhistas
+20. **Envelhecimento e Ciclos de Vida** — Gerontologia social, terceira idade, políticas
+21. **Classes e Desigualdade Social** — Durkheim, Weber, Bourdieu, mobilidade social
+22. **Pobreza e Desigualdade no Brasil** — Gini, IDH, Bolsa Família, políticas sociais
+23. **Globalização e Sociedade** — Neoliberalismo, fluxos globais, identidades
 
 ## 🛠️ Tecnologias
 
@@ -78,25 +78,32 @@ xdg-open index.html
 
 ```
 sociologia-ensino-medio/
-├── index.html                 # Aplicação completa (SPA)
-├── README.md                  # Este arquivo
-├── LICENSE                    # Licença MIT
-├── .gitignore                 # Arquivos ignorados
-├── package.json               # Metadados do projeto
+├── index.html                         # Aplicação completa (SPA)
+├── README.md                          # Este arquivo
+├── REFERENCIAS_BIBLIOGRAFICAS.md      # Referências ABNT de todos os tópicos
+├── LICENSE                            # Licença MIT
+├── package.json                       # Metadados do projeto
 ├── .github/
 │   └── workflows/
-│       └── pages.yml          # Deploy automático
-├── docs/
-│   ├── CONTRIBUTE.md          # Guia de contribuição
-│   ├── ROADMAP.md             # Plano de desenvolvimento
-│   └── ESTRUTURA.md           # Documentação técnica
-└── assets/
-    └── screenshot.png         # Screenshot da interface
+│       └── pages.yml                  # Deploy automático
+└── docs/
+    ├── CONTRIBUTE.md                  # Guia de contribuição
+    ├── ROADMAP.md                     # Plano de desenvolvimento
+    ├── ESTRUTURA.md                   # Documentação técnica
+    ├── GUIA_PESQUISA_CONTEUDO.md      # Guia metodológico de pesquisa
+    ├── PLANO_ACAO.md                  # Plano de ação do projeto
+    ├── README_ORGANIZACAO_CONTEUDO.md # Organização do conteúdo
+    ├── RESUMOS_EXECUTIVOS_TOPICOS.md  # Resumos rápidos por tópico
+    └── pesquisa/
+        ├── PESQUISA_P1_PROFUNDA.md    # Pesquisa: Política, Movimentos, Educação
+        ├── PESQUISA_P2_PROFUNDA.md    # Pesquisa: Saúde, Comunicação, Família
+        ├── PESQUISA_P3_PROFUNDA.md    # Pesquisa: Desvio, Conflito, Identidade
+        └── PESQUISA_P4_PROFUNDA.md    # Pesquisa: Envelhecimento, Globalização
 ```
 
 ## 🤝 Contribuindo
 
-Vejo sugestões, correções e novas abordagens! Leia [CONTRIBUTE.md](docs/CONTRIBUTE.md) para entender o fluxo.
+Sugestões, correções e novas abordagens são bem-vindas! Leia [CONTRIBUTE.md](docs/CONTRIBUTE.md) para entender o fluxo.
 
 ### Passos Rápidos:
 1. Fork o repositório
@@ -104,26 +111,23 @@ Vejo sugestões, correções e novas abordagens! Leia [CONTRIBUTE.md](docs/CONTR
 3. Faça commits descritivos
 4. Abra um Pull Request
 
-## 📚 Referências Utilizadas
+## 📚 Referências Bibliográficas
 
-- Durkheim, E. (1858-1917) - *Fato Social*
-- Marx, K. (1818-1883) - *Materialismo Histórico*
-- Weber, M. (1864-1920) - *Ação Social*
-- Brandão, G. M. (2007) - *Linhagens do Pensamento Político Brasileiro*
-- Fernandes, F. (1920-1995) - *Sociedade de Classes e Subdesenvolvimento*
-- Bourdieu, P. (1930-2002) - *Capital Cultural e Habitus*
+Veja o arquivo completo [REFERENCIAS_BIBLIOGRAFICAS.md](REFERENCIAS_BIBLIOGRAFICAS.md) com todas as obras consultadas (70+ referências em formato ABNT), organizadas por tópico.
+
+Principais autores referenciados:
+- Durkheim, Émile — *As Regras do Método Sociológico*, *O Suicídio*
+- Marx, Karl — *O Capital*, *Manifesto do Partido Comunista*
+- Weber, Max — *A Ética Protestante e o Espírito do Capitalismo*
+- Bourdieu, Pierre — *A Reprodução*, *O Poder Simbólico*
+- Freire, Paulo — *Pedagogia do Oprimido*
+- Fernandes, Florestan — *A Revolução Burguesa no Brasil*
+- Ribeiro, Darcy — *O Povo Brasileiro*
+- Holanda, Sérgio Buarque de — *Raízes do Brasil*
 
 ## 📄 Licença
 
 Este projeto é licenciado sob a **Licença MIT** - veja [LICENSE](LICENSE) para detalhes.
-
-Você é livre para:
-- ✅ Usar comercialmente
-- ✅ Modificar
-- ✅ Distribuir
-- ✅ Usar em privado
-
-Com apenas uma condição: incluir aviso de copyright e licença.
 
 ## 👨‍💻 Autor
 
@@ -139,4 +143,4 @@ Tem alguma sugestão? Encontrou um erro? Abra uma [Issue](https://github.com/gus
 
 **Última atualização:** Julho de 2026
 
-**Status:** 🟢 Em desenvolvimento ativo
+**Status:** 🟢 23 tópicos completos
