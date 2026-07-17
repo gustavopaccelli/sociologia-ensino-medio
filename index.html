@@ -5648,6 +5648,9 @@
             filteredTopics: topicsData,
 
             init() {
+                console.log('App initialized');
+                console.log('Total topics:', this.allTopics.length);
+                console.log('Topics:', this.allTopics.map(t => t.title));
                 this.renderNavigation();
                 this.setupToggleListeners();
             },
