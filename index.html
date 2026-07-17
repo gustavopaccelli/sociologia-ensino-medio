@@ -5668,42 +5668,13 @@
                     return;
                 }
 
-                // Group view
-                groupsData.forEach(group => {
-                    const groupTopics = this.allTopics.filter(t => t.parent === group.id);
-                    if (groupTopics.length === 0) return;
-
-                    const groupEl = document.createElement('div');
-                    groupEl.className = 'nav-group';
-
-                    // Group header
-                    const header = document.createElement('div');
-                    header.className = 'nav-group-header';
-                    header.innerHTML = `<span>${group.emoji} ${group.title}</span><span class="nav-group-toggle">▼</span>`;
-                    header.addEventListener('click', () => {
-                        groupEl.classList.toggle('collapsed');
-                        this.saveGroupState(group.id, groupEl.classList.contains('collapsed'));
-                    });
-                    groupEl.appendChild(header);
-
-                    // Group content
-                    const content = document.createElement('div');
-                    content.className = 'nav-group-content';
-                    groupTopics.forEach(topic => {
-                        const navItem = document.createElement('div');
-                        navItem.className = `nav-item nav-item-child p-2 rounded mb-1${this.currentTopic === topic.id ? ' active' : ''}`;
-                        navItem.innerHTML = `<span class="mr-2">${topic.emoji}</span><span>${topic.title}</span>`;
-                        navItem.addEventListener('click', () => this.selectTopic(topic.id));
-                        content.appendChild(navItem);
-                    });
-                    groupEl.appendChild(content);
-
-                    // Load collapsed state
-                    if (this.getGroupState(group.id)) {
-                        groupEl.classList.add('collapsed');
-                    }
-
-                    navContainer.appendChild(groupEl);
+                // Flat list view - all topics numbered 1-35
+                this.allTopics.forEach((topic, index) => {
+                    const navItem = document.createElement('div');
+                    navItem.className = `nav-item p-3 rounded-lg mb-1 text-sm${this.currentTopic === topic.id ? ' active' : ''}`;
+                    navItem.innerHTML = `<span class="mr-2">${topic.emoji}</span><span class="font-medium">${index + 1}.</span> <span>${topic.title}</span>`;
+                    navItem.addEventListener('click', () => this.selectTopic(topic.id));
+                    navContainer.appendChild(navItem);
                 });
             },
 
