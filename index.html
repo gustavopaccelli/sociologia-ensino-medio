@@ -5668,11 +5668,11 @@
                     return;
                 }
 
-                // Flat list view - all topics numbered 1-35
+                // Flat list view - all topics
                 this.allTopics.forEach((topic, index) => {
                     const navItem = document.createElement('div');
-                    navItem.className = `nav-item p-3 rounded-lg mb-1 text-sm${this.currentTopic === topic.id ? ' active' : ''}`;
-                    navItem.innerHTML = `<span class="mr-2">${topic.emoji}</span><span class="font-medium">${index + 1}.</span> <span>${topic.title}</span>`;
+                    navItem.className = `nav-item p-3 rounded-lg mb-1 text-sm text-center${this.currentTopic === topic.id ? ' active' : ''}`;
+                    navItem.innerHTML = `<span class="font-bold">${topic.title}</span>`;
                     navItem.addEventListener('click', () => this.selectTopic(topic.id));
                     navContainer.appendChild(navItem);
                 });
