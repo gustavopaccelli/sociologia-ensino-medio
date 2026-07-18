@@ -150,7 +150,7 @@ Este projeto é licenciado sob a **Licença MIT** - veja [LICENSE](LICENSE) para
 
 Desenvolvido por **Gustavo Paccelli** ([@gustavopaccelli](https://github.com/gustavopaccelli))
 
-Doutorando em Sociologia com foco em protestos, movimentos sociais e participação política.
+Doutor em Sociologia com foco em protestos, movimentos sociais e participação política.
 
 ## 💬 Feedback e Sugestões
 
