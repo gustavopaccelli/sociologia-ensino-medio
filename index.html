@@ -6160,6 +6160,12 @@
             currentQuizTopic: null,
             quizAnswered: {}, // Track answered quizzes
 
+            escapeHtml(text) {
+                const div = document.createElement('div');
+                div.textContent = text;
+                return div.innerHTML;
+            },
+
             init() {
                 this.renderNavigation();
                 this.setupToggleListeners();
@@ -6217,9 +6223,9 @@
                 const breadcrumbContainer = document.getElementById('breadcrumbContainer');
                 breadcrumbContainer.innerHTML = `
                     <span class="text-gray-500 text-sm">📚 Sociologia</span>
-                    ${group ? `<span class="breadcrumb-divider">/</span><span class="text-gray-500 text-sm">${group.title}</span>` : ''}
+                    ${group ? `<span class="breadcrumb-divider">/</span><span class="text-gray-500 text-sm">${this.escapeHtml(group.title)}</span>` : ''}
                     <span class="breadcrumb-divider">/</span>
-                    <span class="font-semibold text-gray-900 text-sm">${topic.title}</span>
+                    <span class="font-semibold text-gray-900 text-sm">${this.escapeHtml(topic.title)}</span>
                 `;
             },
 
@@ -6237,19 +6243,16 @@
             setupToggleListeners() {
                 const toggleButtons = document.querySelectorAll('.toggle-btn');
                 toggleButtons.forEach(btn => {
-                    btn.removeEventListener('click', this.handleToggle);
-                    btn.addEventListener('click', this.handleToggle);
-                });
-            },
+                    btn.addEventListener('click', (e) => {
+                        const toggleId = e.currentTarget.getAttribute('data-toggle');
+                        const content = document.getElementById(toggleId);
+                        if (!content) return;
 
-            handleToggle(e) {
-                const toggleId = e.currentTarget.getAttribute('data-toggle');
-                const content = document.getElementById(toggleId);
-                if (!content) return;
-                
-                content.classList.toggle('active');
-                const icon = e.currentTarget.querySelector('span:last-child');
-                icon.textContent = content.classList.contains('active') ? '−' : '+';
+                        content.classList.toggle('active');
+                        const icon = e.currentTarget.querySelector('span:last-child');
+                        icon.textContent = content.classList.contains('active') ? '−' : '+';
+                    });
+                });
             },
 
             filterTopics(query) {
@@ -6298,9 +6301,9 @@
 
                         html += `
                             <div class="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition cursor-pointer"
-                                 onclick="app.selectQuizTopic('${topicId}')">
+                                 onclick="app.selectQuizTopic('${this.escapeHtml(topicId)}')">
                                 <div class="text-3xl mb-3">${emoji}</div>
-                                <h3 class="font-bold text-lg text-gray-900 mb-2">${topicTitle}</h3>
+                                <h3 class="font-bold text-lg text-gray-900 mb-2">${this.escapeHtml(topicTitle)}</h3>
                                 <p class="text-sm text-gray-600 mb-3">${quizzes.length} questões</p>
                                 <div class="flex items-center text-blue-600 text-sm font-semibold">
                                     Começar →
@@ -6320,7 +6323,7 @@
                         <div class="mb-6">
                             <button onclick="app.currentQuizTopic = null; app.renderQuizzes(); app.updateBreadcrumbQuizzes();"
                                     class="text-blue-600 hover:text-blue-800 text-sm font-semibold mb-4">← Voltar aos temas</button>
-                            <h2 class="text-2xl font-bold text-gray-900">${topicTitle}</h2>
+                            <h2 class="text-2xl font-bold text-gray-900">${this.escapeHtml(topicTitle)}</h2>
                             <p class="text-gray-600 text-sm">Responda as questões Verdadeiro ou Falso</p>
                         </div>
                         <div class="space-y-4">
@@ -6342,15 +6345,15 @@
                                     ${answered !== undefined ? `<span class="text-sm font-semibold ${isCorrect ? 'text-green-700' : 'text-red-700'}">${isCorrect ? '✓ Correto' : '✗ Incorreto'}</span>` : ''}
                                 </div>
 
-                                <p class="text-gray-800 mb-4 font-medium">${quiz.question}</p>
+                                <p class="text-gray-800 mb-4 font-medium">${this.escapeHtml(quiz.question)}</p>
 
                                 <div class="flex gap-3 mb-4">
-                                    <button onclick="app.answerQuiz('${quiz.id}', true)"
+                                    <button onclick="app.answerQuiz('${this.escapeHtml(quiz.id)}', true)"
                                             class="flex-1 py-3 px-4 rounded-lg font-semibold transition ${answered !== undefined ? 'opacity-50 cursor-not-allowed' : 'hover:bg-green-100'} ${answered === true ? 'bg-green-500 text-white' : 'bg-gray-100 text-gray-900'}"
                                             ${answered !== undefined ? 'disabled' : ''}>
                                         ✓ Verdadeiro
                                     </button>
-                                    <button onclick="app.answerQuiz('${quiz.id}', false)"
+                                    <button onclick="app.answerQuiz('${this.escapeHtml(quiz.id)}', false)"
                                             class="flex-1 py-3 px-4 rounded-lg font-semibold transition ${answered !== undefined ? 'opacity-50 cursor-not-allowed' : 'hover:bg-red-100'} ${answered === false ? 'bg-red-500 text-white' : 'bg-gray-100 text-gray-900'}"
                                             ${answered !== undefined ? 'disabled' : ''}>
                                         ✗ Falso
@@ -6360,7 +6363,7 @@
                                 ${answered !== undefined ? `
                                     <div class="bg-blue-50 border-l-4 border-blue-500 p-3 rounded text-sm">
                                         <p class="font-semibold text-blue-900 mb-1">Explicação:</p>
-                                        <p class="text-blue-800">${quiz.explanation}</p>
+                                        <p class="text-blue-800">${this.escapeHtml(quiz.explanation)}</p>
                                     </div>
                                 ` : ''}
                             </div>
@@ -6398,7 +6401,7 @@
                         <span class="breadcrumb-divider">/</span>
                         <span class="text-gray-500 text-sm cursor-pointer hover:underline" onclick="app.currentQuizTopic = null; app.renderQuizzes(); app.updateBreadcrumbQuizzes();">Quizes</span>
                         <span class="breadcrumb-divider">/</span>
-                        <span class="font-semibold text-gray-900 text-sm">${quiz.topicTitle}</span>
+                        <span class="font-semibold text-gray-900 text-sm">${this.escapeHtml(quiz.topicTitle)}</span>
                     `;
                 }
             },
