@@ -9,36 +9,9 @@
     <title>Repositório de Sociologia | Ensino Médio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Nintendo 2001 Design System Colors */
-        :root {
-            --nintendo-primary: #e60012;      /* Nintendo Red */
-            --nintendo-signal: #f68d1f;       /* Signal Orange */
-            --nintendo-amber: #ecab37;        /* Amber */
-            --nintendo-gold: #e48600;         /* Nav Gold */
-            --nintendo-canvas: #7a8aba;       /* Periwinkle Metallic */
-            --nintendo-canvas-soft: #9fbee7;  /* Pale Sky */
-            --nintendo-sky: #9fbee7;          /* Pale Sky */
-            --nintendo-periwinkle: #8ba1d4;   /* Light Periwinkle */
-            --nintendo-chrome: #3d4f97;       /* Chrome Indigo */
-            --nintendo-muted: #60619c;        /* Muted Indigo */
-            --nintendo-platinum: #dedede;     /* Platinum Gray */
-            --nintendo-surface: #ffffff;      /* White */
-            --nintendo-carbon: #21242e;       /* Carbon Navy */
-            --nintendo-hairline: #5a5f8c;     /* Hairline */
-        }
-        
         * {
-            font-family: Arial, -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Arial, sans-serif;
         }
-
-        
-        /* Callout styles */
-        .sidebar-bg {
-            background-color: var(--nintendo-canvas-soft);
-            border-right: 2px solid var(--nintendo-chrome);
-            box-shadow: inset 1px 1px 0 rgba(255,255,255,0.3), inset -1px -1px 0 var(--nintendo-chrome);
-        }
-
         
         .sidebar-bg {
             background-color: #fbfbfa;
@@ -54,20 +27,32 @@
             max-height: 500px;
         }
         
-        
         .callout {
-            border-left: 2px solid var(--nintendo-chrome);
+            border-left: 4px solid;
             padding: 1rem;
-            border-radius: 4px;
-            background-color: var(--nintendo-canvas-soft);
-            box-shadow: inset 1px 1px 0 rgba(255,255,255,0.2), inset -1px -1px 0 var(--nintendo-chrome);
+            border-radius: 0.5rem;
+            background-color: rgba(0,0,0,0.02);
         }
         
         .callout.info {
-            border-left-color: var(--nintendo-signal);
-            background-color: rgba(246, 141, 31, 0.1);
+            border-color: #3b82f6;
+            background-color: #eff6ff;
         }
-
+        
+        .callout.success {
+            border-color: #10b981;
+            background-color: #ecfdf5;
+        }
+        
+        .callout.warning {
+            border-color: #f59e0b;
+            background-color: #fffbeb;
+        }
+        
+        .callout.critical {
+            border-color: #ef4444;
+            background-color: #fef2f2;
+        }
         
 
         .nav-group-header {
@@ -97,32 +82,19 @@
             to { opacity: 1; }
         }
         
-        
-        /* Nintendo Navigation Chrome */
         .nav-item {
             cursor: pointer;
-            transition: all 0.2s;
-            background-color: var(--nintendo-canvas-soft);
-            border-left: 3px solid transparent;
-            color: var(--nintendo-carbon);
-            font-weight: 700;
-            font-size: 11px;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-            box-shadow: inset 1px 1px 0 rgba(255,255,255,0.2), inset -1px -1px 0 var(--nintendo-chrome);
+            transition: background-color 0.2s;
         }
         
         .nav-item.active {
-            background-color: var(--nintendo-periwinkle);
-            border-left: 3px solid var(--nintendo-signal);
-            box-shadow: inset 1px 1px 0 rgba(255,255,255,0.3), inset -1px -1px 0 var(--nintendo-chrome);
+            background-color: #f3f4f6;
+            border-left: 3px solid #1f2937;
         }
         
         .nav-item:hover {
-            background-color: var(--nintendo-periwinkle);
-            box-shadow: inset 1px 1px 0 rgba(255,255,255,0.3), inset -1px -1px 0 var(--nintendo-chrome);
+            background-color: #f9fafb;
         }
-
         
         .hamburger {
             display: none;
@@ -163,199 +135,6 @@
                 z-index: 40;
             }
         }
-
-        /* ═══════════════════════════════════════════════════════════════ */
-        /* NINTENDO 2001 CHROME COMPONENTS */
-        /* ═══════════════════════════════════════════════════════════════ */
-        
-        /* Button Chrome Bevel Effect */
-        .chrome-button {
-            background-color: var(--nintendo-amber);
-            color: var(--nintendo-carbon);
-            border: none;
-            padding: 8px 16px;
-            font-size: 11px;
-            font-weight: 700;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-            border-radius: 2px;
-            cursor: pointer;
-            box-shadow: 
-                inset 1px 1px 0 rgba(255,255,255,0.3),
-                inset -1px -1px 0 var(--nintendo-chrome),
-                0 2px 4px rgba(0,0,0,0.1);
-            transition: all 0.15s;
-        }
-        
-        .chrome-button:hover {
-            background-color: var(--nintendo-gold);
-            box-shadow: 
-                inset 1px 1px 0 rgba(255,255,255,0.3),
-                inset -1px -1px 0 var(--nintendo-chrome),
-                0 2px 6px rgba(0,0,0,0.15);
-        }
-        
-        .chrome-button:active {
-            box-shadow: 
-                inset -1px -1px 0 rgba(255,255,255,0.2),
-                inset 1px 1px 0 var(--nintendo-chrome);
-        }
-        
-        /* Signal Orange Submit Button */
-        .chrome-button-submit {
-            background-color: var(--nintendo-signal);
-            color: white;
-            border: none;
-            padding: 10px 24px;
-            font-size: 11px;
-            font-weight: 700;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-            border-radius: 2px;
-            cursor: pointer;
-            box-shadow: 
-                inset 1px 1px 0 rgba(255,255,255,0.2),
-                inset -1px -1px 0 var(--nintendo-chrome),
-                0 2px 4px rgba(0,0,0,0.2);
-            transition: all 0.15s;
-        }
-        
-        .chrome-button-submit:hover {
-            box-shadow: 
-                inset 1px 1px 0 rgba(255,255,255,0.2),
-                inset -1px -1px 0 var(--nintendo-chrome),
-                0 3px 6px rgba(0,0,0,0.25);
-        }
-        
-        /* Panel/Card Chrome Container */
-        .chrome-panel {
-            background-color: var(--nintendo-canvas-soft);
-            border-radius: 4px;
-            padding: 12px;
-            box-shadow: 
-                inset 1px 1px 0 rgba(255,255,255,0.3),
-                inset -1px -1px 0 var(--nintendo-chrome),
-                0 2px 4px rgba(0,0,0,0.1);
-            margin-bottom: 12px;
-        }
-        
-        .chrome-panel-dark {
-            background-color: var(--nintendo-carbon);
-            color: white;
-            box-shadow: 
-                inset 1px 1px 0 rgba(255,255,255,0.1),
-                inset -1px -1px 0 rgba(0,0,0,0.5);
-        }
-        
-        /* Panel Header Bar (section label) */
-        .chrome-header {
-            background-color: var(--nintendo-canvas);
-            color: var(--nintendo-carbon);
-            padding: 8px 12px;
-            font-size: 11px;
-            font-weight: 700;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-            border-radius: 0;
-            margin: -12px -12px 12px -12px;
-            box-shadow: inset -1px -1px 0 var(--nintendo-chrome);
-            border-bottom: 1px solid var(--nintendo-chrome);
-        }
-        
-        /* Text Input Chrome */
-        .chrome-input {
-            background-color: var(--nintendo-surface);
-            border: 1px solid var(--nintendo-hairline);
-            padding: 6px 8px;
-            font-size: 12px;
-            border-radius: 2px;
-            box-shadow: inset 1px 1px 0 var(--nintendo-chrome);
-            font-family: Arial, sans-serif;
-        }
-        
-        .chrome-input:focus {
-            outline: none;
-            box-shadow: inset 1px 1px 0 var(--nintendo-signal);
-            border-color: var(--nintendo-signal);
-        }
-        
-        /* Quiz Card Chrome */
-        .quiz-card {
-            background-color: var(--nintendo-platinum);
-            border-radius: 4px;
-            padding: 12px;
-            margin-bottom: 8px;
-            box-shadow: 
-                inset 1px 1px 0 rgba(255,255,255,0.5),
-                inset -1px -1px 0 var(--nintendo-chrome);
-            border-left: 3px solid var(--nintendo-signal);
-        }
-        
-        .quiz-card:hover {
-            background-color: var(--nintendo-periwinkle);
-            box-shadow: 
-                inset 1px 1px 0 rgba(255,255,255,0.6),
-                inset -1px -1px 0 var(--nintendo-chrome);
-        }
-        
-        /* Topic Badge */
-        .topic-badge {
-            background-color: var(--nintendo-amber);
-            color: var(--nintendo-carbon);
-            padding: 4px 8px;
-            border-radius: 2px;
-            font-size: 10px;
-            font-weight: 700;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-            box-shadow: 
-                inset 1px 1px 0 rgba(255,255,255,0.3),
-                inset -1px -1px 0 var(--nintendo-chrome);
-            display: inline-block;
-            margin-right: 6px;
-        }
-        
-        /* Sidebar Chrome */
-        .sidebar {
-            background-color: var(--nintendo-canvas-soft);
-            border-right: 2px solid var(--nintendo-chrome);
-            box-shadow: inset -1px 0 0 var(--nintendo-chrome);
-        }
-        
-        /* Main Content Area */
-        .content-main {
-            background-color: var(--nintendo-sky);
-            padding: 16px;
-        }
-        
-        /* Table Chrome */
-        table {
-            border-collapse: collapse;
-            width: 100%;
-        }
-        
-        th {
-            background-color: var(--nintendo-canvas);
-            color: var(--nintendo-carbon);
-            padding: 8px;
-            text-align: left;
-            font-weight: 700;
-            font-size: 11px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            border: 1px solid var(--nintendo-hairline);
-        }
-        
-        td {
-            background-color: var(--nintendo-platinum);
-            padding: 8px;
-            border: 1px solid var(--nintendo-hairline);
-        }
-        
-        tr:hover td {
-            background-color: var(--nintendo-surface);
-        }
-
     </style>
 </head>
 <body class="bg-white">
@@ -368,7 +147,7 @@
                     type="text" 
                     id="searchInput" 
                     placeholder="Buscar tópicos..." 
-                    class="chrome-input" style="width: 100%"
+                    class="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-gray-400"
                 >
             </div>
             
