@@ -142,7 +142,7 @@
         <!-- SIDEBAR -->
         <div class="sidebar sidebar-bg w-72 border-r border-gray-200 flex flex-col">
             <div class="p-6 border-b border-gray-200">
-                <h1 class="text-xl font-bold text-gray-900 mb-4">📚 Sociologia</h1>
+                <h1 class="text-xl font-bold text-gray-900 mb-4 cursor-pointer hover:text-blue-600 transition" onclick="app.goHome()" style="user-select: none;">📚 Sociologia</h1>
                 <input 
                     type="text" 
                     id="searchInput" 
@@ -7521,6 +7521,7 @@
             },
 
             init() {
+                this.searchInput = document.getElementById('searchInput');
                 this.renderNavigation();
                 this.setupToggleListeners();
             },
@@ -7774,6 +7775,18 @@
                 const overlay = document.getElementById('sidebarOverlay');
                 sidebar.classList.remove('open');
                 overlay.classList.remove('open');
+            },
+
+            goHome() {
+                this.currentTopic = null;
+                this.currentPage = 'topics';
+                this.currentQuizTopic = null;
+                this.searchInput.value = '';
+                this.filteredTopics = this.allTopics;
+                this.renderNavigation();
+                this.renderContent();
+                this.updateBreadcrumb();
+                this.closeSidebarMobile();
             }
         };
 
