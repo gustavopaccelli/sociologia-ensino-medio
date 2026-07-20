@@ -188,7 +188,21 @@
                             </p>
                         </div>
                     </div>
-                    <div class="text-center text-gray-400 py-12">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+                        <div class="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition cursor-pointer" onclick="app.showQuizzes()">
+                            <div class="text-4xl mb-4">📝</div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Quizes Interativos</h3>
+                            <p class="text-gray-600 text-sm mb-4">Teste seus conhecimentos com questões Verdadeiro/Falso sobre cada tópico. Pratique e aprenda!</p>
+                            <div class="text-blue-600 font-semibold text-sm">Começar quizes →</div>
+                        </div>
+                        <div class="bg-white border border-gray-200 rounded-lg p-6 opacity-50">
+                            <div class="text-4xl mb-4">💼</div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Atividades (em breve)</h3>
+                            <p class="text-gray-600 text-sm mb-4">Exercícios práticos e análises de caso para aprofundar aprendizado.</p>
+                            <div class="text-gray-400 font-semibold text-sm">Disponível em breve</div>
+                        </div>
+                    </div>
+                    <div class="text-center text-gray-400 py-8">
                         <p class="text-lg">👈 Selecione um tópico na barra lateral para começar, ou use a busca acima</p>
                     </div>
                 </div>
@@ -5888,11 +5902,277 @@
 }
 ];
 
+        // QUIZZES DATA
+        const quizzesData = [
+            // Tópico 1: Indivíduo e Sociedade
+            {
+                id: "quiz-001",
+                topicId: "individuo-sociedade",
+                topicTitle: "Indivíduo e Sociedade",
+                question: "Segundo Durkheim, fatos sociais são maneiras de fazer e pensar que exercem coerção externa sobre os indivíduos, independentemente de sua vontade.",
+                correctAnswer: true,
+                explanation: "Correto! Durkheim define fatos sociais como exteriores e coercitivos. Eles preexistem ao indivíduo e o constrangem — exemplos: linguagem, direito, costumes."
+            },
+            {
+                id: "quiz-002",
+                topicId: "individuo-sociedade",
+                topicTitle: "Indivíduo e Sociedade",
+                question: "Para Weber, a 'ação social' é aquela que não leva em conta o comportamento de outros indivíduos.",
+                correctAnswer: false,
+                explanation: "Falso! Para Weber, ação social é justamente aquela cujo sentido refere-se ao comportamento de outros e se orienta por esse comportamento. É significativa e intencional."
+            },
+            {
+                id: "quiz-003",
+                topicId: "individuo-sociedade",
+                topicTitle: "Indivíduo e Sociedade",
+                question: "O conceito de 'habitus' de Bourdieu refere-se aos sistemas de disposições duráveis que estruturam nossas escolhas aparentemente livres.",
+                correctAnswer: true,
+                explanation: "Correto! O habitus são estruturas internalizadas que nos predispõem a agir de certas maneiras — nossa posição social estrutura nossas preferências, gosto e comportamento."
+            },
+
+            // Tópico 2: A Sociologia como Ciência
+            {
+                id: "quiz-004",
+                topicId: "sociologia-ciencia",
+                topicTitle: "A Sociologia como Ciência",
+                question: "Auguste Comte é considerado fundador da Sociologia e defendia que o método científico deveria ser aplicado ao estudo da sociedade.",
+                correctAnswer: true,
+                explanation: "Correto! Comte criou o termo 'Sociologia' e defendeu uma ciência positivista — observação, experimentação e lei para compreender a sociedade de forma objetiva."
+            },
+            {
+                id: "quiz-005",
+                topicId: "sociologia-ciencia",
+                topicTitle: "A Sociologia como Ciência",
+                question: "O positivismo de Comte rejeitava qualquer forma de reflexão subjetiva ou interpretativa em favor apenas da observação pura.",
+                correctAnswer: true,
+                explanation: "Correto! O positivismo de Comte buscava eliminar influências subjetivas — apenas fatos observáveis e mensuráveis seriam válidos. Isso era uma limitação criticada depois por Weber."
+            },
+            {
+                id: "quiz-006",
+                topicId: "sociologia-ciencia",
+                topicTitle: "A Sociologia como Ciência",
+                question: "A Sociologia se desenvolveu principalmente na Idade Média, quando intelectuais começaram a estudar sistematicamente as estruturas sociais.",
+                correctAnswer: false,
+                explanation: "Falso! A Sociologia é uma ciência moderna, surgida no século XIX (principalmente com Comte, Durkheim, Marx e Weber) como resposta intelectual às transformações trazidas pela Industrialização e Iluminismo."
+            },
+
+            // Tópico 3: Os Fundadores da Sociologia
+            {
+                id: "quiz-007",
+                topicId: "fundadores",
+                topicTitle: "Os Fundadores da Sociologia",
+                question: "Émile Durkheim defendeu que a 'solidariedade mecânica' é característica das sociedades industriais modernas.",
+                correctAnswer: false,
+                explanation: "Falso! É o oposto: solidariedade mecânica caracteriza sociedades pré-industriais (comunidades pequenas, semelhança entre membros). A solidariedade orgânica é própria das sociedades industriais."
+            },
+            {
+                id: "quiz-008",
+                topicId: "fundadores",
+                topicTitle: "Os Fundadores da Sociologia",
+                question: "Karl Marx argumentava que as relações de produção econômicas (base) determinam as instituições políticas, jurídicas e culturais (superestrutura).",
+                correctAnswer: true,
+                explanation: "Correto! Para Marx, o materialismo histórico significa que a base econômica condiciona a superestrutura — o modo de produção molda as ideias, leis e instituições de uma época."
+            },
+            {
+                id: "quiz-009",
+                topicId: "fundadores",
+                topicTitle: "Os Fundadores da Sociologia",
+                question: "Max Weber criou a sociologia compreensiva e argumentava que o sociólogo deve interpretar o significado das ações sociais.",
+                correctAnswer: true,
+                explanation: "Correto! Weber enfatizava Verstehen (compreensão interpretativa) — ao contrário do positivismo de Comte, precisamos entender o sentido que os atores sociais dão às suas ações."
+            },
+
+            // Tópico 4: Cultura e Sociedade
+            {
+                id: "quiz-010",
+                topicId: "cultura-soc",
+                topicTitle: "Cultura e Sociedade",
+                question: "O etnocentrismo é a prática de julgar outras culturas pelos critérios e valores da própria cultura.",
+                correctAnswer: true,
+                explanation: "Correto! Etnocentrismo é a tendência de considerar a própria cultura como superior e centro de referência, julgando outras culturas como 'primitivas', 'atrasadas' ou 'inferiores'."
+            },
+            {
+                id: "quiz-011",
+                topicId: "cultura-soc",
+                topicTitle: "Cultura e Sociedade",
+                question: "O relativismo cultural defende que não existem critérios universais para avaliar práticas culturais diferentes.",
+                correctAnswer: true,
+                explanation: "Correto! O relativismo cultural propõe que toda prática cultural deve ser compreendida dentro de seu próprio contexto e valores, sem julgamentos morais absolutos baseados em outras culturas."
+            },
+            {
+                id: "quiz-012",
+                topicId: "cultura-soc",
+                topicTitle: "Cultura e Sociedade",
+                question: "A cultura é determinada unicamente pela genética biológica dos povos.",
+                correctAnswer: false,
+                explanation: "Falso! A cultura é uma construção social e histórica, aprendida e compartilhada. Diferentes grupos humanos com mesma genética podem ter culturas completamente distintas se criados em contextos diferentes."
+            },
+
+            // Tópico 5: Populações do Brasil
+            {
+                id: "quiz-013",
+                topicId: "populacoes-brasil",
+                topicTitle: "Populações do Brasil",
+                question: "O processo de urbanização brasileiro no século XX concentrou-se principalmente no Sudeste, criando metrópoles como São Paulo e Rio de Janeiro.",
+                correctAnswer: true,
+                explanation: "Correto! O Brasil viveu intensa urbanização em especial após os anos 1950, com concentração no Sudeste. Migrações internas (nordestinos para o Sudeste) foram fundamentais neste processo."
+            },
+            {
+                id: "quiz-014",
+                topicId: "populacoes-brasil",
+                topicTitle: "Populações do Brasil",
+                question: "Os quilombos são comunidades que surgiram durante a escravidão, formadas por pessoas escravizadas que conquistaram sua liberdade.",
+                correctAnswer: true,
+                explanation: "Correto! Quilombos eram refugios de escravizados que fugiam. O Quilombo dos Palmares, liderado por Zumbi, é o exemplo mais conhecido. Hoje existem comunidades quilombolas reconhecidas constitucionalmente."
+            },
+            {
+                id: "quiz-015",
+                topicId: "populacoes-brasil",
+                topicTitle: "Populações do Brasil",
+                question: "A população indígena brasileira aumentou significativamente após o processo de colonização europeia.",
+                correctAnswer: false,
+                explanation: "Falso! A população indígena sofreu drástico declínio após a colonização devido a doenças, violência e exploração. Apenas recentemente (últimas décadas) há recuperação populacional em algumas comunidades."
+            },
+
+            // Tópico 6: A Sociedade Brasileira
+            {
+                id: "quiz-016",
+                topicId: "soc-brasileira",
+                topicTitle: "A Sociedade Brasileira",
+                question: "O patrimonialismo no Brasil refere-se à apropriação privada de bens públicos e ao favoritismo na distribuição de poder e recursos.",
+                correctAnswer: true,
+                explanation: "Correto! Segundo Sérgio Buarque de Holanda, o patrimonialismo é uma característica estrutural da sociedade brasileira onde relações pessoais prevalecem sobre instituições impessoais."
+            },
+            {
+                id: "quiz-017",
+                topicId: "soc-brasileira",
+                topicTitle: "A Sociedade Brasileira",
+                question: "A Constituição de 1988 foi chamada 'Constituição Cidadã' porque ampliou direitos sociais e deveres do Estado.",
+                correctAnswer: true,
+                explanation: "Correto! A Constituição de 1988 estabeleceu amplos direitos sociais (saúde, educação, previdência), garantias trabalhistas e reconhecimento de direitos de grupos historicamente excluídos."
+            },
+            {
+                id: "quiz-018",
+                topicId: "soc-brasileira",
+                topicTitle: "A Sociedade Brasileira",
+                question: "A formação social brasileira foi baseada principalmente na imigração europeia de livre iniciativa.",
+                correctAnswer: false,
+                explanation: "Falso! O Brasil foi formado por apropriação de terras indígenas, trabalho escravizado de africanos e afro-brasileiros (até 1888), e depois trabalho de imigrantes europeus. Escravidão foi central na economia."
+            },
+
+            // Tópico 7: Diversidade Cultural no Brasil
+            {
+                id: "quiz-019",
+                topicId: "diversidade-brasil",
+                topicTitle: "Diversidade Cultural no Brasil",
+                question: "O 'mito da democracia racial' refere-se à crença de que o Brasil é uma sociedade sem conflitos raciais e com igualdade entre raças.",
+                correctAnswer: true,
+                explanation: "Correto! Este mito foi criticado por Florestan Fernandes e outros sociólogos. Ele mascara estruturas profundas de desigualdade racial e exclusão de afrodescendentes."
+            },
+            {
+                id: "quiz-020",
+                topicId: "diversidade-brasil",
+                topicTitle: "Diversidade Cultural no Brasil",
+                question: "As políticas de ação afirmativa (como cotas raciais) visam compensar desigualdades históricas sofridas por negros e indígenas.",
+                correctAnswer: true,
+                explanation: "Correto! As cotas raciais em universidades e concursos públicos buscam reduzir desigualdades acumuladas ao longo de séculos de exclusão sistemática de negros e indígenas."
+            },
+            {
+                id: "quiz-021",
+                topicId: "diversidade-brasil",
+                topicTitle: "Diversidade Cultural no Brasil",
+                question: "A miscigenação no Brasil eliminou completamente as desigualdades raciais.",
+                correctAnswer: false,
+                explanation: "Falso! Embora haja maior miscigenação no Brasil, isso não eliminou desigualdades. Pessoas com maior ancestralidade africana sofrem mais discriminação e têm menor renda, escolaridade e acesso a direitos."
+            },
+
+            // Tópico 8: Cultura, Arte e Comunicação
+            {
+                id: "quiz-022",
+                topicId: "cultura-arte-com",
+                topicTitle: "Cultura, Arte e Comunicação",
+                question: "A Escola de Frankfurt criticava a 'indústria cultural' por padronizar a cultura e transformá-la em mercadoria consumível.",
+                correctAnswer: true,
+                explanation: "Correto! Adorno e Horkheimer denunciavam como TV, rádio e cinema em massa produzem consentimento ideológico e eliminam pensamento crítico, massificando o gosto e a cultura."
+            },
+            {
+                id: "quiz-023",
+                topicId: "cultura-arte-com",
+                topicTitle: "Cultura, Arte e Comunicação",
+                question: "A comunicação de massa permite que pessoas de diferentes classes sociais acessem as mesmas informações simultaneamente.",
+                correctAnswer: true,
+                explanation: "Correto! A comunicação de massa (TV, rádio, internet) funciona assim — informação circula simultaneamente para millions. Porém, a qualidade dessa informação pode variar (fake news, manipulação)."
+            },
+            {
+                id: "quiz-024",
+                topicId: "cultura-arte-com",
+                topicTitle: "Cultura, Arte e Comunicação",
+                question: "Nas redes sociais, o discurso mais popular é sempre mais verdadeiro.",
+                correctAnswer: false,
+                explanation: "Falso! Algoritmos amplificam conteúdo viral (muitas vezes sensacionalismo ou fake news), não conteúdo verdadeiro. A quantidade de likes/compartilhamentos não corresponde à precisão factual."
+            },
+
+            // Tópico 9: Religião e Sociedade
+            {
+                id: "quiz-025",
+                topicId: "religiao-soc",
+                topicTitle: "Religião e Sociedade",
+                question: "Segundo Durkheim, a função social da religião é fortalecer os laços de solidariedade entre membros de uma comunidade.",
+                correctAnswer: true,
+                explanation: "Correto! Durkheim argumentava que rituais religiosos criam 'comunhão' entre os fiéis, fortalecendo a coesão social e a identidade coletiva do grupo."
+            },
+            {
+                id: "quiz-026",
+                topicId: "religiao-soc",
+                topicTitle: "Religião e Sociedade",
+                question: "Marx descrevia a religião como 'ópio do povo' porque ela poderia levar à resignação com injustiças sociais.",
+                correctAnswer: true,
+                explanation: "Correto! Marx criticava a religião por justificar sofrimento presente como vontade divina, desmobilizando pessoas para lutar contra desigualdade. Mas reconhecia que religião também mobiliza movimentos sociais."
+            },
+            {
+                id: "quiz-027",
+                topicId: "religiao-soc",
+                topicTitle: "Religião e Sociedade",
+                question: "As igrejas neopentecostais crescem no Brasil apenas porque oferecem conforto espiritual sem nenhuma relação com questões sociais.",
+                correctAnswer: false,
+                explanation: "Falso! Embora ofereçam conforto espiritual, as neopentecostais crescem também por: comunidade, combate a vícios, valorização de ascensão social/consumo, proximidade com população pobre e periférica."
+            },
+
+            // Tópico 10: Religiões no Mundo Contemporâneo
+            {
+                id: "quiz-028",
+                topicId: "religioes-mundo",
+                topicTitle: "Religiões no Mundo Contemporâneo",
+                question: "A laicidade é o princípio de separação entre Estado e instituições religiosas, garantindo liberdade de crença e igualdade.",
+                correctAnswer: true,
+                explanation: "Correto! Estados laicos não privilegiam nenhuma religião, protegem liberdade de consciência e garantem que decisões públicas sejam baseadas em razão secular, não dogma religioso."
+            },
+            {
+                id: "quiz-029",
+                topicId: "religioes-mundo",
+                topicTitle: "Religiões no Mundo Contemporâneo",
+                question: "O fundamentalismo religioso refere-se ao retorno literal e rigoroso aos textos/ensinamentos considerados fundadores de uma fé.",
+                correctAnswer: true,
+                explanation: "Correto! Fundamentalismos (islâmico, cristão, judaico, hindu) buscam retornar a interpretações 'puras' dos textos sagrados, frequentemente rejeitando modernidade e pluralismo."
+            },
+            {
+                id: "quiz-030",
+                topicId: "religioes-mundo",
+                topicTitle: "Religiões no Mundo Contemporâneo",
+                question: "O pluralismo religioso no mundo contemporâneo significa que todas as religiões têm igual influência política.",
+                correctAnswer: false,
+                explanation: "Falso! Pluralismo significa diversidade de religiões coexistindo, mas poder político é desigual — religiões maioritárias/com recursos tendem a ter mais influência nas decisões públicas."
+            }
+        ];
+
         // Initialize app
         const app = {
             currentTopic: null,
             allTopics: topicsData,
             filteredTopics: topicsData,
+            currentPage: 'topics', // 'topics' or 'quizzes'
+            currentQuizTopic: null,
+            quizAnswered: {}, // Track answered quizzes
 
             init() {
                 this.renderNavigation();
@@ -5997,6 +6277,144 @@
                     );
                 }
                 this.renderNavigation();
+            },
+
+            showQuizzes() {
+                this.currentPage = 'quizzes';
+                this.currentQuizTopic = null;
+                this.renderQuizzes();
+                this.updateBreadcrumbQuizzes();
+                this.closeSidebarMobile();
+
+                // Scroll to top
+                document.getElementById('contentArea').parentElement.scrollTop = 0;
+            },
+
+            renderQuizzes() {
+                const contentArea = document.getElementById('contentArea');
+
+                if (!this.currentQuizTopic) {
+                    // Show all quizzes grouped by topic
+                    const topicsWithQuizzes = [...new Set(quizzesData.map(q => q.topicId))];
+                    let html = `
+                        <div class="mb-8">
+                            <h1 class="text-3xl font-bold text-gray-900 mb-6">📝 Quizes de Sociologia</h1>
+                            <p class="text-gray-600 mb-8">Teste seus conhecimentos com quizes Verdadeiro/Falso sobre cada tópico. Clique em um tema para começar.</p>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    `;
+
+                    topicsWithQuizzes.forEach(topicId => {
+                        const quizzes = quizzesData.filter(q => q.topicId === topicId);
+                        const topicTitle = quizzes[0].topicTitle;
+                        const topicObj = this.allTopics.find(t => t.id === topicId);
+                        const emoji = topicObj ? topicObj.emoji : '📚';
+
+                        html += `
+                            <div class="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition cursor-pointer"
+                                 onclick="app.selectQuizTopic('${topicId}')">
+                                <div class="text-3xl mb-3">${emoji}</div>
+                                <h3 class="font-bold text-lg text-gray-900 mb-2">${topicTitle}</h3>
+                                <p class="text-sm text-gray-600 mb-3">${quizzes.length} questões</p>
+                                <div class="flex items-center text-blue-600 text-sm font-semibold">
+                                    Começar →
+                                </div>
+                            </div>
+                        `;
+                    });
+
+                    html += `</div>`;
+                    contentArea.innerHTML = html;
+                } else {
+                    // Show quizzes for selected topic
+                    const quizzes = quizzesData.filter(q => q.topicId === this.currentQuizTopic);
+                    const topicTitle = quizzes[0].topicTitle;
+
+                    let html = `
+                        <div class="mb-6">
+                            <button onclick="app.currentQuizTopic = null; app.renderQuizzes(); app.updateBreadcrumbQuizzes();"
+                                    class="text-blue-600 hover:text-blue-800 text-sm font-semibold mb-4">← Voltar aos temas</button>
+                            <h2 class="text-2xl font-bold text-gray-900">${topicTitle}</h2>
+                            <p class="text-gray-600 text-sm">Responda as questões Verdadeiro ou Falso</p>
+                        </div>
+                        <div class="space-y-4">
+                    `;
+
+                    quizzes.forEach((quiz, index) => {
+                        const answered = this.quizAnswered[quiz.id];
+                        const isCorrect = answered !== undefined ? answered === quiz.correctAnswer : null;
+
+                        let cardClass = 'bg-white border-2 border-gray-200 rounded-lg p-6';
+                        if (answered !== undefined) {
+                            cardClass = isCorrect ? 'bg-green-50 border-2 border-green-300 rounded-lg p-6' : 'bg-red-50 border-2 border-red-300 rounded-lg p-6';
+                        }
+
+                        html += `
+                            <div class="${cardClass}">
+                                <div class="flex justify-between items-start mb-4">
+                                    <div class="font-bold text-gray-900">Questão ${index + 1}</div>
+                                    ${answered !== undefined ? `<span class="text-sm font-semibold ${isCorrect ? 'text-green-700' : 'text-red-700'}">${isCorrect ? '✓ Correto' : '✗ Incorreto'}</span>` : ''}
+                                </div>
+
+                                <p class="text-gray-800 mb-4 font-medium">${quiz.question}</p>
+
+                                <div class="flex gap-3 mb-4">
+                                    <button onclick="app.answerQuiz('${quiz.id}', true)"
+                                            class="flex-1 py-3 px-4 rounded-lg font-semibold transition ${answered !== undefined ? 'opacity-50 cursor-not-allowed' : 'hover:bg-green-100'} ${answered === true ? 'bg-green-500 text-white' : 'bg-gray-100 text-gray-900'}"
+                                            ${answered !== undefined ? 'disabled' : ''}>
+                                        ✓ Verdadeiro
+                                    </button>
+                                    <button onclick="app.answerQuiz('${quiz.id}', false)"
+                                            class="flex-1 py-3 px-4 rounded-lg font-semibold transition ${answered !== undefined ? 'opacity-50 cursor-not-allowed' : 'hover:bg-red-100'} ${answered === false ? 'bg-red-500 text-white' : 'bg-gray-100 text-gray-900'}"
+                                            ${answered !== undefined ? 'disabled' : ''}>
+                                        ✗ Falso
+                                    </button>
+                                </div>
+
+                                ${answered !== undefined ? `
+                                    <div class="bg-blue-50 border-l-4 border-blue-500 p-3 rounded text-sm">
+                                        <p class="font-semibold text-blue-900 mb-1">Explicação:</p>
+                                        <p class="text-blue-800">${quiz.explanation}</p>
+                                    </div>
+                                ` : ''}
+                            </div>
+                        `;
+                    });
+
+                    html += `</div>`;
+                    contentArea.innerHTML = html;
+                }
+            },
+
+            selectQuizTopic(topicId) {
+                this.currentQuizTopic = topicId;
+                this.renderQuizzes();
+                this.updateBreadcrumbQuizzes();
+            },
+
+            answerQuiz(quizId, answer) {
+                this.quizAnswered[quizId] = answer;
+                this.renderQuizzes();
+            },
+
+            updateBreadcrumbQuizzes() {
+                const breadcrumbContainer = document.getElementById('breadcrumbContainer');
+                if (!this.currentQuizTopic) {
+                    breadcrumbContainer.innerHTML = `
+                        <span class="text-gray-500 text-sm">📚 Sociologia</span>
+                        <span class="breadcrumb-divider">/</span>
+                        <span class="font-semibold text-gray-900 text-sm">Quizes</span>
+                    `;
+                } else {
+                    const quiz = quizzesData.find(q => q.topicId === this.currentQuizTopic);
+                    breadcrumbContainer.innerHTML = `
+                        <span class="text-gray-500 text-sm">📚 Sociologia</span>
+                        <span class="breadcrumb-divider">/</span>
+                        <span class="text-gray-500 text-sm cursor-pointer hover:underline" onclick="app.currentQuizTopic = null; app.renderQuizzes(); app.updateBreadcrumbQuizzes();">Quizes</span>
+                        <span class="breadcrumb-divider">/</span>
+                        <span class="font-semibold text-gray-900 text-sm">${quiz.topicTitle}</span>
+                    `;
+                }
             },
 
             closeSidebarMobile() {
