@@ -1,0 +1,40 @@
+# Node modules
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Build
+dist/
+build/
+
+# Binary files (documents, media)
+*.docx
+*.doc
+*.xlsx
+*.xls
+*.pptx
+*.pdf
+*.mp4
+*.mov
+*.wav
+*.png
+*.jpg
+*.jpeg
+*.gif
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Logs
+logs/
+*.log
