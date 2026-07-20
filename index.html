@@ -7777,6 +7777,50 @@
                 overlay.classList.remove('open');
             },
 
+            renderContent() {
+                const contentArea = document.getElementById('contentArea');
+                if (this.currentTopic) {
+                    // Topic content is handled by updateContent()
+                    return;
+                }
+
+                // Render home/welcome page
+                contentArea.innerHTML = `
+                    <div class="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-lg p-8 mb-8">
+                        <h1 class="text-3xl font-bold text-gray-900 mb-4">🎓 Bem-vindo ao Portal de Sociologia para o Ensino Médio</h1>
+                        <p class="text-gray-700 text-lg mb-6">
+                            Explore tópicos de Sociologia com foco na realidade brasileira.
+                            Conteúdo estruturado para complementar suas aulas, preparar para o vestibular
+                            e desenvolver seu pensamento crítico sobre a sociedade.
+                        </p>
+                        <div class="bg-white rounded p-4 border-l-4 border-blue-500 mb-4">
+                            <p class="text-blue-900 font-semibold mb-2">💡 Como usar este portal:</p>
+                            <p class="text-gray-700">
+                                Use o <strong>buscador</strong> para encontrar tópicos | <strong>Clique nos tópicos</strong> para aprofundar
+                            </p>
+                            <p class="text-gray-700 mt-3">
+                                Aprender Sociologia é compreender como a sociedade funciona e refletir criticamente sobre questões importantes. Comece por qualquer tema do seu interesse.
+                            </p>
+                        </div>
+                        <div class="bg-gradient-to-r from-purple-50 to-pink-50 rounded p-4 border-l-4 border-purple-500">
+                            <p class="text-purple-900 font-semibold mb-2">📝 Teste seus conhecimentos:</p>
+                            <p class="text-gray-700 mb-3">
+                                Acesse nossos <strong>Quizzes Interativas</strong> (Verdadeiro/Falso) para avaliar o aprendizado sobre cada tópico.
+                            </p>
+                            <button onclick="app.showQuizzes()" class="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded transition">
+                                📝 Ir para Quizzes →
+                            </button>
+                        </div>
+                    </div>
+                    <div class="text-center text-gray-400 py-8">
+                        <p class="text-lg">👈 Selecione um tópico na barra lateral para começar, ou use a busca acima</p>
+                    </div>
+                `;
+
+                // Scroll to top
+                contentArea.parentElement.scrollTop = 0;
+            },
+
             goHome() {
                 this.currentTopic = null;
                 this.currentPage = 'topics';
@@ -7785,8 +7829,15 @@
                 this.filteredTopics = this.allTopics;
                 this.renderNavigation();
                 this.renderContent();
-                this.updateBreadcrumb();
+                this.updateBreadcrumbHome();
                 this.closeSidebarMobile();
+            },
+
+            updateBreadcrumbHome() {
+                const breadcrumbContainer = document.getElementById('breadcrumbContainer');
+                breadcrumbContainer.innerHTML = `
+                    <span class="text-gray-500 text-sm">📚 Sociologia</span>
+                `;
             }
         };
 
