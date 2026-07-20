@@ -6171,6 +6171,7 @@
             currentPage: 'topics', // 'topics' or 'quizzes'
             currentQuizTopic: null,
             quizAnswered: {}, // Track answered quizzes
+            quizScore: {}, // Track correct/incorrect per topic
 
             escapeHtml(text) {
                 const div = document.createElement('div');
@@ -6331,12 +6332,21 @@
                     const quizzes = quizzesData.filter(q => q.topicId === this.currentQuizTopic);
                     const topicTitle = quizzes[0].topicTitle;
 
+                    const answeredCount = quizzes.filter(q => this.quizAnswered[q.id] !== undefined).length;
+                    const correctCount = quizzes.filter(q => this.quizAnswered[q.id] !== undefined && this.quizAnswered[q.id] === q.correctAnswer).length;
+
                     let html = `
                         <div class="mb-6">
                             <button onclick="app.currentQuizTopic = null; app.renderQuizzes(); app.updateBreadcrumbQuizzes();"
                                     class="text-blue-600 hover:text-blue-800 text-sm font-semibold mb-4">← Voltar aos temas</button>
                             <h2 class="text-2xl font-bold text-gray-900">${this.escapeHtml(topicTitle)}</h2>
                             <p class="text-gray-600 text-sm">Responda as questões Verdadeiro ou Falso</p>
+                            <div class="mt-4 bg-blue-50 rounded-lg p-4 border border-blue-200">
+                                <div class="flex justify-between items-center">
+                                    <span class="text-sm font-semibold text-gray-700">Progresso: <span class="text-blue-600">${answeredCount}/${quizzes.length}</span> questões respondidas</span>
+                                    ${answeredCount > 0 ? `<span class="text-sm font-semibold text-gray-700">Acertos: <span class="text-green-600">${correctCount}/${answeredCount}</span> (${Math.round(correctCount/answeredCount*100)}%)</span>` : ''}
+                                </div>
+                            </div>
                         </div>
                         <div class="space-y-4">
                     `;
