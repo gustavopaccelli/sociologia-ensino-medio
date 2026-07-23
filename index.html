@@ -7525,6 +7525,7 @@
             quizAnswered: {}, // Track answered quizzes
             quizScore: {}, // Track correct/incorrect per topic
             enemAnswered: {}, // Track answered ENEM questions
+            enemScore: {}, // Track correct/incorrect for ENEM questions
 
             escapeHtml(text) {
                 const div = document.createElement('div');
@@ -7938,6 +7939,8 @@
                     // Show question
                     const q = this.currentEnemQuestion;
                     const isAnswered = this.enemAnswered[q.id];
+                    const correctCount = Object.values(this.enemAnswered).filter(v => v === true).length;
+                    const answeredCount = Object.values(this.enemAnswered).length;
 
                     let html = `
                         <div class="mb-6">
@@ -7949,6 +7952,13 @@
                                         return topic ? `${topic.emoji} ${topic.title}` : t;
                                     }).join(', ')}</p>
                                 </div>
+                                ${answeredCount > 0 ? `
+                                    <div class="text-right">
+                                        <p class="text-sm font-semibold text-gray-700">Sua pontuação</p>
+                                        <p class="text-2xl font-bold text-blue-600">${correctCount}/${answeredCount}</p>
+                                        <p class="text-xs text-gray-600">${Math.round((correctCount/answeredCount)*100)}% acertos</p>
+                                    </div>
+                                ` : ''}
                             </div>
 
                             <div class="bg-gradient-to-r from-blue-50 to-indigo-50 border-l-4 border-blue-500 p-6 rounded-lg mb-6">
@@ -7973,13 +7983,26 @@
                     `;
 
                     Object.entries(q.options).forEach(([letter, text]) => {
+                        let borderClass = 'border-gray-300 hover:border-blue-400 hover:bg-blue-50';
+                        let bgClass = '';
+                        let isDisabled = '';
+
+                        if (isAnswered !== undefined) {
+                            isDisabled = 'pointer-events-none opacity-70';
+                            if (letter === q.correctAnswer) {
+                                borderClass = 'border-green-500 bg-green-50';
+                                bgClass = 'bg-green-50';
+                            }
+                        }
+
                         html += `
-                            <label class="flex items-start p-4 rounded-lg border-2 border-gray-300 hover:border-blue-400 hover:bg-blue-50 cursor-pointer transition">
-                                <input type="radio" name="enem-answer" value="${letter}" class="mt-1 mr-4 w-5 h-5 cursor-pointer">
+                            <label class="flex items-start p-4 rounded-lg border-2 ${borderClass} cursor-pointer transition ${bgClass} ${isDisabled}">
+                                <input type="radio" name="enem-answer" value="${letter}" class="mt-1 mr-4 w-5 h-5 cursor-pointer" ${isAnswered !== undefined ? 'disabled' : ''}>
                                 <div class="flex-1">
                                     <span class="font-bold text-gray-900">${letter})</span>
                                     <span class="ml-2 text-gray-700">${this.escapeHtml(text)}</span>
                                 </div>
+                                ${isAnswered !== undefined && letter === q.correctAnswer ? '<span class="ml-2 text-green-600 font-bold">✓</span>' : ''}
                             </label>
                         `;
                     });
@@ -8006,6 +8029,11 @@
                                 <p class="font-semibold ${isAnswered ? 'text-green-900' : 'text-red-900'}">
                                     ${isAnswered ? '✓ Correto!' : '✗ Incorreto!'}
                                 </p>
+                                ${!isAnswered ? `
+                                    <p class="text-sm mt-2 ${isAnswered ? 'text-green-800' : 'text-red-800'}">
+                                        <strong>Resposta correta:</strong> ${q.correctAnswer}) ${this.escapeHtml(q.options[q.correctAnswer])}
+                                    </p>
+                                ` : ''}
                             </div>
                         `;
                     }
@@ -8047,8 +8075,10 @@
                     return;
                 }
 
-                // For now, just mark as answered (no correct answer data)
-                this.enemAnswered[this.currentEnemQuestion.id] = true;
+                const q = this.currentEnemQuestion;
+                const isCorrect = selectedAnswer.value === q.correctAnswer;
+
+                this.enemAnswered[q.id] = isCorrect;
                 this.renderEnemQuestions();
             },
 

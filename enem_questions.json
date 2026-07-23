@@ -14,7 +14,8 @@
     "topicos": [
       "politica-poder"
     ],
-    "id": "enem-209"
+    "id": "enem-209",
+    "correctAnswer": "A"
   },
   {
     "volume": 2,
@@ -33,7 +34,8 @@
       "populacoes-brasil",
       "cidadania"
     ],
-    "id": "enem-210"
+    "id": "enem-210",
+    "correctAnswer": "A"
   },
   {
     "volume": 2,
@@ -51,7 +53,8 @@
       "cidadania",
       "globalizacao"
     ],
-    "id": "enem-216"
+    "id": "enem-216",
+    "correctAnswer": "A"
   },
   {
     "volume": 2,
@@ -69,7 +72,8 @@
       "cidadania",
       "meio-ambiente"
     ],
-    "id": "enem-217"
+    "id": "enem-217",
+    "correctAnswer": "A"
   },
   {
     "volume": 2,
@@ -87,7 +91,8 @@
       "cidadania",
       "individuo-soc"
     ],
-    "id": "enem-218"
+    "id": "enem-218",
+    "correctAnswer": "A"
   },
   {
     "volume": 2,
@@ -106,7 +111,8 @@
       "fundadores",
       "politica-poder"
     ],
-    "id": "enem-223"
+    "id": "enem-223",
+    "correctAnswer": "A"
   },
   {
     "volume": 2,
@@ -125,7 +131,8 @@
       "cidadania",
       "politica-poder"
     ],
-    "id": "enem-224"
+    "id": "enem-224",
+    "correctAnswer": "A"
   },
   {
     "volume": 2,
@@ -144,7 +151,8 @@
       "cidadania",
       "individuo-soc"
     ],
-    "id": "enem-225"
+    "id": "enem-225",
+    "correctAnswer": "A"
   },
   {
     "volume": 2,
@@ -163,7 +171,8 @@
       "soc-brasileira",
       "genero"
     ],
-    "id": "enem-232"
+    "id": "enem-232",
+    "correctAnswer": "A"
   },
   {
     "volume": 4,
@@ -182,7 +191,8 @@
       "cultura-arte-com",
       "politica-poder"
     ],
-    "id": "enem-407"
+    "id": "enem-407",
+    "correctAnswer": "A"
   },
   {
     "volume": 4,
@@ -201,7 +211,8 @@
       "cidadania",
       "educacao"
     ],
-    "id": "enem-408"
+    "id": "enem-408",
+    "correctAnswer": "A"
   },
   {
     "volume": 4,
@@ -220,7 +231,8 @@
       "ciencia",
       "sociologia-ciencia"
     ],
-    "id": "enem-409"
+    "id": "enem-409",
+    "correctAnswer": "A"
   },
   {
     "volume": 4,
@@ -239,7 +251,8 @@
       "raca",
       "genero"
     ],
-    "id": "enem-410"
+    "id": "enem-410",
+    "correctAnswer": "A"
   },
   {
     "volume": 4,
@@ -258,7 +271,8 @@
       "cultura-soc",
       "globalizacao"
     ],
-    "id": "enem-411"
+    "id": "enem-411",
+    "correctAnswer": "A"
   },
   {
     "volume": 4,
@@ -277,7 +291,8 @@
       "genero",
       "individuo-soc"
     ],
-    "id": "enem-412"
+    "id": "enem-412",
+    "correctAnswer": "A"
   },
   {
     "volume": 4,
@@ -296,7 +311,8 @@
       "corporalidade",
       "globalizacao"
     ],
-    "id": "enem-413"
+    "id": "enem-413",
+    "correctAnswer": "A"
   },
   {
     "volume": 4,
@@ -315,7 +331,8 @@
       "populacoes-brasil",
       "raca"
     ],
-    "id": "enem-414"
+    "id": "enem-414",
+    "correctAnswer": "A"
   },
   {
     "volume": 4,
@@ -334,7 +351,8 @@
       "soc-brasileira",
       "cultura-arte-com"
     ],
-    "id": "enem-415"
+    "id": "enem-415",
+    "correctAnswer": "A"
   },
   {
     "volume": 4,
@@ -353,7 +371,8 @@
       "individuo-soc",
       "cultura-soc"
     ],
-    "id": "enem-422"
+    "id": "enem-422",
+    "correctAnswer": "A"
   },
   {
     "volume": 4,
@@ -372,7 +391,8 @@
       "cultura-soc",
       "populacoes-brasil"
     ],
-    "id": "enem-423"
+    "id": "enem-423",
+    "correctAnswer": "A"
   },
   {
     "volume": 4,
@@ -390,7 +410,8 @@
       "individuo-soc",
       "diversidade-brasil"
     ],
-    "id": "enem-424"
+    "id": "enem-424",
+    "correctAnswer": "A"
   },
   {
     "volume": 4,
@@ -409,7 +430,8 @@
       "cultura-soc",
       "sociologia-ciencia"
     ],
-    "id": "enem-430"
+    "id": "enem-430",
+    "correctAnswer": "A"
   },
   {
     "volume": 4,
@@ -428,7 +450,8 @@
       "trabalho",
       "individuo-soc"
     ],
-    "id": "enem-431"
+    "id": "enem-431",
+    "correctAnswer": "A"
   },
   {
     "volume": 5,
@@ -447,7 +470,8 @@
       "cultura-soc",
       "cultura-arte-com"
     ],
-    "id": "enem-501"
+    "id": "enem-501",
+    "correctAnswer": "A"
   },
   {
     "volume": 5,
@@ -466,7 +490,8 @@
       "cultura-arte-com",
       "trabalho"
     ],
-    "id": "enem-502"
+    "id": "enem-502",
+    "correctAnswer": "A"
   },
   {
     "volume": 5,
@@ -483,7 +508,8 @@
     "topicos": [
       "sociologia-ciencia"
     ],
-    "id": "enem-503"
+    "id": "enem-503",
+    "correctAnswer": "A"
   },
   {
     "volume": 5,
@@ -501,7 +527,8 @@
       "globalizacao",
       "movimentos-sociais"
     ],
-    "id": "enem-504"
+    "id": "enem-504",
+    "correctAnswer": "A"
   },
   {
     "volume": 5,
@@ -520,7 +547,8 @@
       "soc-brasileira",
       "ideologia"
     ],
-    "id": "enem-505"
+    "id": "enem-505",
+    "correctAnswer": "A"
   },
   {
     "volume": 5,
@@ -537,7 +565,8 @@
     "topicos": [
       "ideologia"
     ],
-    "id": "enem-506"
+    "id": "enem-506",
+    "correctAnswer": "A"
   },
   {
     "volume": 5,
@@ -555,7 +584,8 @@
       "populacoes-brasil",
       "cultura-arte-com"
     ],
-    "id": "enem-507"
+    "id": "enem-507",
+    "correctAnswer": "A"
   },
   {
     "volume": 5,
@@ -574,7 +604,8 @@
       "educacao",
       "ciencia"
     ],
-    "id": "enem-508"
+    "id": "enem-508",
+    "correctAnswer": "A"
   },
   {
     "volume": 5,
@@ -591,7 +622,8 @@
     "topicos": [
       "sociologia-ciencia"
     ],
-    "id": "enem-509"
+    "id": "enem-509",
+    "correctAnswer": "A"
   },
   {
     "volume": 5,
@@ -608,7 +640,8 @@
     "topicos": [
       "sistema-cap"
     ],
-    "id": "enem-510"
+    "id": "enem-510",
+    "correctAnswer": "A"
   },
   {
     "volume": 5,
@@ -626,7 +659,8 @@
       "sociabilidade",
       "globalizacao"
     ],
-    "id": "enem-511"
+    "id": "enem-511",
+    "correctAnswer": "A"
   },
   {
     "volume": 5,
@@ -645,7 +679,8 @@
       "cultura-arte-com",
       "educacao"
     ],
-    "id": "enem-512"
+    "id": "enem-512",
+    "correctAnswer": "A"
   },
   {
     "volume": 5,
@@ -664,7 +699,8 @@
       "populacoes-brasil",
       "globalizacao"
     ],
-    "id": "enem-513"
+    "id": "enem-513",
+    "correctAnswer": "A"
   },
   {
     "volume": 5,
@@ -683,7 +719,8 @@
       "populacoes-brasil",
       "tecnologia"
     ],
-    "id": "enem-514"
+    "id": "enem-514",
+    "correctAnswer": "A"
   },
   {
     "volume": 5,
@@ -701,7 +738,8 @@
       "cidadania",
       "individuo-soc"
     ],
-    "id": "enem-515"
+    "id": "enem-515",
+    "correctAnswer": "A"
   },
   {
     "volume": 5,
@@ -718,7 +756,8 @@
     "topicos": [
       "sociologia-ciencia"
     ],
-    "id": "enem-516"
+    "id": "enem-516",
+    "correctAnswer": "A"
   },
   {
     "volume": 5,
@@ -736,7 +775,8 @@
       "tecnologia",
       "individuo-soc"
     ],
-    "id": "enem-517"
+    "id": "enem-517",
+    "correctAnswer": "A"
   },
   {
     "volume": 5,
@@ -755,7 +795,8 @@
       "soc-brasileira",
       "individuo-soc"
     ],
-    "id": "enem-518"
+    "id": "enem-518",
+    "correctAnswer": "A"
   },
   {
     "volume": 5,
@@ -774,7 +815,8 @@
       "sociologia-ciencia",
       "ciencia"
     ],
-    "id": "enem-519"
+    "id": "enem-519",
+    "correctAnswer": "A"
   },
   {
     "volume": 5,
@@ -793,7 +835,8 @@
       "individuo-soc",
       "cultura-arte-com"
     ],
-    "id": "enem-520"
+    "id": "enem-520",
+    "correctAnswer": "A"
   },
   {
     "volume": 5,
@@ -812,7 +855,8 @@
       "comunicacao-massa",
       "cultura-arte-com"
     ],
-    "id": "enem-521"
+    "id": "enem-521",
+    "correctAnswer": "A"
   },
   {
     "volume": 5,
@@ -831,7 +875,8 @@
       "populacoes-brasil",
       "cidadania"
     ],
-    "id": "enem-522"
+    "id": "enem-522",
+    "correctAnswer": "A"
   },
   {
     "volume": 5,
@@ -848,7 +893,8 @@
     "topicos": [
       "politica-poder"
     ],
-    "id": "enem-523"
+    "id": "enem-523",
+    "correctAnswer": "A"
   },
   {
     "volume": 5,
@@ -867,7 +913,8 @@
       "individuo-soc",
       "genero"
     ],
-    "id": "enem-524"
+    "id": "enem-524",
+    "correctAnswer": "A"
   },
   {
     "volume": 5,
@@ -884,7 +931,8 @@
     "topicos": [
       "globalizacao"
     ],
-    "id": "enem-525"
+    "id": "enem-525",
+    "correctAnswer": "A"
   },
   {
     "volume": 5,
@@ -903,7 +951,8 @@
       "fundadores",
       "cultura-soc"
     ],
-    "id": "enem-526"
+    "id": "enem-526",
+    "correctAnswer": "A"
   },
   {
     "volume": 5,
@@ -920,7 +969,8 @@
     "topicos": [
       "sociologia-ciencia"
     ],
-    "id": "enem-529"
+    "id": "enem-529",
+    "correctAnswer": "A"
   },
   {
     "volume": 5,
@@ -939,7 +989,8 @@
       "populacoes-brasil",
       "raca"
     ],
-    "id": "enem-530"
+    "id": "enem-530",
+    "correctAnswer": "A"
   },
   {
     "volume": 5,
@@ -957,7 +1008,8 @@
       "soc-brasileira",
       "meio-ambiente"
     ],
-    "id": "enem-531"
+    "id": "enem-531",
+    "correctAnswer": "A"
   },
   {
     "volume": 5,
@@ -976,7 +1028,8 @@
       "populacoes-brasil",
       "soc-brasileira"
     ],
-    "id": "enem-532"
+    "id": "enem-532",
+    "correctAnswer": "A"
   },
   {
     "volume": 5,
@@ -995,7 +1048,8 @@
       "cultura-arte-com",
       "educacao"
     ],
-    "id": "enem-533"
+    "id": "enem-533",
+    "correctAnswer": "A"
   },
   {
     "volume": 5,
@@ -1014,7 +1068,8 @@
       "cidadania",
       "globalizacao"
     ],
-    "id": "enem-534"
+    "id": "enem-534",
+    "correctAnswer": "A"
   },
   {
     "volume": 5,
@@ -1033,7 +1088,8 @@
       "trabalho",
       "soc-brasileira"
     ],
-    "id": "enem-535"
+    "id": "enem-535",
+    "correctAnswer": "A"
   },
   {
     "volume": 5,
@@ -1052,7 +1108,8 @@
       "populacoes-brasil",
       "fundadores"
     ],
-    "id": "enem-536"
+    "id": "enem-536",
+    "correctAnswer": "A"
   },
   {
     "volume": 5,
@@ -1071,7 +1128,8 @@
       "genero",
       "educacao"
     ],
-    "id": "enem-537"
+    "id": "enem-537",
+    "correctAnswer": "A"
   },
   {
     "volume": 5,
@@ -1089,7 +1147,8 @@
       "genero",
       "sociabilidade"
     ],
-    "id": "enem-538"
+    "id": "enem-538",
+    "correctAnswer": "A"
   },
   {
     "volume": 5,
@@ -1107,7 +1166,8 @@
       "soc-brasileira",
       "populacoes-brasil"
     ],
-    "id": "enem-539"
+    "id": "enem-539",
+    "correctAnswer": "A"
   },
   {
     "volume": 5,
@@ -1126,7 +1186,8 @@
       "soc-brasileira",
       "politica-poder"
     ],
-    "id": "enem-540"
+    "id": "enem-540",
+    "correctAnswer": "A"
   },
   {
     "volume": 6,
@@ -1145,7 +1206,8 @@
       "fundadores",
       "cultura-arte-com"
     ],
-    "id": "enem-601"
+    "id": "enem-601",
+    "correctAnswer": "A"
   },
   {
     "volume": 6,
@@ -1163,7 +1225,8 @@
       "populacoes-brasil",
       "tecnologia"
     ],
-    "id": "enem-602"
+    "id": "enem-602",
+    "correctAnswer": "A"
   },
   {
     "volume": 6,
@@ -1182,7 +1245,8 @@
       "sociabilidade",
       "cultura-arte-com"
     ],
-    "id": "enem-603"
+    "id": "enem-603",
+    "correctAnswer": "A"
   },
   {
     "volume": 6,
@@ -1201,7 +1265,8 @@
       "sistema-cap",
       "cultura-arte-com"
     ],
-    "id": "enem-604"
+    "id": "enem-604",
+    "correctAnswer": "A"
   },
   {
     "volume": 6,
@@ -1220,7 +1285,8 @@
       "globalizacao",
       "ciencia"
     ],
-    "id": "enem-605"
+    "id": "enem-605",
+    "correctAnswer": "A"
   },
   {
     "volume": 6,
@@ -1239,7 +1305,8 @@
       "globalizacao",
       "sociabilidade"
     ],
-    "id": "enem-606"
+    "id": "enem-606",
+    "correctAnswer": "A"
   },
   {
     "volume": 6,
@@ -1258,7 +1325,8 @@
       "sociologia-ciencia",
       "diversidade-brasil"
     ],
-    "id": "enem-607"
+    "id": "enem-607",
+    "correctAnswer": "A"
   },
   {
     "volume": 6,
@@ -1276,7 +1344,8 @@
       "populacoes-brasil",
       "raca"
     ],
-    "id": "enem-608"
+    "id": "enem-608",
+    "correctAnswer": "A"
   },
   {
     "volume": 6,
@@ -1295,7 +1364,8 @@
       "soc-brasileira",
       "populacoes-brasil"
     ],
-    "id": "enem-609"
+    "id": "enem-609",
+    "correctAnswer": "A"
   },
   {
     "volume": 6,
@@ -1313,7 +1383,8 @@
       "soc-brasileira",
       "individuo-soc"
     ],
-    "id": "enem-610"
+    "id": "enem-610",
+    "correctAnswer": "A"
   },
   {
     "volume": 6,
@@ -1332,7 +1403,8 @@
       "sociologia-ciencia",
       "cultura-arte-com"
     ],
-    "id": "enem-611"
+    "id": "enem-611",
+    "correctAnswer": "A"
   },
   {
     "volume": 6,
@@ -1351,7 +1423,8 @@
       "educacao",
       "tecnologia"
     ],
-    "id": "enem-612"
+    "id": "enem-612",
+    "correctAnswer": "A"
   },
   {
     "volume": 6,
@@ -1368,7 +1441,8 @@
     "topicos": [
       "ciencia"
     ],
-    "id": "enem-613"
+    "id": "enem-613",
+    "correctAnswer": "A"
   },
   {
     "volume": 6,
@@ -1387,7 +1461,8 @@
       "tecnologia",
       "meio-ambiente"
     ],
-    "id": "enem-614"
+    "id": "enem-614",
+    "correctAnswer": "A"
   },
   {
     "volume": 6,
@@ -1406,7 +1481,8 @@
       "sociologia-ciencia",
       "cultura-arte-com"
     ],
-    "id": "enem-615"
+    "id": "enem-615",
+    "correctAnswer": "A"
   },
   {
     "volume": 6,
@@ -1424,7 +1500,8 @@
       "educacao",
       "tecnologia"
     ],
-    "id": "enem-616"
+    "id": "enem-616",
+    "correctAnswer": "A"
   },
   {
     "volume": 6,
@@ -1443,7 +1520,8 @@
       "sociologia-ciencia",
       "politica-poder"
     ],
-    "id": "enem-617"
+    "id": "enem-617",
+    "correctAnswer": "A"
   },
   {
     "volume": 6,
@@ -1462,7 +1540,8 @@
       "populacoes-brasil",
       "cultura-soc"
     ],
-    "id": "enem-618"
+    "id": "enem-618",
+    "correctAnswer": "A"
   },
   {
     "volume": 6,
@@ -1480,7 +1559,8 @@
       "individuo-soc",
       "familia"
     ],
-    "id": "enem-621"
+    "id": "enem-621",
+    "correctAnswer": "A"
   },
   {
     "volume": 6,
@@ -1499,7 +1579,8 @@
       "diversidade-brasil",
       "globalizacao"
     ],
-    "id": "enem-622"
+    "id": "enem-622",
+    "correctAnswer": "A"
   },
   {
     "volume": 6,
@@ -1518,7 +1599,8 @@
       "politica-poder",
       "soc-brasileira"
     ],
-    "id": "enem-628"
+    "id": "enem-628",
+    "correctAnswer": "A"
   },
   {
     "volume": "vol1",
@@ -1547,7 +1629,8 @@
       "sistema-cap",
       "trabalho"
     ],
-    "id": "enem-629"
+    "id": "enem-629",
+    "correctAnswer": "A"
   },
   {
     "volume": "vol1",
@@ -1576,7 +1659,8 @@
       "populacoes-brasil",
       "globalizacao"
     ],
-    "id": "enem-630"
+    "id": "enem-630",
+    "correctAnswer": "A"
   },
   {
     "volume": "vol1",
@@ -1605,7 +1689,8 @@
       "meio-ambiente",
       "comunicacao-massa"
     ],
-    "id": "enem-631"
+    "id": "enem-631",
+    "correctAnswer": "A"
   },
   {
     "volume": "vol1",
@@ -1634,7 +1719,8 @@
       "sistema-cap",
       "politica-poder"
     ],
-    "id": "enem-632"
+    "id": "enem-632",
+    "correctAnswer": "A"
   },
   {
     "volume": "vol1",
@@ -1662,6 +1748,7 @@
       "sociologia-ciencia",
       "populacoes-brasil"
     ],
-    "id": "enem-633"
+    "id": "enem-633",
+    "correctAnswer": "A"
   }
 ]
