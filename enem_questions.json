@@ -7220,5 +7220,764 @@
     ],
     "correctAnswer": "C",
     "justificativa": "A alternativa [C] é a única correta. O Renascença Clube vincula-se à tentativa dessa elite negra de se incluir em uma sociedade de classes. É por esse motivo que seus hábitos e regras assemelham-se aos das elites brancas brasileiras. Resumo das questões selecionadas nesta atividade Q/DB = número da questão no banco de dados do Super Professor"
+  },
+  {
+    "id": "enem-222",
+    "volume": 2021,
+    "number": "028",
+    "source": "ENEM 2021",
+    "tema": null,
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "Thumbs Up"
+      },
+      {
+        "type": "paragraph",
+        "text": "Ponto positivo para o Facebook, que vai dar uma ajeitada na casa para, quem sabe, não ser mais conhecido como espaço da treta. Durante a F8, sua conferência anual, a empresa anunciou a maior mudança de design do serviço em 5 anos. Agora, o polêmico feed de notícias deixa de ser o protagonista, e o queridinho da rede social se torna o segmento de Grupos (é o Orkut fazendo escola?). Segundo Mark Zuckerberg, mais de 1 bilhão de usuários mensais entraram nessa aba do aplicativo, e 400 mil deles já estão integrados em grupos de “assuntos significativos”. O objetivo agora é aumentar o tráfego, oferecendo mais sugestões e ferramentas especiais para quem gerencia essas comunidades. Além disso, o Marketplace, que já tem mais de 800 milhões de usuários, vai ganhar mais atenção e integração. Com isso, parece que há um novo padrão se montando na rede social: sai o feed, entra a segmentação, que pode ser uma boa porta para monetização nos próximos anos. No mesmo evento, Zuckerberg também disse que o futuro do Facebook é a privacidade, mas não deu muitos detalhes de como vai proteger seus clientes daqui para frente. Evitar que vazamentos de dados dos usuários aconteçam é um bom começo."
+      },
+      {
+        "type": "paragraph",
+        "text": "#FicaaDica"
+      },
+      {
+        "type": "paragraph",
+        "text": "Disponível em: https://thebrief.us16.list-manage.com. Acesso em: 3 maio 2019 (adaptado)."
+      }
+    ],
+    "enunciado": "O texto relata que uma rede social virtual realizará sua maior mudança de design dos últimos anos. Esse fato revela que as tecnologias de informação e comunicação",
+    "options": {
+      "A": "buscam oferecer mais privacidade.",
+      "B": "assimilam os comportamentos dos usuários.",
+      "C": "promovem maior interação em ambientes virtuais.",
+      "D": "oferecem mais facilidades para obter cada vez mais lucro.",
+      "E": "evoluem para ficar mais parecidas umas com as outras."
+    },
+    "images": [],
+    "topicos": [
+      "sociabilidades-mundo-digital",
+      "educacao-socializacao",
+      "sistema-capitalista"
+    ],
+    "correctAnswer": "B",
+    "nivel": "medio"
+  },
+  {
+    "id": "enem-223",
+    "volume": 2021,
+    "number": "050",
+    "source": "ENEM 2021",
+    "tema": null,
+    "blocks": [
+      {
+        "type": "label",
+        "text": "Texto I"
+      },
+      {
+        "type": "paragraph",
+        "text": "Em 2016, foram gerados 44,7 milhões de toneladas de resíduos eletrônicos, um aumento de 8% na comparação com 2014. Especialistas previram um crescimento de mais 17%, para 52,2 milhões de toneladas, até 2021."
+      },
+      {
+        "type": "paragraph",
+        "text": "Disponível em: https://nacoesunidas.org. Acesso em: 12 out.2019 (adaptado)."
+      },
+      {
+        "type": "label",
+        "text": "Texto II"
+      },
+      {
+        "type": "paragraph",
+        "text": "Há ainda quem exporte deliberadamente lixo eletrônico para o Gana. É mais caro reciclar devidamente os resíduos no mundo industrializado, onde até existem os recursos e a tecnologia. Um negócio muito mais lucrativo é vender o lixo eletrônico a negociantes locais, que o importam alegando tratar-se de material usado. Os negociantes depois vendem o lixo aos jovens no mercado, ou noutro lado, que o desmantelam e extraem os fios de cobre. Estes são derretidos em lareiras ao ar livre, poluindo o ar e, muitas vezes, intoxicando diretamente os próprios jovens."
+      },
+      {
+        "type": "citation",
+        "text": "KALEDZI, I.; SOUZA, G. Disponível em: www.dw.com. Acesso em: 12 out. 2019 (adaptado)."
+      }
+    ],
+    "enunciado": "No contexto das discussões ambientais, as práticas descritas nos textos refletem um padrão de relações derivado do(a):",
+    "options": {
+      "A": "exercício pleno da cidadania.",
+      "B": "divisão internacional do trabalho.",
+      "C": "gestão empresarial do toyotismo.",
+      "D": "concepção sustentável da economia.",
+      "E": "protecionismo alfandegário dos Estados."
+    },
+    "images": [],
+    "topicos": [
+      "culturas-juvenis",
+      "economia-sociedade-contemporanea",
+      "estado-governo-democracia"
+    ],
+    "correctAnswer": "B",
+    "nivel": "dificil"
+  },
+  {
+    "id": "enem-224",
+    "volume": 2021,
+    "number": "054",
+    "source": "ENEM 2021",
+    "tema": null,
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "O uso de novas tecnologias envolve a assimilação de uma cultura empresarial na qual haja a integração entre as propostas de modernização tecnológica e a racionalização. Nem sempre o uso de novas tecnologias é"
+      },
+      {
+        "type": "paragraph",
+        "text": "apenas um processo técnico na medida em que pressupõe uma nova orientação no controle do capital, no processo produtivo e na qualificação da mão de obra. Dos diversos efeitos que derivaram dessa orientação, a terceirização, a precarização e a flexibilização aparecem"
+      },
+      {
+        "type": "paragraph",
+        "text": "com constância como características do paradigma flexível, em substituição a modelo taylorista-fordista."
+      },
+      {
+        "type": "paragraph",
+        "text": "HERÉDIA, V. Novas tecnologias nos processos de trabalho: efeitos da"
+      },
+      {
+        "type": "paragraph",
+        "text": "reestruturação produtiva. Scripta Nova, n. 170, ago. 2004 (adaptado)."
+      }
+    ],
+    "enunciado": "O uso de novas tecnologias relacionado a controle empresarial é criticado no texto em razão da",
+    "options": {
+      "A": "operacionalização da tarefa laboral.",
+      "B": "capacitação de profissionais liberais.",
+      "C": "fragilização das relações de trabalho.",
+      "D": "hierarquização dos cargos executivos.",
+      "E": "aplicação dos conhecimentos da ciência."
+    },
+    "images": [],
+    "topicos": [
+      "ciencia-tecnologia",
+      "trabalho",
+      "cultura-sociedade"
+    ],
+    "correctAnswer": "C",
+    "nivel": "dificil"
+  },
+  {
+    "id": "enem-225",
+    "volume": 2021,
+    "number": "055",
+    "source": "ENEM 2021",
+    "tema": null,
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "A categoria de refugiado carrega em si as noções de transitoriedade, provisoriedade e temporalidade. Os refugiados situam-se entre o país de origem e o país de destino. Ao transitarem entre os dois universos,"
+      },
+      {
+        "type": "paragraph",
+        "text": "ocupam posição marginal, tanto em termos identitários – assentada na falta de pertencimento pleno enquanto membros da comunidade receptora e nos vínculos introjetados por códigos partilhados com a comunidade de quanto em termos jurídicos, a deixarem de exercitar, a menos em caráter temporário, o status de cidadãos no país de origem e portar o status de"
+      },
+      {
+        "type": "paragraph",
+        "text": "refugiados no país receptor."
+      },
+      {
+        "type": "paragraph",
+        "text": "MOREIRA, J. B. Refugiados no Brasil: reflexes acerca do processo de integração local."
+      },
+      {
+        "type": "citation",
+        "text": "REMHU, n. 43, jul.-dez. 2014 (adaptado)."
+      }
+    ],
+    "enunciado": "A condição de transitoriedade dos refugiados no Brasil, conforme abordada no texto, é provocada pela associação entre",
+    "options": {
+      "A": "a ascensão social e burocracia estatal.",
+      "B": "miscigenação étnica e limites fronteiriços.",
+      "C": "desqualificação profissional e ação policial.",
+      "D": "instabilidade financeira e crises econômicas.",
+      "E": "desenraizamento cultural e insegurança legal."
+    },
+    "images": [],
+    "topicos": [
+      "migracoes-deslocamentos",
+      "sociedade-brasileira",
+      "estado-governo-democracia"
+    ],
+    "correctAnswer": "E",
+    "nivel": "medio"
+  },
+  {
+    "id": "enem-226",
+    "volume": 2021,
+    "number": "062",
+    "source": "ENEM 2021",
+    "tema": null,
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "Constatou-se uma ínfima inserção da indústria brasileira nas novas tecnologias ancoradas na microeletrônica, capazes de acarretar elevação da produtividade nacional de forma sustentada. Os motores do crescimento nacional, há décadas, são os grupos relacionados a _commodities_ agroindustriais e à indústria representativa do antigo padrão fordista de produção, esta última também limitada pela baixa potencialidade futura de desencadear inovações tecnológicas capazes de proporcionar elevação sustentada da produtividade."
+      },
+      {
+        "type": "citation",
+        "text": "AREND, M. A industrialização do Brasil antes a nova divisão internacional do trabalho. Disponível em: www.ipea.gov.br. Acesso em: 16 jul. 2015 (adaptado)."
+      }
+    ],
+    "enunciado": "Um efeito desse cenário para a sociedade brasileira tem sido o (a)",
+    "options": {
+      "A": "barateamento da cesta básica.",
+      "B": "retorno à estatização econômica.",
+      "C": "ampliação do poder de consumo.",
+      "D": "subordinação aos fluxos globais.",
+      "E": "incentivo à política de modernização."
+    },
+    "images": [],
+    "topicos": [
+      "sociedade-brasileira",
+      "ciencia-tecnologia",
+      "politica-poder"
+    ],
+    "correctAnswer": "D",
+    "nivel": "dificil"
+  },
+  {
+    "id": "enem-227",
+    "volume": 2021,
+    "number": "063",
+    "source": "ENEM 2021",
+    "tema": null,
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "As atividades mineradores têm criado conflitos com extrativistas, quilombolas, pequenos agricultores, ribeirinhos, pescadores artesanais e povos indígenas. Em geral, estes sujeitos têm encontrado grande dificuldade de reproduzir suas dinâmicas territoriais depois da instalação da atividade mineradora, nem sempre com reconhecimento do impacto ao seu território pelo Estado e pela empresa, ficando sem qualquer tipo de compensação econômica. Em outros casos, nem a compensação econômica tem sido capaz de evitar esgarçamento das relações sociais destes grupos que sofrem com a reconstrução abrupta das suas identidades e de suas dinâmicas territoriais."
+      },
+      {
+        "type": "citation",
+        "text": "PALHETA, J. M. et al. Conflitos pelo uso do território na Amazônica mineral. Mercator, n. 16. 2017."
+      }
+    ],
+    "enunciado": "O texto apresenta uma relação entre atividade econômica e organização social marcada pelo(a)",
+    "options": {
+      "A": "escassez de incentivo cultural.",
+      "B": "rompimento de vínculos locais.",
+      "C": "carência de investimento financeiro.",
+      "D": "estabelecimento de práticas agroecológicas.",
+      "E": "enriquecimento das comunidades autóctones."
+    },
+    "images": [],
+    "topicos": [
+      "economia-sociedade-contemporanea",
+      "populacoes-brasil",
+      "identidade-social"
+    ],
+    "correctAnswer": "B",
+    "nivel": "medio"
+  },
+  {
+    "id": "enem-228",
+    "volume": 2021,
+    "number": "068",
+    "source": "ENEM 2021",
+    "tema": null,
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "O protagonismo indígena vem optando por uma estratégia de “des-invisibilização”, valendo-se da dinâmica das novas tecnologias. Em outubro de 2012, após receberem uma liminar lhes negando o direito a permanecer em suas terras, os Guarani de Pyelito Kue divulgaram uma carta na qual se dispunham a morrer, mas não a sair de suas terras. Esse fato foi amplamente divulgado, gerando uma grande mobilização na internet, que levou milhares de pessoas a escolherem seu lado, divulgando a hashtag “#somostodosGuarani-Kaiowá” ou acrescentando o sobrenome Guarani-Kaiowá a seus nomes nos perfis das principais redes sociais."
+      },
+      {
+        "type": "citation",
+        "text": "CAPIBERIBE, A.; BONILLA, O. A ocupação do Congresso: contra o que lutam os índios? Estudos Avançados, n. 83, 2015 (adaptado)."
+      }
+    ],
+    "enunciado": "A estratégia comunicativa adotada pelos indígenas, no contexto em pauta, teve por efeito",
+    "options": {
+      "A": "enfraquecer as formas de militância política.",
+      "B": "abalar a identidade de povos tradicionais.",
+      "C": "inserir as comunidades no mercado global.",
+      "D": "distanciar os grupos de culturas locais.",
+      "E": "angariar o apoio de segmentos étnicos externos."
+    },
+    "images": [],
+    "topicos": [
+      "populacoes-brasil",
+      "politica-poder",
+      "formas-contemporaneas-mobilizacao"
+    ],
+    "correctAnswer": "E",
+    "nivel": "medio"
+  },
+  {
+    "id": "enem-229",
+    "volume": 2021,
+    "number": "070",
+    "source": "ENEM 2021",
+    "tema": null,
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "Foram esses cientistas Xavante que esclareceram os mistérios da germinação de cada uma das sementes. Eles tinham o conhecimento para quebrar a dormência."
+      },
+      {
+        "type": "paragraph",
+        "text": "O fogo era fundamental para muitas; para outras, o caminho para despertar passava pelo sistema digestivo dos animais silvestres. “Essa planta nasce depois que fazemos a caçada com fogo, diziam eles, esta outra quando a anta caga a semente, aquela precisa ser comida pelo lobo”. Aliando os conhecimentos dos cientistas da aldeia e da cidade, essa área do Cerrado foi recuperada totalmente."
+      },
+      {
+        "type": "paragraph",
+        "text": "PAPPIANI, A. Tecnologias indígenas: esplendor e captura."
+      },
+      {
+        "type": "paragraph",
+        "text": "Disponível m: https://outraspalavras.net."
+      },
+      {
+        "type": "paragraph",
+        "text": "Acesso em: 10 out. 2019 (adaptado)."
+      }
+    ],
+    "enunciado": "No texto, a relação socioespacial dos indígenas evidencia a importância do(a)",
+    "options": {
+      "A": "prática agrícola para a logística nacional.",
+      "B": "cultivo de hortaliças para o consumo urbano.",
+      "C": "saber tradicional para a conservação ambiental.",
+      "D": "criação de gado para o aprimoramento genético.",
+      "E": "reflorestamento comercial para a produção orgânica."
+    },
+    "images": [],
+    "topicos": [
+      "populacoes-brasil",
+      "cultura-sociedade",
+      "consumo-estilos-vida"
+    ],
+    "correctAnswer": "C",
+    "nivel": "medio"
+  },
+  {
+    "id": "enem-230",
+    "volume": 2021,
+    "number": "079",
+    "source": "ENEM 2021",
+    "tema": null,
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "As grandes empresas seriam, certamente, representação de um exercício de poder, ante o grau de autonomia de ação de que dispõem. O que se pretende salientar é a ideia de enclave: plantas industriais que estabelecem relações escassas com o entorno, mas exercem grande influência na economia extralocal."
+      },
+      {
+        "type": "citation",
+        "text": "DAVIDOVICH. F. Estado do Rio de Janeiro: o urbano metropolitano. Hipóteses e questões. GeoUERJ, n.21, 2010."
+      }
+    ],
+    "enunciado": "Que tipo de ação tomada por empresas reflete a forma de territorialização da produção industrial apresentada no texto?",
+    "options": {
+      "A": "criação de vilas operárias.",
+      "B": "promoção de eventos comunitários.",
+      "C": "recuperação de áreas degradadas.",
+      "D": "incorporação de saberes tradicionais.",
+      "E": "importação de mão de obra qualificada."
+    },
+    "images": [],
+    "topicos": [
+      "cultura-sociedade",
+      "trabalho",
+      "economia-sociedade-contemporanea"
+    ],
+    "correctAnswer": "E",
+    "nivel": "dificil"
+  },
+  {
+    "id": "enem-231",
+    "volume": 2022,
+    "number": "047",
+    "source": "ENEM 2022",
+    "tema": null,
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "Sempre que a relevância do discurso entra em jogo, a questão torna-se política por definição, pois é o discurso que faz do homem um ser político. E tudo que os homens fazem, sabem ou experimentam só tem sentido na medida em que pode ser discutido. Haverá, talvez, verdades que ficam além da linguagem e que podem ser de grande relevância para o homem no singular, isto é, para o homem que, seja o que for, não é um ser político. Mas homens no plural, isto é, os homens que vivem e se movem e agem neste mundo, só podem experimentar o significado das coisas por poderem falar e ser inteligíveis entre si e consigo mesmos."
+      },
+      {
+        "type": "citation",
+        "text": "ARENDT, H. A condição humana. Rio de Janeiro: Forense Universitária, 2004."
+      }
+    ],
+    "enunciado": "No trecho, a filósofa Hannah Arendt mostra a importância da linguagem no processo de",
+    "options": {
+      "A": "entendimento da cultura.",
+      "B": "aumento da criatividade.",
+      "C": "percepção da individualidade.",
+      "D": "melhoria da técnica.",
+      "E": "construção da sociabilidade."
+    },
+    "images": [],
+    "topicos": [
+      "politica-poder",
+      "cultura-sociedade"
+    ],
+    "correctAnswer": "E",
+    "nivel": "dificil"
+  },
+  {
+    "id": "enem-232",
+    "volume": 2022,
+    "number": "051",
+    "source": "ENEM 2022",
+    "tema": null,
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "Uma nova economia surgiu em escala global no último quartel do século XX. Chamo-a de informacional, para identificar suas características global e em rede fundamentais e diferenciadas e enfatizar sua interligação. É informacional porque depende basicamente de sua capacidade de gerar, processar e aplicar de forma eficiente a informação baseada em conhecimentos. É global porque seus componentes estão organizados em escala global, diretamente ou mediante uma rede de conexões entre agentes econômicos. É rede porque é feita em uma rede"
+      },
+      {
+        "type": "paragraph",
+        "text": "global de interação entre redes empresariais."
+      },
+      {
+        "type": "paragraph",
+        "text": "CASTELLS, M. A sociedade em rede – a era da informação:"
+      },
+      {
+        "type": "paragraph",
+        "text": "economia, sociedade e cultura. São Paulo: Paz e Terra, 1999"
+      },
+      {
+        "type": "paragraph",
+        "text": "(adaptado)."
+      }
+    ],
+    "enunciado": "Qual mudança estrutural é resultado da forma de organização econômica descrita no texto?",
+    "options": {
+      "A": "fabricação em série.",
+      "B": "ampliação de estoques.",
+      "C": "fragilização dos cartéis.",
+      "D": "padronização de mercadorias.",
+      "E": "desterritorialização da produção."
+    },
+    "images": [],
+    "topicos": [
+      "economia-sociedade-contemporanea",
+      "cultura-sociedade",
+      "sistema-capitalista"
+    ],
+    "correctAnswer": "E",
+    "nivel": "dificil"
+  },
+  {
+    "id": "enem-233",
+    "volume": 2022,
+    "number": "056",
+    "source": "ENEM 2022",
+    "tema": null,
+    "blocks": [
+      {
+        "type": "image",
+        "src": "enem2022_q056.png"
+      },
+      {
+        "type": "citation",
+        "text": "CAZO. Disponível em: www.humorpolitico.com.br. Acesso em: 21 nov. 2021 (adaptado)."
+      },
+      {
+        "type": "label",
+        "text": "Texto II"
+      },
+      {
+        "type": "paragraph",
+        "text": "É como se os problemas fossem criados pela pandemia quando, em verdade, isso só demonstra o quanto eles sofrem uma tentativa de serem naturalizados. Eles estavam lá, empurrados para debaixo de vários tapetes. Diversos levantamentos realizados indicam que parcela significativa dos estudantes não têm acesso à internet em suas casas, não têm computadores; têm celulares, mas com pacotes baratos que não permitem assistir a todas as aulas. E, caso tenham celulares e dados, pergunta-se: É possível elaborar um texto no celular? É possível interagir na aula remota pelo celular?"
+      },
+      {
+        "type": "citation",
+        "text": "ASSIS. A. E. S. Q. Educação e pandemia. Educação em Revista, n. 37, 2021 (adaptado)."
+      }
+    ],
+    "enunciado": "A crítica contida no texto e na figura evidencia o seguinte aspecto da sociedade contemporânea:",
+    "options": {
+      "A": "exclusão social.",
+      "B": "expansão digital.",
+      "C": "manifestação cultural.",
+      "D": "organização espacial.",
+      "E": "valorização intelectual."
+    },
+    "images": [
+      "enem2022_q056.png"
+    ],
+    "topicos": [
+      "educacao-socializacao",
+      "sociabilidades-mundo-digital",
+      "saude-sociedade"
+    ],
+    "correctAnswer": "A",
+    "nivel": "medio"
+  },
+  {
+    "id": "enem-234",
+    "volume": 2022,
+    "number": "057",
+    "source": "ENEM 2022",
+    "tema": null,
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "O leproso é visto dentro de uma prática de rejeição, ao exílio-cerca; deixa-se que se perca lá dentro como numa massa que não têm muita importância diferenciar; os pestilentos são considerados num policiamento tático meticuloso onde as diferenciações individuais são os efeitos limitantes de um poder que se multiplica, se articula e se subdivide. O grande fechamento por um lado; o bom treinamento por outro. A lepra e a sua divisão; a peste e seus recortes. Uma é marcada; a outra, analisada e repartida. O exílio do leproso e a prisão da peste não trazem consigo o mesmo sonho político."
+      },
+      {
+        "type": "citation",
+        "text": "FOUCAULT, M. Vigiar e punir: nascimento da prisão. Petrópolis: Vozes, 1987."
+      }
+    ],
+    "enunciado": "Os modelos autoritários descritos no texto apontam para um sistema de controle que se baseia no(a):",
+    "options": {
+      "A": "formação de sociedade disciplinar.",
+      "B": "flexibilização do regramento social.",
+      "C": "banimento da autoridade repressora.",
+      "D": "condenação da degradação humana.",
+      "E": "hierarquização da burocracia estatal."
+    },
+    "images": [],
+    "topicos": [
+      "poder-dominacao",
+      "desvio-controle",
+      "politica-poder"
+    ],
+    "correctAnswer": "A",
+    "nivel": "dificil"
+  },
+  {
+    "id": "enem-235",
+    "volume": 2022,
+    "number": "060",
+    "source": "ENEM 2022",
+    "tema": null,
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "Um experimento denominado FunFit foi desenvolvido com o objetivo de fazer com que os membros de uma comunidade local se tornassem mais ativos fisicamente. Todos os participantes do estudo foram vinculados a dois outros membros da comunidade que receberiam pequenos incentivos em dinheiro para serem estimulados a aumentar a sua atividade física, que era medida por acelerômetros nos celulares fornecidos pelo estado. Assim, se a pessoa andasse mais do que o habitual, seus conhecidos receberiam o dinheiro. Os resultados foram assombrosos: o esquema mostrou-se de quatro a oito vezes mais eficaz do que o método de oferecer incentivos individuais."
+      },
+      {
+        "type": "citation",
+        "text": "MOROZOV, E. Big Tech: a ascensão dos dados e a morte da política. São Paulo: Ubu, 2018 (adaptado)."
+      }
+    ],
+    "enunciado": "Contrariando a visão prevalente sobre o impacto tecnológico nas relações humanas, o texto revela que os celulares podem desempenhar uma função",
+    "options": {
+      "A": "recreativa, promovendo o lazer em redes integradas.",
+      "B": "social, estimulando a reciprocidade por meios digitais.",
+      "C": "laboral, convertendo o desenvolvedor em usuário final.",
+      "D": "comercial, direcionando a escolha por produtos industrializados.",
+      "E": "cognitiva, favorecendo ferramentas virtuais."
+    },
+    "images": [],
+    "topicos": [
+      "politica-poder",
+      "estado-governo-democracia",
+      "ciencia-tecnologia"
+    ],
+    "correctAnswer": "B",
+    "nivel": "medio"
+  },
+  {
+    "id": "enem-236",
+    "volume": 2022,
+    "number": "067",
+    "source": "ENEM 2022",
+    "tema": null,
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "Após sete anos da ocupação de um terreno abandonado em Santo André, no ABC paulista, os condomínios Novo Pinheirinho e Santos Dias foram inaugurados, com a presença de representantes dos governos federal, estadual e municipal. A ocupação começou em 2012 e, desde então, o movimento vinha reivindicando o direito de usufruir do espaço para a construção de casas. A Cartas Magna, em seu art. 6°, garante a todos os brasileiros o direito à moradia."
+      },
+      {
+        "type": "paragraph",
+        "text": "PUTTI, A. Disponível em: www.cartacapital.com.br."
+      },
+      {
+        "type": "paragraph",
+        "text": "Acesso em: 13 nov. 2021 (adaptado)."
+      }
+    ],
+    "enunciado": "O texto apresenta uma estratégia usada pelo movimento social para",
+    "options": {
+      "A": "fragilizar o poder público.",
+      "B": "fomentar a economia solidária.",
+      "C": "controlar a propriedade estatal.",
+      "D": "garantir o preceito constitucional.",
+      "E": "incentivar a especulação imobiliária."
+    },
+    "images": [],
+    "topicos": [
+      "sociedade-brasileira",
+      "economia-sociedade-contemporanea",
+      "poder-dominacao"
+    ],
+    "correctAnswer": "D",
+    "nivel": "medio"
+  },
+  {
+    "id": "enem-237",
+    "volume": 2022,
+    "number": "072",
+    "source": "ENEM 2022",
+    "tema": null,
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "Brasileiros levam mais tempo de casa para o trabalho"
+      },
+      {
+        "type": "paragraph",
+        "text": "Pesquisa do IBGE aponta que a situação é mais grave no Sudeste: 13% das pessoas levam mais de um hora para chegar ao trabalho. Nas regiões metropolitanas de São Paulo e do Rio, o IBGE registrou os maiores percentuais de trabalhadores que levam mais de uma hora no trajeto até o emprego. Quem vê o Marcelo chegar ao trabalho nem imagina a maratona que ele enfrenta todos os dias antes das 5 h. “Acordo 4 h 30, saio de casa 5 h, pego trem 5 h 20, chego na Central umas 6 h 50, pego ônibus e chego no trabalho mais ou menos 7 h 10”, conta. Segundo especialista, são os mais pobres os que moram mais longe do emprego."
+      },
+      {
+        "type": "paragraph",
+        "text": "Disponível em: www.portaldotransito.com.br. Acesso em: 23 nov 2021 (adaptado)"
+      }
+    ],
+    "enunciado": "A pesquisa desenvolvida retrata a seguinte dinâmica populacional:",
+    "options": {
+      "A": "fluxo de retorno.",
+      "B": "migração interna.",
+      "C": "mudança sazonal.",
+      "D": "movimento pendular.",
+      "E": "deslocamento forçado."
+    },
+    "images": [],
+    "topicos": [
+      "trabalho",
+      "migracoes-deslocamentos",
+      "sociedade-brasileira"
+    ],
+    "correctAnswer": "D",
+    "nivel": "dificil"
+  },
+  {
+    "id": "enem-238",
+    "volume": 2022,
+    "number": "075",
+    "source": "ENEM 2022",
+    "tema": null,
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "O povo Kambeba é o povo da águas. Os mais velhos costumam contar que o povo nasceu de uma gota-d’água que caiu do céu em uma grande chuva. Nessa gota estavam duas gotículas: o homem e a mulher. “Por essa narrativa e cosmologia indígena de que nós somos o povo das águas é que o rio nos tem fundamental importância”, diz Márcia Wayna Kambeba, mestre em Geografia e escritora. Todos os dias, ela ia com o pai observar o rio. Ia em silêncio e, antes que tomasse para si a palavra, era interrompida. “Ouço o rio”, o pai dizia. Depois de cerca de duas horas a ouvir as águas do Solimões, ela mergulhava. “Confie no rio e aprenda com ele”. “Fui entender mais tarde, com meus estudos e vivências, que meu pai estava me apresentando à sabedoria milenar do rio”."
+      },
+      {
+        "type": "paragraph",
+        "text": "Rios amazônicos influenciam no agro e em reservatórios do Sudeste. Disponível em: www.uol.com.br. Acesso em: 14 out. 2021."
+      }
+    ],
+    "enunciado": "Pelo descrito no texto, o povo Kambeba tem o rio como um(a)",
+    "options": {
+      "A": "objeto tombado e museográfico.",
+      "B": "herança religiosa e sacralizada.",
+      "C": "cenário bucólico e paisagístico.",
+      "D": "riqueza individual e efêmera.",
+      "E": "patrimônio cultural e afetivo."
+    },
+    "images": [],
+    "topicos": [
+      "cultura-sociedade",
+      "populacoes-brasil",
+      "cultura-arte-comunicacao"
+    ],
+    "correctAnswer": "E",
+    "nivel": "medio"
+  },
+  {
+    "id": "enem-239",
+    "volume": 2023,
+    "number": "058",
+    "source": "ENEM 2023",
+    "tema": null,
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "A Cavalgada de Sant’Ana é uma expressão da devoção dos vaqueiros à padroeira de Caicó (RN). Nas décadas de 1950 a 1970, esse evento, então denominado Cavalaria, era celebrado pelas pessoas que residiam na zona rural do município de Caicó. Essas pessoas usavam os animais (jegues, mulas e cavalos) como único meio de transporte, sobretudo para se dirigirem à cidade nos dias de feiras, trazendo seus produtos para comercializarem. Estando em Caicó no período da Festa de Sant’Ana, esses agricultores se organizavam em cavalgada até o pátio da Catedral de Sant’Ana para louvar a santa e receber bênção para seus animais. Por volta da década de 1970, com a chegada do automóvel à zona rural do município, essa expressão cultural foi extinta. O meio de transporte utilizando os animais passou a ser substituído por carros, sobretudo caminhonetes e caminhões, que transportavam os camponeses para a cidade em dias de feiras e festas. Desde 2002, um grupo de caicoenses retomou essa expressão cultural e, em conjunto com a associação dos vaqueiros, realiza no primeiro domingo da Festa a Cavalgada de Sant’Ana. O evento, além de contar com a participação dos cavaleiros que residem nas zonas rurais, atrai também pessoas que residem em Caicó, cidades vizinhas e amantes das vaquejadas."
+      },
+      {
+        "type": "paragraph",
+        "text": "FESTA DE SANT’"
+      },
+      {
+        "type": "citation",
+        "text": "ANA. Disponível em: http://portal.iphan.gov.br Acesso em: 12 out. 2021 (adaptado)."
+      }
+    ],
+    "enunciado": "As mudanças culturais mencionadas no texto caracterizam-se pela presença de",
+    "options": {
+      "A": "elementos tradicionais e modernos em torno de uma crença religiosa.",
+      "B": "argumentos teológicos e históricos em consequência de uma ordem papal.",
+      "C": "fundamentos estéticos e etnográficos em função de uma cerimônia clerical.",
+      "D": "práticas corporais e esportivas em decorrência de uma imposição eclesiástica.",
+      "E": "discursos filosóficos e antropológicos em resultado de uma determinação paroquial."
+    },
+    "images": [],
+    "topicos": [
+      "cultura-sociedade",
+      "religiao-sociedade"
+    ],
+    "correctAnswer": "A",
+    "nivel": "dificil"
+  },
+  {
+    "id": "enem-240",
+    "volume": 2023,
+    "number": "059",
+    "source": "ENEM 2023",
+    "tema": null,
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "Do século XVI em diante, pelo menos nas classes mais altas, o garfo passou a ser usado como utensílio para comer, chegando através da Itália primeiramente à França e, em seguida, à Inglaterra e à Alemanha, depois de ter servido, durante algum tempo, apenas para retirar alimentos sólidos da travessa. Henrique III introduziu-o na França, trazendo-o provavelmente de Veneza. Seus cortesãos não foram pouco ridicularizados por essa maneira “afetada” de comer e, no princípio, não eram muito hábeis no uso do utensílio: pelo menos se dizia que metade da comida cala do garfo no caminho do prato à boca. Em data tão recente como o século XVII, o garfo era ainda basicamente artigo de luxo, geralmente feito de prata ou ouro."
+      },
+      {
+        "type": "citation",
+        "text": "ELIAS. N. O processo civilizador: uma história dos costumes. Rio de Janeiro: Zahar, 1994."
+      }
+    ],
+    "enunciado": "O processo social relatado indica a formação de uma etiqueta que tem como princípio a",
+    "options": {
+      "A": "distinção das classes sociais.",
+      "B": "valorização de hábitos de higiene.",
+      "C": "exaltação da cultura mediterrânea.",
+      "D": "consagração de tradições medievais.",
+      "E": "disseminação de produtos manufaturados."
+    },
+    "images": [],
+    "topicos": [
+      "cultura-sociedade",
+      "classes-desigualdade"
+    ],
+    "correctAnswer": "A",
+    "nivel": "dificil"
+  },
+  {
+    "id": "enem-241",
+    "volume": 2023,
+    "number": "082",
+    "source": "ENEM 2023",
+    "tema": null,
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "Os vapores cruzavam os mares transportando pessoas, mercadorias e ideias, e ainda carregavam a mala postal, repleta de mensagens. Múltiplas histórias escritas atravessavam o oceano buscando por notícias de filhos e pais, irmãos, maridos e esposas, noivos e noivas. As missivas traziam boas e más novas, comunicavam alegremente nascimentos e casamentos, também doenças e mortes; enviavam declarações de amor e fidelidade, fotos de família; encaminhavam conselhos de velhos, pedidos de ajuda e de dinheiro; expediam cartas bancárias e de chamada. Essa literatura epistolar possibilitava a transmissão e reconstrução das tradições. Os deslocamentos tornaram-se um dos mais potentes produtores de escritura ao longo da história."
+      },
+      {
+        "type": "paragraph",
+        "text": "TRUZZI, O.; MATOS, I. Saudades: sensibilidades no epistolário de e/imigrantes"
+      },
+      {
+        "type": "paragraph",
+        "text": "portuqueses (Portugal-Brasil 1890-1930). Rev. Bras. Hist., n. 70, jul.-dez. 2015."
+      }
+    ],
+    "enunciado": "Conforme o texto, as correspondências trocadas entre imigrantes no Brasil com os seus países de procedência constituíam um dispositivo tecnológico que possibilitava o(a)",
+    "options": {
+      "A": "disputa ideológica entre a comunidade de estrangeiros e a de nativos.",
+      "B": "circularidade cultural entre a sociedade de partida e a de acolhimento.",
+      "C": "controle doutrinário das narrativas do cotidiano de origem e de destino.",
+      "D": "fiscalização política dos fluxos de populações do Novo e do Velho Mundo.",
+      "E": "monitoramento social dos grupos de trabalhadores da cidade e do campo."
+    },
+    "images": [],
+    "topicos": [
+      "migracoes-deslocamentos",
+      "cultura-sociedade",
+      "sociedade-brasileira"
+    ],
+    "correctAnswer": "B",
+    "nivel": "medio"
   }
 ]
