@@ -556,42 +556,6 @@
   {
     "id": "enem-017",
     "volume": 1,
-    "number": "18",
-    "source": "ENEM",
-    "tema": "FORMAS DE ORGANIZAÇÃO DO TRABALHO",
-    "blocks": [
-      {
-        "type": "paragraph",
-        "text": "Enem 2014) ( 18)Enem 2014) ("
-      },
-      {
-        "type": "paragraph",
-        "text": "18 ) Enem 2014) ("
-      },
-      {
-        "type": "paragraph",
-        "text": "18 ) Enem 2014) ("
-      }
-    ],
-    "enunciado": "Considerando-se a dinâmica entre tecnologia e organização do trabalho, a representação contida no cartum é caracterizada pelo pessimismo em relação à:",
-    "options": {
-      "A": "ideia de progresso.",
-      "B": "concentração do capital.",
-      "C": "noção de sustentabilidade.",
-      "D": "organização dos sindicatos.",
-      "E": "obsolescência dos equipamentos."
-    },
-    "images": [],
-    "topicos": [
-      "trabalho",
-      "sistema-capitalista",
-      "ciencia-tecnologia"
-    ],
-    "correctAnswer": "A"
-  },
-  {
-    "id": "enem-018",
-    "volume": 1,
     "number": "19",
     "source": "Enem 2010",
     "tema": "FORMAS DE ORGANIZAÇÃO DO TRABALHO",
@@ -622,7 +586,7 @@
     "correctAnswer": "E"
   },
   {
-    "id": "enem-019",
+    "id": "enem-018",
     "volume": 1,
     "number": "20",
     "source": "Enem 2020",
@@ -653,7 +617,7 @@
     "correctAnswer": "C"
   },
   {
-    "id": "enem-020",
+    "id": "enem-019",
     "volume": 1,
     "number": "21",
     "source": "Enem PPL 2020",
@@ -684,7 +648,7 @@
     "correctAnswer": "D"
   },
   {
-    "id": "enem-021",
+    "id": "enem-020",
     "volume": 1,
     "number": "22",
     "source": "Enem PPL 2019",
@@ -716,7 +680,7 @@
     "correctAnswer": "C"
   },
   {
-    "id": "enem-022",
+    "id": "enem-021",
     "volume": 1,
     "number": "23",
     "source": "Enem PPL 2015",
@@ -747,7 +711,7 @@
     "correctAnswer": "C"
   },
   {
-    "id": "enem-023",
+    "id": "enem-022",
     "volume": 1,
     "number": "25",
     "source": "Enem 2013",
@@ -779,7 +743,7 @@
     "correctAnswer": "E"
   },
   {
-    "id": "enem-024",
+    "id": "enem-023",
     "volume": 1,
     "number": "27",
     "source": "Enem 2021",
@@ -810,7 +774,7 @@
     "correctAnswer": "D"
   },
   {
-    "id": "enem-025",
+    "id": "enem-024",
     "volume": 1,
     "number": "28",
     "source": "Enem digital 2020",
@@ -842,7 +806,7 @@
     "correctAnswer": "D"
   },
   {
-    "id": "enem-026",
+    "id": "enem-025",
     "volume": 1,
     "number": "29",
     "source": "Enem 2017",
@@ -874,7 +838,7 @@
     "correctAnswer": "D"
   },
   {
-    "id": "enem-027",
+    "id": "enem-026",
     "volume": 1,
     "number": "31",
     "source": "Enem PPL 2021",
@@ -922,7 +886,7 @@
     "correctAnswer": "B"
   },
   {
-    "id": "enem-028",
+    "id": "enem-027",
     "volume": 1,
     "number": "32",
     "source": "Enem 2021",
@@ -957,7 +921,7 @@
     "correctAnswer": "B"
   },
   {
-    "id": "enem-029",
+    "id": "enem-028",
     "volume": 1,
     "number": "33",
     "source": "Enem digital 2020",
@@ -989,7 +953,7 @@
     "correctAnswer": "D"
   },
   {
-    "id": "enem-030",
+    "id": "enem-029",
     "volume": 1,
     "number": "34",
     "source": "Enem (Libras",
@@ -1020,7 +984,7 @@
     "correctAnswer": "C"
   },
   {
-    "id": "enem-031",
+    "id": "enem-030",
     "volume": 1,
     "number": "35",
     "source": "Enem 2016",
@@ -1052,7 +1016,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-032",
+    "id": "enem-031",
     "volume": 1,
     "number": "36",
     "source": "Enem PPL 2012",
@@ -1084,7 +1048,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-033",
+    "id": "enem-032",
     "volume": 1,
     "number": "37",
     "source": "Enem PPL 2017",
@@ -1132,7 +1096,7 @@
     "correctAnswer": "D"
   },
   {
-    "id": "enem-034",
+    "id": "enem-033",
     "volume": 1,
     "number": "38",
     "source": "Enem PPL 2013",
@@ -1164,7 +1128,7 @@
     "correctAnswer": "D"
   },
   {
-    "id": "enem-035",
+    "id": "enem-034",
     "volume": 1,
     "number": "39",
     "source": "Enem 2021",
@@ -1192,7 +1156,7 @@
     "correctAnswer": "C"
   },
   {
-    "id": "enem-036",
+    "id": "enem-035",
     "volume": 1,
     "number": "40",
     "source": "Enem PPL 2020",
@@ -1223,7 +1187,7 @@
     "correctAnswer": "D"
   },
   {
-    "id": "enem-037",
+    "id": "enem-036",
     "volume": 1,
     "number": "41",
     "source": "Enem (Libras",
@@ -1255,7 +1219,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-038",
+    "id": "enem-037",
     "volume": 1,
     "number": "42",
     "source": "Enem 2ª aplicação 2016",
@@ -1287,7 +1251,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-039",
+    "id": "enem-038",
     "volume": 1,
     "number": "43",
     "source": "Enem 2015",
@@ -1302,7 +1266,7 @@
         "text": "HOLANDA, S. B. Raízes do Brasil. São Paulo: Cia. das Letras, 1995."
       }
     ],
-    "enunciado": "Um traço formador da vida pública brasileira expressa-se,segundo a análise do historiador, na: a) rigidez das normas jurídicas.",
+    "enunciado": "Um traço formador da vida pública brasileira expressa-se, segundo a análise do historiador, na: a) rigidez das normas jurídicas.",
     "options": {
       "A": "prevalência dos interesses privados.",
       "B": "solidez da organização institucional.",
@@ -1318,7 +1282,7 @@
     "correctAnswer": "B"
   },
   {
-    "id": "enem-040",
+    "id": "enem-039",
     "volume": 1,
     "number": "44",
     "source": "Enem 2023",
@@ -1350,7 +1314,7 @@
     "correctAnswer": "E"
   },
   {
-    "id": "enem-041",
+    "id": "enem-040",
     "volume": 1,
     "number": "45",
     "source": "Enem 2023",
@@ -1390,7 +1354,7 @@
     "correctAnswer": "B"
   },
   {
-    "id": "enem-042",
+    "id": "enem-041",
     "volume": 1,
     "number": "46",
     "source": "ENEM",
@@ -1426,7 +1390,7 @@
     "correctAnswer": "D"
   },
   {
-    "id": "enem-043",
+    "id": "enem-042",
     "volume": 1,
     "number": "47",
     "source": "Enem 2023",
@@ -1458,7 +1422,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-044",
+    "id": "enem-043",
     "volume": 1,
     "number": "48",
     "source": "ENEM 2024",
@@ -1489,7 +1453,7 @@
     "correctAnswer": "C"
   },
   {
-    "id": "enem-045",
+    "id": "enem-044",
     "volume": 1,
     "number": "49",
     "source": "ENEM",
@@ -1521,7 +1485,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-046",
+    "id": "enem-045",
     "volume": 1,
     "number": "50",
     "source": "ENEM",
@@ -1553,7 +1517,7 @@
     "correctAnswer": "B"
   },
   {
-    "id": "enem-047",
+    "id": "enem-046",
     "volume": 2,
     "number": "01",
     "source": "Enem PPL 2021",
@@ -1585,7 +1549,7 @@
     "correctAnswer": "B"
   },
   {
-    "id": "enem-048",
+    "id": "enem-047",
     "volume": 2,
     "number": "02",
     "source": "Enem digital 2020",
@@ -1617,7 +1581,7 @@
     "correctAnswer": "E"
   },
   {
-    "id": "enem-049",
+    "id": "enem-048",
     "volume": 2,
     "number": "03",
     "source": "Enem 2020",
@@ -1625,7 +1589,7 @@
     "blocks": [
       {
         "type": "paragraph",
-        "text": "A sociedade como um sistema justo de cooperação social consiste em uma das ideias familiares fundamentais, que dá estrutura e organização à justiça como equidade. A cooperação social guia- se por regras e procedimentos publicamente reconhecidos e aceitos por aqueles que cooperam como sendo apropriados para regular a sua conduta. Diz-se que a é cooperação é justa porque seus termos são tais que todos os participantes podem razoavelmente aceitar, desde que todos os demais também o aceitem.”"
+        "text": "A sociedade como um sistema justo de cooperação social consiste em uma das ideias familiares fundamentais, que dá estrutura e organização à justiça como equidade. A cooperação social guia-se por regras e procedimentos publicamente reconhecidos e aceitos por aqueles que cooperam como sendo apropriados para regular a sua conduta. Diz-se que a é cooperação é justa porque seus termos são tais que todos os participantes podem razoavelmente aceitar, desde que todos os demais também o aceitem.”"
       },
       {
         "type": "citation",
@@ -1649,7 +1613,7 @@
     "correctAnswer": "E"
   },
   {
-    "id": "enem-050",
+    "id": "enem-049",
     "volume": 2,
     "number": "04",
     "source": "Enem 2019",
@@ -1681,7 +1645,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-051",
+    "id": "enem-050",
     "volume": 2,
     "number": "05",
     "source": "Enem 2ª aplicação 2016",
@@ -1725,13 +1689,22 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-052",
+    "id": "enem-051",
     "volume": 2,
     "number": "06",
     "source": "Enem PPL 2012",
     "tema": "MAQUIAVEL E CONTRATUALISMO",
-    "blocks": [],
-    "enunciado": "O homem natural é tudo para si mesmo; é a unidade numérica, o inteiro absoluto, que só se relaciona consigo mesmo ou com seu semelhante. O homem civil é apenas uma unidade fracionária que se liga ao denominador, e cujo valor está em sua relação com o todo, que é o corpo social. As boas instituições sociais são as que melhor sabem desnaturar o homem, retirar-lhe sua existência absoluta para dar-lhe uma relativa, e transferir o eu para a unidade comum, de sorte que cada particular não se julgue mais como tal, e sim como uma parte da unidade, e só seja percebido no todo. ROUSSEAU, J. J. Emílio ou da Educação. São Paulo:Martins Fontes, 1999. A visão de Rousseau em relação à natureza humana, conforme expressa o texto, diz que:",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "O homem natural é tudo para si mesmo; é a unidade numérica, o inteiro absoluto, que só se relaciona consigo mesmo ou com seu semelhante. O homem civil é apenas uma unidade fracionária que se liga ao denominador, e cujo valor está em sua relação com o todo, que é o corpo social. As boas instituições sociais são as que melhor sabem desnaturar o homem, retirar-lhe sua existência absoluta para dar-lhe uma relativa, e transferir o eu para a unidade comum, de sorte que cada particular não se julgue mais como tal, e sim como uma parte da unidade, e só seja percebido no todo."
+      },
+      {
+        "type": "citation",
+        "text": "ROUSSEAU, J. J. Emílio ou da Educação. São Paulo: Martins Fontes, 1999."
+      }
+    ],
+    "enunciado": "A visão de Rousseau em relação à natureza humana, conforme expressa o texto, diz que:",
     "options": {
       "A": "o homem civil é formado a partir do desvio de sua própria natureza.",
       "B": "as instituições sociais formam o homem de acordo com a sua essência natural.",
@@ -1748,7 +1721,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-053",
+    "id": "enem-052",
     "volume": 2,
     "number": "07",
     "source": "Enem PPL 2014",
@@ -1780,7 +1753,7 @@
     "correctAnswer": "D"
   },
   {
-    "id": "enem-054",
+    "id": "enem-053",
     "volume": 2,
     "number": "08",
     "source": "ENEM PPL 2022",
@@ -1812,7 +1785,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-055",
+    "id": "enem-054",
     "volume": 2,
     "number": "09",
     "source": "ENEM",
@@ -1820,7 +1793,7 @@
     "blocks": [
       {
         "type": "paragraph",
-        "text": "No capítulo XXV de O Príncipe, reafirmando o seu propósito de conceber a politica como uma atividade humana secular, livre de influências metafísicas. Nicolau Maquiavel contrapõe a fortuna à virtù na definição do sucesso da ação política: \"Todavia, para que nosso livre-arbítrio não seja extinto, julgo ser verdadeiro que a fortuna seja árbitra da metade das nossas ações, mas que ela ainda nos deixa governar a outra metade, ou quase\". (MAQUIAVEL, N. O Príncipe. São Paulo: Hedra, 2011, p. 237)."
+        "text": "No capítulo XXV de O Príncipe, reafirmando o seu propósito de conceber a política como uma atividade humana secular, livre de influências metafísicas. Nicolau Maquiavel contrapõe a fortuna à virtù na definição do sucesso da ação política: \"Todavia, para que nosso livre-arbítrio não seja extinto, julgo ser verdadeiro que a fortuna seja árbitra da metade das nossas ações, mas que ela ainda nos deixa governar a outra metade, ou quase\". (MAQUIAVEL, N. O Príncipe. São Paulo: Hedra, 2011, p. 237)."
       }
     ],
     "enunciado": "Assim, fortuna e virtù contribuiriam em igual medida na determinação do sucesso da ação política. Considerando-se o contexto da citação apresentada acima, qual seria a definição para o conceito maquiaveliano de fortuna? Assinale a alternativa CORRETA.",
@@ -1840,7 +1813,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-056",
+    "id": "enem-055",
     "volume": 2,
     "number": "10",
     "source": "ENEM 2ª aplic. 2022",
@@ -1872,7 +1845,7 @@
     "correctAnswer": "D"
   },
   {
-    "id": "enem-057",
+    "id": "enem-056",
     "volume": 2,
     "number": "11",
     "source": "Enem 2022",
@@ -1900,7 +1873,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-058",
+    "id": "enem-057",
     "volume": 2,
     "number": "12",
     "source": "Enem 2018",
@@ -1928,7 +1901,7 @@
     "correctAnswer": "C"
   },
   {
-    "id": "enem-059",
+    "id": "enem-058",
     "volume": 2,
     "number": "13",
     "source": "Enem 2014",
@@ -1960,7 +1933,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-060",
+    "id": "enem-059",
     "volume": 2,
     "number": "14",
     "source": "Enem PPL 2014",
@@ -1996,7 +1969,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-061",
+    "id": "enem-060",
     "volume": 2,
     "number": "15",
     "source": "Enem PPL 2013",
@@ -2028,7 +2001,7 @@
     "correctAnswer": "C"
   },
   {
-    "id": "enem-062",
+    "id": "enem-061",
     "volume": 2,
     "number": "16",
     "source": "UNICAMP 2025",
@@ -2036,7 +2009,7 @@
     "blocks": [
       {
         "type": "paragraph",
-        "text": "Nos estudos sobre a Antiguidade Clássica produzidos até o final do século XX, era costumeira a afirmação de que as mulheres em Atenas não participavam da política. A definição de \"politica\" na Grécia, todavia, era feita a partir dos olhos do mundo moderno, e, nesse caso, era um sinonimo de \"cidadania\". O cidadão ateniense era homem, filho de pai e mãe atenienses. As mulheres, estrangeiros e escravos não gozavam do mesmo status. Após os anos de 2000, a partir de críticas de estudiosos, a definição de \"politica\" e de \"cidadania\" na Grécia Clássica passou a ser repensada e a capacidade de ação das mulheres atenienses no espaço público foi redimensionada. Nesses estudos, as mulheres cidadãs de Atenas ganham visibilidade. Filhas de pai e mãe atenienses, nascidas em Atenas, tinham limitações de voto, mas desempenhavam funções no mundo cívico. Elas não podiam, por causa de seu sexo, ser juradas ou magistradas, por exemplo, mas estavam vivendo no mesmo universo público, sendo também cidadãs. (Adaptado de CUCHET, V. S. Quais direitos politicos para as cidadās da Atenas clássica?. Hélade, 4(1), p. 143-158, 2018.)"
+        "text": "Nos estudos sobre a Antiguidade Clássica produzidos até o final do século XX, era costumeira a afirmação de que as mulheres em Atenas não participavam da política. A definição de \"política\" na Grécia, todavia, era feita a partir dos olhos do mundo moderno, e, nesse caso, era um sinonimo de \"cidadania\". O cidadão ateniense era homem, filho de pai e mãe atenienses. As mulheres, estrangeiros e escravos não gozavam do mesmo status. Após os anos de 2000, a partir de críticas de estudiosos, a definição de \"política\" e de \"cidadania\" na Grécia Clássica passou a ser repensada e a capacidade de ação das mulheres atenienses no espaço público foi redimensionada. Nesses estudos, as mulheres cidadãs de Atenas ganham visibilidade. Filhas de pai e mãe atenienses, nascidas em Atenas, tinham limitações de voto, mas desempenhavam funções no mundo cívico. Elas não podiam, por causa de seu sexo, ser juradas ou magistradas, por exemplo, mas estavam vivendo no mesmo universo público, sendo também cidadãs. (Adaptado de CUCHET, V. S. Quais direitos políticos para as cidadãs da Atenas clássica?. Hélade, 4(1), p. 143-158, 2018.)"
       }
     ],
     "enunciado": "Tendo em vista seus conhecimentos sobre Grécia Antiga e considerando o excerto anterior, assinale a alternativa correta.",
@@ -2055,7 +2028,7 @@
     "correctAnswer": "D"
   },
   {
-    "id": "enem-063",
+    "id": "enem-062",
     "volume": 2,
     "number": "17",
     "source": "UECE 2023",
@@ -2082,7 +2055,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-064",
+    "id": "enem-063",
     "volume": 2,
     "number": "18",
     "source": "UECE 2022",
@@ -2090,7 +2063,7 @@
     "blocks": [
       {
         "type": "paragraph",
-        "text": "Para Norbert Elias, sociólogo alemão, a relação Estado e Sociedade está ligada ao que ele classificou de \"processo civilizador\". Na verdade, o Estado é uma \"invenção sociotécnica\" fruto desse processo civilizador que diz respeito a dois direcionamentos de \"longa duração\": um que vai rumo a uma maior pacificação no âmbito da Estrutura Social denominado, pelo autor, de \"sociogênese do controle social\", e outro, que ruma para uma autocontenção individual dos comportamentos nas sociedades, também por ele denominado de \"psicogênese do autocontrole individual\", ou seja, um movimento próprio de autocontrole de cada individuo. Em resumo, tal concepção teórica procura demonstrar que, na verdade, o processo civilizador indica esta dupla tendência que, infelizmente, sofre recuos e não apenas avanços, mas resulta em uma relação entre Estado e sociedade que é cada vez mais pacificadora para o convívio social."
+        "text": "Para Norbert Elias, sociólogo alemão, a relação Estado e Sociedade está ligada ao que ele classificou de \"processo civilizador\". Na verdade, o Estado é uma \"invenção sociotécnica\" fruto desse processo civilizador que diz respeito a dois direcionamentos de \"longa duração\": um que vai rumo a uma maior pacificação no âmbito da Estrutura Social denominado, pelo autor, de \"sociogênese do controle social\", e outro, que ruma para uma autocontenção individual dos comportamentos nas sociedades, também por ele denominado de \"psicogênese do autocontrole individual\", ou seja, um movimento próprio de autocontrole de cada indivíduo. Em resumo, tal concepção teórica procura demonstrar que, na verdade, o processo civilizador indica esta dupla tendência que, infelizmente, sofre recuos e não apenas avanços, mas resulta em uma relação entre Estado e sociedade que é cada vez mais pacificadora para o convívio social."
       }
     ],
     "enunciado": "No que diz respeito a esse processo civilizador na relação Estado e Sociedade, assinale a afirmação verdadeira.",
@@ -2109,7 +2082,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-065",
+    "id": "enem-064",
     "volume": 2,
     "number": "19",
     "source": "Enem PPL 2021",
@@ -2141,7 +2114,7 @@
     "correctAnswer": "C"
   },
   {
-    "id": "enem-066",
+    "id": "enem-065",
     "volume": 2,
     "number": "20",
     "source": "Enem 2021",
@@ -2169,7 +2142,7 @@
     "correctAnswer": "C"
   },
   {
-    "id": "enem-067",
+    "id": "enem-066",
     "volume": 2,
     "number": "21",
     "source": "Enem 2017",
@@ -2177,7 +2150,7 @@
     "blocks": [
       {
         "type": "paragraph",
-        "text": "Uma sociedade é uma associação mais ou menos autossuficiente de pessoas que em suas relações mútuas reconhecem certas regras de conduta como obrigatórias e que, na maioria das vezes, agem de acordo com elas. Uma sociedade é bem ordenada não apenas quando está planejada para promover o bem de seus membros, mas quando é também efetivamente regulada por uma concepção pública de justiça. Isto é, trata- se de uma sociedade na qual todos aceitam, e sabem que os outros aceitam, o mesmo princípio de justiça. RAWLS, J. Uma teoria da justiça. São Paulo: Martins Fontes, 1997 (adaptado)."
+        "text": "Uma sociedade é uma associação mais ou menos autossuficiente de pessoas que em suas relações mútuas reconhecem certas regras de conduta como obrigatórias e que, na maioria das vezes, agem de acordo com elas. Uma sociedade é bem ordenada não apenas quando está planejada para promover o bem de seus membros, mas quando é também efetivamente regulada por uma concepção pública de justiça. Isto é, trata-se de uma sociedade na qual todos aceitam, e sabem que os outros aceitam, o mesmo princípio de justiça. RAWLS, J. Uma teoria da justiça. São Paulo: Martins Fontes, 1997 (adaptado)."
       }
     ],
     "enunciado": "A visão expressa nesse texto do século XX remete a qual aspecto do pensamento moderno?",
@@ -2186,7 +2159,7 @@
       "B": "A independência entre poder e moral do Racionalismo.",
       "C": "A convenção entre cidadãos e soberano de Absolutismo.",
       "D": "A dialética entre indivíduo e governo autocrata do idealismo.",
-      "E": "Acontraposiçãoentrebondadee condição selvagem do Naturalismo."
+      "E": "A contraposição entre bondade e condição selvagem do Naturalismo."
     },
     "images": [],
     "topicos": [
@@ -2197,7 +2170,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-068",
+    "id": "enem-067",
     "volume": 2,
     "number": "22",
     "source": "Enem 2ª aplicação 2014",
@@ -2229,7 +2202,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-069",
+    "id": "enem-068",
     "volume": 2,
     "number": "23",
     "source": "ENEM 2017",
@@ -2257,7 +2230,7 @@
     "correctAnswer": "B"
   },
   {
-    "id": "enem-070",
+    "id": "enem-069",
     "volume": 2,
     "number": "24",
     "source": "ENEM 2012",
@@ -2289,7 +2262,7 @@
     "correctAnswer": "C"
   },
   {
-    "id": "enem-071",
+    "id": "enem-070",
     "volume": 2,
     "number": "25",
     "source": "ENEM 2ª aplicação 2010",
@@ -2321,7 +2294,7 @@
     "correctAnswer": "D"
   },
   {
-    "id": "enem-072",
+    "id": "enem-071",
     "volume": 2,
     "number": "26",
     "source": "Enem digital 2020",
@@ -2353,7 +2326,7 @@
     "correctAnswer": "B"
   },
   {
-    "id": "enem-073",
+    "id": "enem-072",
     "volume": 2,
     "number": "27",
     "source": "Enem PPL 2017",
@@ -2385,7 +2358,7 @@
     "correctAnswer": "D"
   },
   {
-    "id": "enem-074",
+    "id": "enem-073",
     "volume": 2,
     "number": "28",
     "source": "Enem 2017",
@@ -2402,11 +2375,11 @@
     ],
     "enunciado": "O texto faz referência a uma importante mudança na dinâmica de funcionamento dos Estados contemporâneos que, no caso brasileiro, teve como consequência a:",
     "options": {
-      "A": "adoçãodeeleiçõesparaaalta magistratura.",
+      "A": "adoção de eleições para a alta magistratura.",
       "B": "diminuição das tensões entre os entes federativos.",
-      "C": "suspensão do principio geral dos freios e contrapesos.",
+      "C": "suspensão do princípio geral dos freios e contrapesos.",
       "D": "judicialização de questões próprias da esfera legislativa.",
-      "E": "profissionalizaçãodoquadrode funcionários da Justiça."
+      "E": "profissionalização do quadro de funcionários da Justiça."
     },
     "images": [],
     "topicos": [
@@ -2417,7 +2390,7 @@
     "correctAnswer": "D"
   },
   {
-    "id": "enem-075",
+    "id": "enem-074",
     "volume": 2,
     "number": "29",
     "source": "Enem PPL 2011",
@@ -2449,7 +2422,7 @@
     "correctAnswer": "C"
   },
   {
-    "id": "enem-076",
+    "id": "enem-075",
     "volume": 2,
     "number": "30",
     "source": "Enem 2010",
@@ -2457,14 +2430,14 @@
     "blocks": [
       {
         "type": "paragraph",
-        "text": "Judiciario contribuiu com ditadura no Chile, diz Juiz Guzman Tapia As cortes de apelação rejeitaram mais de 10 mil habeas corpus nos casos das pessoas desaparecidas. Nos tribunais militares, todas as causas foram concluídas com suspensões temporárias ou definitivas, e os desaparecimentos políticos tiveram apenas trâmite formal na Justiça. Assim, o Poder Judiciário contribuiu para que os agentes estatais ficassem impunes."
+        "text": "Judiciário contribuiu com ditadura no Chile, diz Juiz Guzman Tapia As cortes de apelação rejeitaram mais de 10 mil habeas corpus nos casos das pessoas desaparecidas. Nos tribunais militares, todas as causas foram concluídas com suspensões temporárias ou definitivas, e os desaparecimentos políticos tiveram apenas trâmite formal na Justiça. Assim, o Poder Judiciário contribuiu para que os agentes estatais ficassem impunes."
       },
       {
         "type": "citation",
         "text": "Disponível em: http://www.cartamaior.com.br. Acesso em: 20 jul. 2010 (adaptado)."
       }
     ],
-    "enunciado": "Segundo o texto, durante a ditadura chilena na década de 1970, a relação entre os poderes Executivo e Judiciário caracterizava- se pela:",
+    "enunciado": "Segundo o texto, durante a ditadura chilena na década de 1970, a relação entre os poderes Executivo e Judiciário caracterizava-se pela:",
     "options": {
       "A": "preservação da autonomia institucional entre os poderes.",
       "B": "valorização da atuação independente de alguns juízes.",
@@ -2481,7 +2454,7 @@
     "correctAnswer": "E"
   },
   {
-    "id": "enem-077",
+    "id": "enem-076",
     "volume": 2,
     "number": "31",
     "source": "Enem PPL 2009",
@@ -2513,7 +2486,7 @@
     "correctAnswer": "E"
   },
   {
-    "id": "enem-078",
+    "id": "enem-077",
     "volume": 2,
     "number": "32",
     "source": "Enem 2017",
@@ -2545,7 +2518,7 @@
     "correctAnswer": "B"
   },
   {
-    "id": "enem-079",
+    "id": "enem-078",
     "volume": 2,
     "number": "33",
     "source": "Enem PPL 2016",
@@ -2577,7 +2550,7 @@
     "correctAnswer": "D"
   },
   {
-    "id": "enem-080",
+    "id": "enem-079",
     "volume": 3,
     "number": "01",
     "source": "Enem 2018",
@@ -2609,39 +2582,7 @@
     "correctAnswer": "E"
   },
   {
-    "id": "enem-081",
-    "volume": 3,
-    "number": "02",
-    "source": "Enem 2021",
-    "tema": "Noção contemporânea de cidadania e direitos",
-    "blocks": [
-      {
-        "type": "paragraph",
-        "text": "A categoria de refugiado carrega em si as noções de transitoriedade, provisoriedade e temporalidade. Os refugiados situam-se entre o país de origem e o país de destino. Ao transitarem entre os dois universos, ocupam posição marginal, tanto em termos identitários – assentada na falta de pertencimento pleno enquanto membros da comunidade receptora e nos vínculos introjetados por códigos partilhados com a comunidade de origem – quanto em termos jurídicos, ao deixarem de exercitar, ao menos em caráter temporário, o status de cidadãos no país de origem e portar o status de refugiados no país receptor."
-      },
-      {
-        "type": "citation",
-        "text": "MOREIRA. J. B. Refugiados no Brasil: reflexões acerca do processo de integração local. REMHU. n. 43, jul.-dez. 2014 (adaptado). SALLES, D. J. P. C. Disponível em: www.ambito- juridico.com.br. Acesso em: 30 jul. 2013 (adaptado)."
-      }
-    ],
-    "enunciado": "A demarcação de terras indígenas, conforme o texto, evidencia a:",
-    "options": {
-      "A": "ampliação da população indígena na região.",
-      "B": "função do Direito na organização da sociedade.",
-      "C": "mobilização da sociedade civil pela causa indígena.",
-      "D": "diminuição do preconceito contra os índios no Brasil.",
-      "E": "pressão de organismos internacionais em defesa dos índios brasileiros."
-    },
-    "images": [],
-    "topicos": [
-      "estado-governo-democracia",
-      "sociedade-brasileira",
-      "migracoes-deslocamentos"
-    ],
-    "correctAnswer": "E"
-  },
-  {
-    "id": "enem-082",
+    "id": "enem-080",
     "volume": 3,
     "number": "04",
     "source": "Enem 2019",
@@ -2669,7 +2610,7 @@
     "correctAnswer": "E"
   },
   {
-    "id": "enem-083",
+    "id": "enem-081",
     "volume": 3,
     "number": "05",
     "source": "Enem PPL 2018",
@@ -2701,7 +2642,7 @@
     "correctAnswer": "B"
   },
   {
-    "id": "enem-084",
+    "id": "enem-082",
     "volume": 3,
     "number": "06",
     "source": "Enem 2ª aplicação 2016",
@@ -2709,7 +2650,7 @@
     "blocks": [
       {
         "type": "paragraph",
-        "text": "O processo de justiça é um processo ora de diversificação do diverso, ora de unificação do idêntico. A igualdade entre todos os seres humanos em relação aos direitos fundamentais é o resultado de um processo de gradual eliminação de discriminações e, portanto, de unificação daquilo que ia sendo reconhecido como idêntico: uma natureza comum do homem acima de qualquer diferença de sexo, raça, religião etc. BOBBIO, N. Teoria geral da política: a filosofia política e as lições dos clássicos.Rio de Janeiro: Campus, 2000."
+        "text": "O processo de justiça é um processo ora de diversificação do diverso, ora de unificação do idêntico. A igualdade entre todos os seres humanos em relação aos direitos fundamentais é o resultado de um processo de gradual eliminação de discriminações e, portanto, de unificação daquilo que ia sendo reconhecido como idêntico: uma natureza comum do homem acima de qualquer diferença de sexo, raça, religião etc. BOBBIO, N. Teoria geral da política: a filosofia política e as lições dos clássicos. Rio de Janeiro: Campus, 2000."
       }
     ],
     "enunciado": "De acordo com o texto, a construção de uma sociedade democrática fundamenta-se em:",
@@ -2729,7 +2670,7 @@
     "correctAnswer": "B"
   },
   {
-    "id": "enem-085",
+    "id": "enem-083",
     "volume": 3,
     "number": "07",
     "source": "Enem 2ª aplicação 2016",
@@ -2744,7 +2685,7 @@
         "text": "Um século de favela. Rio de Janeiro: Editora FGV, 1998."
       }
     ],
-    "enunciado": "Oestigmaapontadonotextotemcomo consequência o(a):",
+    "enunciado": "O estigma apontado no texto tem como consequência o(a):",
     "options": {
       "A": "aumento da impunidade criminal.",
       "B": "enfraquecimento dos direitos civis.",
@@ -2761,7 +2702,7 @@
     "correctAnswer": "B"
   },
   {
-    "id": "enem-086",
+    "id": "enem-084",
     "volume": 3,
     "number": "08",
     "source": "Enem PPL 2015",
@@ -2774,11 +2715,11 @@
     ],
     "enunciado": "O cartum evidencia um desafio que o tema de inclusão social impõe às democracias contemporâneas. Esse desafio exige a combinação entre:",
     "options": {
-      "A": "participaçãopolíticae formação profissional diferenciada.",
+      "A": "participação política e formação profissional diferenciada.",
       "B": "exercício da cidadania e políticas de transferência de renda.",
       "C": "modernização das leis e ampliação do mercado de trabalho.",
       "D": "universalização de direitos e reconhecimento das diferenças.",
-      "E": "crescimentoeconômicoe flexibilizaçãodos processos seletivos."
+      "E": "crescimento econômico e flexibilização dos processos seletivos."
     },
     "images": [
       "vol3_img001.png"
@@ -2791,7 +2732,7 @@
     "correctAnswer": "D"
   },
   {
-    "id": "enem-087",
+    "id": "enem-085",
     "volume": 3,
     "number": "09",
     "source": "Enem PPL 2011",
@@ -2823,7 +2764,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-088",
+    "id": "enem-086",
     "volume": 3,
     "number": "10",
     "source": "Enem 2022",
@@ -2855,7 +2796,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-089",
+    "id": "enem-087",
     "volume": 3,
     "number": "11",
     "source": "Enem 2021",
@@ -2897,7 +2838,7 @@
     "correctAnswer": "B"
   },
   {
-    "id": "enem-090",
+    "id": "enem-088",
     "volume": 3,
     "number": "12",
     "source": "Enem 2022",
@@ -2905,7 +2846,7 @@
     "blocks": [
       {
         "type": "paragraph",
-        "text": "TEXTO I Interseccionalidade:intercruzamentode desigualdades que gera padrões complexos de discriminação."
+        "text": "TEXTO I Interseccionalidade: intercruzamento de desigualdades que gera padrões complexos de discriminação."
       },
       {
         "type": "label",
@@ -2929,7 +2870,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-091",
+    "id": "enem-089",
     "volume": 3,
     "number": "13",
     "source": "Enem 2020",
@@ -2946,9 +2887,9 @@
     ],
     "enunciado": "A transformação descrita no texto tem sido insuficiente para o estabelecimento de uma condição de igualdade de oportunidade em virtude da(s):",
     "options": {
-      "A": "estagnaçãodedireitosadquiridosedo anacronismo da legislação vigente.",
+      "A": "estagnação de direitos adquiridos e do anacronismo da legislação vigente.",
       "B": "manutenção do status quo gerencial e dos padrões de socialização familiar.",
-      "C": "desestruturaçãoda herança patriarcal e das mudanças do perfil ocupacional.",
+      "C": "desestruturação da herança patriarcal e das mudanças do perfil ocupacional.",
       "D": "disputas na composição sindical e da presença na esfera político-partidária.",
       "E": "exigências de aperfeiçoamento profissional e de habilidades na competência diretiva."
     },
@@ -2961,7 +2902,7 @@
     "correctAnswer": "B"
   },
   {
-    "id": "enem-092",
+    "id": "enem-090",
     "volume": 3,
     "number": "14",
     "source": "Enem 2022",
@@ -2991,39 +2932,7 @@
     "correctAnswer": "B"
   },
   {
-    "id": "enem-093",
-    "volume": 3,
-    "number": "15",
-    "source": "Enem 2021",
-    "tema": "Desigualdades sociais e violações da cidadania",
-    "blocks": [
-      {
-        "type": "paragraph",
-        "text": "Houve crescimento de 74% da população brasileira encarcerada entre 2005 e 2012. As análises possibilitaram identificar o perfil da população que está nas prisões do país: homens, jovens (abaixo de 29 anos), negros, com ensino fundamental incompleto, acusados de crimes patrimoniais e, no caso dos presos adultos, condenados e cumprindo regime fechado e, majoritariamente, com penas de quatro até oito anos."
-      },
-      {
-        "type": "citation",
-        "text": "BRASIL. Mapa do encarceramento: os jovens do Brasil. Brasília: Presidência da República, 2015."
-      }
-    ],
-    "enunciado": "Nesse contexto, as políticas públicas para minimizar a problemática descrita devem privilegiar a:",
-    "options": {
-      "A": "flexibilização do Código Civil.",
-      "B": "promoção da inclusão social.",
-      "C": "redução da maioridade penal.",
-      "D": "contenção da corrupção política.",
-      "E": "expansão do período de reclusão."
-    },
-    "images": [],
-    "topicos": [
-      "classes-desigualdade",
-      "estado-governo-democracia",
-      "sociedade-brasileira"
-    ],
-    "correctAnswer": "B"
-  },
-  {
-    "id": "enem-094",
+    "id": "enem-091",
     "volume": 3,
     "number": "16",
     "source": "Enem (Libras",
@@ -3035,7 +2944,7 @@
       },
       {
         "type": "citation",
-        "text": "MARICATO, E. É a questão urbana, estúpido! In: MARICATO, E. et al. Cidades rebeldes: passe livre e as manifestações que tomaram as ruas do Brasil.São Paulo: Boitempo; Carta Maior, 2013."
+        "text": "MARICATO, E. É a questão urbana, estúpido! In: MARICATO, E. et al. Cidades rebeldes: passe livre e as manifestações que tomaram as ruas do Brasil. São Paulo: Boitempo; Carta Maior, 2013."
       }
     ],
     "enunciado": "O texto problematiza o seguinte aspecto referente ao ordenamento das cidades:",
@@ -3055,7 +2964,7 @@
     "correctAnswer": "E"
   },
   {
-    "id": "enem-095",
+    "id": "enem-092",
     "volume": 3,
     "number": "17",
     "source": "Enem PPL 2014",
@@ -3076,7 +2985,7 @@
       "B": "segmentação social das políticas públicas por níveis de carência.",
       "C": "influência de grupos políticos globais em rede no cotidiano urbano.",
       "D": "ampliaçãodos territórios móveis nas áreas residenciais tradicionais.",
-      "E": "necessidadedapopulaçãoemassociar espacialmente trabalho e moradia."
+      "E": "necessidade da população em associar espacialmente trabalho e moradia."
     },
     "images": [],
     "topicos": [
@@ -3087,7 +2996,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-096",
+    "id": "enem-093",
     "volume": 3,
     "number": "19",
     "source": "(Enem (Libras",
@@ -3095,14 +3004,14 @@
     "blocks": [
       {
         "type": "paragraph",
-        "text": "2017) Com o fim da Ditadur a, os movimentos populares tiveram maior participação na formulação dos programas governamentais para a reforma urbana. Porém, o direito à moradia só é expresso no corpo da Constituição por meio de emenda, em 2000, que alterou o conteúdo do art. 6º, que trata dos direitos sociais. Na década de 1990 começou a tramitar um projeto de lei que levou mais de dez anos para ser aprovado, tendo como resultado o Estatuto da Cidade. Essa lei plenodesenvolvimentodasfunçõessociaise ambientais da cidade e da propriedade."
+        "text": "2017) Com o fim da Ditadur a, os movimentos populares tiveram maior participação na formulação dos programas governamentais para a reforma urbana. Porém, o direito à moradia só é expresso no corpo da Constituição por meio de emenda, em 2000, que alterou o conteúdo do art. 6º, que trata dos direitos sociais. Na década de 1990 começou a tramitar um projeto de lei que levou mais de dez anos para ser aprovado, tendo como resultado o Estatuto da Cidade. Essa lei pleno desenvolvimento das funções sociais e ambientais da cidade e da propriedade."
       },
       {
         "type": "citation",
         "text": "HOLZ, S.; MONTEIRO, T. V. A. M. Disponível em: www.sociologia.ufsc.br. Acesso em: 7 maio 2013 (adaptado)."
       }
     ],
-    "enunciado": "A aprovaçãodo referido estatutorespondeà necessidade de",
+    "enunciado": "A aprovação do referido estatuto responde à necessidade de",
     "options": {
       "A": "democratização do uso do solo.",
       "B": "ampliação de áreas construídas.",
@@ -3119,7 +3028,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-097",
+    "id": "enem-094",
     "volume": 3,
     "number": "20",
     "source": "Enem PPL 2019",
@@ -3151,7 +3060,7 @@
     "correctAnswer": "E"
   },
   {
-    "id": "enem-098",
+    "id": "enem-095",
     "volume": 3,
     "number": "21",
     "source": "Enem PPL 2017",
@@ -3183,7 +3092,7 @@
     "correctAnswer": "C"
   },
   {
-    "id": "enem-099",
+    "id": "enem-096",
     "volume": 3,
     "number": "22",
     "source": "Enem PPL 2016",
@@ -3215,7 +3124,7 @@
     "correctAnswer": "E"
   },
   {
-    "id": "enem-100",
+    "id": "enem-097",
     "volume": 3,
     "number": "23",
     "source": "Enem PPL 2015",
@@ -3251,7 +3160,7 @@
     "correctAnswer": "B"
   },
   {
-    "id": "enem-101",
+    "id": "enem-098",
     "volume": 3,
     "number": "24",
     "source": "Enem 2015",
@@ -3270,7 +3179,7 @@
     "options": {
       "A": "diminuira legitimidadedos novos partidos políticos então criados.",
       "B": "tornara democraciaum valorsocial que ultrapassa os momentos eleitorais.",
-      "C": "difundira democraciarepresentativacomo objetivo fundamental da luta política.",
+      "C": "difundir a democracia representativa como objetivo fundamental da luta política.",
       "D": "ampliar as disputas pela hegemonia das entidades de trabalhadores com os sindicatos.",
       "E": "fragmentar as lutas políticas dos diversos atores sociais frente ao Estado."
     },
@@ -3283,7 +3192,7 @@
     "correctAnswer": "B"
   },
   {
-    "id": "enem-102",
+    "id": "enem-099",
     "volume": 3,
     "number": "25",
     "source": "Enem PPL 2013",
@@ -3303,7 +3212,7 @@
       "A": "fragilidade das redes globais comunicacionais, como internet e telefonia.",
       "B": "garantia dos direitos sociais constitucionais, como educação e previdência.",
       "C": "crise das organizações representativas tradicionais, como partidos e sindicatos.",
-      "D": "instabilidadedasinstituiçõespolític as democráticas, como eleições e parlamentos.",
+      "D": "instabilidade das instituições políticas democráticas, como eleições e parlamentos.",
       "E": "consolidaçãodas corporações transnacionais monopolistas, como petrolíferas e mineradoras."
     },
     "images": [],
@@ -3315,7 +3224,7 @@
     "correctAnswer": "C"
   },
   {
-    "id": "enem-103",
+    "id": "enem-100",
     "volume": 3,
     "number": "26",
     "source": "Enem PPL 2009",
@@ -3323,17 +3232,17 @@
     "blocks": [
       {
         "type": "paragraph",
-        "text": "A análise histórica dos problemas que envolvem a cidadania no Brasil possibilita considerar-se que a herança colonial pesou mais na área dos direitos civis. O novo país herdou a escravidão, que negava a condição humana do escravo, herdou a grande propriedade rural, fechada à ação da lei, e herdou um Estado comprometido com o poder privado. Esses três empecilhos ao exercício da cidadania civil revelaram- se persistentes."
+        "text": "A análise histórica dos problemas que envolvem a cidadania no Brasil possibilita considerar-se que a herança colonial pesou mais na área dos direitos civis. O novo país herdou a escravidão, que negava a condição humana do escravo, herdou a grande propriedade rural, fechada à ação da lei, e herdou um Estado comprometido com o poder privado. Esses três empecilhos ao exercício da cidadania civil revelaram-se persistentes."
       },
       {
         "type": "citation",
         "text": "CARVALHO, José Murilo de. Cidadania no Brasil. O longo caminho. Rio de Janeiro: Civilização Brasileira, 2004, p. 45 (adaptado)."
       }
     ],
-    "enunciado": "acima, deve-se considerar que",
+    "enunciado": "Com base no texto acima, deve-se considerar que",
     "options": {
       "A": "a prevalência dos latifúndios alimentou a migração e propiciou a criação do Movimento dos Trabalhadores Rurais Sem-Terra (MST).",
-      "B": "a Abolição da Escravatura permitiu que os ex- escravos alcançassem direitos políticos, civis e sociais, sendo estes reforçados, posteriormente, na Constituição de 1891.",
+      "B": "a Abolição da Escravatura permitiu que os ex-escravos alcançassem direitos políticos, civis e sociais, sendo estes reforçados, posteriormente, na Constituição de 1891.",
       "C": "direitos civis, aqueles que dizem respeito às liberdades e garantias individuais, foram estabelecidos no Brasil, pela primeira vez, na Constituição de 1988.",
       "D": "exemplo de “Estado comprometido com o poder privado” é a República Velha, período em que os coronéis dominavam o poder público, ao adotarem uma política patrimonialista, a qual Getúlio Vargas conseguiu eliminar do país após 1930.",
       "E": "Antônio Conselheiro, líder do movimento messiânico de Canudos, pode ser identificado como precursor na luta pelos direitos civis no Brasil, uma vez que defendia o direito de seus liderados se expressarem livremente."
@@ -3347,7 +3256,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-104",
+    "id": "enem-101",
     "volume": 3,
     "number": "27",
     "source": "Enem 2015",
@@ -3379,38 +3288,7 @@
     "correctAnswer": "B"
   },
   {
-    "id": "enem-105",
-    "volume": 3,
-    "number": "29",
-    "source": "Enem PPL 2015",
-    "tema": "CULTURA",
-    "blocks": [
-      {
-        "type": "paragraph",
-        "text": "Colonizar, afirmava, em 1912, um eminente jurista, “é relacionar-se com os países novos para tirar benefícios dos recursos de qualquer natureza desses países, aproveitá-los no interesse nacional, e ao mesmo tempo levar às populações primitivas as vantagens da cultura intelectual, social, científica, moral, artística, literária, comercial e industrial,apanágiodasraçassuperiores.A colonização é, pois, um estabelecimento fundado em país novo por uma raça de civilização avançada, para realizar o duplo fim que acabamos de indicar”. MÉRIGNHAC. Précis de législation et d´économie coloniales. Apud LINHARES, M. Y."
-      },
-      {
-        "type": "citation",
-        "text": "A luta contra a Metrópole (Ásia e África). São Paulo: Brasiliense, 1981."
-      }
-    ],
-    "enunciado": "A definição de colonização apresentada no texto tinha a função ideológica de",
-    "options": {
-      "A": "dissimular a prática da exploração mediante a ideia de civilização.",
-      "B": "compensar o saque das riquezas mediante a educação formal dos colonos.",
-      "C": "formar uma identidadecolonial mediante a recuperação de sua ancestralidade.",
-      "E": "promover a elevação cultural da Colônia mediante a incorporação de tradições metropolitanas."
-    },
-    "images": [],
-    "topicos": [
-      "cultura-sociedade",
-      "cultura-arte-comunicacao",
-      "educacao-socializacao"
-    ],
-    "correctAnswer": "A"
-  },
-  {
-    "id": "enem-106",
+    "id": "enem-102",
     "volume": 3,
     "number": "30",
     "source": "Enem 2022",
@@ -3442,7 +3320,7 @@
     "correctAnswer": "D"
   },
   {
-    "id": "enem-107",
+    "id": "enem-103",
     "volume": 3,
     "number": "31",
     "source": "Enem 2ª aplicação 2010",
@@ -3470,7 +3348,7 @@
     "correctAnswer": "E"
   },
   {
-    "id": "enem-108",
+    "id": "enem-104",
     "volume": 3,
     "number": "33",
     "source": "Enem 2016",
@@ -3487,7 +3365,7 @@
       "B": "Expansão de atividades das novas ruralidades.",
       "C": "Persistência de relações de trabalho compulsório.",
       "D": "Contenção da política de subsídios agrícolas.",
-      "E": "Fortalecimentodomodelodeorganização cooperativa."
+      "E": "Fortalecimento do modelo de organização cooperativa."
     },
     "images": [],
     "topicos": [
@@ -3498,89 +3376,7 @@
     "correctAnswer": "B"
   },
   {
-    "id": "enem-109",
-    "volume": 3,
-    "number": "35",
-    "source": "Enem 2021",
-    "tema": "CULTURA",
-    "blocks": [
-      {
-        "type": "paragraph",
-        "text": "TEXTO I Portadoras de mensagem espiritual do passado, as obras monumentais de cada povo perduram no presente como o testemunho vivo de suas tradições seculares. A humanidade, cada vez mais consciente da unidade dos valores humanos, as considera um bem comum e, perante as gerações futuras, se reconhece solidariamente responsável por preservá- las, impondo a si mesma o dever de transmiti-las na plenitude de sua autenticidade."
-      },
-      {
-        "type": "citation",
-        "text": "Carta de Veneza. 31 de maio de 1964. Disponível em: www.iphan.gov.br. Acesso em: 7 out. 2019."
-      },
-      {
-        "type": "label",
-        "text": "Texto II"
-      },
-      {
-        "type": "paragraph",
-        "text": "Os sistemas tradicionais de proteção se mostram cada vez menos eficientes diante do processo acelerado de urbanização e transformação de nossa sociedade. A legislação de proteção peca por considerar o monumento, até certo ponto, desvinculado da realidade socioeconômica. O tombamento, ao decretar a imutabilidade do monumento, provoca a redução de seu valor venal e o abandono, o que é uma causa, ainda que lenta, de destruição inevitável. TELLES, L. S. Manual do patrimônio histórico. Porto Alegre;"
-      },
-      {
-        "type": "citation",
-        "text": "Caxias do Sul: Escola Superior do Teologia São Lourenço de Brindes. 1977 (adaptado)."
-      }
-    ],
-    "enunciado": "Escritos em temporalidade histórica aproximada, os textos se distanciam ao apresentarem pontos de vista diferentes sobre a(s)",
-    "options": {
-      "A": "ampliação do comércio de imagens sacras.",
-      "B": "substituição de materiais de valor artístico.",
-      "C": "políticas de conservação de bens culturais.",
-      "D": "defesa da privatização de sítios arqueológicos.",
-      "E": "medidas de salvaguarda de peças museológicas."
-    },
-    "images": [],
-    "topicos": [
-      "cultura-sociedade",
-      "cultura-arte-comunicacao",
-      "politica-poder"
-    ],
-    "correctAnswer": "C"
-  },
-  {
-    "id": "enem-110",
-    "volume": 3,
-    "number": "36",
-    "source": "Enem PPL 2014",
-    "tema": "CULTURA",
-    "blocks": [
-      {
-        "type": "image",
-        "src": "vol3_img030.png"
-      },
-      {
-        "type": "paragraph",
-        "text": "A Estátua do Laçador, tombada como patrimônio em 2001, é um monumento de Porto Alegre/RS, que representa o gaúcho (em trajes típicos)."
-      },
-      {
-        "type": "citation",
-        "text": "Disponível em: www.portoalegre.tur.br. Acessado em: 3 ago. 2012 (adaptado)."
-      }
-    ],
-    "enunciado": "O monumento identifica um(a)",
-    "options": {
-      "A": "exemplo de bem imaterial.",
-      "B": "forma de exposição da individualidade.",
-      "C": "modo de enaltecer os ideais de liberdade.",
-      "D": "manifestação histórico-cultural de uma população.",
-      "E": "maneira de propor mudanças nos costumes."
-    },
-    "images": [
-      "vol3_img030.png"
-    ],
-    "topicos": [
-      "cultura-sociedade",
-      "cultura-arte-comunicacao",
-      "movimentos-sociais"
-    ],
-    "correctAnswer": "D"
-  },
-  {
-    "id": "enem-111",
+    "id": "enem-105",
     "volume": 3,
     "number": "37",
     "source": "Enem 2013",
@@ -3612,7 +3408,7 @@
     "correctAnswer": "E"
   },
   {
-    "id": "enem-112",
+    "id": "enem-106",
     "volume": 3,
     "number": "38",
     "source": "Enem 2020",
@@ -3644,7 +3440,7 @@
     "correctAnswer": "E"
   },
   {
-    "id": "enem-113",
+    "id": "enem-107",
     "volume": 3,
     "number": "41",
     "source": "Enem digital 2020",
@@ -3672,7 +3468,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-114",
+    "id": "enem-108",
     "volume": 3,
     "number": "42",
     "source": "Enem PPL 2016",
@@ -3689,7 +3485,7 @@
       "B": "interatividade dos programas de entretenimento abertos.",
       "C": "confiança do telespectador nas notícias veiculadas.",
       "D": "credibilidade das fontes na esfera computacional.",
-      "E": "autonomiadointernautanabuscade informações."
+      "E": "autonomia do internauta na busca de informações."
     },
     "images": [
       "vol3_img031.png"
@@ -3701,34 +3497,7 @@
     "correctAnswer": "E"
   },
   {
-    "id": "enem-115",
-    "volume": 3,
-    "number": "43",
-    "source": "Enem 2ª aplicação 2014",
-    "tema": "CULTURA",
-    "blocks": [
-      {
-        "type": "paragraph",
-        "text": "Para o sociólogo Don Slater, as pessoas compram a versão mais cara de um produto não porque tem maior valor de uso do que a versão mais barata, mas porque significa status e exclusividade; e, claro, esse status provavelmente será indicado pela etiqueta de um designer ou de uma loja de departamentos. BITTENCOURT, R. Sedução para o consumo. Revista Filosofia, n. 66, ano VI, dez. 2011."
-      }
-    ],
-    "enunciado": "como forma de vender seus produtos, fazem parte do cotidiano social e têm por um de seus objetivos induzir as pessoas a um(a)",
-    "options": {
-      "A": "vida livre de ideologias.",
-      "B": "consumo desprovido de modismos.",
-      "C": "atitude consumista massificadora.",
-      "D": "postura despreocupada com estilos."
-    },
-    "images": [],
-    "topicos": [
-      "cultura-sociedade",
-      "consumo-estilos-vida",
-      "sociologia-ciencia"
-    ],
-    "correctAnswer": "D"
-  },
-  {
-    "id": "enem-116",
+    "id": "enem-109",
     "volume": 3,
     "number": "44",
     "source": "Enem 2ª aplicação 2014",
@@ -3743,7 +3512,7 @@
     "options": {
       "A": "democratização do acesso a outras esferas de produção cultural.",
       "B": "emissoras comprometidas com princípios cívicos.",
-      "C": "censuramoralistadiantedasinformações veiculadas.",
+      "C": "censura moralista diante das informações veiculadas.",
       "D": "acesso da população aos canais de sinal fechado.",
       "E": "movimento das Igrejas cristãs em defesa da família."
     },
@@ -3758,81 +3527,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-117",
-    "volume": 4,
-    "number": "1",
-    "source": "Enem 2015",
-    "tema": "Cultura, etnocentrismo e alteridade",
-    "blocks": [
-      {
-        "type": "paragraph",
-        "text": "Quanto ao “choque de civilizações”, é bom lembrar a carta de uma menina americana de sete anos cujo pai era piloto na Guerra do Afeganistão: ela escreveu que – embora amasse muito seu pai – estava pronta a deixá-lo morrer, a sacrificá-lo por seu país. Quando o presidente Bush citou suas palavras, elas foram entendidas como manifestação “normal” de patriotismo americano; vamos conduzir uma experiência mental simples e imaginar uma menina árabe maometana pateticamente lendo para as câmeras as mesmas palavras a respeito do pai que lutava pelo Talibã – não é necessário pensar muito sobre qual teria sido a nossa reação. ZIZEK. S. Bem-vindo ao deserto do real. São Paulo: Bom Tempo. 2003."
-      }
-    ],
-    "enunciado": "A situação imaginária proposta pelo autor explicita o desafio cultural do(a)",
-    "options": {
-      "A": "prática da diplomacia.",
-      "B": "exercício da alteridade.",
-      "C": "expansão da democracia.",
-      "D": "universalização do progresso.",
-      "E": "conquista da autodeterminação."
-    },
-    "images": [],
-    "topicos": [
-      "cultura-sociedade",
-      "diversidade-cultural-brasil",
-      "estado-governo-democracia"
-    ],
-    "correctAnswer": "B"
-  },
-  {
-    "id": "enem-118",
-    "volume": 4,
-    "number": "2",
-    "source": "Enem PPL 2011",
-    "tema": "Cultura, etnocentrismo e alteridade",
-    "blocks": [
-      {
-        "type": "label",
-        "text": "Texto I"
-      },
-      {
-        "type": "image",
-        "src": "vol4_img001.png"
-      },
-      {
-        "type": "label",
-        "text": "Texto II"
-      },
-      {
-        "type": "paragraph",
-        "text": "Em sentido antropológico, não falamos em Cultura, no singular, mas em culturas, no plural, pois a lei, os valores, as crenças, as práticas, as instituições variam de formação social para formação social. Além disso, uma mesma sociedade, por ser temporal e histórica, passa por transformações culturais amplas."
-      },
-      {
-        "type": "paragraph",
-        "text": "CHAUÍ, M. Convite à Filosofia. São Paulo: Ática, 1995 (fragmento)."
-      }
-    ],
-    "enunciado": "A concepção que perpassa a imagem e o texto parte da premissa de que o respeito à diversidade cultural significa",
-    "options": {
-      "A": "exaltar os elementos de uma cultura.",
-      "B": "proteger as minorias culturais.",
-      "C": "estimular as religiões monoteístas.",
-      "D": "incentivar a divisão de classes.",
-      "E": "promover a aceitação do outro."
-    },
-    "images": [
-      "vol4_img001.png"
-    ],
-    "topicos": [
-      "cultura-sociedade",
-      "diversidade-cultural-brasil",
-      "religiao-sociedade"
-    ],
-    "correctAnswer": "E"
-  },
-  {
-    "id": "enem-119",
+    "id": "enem-110",
     "volume": 4,
     "number": "3",
     "source": "Enem PPL 2015",
@@ -3864,71 +3559,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-120",
-    "volume": 4,
-    "number": "4",
-    "source": "Enem 2022",
-    "tema": "Cultura, etnocentrismo e alteridade",
-    "blocks": [
-      {
-        "type": "paragraph",
-        "text": "Espera, resignado, o dia 13 daquele mês porque, em tal data, usança avoenga lhe faculta sondar o futuro, interrogando a providência. É a experiência tradicional de Santa Luzia. No dia 12 ao anoitecer expõe ao relento, em linha, seis pedrinhas de sal, que representam, em ordem sucessiva da esquerda para a direita, os seis meses vindouros, de janeiro a junho. Ao alvorecer de 13 observa-as: se estão intactas, pressagiam a seca; se a primeira apenas se deliu, transmudada em aljôfar límpido, é certa a chuva em janeiro; se a segunda, em fevereiro; se a maioria ou todas, é inevitável O inverno benfazejo. Esta experiência é belíssima."
-      },
-      {
-        "type": "citation",
-        "text": "CUNHA, E. Os sertões. São Paulo: Editora Três, 1984."
-      }
-    ],
-    "enunciado": "No experimento descrito, a relação com a paisagem e com a religiosidade permite que o sertanejo seja",
-    "options": {
-      "A": "afeito à devoção ao aceitar destinos sacralizados.",
-      "B": "acostumado à pobreza ao admitir acasos naturais.",
-      "C": "habituado ao solo ao conhecer terrenos cultiváveis.",
-      "D": "íntimo à Caatingaao interpretar condições ambientais.",
-      "E": "próximo à vegetação ao identificar espécies arbustivas."
-    },
-    "images": [],
-    "topicos": [
-      "cultura-sociedade",
-      "diversidade-cultural-brasil",
-      "pobreza-brasil"
-    ],
-    "correctAnswer": "D"
-  },
-  {
-    "id": "enem-121",
-    "volume": 4,
-    "number": "5",
-    "source": "Enem 2ª aplicação 2010",
-    "tema": "Cultura, etnocentrismo e alteridade",
-    "blocks": [
-      {
-        "type": "paragraph",
-        "text": "A hibridez descreve a cultura de pessoas que mantêm suas conexões com a terra de seus antepassados, relacionando-se com a cultura do local que habitam. Eles não anseiam retornar à sua “pátria” ou recuperar qualquer identidade étnica “pura” ou absoluta; ainda assim, preservam traços de outras culturas, tradições e histórias e resistem à assimilação."
-      },
-      {
-        "type": "citation",
-        "text": "CASHMORE, E. Dicionário de relações étnicas e raciais. São Paulo: Selo Negro, 2000 (adaptado)."
-      }
-    ],
-    "enunciado": "Contrapondo o fenômeno da hibridez à ideia de “pureza” cultural, observa-se que ele se manifesta quando",
-    "options": {
-      "A": "criações originais deixam de existir entre os grupos de artistas, que passam a copiar as essências das obras uns dos outros.",
-      "B": "civilizações se fecham a ponto de retomarem os seus próprios modelos culturais do passado, antes abandonados.",
-      "C": "populações demonstram menosprezo por seu patrimônio artístico, apropriando-se de produtos culturais estrangeiros.",
-      "D": "elementos culturais autênticos são descaracterizados e reintroduzidos com valores mais altos em seus lugares de origem.",
-      "E": "intercâmbios entre diferentes povos e campos de produção cultural passam a gerar novos produtos e manifestações."
-    },
-    "images": [],
-    "topicos": [
-      "cultura-sociedade",
-      "diversidade-cultural-brasil",
-      "cultura-arte-comunicacao"
-    ],
-    "correctAnswer": "E"
-  },
-  {
-    "id": "enem-122",
+    "id": "enem-111",
     "volume": 4,
     "number": "6",
     "source": "Enem 2021",
@@ -3960,13 +3591,22 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-123",
+    "id": "enem-112",
     "volume": 4,
     "number": "7",
     "source": "ENEM 2024",
     "tema": "Identidade e diversidade cultural",
-    "blocks": [],
-    "enunciado": "Resumamos os principais caracteres de um rizoma: diferentemente das arvores ou de suas raízes, o rizoma conecta um ponto qualquer com outro ponto qualquer e cada um de seus traços não remete necessariamente a traços de mesma natureza. Contra os sistemas centrados (e mesmo policentrados), de comunicação hierárquica e ligações preestabelecidas, o rizoma e um sistema a-centrado não hierárquico e não significante, sem general, sem memória organizadora ou autómato central, unicamente definido por uma circulação de estados. DELEUZE, G .; GUATTARI, F. Mil platos. São Paulo: Editora 34, 1995 (adaptado) Qual elemento da cultura contemporânea se relaciona as características do conceito de rizoma, conforme descrito no texto?",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "Resumamos os principais caracteres de um rizoma: diferentemente das arvores ou de suas raízes, o rizoma conecta um ponto qualquer com outro ponto qualquer e cada um de seus traços não remete necessariamente a traços de mesma natureza. Contra os sistemas centrados (e mesmo policentrados), de comunicação hierárquica e ligações preestabelecidas, o rizoma é um sistema a-centrado não hierárquico e não significante, sem general, sem memória organizadora ou autómato central, unicamente definido por uma circulação de estados."
+      },
+      {
+        "type": "citation",
+        "text": "DELEUZE, G.; GUATTARI, F. Mil Platôs. São Paulo: Editora 34, 1995 (adaptado)"
+      }
+    ],
+    "enunciado": "Qual elemento da cultura contemporânea se relaciona as características do conceito de rizoma, conforme descrito no texto?",
     "options": {
       "A": "Estrutura fixa.",
       "B": "Lógica binária.",
@@ -3983,7 +3623,7 @@
     "correctAnswer": "E"
   },
   {
-    "id": "enem-124",
+    "id": "enem-113",
     "volume": 4,
     "number": "8",
     "source": "Enem 2024",
@@ -3998,7 +3638,7 @@
         "text": "WOLLSTONECRAFT, M. Reivindicação dos direitos da mulher. Sao Paulo: Boitempo, 2016."
       }
     ],
-    "enunciado": "Nesse texto, escrito no seculo XVIII, a autora reivindica para as mulheres a",
+    "enunciado": "Nesse texto, escrito no século XVIII, a autora reivindica para as mulheres a",
     "options": {
       "A": "recuperação de sua participação política.",
       "B": "equiparação de ganhos salariais.",
@@ -4015,7 +3655,7 @@
     "correctAnswer": "C"
   },
   {
-    "id": "enem-125",
+    "id": "enem-114",
     "volume": 4,
     "number": "9",
     "source": "Enem 2024",
@@ -4027,7 +3667,7 @@
       },
       {
         "type": "citation",
-        "text": "PASIAN, M. S. A negligência parental e a relação com a deficiência: o que mostra a pesquisa nacional. Revista Educação Especial, n. 53, set .- dez. 2015 (adaptado)"
+        "text": "PASIAN, M. S. A negligência parental e a relação com a deficiência: o que mostra a pesquisa nacional. Revista Educação Especial, n. 53, set.- dez. 2015 (adaptado)"
       }
     ],
     "enunciado": "A realidade abordada no texto indica a necessidade de se promover uma ética interpessoal centrada no",
@@ -4047,7 +3687,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-126",
+    "id": "enem-115",
     "volume": 4,
     "number": "10",
     "source": "Enem 2024",
@@ -4059,7 +3699,7 @@
       },
       {
         "type": "citation",
-        "text": "KUHNEN, T. Resenha de The Power and Ethics of Knowing, de Miranda Fricker. Revista Principios, n. 33, 2013."
+        "text": "KUHNEN, T. Resenha de The Power and Ethics of Knowing, de Miranda Fricker. Revista Princípios, n. 33, 2013."
       }
     ],
     "enunciado": "Com base na reflexão suscitada no texto, o preconceito de identidade e responsável por um tipo de injustiça",
@@ -4079,7 +3719,7 @@
     "correctAnswer": "D"
   },
   {
-    "id": "enem-127",
+    "id": "enem-116",
     "volume": 4,
     "number": "11",
     "source": "Enem 2024",
@@ -4087,11 +3727,11 @@
     "blocks": [
       {
         "type": "paragraph",
-        "text": "Como conclusão provisória, parece então que a globalização tem, sim, o efeito de contestar e deslocar as identidades centradas e \"fechadas\" de uma cultura nacional. Ela tem um efeito pluralizante sobre as identidades, produzindo uma variedade de possibilidades e novas posições de identificação, e tornando as identidades mais posicionais, mais politicas, mais plurais e diversas; menos fixas, unificadas ou trans-historicas."
+        "text": "Como conclusão provisória, parece então que a globalização tem, sim, o efeito de contestar e deslocar as identidades centradas e \"fechadas\" de uma cultura nacional. Ela tem um efeito pluralizante sobre as identidades, produzindo uma variedade de possibilidades e novas posições de identificação, e tornando as identidades mais posicionais, mais políticas, mais plurais e diversas; menos fixas, unificadas ou trans-historicas."
       },
       {
         "type": "citation",
-        "text": "HALL, S. A identidade cultural na pos-modernidade. Rio de Janeiro: DP&A, 2011."
+        "text": "HALL, S. A identidade cultural na pós-modernidade. Rio de Janeiro: DP&A, 2011."
       }
     ],
     "enunciado": "De acordo com o texto, o processo apresentado contribuiu para",
@@ -4111,7 +3751,7 @@
     "correctAnswer": "D"
   },
   {
-    "id": "enem-128",
+    "id": "enem-117",
     "volume": 4,
     "number": "12",
     "source": "Enem 2024",
@@ -4119,11 +3759,11 @@
     "blocks": [
       {
         "type": "paragraph",
-        "text": "O Black Lives Matter vai para além do nacionalismo estreito que pode prevalecer no seio das comunidades negras, que se limita a apelar aos negros a amar os negros, viver como os negros e comprar produtos dos negros, e mantem a frente do movimento homens negros heterossexuais. Black Lives Matter estima as vidas dos negros e negras homossexuais e transexuais, pessoas incapacitadas, negros sem documentos ou com antecedentes criminais, mulheres e as vidas de todos os negros de todo o espectro de gêneros."
+        "text": "O Black Lives Matter vai para além do nacionalismo estreito que pode prevalecer no seio das comunidades negras, que se limita a apelar aos negros a amar os negros, viver como os negros e comprar produtos dos negros, e mantém à frente do movimento homens negros heterossexuais. Black Lives Matter estima as vidas dos negros e negras homossexuais e transexuais, pessoas incapacitadas, negros sem documentos ou com antecedentes criminais, mulheres e as vidas de todos os negros de todo o espectro de gêneros."
       },
       {
         "type": "citation",
-        "text": "LA BOTZ, D. O movimento Black Lives Matter organiza-se e procura definir-se politicamente. Disponivel em: www.ufes.br. Acesso em: 4 out. 2021 (adaptado)"
+        "text": "LA BOTZ, D. O movimento Black Lives Matter organiza-se e procura definir-se politicamente. Disponível em: www.ufes.br. Acesso em: 4 out. 2021 (adaptado)"
       }
     ],
     "enunciado": "A reivindicação do movimento norte-americano apresentada no texto consiste na necessidade de",
@@ -4143,7 +3783,7 @@
     "correctAnswer": "B"
   },
   {
-    "id": "enem-129",
+    "id": "enem-118",
     "volume": 4,
     "number": "13",
     "source": "Enem 2023",
@@ -4151,11 +3791,11 @@
     "blocks": [
       {
         "type": "paragraph",
-        "text": "A torcida do Fluminense inicia um movimento para mudar a letra de uma das músicas mais populares das arquibancadas tricolores. Grupos pedem a remoção do termo \"mulambo imundo\", em uma provocação direta ao Flamengo. Mulambo e um termo que surgiu em Angola, na época da escravatura, e eles eram chamados de mulambos pelos senhores de engenho, os patrões das fazendas."
+        "text": "A torcida do Fluminense inicia um movimento para mudar a letra de uma das músicas mais populares das arquibancadas tricolores. Grupos pedem a remoção do termo \"mulambo imundo\", em uma provocação direta ao Flamengo. Mulambo é um termo que surgiu em Angola, na época da escravatura, e eles eram chamados de mulambos pelos senhores de engenho, os patrões das fazendas."
       },
       {
         "type": "citation",
-        "text": "Disponivel em: https://oglobo.globo.com. Acesso em: 23 nov. 2021."
+        "text": "Disponível em: https://oglobo.globo.com. Acesso em: 23 nov. 2021."
       }
     ],
     "enunciado": "Qual mudança no comportamento social a proposta reportada no texto reflete?",
@@ -4175,7 +3815,7 @@
     "correctAnswer": "C"
   },
   {
-    "id": "enem-130",
+    "id": "enem-119",
     "volume": 4,
     "number": "14",
     "source": "Enem 2023",
@@ -4183,11 +3823,11 @@
     "blocks": [
       {
         "type": "paragraph",
-        "text": "Superar a história da escravidão como principal marca da trajetória do negro no país tem sido uma tônica daqueles que se dedicam a pesquisar as heranças de origem afro a cultura brasileira. A esse esforço de reconstrução da própria história do país, alia-se agora a criação da plataforma digital Ancestralidades. \"A história do negro no Brasil vai continuar sendo contada, e cada passo que a gente dá para trás e um passo que a gente avança\", diz Marcio Black, idealizador da plataforma, sobre o estudo de figuras ainda encobertas pela perspectiva histórica imposta pelos colonizadores da América."
+        "text": "Superar a história da escravidão como principal marca da trajetória do negro no país tem sido uma tônica daqueles que se dedicam a pesquisar as heranças de origem afro a cultura brasileira. A esse esforço de reconstrução da própria história do país, alia-se agora a criação da plataforma digital Ancestralidades. \"A história do negro no Brasil vai continuar sendo contada, e cada passo que a gente dá para trás é um passo que a gente avança\", diz Marcio Black, idealizador da plataforma, sobre o estudo de figuras ainda encobertas pela perspectiva histórica imposta pelos colonizadores da América."
       },
       {
         "type": "citation",
-        "text": "FIORATI, G. Projeto joga luz sobre negros e revê perspectiva histórica. Disponivel em: www.folha.uol. com.br. Acesso em:10 nov. 2021 (adaptado)"
+        "text": "FIORATI, G. Projeto joga luz sobre negros e revê perspectiva histórica. Disponível em: www.folha.uol. com.br. Acesso em:10 nov. 2021 (adaptado)"
       }
     ],
     "enunciado": "Em relação ao conhecimento 'sobre a formação cultural brasileira, iniciativas como a descrita no texto favorecem o(a)",
@@ -4207,7 +3847,7 @@
     "correctAnswer": "E"
   },
   {
-    "id": "enem-131",
+    "id": "enem-120",
     "volume": 4,
     "number": "15",
     "source": "Enem 2022",
@@ -4224,7 +3864,7 @@
     ],
     "enunciado": "As sociedades mencionadas deixaram como legado uma diversidade de",
     "options": {
-      "A": "bens religiosos inspirados na matriz crista.",
+      "A": "bens religiosos inspirados na matriz cristã.",
       "B": "materiais bélicos pilhados em batalhas coloniais.",
       "C": "heranças culturais constituídas em saberes próprios.",
       "D": "costumes laborais moldados em estilos estrangeiros.",
@@ -4239,35 +3879,7 @@
     "correctAnswer": "C"
   },
   {
-    "id": "enem-132",
-    "volume": 4,
-    "number": "16",
-    "source": "Enem 2016",
-    "tema": "Patrimonio Cultural e memória Social",
-    "blocks": [
-      {
-        "type": "paragraph",
-        "text": "Participei de uma entrevista com o músico Renato Teixeira. Certa hora, alguém pediu para listar as diferenças entre a música sertaneja antiga e a atual. A resposta dele surpreendeu a todos: “Não há diferença alguma. A música caipira sempre foi a mesma. É uma música que espelha a vida do homem no campo, e a música não mente. O que mudou não foi a música, mas a vida no campo”. Faz todo sentido: a música caipira de raiz exalava uma solidão, um certo distanciamento do país “moderno”. Exigir o mesmo de uma música feita hoje, num interior conectado, globalizado e rico como o que temos, é impossível. Para o bem ou para o mal, a música reflete seu próprio tempo. BARCINSKI. A. Mudou a música ou mudaram os caipiras? Folha de São Paulo, 4 jun. 2012 (adaptado)."
-      }
-    ],
-    "enunciado": "A questão cultural indicada no texto ressalta o seguinte aspecto socioeconômico do atual campo brasileiro:",
-    "options": {
-      "A": "Crescimento do sistema de produção extensiva.",
-      "B": "Expansão de atividades das novas ruralidades.",
-      "C": "Persistência de relações de trabalho compulsório.",
-      "D": "Contenção da política de subsídios agrícolas.",
-      "E": "Fortalecimento do modelo de organização cooperativa."
-    },
-    "images": [],
-    "topicos": [
-      "cultura-arte-comunicacao",
-      "diversidade-cultural-brasil",
-      "cultura-sociedade"
-    ],
-    "correctAnswer": "B"
-  },
-  {
-    "id": "enem-133",
+    "id": "enem-121",
     "volume": 4,
     "number": "17",
     "source": "Enem 2014",
@@ -4282,11 +3894,11 @@
         "text": "DAYRELL, J. A música entra em cena: o rap e o funk na socialização da juventude. Belo Horizonte: UFMG, 2005."
       }
     ],
-    "enunciado": "A presença da cultura hip-hop no Brasil caracteriza- se como uma forma de",
+    "enunciado": "A presença da cultura hip-hop no Brasil caracteriza-se como uma forma de",
     "options": {
       "A": "lazer gerada pela diversidade de práticas artísticas nas periferias urbanas.",
       "B": "Entretenimento inventada pela indústria fonográfica nacional.",
-      "C": "subversão de sua propostaoriginaljá nos primeiros bailes.",
+      "C": "subversão de sua proposta original já nos primeiros bailes.",
       "D": "afirmação de identidade dos jovens que a praticam.",
       "E": "reprodução da cultura musical norte-americana."
     },
@@ -4299,7 +3911,7 @@
     "correctAnswer": "D"
   },
   {
-    "id": "enem-134",
+    "id": "enem-122",
     "volume": 4,
     "number": "18",
     "source": "Enem 2021",
@@ -4347,109 +3959,7 @@
     "correctAnswer": "C"
   },
   {
-    "id": "enem-135",
-    "volume": 4,
-    "number": "19",
-    "source": "Enem PPL 2014",
-    "tema": "Patrimonio Cultural e memória Social",
-    "blocks": [
-      {
-        "type": "image",
-        "src": "vol3_img030.png"
-      },
-      {
-        "type": "paragraph",
-        "text": "A Estátua do Laçador, tombada como patrimônio em 2001, é um monumento de Porto Alegre/RS, que representa o gaúcho (em trajes típicos)."
-      },
-      {
-        "type": "citation",
-        "text": "Disponível em: www.portoalegre.tur.br. Acessado em: 3 ago. 2012 (adaptado)."
-      }
-    ],
-    "enunciado": "O monumento identifica um(a)",
-    "options": {
-      "A": "exemplo de bem imaterial.",
-      "B": "forma de exposição da individualidade.",
-      "C": "modo de enaltecer os ideais de liberdade.",
-      "D": "manifestação histórico-cultural de uma população.",
-      "E": "maneira de propor mudanças nos costumes."
-    },
-    "images": [
-      "vol3_img030.png"
-    ],
-    "topicos": [
-      "cultura-arte-comunicacao",
-      "diversidade-cultural-brasil",
-      "cultura-sociedade"
-    ],
-    "correctAnswer": "D"
-  },
-  {
-    "id": "enem-136",
-    "volume": 4,
-    "number": "20",
-    "source": "Enem 2013",
-    "tema": "Patrimonio Cultural e memória Social",
-    "blocks": [
-      {
-        "type": "paragraph",
-        "text": "Seguiam-se vinte criados custosamente vestidos e montados em soberbos cavalos; depois destes, marchava o Embaixador do Rei do Congo magnificamente ornado de seda azul para anunciar ao Senado que a vinda do Rei estava destinada para o dia dezesseis. Em resposta obteve repetidas vivas do povo que concorreu alegre e admirado de tanta grandeza."
-      },
-      {
-        "type": "citation",
-        "text": "“Coroação do Rei do Congo em Santo Amaro”, Bahia apud DEL PRIORE, M. Festas e utopias no Brasil colonial. In: CATELLI JR., R. Um olhar sobre as festas populares brasileiras. São Paulo: Brasiliense, 1994 (adaptado)."
-      }
-    ],
-    "enunciado": "Originária dos tempos coloniais, a festa da Coroação do Rei do Congo evidencia um processo de",
-    "options": {
-      "A": "exclusão social.",
-      "B": "imposição religiosa.",
-      "C": "acomodação política.",
-      "D": "supressão simbólica.",
-      "E": "ressignificação cultural."
-    },
-    "images": [],
-    "topicos": [
-      "cultura-arte-comunicacao",
-      "diversidade-cultural-brasil",
-      "cultura-sociedade"
-    ],
-    "correctAnswer": "E"
-  },
-  {
-    "id": "enem-137",
-    "volume": 4,
-    "number": "21",
-    "source": "Enem 2020",
-    "tema": "Patrimonio Cultural e memória Social",
-    "blocks": [
-      {
-        "type": "paragraph",
-        "text": "Um dos resquícios franceses na dança são os comandos proferidos pelo marcador da quadrilha. Seu papel é anunciar os próximos passos da coreografia. O abrasileiramento de termos franceses deu origem, por exemplo, ao sarué (soirée – reunião social noturna, ordem para todos se juntarem no centro do salão), anarriê (en arrière – para trás) e anavã (en avant – para frente)."
-      },
-      {
-        "type": "citation",
-        "text": "Disponível em: www.ebc.com.br. Acesso em: 06 jul. 2015."
-      }
-    ],
-    "enunciado": "A característica apresentada dessa manifestação popular resulta do seguinte processo socio-histórico:",
-    "options": {
-      "A": "Massificação da arte erudita.",
-      "B": "Rejeição de hábitos elitistas.",
-      "C": "Laicização dos rituais religiosos.",
-      "D": "Restauração dos costumes antigos.",
-      "E": "Apropriação de práticas estrangeiras."
-    },
-    "images": [],
-    "topicos": [
-      "cultura-arte-comunicacao",
-      "diversidade-cultural-brasil",
-      "cultura-sociedade"
-    ],
-    "correctAnswer": "E"
-  },
-  {
-    "id": "enem-138",
+    "id": "enem-123",
     "volume": 4,
     "number": "22",
     "source": "Enem 2021",
@@ -4457,7 +3967,7 @@
     "blocks": [
       {
         "type": "paragraph",
-        "text": "O torem dependia de organização familiar, sendo brincado por pessoas com vínculos de parentesco e afinidade que viviam no local. Era visto como uma brincadeira, um entretenimento feito para os próprios participantes e seus conhecidos. O tempo do caju era o pretexto para sua realização, sendo chamadas varias pessoas da região a fim de tomar mocororó, bebida fermentada do caju."
+        "text": "O torem dependia de organização familiar, sendo brincado por pessoas com vínculos de parentesco e afinidade que viviam no local. Era visto como uma brincadeira, um entretenimento feito para os próprios participantes e seus conhecidos. O tempo do caju era o pretexto para sua realização, sendo chamadas várias pessoas da região a fim de tomar mocororó, bebida fermentada do caju."
       },
       {
         "type": "citation",
@@ -4470,7 +3980,7 @@
       "B": "estimular a coesão social.",
       "C": "superar a atividade artesanal.",
       "D": "manipular a memória individual.",
-      "E": "modernizar o comercio tradicional."
+      "E": "modernizar o comércio tradicional."
     },
     "images": [],
     "topicos": [
@@ -4481,7 +3991,7 @@
     "correctAnswer": "B"
   },
   {
-    "id": "enem-139",
+    "id": "enem-124",
     "volume": 4,
     "number": "23",
     "source": "Enem 2021",
@@ -4493,7 +4003,7 @@
       },
       {
         "type": "citation",
-        "text": "RODRIGUES, M. R. A. M .; TAVARES, A. C. P. Singularidades museológicas de uma tabua com esculturas em dialogo: do alambamento ao casamento em Cabinda (Angola). Anais do Museu Paulista, n. 2, maio-ago. 2017 (adaptado)"
+        "text": "RODRIGUES, M. R. A. M.; TAVARES, A. C. P. Singularidades museológicas de uma tábua com esculturas em diálogo: do alambamento ao casamento em Cabinda (Angola). Anais do Museu Paulista, n. 2, maio-ago. 2017 (adaptado)"
       }
     ],
     "enunciado": "Para o povo Woyo, os artefatos culturais mencionados no texto cumprem a função de uma",
@@ -4501,7 +4011,7 @@
       "A": "pedagogia dos costumes sociais.",
       "B": "imposição das formas de comunicação.",
       "C": "desvalorização dos comportamentos da juventude.",
-      "D": "destituição dos valores do matrimonio.",
+      "D": "destituição dos valores do matrimônio.",
       "E": "etnografia das celebrações religiosas."
     },
     "images": [],
@@ -4513,7 +4023,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-140",
+    "id": "enem-125",
     "volume": 4,
     "number": "24",
     "source": "Enem 2021",
@@ -4521,14 +4031,14 @@
     "blocks": [
       {
         "type": "paragraph",
-        "text": "Famoso por ser o encantador de viúvas da cidade de Cabaceiras, na Paraíba, Zé de Sila e um contador de histórias parecido com o personagem Chico, do Auto da Compadecida. Ele defende veementemente que a oração da avó sustentava mais a chuva. \"Quando era pequeno e chovia por aqui, ajudava minha avó colocando os pratos emborcados no terreiro para diminuir o vento. Ela fazia isso e rezava para a chuva durar mais\", diz Zé de Sila."
+        "text": "Famoso por ser o encantador de viúvas da cidade de Cabaceiras, na Paraíba, Zé de Sila é um contador de histórias parecido com o personagem Chico, do Auto da Compadecida. Ele defende veementemente que a oração da avó sustentava mais a chuva. \"Quando era pequeno e chovia por aqui, ajudava minha avó colocando os pratos emborcados no terreiro para diminuir o vento. Ela fazia isso e rezava para a chuva durar mais\", diz Zé de Sila."
       },
       {
         "type": "paragraph",
-        "text": "GALDINO, V .; BARBOSA, R. C. Artistas por um dia? João Pessoa: Editora Universitária, 2009."
+        "text": "GALDINO, V.; BARBOSA, R. C. Artistas por um dia? João Pessoa: Editora Universitária, 2009."
       }
     ],
-    "enunciado": "Ao destacar expressões e vivencias populares do cotidiano, o texto mobiliza os seguintes aspectos da diversidade regional:",
+    "enunciado": "Ao destacar expressões e vivências populares do cotidiano, o texto mobiliza os seguintes aspectos da diversidade regional:",
     "options": {
       "A": "Alianças afetivas conectadas ao ritual matrimonial.",
       "B": "Práticas místicas associadas ao patrimônio cultural.",
@@ -4545,7 +4055,7 @@
     "correctAnswer": "B"
   },
   {
-    "id": "enem-141",
+    "id": "enem-126",
     "volume": 4,
     "number": "25",
     "source": "Enem 2016",
@@ -4553,7 +4063,7 @@
     "blocks": [
       {
         "type": "paragraph",
-        "text": "Hoje, a indústria cultural assumiu a herança civilizatória da democracia de pioneiros e empresários, que tampouco desenvolvera uma fineza de sentido para os desvios espirituais. Todos são livres para dançar e para se divertir, do mesmo modo que, desde a neutralização histórica da religião, são livres para entrar em qualquer uma das inúmeras seitas. Mas a liberdade de escolha da ideologia, que reflete sempre a coerção econômica, revela-se em todos os setores como a liberdade de escolher o que é sempre a mesma coisa. ADORNO, T HORKHEIMER, M. Dialética do esclarecimento: fragmentos filosóficos. Rio de Janeiro:Zahar, 1985."
+        "text": "Hoje, a indústria cultural assumiu a herança civilizatória da democracia de pioneiros e empresários, que tampouco desenvolvera uma fineza de sentido para os desvios espirituais. Todos são livres para dançar e para se divertir, do mesmo modo que, desde a neutralização histórica da religião, são livres para entrar em qualquer uma das inúmeras seitas. Mas a liberdade de escolha da ideologia, que reflete sempre a coerção econômica, revela-se em todos os setores como a liberdade de escolher o que é sempre a mesma coisa. ADORNO, T HORKHEIMER, M. Dialética do esclarecimento: fragmentos filosóficos. Rio de Janeiro: Zahar, 1985."
       }
     ],
     "enunciado": "A liberdade de escolha na civilização ocidental, de acordo com a análise do texto, é um(a)",
@@ -4573,7 +4083,7 @@
     "correctAnswer": "E"
   },
   {
-    "id": "enem-142",
+    "id": "enem-127",
     "volume": 4,
     "number": "26",
     "source": "Enem PPL 2011",
@@ -4593,7 +4103,7 @@
       "A": "O fortalecimento da sociedade civil.",
       "B": "A transparência política das ações do Estado.",
       "C": "A dissociação entre os domínios retóricos e a política.",
-      "D": "Ocombateàspráticasde distorçãode informações.",
+      "D": "O combate às práticas de distorção de informações.",
       "E": "O declínio do debate político na esfera pública."
     },
     "images": [],
@@ -4605,69 +4115,7 @@
     "correctAnswer": "E"
   },
   {
-    "id": "enem-143",
-    "volume": 4,
-    "number": "27",
-    "source": "Enem digital 2020",
-    "tema": "Indústria Cultural",
-    "blocks": [
-      {
-        "type": "paragraph",
-        "text": "O termo manipulação significa uma consciente intervenção técnica em um material dado. Se a intervenção é de uma importância social imediata, a manipulação constitui um ato político. É o caso da indústria da consciência. Assim, toda utilização de meios pressupõe uma manipulação. Os mais elementares processos de produção constituem intervenções no material existente. Portanto, escrever, filmar ou emitir sem manipulação não existe. Por conseguinte, a questão não é se os meios são manipulados ou não, mas quem manipula os meios."
-      },
-      {
-        "type": "citation",
-        "text": "ENZENSBERGER, H. M. Elementos para uma teoria dos meios de comunicação. Rio de Janeiro: Tempo Brasileiro, 1979 (adaptado)."
-      }
-    ],
-    "enunciado": "Esse entendimento acerca dos meios de comunicação, produzido na década de 1970, contesta o(a)",
-    "options": {
-      "A": "neutralidade dos mecanismos midiáticos.",
-      "B": "valorização dos interesses particulares.",
-      "C": "fragmentação do conteúdo informativo.",
-      "D": "crescimento do mercado jornalístico.",
-      "E": "controle do poder estatal."
-    },
-    "images": [],
-    "topicos": [
-      "comunicacao-massa",
-      "cultura-sociedade",
-      "cultura-arte-comunicacao"
-    ],
-    "correctAnswer": "A"
-  },
-  {
-    "id": "enem-144",
-    "volume": 4,
-    "number": "28",
-    "source": "Enem PPL 2016",
-    "tema": "Indústria Cultural",
-    "blocks": [
-      {
-        "type": "image",
-        "src": "vol3_img031.png"
-      }
-    ],
-    "enunciado": "A tirinha compara dois veículos de comunicação, atribuindo destaque à",
-    "options": {
-      "A": "resistência do campo virtual à adulteração de dados.",
-      "B": "interatividade dos programas de entretenimento abertos.",
-      "C": "confiança do telespectador nas notícias veiculadas.",
-      "D": "credibilidade das fontes na esfera computacional.",
-      "E": "Autonomia do internauta na busca de informações."
-    },
-    "images": [
-      "vol3_img031.png"
-    ],
-    "topicos": [
-      "comunicacao-massa",
-      "cultura-sociedade",
-      "cultura-arte-comunicacao"
-    ],
-    "correctAnswer": "E"
-  },
-  {
-    "id": "enem-145",
+    "id": "enem-128",
     "volume": 4,
     "number": "29",
     "source": "Enem 2ª aplicação 2014",
@@ -4699,7 +4147,7 @@
     "correctAnswer": "D"
   },
   {
-    "id": "enem-146",
+    "id": "enem-129",
     "volume": 4,
     "number": "30",
     "source": "Enem 2024",
@@ -4711,14 +4159,14 @@
       },
       {
         "type": "paragraph",
-        "text": "FONTES, B .; MAGALHÃES, R. O que e industria cultural? In: BODART, C. N. (Org.). Conceitos e categorias do ensino de sociologia. Maceió: Café com Sociologia, 2021 (adaptado)."
+        "text": "FONTES, B.; MAGALHÃES, R. O que é indústria cultural? In: BODART, C. N. (Org.). Conceitos e categorias do ensino de sociologia. Maceió: Café com Sociologia, 2021 (adaptado)."
       }
     ],
     "enunciado": "Ao analisar as consequências da dinâmica apresentada no texto, as autoras destacam a importância do conceito como:",
     "options": {
       "A": "Ferramenta de luta coletiva.",
       "B": "Mecanismo de controle social.",
-      "C": "Instituição de interesse publico.",
+      "C": "Instituição de interesse público.",
       "D": "Organização da iniciativa privada.",
       "E": "Instrumento de manipulação estatal."
     },
@@ -4731,7 +4179,7 @@
     "correctAnswer": "B"
   },
   {
-    "id": "enem-147",
+    "id": "enem-130",
     "volume": 4,
     "number": "31",
     "source": "Enem 2023",
@@ -4739,14 +4187,14 @@
     "blocks": [
       {
         "type": "paragraph",
-        "text": "A diversão e o prolongamento do trabalho sob o capitalismo tardio. Ela e procurada por quem quer escapar ao processo de trabalho mecanizado para se por de novo em condições de enfrentá-lo. Mas, ao mesmo tempo, a mecanização atingiu um tal poderio sobre a pessoa em seu lazer e sobre a sua felicidade, ela determina tão profundamente a fabricação das mercadorias destinadas a diversão que essa pessoa não pode mais perceber outra coisa senão as copias que reproduzem o próprio processo de trabalho."
+        "text": "A diversão e o prolongamento do trabalho sob o capitalismo tardio. Ela é procurada por quem quer escapar ao processo de trabalho mecanizado para se pôr de novo em condições de enfrentá-lo. Mas, ao mesmo tempo, a mecanização atingiu um tal poderio sobre a pessoa em seu lazer e sobre a sua felicidade, ela determina tão profundamente a fabricação das mercadorias destinadas a diversão que essa pessoa não pode mais perceber outra coisa senão as copias que reproduzem o próprio processo de trabalho."
       },
       {
         "type": "paragraph",
-        "text": "ADORNO, T; HORKHEIMER, M. Dialética do esclarecimento. Rio de Janeiro: Zahar 1997"
+        "text": "ADORNO, T; HORKHEIMER, M. Dialética do esclarecimento. Rio de Janeiro: Zahar, 1997"
       }
     ],
-    "enunciado": "No texto, o tempo livre e concebido como",
+    "enunciado": "No texto, o tempo livre é concebido como",
     "options": {
       "A": "consumo de produtos culturais e elaborados no mesmo sistema produtivo do capitalismo.",
       "B": "forma de realizar as diversas potencialidades da natureza humana.",
@@ -4763,30 +4211,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-148",
-    "volume": 5,
-    "number": "1",
-    "source": "Enem/2016",
-    "tema": "Ideologia",
-    "blocks": [],
-    "enunciado": "Hoje, a indústria cultural assumiu a herança civilizatória da democracia de pioneiros e empresários, que tampouco desenvolvera uma fineza de sentido para os desvios espirituais. Todos são livres para dançar e para se divertir, do mesmo modo que, desde a neutralização histórica da religião, são livres para entrar em qualquer uma das inúmeras seitas. Mas a liberdade de escolha da ideologia, que reflete sempre a coerção econômica, revela-se em todos os setores como a liberdade de escolher o que é sempre a mesma coisa. ADORNO, T HORKHEIMER, M. Dialética do esclarecimento: fragmentos filosóficos. Rio de Janeiro: Zahar, 1985. A liberdade de escolha na civilização ocidental, de acordo com a análise do texto, é um(a)",
-    "options": {
-      "A": "legado social.",
-      "B": "patrimônio político.",
-      "C": "produto da moralidade.",
-      "D": "conquista da humanidade.",
-      "E": "ilusão da contemporaneidade."
-    },
-    "images": [],
-    "topicos": [
-      "poder-dominacao",
-      "comunicacao-massa",
-      "cultura-sociedade"
-    ],
-    "correctAnswer": "E"
-  },
-  {
-    "id": "enem-149",
+    "id": "enem-131",
     "volume": 5,
     "number": "2",
     "source": "ENEM 2021",
@@ -4818,7 +4243,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-150",
+    "id": "enem-132",
     "volume": 5,
     "number": "3",
     "source": "ENEM 2013",
@@ -4848,7 +4273,7 @@
     "correctAnswer": "E"
   },
   {
-    "id": "enem-151",
+    "id": "enem-133",
     "volume": 5,
     "number": "4",
     "source": "UNICAMP 2021",
@@ -4879,7 +4304,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-152",
+    "id": "enem-134",
     "volume": 5,
     "number": "5",
     "source": "UEMA 2021",
@@ -4891,10 +4316,10 @@
       },
       {
         "type": "paragraph",
-        "text": "CHAUI, Marilena. Filosofia. São Paulo: Ática, 2007."
+        "text": "CHAUÍ, Marilena. Filosofia. São Paulo: Ática, 2007."
       }
     ],
-    "enunciado": "Podem-se relacionar as palavras da filósofa ao quadro politico brasileiro, de forma crítica. Uma das ideologias no Brasil possibilita a dissimulação da prática política porque procura legitimar para o cidadão que o poder é",
+    "enunciado": "Podem-se relacionar as palavras da filósofa ao quadro político brasileiro, de forma crítica. Uma das ideologias no Brasil possibilita a dissimulação da prática política porque procura legitimar para o cidadão que o poder é",
     "options": {
       "A": "ocupado por qualquer género nas instâncias superiores.",
       "B": "exercido por diferentes etnias existentes no Brasil.",
@@ -4911,7 +4336,7 @@
     "correctAnswer": "E"
   },
   {
-    "id": "enem-153",
+    "id": "enem-135",
     "volume": 5,
     "number": "6",
     "source": "UEMA 2020",
@@ -4945,7 +4370,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-154",
+    "id": "enem-136",
     "volume": 5,
     "number": "7",
     "source": "UERJ 2019",
@@ -4966,7 +4391,7 @@
     ],
     "enunciado": "Grupos extremistas instauram guerras civis em diversas sociedades contemporâneas, inclusive com ações terroristas como as realizadas pelo Boko Haram. Com base na reportagem, a batalha ideológica na cidade de Maiduguri está associada ao confronto entre as seguintes ideias:",
     "options": {
-      "A": "identidade de raça pluralismo politico",
+      "A": "identidade de raça pluralismo político",
       "B": "liberdade de expressão nacionalismo africano",
       "C": "superioridade de classe culturalismo ocidental",
       "D": "igualdade de gênero - fundamentalismo religioso"
@@ -4982,7 +4407,7 @@
     "correctAnswer": "D"
   },
   {
-    "id": "enem-155",
+    "id": "enem-137",
     "volume": 5,
     "number": "8",
     "source": "ENEM PPL 2018",
@@ -4990,7 +4415,7 @@
     "blocks": [
       {
         "type": "paragraph",
-        "text": "A maioria das necessidades comuns de descansar, distrair-se, comportar-se, amar e odiar o que os outros amam e odeiam pertence a essa categoria de falsas necessidades. Tais necessidades têm um conteúdo e uma função determinada por forças externas, sobre as quais o individuo não tem controle algum."
+        "text": "A maioria das necessidades comuns de descansar, distrair-se, comportar-se, amar e odiar o que os outros amam e odeiam pertence a essa categoria de falsas necessidades. Tais necessidades têm um conteúdo e uma função determinada por forças externas, sobre as quais o indivíduo não tem controle algum."
       },
       {
         "type": "paragraph",
@@ -5014,7 +4439,7 @@
     "correctAnswer": "D"
   },
   {
-    "id": "enem-156",
+    "id": "enem-138",
     "volume": 5,
     "number": "9",
     "source": "ENEM PPL 2016",
@@ -5046,7 +4471,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-157",
+    "id": "enem-139",
     "volume": 5,
     "number": "10",
     "source": "ENEM PPL 2016",
@@ -5078,7 +4503,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-158",
+    "id": "enem-140",
     "volume": 5,
     "number": "11",
     "source": "UECE 2025",
@@ -5100,7 +4525,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-159",
+    "id": "enem-141",
     "volume": 5,
     "number": "12",
     "source": "ENEM PPL 2024",
@@ -5108,7 +4533,7 @@
     "blocks": [
       {
         "type": "paragraph",
-        "text": "A dona de casa está investida de todos os tipos de função. Primeiramente, dar à luz e criar filhos e, a partir do momento em que sabem andar, acompanharem-na por toda a parte. A mulher e seus filhos são figuras familiares profusamente reproduzidas pela iconografia da época. Segunda função: a manutenção da familia, as \"tarefas domésticas\", expressão que tem um sentido muito amplo, incluindo a alimentação, a educação, a limpeza da casa etc. A sociedade do século XIX nào poderia crescer e se reproduzir sem a contribuição dessas mulheres."
+        "text": "A dona de casa está investida de todos os tipos de função. Primeiramente, dar à luz e criar filhos e, a partir do momento em que sabem andar, acompanharem-na por toda a parte. A mulher e seus filhos são figuras familiares profusamente reproduzidas pela iconografia da época. Segunda função: a manutenção da família, as \"tarefas domésticas\", expressão que tem um sentido muito amplo, incluindo a alimentação, a educação, a limpeza da casa etc. A sociedade do século XIX nào poderia crescer e se reproduzir sem a contribuição dessas mulheres."
       },
       {
         "type": "citation",
@@ -5132,7 +4557,7 @@
     "correctAnswer": "C"
   },
   {
-    "id": "enem-160",
+    "id": "enem-142",
     "volume": 5,
     "number": "13",
     "source": "ENEM PPL 2024",
@@ -5164,7 +4589,7 @@
     "correctAnswer": "D"
   },
   {
-    "id": "enem-161",
+    "id": "enem-143",
     "volume": 5,
     "number": "14",
     "source": "ENEM PPL2023",
@@ -5172,7 +4597,7 @@
     "blocks": [
       {
         "type": "paragraph",
-        "text": "Maria Leonor é uma criança de 7 anos de Miranda do Douro, em Portugal, que começou a achar muito divertido \"falar brasileiro\" depois que conheceu um influenciador digital na internet. Jonathan, de 6, vive no Porto e passou a cumprimentar as amiguinhas com \"oi, menina\" depois que descobriu videos de brasileiros nas redes sociais. As duas crianças são parte de um fenômeno que provoca polémica em Portugal. O sotaque brasileiro tem criado polémica entre alguns paises e virou tema na imprensa local."
+        "text": "Maria Leonor é uma criança de 7 anos de Miranda do Douro, em Portugal, que começou a achar muito divertido \"falar brasileiro\" depois que conheceu um influenciador digital na internet. Jonathan, de 6, vive no Porto e passou a cumprimentar as amiguinhas com \"oi, menina\" depois que descobriu videos de brasileiros nas redes sociais. As duas crianças são parte de um fenômeno que provoca polémica em Portugal. O sotaque brasileiro tem criado polémica entre alguns países e virou tema na imprensa local."
       },
       {
         "type": "citation",
@@ -5196,7 +4621,7 @@
     "correctAnswer": "C"
   },
   {
-    "id": "enem-162",
+    "id": "enem-144",
     "volume": 5,
     "number": "15",
     "source": "UECE 2022",
@@ -5204,13 +4629,13 @@
     "blocks": [
       {
         "type": "paragraph",
-        "text": "Por volta dos anos 1970, a partir de suas pesquisas, o cientista político norte-americano Ronald Inglehart apontou que, nos países mais desenvolvidos economicamente, as pessoas mais jovens, diferente dos mais velhos, não valorizavam mais questões como melhores salários e carreira estável, mas sim causas como a defesa do meio- ambiente, os direitos dos animais, mais igualdade entre os gêneros. Para Inglehart, então, os mais jovens desses países desenvolvidos estavam estimando valores pós-materialistas, isto é, valores que não estavam diretamente ligados às preocupações materiais da vida."
+        "text": "Por volta dos anos 1970, a partir de suas pesquisas, o cientista político norte-americano Ronald Inglehart apontou que, nos países mais desenvolvidos economicamente, as pessoas mais jovens, diferente dos mais velhos, não valorizavam mais questões como melhores salários e carreira estável, mas sim causas como a defesa do meio-ambiente, os direitos dos animais, mais igualdade entre os gêneros. Para Inglehart, então, os mais jovens desses países desenvolvidos estavam estimando valores pós-materialistas, isto é, valores que não estavam diretamente ligados às preocupações materiais da vida."
       }
     ],
     "enunciado": "Partindo do exposto, assinale a afirmação verdadeira.",
     "options": {
       "A": "Na medida em que o Estado garante o mínimo de bem-estar social, as pessoas mais jovens se preocupam mais com empregos e bons salários.",
-      "B": "Os mais velhos, nos paises ricos, se preocupam, cada vez mais, com a qualidade de vida, incluindo preservação do meio ambiente e da vida animal.",
+      "B": "Os mais velhos, nos países ricos, se preocupam, cada vez mais, com a qualidade de vida, incluindo preservação do meio ambiente e da vida animal.",
       "C": "Quanto mais os países se desenvolvem, maior é a priorização, pelos indivíduos, de valores pós-Materialistas.",
       "D": "As pessoas que vivem em países de muita miséria e pauperismo começam a se interessar por valores pós-materialistas como a sobrevivência diária"
     },
@@ -5223,7 +4648,7 @@
     "correctAnswer": "C"
   },
   {
-    "id": "enem-163",
+    "id": "enem-145",
     "volume": 5,
     "number": "16",
     "source": "ENEM PPL 2020",
@@ -5253,7 +4678,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-164",
+    "id": "enem-146",
     "volume": 5,
     "number": "17",
     "source": "UFU 2019",
@@ -5265,7 +4690,7 @@
       },
       {
         "type": "paragraph",
-        "text": "Segundo alguns teóricos, há múltiplas possibilidades de orientação para a vida em que o uso de tecnologias age sobre as ações dos indivíduos. Para Sales (2014), a juventude, particularmente, \"estabelece um vinculo com a tecnologia da ordem da impregnação e da composição. Símbolos compartilhados no ciberespaço geram significados e referenciam atitudes e posturas das pessoas tanto quanto sinais e gestos do encontro fisico.\""
+        "text": "Segundo alguns teóricos, há múltiplas possibilidades de orientação para a vida em que o uso de tecnologias age sobre as ações dos indivíduos. Para Sales (2014), a juventude, particularmente, \"estabelece um vínculo com a tecnologia da ordem da impregnação e da composição. Símbolos compartilhados no ciberespaço geram significados e referenciam atitudes e posturas das pessoas tanto quanto sinais e gestos do encontro físico.\""
       },
       {
         "type": "paragraph",
@@ -5290,7 +4715,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-165",
+    "id": "enem-147",
     "volume": 5,
     "number": "18",
     "source": "ENEM PPL 2018",
@@ -5322,7 +4747,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-166",
+    "id": "enem-148",
     "volume": 5,
     "number": "19",
     "source": "ENEM 2011",
@@ -5330,7 +4755,7 @@
     "blocks": [
       {
         "type": "paragraph",
-        "text": "Um volume imenso de pesquisas tem sido produzido para tentar avaliar os efeitos dos programas de televisão. A maioria desses estudos diz respeito a crianças o que é bastante compreensível pela quantidade de tempo que elas passam em frente ao aparelho e pelas possíveis implicações desse comportamento para a socialização. Dois dos tópicos mais pesquisados são o impacto da televisão no âmbito do crime e da violência e a natureza das noticias exibidas na televisão."
+        "text": "Um volume imenso de pesquisas tem sido produzido para tentar avaliar os efeitos dos programas de televisão. A maioria desses estudos diz respeito a crianças o que é bastante compreensível pela quantidade de tempo que elas passam em frente ao aparelho e pelas possíveis implicações desse comportamento para a socialização. Dois dos tópicos mais pesquisados são o impacto da televisão no âmbito do crime e da violência e a natureza das notícias exibidas na televisão."
       },
       {
         "type": "citation",
@@ -5354,7 +4779,7 @@
     "correctAnswer": "C"
   },
   {
-    "id": "enem-167",
+    "id": "enem-149",
     "volume": 5,
     "number": "20",
     "source": "ENEM PPL 2024",
@@ -5382,7 +4807,7 @@
     "correctAnswer": "D"
   },
   {
-    "id": "enem-168",
+    "id": "enem-150",
     "volume": 5,
     "number": "21",
     "source": "Provão Paulista 2-2023",
@@ -5414,7 +4839,7 @@
     "correctAnswer": "D"
   },
   {
-    "id": "enem-169",
+    "id": "enem-151",
     "volume": 5,
     "number": "22",
     "source": "ENEM PPL 2022",
@@ -5446,7 +4871,7 @@
     "correctAnswer": "B"
   },
   {
-    "id": "enem-170",
+    "id": "enem-152",
     "volume": 5,
     "number": "23",
     "source": "ENEM PPL - 2023",
@@ -5475,7 +4900,7 @@
     ],
     "enunciado": "O objetivo do modelo de vigilância descrito nos textos I e II aponta para o(a)",
     "options": {
-      "A": "intercambio de opinião diversa.",
+      "A": "intercâmbio de opinião diversa.",
       "B": "desenvolvimento de sujeito crítico.",
       "C": "sentimento de observação constante.",
       "D": "movimento de revolta individual.",
@@ -5491,7 +4916,7 @@
     "correctAnswer": "C"
   },
   {
-    "id": "enem-171",
+    "id": "enem-153",
     "volume": 5,
     "number": "24",
     "source": "ENEM 2023",
@@ -5523,7 +4948,7 @@
     "correctAnswer": "E"
   },
   {
-    "id": "enem-172",
+    "id": "enem-154",
     "volume": 5,
     "number": "25",
     "source": "ENEM 2019",
@@ -5555,7 +4980,7 @@
     "correctAnswer": "D"
   },
   {
-    "id": "enem-173",
+    "id": "enem-155",
     "volume": 5,
     "number": "26",
     "source": "Enem 2019",
@@ -5587,13 +5012,22 @@
     "correctAnswer": "C"
   },
   {
-    "id": "enem-174",
+    "id": "enem-156",
     "volume": 5,
     "number": "27",
     "source": "Enem 2010",
     "tema": "Poder, violência e controle social",
-    "blocks": [],
-    "enunciado": "A lei não nasce da natureza, junto das fontes frequentadas pelos primeiros pastores; a lei nasce das batalhas reais, das vitórias, dos massacres, das conquistas que têm sua data e seus heróis de horror: a lei nasce das cidades incendiadas, das terras devastadas; ela nasce com os famosos inocentes que agonizam no dia que está amanhecendo. FOUCAULT, M. Aula de 14 de janeiro de 1976. In: Em defesa da sociedade. São Paulo: Martins Fontes, 1999. O filósofo Michel Foucault (séc. XX) inova ao pensar a política e a lei em relação ao poder e à organização social. Com base na reflexão de Foucault, a finalidade das leis na organização das sociedades modernas é",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "A lei não nasce da natureza, junto das fontes frequentadas pelos primeiros pastores; a lei nasce das batalhas reais, das vitórias, dos massacres, das conquistas que têm sua data e seus heróis de horror: a lei nasce das cidades incendiadas, das terras devastadas; ela nasce com os famosos inocentes que agonizam no dia que está amanhecendo."
+      },
+      {
+        "type": "citation",
+        "text": "FOUCAULT, M. Aula de 14 de janeiro de 1976. In: Em defesa da sociedade. São Paulo: Martins Fontes, 1999."
+      }
+    ],
+    "enunciado": "O filósofo Michel Foucault (séc. XX) inova ao pensar a política e a lei em relação ao poder e à organização social. Com base na reflexão de Foucault, a finalidade das leis na organização das sociedades modernas é",
     "options": {
       "A": "combater ações violentas na guerra entre as nações.",
       "B": "coagir e servir para refrear a agressividade humana.",
@@ -5610,39 +5044,7 @@
     "correctAnswer": "E"
   },
   {
-    "id": "enem-175",
-    "volume": 5,
-    "number": "28",
-    "source": "ENEM 2023",
-    "tema": "Poder, violência e controle social",
-    "blocks": [
-      {
-        "type": "paragraph",
-        "text": "A economia das ilegalidades se reestruturou com o desenvolvimento da sociedade capitalista. A ilegalidade dos bens foi separada da ilegalidade dos direitos. Divisão que corresponde a uma oposição de classes, pois, de um lado, a ilegalidade mais acessível às classes populares será a dos bens — transferência violenta das propriedades; de outro, à burguesia, então, se reservará a ilegalidade dos direitos: a possibilidade de desviar seus próprios regulamentos e suas próprias leis; e essa grande redistribuição das ilegalidades se traduzirá até por uma especialização dos circuitos judiciários; para as ilegalidades de bens — para o roubo — os tribunais ordinários e os castigos; para as ilegalidades de direitos — fraudes, evasões fiscais, operações comerciais irregulares — jurisdições especiais com transações, acomodações, multas atenuadas etc."
-      },
-      {
-        "type": "citation",
-        "text": "FOUCAULT, M. Vigiar e punir: nascimento da prisão. Petropolis: Vozes, 1987"
-      }
-    ],
-    "enunciado": "O texto apresenta uma relação de cálculo politico-econômico que caracteriza o poder punitivo por meio da",
-    "options": {
-      "A": "gestão das ilicitudes pelo sistema judicial.",
-      "B": "aplicação das sanções pelo modelo equânime.",
-      "C": "supressão dos crimes pela penalização severa.",
-      "D": "regulamentação dos privilégios pela justiça social.",
-      "E": "repartição de vantagens pela hierarquização cultural."
-    },
-    "images": [],
-    "topicos": [
-      "desvio-controle",
-      "poder-dominacao",
-      "estado-governo-democracia"
-    ],
-    "correctAnswer": "A"
-  },
-  {
-    "id": "enem-176",
+    "id": "enem-157",
     "volume": 5,
     "number": "29",
     "source": "ENEM",
@@ -5672,7 +5074,7 @@
     "correctAnswer": "D"
   },
   {
-    "id": "enem-177",
+    "id": "enem-158",
     "volume": 5,
     "number": "30",
     "source": "ENEM 2021",
@@ -5680,11 +5082,11 @@
     "blocks": [
       {
         "type": "paragraph",
-        "text": "Houve crescimento de 74% da população brasileira encarcerada entre 2005 e 2012. As análises possibilitaram identificar o perfil da população que está nas prisões do pais: homens, jovens (abaixo de 29 anos), negros, com ensino fundamental incompleto, acusados de crimes patrimoniais e, no caso dos presos adultos, condenados e cumprindo regime fechado e, majoritariamente, com penas de quatro até oito anos."
+        "text": "Houve crescimento de 74% da população brasileira encarcerada entre 2005 e 2012. As análises possibilitaram identificar o perfil da população que está nas prisões do país: homens, jovens (abaixo de 29 anos), negros, com ensino fundamental incompleto, acusados de crimes patrimoniais e, no caso dos presos adultos, condenados e cumprindo regime fechado e, majoritariamente, com penas de quatro até oito anos."
       },
       {
         "type": "paragraph",
-        "text": "BRASIL. Mapa do encarceramento: os jovens do Brasil. Brasilia: Presidência da República, 2015."
+        "text": "BRASIL. Mapa do encarceramento: os jovens do Brasil. Brasília: Presidência da República, 2015."
       }
     ],
     "enunciado": "Nesse contexto, as políticas públicas para minimizar a problemática descrita devem privilegiar a",
@@ -5704,7 +5106,7 @@
     "correctAnswer": "B"
   },
   {
-    "id": "enem-178",
+    "id": "enem-159",
     "volume": 5,
     "number": "31",
     "source": "ENEM",
@@ -5716,7 +5118,7 @@
       },
       {
         "type": "paragraph",
-        "text": "ADORNO, S. Racismo. Criminalidade Violenta e Justiça Penal: Reus Brancos e Negros em Perspectiva Comparativa. Estudos Históricos, Rio de Janeiro, n. 18, 1996. (Fragmento)."
+        "text": "ADORNO, S. Racismo. Criminalidade Violenta e Justiça Penal: Réus Brancos e Negros em Perspectiva Comparativa. Estudos Históricos, Rio de Janeiro, n. 18, 1996. (Fragmento)."
       }
     ],
     "enunciado": "As teorias raciais mencionadas no texto ajudam a explicar o(a)",
@@ -5735,87 +5137,7 @@
     "correctAnswer": "C"
   },
   {
-    "id": "enem-179",
-    "volume": 5,
-    "number": "32",
-    "source": "ENEM",
-    "tema": "Identidades e desigualdades sociais",
-    "blocks": [
-      {
-        "type": "label",
-        "text": "Texto I"
-      },
-      {
-        "type": "paragraph",
-        "text": "Frantz Fanon publicou pela primeira vez, em 1952, seu estudo sobre colonialismo e racismo, Pele negra, máscaras brancas. Ao dizer que \"para o negro, há somente um destino\" e que esse destino è branco, Fanon revelou que as aspirações de muitos povos colonizados foram formadas pelo pensamento colonial predominante."
-      },
-      {
-        "type": "citation",
-        "text": "BUCKINGHAM, W. et al. O livro da filosofia. São Paulo: Globo, 2011 (adaptado)."
-      },
-      {
-        "type": "label",
-        "text": "Texto II"
-      },
-      {
-        "type": "paragraph",
-        "text": "Mesmo que não queiramos cobrar desses estabelecimentos (salões de beleza) uma eficácia política nos moldes tradicionais da militância, uma vez que são estabelecimentos comerciais e não entidades do movimento negro, o fato é que, ao se autodenominarem \"étnicos\" e se apregoarem como divulgadores de uma autoimagem positiva do negro em uma sociedade racista, os salões se colocam no cerne de uma luta política e ideológica."
-      },
-      {
-        "type": "citation",
-        "text": "GOMES, N. Corpo e cabelo como simbolos da identidade negra. Disponível em: www.rizoma.ufsc.br. Acesso em: 13 fev.2013."
-      }
-    ],
-    "enunciado": "Os textos apresentam uma mudança relevante na constituição identitária frente à discriminação racial. No Brasil, o desdobramento dessa mudança revela o(a)",
-    "options": {
-      "A": "valorização de traços culturais.",
-      "B": "utilização de resistência violenta.",
-      "C": "fortalecimento da organização partidária.",
-      "D": "enfraquecimento dos vínculos comunitários.",
-      "E": "aceitação de estruturas de submissão social."
-    },
-    "images": [],
-    "topicos": [
-      "classes-desigualdade",
-      "identidade-social",
-      "pobreza-brasil"
-    ],
-    "correctAnswer": "A"
-  },
-  {
-    "id": "enem-180",
-    "volume": 5,
-    "number": "33",
-    "source": "ENEM PPL 2024",
-    "tema": "Identidades e desigualdades sociais",
-    "blocks": [
-      {
-        "type": "paragraph",
-        "text": "A dona de casa está investida de todos os tipos de função. Primeiramente, dar à luz e criar filhos e, a partir do momento em que sabem andar, acompanharem-na por toda a parte. A mulher e seus filhos são figuras familiares profusamente reproduzidas pela iconografia da época. Segunda função: a manutenção da familia, as \"tarefas domésticas\", expressão que tem um sentido muito amplo, incluindo a alimentação, a educação, a limpeza da casa etc. A sociedade do século XIX nào poderia crescer e se reproduzir sem a contribuição dessas mulheres."
-      },
-      {
-        "type": "citation",
-        "text": "PERROT, M. Os excluídos da história: operários, mulheres e prisioneiros. São Paulo: Paz e Terra, 1992 (adaptado)."
-      }
-    ],
-    "enunciado": "A condição social, discutida no texto, demonstra que a ordem burguesa tinha como pressuposto a",
-    "options": {
-      "A": "contestação dos valores tradicionais do cristianismo.",
-      "B": "eliminação dos afazeres do lar.",
-      "C": "importância da divisão sexual do trabalho.",
-      "D": "remuneração das atividades femininas.",
-      "E": "relevância das práticas recreativas."
-    },
-    "images": [],
-    "topicos": [
-      "classes-desigualdade",
-      "identidade-social",
-      "pobreza-brasil"
-    ],
-    "correctAnswer": "C"
-  },
-  {
-    "id": "enem-181",
+    "id": "enem-160",
     "volume": 5,
     "number": "34",
     "source": "ENEM 2023",
@@ -5823,7 +5145,7 @@
     "blocks": [
       {
         "type": "paragraph",
-        "text": "Elas foram as pioneiras dos direitos das mulheres no Afeganistão. Defensoras ferrenhas da lei, buscaram justiça para os mais marginalizados. Mas, agora, mais de 220 juízas afegās estão escondidas por medo de retaliação sob o regime do Talibā. Uma delas condenou centenas de homens por violência contra as mulheres, incluindo estupro, assassinato e tortura. Mas poucos dias depois que o Talibā assumiu o controle de sua cidade e milhares de criminosos condenados foram libertados da prisão, as ameaças de morte começaram. O país sempre foi considerado um dos lugares mais difíceis e perigosos do mundo para as mulheres. De acordo com estudos de organizações não governamentais, cerca de 87% das mulheres e meninas serão vitimas de abuso durante a vida."
+        "text": "Elas foram as pioneiras dos direitos das mulheres no Afeganistão. Defensoras ferrenhas da lei, buscaram justiça para os mais marginalizados. Mas, agora, mais de 220 juízas afegās estão escondidas por medo de retaliação sob o regime do Talibā. Uma delas condenou centenas de homens por violência contra as mulheres, incluindo estupro, assassinato e tortura. Mas poucos dias depois que o Talibā assumiu o controle de sua cidade e milhares de criminosos condenados foram libertados da prisão, as ameaças de morte começaram. O país sempre foi considerado um dos lugares mais difíceis e perigosos do mundo para as mulheres. De acordo com estudos de organizações não governamentais, cerca de 87% das mulheres e meninas serão vítimas de abuso durante a vida."
       },
       {
         "type": "citation",
@@ -5847,7 +5169,7 @@
     "correctAnswer": "C"
   },
   {
-    "id": "enem-182",
+    "id": "enem-161",
     "volume": 5,
     "number": "35",
     "source": "ENEM 2023",
@@ -5855,7 +5177,7 @@
     "blocks": [
       {
         "type": "paragraph",
-        "text": "A partir da década de 1930, começam a ser discutidos no Brasil os principios de racionalização do trabalho. As preocupações com a cozinha e o trabalho doméstico foram introduzidas com a medicina sanitária e a oferta de gás e eletricidade para uso doméstico no início do século XX. A organização da cozinha visava atingir uma simplificação das tarefas, com a economia de movimentos e o barateamento dos equipamentos, a partir da produção em grande escala. A padronização e racionalização da habitação e seus componentes visava uma radical transformação da casa, em especial da cozinha e apoiava-se tanto no desenvolvimento de novos equipamentos quanto nos estudos de racionalização do trabalho doméstico. A principal preocupação era o desenvolvimento de um novo tipo de habitação, que deveria induzir um novo comportamento social."
+        "text": "A partir da década de 1930, começam a ser discutidos no Brasil os princípios de racionalização do trabalho. As preocupações com a cozinha e o trabalho doméstico foram introduzidas com a medicina sanitária e a oferta de gás e eletricidade para uso doméstico no início do século XX. A organização da cozinha visava atingir uma simplificação das tarefas, com a economia de movimentos e o barateamento dos equipamentos, a partir da produção em grande escala. A padronização e racionalização da habitação e seus componentes visava uma radical transformação da casa, em especial da cozinha e apoiava-se tanto no desenvolvimento de novos equipamentos quanto nos estudos de racionalização do trabalho doméstico. A principal preocupação era o desenvolvimento de um novo tipo de habitação, que deveria induzir um novo comportamento social."
       },
       {
         "type": "citation",
@@ -5879,71 +5201,7 @@
     "correctAnswer": "D"
   },
   {
-    "id": "enem-183",
-    "volume": 5,
-    "number": "36",
-    "source": "ENEM PPL 2023",
-    "tema": "Identidades e desigualdades sociais",
-    "blocks": [
-      {
-        "type": "paragraph",
-        "text": "Ana Maria [entrevistadora]: Vida de empreguete é tão dura assim como vocês retratam no clipe? Penha [empregada]: Olha, Ana, difícil mesmo é aturar cara de patroa ignorante que não sabe pedir as coisas com educação. Sonia [patroa]: Ana, eu acho que nós estamos vivendo uma inversão total de valores, entende? Não somos nós que precisamos das empregadas. Elas é que precisam do emprego, precisam do dinheiro que nos pagamos. Cida [empregada]: Até parece, dona Sonia, a senhora precisa de mim até pra pegar água! Sonia: Eu sou de um tempo em que os serviçais sabiam o seu lugar! Cida: Eu esqueci que a senhora pegou a época da escravidão! Ana Maria: Gente, eu só quis promover aqui uma confraternização... Chayenne [patroa): Ana, pare tudo, porque agora eu quero falar! Eu sou uma patroa que dou de tudo: eu dou comida, eu dou quartinho, eu dou sabão de coco pra elas se lavarem, eu dou papel higiênico, eu dou copo, prato, talher, tudo separado, sem descontar o salário! Penha: Agora, pra tirar férias, como manda a lei, é um sacrificio! E ela viaja e quer que eu fique carregando a mala dela. Eu não sou carregadora de mala, não!"
-      },
-      {
-        "type": "citation",
-        "text": "MACEDO, R. M. Espelho magico: produção e recepção de imagens de empregadas domésticas em uma telenovela brasileira. Cadernos Pagu, n. 48, 2016."
-      }
-    ],
-    "enunciado": "O diálogo, extraído de uma telenovela brasileira exibida em 2012, traduz o pensamento de uma sociedade caracterizada pela presença de",
-    "options": {
-      "A": "símbolos da expansão de bens culturais.",
-      "B": "avanços do número de contratos formais.",
-      "C": "elementos do sistema do cativeiro colonial.",
-      "D": "progressos da venda de produtos midiáticos.",
-      "E": "signos da modernização de relações laborais."
-    },
-    "images": [],
-    "topicos": [
-      "classes-desigualdade",
-      "identidade-social",
-      "pobreza-brasil"
-    ],
-    "correctAnswer": "C"
-  },
-  {
-    "id": "enem-184",
-    "volume": 5,
-    "number": "37",
-    "source": "ENEM 2020",
-    "tema": "Identidades e desigualdades sociais",
-    "blocks": [
-      {
-        "type": "paragraph",
-        "text": "Nas últimas décadas, uma acentuada feminização no mundo do trabalho vem ocorrendo. Se a participação masculina pouco cresceu no período pós-1970, a intensificação da inserção das mulheres foi o traço marcante. Entretanto, essa presença feminina se dá mais no espaço dos empregos precários, onde a exploração, em grande medida, se encontra mais acentuada."
-      },
-      {
-        "type": "citation",
-        "text": "NOGUEIRA, C. M. As trabalhadoras do telemarketing: uma nova divisão sexual do trabalho? In: ANTUJNES, R. et al. Infoproletários: degradação real do trabalho virtual. São Paulo: Boitempo, 2009."
-      }
-    ],
-    "enunciado": "A transformação descrita no texto tem sido insuficiente para o estabelecimento de uma condição de igualdade de oportunidade em virtude da(s)",
-    "options": {
-      "A": "estagnação de direitos adquiridos e do anacronismo da legislação vigente.",
-      "B": "manutenção do status quo gerencial e dos padrões de socialização familiar.",
-      "C": "desestruturação da herança patriarcal e das mudanças do perfil ocupacional.",
-      "D": "disputas na composição sindical e da presença na esfera político-partidária.",
-      "E": "exigências de aperfeiçoamento profissional e de habilidades na competência diretiva."
-    },
-    "images": [],
-    "topicos": [
-      "classes-desigualdade",
-      "identidade-social",
-      "pobreza-brasil"
-    ],
-    "correctAnswer": "B"
-  },
-  {
-    "id": "enem-185",
+    "id": "enem-162",
     "volume": 5,
     "number": "38",
     "source": "ENEM 2016",
@@ -5989,7 +5247,7 @@
     "correctAnswer": "D"
   },
   {
-    "id": "enem-186",
+    "id": "enem-163",
     "volume": 5,
     "number": "39",
     "source": "UEMA 2015",
@@ -6023,7 +5281,7 @@
     "correctAnswer": "E"
   },
   {
-    "id": "enem-187",
+    "id": "enem-164",
     "volume": 5,
     "number": "40",
     "source": "ENEM 2017",
@@ -6055,39 +5313,7 @@
     "correctAnswer": "C"
   },
   {
-    "id": "enem-188",
-    "volume": 6,
-    "number": "1",
-    "source": "ENEM 2016",
-    "tema": "Consumo e estilos de vida",
-    "blocks": [
-      {
-        "type": "paragraph",
-        "text": "Não estou mais pensando como costumava pensar. Percebo isso de modo mais acentuado quando estou lendo. Mergulhar num livro, ou num longo artigo, costumava ser fácil. Isso raramente ocorre atualmente. Agora minha atenção começa a divagar depois de duas ou três páginas. Creio que sei o que está acontecendo. Por mais de uma década venho passando mais tempo on-line, procurando e surfando e algumas vezes acrescentando informação à grande biblioteca da internet. A internet tem sido uma dádiva para um escritor como eu. Pesquisas que antes exigiam dias de procura em jornais ou na biblioteca agora podem ser feitas em minutos. Como disse o teórico da comunicação Marshall McLuhan nos anos 60, a mídia não é apenas um canal passivo para o tráfego de informação. Ela fornece a matéria, mas também molda o processo de pensamento. E o que a net parece fazer é pulverizar minha capacidade de concentração e contemplação."
-      },
-      {
-        "type": "citation",
-        "text": "CARR, N. Is Google making us stupid? Disponível em: www.theatlantic.com. Acesso em: 17 fev. 2013 (adaptado)."
-      }
-    ],
-    "enunciado": "Em relação à internet, a perspectiva defendida pelo autor ressalta um paradoxo que se caracteriza por",
-    "options": {
-      "A": "associar uma experiência superficial à abundância de informações.",
-      "B": "condicionar uma capacidade individual à desorganização da rede.",
-      "C": "agregar uma tendência contemporânea à aceleração do tempo.",
-      "D": "aproximar uma mídia inovadora à passividade da recepção.",
-      "E": "equiparar uma ferramenta digital à tecnologia analógica"
-    },
-    "images": [],
-    "topicos": [
-      "consumo-estilos-vida",
-      "economia-sociedade-contemporanea",
-      "sociabilidades-mundo-digital"
-    ],
-    "correctAnswer": "A"
-  },
-  {
-    "id": "enem-189",
+    "id": "enem-165",
     "volume": 6,
     "number": "2",
     "source": "UFU-MG",
@@ -6103,7 +5329,7 @@
       },
       {
         "type": "paragraph",
-        "text": "mercado/2013/05/1279552-acesso-a-internet-no-brasil- cresce-mas53-da-populacao-ainda-nao-usa-a-rede.shtml>"
+        "text": "mercado/2013/05/1279552-acesso-a-internet-no-brasil-cresce-mas53-da-populacao-ainda-nao-usa-a-rede.shtml>"
       }
     ],
     "enunciado": "Em vista dos dados apresentados, quais dos conceitos a seguir deveriam ser utilizados para analisar e mostrar que esses dados podem ser um problema sociológico?",
@@ -6122,7 +5348,7 @@
     "correctAnswer": "C"
   },
   {
-    "id": "enem-190",
+    "id": "enem-166",
     "volume": 6,
     "number": "3",
     "source": "UEMA",
@@ -6154,7 +5380,7 @@
     "correctAnswer": "E"
   },
   {
-    "id": "enem-191",
+    "id": "enem-167",
     "volume": 6,
     "number": "4",
     "source": "ENEM 2016",
@@ -6198,7 +5424,7 @@
     "correctAnswer": "B"
   },
   {
-    "id": "enem-192",
+    "id": "enem-168",
     "volume": 6,
     "number": "5",
     "source": "ENEM PPL 2015",
@@ -6230,7 +5456,7 @@
     "correctAnswer": "C"
   },
   {
-    "id": "enem-193",
+    "id": "enem-169",
     "volume": 6,
     "number": "6",
     "source": "UEA 2023",
@@ -6258,39 +5484,7 @@
     "correctAnswer": "E"
   },
   {
-    "id": "enem-194",
-    "volume": 6,
-    "number": "7",
-    "source": "ENEM PPL 2019",
-    "tema": "Consumo e estilos de vida",
-    "blocks": [
-      {
-        "type": "paragraph",
-        "text": "A estética relativamente estável do modernismo fordista cedeu lugar a todo o fermento, instabilidade e qualidades fugidias de uma estética pós-moderna que celebra a diferença, a efemeridade, o espetáculo, a moda e a mercadificação de formas culturais."
-      },
-      {
-        "type": "citation",
-        "text": "HARVEY, D. Condição pós-moderna: uma pesquisa sobre as origens da mudança cultural. São Paulo: Loyola, 2009."
-      }
-    ],
-    "enunciado": "No contexto descrito, as transformações estéticas impactam a produção de bens por meio da",
-    "options": {
-      "A": "promoção de empregos fabris, integrada às linhas de montagem.",
-      "B": "ampliação dos custos de fabricação, impulsionada pelo consumo.",
-      "C": "redução do tempo de vida dos produtos, acompanhada da crescente inovação.",
-      "D": "diminuição da importância da organização logística, utilizada pelos fornecedores.",
-      "E": "expansão de mercadorias estocadas, aliadas a maiores custos de armazenamento."
-    },
-    "images": [],
-    "topicos": [
-      "consumo-estilos-vida",
-      "economia-sociedade-contemporanea",
-      "cultura-sociedade"
-    ],
-    "correctAnswer": "C"
-  },
-  {
-    "id": "enem-195",
+    "id": "enem-170",
     "volume": 6,
     "number": "8",
     "source": "Uerj 2025",
@@ -6331,7 +5525,7 @@
     "correctAnswer": "B"
   },
   {
-    "id": "enem-196",
+    "id": "enem-171",
     "volume": 6,
     "number": "9",
     "source": "UFPR 2025",
@@ -6359,7 +5553,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-197",
+    "id": "enem-172",
     "volume": 6,
     "number": "12",
     "source": "ENEM 2019",
@@ -6388,7 +5582,7 @@
     "correctAnswer": "D"
   },
   {
-    "id": "enem-198",
+    "id": "enem-173",
     "volume": 6,
     "number": "13",
     "source": "ENEM",
@@ -6416,7 +5610,7 @@
     "correctAnswer": "C"
   },
   {
-    "id": "enem-199",
+    "id": "enem-174",
     "volume": 6,
     "number": "14",
     "source": "UCS RS 2021",
@@ -6452,7 +5646,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-200",
+    "id": "enem-175",
     "volume": 6,
     "number": "15",
     "source": "ENEM",
@@ -6464,7 +5658,7 @@
       },
       {
         "type": "citation",
-        "text": "ALMEIDA, J. F. Velhos e novos aspectos da epistemologia das ciências sociais.Sociologia: problemas e práticas, n. 55, 2007 (adaptado)."
+        "text": "ALMEIDA, J. F. Velhos e novos aspectos da epistemologia das ciências sociais. Sociologia: problemas e práticas, n. 55, 2007 (adaptado)."
       }
     ],
     "enunciado": "O texto desmistifica uma visão do senso comum segundo a qual a ciência consiste no(a)",
@@ -6484,7 +5678,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-201",
+    "id": "enem-176",
     "volume": 6,
     "number": "16",
     "source": "ENEM 2020",
@@ -6522,7 +5716,7 @@
     "correctAnswer": "D"
   },
   {
-    "id": "enem-202",
+    "id": "enem-177",
     "volume": 6,
     "number": "17",
     "source": "ENEM PPL 2019",
@@ -6554,7 +5748,7 @@
     "correctAnswer": "D"
   },
   {
-    "id": "enem-203",
+    "id": "enem-178",
     "volume": 6,
     "number": "18",
     "source": "ENEM 2017",
@@ -6586,7 +5780,7 @@
     "correctAnswer": "C"
   },
   {
-    "id": "enem-204",
+    "id": "enem-179",
     "volume": 6,
     "number": "19",
     "source": "ENEM 2020",
@@ -6618,7 +5812,7 @@
     "correctAnswer": "C"
   },
   {
-    "id": "enem-205",
+    "id": "enem-180",
     "volume": 6,
     "number": "20",
     "source": "ENEM 2017 2ª aplicação",
@@ -6650,13 +5844,22 @@
     "correctAnswer": "B"
   },
   {
-    "id": "enem-206",
+    "id": "enem-181",
     "volume": 6,
     "number": "21",
     "source": "ENEM 2024",
     "tema": "Sociedade e meio ambiente",
-    "blocks": [],
-    "enunciado": "O rompimento da barragem de Fundão levou muito consigo. A lama soterrou sonhos e modificou de forma permanente centenas de vidas nascidas e criadas em Bento Rodrigues e Paracatu, em Mariana (MG). Mas não somente. Ao se estender ao longo do rio, outras famílias e histórias foram atingidas de formas diferentes. Ao fugirem dos rejeitos que rapidamente tomaram as localidades, deixaram para trás os resquícios da vida que tiveram até o 5 de novembro de 2015. Nada jamais seria igual.SANTOS, P. Histórias soterradas. Curinga, n. 19, nov. 2016 (adaptado).Conforme o texto, o evento gerou o seguinte impacto na relação entre as pessoas e o seu espaço vivido: Alternativas",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "O rompimento da barragem de Fundão levou muito consigo. A lama soterrou sonhos e modificou de forma permanente centenas de vidas nascidas e criadas em Bento Rodrigues e Paracatu, em Mariana (MG). Mas não somente. Ao se estender ao longo do rio, outras famílias e histórias foram atingidas de formas diferentes. Ao fugirem dos rejeitos que rapidamente tomaram as localidades, deixaram para trás os resquícios da vida que tiveram até o 5 de novembro de 2015. Nada jamais seria igual."
+      },
+      {
+        "type": "citation",
+        "text": "SANTOS, P. Histórias soterradas. Curinga, n. 19, nov. 2016 (adaptado)."
+      }
+    ],
+    "enunciado": "Conforme o texto, o evento gerou o seguinte impacto na relação entre as pessoas e o seu espaço vivido:",
     "options": {
       "A": "Flexibilização de parâmetros ambientais.",
       "B": "Consolidação de identidades regionais.",
@@ -6673,13 +5876,22 @@
     "correctAnswer": "C"
   },
   {
-    "id": "enem-207",
+    "id": "enem-182",
     "volume": 6,
     "number": "22",
     "source": "ENEM PPL 2023",
     "tema": "Sociedade e meio ambiente",
-    "blocks": [],
-    "enunciado": "Uma missão internacional de investigação, em setembro de 2017, documentou os impactos sociais e ambientais causados pela expansão do agronegócio e pela especulação de terras na região do Matopiba em sete comunidades no sul do Piauí. Os resultados mostraram que a população sofre com as graves consequências do desmatamento, da perda da biodiversidade e da contaminação generalizada do solo, da água e do gado por agrotóxicos.Relatório sobre o Matopiba aponta impactos ambientais e sociais da financeirização de terras. Disponível em: https://cimi.org.br. Acesso em: 13 out. 2021. Os impactos socioambientais descritos no texto provocam a",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "Uma missão internacional de investigação, em setembro de 2017, documentou os impactos sociais e ambientais causados pela expansão do agronegócio e pela especulação de terras na região do Matopiba em sete comunidades no sul do Piauí. Os resultados mostraram que a população sofre com as graves consequências do desmatamento, da perda da biodiversidade e da contaminação generalizada do solo, da água e do gado por agrotóxicos. Relatório sobre o Matopiba aponta impactos ambientais e sociais da financeirização de terras."
+      },
+      {
+        "type": "citation",
+        "text": "Disponível em: https://cimi.org.br. Acesso em: 13 out. 2021."
+      }
+    ],
+    "enunciado": "Os impactos socioambientais descritos no texto provocam a",
     "options": {
       "A": "adoção de cultivos irrigados.",
       "B": "ampliação da agricultura familiar.",
@@ -6695,13 +5907,22 @@
     "correctAnswer": "C"
   },
   {
-    "id": "enem-208",
+    "id": "enem-183",
     "volume": 6,
     "number": "23",
     "source": "ENEM PPL 2023",
     "tema": "Sociedade e meio ambiente",
-    "blocks": [],
-    "enunciado": "Os sujeitos sociais que procuram evidenciar a importância de uma relação lógica entre injustiça social e degradação ambiental são aqueles que não confiam no mercado como instrumento de superação da desigualdade ambiental e da promoção dos princípios do que se entenderia por justiça ambiental. Esses atores consideram que há clara desigualdade social na exposição aos riscos ambientais, decorrentes de uma lógica que extrapola a simples racionalidade abstrata das tecnologias.ACSELRAD, H. Justiça ambiental e construção social do risco. Desenvolvimento e Meio Ambiente, n. 5, jan.-jun. 2002.A desconfiança dos sujeitos sociais apresentada no texto se fundamenta na",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "Os sujeitos sociais que procuram evidenciar a importância de uma relação lógica entre injustiça social e degradação ambiental são aqueles que não confiam no mercado como instrumento de superação da desigualdade ambiental e da promoção dos princípios do que se entenderia por justiça ambiental. Esses atores consideram que há clara desigualdade social na exposição aos riscos ambientais, decorrentes de uma lógica que extrapola a simples racionalidade abstrata das tecnologias."
+      },
+      {
+        "type": "citation",
+        "text": "ACSELRAD, H. Justiça ambiental e construção social do risco. Desenvolvimento e Meio Ambiente, n. 5, jan.-jun. 2002."
+      }
+    ],
+    "enunciado": "A desconfiança dos sujeitos sociais apresentada no texto se fundamenta na",
     "options": {
       "A": "diversidade da cultura.",
       "B": "capacidade de resiliência.",
@@ -6718,7 +5939,7 @@
     "correctAnswer": "D"
   },
   {
-    "id": "enem-209",
+    "id": "enem-184",
     "volume": 6,
     "number": "24",
     "source": "ENEM 2022",
@@ -6750,7 +5971,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-210",
+    "id": "enem-185",
     "volume": 6,
     "number": "25",
     "source": "ENEM 2020",
@@ -6788,7 +6009,7 @@
     "correctAnswer": "E"
   },
   {
-    "id": "enem-211",
+    "id": "enem-186",
     "volume": 6,
     "number": "26",
     "source": "ENEM 2016",
@@ -6820,7 +6041,7 @@
     "correctAnswer": "B"
   },
   {
-    "id": "enem-212",
+    "id": "enem-187",
     "volume": 6,
     "number": "27",
     "source": "ENEM 2019",
@@ -6852,7 +6073,7 @@
     "correctAnswer": "E"
   },
   {
-    "id": "enem-213",
+    "id": "enem-188",
     "volume": 6,
     "number": "28",
     "source": "ENEM 2019",
@@ -6867,7 +6088,7 @@
         "text": "RIZZOTO, M. L. F. et at. Justiça social, democracia com direitos sociais e saúde: a luta do Cebes. Revista Saúde em Debate, n. 116, jan.-mar. 2018 (adaptado)."
       }
     ],
-    "enunciado": "Segundo o texto, duas características da con- cepção da política pública analisada são:",
+    "enunciado": "Segundo o texto, duas características da con-cepção da política pública analisada são:",
     "options": {
       "A": "Paternalismo e filantropia.",
       "B": "Liberalismo e meritocracia.",
@@ -6884,7 +6105,7 @@
     "correctAnswer": "C"
   },
   {
-    "id": "enem-214",
+    "id": "enem-189",
     "volume": 6,
     "number": "29",
     "source": "ENEM 2017",
@@ -6916,7 +6137,7 @@
     "correctAnswer": "D"
   },
   {
-    "id": "enem-215",
+    "id": "enem-190",
     "volume": 7,
     "number": "1",
     "source": "Enem PPL 2023",
@@ -6947,7 +6168,7 @@
     "justificativa": "Apenas a alternativa [B] está correta. A circulação do tecladista Jon Lord entre gêneros diferentes mostra a quebra de preconceitos e padrões que se estabelecem entre os grupos que ouvem e produzem cada gênero. Esses padrões e barreiras estéticas reforçam distinções culturais que costumam hierarquizar gêneros diferentes de acordo com o prestígio social relacionado a eles. É nesse sentido, por exemplo, que a cultura erudita se diferencia da cultura popular como pretensamente superior. Tal superioridade, no entanto, é apenas uma construção social, ultrapassada pelo músico no exemplo acima."
   },
   {
-    "id": "enem-216",
+    "id": "enem-191",
     "volume": 7,
     "number": "2",
     "source": "Enem PPL 2022",
@@ -6980,7 +6201,7 @@
     "justificativa": "Apenas a alternativa [A] está correta. As demais alternativas estão incorretas pois apresentam atividades que constituem esportes reconhecidos e que, inclusive, são praticados profissionalmente por atletas: voleibol, esgrima, balé e ginástica artística. Assim, essas atividades não podem ser classificadas como “jogos e brincadeiras da cultura popular”."
   },
   {
-    "id": "enem-217",
+    "id": "enem-192",
     "volume": 7,
     "number": "3",
     "source": "Enem PPL 2019",
@@ -7013,7 +6234,7 @@
     "justificativa": "O estranhamento do autor refere-se ao fato de que pessoas simples, caboclas do interior do Nordeste, provavelmente, aprenderam os ritos católicos em latim, prática da Igreja Católica desde os tempos medievais. Em 1975, a Igreja Católica já não utilizava o latim como língua para seus ritos. Assim, uma cerimônia religiosa na qual o povo participa ativamente utilizando-se dessa língua (tal como no período medieval) marca exatamente uma permanência cultural que o autor não esperava encontrar."
   },
   {
-    "id": "enem-218",
+    "id": "enem-193",
     "volume": 7,
     "number": "4",
     "source": "Enem PPL 2017",
@@ -7046,7 +6267,7 @@
     "justificativa": "O reconhecimento da origem identitária da região faz com que se busque resgatar as festividades do local, que teve forte influência afrodescendente."
   },
   {
-    "id": "enem-219",
+    "id": "enem-194",
     "volume": 7,
     "number": "5",
     "source": "Enem PPL 2016",
@@ -7077,13 +6298,22 @@
     "justificativa": "A imagem em questão parece fazer referência a uma prática de Candomblé. O Candomblé apareceu no Brasil como resultado da chegada de africanos escravizados (os migrantes forçados), que portaram consigo suas crenças religiosas. No caso brasileiro, essas crenças se misturaram a crenças cristãs, dando origem a novas formas de vivência religiosa."
   },
   {
-    "id": "enem-220",
+    "id": "enem-195",
     "volume": 7,
     "number": "6",
     "source": "Enem PPL 2014",
     "tema": null,
-    "blocks": [],
-    "enunciado": "Desde 2002, o Instituto do Patrimônio Histórico e Artístico Nacional (lphan) tem registrado certos bens imateriais como patrimônio cultural do país. Entre as manifestações que já ganharam esse status está o ofício das baianas do acarajé. Enfatize-se: o ofício das baianas, não a receita do acarajé. Quando uma baiana prepara o acarajé, há uma série de códigos imperceptíveis para quem olha de fora. A cor da roupa, a amarra dos panos e os adereços mudam de acordo com o santo e com a hierarquia dela no candomblé. O lphan conta que, registrando o ofício, “esse e outros mundos ligados ao preparo do acarajé podem ser descortinados”. KAZ, R. A diferença entre o acarajé e o sanduiche de Bauru. Revista de História da Biblioteca Nacional, n 13, out. 2006 (adaptado).De acordo com o autor, o Iphan evidencia a necessidade de se protegerem certas manifestações históricas para que continuem existindo, destacando-se nesse caso a",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "Desde 2002, o Instituto do Patrimônio Histórico e Artístico Nacional (Iphan) tem registrado certos bens imateriais como patrimônio cultural do país. Entre as manifestações que já ganharam esse status está o ofício das baianas do acarajé. Enfatize-se: o ofício das baianas, não a receita do acarajé. Quando uma baiana prepara o acarajé, há uma série de códigos imperceptíveis para quem olha de fora. A cor da roupa, a amarra dos panos e os adereços mudam de acordo com o santo e com a hierarquia dela no candomblé. O Iphan conta que, registrando o ofício, “esse e outros mundos ligados ao preparo do acarajé podem ser descortinados”."
+      },
+      {
+        "type": "citation",
+        "text": "KAZ, R. A diferença entre o acarajé e o sanduíche de Bauru. Revista de História da Biblioteca Nacional, n. 13, out. 2006 (adaptado)."
+      }
+    ],
+    "enunciado": "De acordo com o autor, o Iphan evidencia a necessidade de se protegerem certas manifestações históricas para que continuem existindo, destacando-se nesse caso a",
     "options": {
       "A": "mistura de tradições africanas, indígenas e portuguesas no preparo do alimento por parte das cozinheiras baianas.",
       "B": "relação com o sagrado no ato de preparar o alimento, sobressaindo-se o uso de símbolos e insígnias pelas cozinheiras.",
@@ -7101,7 +6331,7 @@
     "justificativa": "O texto deixa claro que a importância do ofício das baianas do acarajé é importante não somente pelo seu valor culinário, mas também pelos aspectos religioso e simbólico, tal como descreve, de forma correta, a alternativa [B]."
   },
   {
-    "id": "enem-221",
+    "id": "enem-196",
     "volume": 7,
     "number": "7",
     "source": "Enem PPL 2014",
@@ -7140,7 +6370,7 @@
     "justificativa": "A Estátua do Laçador constitui um bem material de Porto Alegre porque representa um traço histórico-cultural (maneira de se vestir) da população gaúcha. A Estátua do Laçador apresenta a figura de um homem tipicamente gaúcho. Tal tipo de obra artística, ao ser integrada à cidade, assume uma função de memória de uma identidade reconhecida pela população. Por esse motivo, pode muito bem ser considerada uma manifestação histórico-cultural da população."
   },
   {
-    "id": "enem-222",
+    "id": "enem-197",
     "volume": 7,
     "number": "8",
     "source": "Enem PPL 2013",
@@ -7173,7 +6403,7 @@
     "justificativa": "O texto expressa de forma clara o quanto o folclore se atualiza e se modifica cotidianamente. Desta forma, a única alternativa plausível é a [A]."
   },
   {
-    "id": "enem-223",
+    "id": "enem-198",
     "volume": 7,
     "number": "9",
     "source": "Enem PPL 2013",
@@ -7206,13 +6436,22 @@
     "justificativa": "A questão exige basicamente uma boa compreensão e interpretação do texto. Apresentando o Baile Charme, o texto enfatiza a riqueza de sua origem, representada pela diversidade de manifestações culturais ali presentes, que ultrapassam a questão de gênero musical. Desta maneira, a única alternativa correta é a [E]."
   },
   {
-    "id": "enem-224",
+    "id": "enem-199",
     "volume": 7,
     "number": "10",
     "source": "Enem PPL 2012",
     "tema": null,
-    "blocks": [],
-    "enunciado": "O Ofício das Baianas de Acarajé constitui um bem cultural de natureza imaterial, inscrito no Livro dos Saberes em 2005, que consiste em uma prática tradicional de produção e venda, em tabuleiro, das chamadas comidas de baiana, feitas com azeite de dendê e ligadas ao culto dos orixás, amplamente disseminadas na cidade de Salvador, Bahia. Disponível em: http://portal.iphan.gov.br. Acesso em: 29 fev. 2009 (adaptado). O texto contém a descrição de um bem cultural que foi reconhecido pelo IPHAN (Instituto do Patrimônio Histórico Artístico Nacional) como patrimônio imaterial, pois representa",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "O Ofício das Baianas de Acarajé constitui um bem cultural de natureza imaterial, inscrito no Livro dos Saberes em 2005, que consiste em uma prática tradicional de produção e venda, em tabuleiro, das chamadas comidas de baiana, feitas com azeite de dendê e ligadas ao culto dos orixás, amplamente disseminadas na cidade de Salvador, Bahia."
+      },
+      {
+        "type": "citation",
+        "text": "Disponível em: http://portal.iphan.gov.br. Acesso em: 29 fev. 2009 (adaptado)."
+      }
+    ],
+    "enunciado": "O texto contém a descrição de um bem cultural que foi reconhecido pelo IPHAN (Instituto do Patrimônio Histórico Artístico Nacional) como patrimônio imaterial, pois representa",
     "options": {
       "A": "uma técnica culinária com valor comercial e atratividade turística.",
       "B": "um símbolo da vitalidade dessas mulheres e de suas comunidades.",
@@ -7230,7 +6469,7 @@
     "justificativa": "A alternativa [D] é a única correta. A cultura imaterial (e por consequência o patrimônio imaterial) diz respeito às formas de fazer (como receitas de comida, danças e músicas) relacionadas à forma de vida e identidade do povo de uma determinada região."
   },
   {
-    "id": "enem-225",
+    "id": "enem-200",
     "volume": 7,
     "number": "11",
     "source": "Enem PPL 2009",
@@ -7254,7 +6493,7 @@
     "justificativa": "O texto, de forma geral, demonstra que a arte desenvolvida pelo carteiro não era reconhecida com a mesma dignidade da arte erudita. No contexto brasileiro, isso está relacionado ao preconceito em relação às manifestações culturais populares. O texto retrata que o personagem citado tinha conhecimentos musicais populares, e não eruditos: tocava violão e flauta e compunha acompanhamentos para modinhas. Daí o uso do termo artinha, como se a arte popular fosse menor do que outros tipos de artes musicais."
   },
   {
-    "id": "enem-226",
+    "id": "enem-201",
     "volume": 7,
     "number": "12",
     "source": "Enem PPL 2024",
@@ -7287,7 +6526,7 @@
     "justificativa": "A alternativa [A] está incorreta pois, embora a identidade seja importante, o texto enfatiza a conexão entre as pessoas e não apenas padrões identitários. A alternativa [B] está incorreta pois a ênfase do Ubuntu está na coletividade, não nas condições de liberdade individual. A alternativa [C] está incorreta pois o Ubuntu se opõe à valorização da individualidade, priorizando a interdependência entre os seres humanos. A alternativa [D] está incorreta pois o texto não enfatiza elementos de racionalidade, mas sim uma ética comunitária baseada na experiência vivida."
   },
   {
-    "id": "enem-227",
+    "id": "enem-202",
     "volume": 7,
     "number": "13",
     "source": "Enem PPL 2024",
@@ -7320,7 +6559,7 @@
     "justificativa": "A alternativa [A] está incorreta pois o museu não tem relação com jornalismo policial, mas sim com a preservação da memória da comunidade. A alternativa [B] está incorreta pois o foco do museu não é a conservação de edificações civis, mas sim a história e a identidade da Favela da Maré. A alternativa [C] está incorreta pois o museu não tem como objetivo manter ou influenciar a opinião pública, mas sim resgatar a memória da comunidade. A alternativa [D] está incorreta pois a identidade artística não é o foco principal da exposição, que busca representar a história e a cultura da favela por meio de objetos e relatos."
   },
   {
-    "id": "enem-228",
+    "id": "enem-203",
     "volume": 7,
     "number": "14",
     "source": "Enem PPL 2024",
@@ -7353,7 +6592,7 @@
     "justificativa": "Apenas a alternativa [C] está correta pois Sepúlveda reproduz uma visão etnocêntrica ao considerar os indígenas inferiores e justificar sua submissão. Tal visão, muito comum no contexto de colonização americana, revela o etnocentrismo característico desse período. A alternativa [A] está incorreta pois Sepúlveda não aceitava a diversidade, mas sim defendia a superioridade europeia e a guerra contra os indígenas. A alternativa [B] está incorreta pois o reconhecimento da alteridade pressupõe entender o outro em sua própria cultura, enquanto Sepúlveda nega essa possibilidade. A alternativa [D] está incorreta pois o texto não trata do compartilhamento de recursos ou bens entre europeus e indígenas. A alternativa [E] está incorreta pois não há uma convergência de crenças religiosas, mas sim um conflito de visões sobre os indígenas."
   },
   {
-    "id": "enem-229",
+    "id": "enem-204",
     "volume": 7,
     "number": "15",
     "source": "Enem PPL 2020",
@@ -7386,7 +6625,7 @@
     "justificativa": "De acordo com o texto, a civilização é baseada pela identidade comum que os grupos sociais compartilham, apesar das diferenças que possam ter entre si, exatamente como está descrito na alternativa [E]."
   },
   {
-    "id": "enem-230",
+    "id": "enem-205",
     "volume": 7,
     "number": "16",
     "source": "Enem PPL 2017",
@@ -7419,7 +6658,7 @@
     "justificativa": "A demanda por batizar os indígenas aparece, no texto, como uma forma de fazer o índio ser reconhecido como humano. Assim, o cacique Aniceto demonstra utilizar a religiosidade cristã como estratégia para que os índios de sua tribo sejam reconhecidos socialmente."
   },
   {
-    "id": "enem-231",
+    "id": "enem-206",
     "volume": 7,
     "number": "17",
     "source": "Enem PPL 2016",
@@ -7452,7 +6691,7 @@
     "justificativa": "Para as ciências sociais, pelo fato de existirem diversas culturas, não podemos chegar a um consenso do que seria a Justiça. Assim sendo, todas as nossas ações práticas dependem de uma predisposição para negociarmos uma vida em comum. Somente assim podemos conviver de forma pacífica com o diferente."
   },
   {
-    "id": "enem-232",
+    "id": "enem-207",
     "volume": 7,
     "number": "18",
     "source": "Enem PPL 2011",
@@ -7469,9 +6708,17 @@
       {
         "type": "label",
         "text": "Texto II"
+      },
+      {
+        "type": "paragraph",
+        "text": "Em sentido antropológico, não falamos em Cultura, no singular, mas em culturas, no plural, pois a lei, os valores, as crenças, as práticas, as instituições variam de formação social para formação social. Além disso, uma mesma sociedade, por ser temporal e histórica, passa por transformações culturais amplas."
+      },
+      {
+        "type": "citation",
+        "text": "CHAUÍ, M. Convite à Filosofia. São Paulo: Ática, 1995 (fragmento)."
       }
     ],
-    "enunciado": "Em sentido antropológico, não falamos em Cultura, no singular, mas em culturas, no plural, pois a lei, os valores, as crenças, as práticas, as instituições variam de formação social para formação social. Além disso, uma mesma sociedade, por ser temporal e histórica, passa por transformações culturais amplas. CHAUÍ, M. Convite à Filosofia. São Paulo: Ática, 1995 (fragmento). A concepção que perpassa a imagem e o texto parte da premissa de que o respeito à diversidade cultural significa",
+    "enunciado": "A concepção que perpassa a imagem e o texto parte da premissa de que o respeito à diversidade cultural significa",
     "options": {
       "A": "exaltar os elementos de uma cultura.",
       "B": "proteger as minorias culturais.",
@@ -7491,7 +6738,7 @@
     "justificativa": "De fato, não existe somente uma única cultura, mas diversas culturas na humanidade. Por esse motivo não se deve menosprezar a cultura alheia, mas sempre respeitá-la nas suas características. Esse princípio de alteridade é que está descrito na alternativa [E]."
   },
   {
-    "id": "enem-233",
+    "id": "enem-208",
     "volume": 7,
     "number": "19",
     "source": "Enem PPL 2025",
@@ -7524,7 +6771,7 @@
     "justificativa": "A alternativa [A] está incorreta pois a tradição iorubá está associada a matrizes africanas, enquanto o texto se refere a crenças vinculadas aos povos da floresta amazônica. A alternativa [B] está incorreta pois não há referência a sistemas filosóficos orientais, mas a narrativas simbólicas próprias de povos indígenas brasileiros. A alternativa [D] está incorreta pois a defesa da natureza aparece como parte de uma visão de mundo ancestral, e não como uma ideologia moderna construída no campo ambientalista. A alternativa [E] está incorreta pois os “encantados” não derivam de uma cosmologia moderna, mas de concepções tradicionais transmitidas intergeracionalmente no contexto indígena."
   },
   {
-    "id": "enem-234",
+    "id": "enem-209",
     "volume": 7,
     "number": "20",
     "source": "Enem PPL 2023",
@@ -7557,7 +6804,7 @@
     "justificativa": "Apenas a alternativa [D] está correta. O ensino de línguas indígenas desempenha um papel crucial na valorização da tradição cultural das comunidades indígenas. Isto é, o ensino de línguas indígenas vai além do aspecto linguístico, representando um compromisso com a valorização, respeito e preservação das tradições culturais das comunidades indígenas, desempenhando um papel fundamental na construção de sociedades mais inclusivas e culturalmente ricas."
   },
   {
-    "id": "enem-235",
+    "id": "enem-210",
     "volume": 7,
     "number": "21",
     "source": "Enem PPL 2019",
@@ -7590,13 +6837,22 @@
     "justificativa": "O texto questiona o uso dos chamados “registros oficiais” para o estudo dos povos pré-colombianos porque os mesmos foram escritos por aqueles que tinham a função de subjugar tais povos. Logo, a visão desses registros pode não corresponder à realidade ou pode corresponder apenas a uma parte dela. Ao mesmo tempo, o texto identifica a importância do uso das crônicas, feitas em especial por viajantes, para o estudo dos povos ameríndios. O conhecimento antropológico de povos pré-colombianos é bastante difícil de ser desenvolvido de forma rigorosa e científica. A utilização de diversas fontes, incluindo as crônicas, é interessante por possibilitar ao pesquisador construir uma análise e narrativas que vão além dos registros oficiais."
   },
   {
-    "id": "enem-236",
+    "id": "enem-211",
     "volume": 7,
     "number": "22",
     "source": "Enem PPL 2019",
     "tema": null,
-    "blocks": [],
-    "enunciado": "O frevo é uma forma de expressão musical, coreográfica e poética, enraizada no Recife e em Olinda, no estado de Pernambuco. O frevo é formado pela grande mescla de gêneros musicais, danças, capoeira e artesanato. É uma das mais ricas expressões da inventividade e capacidade de realização popular na cultura brasileira. Possui a capacidade de promover a criatividade humana e também o respeito à diversidade cultural. No ano de 2012, a Unesco proclamou o frevo como Patrimônio Imaterial da Humanidade. PORTAL BRASIL. Disponível em: www.brasil.gov.br. Acesso em: 10 fev. 2013. A característica da manifestação cultural descrita que justifica a sua condição de Patrimônio Imaterial da Humanidade é a",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "O frevo é uma forma de expressão musical, coreográfica e poética, enraizada no Recife e em Olinda, no estado de Pernambuco. O frevo é formado pela grande mescla de gêneros musicais, danças, capoeira e artesanato. É uma das mais ricas expressões da inventividade e capacidade de realização popular na cultura brasileira. Possui a capacidade de promover a criatividade humana e também o respeito à diversidade cultural. No ano de 2012, a Unesco proclamou o frevo como Patrimônio Imaterial da Humanidade. PORTAL BRASIL."
+      },
+      {
+        "type": "citation",
+        "text": "Disponível em: www.brasil.gov.br. Acesso em: 10 fev. 2013."
+      }
+    ],
+    "enunciado": "A característica da manifestação cultural descrita que justifica a sua condição de Patrimônio Imaterial da Humanidade é a",
     "options": {
       "A": "conversão dos festejos em produto da elite.",
       "B": "expressão de sentidos construídos coletivamente.",
@@ -7614,7 +6870,7 @@
     "justificativa": "Um patrimônio imaterial corresponde a práticas e saberes de um povo, compartilhados pelos indivíduos e que carregam um importante significado para estes. A única alternativa que está de acordo com essa definição é a [B]."
   },
   {
-    "id": "enem-237",
+    "id": "enem-212",
     "volume": 7,
     "number": "23",
     "source": "Enem PPL 2024",
@@ -7647,7 +6903,7 @@
     "justificativa": "A alternativa [A] está incorreta pois o texto não trata de inovação, mas sim da continuidade de uma prática ancestral. A alternativa [B] está incorreta pois o trançado não é uma apropriação da cultura local, e sim uma tradição africana mantida no Brasil. A alternativa [C] está incorreta pois o texto não sugere rejeição ao presente, mas sim valorização da herança cultural. A alternativa [E] está incorreta pois não se trata de ratificação do senso comum, mas da reafirmação de uma identidade cultural historicamente significativa."
   },
   {
-    "id": "enem-238",
+    "id": "enem-213",
     "volume": 7,
     "number": "24",
     "source": "Enem PPL 2023",
@@ -7680,7 +6936,7 @@
     "justificativa": "Apenas a alternativa [D] está correta. A conquista de uma jovem negra ao ganhar uma medalha de ouro no esporte é socialmente relevante pois representa uma quebra de barreiras raciais, desafiando estereótipos que historicamente marginalizaram pessoas negras no contexto esportivo. Além disso, serve como um poderoso exemplo inspirador para jovens de comunidades marginalizadas, destacando a excelência individual e demonstrando que sucesso e reconhecimento podem ser alcançados quando oportunidades são oferecidas para grupos étnico-raciais. Essas conquistas contribuem para promover a diversidade, a inclusão e a igualdade no cenário esportivo e na sociedade como um todo."
   },
   {
-    "id": "enem-239",
+    "id": "enem-214",
     "volume": 7,
     "number": "25",
     "source": "Enem PPL 2023",
@@ -7727,7 +6983,7 @@
     "justificativa": "As alternativas [B] e [E] estão incorretas pois o texto evidencia que o valor histórico do porto em questão está relacionado ao seu papel no regime escravocrata e no tráfico de escravos africanos para o Brasil. Assim, não se trata de imigrantes estrangeiros ou lusitanos, mas sim de negros escravizados. A alternativa [C] está incorreta pois o texto não menciona a realização de rituais cristianizados. A alternativa [D] está incorreta pois o texto destaca o valor histórico e cultural do porto em questão, não mencionando aspectos arquitetônicos."
   },
   {
-    "id": "enem-240",
+    "id": "enem-215",
     "volume": 7,
     "number": "26",
     "source": "Enem PPL 2023",
@@ -7760,7 +7016,7 @@
     "justificativa": "Apenas a alternativa [B] está correta. O conceito de racismo estrutural refere-se a padrões sistemáticos de discriminação racial que foram incorporados nas instituições, políticas e práticas sociais das sociedades. No caso abordado no enunciado, esse racismo estrutural é resultado do histórico de colonização. Esse tipo de racismo não se limita a atitudes individuais, mas está profundamente enraizado nas estruturas sociais, econômicas e políticas, perpetuando desigualdades com base na raça. Além disso, manifesta-se em formas de pensar e sentir, como no caso da identificação com o colonizador exposto por Fanon."
   },
   {
-    "id": "enem-241",
+    "id": "enem-216",
     "volume": 7,
     "number": "27",
     "source": "Enem PPL 2023",
@@ -7793,7 +7049,7 @@
     "justificativa": "Apenas a alternativa [C] está correta. O trabalho das empregadas domésticas no Brasil reflete uma continuidade de estruturas sociais e econômicas que têm suas raízes no período colonial e escravocrata ou, em outras palavras, na época dos “cativeiros coloniais”. Devemos lembrar que após a abolição da escravidão, em 1888, muitos ex-escravizados, principalmente mulheres, migraram para as cidades e encontraram emprego nas residências como trabalhadoras domésticas, uma das poucas opções disponíveis. Assim, o trabalho doméstico foi historicamente estigmatizado e associado a uma posição inferior na hierarquia social. Essa estigmatização tem raízes na discriminação racial e de gênero que permearam a sociedade brasileira, haja vista a predominância de mulheres negras e de baixa renda nesse setor, evidenciando padrões históricos de discriminação de classe e raça."
   },
   {
-    "id": "enem-242",
+    "id": "enem-217",
     "volume": 7,
     "number": "28",
     "source": "Enem PPL 2017",
@@ -7842,7 +7098,7 @@
     "justificativa": "O ideal de beleza é sempre resultado de relações de poder. Não por acaso predomina, no Brasil, traços brancos sendo considerados os mais bonitos. Os salões de beleza citados no Texto II funcionam exatamente como uma forma de questionar essa situação e valorizar os traços culturais do negro."
   },
   {
-    "id": "enem-243",
+    "id": "enem-218",
     "volume": 7,
     "number": "29",
     "source": "Enem PPL 2016",
