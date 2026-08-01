@@ -398,7 +398,7 @@
       },
       {
         "type": "citation",
-        "text": "WEBER, M. A ciência como vocação. In: GERTH, H.,"
+        "text": "WEBER, M. A ciência como vocação. In: GERTH, H.,."
       },
       {
         "type": "paragraph",
@@ -713,6 +713,38 @@
   {
     "id": "enem-022",
     "volume": 1,
+    "number": "24",
+    "source": "Enem PPL 2014",
+    "tema": "MODIFICAÇÕES NO MUNDO DO TRABALHO NOS SÉCULOS XX E XXI",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "A introdução da organização científica taylorista do trabalho e sua fusão com o fordismo acabaram por representar a forma mais avançada da racionalização capitalista do processo de trabalho ao longo de várias décadas do século XX."
+      },
+      {
+        "type": "citation",
+        "text": "ANTUNES. R. Os sentidos do trabalho: ensaio sobre a afirmação e a negação do trabalho. São Paulo: Boitempo, 2009 (adaptado)."
+      }
+    ],
+    "enunciado": "O objetivo desse modelo de organização do trabalho é o alcance da eficiência máxima no processo produtivo industrial que, para tanto,",
+    "options": {
+      "A": "adota estruturas de produção horizontalizadas, privilegiando as terceirizações.",
+      "B": "requer trabalhadores qualificados, polivalentes e aptos para as oscilações da demanda.",
+      "C": "procede à produção em pequena escala, mantendo os estoques baixos e a demanda crescente.",
+      "D": "decompõe a produção em tarefas fragmentadas e repetitivas, complementares na construção do produto.",
+      "E": "outorga aos trabalhadores a extensão da jornada de trabalho para que eles definam o ritmo de execução de suas tarefas."
+    },
+    "images": [],
+    "topicos": [
+      "trabalho",
+      "economia-sociedade-contemporanea",
+      "sistema-capitalista"
+    ],
+    "correctAnswer": "D"
+  },
+  {
+    "id": "enem-023",
+    "volume": 1,
     "number": "25",
     "source": "Enem 2013",
     "tema": "MODIFICAÇÕES NO MUNDO DO TRABALHO NOS SÉCULOS XX E XXI",
@@ -743,7 +775,7 @@
     "correctAnswer": "E"
   },
   {
-    "id": "enem-023",
+    "id": "enem-024",
     "volume": 1,
     "number": "27",
     "source": "Enem 2021",
@@ -774,7 +806,7 @@
     "correctAnswer": "D"
   },
   {
-    "id": "enem-024",
+    "id": "enem-025",
     "volume": 1,
     "number": "28",
     "source": "Enem digital 2020",
@@ -806,7 +838,7 @@
     "correctAnswer": "D"
   },
   {
-    "id": "enem-025",
+    "id": "enem-026",
     "volume": 1,
     "number": "29",
     "source": "Enem 2017",
@@ -838,7 +870,7 @@
     "correctAnswer": "D"
   },
   {
-    "id": "enem-026",
+    "id": "enem-027",
     "volume": 1,
     "number": "31",
     "source": "Enem PPL 2021",
@@ -886,7 +918,7 @@
     "correctAnswer": "B"
   },
   {
-    "id": "enem-027",
+    "id": "enem-028",
     "volume": 1,
     "number": "32",
     "source": "Enem 2021",
@@ -921,7 +953,7 @@
     "correctAnswer": "B"
   },
   {
-    "id": "enem-028",
+    "id": "enem-029",
     "volume": 1,
     "number": "33",
     "source": "Enem digital 2020",
@@ -953,7 +985,7 @@
     "correctAnswer": "D"
   },
   {
-    "id": "enem-029",
+    "id": "enem-030",
     "volume": 1,
     "number": "34",
     "source": "Enem (Libras",
@@ -984,7 +1016,7 @@
     "correctAnswer": "C"
   },
   {
-    "id": "enem-030",
+    "id": "enem-031",
     "volume": 1,
     "number": "35",
     "source": "Enem 2016",
@@ -1016,7 +1048,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-031",
+    "id": "enem-032",
     "volume": 1,
     "number": "36",
     "source": "Enem PPL 2012",
@@ -1048,7 +1080,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-032",
+    "id": "enem-033",
     "volume": 1,
     "number": "37",
     "source": "Enem PPL 2017",
@@ -1096,7 +1128,7 @@
     "correctAnswer": "D"
   },
   {
-    "id": "enem-033",
+    "id": "enem-034",
     "volume": 1,
     "number": "38",
     "source": "Enem PPL 2013",
@@ -1128,7 +1160,7 @@
     "correctAnswer": "D"
   },
   {
-    "id": "enem-034",
+    "id": "enem-035",
     "volume": 1,
     "number": "39",
     "source": "Enem 2021",
@@ -1156,7 +1188,7 @@
     "correctAnswer": "C"
   },
   {
-    "id": "enem-035",
+    "id": "enem-036",
     "volume": 1,
     "number": "40",
     "source": "Enem PPL 2020",
@@ -1187,7 +1219,7 @@
     "correctAnswer": "D"
   },
   {
-    "id": "enem-036",
+    "id": "enem-037",
     "volume": 1,
     "number": "41",
     "source": "Enem (Libras",
@@ -1219,7 +1251,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-037",
+    "id": "enem-038",
     "volume": 1,
     "number": "42",
     "source": "Enem 2ª aplicação 2016",
@@ -1251,7 +1283,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-038",
+    "id": "enem-039",
     "volume": 1,
     "number": "43",
     "source": "Enem 2015",
@@ -1282,7 +1314,7 @@
     "correctAnswer": "B"
   },
   {
-    "id": "enem-039",
+    "id": "enem-040",
     "volume": 1,
     "number": "44",
     "source": "Enem 2023",
@@ -1314,7 +1346,7 @@
     "correctAnswer": "E"
   },
   {
-    "id": "enem-040",
+    "id": "enem-041",
     "volume": 1,
     "number": "45",
     "source": "Enem 2023",
@@ -1354,7 +1386,7 @@
     "correctAnswer": "B"
   },
   {
-    "id": "enem-041",
+    "id": "enem-042",
     "volume": 1,
     "number": "46",
     "source": "ENEM",
@@ -1390,7 +1422,7 @@
     "correctAnswer": "D"
   },
   {
-    "id": "enem-042",
+    "id": "enem-043",
     "volume": 1,
     "number": "47",
     "source": "Enem 2023",
@@ -1422,7 +1454,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-043",
+    "id": "enem-044",
     "volume": 1,
     "number": "48",
     "source": "ENEM 2024",
@@ -1453,7 +1485,7 @@
     "correctAnswer": "C"
   },
   {
-    "id": "enem-044",
+    "id": "enem-045",
     "volume": 1,
     "number": "49",
     "source": "ENEM",
@@ -1485,7 +1517,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-045",
+    "id": "enem-046",
     "volume": 1,
     "number": "50",
     "source": "ENEM",
@@ -1517,7 +1549,7 @@
     "correctAnswer": "B"
   },
   {
-    "id": "enem-046",
+    "id": "enem-047",
     "volume": 2,
     "number": "01",
     "source": "Enem PPL 2021",
@@ -1549,7 +1581,7 @@
     "correctAnswer": "B"
   },
   {
-    "id": "enem-047",
+    "id": "enem-048",
     "volume": 2,
     "number": "02",
     "source": "Enem digital 2020",
@@ -1581,7 +1613,7 @@
     "correctAnswer": "E"
   },
   {
-    "id": "enem-048",
+    "id": "enem-049",
     "volume": 2,
     "number": "03",
     "source": "Enem 2020",
@@ -1613,7 +1645,7 @@
     "correctAnswer": "E"
   },
   {
-    "id": "enem-049",
+    "id": "enem-050",
     "volume": 2,
     "number": "04",
     "source": "Enem 2019",
@@ -1645,7 +1677,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-050",
+    "id": "enem-051",
     "volume": 2,
     "number": "05",
     "source": "Enem 2ª aplicação 2016",
@@ -1689,7 +1721,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-051",
+    "id": "enem-052",
     "volume": 2,
     "number": "06",
     "source": "Enem PPL 2012",
@@ -1721,7 +1753,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-052",
+    "id": "enem-053",
     "volume": 2,
     "number": "07",
     "source": "Enem PPL 2014",
@@ -1753,7 +1785,7 @@
     "correctAnswer": "D"
   },
   {
-    "id": "enem-053",
+    "id": "enem-054",
     "volume": 2,
     "number": "08",
     "source": "ENEM PPL 2022",
@@ -1785,7 +1817,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-054",
+    "id": "enem-055",
     "volume": 2,
     "number": "09",
     "source": "ENEM",
@@ -1813,7 +1845,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-055",
+    "id": "enem-056",
     "volume": 2,
     "number": "10",
     "source": "ENEM 2ª aplic. 2022",
@@ -1845,7 +1877,7 @@
     "correctAnswer": "D"
   },
   {
-    "id": "enem-056",
+    "id": "enem-057",
     "volume": 2,
     "number": "11",
     "source": "Enem 2022",
@@ -1873,7 +1905,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-057",
+    "id": "enem-058",
     "volume": 2,
     "number": "12",
     "source": "Enem 2018",
@@ -1901,7 +1933,7 @@
     "correctAnswer": "C"
   },
   {
-    "id": "enem-058",
+    "id": "enem-059",
     "volume": 2,
     "number": "13",
     "source": "Enem 2014",
@@ -1933,7 +1965,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-059",
+    "id": "enem-060",
     "volume": 2,
     "number": "14",
     "source": "Enem PPL 2014",
@@ -1969,7 +2001,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-060",
+    "id": "enem-061",
     "volume": 2,
     "number": "15",
     "source": "Enem PPL 2013",
@@ -2001,7 +2033,7 @@
     "correctAnswer": "C"
   },
   {
-    "id": "enem-061",
+    "id": "enem-062",
     "volume": 2,
     "number": "16",
     "source": "UNICAMP 2025",
@@ -2028,7 +2060,7 @@
     "correctAnswer": "D"
   },
   {
-    "id": "enem-062",
+    "id": "enem-063",
     "volume": 2,
     "number": "17",
     "source": "UECE 2023",
@@ -2055,7 +2087,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-063",
+    "id": "enem-064",
     "volume": 2,
     "number": "18",
     "source": "UECE 2022",
@@ -2082,7 +2114,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-064",
+    "id": "enem-065",
     "volume": 2,
     "number": "19",
     "source": "Enem PPL 2021",
@@ -2114,7 +2146,7 @@
     "correctAnswer": "C"
   },
   {
-    "id": "enem-065",
+    "id": "enem-066",
     "volume": 2,
     "number": "20",
     "source": "Enem 2021",
@@ -2142,7 +2174,7 @@
     "correctAnswer": "C"
   },
   {
-    "id": "enem-066",
+    "id": "enem-067",
     "volume": 2,
     "number": "21",
     "source": "Enem 2017",
@@ -2170,7 +2202,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-067",
+    "id": "enem-068",
     "volume": 2,
     "number": "22",
     "source": "Enem 2ª aplicação 2014",
@@ -2202,7 +2234,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-068",
+    "id": "enem-069",
     "volume": 2,
     "number": "23",
     "source": "ENEM 2017",
@@ -2230,7 +2262,7 @@
     "correctAnswer": "B"
   },
   {
-    "id": "enem-069",
+    "id": "enem-070",
     "volume": 2,
     "number": "24",
     "source": "ENEM 2012",
@@ -2262,7 +2294,7 @@
     "correctAnswer": "C"
   },
   {
-    "id": "enem-070",
+    "id": "enem-071",
     "volume": 2,
     "number": "25",
     "source": "ENEM 2ª aplicação 2010",
@@ -2294,7 +2326,7 @@
     "correctAnswer": "D"
   },
   {
-    "id": "enem-071",
+    "id": "enem-072",
     "volume": 2,
     "number": "26",
     "source": "Enem digital 2020",
@@ -2326,7 +2358,7 @@
     "correctAnswer": "B"
   },
   {
-    "id": "enem-072",
+    "id": "enem-073",
     "volume": 2,
     "number": "27",
     "source": "Enem PPL 2017",
@@ -2358,7 +2390,7 @@
     "correctAnswer": "D"
   },
   {
-    "id": "enem-073",
+    "id": "enem-074",
     "volume": 2,
     "number": "28",
     "source": "Enem 2017",
@@ -2390,7 +2422,7 @@
     "correctAnswer": "D"
   },
   {
-    "id": "enem-074",
+    "id": "enem-075",
     "volume": 2,
     "number": "29",
     "source": "Enem PPL 2011",
@@ -2422,7 +2454,7 @@
     "correctAnswer": "C"
   },
   {
-    "id": "enem-075",
+    "id": "enem-076",
     "volume": 2,
     "number": "30",
     "source": "Enem 2010",
@@ -2454,7 +2486,7 @@
     "correctAnswer": "E"
   },
   {
-    "id": "enem-076",
+    "id": "enem-077",
     "volume": 2,
     "number": "31",
     "source": "Enem PPL 2009",
@@ -2486,7 +2518,7 @@
     "correctAnswer": "E"
   },
   {
-    "id": "enem-077",
+    "id": "enem-078",
     "volume": 2,
     "number": "32",
     "source": "Enem 2017",
@@ -2518,7 +2550,7 @@
     "correctAnswer": "B"
   },
   {
-    "id": "enem-078",
+    "id": "enem-079",
     "volume": 2,
     "number": "33",
     "source": "Enem PPL 2016",
@@ -2550,7 +2582,7 @@
     "correctAnswer": "D"
   },
   {
-    "id": "enem-079",
+    "id": "enem-080",
     "volume": 3,
     "number": "01",
     "source": "Enem 2018",
@@ -2582,7 +2614,7 @@
     "correctAnswer": "E"
   },
   {
-    "id": "enem-080",
+    "id": "enem-081",
     "volume": 3,
     "number": "04",
     "source": "Enem 2019",
@@ -2610,7 +2642,7 @@
     "correctAnswer": "E"
   },
   {
-    "id": "enem-081",
+    "id": "enem-082",
     "volume": 3,
     "number": "05",
     "source": "Enem PPL 2018",
@@ -2642,7 +2674,7 @@
     "correctAnswer": "B"
   },
   {
-    "id": "enem-082",
+    "id": "enem-083",
     "volume": 3,
     "number": "06",
     "source": "Enem 2ª aplicação 2016",
@@ -2670,7 +2702,7 @@
     "correctAnswer": "B"
   },
   {
-    "id": "enem-083",
+    "id": "enem-084",
     "volume": 3,
     "number": "07",
     "source": "Enem 2ª aplicação 2016",
@@ -2702,7 +2734,7 @@
     "correctAnswer": "B"
   },
   {
-    "id": "enem-084",
+    "id": "enem-085",
     "volume": 3,
     "number": "08",
     "source": "Enem PPL 2015",
@@ -2732,7 +2764,7 @@
     "correctAnswer": "D"
   },
   {
-    "id": "enem-085",
+    "id": "enem-086",
     "volume": 3,
     "number": "09",
     "source": "Enem PPL 2011",
@@ -2764,7 +2796,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-086",
+    "id": "enem-087",
     "volume": 3,
     "number": "10",
     "source": "Enem 2022",
@@ -2796,7 +2828,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-087",
+    "id": "enem-088",
     "volume": 3,
     "number": "11",
     "source": "Enem 2021",
@@ -2838,7 +2870,7 @@
     "correctAnswer": "B"
   },
   {
-    "id": "enem-088",
+    "id": "enem-089",
     "volume": 3,
     "number": "12",
     "source": "Enem 2022",
@@ -2870,7 +2902,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-089",
+    "id": "enem-090",
     "volume": 3,
     "number": "13",
     "source": "Enem 2020",
@@ -2902,7 +2934,7 @@
     "correctAnswer": "B"
   },
   {
-    "id": "enem-090",
+    "id": "enem-091",
     "volume": 3,
     "number": "14",
     "source": "Enem 2022",
@@ -2932,7 +2964,7 @@
     "correctAnswer": "B"
   },
   {
-    "id": "enem-091",
+    "id": "enem-092",
     "volume": 3,
     "number": "16",
     "source": "Enem (Libras",
@@ -2964,7 +2996,7 @@
     "correctAnswer": "E"
   },
   {
-    "id": "enem-092",
+    "id": "enem-093",
     "volume": 3,
     "number": "17",
     "source": "Enem PPL 2014",
@@ -2996,7 +3028,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-093",
+    "id": "enem-094",
     "volume": 3,
     "number": "19",
     "source": "(Enem (Libras",
@@ -3028,7 +3060,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-094",
+    "id": "enem-095",
     "volume": 3,
     "number": "20",
     "source": "Enem PPL 2019",
@@ -3060,7 +3092,7 @@
     "correctAnswer": "E"
   },
   {
-    "id": "enem-095",
+    "id": "enem-096",
     "volume": 3,
     "number": "21",
     "source": "Enem PPL 2017",
@@ -3092,7 +3124,7 @@
     "correctAnswer": "C"
   },
   {
-    "id": "enem-096",
+    "id": "enem-097",
     "volume": 3,
     "number": "22",
     "source": "Enem PPL 2016",
@@ -3124,7 +3156,7 @@
     "correctAnswer": "E"
   },
   {
-    "id": "enem-097",
+    "id": "enem-098",
     "volume": 3,
     "number": "23",
     "source": "Enem PPL 2015",
@@ -3136,7 +3168,7 @@
       },
       {
         "type": "citation",
-        "text": "ARÊDES, N.; SOUZA, I.; FERREIRA, E. Disponível em:"
+        "text": "ARÊDES, N.; SOUZA, I.; FERREIRA, E. Disponível em:."
       },
       {
         "type": "paragraph",
@@ -3160,7 +3192,7 @@
     "correctAnswer": "B"
   },
   {
-    "id": "enem-098",
+    "id": "enem-099",
     "volume": 3,
     "number": "24",
     "source": "Enem 2015",
@@ -3192,7 +3224,7 @@
     "correctAnswer": "B"
   },
   {
-    "id": "enem-099",
+    "id": "enem-100",
     "volume": 3,
     "number": "25",
     "source": "Enem PPL 2013",
@@ -3224,7 +3256,7 @@
     "correctAnswer": "C"
   },
   {
-    "id": "enem-100",
+    "id": "enem-101",
     "volume": 3,
     "number": "26",
     "source": "Enem PPL 2009",
@@ -3256,7 +3288,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-101",
+    "id": "enem-102",
     "volume": 3,
     "number": "27",
     "source": "Enem 2015",
@@ -3288,7 +3320,7 @@
     "correctAnswer": "B"
   },
   {
-    "id": "enem-102",
+    "id": "enem-103",
     "volume": 3,
     "number": "30",
     "source": "Enem 2022",
@@ -3320,7 +3352,7 @@
     "correctAnswer": "D"
   },
   {
-    "id": "enem-103",
+    "id": "enem-104",
     "volume": 3,
     "number": "31",
     "source": "Enem 2ª aplicação 2010",
@@ -3348,7 +3380,7 @@
     "correctAnswer": "E"
   },
   {
-    "id": "enem-104",
+    "id": "enem-105",
     "volume": 3,
     "number": "33",
     "source": "Enem 2016",
@@ -3376,7 +3408,7 @@
     "correctAnswer": "B"
   },
   {
-    "id": "enem-105",
+    "id": "enem-106",
     "volume": 3,
     "number": "37",
     "source": "Enem 2013",
@@ -3408,7 +3440,7 @@
     "correctAnswer": "E"
   },
   {
-    "id": "enem-106",
+    "id": "enem-107",
     "volume": 3,
     "number": "38",
     "source": "Enem 2020",
@@ -3440,7 +3472,7 @@
     "correctAnswer": "E"
   },
   {
-    "id": "enem-107",
+    "id": "enem-108",
     "volume": 3,
     "number": "41",
     "source": "Enem digital 2020",
@@ -3468,7 +3500,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-108",
+    "id": "enem-109",
     "volume": 3,
     "number": "42",
     "source": "Enem PPL 2016",
@@ -3497,7 +3529,7 @@
     "correctAnswer": "E"
   },
   {
-    "id": "enem-109",
+    "id": "enem-110",
     "volume": 3,
     "number": "44",
     "source": "Enem 2ª aplicação 2014",
@@ -3527,7 +3559,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-110",
+    "id": "enem-111",
     "volume": 4,
     "number": "3",
     "source": "Enem PPL 2015",
@@ -3538,7 +3570,7 @@
         "text": "Colonizar, afirmava, em 1912, um eminente jurista, “é relacionar-se com os países novos para tirar benefícios dos recursos de qualquer natureza desses países, aproveitá-los no interesse nacional, e ao mesmo tempo levar às populações primitivas as vantagens da cultura intelectual, social, científica, moral, artística, literária, comercial e industrial, apanágio das raças superiores. A colonização é, pois, um estabelecimento fundado em país novo por uma raça de civilização avançada, para realizar o duplo fim que acabamos de indicar”."
       },
       {
-        "type": "paragraph",
+        "type": "citation",
         "text": "MÉRIGNHAC. Précis de législation et d´économie coloniales. Apud LINHARES, M. Y. A luta contra a Metrópole (Ásia e África). São Paulo: Brasiliense, 1981."
       }
     ],
@@ -3546,8 +3578,8 @@
     "options": {
       "A": "dissimular a prática da exploração mediante a ideia de civilização.",
       "B": "compensar o saque das riquezas mediante a educação formal dos colonos.",
-      "C": "formar uma identidadecolonial mediante a recuperação de sua ancestralidade.",
-      "D": "Reparar o atraso da Colônia mediante a incorporação dos hábitos da Metrópole.",
+      "C": "formar uma identidade colonial mediante a recuperação de sua ancestralidade.",
+      "D": "reparar o atraso da Colônia mediante a incorporação dos hábitos da Metrópole.",
       "E": "promover a elevação cultural da Colônia mediante a incorporação de tradições metropolitanas."
     },
     "images": [],
@@ -3559,7 +3591,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-111",
+    "id": "enem-112",
     "volume": 4,
     "number": "6",
     "source": "Enem 2021",
@@ -3591,7 +3623,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-112",
+    "id": "enem-113",
     "volume": 4,
     "number": "7",
     "source": "ENEM 2024",
@@ -3623,7 +3655,7 @@
     "correctAnswer": "E"
   },
   {
-    "id": "enem-113",
+    "id": "enem-114",
     "volume": 4,
     "number": "8",
     "source": "Enem 2024",
@@ -3655,7 +3687,7 @@
     "correctAnswer": "C"
   },
   {
-    "id": "enem-114",
+    "id": "enem-115",
     "volume": 4,
     "number": "9",
     "source": "Enem 2024",
@@ -3687,7 +3719,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-115",
+    "id": "enem-116",
     "volume": 4,
     "number": "10",
     "source": "Enem 2024",
@@ -3719,7 +3751,7 @@
     "correctAnswer": "D"
   },
   {
-    "id": "enem-116",
+    "id": "enem-117",
     "volume": 4,
     "number": "11",
     "source": "Enem 2024",
@@ -3751,7 +3783,7 @@
     "correctAnswer": "D"
   },
   {
-    "id": "enem-117",
+    "id": "enem-118",
     "volume": 4,
     "number": "12",
     "source": "Enem 2024",
@@ -3783,7 +3815,7 @@
     "correctAnswer": "B"
   },
   {
-    "id": "enem-118",
+    "id": "enem-119",
     "volume": 4,
     "number": "13",
     "source": "Enem 2023",
@@ -3815,7 +3847,7 @@
     "correctAnswer": "C"
   },
   {
-    "id": "enem-119",
+    "id": "enem-120",
     "volume": 4,
     "number": "14",
     "source": "Enem 2023",
@@ -3847,7 +3879,7 @@
     "correctAnswer": "E"
   },
   {
-    "id": "enem-120",
+    "id": "enem-121",
     "volume": 4,
     "number": "15",
     "source": "Enem 2022",
@@ -3879,7 +3911,7 @@
     "correctAnswer": "C"
   },
   {
-    "id": "enem-121",
+    "id": "enem-122",
     "volume": 4,
     "number": "17",
     "source": "Enem 2014",
@@ -3911,7 +3943,7 @@
     "correctAnswer": "D"
   },
   {
-    "id": "enem-122",
+    "id": "enem-123",
     "volume": 4,
     "number": "18",
     "source": "Enem 2021",
@@ -3959,7 +3991,7 @@
     "correctAnswer": "C"
   },
   {
-    "id": "enem-123",
+    "id": "enem-124",
     "volume": 4,
     "number": "22",
     "source": "Enem 2021",
@@ -3991,7 +4023,7 @@
     "correctAnswer": "B"
   },
   {
-    "id": "enem-124",
+    "id": "enem-125",
     "volume": 4,
     "number": "23",
     "source": "Enem 2021",
@@ -4023,7 +4055,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-125",
+    "id": "enem-126",
     "volume": 4,
     "number": "24",
     "source": "Enem 2021",
@@ -4034,7 +4066,7 @@
         "text": "Famoso por ser o encantador de viúvas da cidade de Cabaceiras, na Paraíba, Zé de Sila é um contador de histórias parecido com o personagem Chico, do Auto da Compadecida. Ele defende veementemente que a oração da avó sustentava mais a chuva. \"Quando era pequeno e chovia por aqui, ajudava minha avó colocando os pratos emborcados no terreiro para diminuir o vento. Ela fazia isso e rezava para a chuva durar mais\", diz Zé de Sila."
       },
       {
-        "type": "paragraph",
+        "type": "citation",
         "text": "GALDINO, V.; BARBOSA, R. C. Artistas por um dia? João Pessoa: Editora Universitária, 2009."
       }
     ],
@@ -4055,7 +4087,7 @@
     "correctAnswer": "B"
   },
   {
-    "id": "enem-126",
+    "id": "enem-127",
     "volume": 4,
     "number": "25",
     "source": "Enem 2016",
@@ -4083,7 +4115,7 @@
     "correctAnswer": "E"
   },
   {
-    "id": "enem-127",
+    "id": "enem-128",
     "volume": 4,
     "number": "26",
     "source": "Enem PPL 2011",
@@ -4115,7 +4147,7 @@
     "correctAnswer": "E"
   },
   {
-    "id": "enem-128",
+    "id": "enem-129",
     "volume": 4,
     "number": "29",
     "source": "Enem 2ª aplicação 2014",
@@ -4147,7 +4179,7 @@
     "correctAnswer": "D"
   },
   {
-    "id": "enem-129",
+    "id": "enem-130",
     "volume": 4,
     "number": "30",
     "source": "Enem 2024",
@@ -4158,7 +4190,7 @@
         "text": "Uma das principais atividades provocadas pela arte, a reflexão, e abandonada pela indústria cultural. A indústria cultural seria como uma isca que ilude os indivíduos, com o sonho de que eles são livres, originais, únicos e especiais quando, na verdade, os trata como servos e partes de uma massa homogênea."
       },
       {
-        "type": "paragraph",
+        "type": "citation",
         "text": "FONTES, B.; MAGALHÃES, R. O que é indústria cultural? In: BODART, C. N. (Org.). Conceitos e categorias do ensino de sociologia. Maceió: Café com Sociologia, 2021 (adaptado)."
       }
     ],
@@ -4179,7 +4211,7 @@
     "correctAnswer": "B"
   },
   {
-    "id": "enem-130",
+    "id": "enem-131",
     "volume": 4,
     "number": "31",
     "source": "Enem 2023",
@@ -4190,8 +4222,8 @@
         "text": "A diversão e o prolongamento do trabalho sob o capitalismo tardio. Ela é procurada por quem quer escapar ao processo de trabalho mecanizado para se pôr de novo em condições de enfrentá-lo. Mas, ao mesmo tempo, a mecanização atingiu um tal poderio sobre a pessoa em seu lazer e sobre a sua felicidade, ela determina tão profundamente a fabricação das mercadorias destinadas a diversão que essa pessoa não pode mais perceber outra coisa senão as copias que reproduzem o próprio processo de trabalho."
       },
       {
-        "type": "paragraph",
-        "text": "ADORNO, T; HORKHEIMER, M. Dialética do esclarecimento. Rio de Janeiro: Zahar, 1997"
+        "type": "citation",
+        "text": "ADORNO, T; HORKHEIMER, M. Dialética do esclarecimento. Rio de Janeiro: Zahar, 1997."
       }
     ],
     "enunciado": "No texto, o tempo livre é concebido como",
@@ -4211,7 +4243,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-131",
+    "id": "enem-132",
     "volume": 5,
     "number": "2",
     "source": "ENEM 2021",
@@ -4243,7 +4275,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-132",
+    "id": "enem-133",
     "volume": 5,
     "number": "3",
     "source": "ENEM 2013",
@@ -4273,7 +4305,7 @@
     "correctAnswer": "E"
   },
   {
-    "id": "enem-133",
+    "id": "enem-134",
     "volume": 5,
     "number": "4",
     "source": "UNICAMP 2021",
@@ -4304,7 +4336,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-134",
+    "id": "enem-135",
     "volume": 5,
     "number": "5",
     "source": "UEMA 2021",
@@ -4315,7 +4347,7 @@
         "text": "Uma ideologia não nasce do nada, nem repousa no vazio, mas exprime, de maneira invertida, dissimulada e imaginária, a práxis social e histórica concreta. Isso se aplica à ideologia democrática. Em outras palavras, há, na prática democrática e nas ideias democráticas, uma profundidade e uma verdade muito maiores e superiores ao que a ideologia democrática pertence e deixa perceber. O que significam as eleições? Muito mais do que mera rotatividade de governo ou alternância no poder. Simbolizam o essencial da democracia: que o poder não se identifica com os ocupantes do governo, não lhes pertence, mas é sempre um lugar vazio, que o cidadão, periodicamente, preenche com um representante, podendo revogar seu mandato se não cumprir o que lhe foi delegado para representar."
       },
       {
-        "type": "paragraph",
+        "type": "citation",
         "text": "CHAUÍ, Marilena. Filosofia. São Paulo: Ática, 2007."
       }
     ],
@@ -4336,7 +4368,7 @@
     "correctAnswer": "E"
   },
   {
-    "id": "enem-135",
+    "id": "enem-136",
     "volume": 5,
     "number": "6",
     "source": "UEMA 2020",
@@ -4370,7 +4402,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-136",
+    "id": "enem-137",
     "volume": 5,
     "number": "7",
     "source": "UERJ 2019",
@@ -4407,7 +4439,7 @@
     "correctAnswer": "D"
   },
   {
-    "id": "enem-137",
+    "id": "enem-138",
     "volume": 5,
     "number": "8",
     "source": "ENEM PPL 2018",
@@ -4418,8 +4450,8 @@
         "text": "A maioria das necessidades comuns de descansar, distrair-se, comportar-se, amar e odiar o que os outros amam e odeiam pertence a essa categoria de falsas necessidades. Tais necessidades têm um conteúdo e uma função determinada por forças externas, sobre as quais o indivíduo não tem controle algum."
       },
       {
-        "type": "paragraph",
-        "text": "MARCUSE, H. A ideologia da sociedade industrial: o homem unidimensional. Rio de Janeiro: Zahar, 1979.."
+        "type": "citation",
+        "text": "MARCUSE, H. A ideologia da sociedade industrial: o homem unidimensional. Rio de Janeiro: Zahar, 1979."
       }
     ],
     "enunciado": "Segundo Marcuse, um dos pesquisadores da chamada Escola de Frankfurt, tais forças externas são resultantes de",
@@ -4439,7 +4471,7 @@
     "correctAnswer": "D"
   },
   {
-    "id": "enem-138",
+    "id": "enem-139",
     "volume": 5,
     "number": "9",
     "source": "ENEM PPL 2016",
@@ -4471,7 +4503,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-139",
+    "id": "enem-140",
     "volume": 5,
     "number": "10",
     "source": "ENEM PPL 2016",
@@ -4503,7 +4535,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-140",
+    "id": "enem-141",
     "volume": 5,
     "number": "11",
     "source": "UECE 2025",
@@ -4525,7 +4557,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-141",
+    "id": "enem-142",
     "volume": 5,
     "number": "12",
     "source": "ENEM PPL 2024",
@@ -4557,7 +4589,7 @@
     "correctAnswer": "C"
   },
   {
-    "id": "enem-142",
+    "id": "enem-143",
     "volume": 5,
     "number": "13",
     "source": "ENEM PPL 2024",
@@ -4568,7 +4600,7 @@
         "text": "Quando se pensa que há três décadas a obtenção de uma posição geográfica em qualquer lugar do mundo estava nas mãos de profissionais especializados, engenheiros e geógrafos, que precisavam de equipamentos sofisticados para realizarem medições que levavam dias e meses, sem contar com o tempo dedicado ao cálculo das coordenadas, é surpreendente a constatação de que qualquer um de nós com um simples smartphone obtém hoje essa posição em poucos segundos."
       },
       {
-        "type": "paragraph",
+        "type": "citation",
         "text": "COSTA, S. M. A.; FORTES, L. P. S. A evolução da geodésia: da observação às estrelas aos satélites. Revista Brasileira de Geografia, n. 1, jan.-jun. 2019."
       }
     ],
@@ -4589,7 +4621,7 @@
     "correctAnswer": "D"
   },
   {
-    "id": "enem-143",
+    "id": "enem-144",
     "volume": 5,
     "number": "14",
     "source": "ENEM PPL2023",
@@ -4621,7 +4653,7 @@
     "correctAnswer": "C"
   },
   {
-    "id": "enem-144",
+    "id": "enem-145",
     "volume": 5,
     "number": "15",
     "source": "UECE 2022",
@@ -4648,7 +4680,7 @@
     "correctAnswer": "C"
   },
   {
-    "id": "enem-145",
+    "id": "enem-146",
     "volume": 5,
     "number": "16",
     "source": "ENEM PPL 2020",
@@ -4678,7 +4710,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-146",
+    "id": "enem-147",
     "volume": 5,
     "number": "17",
     "source": "UFU 2019",
@@ -4693,7 +4725,7 @@
         "text": "Segundo alguns teóricos, há múltiplas possibilidades de orientação para a vida em que o uso de tecnologias age sobre as ações dos indivíduos. Para Sales (2014), a juventude, particularmente, \"estabelece um vínculo com a tecnologia da ordem da impregnação e da composição. Símbolos compartilhados no ciberespaço geram significados e referenciam atitudes e posturas das pessoas tanto quanto sinais e gestos do encontro físico.\""
       },
       {
-        "type": "paragraph",
+        "type": "citation",
         "text": "SALES, Shirlei Rezende. Tecnologias digitais e juventude ciborgue: alguns desafios para o currículo do Ensino Médio. In: DAYRELL, Juarez, CARRANO, Paulo e MAIA, Carla Linhares (Org.). Juventude e Ensino Médio: sujeitos e currículos em diálogo. Belo Horizonte: Editora UFMG, 2014. p. 234."
       }
     ],
@@ -4715,7 +4747,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-147",
+    "id": "enem-148",
     "volume": 5,
     "number": "18",
     "source": "ENEM PPL 2018",
@@ -4747,7 +4779,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-148",
+    "id": "enem-149",
     "volume": 5,
     "number": "19",
     "source": "ENEM 2011",
@@ -4779,7 +4811,7 @@
     "correctAnswer": "C"
   },
   {
-    "id": "enem-149",
+    "id": "enem-150",
     "volume": 5,
     "number": "20",
     "source": "ENEM PPL 2024",
@@ -4807,7 +4839,7 @@
     "correctAnswer": "D"
   },
   {
-    "id": "enem-150",
+    "id": "enem-151",
     "volume": 5,
     "number": "21",
     "source": "Provão Paulista 2-2023",
@@ -4839,7 +4871,7 @@
     "correctAnswer": "D"
   },
   {
-    "id": "enem-151",
+    "id": "enem-152",
     "volume": 5,
     "number": "22",
     "source": "ENEM PPL 2022",
@@ -4871,7 +4903,7 @@
     "correctAnswer": "B"
   },
   {
-    "id": "enem-152",
+    "id": "enem-153",
     "volume": 5,
     "number": "23",
     "source": "ENEM PPL - 2023",
@@ -4916,7 +4948,7 @@
     "correctAnswer": "C"
   },
   {
-    "id": "enem-153",
+    "id": "enem-154",
     "volume": 5,
     "number": "24",
     "source": "ENEM 2023",
@@ -4948,7 +4980,7 @@
     "correctAnswer": "E"
   },
   {
-    "id": "enem-154",
+    "id": "enem-155",
     "volume": 5,
     "number": "25",
     "source": "ENEM 2019",
@@ -4980,7 +5012,7 @@
     "correctAnswer": "D"
   },
   {
-    "id": "enem-155",
+    "id": "enem-156",
     "volume": 5,
     "number": "26",
     "source": "Enem 2019",
@@ -5012,7 +5044,7 @@
     "correctAnswer": "C"
   },
   {
-    "id": "enem-156",
+    "id": "enem-157",
     "volume": 5,
     "number": "27",
     "source": "Enem 2010",
@@ -5044,7 +5076,7 @@
     "correctAnswer": "E"
   },
   {
-    "id": "enem-157",
+    "id": "enem-158",
     "volume": 5,
     "number": "29",
     "source": "ENEM",
@@ -5074,7 +5106,7 @@
     "correctAnswer": "D"
   },
   {
-    "id": "enem-158",
+    "id": "enem-159",
     "volume": 5,
     "number": "30",
     "source": "ENEM 2021",
@@ -5085,7 +5117,7 @@
         "text": "Houve crescimento de 74% da população brasileira encarcerada entre 2005 e 2012. As análises possibilitaram identificar o perfil da população que está nas prisões do país: homens, jovens (abaixo de 29 anos), negros, com ensino fundamental incompleto, acusados de crimes patrimoniais e, no caso dos presos adultos, condenados e cumprindo regime fechado e, majoritariamente, com penas de quatro até oito anos."
       },
       {
-        "type": "paragraph",
+        "type": "citation",
         "text": "BRASIL. Mapa do encarceramento: os jovens do Brasil. Brasília: Presidência da República, 2015."
       }
     ],
@@ -5106,7 +5138,7 @@
     "correctAnswer": "B"
   },
   {
-    "id": "enem-159",
+    "id": "enem-160",
     "volume": 5,
     "number": "31",
     "source": "ENEM",
@@ -5117,7 +5149,7 @@
         "text": "Para aquela escola positivista, o crime não era um problema exclusivamente moral, como advogavam os reformadores iluministas do sistema penal europeu. Ao contrário, tratava-se de um problema de natureza médica, com conotações psicológicas e sociológicas. Em decorrência, havia disposições inatas para o crime, tais como a constituição biológica ou a agressividade. Sob esta ótica, caberia à ciência preparar-se para intervir, \"corrigindo\" a natureza delinquente de alguns seres humanos. [...] Em outras palavras, se havia casos natos de \"patologia criminal\", sua maior incidência deveria ocorrer entre as raças \"inferiores\". No Brasil, naquele mesmo período, formularam-se teorias que apoiavam ou a hipótese da inferioridade e submissão racial dos negros como foram as teses de Nina Rodrigues (1862-1906), Euclides da Cunha e Oliveira Viana (1883-1951) ou a hipótese de seu atraso cultural, defendida, entre outros, por Artur Ramos (1903-1949) e Nelson Hungria."
       },
       {
-        "type": "paragraph",
+        "type": "citation",
         "text": "ADORNO, S. Racismo. Criminalidade Violenta e Justiça Penal: Réus Brancos e Negros em Perspectiva Comparativa. Estudos Históricos, Rio de Janeiro, n. 18, 1996. (Fragmento)."
       }
     ],
@@ -5137,7 +5169,7 @@
     "correctAnswer": "C"
   },
   {
-    "id": "enem-160",
+    "id": "enem-161",
     "volume": 5,
     "number": "34",
     "source": "ENEM 2023",
@@ -5169,7 +5201,7 @@
     "correctAnswer": "C"
   },
   {
-    "id": "enem-161",
+    "id": "enem-162",
     "volume": 5,
     "number": "35",
     "source": "ENEM 2023",
@@ -5201,7 +5233,7 @@
     "correctAnswer": "D"
   },
   {
-    "id": "enem-162",
+    "id": "enem-163",
     "volume": 5,
     "number": "38",
     "source": "ENEM 2016",
@@ -5247,7 +5279,7 @@
     "correctAnswer": "D"
   },
   {
-    "id": "enem-163",
+    "id": "enem-164",
     "volume": 5,
     "number": "39",
     "source": "UEMA 2015",
@@ -5281,7 +5313,7 @@
     "correctAnswer": "E"
   },
   {
-    "id": "enem-164",
+    "id": "enem-165",
     "volume": 5,
     "number": "40",
     "source": "ENEM 2017",
@@ -5313,7 +5345,7 @@
     "correctAnswer": "C"
   },
   {
-    "id": "enem-165",
+    "id": "enem-166",
     "volume": 6,
     "number": "2",
     "source": "UFU-MG",
@@ -5325,7 +5357,7 @@
       },
       {
         "type": "citation",
-        "text": "Disponível em: <http://www1.folha.uol.com.br/"
+        "text": "Disponível em: <http://www1.folha.uol.com.br/."
       },
       {
         "type": "paragraph",
@@ -5348,7 +5380,7 @@
     "correctAnswer": "C"
   },
   {
-    "id": "enem-166",
+    "id": "enem-167",
     "volume": 6,
     "number": "3",
     "source": "UEMA",
@@ -5380,7 +5412,7 @@
     "correctAnswer": "E"
   },
   {
-    "id": "enem-167",
+    "id": "enem-168",
     "volume": 6,
     "number": "4",
     "source": "ENEM 2016",
@@ -5424,7 +5456,7 @@
     "correctAnswer": "B"
   },
   {
-    "id": "enem-168",
+    "id": "enem-169",
     "volume": 6,
     "number": "5",
     "source": "ENEM PPL 2015",
@@ -5456,7 +5488,7 @@
     "correctAnswer": "C"
   },
   {
-    "id": "enem-169",
+    "id": "enem-170",
     "volume": 6,
     "number": "6",
     "source": "UEA 2023",
@@ -5484,7 +5516,7 @@
     "correctAnswer": "E"
   },
   {
-    "id": "enem-170",
+    "id": "enem-171",
     "volume": 6,
     "number": "8",
     "source": "Uerj 2025",
@@ -5525,7 +5557,7 @@
     "correctAnswer": "B"
   },
   {
-    "id": "enem-171",
+    "id": "enem-172",
     "volume": 6,
     "number": "9",
     "source": "UFPR 2025",
@@ -5553,7 +5585,66 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-172",
+    "id": "enem-173",
+    "volume": 6,
+    "number": "10",
+    "source": "UECE 2023",
+    "tema": "Consumo e estilos de vida",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "Na história recente do Brasil, quando a juventude é tida como problema social, ela apareceu na figura do perigo, do risco ou da regressão às drogas, à promiscuidade e à violência. De modo esquemático, pode-se dizer que tais imagens sobre a juventude foram usadas como motes e justificativas de muitos programas socioeducativos, de leis, de ações do Terceiro Setor – as organizações não governamentais (ONGs) – e de fundações empresariais em áreas ditas como “vulneráveis” desde os anos 1990. Contudo, existe uma outra concepção sobre a juventude que a encara como sujeito social capaz de refletir e decidir sobre sua ação, ter posicionamentos acerca das mais diversas questões sociais e ser protagonista, contribuindo para o crescimento pessoal e da sociedade. Essa concepção deve melhor fundamentar e reformular ações, projetos de leis e programas, privados e públicos, para as juventudes das áreas “vulneráveis”, principalmente, e que possa pensar esses jovens como cidadãos ativos e participativos."
+      }
+    ],
+    "enunciado": "Acerca do exposto, marque a alternativa correta.",
+    "options": {
+      "A": "A medida socioeducativa de internação, prevista no Estatuto da Criança e do Adolescente, está embasada na perspectiva da juventude como protagonista.",
+      "B": "Um projeto exemplar embasado na concepção de juventude como sujeito social é o das Unidades de Polícia Pacificadora nas comunidades cariocas.",
+      "C": "A imagem dos jovens como problema, juventude perigosa no Brasil, aparece como elemento importante para leis que projetam a redução da maioridade penal.",
+      "D": "A concepção de juventude como risco está nos programas da Rede Cuca de Fortaleza que incentivam a mobilização dos jovens para a arte e a comunicação."
+    },
+    "images": [],
+    "topicos": [
+      "consumo-estilos-vida",
+      "economia-sociedade-contemporanea",
+      "culturas-juvenis"
+    ],
+    "correctAnswer": "C"
+  },
+  {
+    "id": "enem-174",
+    "volume": 6,
+    "number": "11",
+    "source": "ENEM 2020",
+    "tema": "Ciência e Tecnologia",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "Quando quis agilizar o processo de seleção de novos alunos, a tradicional faculdade britânica de medicina St. George usou um software para definir quem deveria ser entrevistado. Ao reproduzir a forma como os funcionários faziam essa escolha, o programa eliminou, de cara, 60 de 2 000 candidatos. Só por causa do sexo ou da origem racial, numa dedução baseada em sobrenome e local de nascimento. Um estudo sobre o caso foi publicado em 1988, mas, 25 anos depois, outra pesquisa apontou que esse tipo de discriminação segue firme. O exemplo recente envolve o buscador do Google: ao digitar nomes comuns entre negros dos EUA, a chance de os anúncios automáticos oferecerem checagem de antecedentes criminais pode aumentar 25%. E pode piorar com a pergunta “detido?” logo após a palavra procurada."
+      },
+      {
+        "type": "citation",
+        "text": "Disponível em: https://tab.uol.com.br. Acesso em: 11 ago. 2017 (adaptado)."
+      }
+    ],
+    "enunciado": "O texto permite o desnudamento da sociedade ao relacionar as tecnologias de informação e comunicação com o(a)",
+    "options": {
+      "A": "agilidade dos softwares.",
+      "B": "passar dos anos.",
+      "C": "linguagem.",
+      "D": "preconceito.",
+      "E": "educação."
+    },
+    "images": [],
+    "topicos": [
+      "ciencia-tecnologia",
+      "sociabilidades-mundo-digital",
+      "raca"
+    ],
+    "correctAnswer": "D"
+  },
+  {
+    "id": "enem-175",
     "volume": 6,
     "number": "12",
     "source": "ENEM 2019",
@@ -5582,7 +5673,7 @@
     "correctAnswer": "D"
   },
   {
-    "id": "enem-173",
+    "id": "enem-176",
     "volume": 6,
     "number": "13",
     "source": "ENEM",
@@ -5610,7 +5701,7 @@
     "correctAnswer": "C"
   },
   {
-    "id": "enem-174",
+    "id": "enem-177",
     "volume": 6,
     "number": "14",
     "source": "UCS RS 2021",
@@ -5646,7 +5737,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-175",
+    "id": "enem-178",
     "volume": 6,
     "number": "15",
     "source": "ENEM",
@@ -5678,7 +5769,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-176",
+    "id": "enem-179",
     "volume": 6,
     "number": "16",
     "source": "ENEM 2020",
@@ -5716,7 +5807,7 @@
     "correctAnswer": "D"
   },
   {
-    "id": "enem-177",
+    "id": "enem-180",
     "volume": 6,
     "number": "17",
     "source": "ENEM PPL 2019",
@@ -5748,7 +5839,7 @@
     "correctAnswer": "D"
   },
   {
-    "id": "enem-178",
+    "id": "enem-181",
     "volume": 6,
     "number": "18",
     "source": "ENEM 2017",
@@ -5759,7 +5850,7 @@
         "text": "Art. 231. São reconhecidos aos índios sua organização social, costumes, línguas, crenças e tradições, e os direitos originários sobre as terras que tradicionalmente ocupam, competindo à União demarcá-las, proteger e fazer respeitar todos os seus bens."
       },
       {
-        "type": "paragraph",
+        "type": "citation",
         "text": "BRASIL. Constituição da República Federativa do Brasil de 1988. Disponível em: www.planalto.gov.br. Acesso em: 27 abr. 2017."
       }
     ],
@@ -5780,7 +5871,7 @@
     "correctAnswer": "C"
   },
   {
-    "id": "enem-179",
+    "id": "enem-182",
     "volume": 6,
     "number": "19",
     "source": "ENEM 2020",
@@ -5812,7 +5903,7 @@
     "correctAnswer": "C"
   },
   {
-    "id": "enem-180",
+    "id": "enem-183",
     "volume": 6,
     "number": "20",
     "source": "ENEM 2017 2ª aplicação",
@@ -5844,7 +5935,7 @@
     "correctAnswer": "B"
   },
   {
-    "id": "enem-181",
+    "id": "enem-184",
     "volume": 6,
     "number": "21",
     "source": "ENEM 2024",
@@ -5876,7 +5967,7 @@
     "correctAnswer": "C"
   },
   {
-    "id": "enem-182",
+    "id": "enem-185",
     "volume": 6,
     "number": "22",
     "source": "ENEM PPL 2023",
@@ -5907,7 +5998,7 @@
     "correctAnswer": "C"
   },
   {
-    "id": "enem-183",
+    "id": "enem-186",
     "volume": 6,
     "number": "23",
     "source": "ENEM PPL 2023",
@@ -5939,7 +6030,7 @@
     "correctAnswer": "D"
   },
   {
-    "id": "enem-184",
+    "id": "enem-187",
     "volume": 6,
     "number": "24",
     "source": "ENEM 2022",
@@ -5950,7 +6041,7 @@
         "text": "Em Vitória (ES), no bairro Goiabeiras, encontramos as paneleiras, mulheres que são conhecidas pelos saberes/fazeres das tradicionais panelas de barro, ícones da culinária capixaba. A tradição passada de mãe para filha é de origem indígenas e sofreu influência de outras etnias, como a afro e a luso. Dessa mistura, acredita-se que a fabricação das panelas de barros já tenha 400 anos. A fabricação das panelas de barros se dá em várias etapas, desde a obtenção de matéria-prima à confecção das panelas. As matérias-primas tradicionalmente utilizadas são provenientes do meio natural, como: argila, retirada do barreiro no Vale do Mulembá; madeira, atualmente proveniente das sobras da construção civil; e tinta, extraída da casca do manguezal, o popular mangue-vermelho."
       },
       {
-        "type": "paragraph",
+        "type": "citation",
         "text": "TRISTÃO, M, A educação ambiental e o pós-colonialismo. Revista de Educação. n. 53, ago, 2014."
       }
     ],
@@ -5971,7 +6062,7 @@
     "correctAnswer": "A"
   },
   {
-    "id": "enem-185",
+    "id": "enem-188",
     "volume": 6,
     "number": "25",
     "source": "ENEM 2020",
@@ -6009,7 +6100,7 @@
     "correctAnswer": "E"
   },
   {
-    "id": "enem-186",
+    "id": "enem-189",
     "volume": 6,
     "number": "26",
     "source": "ENEM 2016",
@@ -6041,7 +6132,7 @@
     "correctAnswer": "B"
   },
   {
-    "id": "enem-187",
+    "id": "enem-190",
     "volume": 6,
     "number": "27",
     "source": "ENEM 2019",
@@ -6073,7 +6164,7 @@
     "correctAnswer": "E"
   },
   {
-    "id": "enem-188",
+    "id": "enem-191",
     "volume": 6,
     "number": "28",
     "source": "ENEM 2019",
@@ -6105,7 +6196,7 @@
     "correctAnswer": "C"
   },
   {
-    "id": "enem-189",
+    "id": "enem-192",
     "volume": 6,
     "number": "29",
     "source": "ENEM 2017",
@@ -6137,7 +6228,7 @@
     "correctAnswer": "D"
   },
   {
-    "id": "enem-190",
+    "id": "enem-193",
     "volume": 7,
     "number": "1",
     "source": "Enem PPL 2023",
@@ -6168,7 +6259,7 @@
     "justificativa": "Apenas a alternativa [B] está correta. A circulação do tecladista Jon Lord entre gêneros diferentes mostra a quebra de preconceitos e padrões que se estabelecem entre os grupos que ouvem e produzem cada gênero. Esses padrões e barreiras estéticas reforçam distinções culturais que costumam hierarquizar gêneros diferentes de acordo com o prestígio social relacionado a eles. É nesse sentido, por exemplo, que a cultura erudita se diferencia da cultura popular como pretensamente superior. Tal superioridade, no entanto, é apenas uma construção social, ultrapassada pelo músico no exemplo acima."
   },
   {
-    "id": "enem-191",
+    "id": "enem-194",
     "volume": 7,
     "number": "2",
     "source": "Enem PPL 2022",
@@ -6201,7 +6292,7 @@
     "justificativa": "Apenas a alternativa [A] está correta. As demais alternativas estão incorretas pois apresentam atividades que constituem esportes reconhecidos e que, inclusive, são praticados profissionalmente por atletas: voleibol, esgrima, balé e ginástica artística. Assim, essas atividades não podem ser classificadas como “jogos e brincadeiras da cultura popular”."
   },
   {
-    "id": "enem-192",
+    "id": "enem-195",
     "volume": 7,
     "number": "3",
     "source": "Enem PPL 2019",
@@ -6234,7 +6325,7 @@
     "justificativa": "O estranhamento do autor refere-se ao fato de que pessoas simples, caboclas do interior do Nordeste, provavelmente, aprenderam os ritos católicos em latim, prática da Igreja Católica desde os tempos medievais. Em 1975, a Igreja Católica já não utilizava o latim como língua para seus ritos. Assim, uma cerimônia religiosa na qual o povo participa ativamente utilizando-se dessa língua (tal como no período medieval) marca exatamente uma permanência cultural que o autor não esperava encontrar."
   },
   {
-    "id": "enem-193",
+    "id": "enem-196",
     "volume": 7,
     "number": "4",
     "source": "Enem PPL 2017",
@@ -6267,7 +6358,7 @@
     "justificativa": "O reconhecimento da origem identitária da região faz com que se busque resgatar as festividades do local, que teve forte influência afrodescendente."
   },
   {
-    "id": "enem-194",
+    "id": "enem-197",
     "volume": 7,
     "number": "5",
     "source": "Enem PPL 2016",
@@ -6298,7 +6389,7 @@
     "justificativa": "A imagem em questão parece fazer referência a uma prática de Candomblé. O Candomblé apareceu no Brasil como resultado da chegada de africanos escravizados (os migrantes forçados), que portaram consigo suas crenças religiosas. No caso brasileiro, essas crenças se misturaram a crenças cristãs, dando origem a novas formas de vivência religiosa."
   },
   {
-    "id": "enem-195",
+    "id": "enem-198",
     "volume": 7,
     "number": "6",
     "source": "Enem PPL 2014",
@@ -6331,7 +6422,7 @@
     "justificativa": "O texto deixa claro que a importância do ofício das baianas do acarajé é importante não somente pelo seu valor culinário, mas também pelos aspectos religioso e simbólico, tal como descreve, de forma correta, a alternativa [B]."
   },
   {
-    "id": "enem-196",
+    "id": "enem-199",
     "volume": 7,
     "number": "7",
     "source": "Enem PPL 2014",
@@ -6370,7 +6461,7 @@
     "justificativa": "A Estátua do Laçador constitui um bem material de Porto Alegre porque representa um traço histórico-cultural (maneira de se vestir) da população gaúcha. A Estátua do Laçador apresenta a figura de um homem tipicamente gaúcho. Tal tipo de obra artística, ao ser integrada à cidade, assume uma função de memória de uma identidade reconhecida pela população. Por esse motivo, pode muito bem ser considerada uma manifestação histórico-cultural da população."
   },
   {
-    "id": "enem-197",
+    "id": "enem-200",
     "volume": 7,
     "number": "8",
     "source": "Enem PPL 2013",
@@ -6403,7 +6494,7 @@
     "justificativa": "O texto expressa de forma clara o quanto o folclore se atualiza e se modifica cotidianamente. Desta forma, a única alternativa plausível é a [A]."
   },
   {
-    "id": "enem-198",
+    "id": "enem-201",
     "volume": 7,
     "number": "9",
     "source": "Enem PPL 2013",
@@ -6436,7 +6527,7 @@
     "justificativa": "A questão exige basicamente uma boa compreensão e interpretação do texto. Apresentando o Baile Charme, o texto enfatiza a riqueza de sua origem, representada pela diversidade de manifestações culturais ali presentes, que ultrapassam a questão de gênero musical. Desta maneira, a única alternativa correta é a [E]."
   },
   {
-    "id": "enem-199",
+    "id": "enem-202",
     "volume": 7,
     "number": "10",
     "source": "Enem PPL 2012",
@@ -6469,7 +6560,7 @@
     "justificativa": "A alternativa [D] é a única correta. A cultura imaterial (e por consequência o patrimônio imaterial) diz respeito às formas de fazer (como receitas de comida, danças e músicas) relacionadas à forma de vida e identidade do povo de uma determinada região."
   },
   {
-    "id": "enem-200",
+    "id": "enem-203",
     "volume": 7,
     "number": "11",
     "source": "Enem PPL 2009",
@@ -6493,7 +6584,7 @@
     "justificativa": "O texto, de forma geral, demonstra que a arte desenvolvida pelo carteiro não era reconhecida com a mesma dignidade da arte erudita. No contexto brasileiro, isso está relacionado ao preconceito em relação às manifestações culturais populares. O texto retrata que o personagem citado tinha conhecimentos musicais populares, e não eruditos: tocava violão e flauta e compunha acompanhamentos para modinhas. Daí o uso do termo artinha, como se a arte popular fosse menor do que outros tipos de artes musicais."
   },
   {
-    "id": "enem-201",
+    "id": "enem-204",
     "volume": 7,
     "number": "12",
     "source": "Enem PPL 2024",
@@ -6526,7 +6617,7 @@
     "justificativa": "A alternativa [A] está incorreta pois, embora a identidade seja importante, o texto enfatiza a conexão entre as pessoas e não apenas padrões identitários. A alternativa [B] está incorreta pois a ênfase do Ubuntu está na coletividade, não nas condições de liberdade individual. A alternativa [C] está incorreta pois o Ubuntu se opõe à valorização da individualidade, priorizando a interdependência entre os seres humanos. A alternativa [D] está incorreta pois o texto não enfatiza elementos de racionalidade, mas sim uma ética comunitária baseada na experiência vivida."
   },
   {
-    "id": "enem-202",
+    "id": "enem-205",
     "volume": 7,
     "number": "13",
     "source": "Enem PPL 2024",
@@ -6559,7 +6650,7 @@
     "justificativa": "A alternativa [A] está incorreta pois o museu não tem relação com jornalismo policial, mas sim com a preservação da memória da comunidade. A alternativa [B] está incorreta pois o foco do museu não é a conservação de edificações civis, mas sim a história e a identidade da Favela da Maré. A alternativa [C] está incorreta pois o museu não tem como objetivo manter ou influenciar a opinião pública, mas sim resgatar a memória da comunidade. A alternativa [D] está incorreta pois a identidade artística não é o foco principal da exposição, que busca representar a história e a cultura da favela por meio de objetos e relatos."
   },
   {
-    "id": "enem-203",
+    "id": "enem-206",
     "volume": 7,
     "number": "14",
     "source": "Enem PPL 2024",
@@ -6592,7 +6683,7 @@
     "justificativa": "Apenas a alternativa [C] está correta pois Sepúlveda reproduz uma visão etnocêntrica ao considerar os indígenas inferiores e justificar sua submissão. Tal visão, muito comum no contexto de colonização americana, revela o etnocentrismo característico desse período. A alternativa [A] está incorreta pois Sepúlveda não aceitava a diversidade, mas sim defendia a superioridade europeia e a guerra contra os indígenas. A alternativa [B] está incorreta pois o reconhecimento da alteridade pressupõe entender o outro em sua própria cultura, enquanto Sepúlveda nega essa possibilidade. A alternativa [D] está incorreta pois o texto não trata do compartilhamento de recursos ou bens entre europeus e indígenas. A alternativa [E] está incorreta pois não há uma convergência de crenças religiosas, mas sim um conflito de visões sobre os indígenas."
   },
   {
-    "id": "enem-204",
+    "id": "enem-207",
     "volume": 7,
     "number": "15",
     "source": "Enem PPL 2020",
@@ -6625,7 +6716,7 @@
     "justificativa": "De acordo com o texto, a civilização é baseada pela identidade comum que os grupos sociais compartilham, apesar das diferenças que possam ter entre si, exatamente como está descrito na alternativa [E]."
   },
   {
-    "id": "enem-205",
+    "id": "enem-208",
     "volume": 7,
     "number": "16",
     "source": "Enem PPL 2017",
@@ -6658,7 +6749,7 @@
     "justificativa": "A demanda por batizar os indígenas aparece, no texto, como uma forma de fazer o índio ser reconhecido como humano. Assim, o cacique Aniceto demonstra utilizar a religiosidade cristã como estratégia para que os índios de sua tribo sejam reconhecidos socialmente."
   },
   {
-    "id": "enem-206",
+    "id": "enem-209",
     "volume": 7,
     "number": "17",
     "source": "Enem PPL 2016",
@@ -6691,7 +6782,7 @@
     "justificativa": "Para as ciências sociais, pelo fato de existirem diversas culturas, não podemos chegar a um consenso do que seria a Justiça. Assim sendo, todas as nossas ações práticas dependem de uma predisposição para negociarmos uma vida em comum. Somente assim podemos conviver de forma pacífica com o diferente."
   },
   {
-    "id": "enem-207",
+    "id": "enem-210",
     "volume": 7,
     "number": "18",
     "source": "Enem PPL 2011",
@@ -6738,7 +6829,7 @@
     "justificativa": "De fato, não existe somente uma única cultura, mas diversas culturas na humanidade. Por esse motivo não se deve menosprezar a cultura alheia, mas sempre respeitá-la nas suas características. Esse princípio de alteridade é que está descrito na alternativa [E]."
   },
   {
-    "id": "enem-208",
+    "id": "enem-211",
     "volume": 7,
     "number": "19",
     "source": "Enem PPL 2025",
@@ -6771,7 +6862,7 @@
     "justificativa": "A alternativa [A] está incorreta pois a tradição iorubá está associada a matrizes africanas, enquanto o texto se refere a crenças vinculadas aos povos da floresta amazônica. A alternativa [B] está incorreta pois não há referência a sistemas filosóficos orientais, mas a narrativas simbólicas próprias de povos indígenas brasileiros. A alternativa [D] está incorreta pois a defesa da natureza aparece como parte de uma visão de mundo ancestral, e não como uma ideologia moderna construída no campo ambientalista. A alternativa [E] está incorreta pois os “encantados” não derivam de uma cosmologia moderna, mas de concepções tradicionais transmitidas intergeracionalmente no contexto indígena."
   },
   {
-    "id": "enem-209",
+    "id": "enem-212",
     "volume": 7,
     "number": "20",
     "source": "Enem PPL 2023",
@@ -6804,7 +6895,7 @@
     "justificativa": "Apenas a alternativa [D] está correta. O ensino de línguas indígenas desempenha um papel crucial na valorização da tradição cultural das comunidades indígenas. Isto é, o ensino de línguas indígenas vai além do aspecto linguístico, representando um compromisso com a valorização, respeito e preservação das tradições culturais das comunidades indígenas, desempenhando um papel fundamental na construção de sociedades mais inclusivas e culturalmente ricas."
   },
   {
-    "id": "enem-210",
+    "id": "enem-213",
     "volume": 7,
     "number": "21",
     "source": "Enem PPL 2019",
@@ -6837,7 +6928,7 @@
     "justificativa": "O texto questiona o uso dos chamados “registros oficiais” para o estudo dos povos pré-colombianos porque os mesmos foram escritos por aqueles que tinham a função de subjugar tais povos. Logo, a visão desses registros pode não corresponder à realidade ou pode corresponder apenas a uma parte dela. Ao mesmo tempo, o texto identifica a importância do uso das crônicas, feitas em especial por viajantes, para o estudo dos povos ameríndios. O conhecimento antropológico de povos pré-colombianos é bastante difícil de ser desenvolvido de forma rigorosa e científica. A utilização de diversas fontes, incluindo as crônicas, é interessante por possibilitar ao pesquisador construir uma análise e narrativas que vão além dos registros oficiais."
   },
   {
-    "id": "enem-211",
+    "id": "enem-214",
     "volume": 7,
     "number": "22",
     "source": "Enem PPL 2019",
@@ -6870,7 +6961,7 @@
     "justificativa": "Um patrimônio imaterial corresponde a práticas e saberes de um povo, compartilhados pelos indivíduos e que carregam um importante significado para estes. A única alternativa que está de acordo com essa definição é a [B]."
   },
   {
-    "id": "enem-212",
+    "id": "enem-215",
     "volume": 7,
     "number": "23",
     "source": "Enem PPL 2024",
@@ -6903,7 +6994,7 @@
     "justificativa": "A alternativa [A] está incorreta pois o texto não trata de inovação, mas sim da continuidade de uma prática ancestral. A alternativa [B] está incorreta pois o trançado não é uma apropriação da cultura local, e sim uma tradição africana mantida no Brasil. A alternativa [C] está incorreta pois o texto não sugere rejeição ao presente, mas sim valorização da herança cultural. A alternativa [E] está incorreta pois não se trata de ratificação do senso comum, mas da reafirmação de uma identidade cultural historicamente significativa."
   },
   {
-    "id": "enem-213",
+    "id": "enem-216",
     "volume": 7,
     "number": "24",
     "source": "Enem PPL 2023",
@@ -6936,7 +7027,7 @@
     "justificativa": "Apenas a alternativa [D] está correta. A conquista de uma jovem negra ao ganhar uma medalha de ouro no esporte é socialmente relevante pois representa uma quebra de barreiras raciais, desafiando estereótipos que historicamente marginalizaram pessoas negras no contexto esportivo. Além disso, serve como um poderoso exemplo inspirador para jovens de comunidades marginalizadas, destacando a excelência individual e demonstrando que sucesso e reconhecimento podem ser alcançados quando oportunidades são oferecidas para grupos étnico-raciais. Essas conquistas contribuem para promover a diversidade, a inclusão e a igualdade no cenário esportivo e na sociedade como um todo."
   },
   {
-    "id": "enem-214",
+    "id": "enem-217",
     "volume": 7,
     "number": "25",
     "source": "Enem PPL 2023",
@@ -6983,7 +7074,7 @@
     "justificativa": "As alternativas [B] e [E] estão incorretas pois o texto evidencia que o valor histórico do porto em questão está relacionado ao seu papel no regime escravocrata e no tráfico de escravos africanos para o Brasil. Assim, não se trata de imigrantes estrangeiros ou lusitanos, mas sim de negros escravizados. A alternativa [C] está incorreta pois o texto não menciona a realização de rituais cristianizados. A alternativa [D] está incorreta pois o texto destaca o valor histórico e cultural do porto em questão, não mencionando aspectos arquitetônicos."
   },
   {
-    "id": "enem-215",
+    "id": "enem-218",
     "volume": 7,
     "number": "26",
     "source": "Enem PPL 2023",
@@ -7016,7 +7107,7 @@
     "justificativa": "Apenas a alternativa [B] está correta. O conceito de racismo estrutural refere-se a padrões sistemáticos de discriminação racial que foram incorporados nas instituições, políticas e práticas sociais das sociedades. No caso abordado no enunciado, esse racismo estrutural é resultado do histórico de colonização. Esse tipo de racismo não se limita a atitudes individuais, mas está profundamente enraizado nas estruturas sociais, econômicas e políticas, perpetuando desigualdades com base na raça. Além disso, manifesta-se em formas de pensar e sentir, como no caso da identificação com o colonizador exposto por Fanon."
   },
   {
-    "id": "enem-216",
+    "id": "enem-219",
     "volume": 7,
     "number": "27",
     "source": "Enem PPL 2023",
@@ -7049,7 +7140,7 @@
     "justificativa": "Apenas a alternativa [C] está correta. O trabalho das empregadas domésticas no Brasil reflete uma continuidade de estruturas sociais e econômicas que têm suas raízes no período colonial e escravocrata ou, em outras palavras, na época dos “cativeiros coloniais”. Devemos lembrar que após a abolição da escravidão, em 1888, muitos ex-escravizados, principalmente mulheres, migraram para as cidades e encontraram emprego nas residências como trabalhadoras domésticas, uma das poucas opções disponíveis. Assim, o trabalho doméstico foi historicamente estigmatizado e associado a uma posição inferior na hierarquia social. Essa estigmatização tem raízes na discriminação racial e de gênero que permearam a sociedade brasileira, haja vista a predominância de mulheres negras e de baixa renda nesse setor, evidenciando padrões históricos de discriminação de classe e raça."
   },
   {
-    "id": "enem-217",
+    "id": "enem-220",
     "volume": 7,
     "number": "28",
     "source": "Enem PPL 2017",
@@ -7098,7 +7189,7 @@
     "justificativa": "O ideal de beleza é sempre resultado de relações de poder. Não por acaso predomina, no Brasil, traços brancos sendo considerados os mais bonitos. Os salões de beleza citados no Texto II funcionam exatamente como uma forma de questionar essa situação e valorizar os traços culturais do negro."
   },
   {
-    "id": "enem-218",
+    "id": "enem-221",
     "volume": 7,
     "number": "29",
     "source": "Enem PPL 2016",
