@@ -31,6 +31,10 @@ build/
 *.jpeg
 *.gif
 
+# Exceção: as figuras das questões ENEM fazem parte do enunciado e
+# precisam ser publicadas junto com o site.
+!images/enem/**
+
 # OS
 Thumbs.db
 .DS_Store

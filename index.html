@@ -135,6 +135,87 @@
                 z-index: 40;
             }
         }
+
+        /* ---- Questões ENEM: material de apoio ---- */
+        .enem-suporte {
+            background: #fbfbfa;
+            border: 1px solid #e5e7eb;
+            border-left: 4px solid #3b82f6;
+            border-radius: 0.5rem;
+            padding: 1.5rem 1.75rem;
+        }
+
+        .enem-paragrafo {
+            text-align: justify;
+            hyphens: auto;
+            color: #1f2937;
+            font-size: 1rem;
+            line-height: 1.75;
+            margin-bottom: 0.9rem;
+        }
+
+        .enem-paragrafo:last-child { margin-bottom: 0; }
+
+        /* rótulo "Texto I" / "Texto II" */
+        .enem-rotulo {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #6b7280;
+            margin: 1.25rem 0 0.5rem;
+        }
+
+        .enem-rotulo:first-child { margin-top: 0; }
+
+        /* referência bibliográfica: fora do corpo do texto, sem negrito */
+        .enem-fonte {
+            text-align: right;
+            font-size: 0.8125rem;
+            font-style: italic;
+            font-weight: 400;
+            color: #6b7280;
+            line-height: 1.5;
+            margin: -0.25rem 0 1.1rem;
+            padding-left: 15%;
+        }
+
+        .enem-figura {
+            margin: 1.25rem 0;
+            text-align: center;
+        }
+
+        .enem-figura img {
+            display: inline-block;
+            max-width: 100%;
+            max-height: 22rem;
+            height: auto;
+            border: 1px solid #d1d5db;
+            border-radius: 0.375rem;
+            background: #fff;
+            cursor: zoom-in;
+            transition: max-height 0.2s ease;
+        }
+
+        .enem-figura img.ampliada {
+            max-height: none;
+            cursor: zoom-out;
+        }
+
+        .enem-figura figcaption {
+            font-size: 0.75rem;
+            color: #9ca3af;
+            margin-top: 0.5rem;
+        }
+
+        /* comando da questão */
+        .enem-enunciado {
+            text-align: justify;
+            font-size: 1.0625rem;
+            font-weight: 500;
+            line-height: 1.7;
+            color: #111827;
+        }
     </style>
 </head>
 <body class="bg-white">
@@ -193,7 +274,7 @@
                         <div class="bg-gradient-to-r from-purple-50 to-pink-50 rounded p-4 border-l-4 border-purple-500">
                             <p class="text-purple-900 font-semibold mb-2">📝 Teste seus conhecimentos:</p>
                             <p class="text-gray-700 mb-4">
-                                Avalie sua compreensão sobre cada tópico com <strong>200 Quizzes Interativas</strong> (Verdadeiro/Falso) e <strong>82 Questões reais do ENEM</strong>. Pratique, aprenda e se prepare para o vestibular!
+                                Avalie sua compreensão sobre cada tópico com <strong>200 Quizzes Interativas</strong> (Verdadeiro/Falso) e <strong>243 Questões reais do ENEM</strong>. Pratique, aprenda e se prepare para o vestibular!
                             </p>
                             <div class="flex gap-3">
                                 <button onclick="app.showQuizzes()" class="flex-1 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded transition">
@@ -7818,7 +7899,7 @@
                         <div class="bg-gradient-to-r from-purple-50 to-pink-50 rounded p-4 border-l-4 border-purple-500">
                             <p class="text-purple-900 font-semibold mb-2">📝 Teste seus conhecimentos:</p>
                             <p class="text-gray-700 mb-4">
-                                Avalie sua compreensão sobre cada tópico com <strong>200 Quizzes Interativas</strong> (Verdadeiro/Falso) e <strong>82 Questões reais do ENEM</strong>. Pratique, aprenda e se prepare para o vestibular!
+                                Avalie sua compreensão sobre cada tópico com <strong>200 Quizzes Interativas</strong> (Verdadeiro/Falso) e <strong>243 Questões reais do ENEM</strong>. Pratique, aprenda e se prepare para o vestibular!
                             </p>
                             <div class="flex gap-3">
                                 <button onclick="app.showQuizzes()" class="flex-1 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded transition">
@@ -7868,6 +7949,35 @@
                 document.getElementById('contentArea').parentElement.scrollTop = 0;
             },
 
+            // Monta o material de apoio na ordem original do documento: rótulos de
+            // texto, parágrafos justificados, imagens e referências bibliográficas
+            // — estas separadas do corpo, não embutidas nele.
+            renderEnemBlocks(q) {
+                const blocos = q.blocks || [];
+                if (!blocos.length) {
+                    return `<p class="enem-paragrafo">${this.escapeHtml(q.enunciado || '')}</p>`;
+                }
+                return blocos.map(b => {
+                    if (b.type === 'label') {
+                        return `<p class="enem-rotulo">${this.escapeHtml(b.text)}</p>`;
+                    }
+                    if (b.type === 'citation') {
+                        return `<p class="enem-fonte">${this.escapeHtml(b.text)}</p>`;
+                    }
+                    if (b.type === 'image') {
+                        return `
+                            <figure class="enem-figura">
+                                <img src="./images/enem/${encodeURIComponent(b.src)}"
+                                     alt="Material de apoio da questão"
+                                     loading="lazy"
+                                     onclick="this.classList.toggle('ampliada')">
+                                <figcaption>Clique na imagem para ampliar</figcaption>
+                            </figure>`;
+                    }
+                    return `<p class="enem-paragrafo">${this.escapeHtml(b.text)}</p>`;
+                }).join('');
+            },
+
             renderEnemQuestions() {
                 const contentArea = document.getElementById('contentArea');
 
@@ -7883,7 +7993,7 @@
                     let html = `
                         <div class="mb-8">
                             <h1 class="text-3xl font-bold text-gray-900 mb-2">🏆 Banco de Questões ENEM - Sociologia</h1>
-                            <p class="text-gray-600 mb-6">82 questões reais de ENEM categorizadas por tema. Selecione um ou mais tópicos e clique em "Sortear Questão".</p>
+                            <p class="text-gray-600 mb-6">243 questões reais de ENEM (com gabarito oficial) categorizadas por tema. Selecione um ou mais tópicos e clique em "Sortear Questão".</p>
                         </div>
 
                         <div class="mb-8 p-6 bg-blue-50 rounded-lg border border-blue-200">
@@ -7961,23 +8071,11 @@
                                 ` : ''}
                             </div>
 
-                            <div class="bg-gradient-to-r from-blue-50 to-indigo-50 border-l-4 border-blue-500 p-6 rounded-lg mb-6">
-                                <p class="text-gray-900 text-lg font-medium leading-relaxed">${this.escapeHtml(q.text)}</p>
-                            </div>
+                            <article class="enem-suporte mb-6">
+                                ${this.renderEnemBlocks(q)}
+                            </article>
 
-                            ${q.images && q.images.length > 0 ? `
-                            <div class="mb-6 p-4 bg-gray-100 rounded-lg border border-gray-300">
-                                <p class="text-sm font-semibold text-gray-700 mb-4">📷 Imagens relacionadas à questão:</p>
-                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 overflow-x-auto">
-                                    ${q.images.map(img => `
-                                        <div class="flex justify-center">
-                                            <img src="./images/enem/${img}" alt="Imagem da questão" class="max-w-full h-auto max-h-64 rounded border border-gray-400 cursor-pointer hover:opacity-90 transition" onclick="this.style.maxHeight = this.style.maxHeight === 'none' ? '16rem' : 'none';">
-                                        </div>
-                                    `).join('')}
-                                </div>
-                                <p class="text-xs text-gray-600 mt-3">💡 Clique na imagem para ampliar</p>
-                            </div>
-                            ` : ''}
+                            <p class="enem-enunciado mb-5">${this.escapeHtml(q.enunciado)}</p>
 
                             <div class="space-y-3 mb-6">
                     `;
@@ -8030,9 +8128,15 @@
                                     ${isAnswered ? '✓ Correto!' : '✗ Incorreto!'}
                                 </p>
                                 ${!isAnswered ? `
-                                    <p class="text-sm mt-2 ${isAnswered ? 'text-green-800' : 'text-red-800'}">
+                                    <p class="text-sm mt-2 text-red-800">
                                         <strong>Resposta correta:</strong> ${q.correctAnswer}) ${this.escapeHtml(q.options[q.correctAnswer])}
                                     </p>
+                                ` : ''}
+                                ${q.justificativa ? `
+                                    <div class="mt-3 pt-3 border-t ${isAnswered ? 'border-green-300' : 'border-red-300'}">
+                                        <p class="text-xs font-semibold uppercase tracking-wide text-gray-600 mb-1">Comentário</p>
+                                        <p class="text-sm text-gray-800" style="text-align: justify; line-height: 1.65;">${this.escapeHtml(q.justificativa)}</p>
+                                    </div>
                                 ` : ''}
                             </div>
                         `;
