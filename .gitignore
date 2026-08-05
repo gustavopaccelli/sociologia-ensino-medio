@@ -35,6 +35,16 @@ build/
 # precisam ser publicadas junto com o site.
 !images/enem/**
 
+# Idem para as figuras das provas de vestibulares seriados.
+!images/vestibulares/**
+
+# PDFs oficiais baixados das bancas: são insumo de extração, não vão para o
+# repositório. O manifest (url de origem + sha256) fica versionado no lugar.
+data/pdfs/
+
+# Área de staging da extração: binário regenerável por scripts/vestibulares/esquema.py
+data/staging.db
+
 # OS
 Thumbs.db
 .DS_Store

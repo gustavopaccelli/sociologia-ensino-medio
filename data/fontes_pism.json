@@ -1,0 +1,160 @@
+{
+  "_leia_me": [
+    "Lista de fontes oficiais do PISM/UFJF para a Fase 1.",
+    "",
+    "PROCEDÊNCIA: toda URL aqui apareceu literalmente em resultados de busca.",
+    "Nenhuma foi construída por analogia de padrão e NENHUMA foi aberta — o proxy",
+    "de egresso desta sessão recusa www2.ufjf.br (403 no CONNECT). Por isso todo",
+    "item tem verificado=false até que o download da Fase 1 confirme.",
+    "",
+    "METADADOS: ano_prova/etapa/tipo só estão preenchidos quando o próprio nome do",
+    "arquivo os enuncia (ex.: 'PROVA-PISM-2021-DIA_1-MODULO_III'). Ano que apareceria",
+    "apenas no caminho de upload (/2018/01/) NÃO foi usado: a data de upload não é a",
+    "data da prova. Onde não é explícito, fica null e a Fase 2 lê da capa do PDF."
+  ],
+
+  "instituicao": "UFJF",
+  "programa": "PISM",
+
+  "indices_para_varrer": [
+    {
+      "url": "https://www2.ufjf.br/copese/vestibular-pism-2/vestibular-pism-edicoes-anteriores/",
+      "papel": "índice geral de edições anteriores",
+      "verificado": false
+    },
+    {
+      "url": "https://www2.ufjf.br/copese/vestibular-pism-2/vestibular-pism-edicoes-anteriores/vestibular-pism-2017/",
+      "papel": "edição 2017",
+      "verificado": false
+    },
+    {
+      "url": "https://www2.ufjf.br/copese/vestibular-pism-2/vestibular-pism-edicoes-anteriores/vestibular-pism-2018/provas-e-gabaritos-1-dia/",
+      "papel": "edição 2018, 1º dia",
+      "verificado": false
+    },
+    {
+      "url": "https://www2.ufjf.br/copese/vestibular-pism-2/vestibular-pism-edicoes-anteriores/vestibular-pism-2018/provas-e-gabaritos-2-dia/",
+      "papel": "edição 2018, 2º dia",
+      "verificado": false
+    },
+    {
+      "url": "https://www2.ufjf.br/copese/vestibular-pism-2/vestibular-pism-edicoes-anteriores/vestibular-pism-2019/provas-e-gabaritos-dia-1/",
+      "papel": "edição 2019, 1º dia",
+      "verificado": false
+    },
+    {
+      "url": "https://www2.ufjf.br/copese/vestibular-pism-2/vestibular-pism-edicoes-anteriores/pism2020/provas-e-gabaritos-2-dia/",
+      "papel": "edição 2020, 2º dia",
+      "verificado": false
+    },
+    {
+      "url": "https://www2.ufjf.br/copese/vestibular-pism-2/vestibular-pism-edicoes-anteriores/pism2020/referencias-de-correcao-das-provas-discursivas/",
+      "papel": "edição 2020 — REFERÊNCIAS DE CORREÇÃO das discursivas (fonte de expectativa_resposta)",
+      "verificado": false
+    },
+    {
+      "url": "https://www2.ufjf.br/copese/vestibular-pism-2/vestibular-pism-edicoes-anteriores/pism-2021/provas-e-gabaritos-1-dia/",
+      "papel": "edição 2021, 1º dia",
+      "verificado": false
+    },
+    {
+      "url": "https://www2.ufjf.br/copese/vestibular-pism-2/vestibular-pism-edicoes-anteriores/pism-2022/",
+      "papel": "edição 2022",
+      "verificado": false
+    },
+    {
+      "url": "https://www2.ufjf.br/copese/vestibular-pism-2/vestibular-pism-edicoes-anteriores/pism-2023/provas-e-gabaritos-2o-dia/",
+      "papel": "edição 2023, 2º dia",
+      "verificado": false
+    },
+    {
+      "url": "https://www2.ufjf.br/copese/vestibular-pism-2/vestibular-pism-edicoes-anteriores/pism-2024/2024-provas-e-gabaritos-1o-dia/",
+      "papel": "edição 2024, 1º dia",
+      "verificado": false
+    },
+    {
+      "url": "https://www2.ufjf.br/copese/vestibular-pism-2/vestibular-pism-edicoes-anteriores/pism-2024/2024-provas-e-gabaritos-2o-dia/",
+      "papel": "edição 2024, 2º dia",
+      "verificado": false
+    },
+    {
+      "url": "https://www2.ufjf.br/copese/vestibular-pism-2/vestibular-pism-edicoes-anteriores/pism-2026/",
+      "papel": "edição 2026",
+      "verificado": false
+    }
+  ],
+
+  "pdfs": [
+    {
+      "url": "https://www2.ufjf.br/copese/wp-content/uploads/sites/42/2017/12/PISM-III-discursiva-SOCIOLOGIA-DIA-1-_-FINAL.pdf",
+      "etapa": 3,
+      "ano_prova": null,
+      "dia": "1",
+      "tipo": "discursiva",
+      "disciplina_origem": "sociologia",
+      "relacao_sociologia": "autonoma",
+      "verificado": false
+    },
+    {
+      "url": "https://www2.ufjf.br/copese/files/2018/01/PISM-III-SOCIOLOGIA.pdf",
+      "etapa": 3,
+      "ano_prova": null,
+      "dia": null,
+      "tipo": null,
+      "disciplina_origem": "sociologia",
+      "relacao_sociologia": "autonoma",
+      "verificado": false
+    },
+    {
+      "url": "https://www2.ufjf.br/copese/files/2018/12/PISM-2019-III-DIA-1-Humanas.pdf",
+      "etapa": 3,
+      "ano_prova": 2019,
+      "dia": "1",
+      "tipo": null,
+      "disciplina_origem": "ciencias-humanas",
+      "relacao_sociologia": "diluida",
+      "verificado": false
+    },
+    {
+      "url": "https://www2.ufjf.br/copese/wp-content/uploads/sites/42/2021/02/PROVA-PISM-2021-DIA_1-M%C3%93DULO_III-HUMANAS.pdf",
+      "etapa": 3,
+      "ano_prova": 2021,
+      "dia": "1",
+      "tipo": null,
+      "disciplina_origem": "ciencias-humanas",
+      "relacao_sociologia": "diluida",
+      "verificado": false
+    },
+    {
+      "url": "https://www2.ufjf.br/copese/wp-content/uploads/sites/42/2022/12/PROVA-PISM-2023-DIA_1-M%C3%93DULO_III-Humanas.pdf",
+      "etapa": 3,
+      "ano_prova": 2023,
+      "dia": "1",
+      "tipo": null,
+      "disciplina_origem": "ciencias-humanas",
+      "relacao_sociologia": "diluida",
+      "verificado": false
+    },
+    {
+      "url": "https://www2.ufjf.br/copese/wp-content/uploads/sites/42/2023/12/PROVA-PISM-2024-DIA_1-M%C3%93DULO_III-Humanas.pdf",
+      "etapa": 3,
+      "ano_prova": 2024,
+      "dia": "1",
+      "tipo": null,
+      "disciplina_origem": "ciencias-humanas",
+      "relacao_sociologia": "diluida",
+      "verificado": false
+    },
+    {
+      "url": "https://www2.ufjf.br/copese/files/2018/01/PISM-III-FILOSOFIA.pdf",
+      "etapa": 3,
+      "ano_prova": null,
+      "dia": null,
+      "tipo": null,
+      "disciplina_origem": "filosofia",
+      "relacao_sociologia": "interface",
+      "verificado": false,
+      "nota": "Filosofia. Entra só como candidata de interface — toda questão daqui nasce pendente_revisao e depende da sua triagem."
+    }
+  ]
+}
