@@ -425,6 +425,65 @@
             font-size: 0.875rem;
         }
 
+        /* Accessible Focus Rings */
+        :root {
+            --color-action: #0066cc;
+            --ring: rgba(0, 102, 204, 0.5);
+        }
+
+        button:focus-visible,
+        input:focus-visible,
+        a:focus-visible,
+        [role="button"]:focus-visible,
+        .toggle-btn:focus-visible {
+            outline: none;
+            box-shadow: 0 0 0 3px var(--ring);
+            transition: box-shadow var(--dur-fast) var(--ease-standard);
+        }
+
+        /* Search Input Focus Enhancement */
+        #searchInput {
+            transition: border-color var(--dur-fast) var(--ease-standard),
+                        box-shadow var(--dur-fast) var(--ease-standard);
+        }
+
+        #searchInput:focus {
+            border-color: var(--color-action);
+            box-shadow: 0 0 0 3px var(--ring);
+        }
+
+        button:focus,
+        input:focus,
+        a:focus,
+        [role="button"]:focus,
+        .toggle-btn:focus {
+            outline: none;
+        }
+
+        /* Remove default focus styles and apply custom ones */
+        .nav-item:focus-visible {
+            outline: none;
+            box-shadow: inset 0 0 0 2px var(--color-action);
+            transition: box-shadow var(--dur-fast) var(--ease-standard);
+        }
+
+        .toggle-btn:focus-visible {
+            outline: none;
+            box-shadow: 0 0 0 3px var(--ring);
+            transition: box-shadow var(--dur-fast) var(--ease-standard);
+        }
+
+        /* Search Input Focus Enhancement */
+        #searchInput {
+            transition: border-color var(--dur-fast) var(--ease-standard),
+                        box-shadow var(--dur-fast) var(--ease-standard);
+        }
+
+        #searchInput:focus {
+            border-color: var(--color-action);
+            box-shadow: 0 0 0 3px var(--ring);
+        }
+
         /* Alternative selection styling */
         .enem-alternative {
             transition: background-color var(--dur-base) var(--ease-standard),
