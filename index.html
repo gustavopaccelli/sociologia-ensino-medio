@@ -539,82 +539,6 @@
             transition: box-shadow var(--dur-fast) var(--ease-standard);
         }
 
-        /* Search Input Focus Enhancement */
-        #searchInput {
-            transition: border-color var(--dur-fast) var(--ease-standard),
-                        box-shadow var(--dur-fast) var(--ease-standard);
-        }
-
-        #searchInput:focus {
-            border-color: var(--color-action);
-            box-shadow: 0 0 0 3px var(--ring);
-        }
-
-        /* Disabled Button States */
-        button:disabled,
-        button[disabled],
-        input:disabled,
-        input[disabled] {
-            opacity: 0.5;
-            cursor: not-allowed;
-            pointer-events: none;
-            transition: opacity var(--dur-base) var(--ease-standard);
-        }
-
-        button:disabled:hover,
-        button[disabled]:hover,
-        button:disabled:active,
-        button[disabled]:active {
-            /* Disable hover/active effects for disabled buttons */
-            transform: none;
-            box-shadow: none;
-            background-color: inherit;
-            color: inherit;
-        }
-
-        /* Smooth Scrolling Behavior */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* For content area scrolling */
-        .flex-1 {
-            scroll-behavior: smooth;
-        }
-
-        /* Theme Transition Support (Future Dark Mode) */
-        :root {
-            --bg-primary: #ffffff;
-            --bg-secondary: #f9fafb;
-            --text-primary: #1f2937;
-            --text-secondary: #6b7280;
-            --border-color: #e5e7eb;
-            --sidebar-bg: #fbfbfa;
-
-            transition: background-color var(--dur-base) var(--ease-standard),
-                        color var(--dur-base) var(--ease-standard),
-                        border-color var(--dur-base) var(--ease-standard);
-        }
-
-        /* Dark Mode Preparation (disabled by default) */
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --bg-primary: #1f2937;
-                --bg-secondary: #111827;
-                --text-primary: #f9fafb;
-                --text-secondary: #d1d5db;
-                --border-color: #374151;
-                --sidebar-bg: #111827;
-            }
-        }
-
-        body {
-            background-color: var(--bg-primary);
-            color: var(--text-primary);
-            transition: background-color var(--dur-base) var(--ease-standard),
-                        color var(--dur-base) var(--ease-standard);
-        }
-
         /* Alternative selection styling */
         .enem-alternative {
             transition: background-color var(--dur-base) var(--ease-standard),
@@ -623,7 +547,7 @@
         }
 
         .enem-alternative:hover {
-            background-color: #f3f4f6;
+            background-color: #eff6ff;
             border-color: #3b82f6;
         }
 
@@ -8930,11 +8854,16 @@
             const alternatives = document.querySelectorAll('.enem-alternative');
             alternatives.forEach(alt => {
                 alt.addEventListener('click', (e) => {
-                    const siblings = alt.parentElement.querySelectorAll('.enem-alternative');
-                    // Remove selected class from all siblings
-                    siblings.forEach(sibling => {
-                        sibling.classList.remove('selected');
-                    });
+                    // Find all alternatives in the current question container
+                    // Use closest to find the space-y-3 container or fallback to parentElement
+                    const container = alt.closest('.space-y-3') || alt.parentElement;
+                    if (container) {
+                        const siblings = container.querySelectorAll('.enem-alternative');
+                        // Remove selected class from all siblings
+                        siblings.forEach(sibling => {
+                            sibling.classList.remove('selected');
+                        });
+                    }
                     // Add selected class to clicked alternative
                     alt.classList.add('selected');
                 });
@@ -8944,10 +8873,13 @@
                 if (radio) {
                     radio.addEventListener('change', (e) => {
                         if (e.target.checked) {
-                            const siblings = alt.parentElement.querySelectorAll('.enem-alternative');
-                            siblings.forEach(sibling => {
-                                sibling.classList.remove('selected');
-                            });
+                            const container = alt.closest('.space-y-3') || alt.parentElement;
+                            if (container) {
+                                const siblings = container.querySelectorAll('.enem-alternative');
+                                siblings.forEach(sibling => {
+                                    sibling.classList.remove('selected');
+                                });
+                            }
                             alt.classList.add('selected');
                         }
                     });
