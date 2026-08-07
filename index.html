@@ -282,6 +282,59 @@
             margin-top: 0.5rem;
         }
 
+        /* Image Zoom Modal */
+        .image-zoom-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 60;
+            opacity: 0;
+            transition: opacity var(--dur-base) var(--ease-standard);
+        }
+
+        .image-zoom-modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 1;
+        }
+
+        .image-zoom-modal img {
+            max-width: 90%;
+            max-height: 90vh;
+            animation: imageZoomEnter var(--dur-slow) var(--ease-emphasis) forwards;
+        }
+
+        .image-zoom-modal.closing img {
+            animation: imageZoomExit var(--dur-base) var(--ease-exit) forwards;
+        }
+
+        @keyframes imageZoomEnter {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes imageZoomExit {
+            from {
+                opacity: 1;
+                transform: scale(1);
+            }
+            to {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+        }
+
         /* selo de dificuldade */
         .enem-nivel {
             display: inline-block;
@@ -8402,6 +8455,10 @@
                     `;
 
                     contentArea.innerHTML = html;
+                    // Setup image zoom for newly rendered images
+                    if (this.setupImageZoom) {
+                        setTimeout(() => this.setupImageZoom(), 0);
+                    }
                 }
 
                 this.updateBreadcrumbEnem();
@@ -8512,6 +8569,59 @@
                     console.warn('Could not load ENEM questions:', error);
                     app.init();
                 });
+
+        // Setup image zoom modal
+        const imageZoomModal = document.createElement('div');
+        imageZoomModal.className = 'image-zoom-modal';
+        imageZoomModal.id = 'imageZoomModal';
+        document.body.appendChild(imageZoomModal);
+
+        function setupImageZoom() {
+            const images = document.querySelectorAll('.enem-figura img');
+            images.forEach(img => {
+                img.style.cursor = 'zoom-in';
+                img.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const modal = document.getElementById('imageZoomModal');
+                    const zoomImg = document.createElement('img');
+                    zoomImg.src = img.src;
+                    zoomImg.alt = img.alt;
+                    modal.innerHTML = '';
+                    modal.appendChild(zoomImg);
+                    modal.classList.add('active');
+                });
+            });
+        }
+
+        // Close zoom modal when clicking on it
+        document.getElementById('imageZoomModal').addEventListener('click', (e) => {
+            if (e.target.id === 'imageZoomModal') {
+                const modal = document.getElementById('imageZoomModal');
+                modal.classList.add('closing');
+                setTimeout(() => {
+                    modal.classList.remove('active', 'closing');
+                }, 250); // --dur-base
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                const modal = document.getElementById('imageZoomModal');
+                if (modal.classList.contains('active')) {
+                    modal.classList.add('closing');
+                    setTimeout(() => {
+                        modal.classList.remove('active', 'closing');
+                    }, 250); // --dur-base
+                }
+            }
+        });
+
+        // Store setupImageZoom in app object for re-initialization after rendering
+        app.setupImageZoom = setupImageZoom;
+
+        // Call setupImageZoom after initial render
+        setTimeout(setupImageZoom, 100);
         });
     </script>
 </body>
