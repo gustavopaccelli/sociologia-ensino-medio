@@ -9,30 +9,29 @@
     <title>Repositório de Sociologia | Ensino Médio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /*
-         * ============================================================
-         * SISTEMA DE MOTION TOKENS
-         * ============================================================
-         * Durações padrão:
-         *   --dur-fast:  150ms  (micro-interações)
-         *   --dur-base:  250ms  (transições padrão)
-         *   --dur-slow:  400ms  (revelaçõesde conteúdo)
-         *
-         * Curvas de easing customizadas:
-         *   --ease-standard:  entrada/saída padrão de UI
-         *   --ease-emphasis:  revelações, accordion, drawer (com leve bounce)
-         *   --ease-exit:      saídas rápidas
-         *   --ease-spring:    micro-interações e confirmações (bounce)
-         */
+        /* ============================================
+           MOTION DESIGN TOKENS - Sistema Centralizado
+           ============================================ */
         :root {
+            /* Durações Padrão */
             --dur-fast: 150ms;
             --dur-base: 250ms;
             --dur-slow: 400ms;
 
+            /* Curvas de Easing Customizadas */
             --ease-standard: cubic-bezier(0.2, 0, 0.38, 0.9);
             --ease-emphasis: cubic-bezier(0.34, 1.56, 0.64, 1);
             --ease-exit: cubic-bezier(0.4, 0, 1, 1);
             --ease-spring: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        /* Respeita preferência de usuário para animações reduzidas */
+        @media (prefers-reduced-motion: reduce) {
+            :root {
+                --dur-fast: 0ms;
+                --dur-base: 0ms;
+                --dur-slow: 0ms;
+            }
         }
 
         * {
@@ -43,39 +42,24 @@
             background-color: #fbfbfa;
         }
         
-        /* MUDANÇA #1: Accordion com easing emphasis e altura dinâmica */
         .toggle-content {
             max-height: 0;
             overflow: hidden;
-            opacity: 0;
             transition: max-height var(--dur-base) var(--ease-emphasis),
                         opacity var(--dur-base) var(--ease-emphasis);
+            opacity: 0;
         }
 
         .toggle-content.active {
-            max-height: 2000px;
+            max-height: 500px;
             opacity: 1;
         }
         
-        /* MUDANÇA #13: Callouts com fade + slide + borda animada */
         .callout {
             border-left: 4px solid;
             padding: 1rem;
             border-radius: 0.5rem;
             background-color: rgba(0,0,0,0.02);
-            animation: calloutEnter var(--dur-base) var(--ease-standard);
-            transition: border-left-color var(--dur-slow) var(--ease-emphasis);
-        }
-
-        @keyframes calloutEnter {
-            from {
-                opacity: 0;
-                transform: translateY(15px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
         }
         
         .callout.info {
@@ -117,56 +101,80 @@
             margin: 0 0.5rem;
         }
         
-        /* MUDANÇA #2: Transição entre páginas com fade + slide */
         .content-main {
-            animation: pageEnter var(--dur-base) var(--ease-standard);
+            animation: fadeIn var(--dur-base) var(--ease-standard);
         }
-
-        @keyframes pageEnter {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
+        
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
         }
-        
-        /* MUDANÇA #3: Nav items com transições coordenadas */
-        .nav-item {
-            cursor: pointer;
-            transition: background-color var(--dur-base) var(--ease-standard),
-                        border-color var(--dur-base) var(--ease-standard);
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
         }
 
+        @keyframes iconEnter {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        
+        .nav-item {
+            cursor: pointer;
+            transition: background-color var(--dur-fast) var(--ease-standard),
+                        box-shadow var(--dur-fast) var(--ease-standard);
+        }
+        
         .nav-item.active {
             background-color: #f3f4f6;
             border-left: 3px solid #1f2937;
         }
-
+        
         .nav-item:hover {
             background-color: #f9fafb;
         }
         
         .hamburger {
             display: none;
+            transition: transform var(--dur-fast) var(--ease-standard),
+                        color var(--dur-fast) var(--ease-standard);
+            cursor: pointer;
         }
-        
-        /* MUDANÇA #4: Drawer mobile com easing emphasis */
+
+        .hamburger:hover {
+            transform: scale(1.1);
+            color: #0066cc;
+        }
+
+        /* Chevron/Toggle icon for accordion */
+        .toggle-icon {
+            display: inline-block;
+            transition: transform var(--dur-base) var(--ease-emphasis);
+        }
+
+        .toggle-icon.rotated {
+            transform: rotate(-180deg);
+        }
+
+        /* Close button icon */
+        .close-icon {
+            transition: transform var(--dur-fast) var(--ease-spring);
+        }
+
+        .close-icon:hover {
+            transform: rotate(90deg);
+        }
+
         @media (max-width: 768px) {
             .hamburger {
                 display: block;
-                transition: transform var(--dur-fast) var(--ease-spring);
-            }
-
-            .hamburger:hover {
-                transform: scale(1.1);
             }
 
             .sidebar {
@@ -187,6 +195,7 @@
             .sidebar-overlay {
                 display: none;
                 opacity: 0;
+                transition: opacity var(--dur-base) var(--ease-standard);
             }
 
             .sidebar-overlay.open {
@@ -196,10 +205,9 @@
                 left: 0;
                 width: 100%;
                 height: 100%;
-                background: rgba(0,0,0,0.4);
+                background: rgba(0,0,0,0.5);
                 z-index: 40;
                 opacity: 1;
-                transition: opacity var(--dur-base) var(--ease-standard);
             }
         }
 
@@ -252,7 +260,6 @@
             text-align: center;
         }
 
-        /* MUDANÇA #17: Imagens com zoom modal elegante */
         .enem-figura img {
             display: inline-block;
             max-width: 100%;
@@ -262,13 +269,7 @@
             border-radius: 0.375rem;
             background: #fff;
             cursor: zoom-in;
-            transition: opacity var(--dur-fast) var(--ease-standard),
-                        transform var(--dur-fast) var(--ease-standard);
-        }
-
-        .enem-figura img:hover {
-            opacity: 0.9;
-            transform: scale(1.02);
+            transition: max-height var(--dur-fast) var(--ease-standard);
         }
 
         .enem-figura img.ampliada {
@@ -276,32 +277,44 @@
             cursor: zoom-out;
         }
 
-        /* Modal de zoom */
-        .zoom-modal {
+        .enem-figura figcaption {
+            font-size: 0.75rem;
+            color: #9ca3af;
+            margin-top: 0.5rem;
+        }
+
+        /* Image Zoom Modal */
+        .image-zoom-modal {
             display: none;
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            z-index: 100;
-            justify-content: center;
-            align-items: center;
-            animation: fadeIn var(--dur-base) var(--ease-standard);
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 60;
+            opacity: 0;
+            transition: opacity var(--dur-base) var(--ease-standard);
         }
 
-        .zoom-modal.active {
+        .image-zoom-modal.active {
             display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 1;
         }
 
-        .zoom-modal img {
-            max-width: 90vw;
+        .image-zoom-modal img {
+            max-width: 90%;
             max-height: 90vh;
-            animation: zoomEnter var(--dur-slow) var(--ease-emphasis);
+            animation: imageZoomEnter var(--dur-slow) var(--ease-emphasis) forwards;
         }
 
-        @keyframes zoomEnter {
+        .image-zoom-modal.closing img {
+            animation: imageZoomExit var(--dur-base) var(--ease-exit) forwards;
+        }
+
+        @keyframes imageZoomEnter {
             from {
                 opacity: 0;
                 transform: scale(0.9);
@@ -312,10 +325,255 @@
             }
         }
 
-        .enem-figura figcaption {
-            font-size: 0.75rem;
+        @keyframes imageZoomExit {
+            from {
+                opacity: 1;
+                transform: scale(1);
+            }
+            to {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+        }
+
+        /* Quiz feedback animations */
+        .quiz-feedback {
+            animation: feedbackEnter var(--dur-base) var(--ease-standard) forwards;
+        }
+
+        @keyframes feedbackEnter {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .quiz-feedback-icon {
+            display: inline-block;
+            animation: feedbackIconAppear var(--dur-fast) var(--ease-spring) forwards;
+        }
+
+        @keyframes feedbackIconAppear {
+            0% {
+                transform: scale(0) rotate(0deg);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1) rotate(0deg);
+                opacity: 1;
+            }
+        }
+
+        .quiz-score {
+            animation: scorePulse var(--dur-base) var(--ease-spring);
+        }
+
+        @keyframes scorePulse {
+            0% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 0.7;
+                transform: scale(1.05);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Topic list filtering animations */
+        .nav-item {
+            animation: topicEnter var(--dur-base) var(--ease-emphasis) forwards;
+        }
+
+        .nav-item.exiting {
+            animation: topicExit var(--dur-base) var(--ease-exit) forwards;
+        }
+
+        @keyframes topicEnter {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes topicExit {
+            from {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            to {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+        }
+
+        .no-topics-message {
+            animation: fadeIn var(--dur-base) var(--ease-standard);
+            text-align: center;
             color: #9ca3af;
-            margin-top: 0.5rem;
+            padding: 2rem 1rem;
+            font-size: 0.875rem;
+        }
+
+        /* Accessible Focus Rings */
+        :root {
+            --color-action: #0066cc;
+            --ring: rgba(0, 102, 204, 0.5);
+        }
+
+        button:focus-visible,
+        input:focus-visible,
+        a:focus-visible,
+        [role="button"]:focus-visible,
+        .toggle-btn:focus-visible {
+            outline: none;
+            box-shadow: 0 0 0 3px var(--ring);
+            transition: box-shadow var(--dur-fast) var(--ease-standard);
+        }
+
+        /* Search Input Focus Enhancement */
+        #searchInput {
+            transition: border-color var(--dur-fast) var(--ease-standard),
+                        box-shadow var(--dur-fast) var(--ease-standard);
+        }
+
+        #searchInput:focus {
+            border-color: var(--color-action);
+            box-shadow: 0 0 0 3px var(--ring);
+        }
+
+        /* Disabled Button States */
+        button:disabled,
+        button[disabled],
+        input:disabled,
+        input[disabled] {
+            opacity: 0.5;
+            cursor: not-allowed;
+            pointer-events: none;
+            transition: opacity var(--dur-base) var(--ease-standard);
+        }
+
+        button:disabled:hover,
+        button[disabled]:hover,
+        button:disabled:active,
+        button[disabled]:active {
+            /* Disable hover/active effects for disabled buttons */
+            transform: none;
+            box-shadow: none;
+            background-color: inherit;
+            color: inherit;
+        }
+
+        /* Smooth Scrolling Behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* For content area scrolling */
+        .flex-1 {
+            scroll-behavior: smooth;
+        }
+
+        /* Theme Transition Support (Future Dark Mode) */
+        :root {
+            --bg-primary: #ffffff;
+            --bg-secondary: #f9fafb;
+            --text-primary: #1f2937;
+            --text-secondary: #6b7280;
+            --border-color: #e5e7eb;
+            --sidebar-bg: #fbfbfa;
+
+            transition: background-color var(--dur-base) var(--ease-standard),
+                        color var(--dur-base) var(--ease-standard),
+                        border-color var(--dur-base) var(--ease-standard);
+        }
+
+        /* Dark Mode Preparation (disabled by default) */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-primary: #1f2937;
+                --bg-secondary: #111827;
+                --text-primary: #f9fafb;
+                --text-secondary: #d1d5db;
+                --border-color: #374151;
+                --sidebar-bg: #111827;
+            }
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            transition: background-color var(--dur-base) var(--ease-standard),
+                        color var(--dur-base) var(--ease-standard);
+        }
+
+        button:focus,
+        input:focus,
+        a:focus,
+        [role="button"]:focus,
+        .toggle-btn:focus {
+            outline: none;
+        }
+
+        /* Remove default focus styles and apply custom ones */
+        .nav-item:focus-visible {
+            outline: none;
+            box-shadow: inset 0 0 0 2px var(--color-action);
+            transition: box-shadow var(--dur-fast) var(--ease-standard);
+        }
+
+        .toggle-btn:focus-visible {
+            outline: none;
+            box-shadow: 0 0 0 3px var(--ring);
+            transition: box-shadow var(--dur-fast) var(--ease-standard);
+        }
+
+        /* Alternative selection styling */
+        .enem-alternative {
+            transition: background-color var(--dur-base) var(--ease-standard),
+                        border-color var(--dur-base) var(--ease-standard),
+                        box-shadow var(--dur-base) var(--ease-standard);
+        }
+
+        .enem-alternative:hover {
+            background-color: #eff6ff;
+            border-color: #3b82f6;
+        }
+
+        .enem-alternative input[type="radio"],
+        .enem-alternative input[type="checkbox"] {
+            transition: transform var(--dur-fast) var(--ease-spring);
+        }
+
+        .enem-alternative input[type="radio"]:checked,
+        .enem-alternative input[type="checkbox"]:checked {
+            animation: checkmarkAppear var(--dur-fast) var(--ease-spring);
+        }
+
+        @keyframes checkmarkAppear {
+            from {
+                transform: scale(0);
+            }
+            to {
+                transform: scale(1);
+            }
+        }
+
+        .enem-alternative.selected {
+            background-color: #eff6ff;
+            border-color: #0066cc;
+            box-shadow: 0 0 0 2px rgba(0, 102, 204, 0.1);
         }
 
         /* selo de dificuldade */
@@ -350,127 +608,6 @@
             font-weight: 500;
             line-height: 1.7;
             color: #111827;
-        }
-
-        /* MUDANÇA #3: Cards com elevação e transform coordenados */
-        .card {
-            transition: all var(--dur-base) var(--ease-standard);
-        }
-
-        .card:hover {
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-            transform: translateY(-2px) scale(1.01);
-        }
-
-        /* MUDANÇA #9: Input com focus ring animado */
-        input[type="text"],
-        input[type="search"],
-        select {
-            transition: border-color var(--dur-fast) var(--ease-standard),
-                        box-shadow var(--dur-fast) var(--ease-standard);
-        }
-
-        input[type="text"]:focus,
-        input[type="search"]:focus,
-        select:focus {
-            border-color: #2563eb;
-            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
-            outline: none;
-        }
-
-        /* MUDANÇA #15: Botões com hover elegante */
-        button {
-            transition: all var(--dur-base) var(--ease-standard);
-        }
-
-        button:hover {
-            transform: translateY(-1px);
-        }
-
-        button:active {
-            transform: scale(0.98);
-        }
-
-        /* Botão azul (ação primária) */
-        .btn-primary {
-            background-color: #2563eb;
-            color: white;
-            transition: all var(--dur-base) var(--ease-standard);
-        }
-
-        .btn-primary:hover {
-            background-color: #1d4ed8;
-            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
-            transform: translateY(-2px);
-        }
-
-        /* Botão roxo (secundário) */
-        .btn-secondary {
-            background-color: #9333ea;
-            color: white;
-            transition: all var(--dur-base) var(--ease-standard);
-        }
-
-        .btn-secondary:hover {
-            background-color: #7e22ce;
-            box-shadow: 0 4px 12px rgba(147, 51, 234, 0.3);
-            transform: translateY(-2px);
-        }
-
-        /* MUDANÇA #16: Ícones com rotação e hover */
-        .icon-chevron {
-            transition: transform var(--dur-base) var(--ease-emphasis);
-            display: inline-block;
-        }
-
-        .toggle-content.active ~ .icon-chevron {
-            transform: rotate(-180deg);
-        }
-
-        /* MUDANÇA #21: Focus ring consistente */
-        button:focus-visible,
-        input:focus-visible,
-        select:focus-visible {
-            outline: none;
-            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
-        }
-
-        /* MUDANÇA #22: Estado desabilitado com transição */
-        button:disabled,
-        input:disabled {
-            opacity: 0.5;
-            cursor: not-allowed;
-            transition: opacity var(--dur-base) var(--ease-standard);
-        }
-
-        button:disabled:hover {
-            transform: none;
-            box-shadow: none;
-        }
-
-        /* MUDANÇA #23: Scroll suave */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Classes de stagger para listas */
-        .stagger-item {
-            animation: fadeIn var(--dur-base) var(--ease-standard);
-        }
-
-        @for i from 0 to 20 {
-            .stagger-item:nth-child(#{i + 1}) {
-                animation-delay: $(i * 50)ms;
-            }
-        }
-
-        /* Suporte a prefers-reduced-motion */
-        @media (prefers-reduced-motion: reduce) {
-            * {
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.01ms !important;
-            }
         }
     </style>
 </head>
@@ -590,10 +727,20 @@
                         Sua doação ajuda na manutenção e expansão deste recurso gratuito para estudantes.
                     </p>
                     <div class="flex flex-col gap-3">
+                        <a href="https://ko-fi.com"
+                           target="_blank"
+                           class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded text-sm text-center transition">
+                            ☕ Ko-fi
+                        </a>
+                        <a href="https://paypal.me"
+                           target="_blank"
+                           class="inline-block bg-blue-700 hover:bg-blue-800 text-white font-semibold py-2 px-4 rounded text-sm text-center transition">
+                            🅿️ PayPal
+                        </a>
                         <a href="#"
                            onclick="showPixModal(); return false;"
                            class="inline-block bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded text-sm text-center transition">
-                            🟪 Pix
+                            🟪 Pix (Brasil)
                         </a>
                     </div>
                 </div>
@@ -717,7 +864,7 @@
     },
     {
         "id": "raca",
-        "title": "Raça e etnia",
+        "title": "Raça",
         "emoji": "✊"
     },
     {
@@ -2602,7 +2749,7 @@
             },
 {
                 id: "raca",
-                title: "Raça e etnia",
+                title: "Raça",
                 emoji: "✊",
                 parent: "raca",
                 
@@ -6759,7 +6906,7 @@
             {
                 id: "quiz-051", 
                 topicId: "raca", 
-                topicTitle: "Raça e etnia", 
+                topicTitle: "Raça", 
                 question: "A raça é uma categoria biológica determinada geneticamente de forma clara e objetiva.", 
                 correctAnswer: false, 
                 explanation: "A raça é fundamentalmente uma construção social, não uma categoria biológica válida. Embora existam variações genéticas humanas, a ciência moderna demonstra que essas diferenças não se organizam conforme as categorias raciais tradicionais. A raça como conceito surgiu historicamente para justificar hierarquias sociais e colonialismo. A sociologia reconhece que raça é uma construção social dotada de significado cultural e político, mas sem fundamento biológico sólido. As identidades raciais são produtos de processos históricos, políticos e culturais. Portanto, afirmar que raça é biológica é perpetuar um mito científico desmascarado pela pesquisa contemporânea."
@@ -6767,7 +6914,7 @@
             {
                 id: "quiz-052", 
                 topicId: "raca", 
-                topicTitle: "Raça e etnia", 
+                topicTitle: "Raça", 
                 question: "O racismo estrutural refere-se apenas aos preconceitos individuais e atos discriminatórios isolados.", 
                 correctAnswer: false, 
                 explanation: "O racismo estrutural vai muito além de preconceços individuais. Trata-se de sistemas, instituições e processos que perpetuam desigualdades raciais de forma integrada nas estruturas sociais. Inclui políticas históricas como a escravidão, segregação, discriminação em emprego, educação, justiça criminal e acesso a recursos. O racismo estrutural funciona mesmo quando indivíduos não expressam preconceitos explícitos, porque está embutido em normas, práticas e leis institucionais. A sociologia demonstra que desigualdades raciais persistem porque o sistema as sustenta estruturalmente, não apenas por atitudes individuais. Compreender o racismo como estrutural é essencial para identificar e combater as desigualdades reais."
@@ -6775,7 +6922,7 @@
             {
                 id: "quiz-053", 
                 topicId: "raca", 
-                topicTitle: "Raça e etnia", 
+                topicTitle: "Raça", 
                 question: "No Brasil, a mistura racial histórica eliminou completamente as desigualdades entre negros e brancos.", 
                 correctAnswer: false, 
                 explanation: "Apesar da miscigenação racial brasileira, as desigualdades sociais e econômicas entre negros e brancos persistem significativamente. Indicadores como renda, educação, saúde e segurança mostram disparidades profundas. A ideologia do mito da democracia racial brasileira sugere que miscigenação resolveu problemas raciais, mas pesquisa sociológica evidencia que desigualdades continuam estruturais. A história de escravidão, políticas de branqueamento e discriminação contínua deixou marcas duráveis. Afrodescendentes enfrentam desvantagens acumulativas em acesso à educação, emprego e oportunidades econômicas. Reconhecer essas persistentes desigualdades é o primeiro passo para políticas de ação afirmativa e reparação."
@@ -6783,7 +6930,7 @@
             {
                 id: "quiz-054", 
                 topicId: "raca", 
-                topicTitle: "Raça e etnia", 
+                topicTitle: "Raça", 
                 question: "A identidade racial é uma característica fixa e imutável do indivíduo ao longo de sua vida.", 
                 correctAnswer: false, 
                 explanation: "Embora aspectos da aparência física sejam relativamente constantes, a identidade racial é construída socialmente e pode variar conforme contextos e momentos históricos. Pessoas podem experimentar mudanças em como se identificam racialmente, especialmente em contextos de migração ou mobilidade social. A identidade racial é influenciada por fatores sociais, culturais, políticos e históricos. Alguns indivíduos podem enfatizar diferentes aspectos de sua herança em situações diferentes. A sociologia reconhece que identidades raciais são performativas e contextuais, não essências biológicas fixas. As experiências de discriminação ou reconhecimento também moldam como pessoas negociam suas identidades raciais ao longo da vida."
@@ -6791,7 +6938,7 @@
             {
                 id: "quiz-055", 
                 topicId: "raca", 
-                topicTitle: "Raça e etnia", 
+                topicTitle: "Raça", 
                 question: "A ausência de leis explicitamente racistas garante igualdade racial de fato na sociedade.", 
                 correctAnswer: false, 
                 explanation: "A igualdade formal perante a lei não assegura igualdade material. Mesmo com legislação que proíbe discriminação racial, práticas e estruturas institucionais podem perpetuar desigualdades. Estudos sociológicos demonstram que afrodescendentes enfrentam discriminação em contratação de emprego, acesso a crédito, justiça criminal e serviços, apesar de leis antidiscriminação. A lacuna entre direitos formais e práticas reais reflete como o racismo opera além da esfera legal. As políticas de ação afirmativa surgem justamente porque leis iguais não produzem sociedades iguais quando heranças históricas e discriminação contínua desfavorecem grupos específicos. A equidade requer reconhecimento dessas desigualdades estruturais."
@@ -7996,13 +8143,23 @@
                 // If searching, show flat list
                 const isFiltered = this.filteredTopics.length !== this.allTopics.length;
                 if (isFiltered) {
-                    this.filteredTopics.forEach(topic => {
-                        const navItem = document.createElement('div');
-                        navItem.className = `nav-item p-3 rounded-lg mb-1 text-sm${this.currentTopic === topic.id ? ' active' : ''}`;
-                        navItem.innerHTML = `<span class="mr-2">${topic.emoji}</span>${topic.title}`;
-                        navItem.addEventListener('click', () => this.selectTopic(topic.id));
-                        navContainer.appendChild(navItem);
-                    });
+                    if (this.filteredTopics.length === 0) {
+                        // Show "no topics found" message with fade-in animation
+                        const noMessage = document.createElement('div');
+                        noMessage.className = 'no-topics-message';
+                        noMessage.textContent = 'Nenhum tópico encontrado';
+                        navContainer.appendChild(noMessage);
+                    } else {
+                        // Add filtered topics with staggered animations
+                        this.filteredTopics.forEach((topic, index) => {
+                            const navItem = document.createElement('div');
+                            navItem.className = `nav-item p-3 rounded-lg mb-1 text-sm${this.currentTopic === topic.id ? ' active' : ''}`;
+                            navItem.innerHTML = `<span class="mr-2">${topic.emoji}</span>${topic.title}`;
+                            navItem.style.animationDelay = `${index * 50}ms`;
+                            navItem.addEventListener('click', () => this.selectTopic(topic.id));
+                            navContainer.appendChild(navItem);
+                        });
+                    }
                     return;
                 }
 
@@ -8011,6 +8168,7 @@
                     const navItem = document.createElement('div');
                     navItem.className = `nav-item p-3 rounded-lg mb-1 text-sm text-center${this.currentTopic === topic.id ? ' active' : ''}`;
                     navItem.innerHTML = `<span class="font-bold">${topic.title}</span>`;
+                    navItem.style.animationDelay = `${index * 30}ms`;
                     navItem.addEventListener('click', () => this.selectTopic(topic.id));
                     navContainer.appendChild(navItem);
                 });
@@ -8061,6 +8219,12 @@
             setupToggleListeners() {
                 const toggleButtons = document.querySelectorAll('.toggle-btn');
                 toggleButtons.forEach(btn => {
+                    // Add toggle-icon class to the icon span for CSS transitions
+                    const icon = btn.querySelector('span:last-child');
+                    if (icon) {
+                        icon.classList.add('toggle-icon');
+                    }
+
                     btn.addEventListener('click', (e) => {
                         const toggleId = e.currentTarget.getAttribute('data-toggle');
                         const content = document.getElementById(toggleId);
@@ -8068,7 +8232,10 @@
 
                         content.classList.toggle('active');
                         const icon = e.currentTarget.querySelector('span:last-child');
-                        icon.textContent = content.classList.contains('active') ? '−' : '+';
+                        // Toggle the rotated class for smooth rotation
+                        if (icon) {
+                            icon.classList.toggle('rotated', content.classList.contains('active'));
+                        }
                     });
                 });
             },
@@ -8387,6 +8554,26 @@
                             </div>
                         </div>
 
+                        <div class="mb-8 p-6 bg-amber-50 rounded-lg border border-amber-200">
+                            <h2 class="text-xl font-semibold text-gray-900 mb-1">🎯 Nível de dificuldade</h2>
+                            <p class="text-xs text-gray-600 mb-4">
+                                Classificação editorial deste portal — o Inep não divulga a dificuldade por questão.
+                                Só parte do banco está classificada; "Todos" inclui as demais.
+                            </p>
+                            <div class="flex flex-wrap gap-3">
+                                ${[['todos', 'Todos os níveis', enemQuestionsData.length],
+                                   ['medio', 'Médio', porNivel('medio')],
+                                   ['dificil', 'Difícil', porNivel('dificil')]].map(([v, rot, n]) => `
+                                    <button onclick="app.setEnemNivel('${v}')"
+                                            class="px-5 py-2 rounded-lg font-semibold border-2 transition ${this.enemNivel === v
+                                                ? 'border-amber-500 bg-amber-100 text-amber-900'
+                                                : 'border-gray-300 bg-white text-gray-700 hover:border-amber-400'}">
+                                        ${rot} <span class="text-sm font-normal">(${n})</span>
+                                    </button>
+                                `).join('')}
+                            </div>
+                        </div>
+
                         <div class="flex gap-4">
                             <button onclick="app.sortearEnemQuestion()" class="flex-1 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-3 px-6 rounded-lg transition">
                                 🎲 Sortear Questão
@@ -8436,7 +8623,7 @@
                                     }).join(', ')}</p>
                                 </div>
                                 ${answeredCount > 0 ? `
-                                    <div class="text-right">
+                                    <div class="text-right quiz-score">
                                         <p class="text-sm font-semibold text-gray-700">Sua pontuação</p>
                                         <p class="text-2xl font-bold text-blue-600">${correctCount}/${answeredCount}</p>
                                         <p class="text-xs text-gray-600">${Math.round((correctCount/answeredCount)*100)}% acertos</p>
@@ -8454,9 +8641,10 @@
                     `;
 
                     Object.entries(q.options).forEach(([letter, text]) => {
-                        let borderClass = 'border-gray-300 hover:border-blue-400 hover:bg-blue-50';
+                        let borderClass = 'border-gray-300';
                         let bgClass = '';
                         let isDisabled = '';
+                        let selectedClass = '';
 
                         if (isAnswered !== undefined) {
                             isDisabled = 'pointer-events-none opacity-70';
@@ -8467,7 +8655,7 @@
                         }
 
                         html += `
-                            <label class="flex items-start p-4 rounded-lg border-2 ${borderClass} cursor-pointer transition ${bgClass} ${isDisabled}">
+                            <label class="enem-alternative flex items-start p-4 rounded-lg border-2 ${borderClass} cursor-pointer ${bgClass} ${isDisabled}" data-letter="${letter}">
                                 <input type="radio" name="enem-answer" value="${letter}" class="mt-1 mr-4 w-5 h-5 cursor-pointer" ${isAnswered !== undefined ? 'disabled' : ''}>
                                 <div class="flex-1">
                                     <span class="font-bold text-gray-900">${letter})</span>
@@ -8496,9 +8684,9 @@
 
                     if (isAnswered !== undefined) {
                         html += `
-                            <div class="mt-6 p-4 rounded-lg ${isAnswered ? 'bg-green-100 border-l-4 border-green-500' : 'bg-red-100 border-l-4 border-red-500'}">
+                            <div class="quiz-feedback mt-6 p-4 rounded-lg ${isAnswered ? 'bg-green-100 border-l-4 border-green-500' : 'bg-red-100 border-l-4 border-red-500'}">
                                 <p class="font-semibold ${isAnswered ? 'text-green-900' : 'text-red-900'}">
-                                    ${isAnswered ? '✓ Correto!' : '✗ Incorreto!'}
+                                    <span class="quiz-feedback-icon">${isAnswered ? '✓' : '✗'}</span> ${isAnswered ? 'Correto!' : 'Incorreto!'}
                                 </p>
                                 ${!isAnswered ? `
                                     <p class="text-sm mt-2 text-red-800">
@@ -8520,6 +8708,14 @@
                     `;
 
                     contentArea.innerHTML = html;
+                    // Setup image zoom for newly rendered images
+                    if (this.setupImageZoom) {
+                        setTimeout(() => this.setupImageZoom(), 0);
+                    }
+                    // Setup alternative selection with smooth transitions
+                    if (this.setupAlternativeSelection) {
+                        setTimeout(() => this.setupAlternativeSelection(), 0);
+                    }
                 }
 
                 this.updateBreadcrumbEnem();
@@ -8617,67 +8813,6 @@
             app.closeSidebarMobile();
         });
 
-        // ============================================================
-        // MOTION DESIGN: Funções de comportamento interativo
-        // ============================================================
-
-        // MUDANÇA #1: Altura dinâmica para accordion
-        function measureAccordionHeight(contentEl) {
-            const wasActive = contentEl.classList.contains('active');
-            contentEl.classList.add('active');
-            const height = contentEl.scrollHeight;
-            if (!wasActive) {
-                contentEl.classList.remove('active');
-            }
-            return height;
-        }
-
-        // MUDANÇA #17: Zoom modal para imagens
-        function setupImageZoom() {
-            const images = document.querySelectorAll('.enem-figura img');
-            images.forEach(img => {
-                img.addEventListener('click', function() {
-                    const modal = document.createElement('div');
-                    modal.className = 'zoom-modal active';
-                    modal.innerHTML = `<img src="${this.src}" alt="Imagem ampliada">`;
-
-                    modal.addEventListener('click', () => {
-                        modal.remove();
-                    });
-
-                    document.body.appendChild(modal);
-
-                    // Suporte a ESC key
-                    const closeOnEscape = (e) => {
-                        if (e.key === 'Escape') {
-                            modal.remove();
-                            document.removeEventListener('keydown', closeOnEscape);
-                        }
-                    };
-                    document.addEventListener('keydown', closeOnEscape);
-                });
-            });
-        }
-
-        // MUDANÇA #23: Scroll suave para elementos específicos
-        function smoothScrollTo(element) {
-            if (element) {
-                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-        }
-
-        // Stagger animation para listas (MUDANÇA #8)
-        function applyStaggerToList(containerSelector, itemSelector) {
-            const container = document.querySelector(containerSelector);
-            if (!container) return;
-
-            const items = container.querySelectorAll(itemSelector);
-            items.forEach((item, index) => {
-                item.style.animationDelay = `${index * 50}ms`;
-                item.classList.add('stagger-item');
-            });
-        }
-
         // Initialize on load
         window.addEventListener('DOMContentLoaded', () => {
             // Load ENEM questions
@@ -8686,25 +8821,106 @@
                 .then(data => {
                     enemQuestionsData = data;
                     app.init();
-                    setupImageZoom();
-                    applyStaggerToList('#navContainer', '.nav-item');
                 })
                 .catch(error => {
                     console.warn('Could not load ENEM questions:', error);
                     app.init();
-                    setupImageZoom();
-                    applyStaggerToList('#navContainer', '.nav-item');
                 });
+
+        // Setup image zoom modal
+        const imageZoomModal = document.createElement('div');
+        imageZoomModal.className = 'image-zoom-modal';
+        imageZoomModal.id = 'imageZoomModal';
+        document.body.appendChild(imageZoomModal);
+
+        function setupImageZoom() {
+            const images = document.querySelectorAll('.enem-figura img');
+            images.forEach(img => {
+                img.style.cursor = 'zoom-in';
+                img.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const modal = document.getElementById('imageZoomModal');
+                    const zoomImg = document.createElement('img');
+                    zoomImg.src = img.src;
+                    zoomImg.alt = img.alt;
+                    modal.innerHTML = '';
+                    modal.appendChild(zoomImg);
+                    modal.classList.add('active');
+                });
+            });
+        }
+
+        function setupAlternativeSelection() {
+            const alternatives = document.querySelectorAll('.enem-alternative');
+            alternatives.forEach(alt => {
+                alt.addEventListener('click', (e) => {
+                    // Find all alternatives in the current question container
+                    // Use closest to find the space-y-3 container or fallback to parentElement
+                    const container = alt.closest('.space-y-3') || alt.parentElement;
+                    if (container) {
+                        const siblings = container.querySelectorAll('.enem-alternative');
+                        // Remove selected class from all siblings
+                        siblings.forEach(sibling => {
+                            sibling.classList.remove('selected');
+                        });
+                    }
+                    // Add selected class to clicked alternative
+                    alt.classList.add('selected');
+                });
+
+                // Also handle when radio button is checked programmatically
+                const radio = alt.querySelector('input[type="radio"]');
+                if (radio) {
+                    radio.addEventListener('change', (e) => {
+                        if (e.target.checked) {
+                            const container = alt.closest('.space-y-3') || alt.parentElement;
+                            if (container) {
+                                const siblings = container.querySelectorAll('.enem-alternative');
+                                siblings.forEach(sibling => {
+                                    sibling.classList.remove('selected');
+                                });
+                            }
+                            alt.classList.add('selected');
+                        }
+                    });
+                }
+            });
+        }
+
+        // Close zoom modal when clicking on it
+        document.getElementById('imageZoomModal').addEventListener('click', (e) => {
+            if (e.target.id === 'imageZoomModal') {
+                const modal = document.getElementById('imageZoomModal');
+                modal.classList.add('closing');
+                setTimeout(() => {
+                    modal.classList.remove('active', 'closing');
+                }, 250); // --dur-base
+            }
         });
 
-        // Reaplica stagger quando a navegação é renderizada
-        const originalRenderNavigation = app.renderNavigation.bind(app);
-        app.renderNavigation = function() {
-            originalRenderNavigation();
-            setTimeout(() => {
-                applyStaggerToList('#navContainer', '.nav-item');
-            }, 0);
-        };
+        // Close modal with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                const modal = document.getElementById('imageZoomModal');
+                if (modal.classList.contains('active')) {
+                    modal.classList.add('closing');
+                    setTimeout(() => {
+                        modal.classList.remove('active', 'closing');
+                    }, 250); // --dur-base
+                }
+            }
+        });
+
+        // Store setupImageZoom and setupAlternativeSelection in app object for re-initialization after rendering
+        app.setupImageZoom = setupImageZoom;
+        app.setupAlternativeSelection = setupAlternativeSelection;
+
+        // Call setup functions after initial render
+        setTimeout(() => {
+            setupImageZoom();
+            setupAlternativeSelection();
+        }, 100);
+        });
     </script>
 </body>
 </html>
