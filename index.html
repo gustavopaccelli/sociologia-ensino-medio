@@ -102,7 +102,7 @@
         }
         
         .content-main {
-            animation: fadeIn 0.3s ease-in-out;
+            animation: fadeIn var(--dur-base) var(--ease-standard);
         }
         
         @keyframes fadeIn {
@@ -128,7 +128,8 @@
         
         .nav-item {
             cursor: pointer;
-            transition: background-color 0.2s;
+            transition: background-color var(--dur-fast) var(--ease-standard),
+                        box-shadow var(--dur-fast) var(--ease-standard);
         }
         
         .nav-item.active {
@@ -268,7 +269,7 @@
             border-radius: 0.375rem;
             background: #fff;
             cursor: zoom-in;
-            transition: max-height 0.2s ease;
+            transition: max-height var(--dur-fast) var(--ease-standard);
         }
 
         .enem-figura img.ampliada {
