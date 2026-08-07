@@ -484,6 +484,39 @@
             scroll-behavior: smooth;
         }
 
+        /* Theme Transition Support (Future Dark Mode) */
+        :root {
+            --bg-primary: #ffffff;
+            --bg-secondary: #f9fafb;
+            --text-primary: #1f2937;
+            --text-secondary: #6b7280;
+            --border-color: #e5e7eb;
+            --sidebar-bg: #fbfbfa;
+
+            transition: background-color var(--dur-base) var(--ease-standard),
+                        color var(--dur-base) var(--ease-standard),
+                        border-color var(--dur-base) var(--ease-standard);
+        }
+
+        /* Dark Mode Preparation (disabled by default) */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-primary: #1f2937;
+                --bg-secondary: #111827;
+                --text-primary: #f9fafb;
+                --text-secondary: #d1d5db;
+                --border-color: #374151;
+                --sidebar-bg: #111827;
+            }
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            transition: background-color var(--dur-base) var(--ease-standard),
+                        color var(--dur-base) var(--ease-standard);
+        }
+
         button:focus,
         input:focus,
         a:focus,
@@ -546,6 +579,39 @@
         /* For content area scrolling */
         .flex-1 {
             scroll-behavior: smooth;
+        }
+
+        /* Theme Transition Support (Future Dark Mode) */
+        :root {
+            --bg-primary: #ffffff;
+            --bg-secondary: #f9fafb;
+            --text-primary: #1f2937;
+            --text-secondary: #6b7280;
+            --border-color: #e5e7eb;
+            --sidebar-bg: #fbfbfa;
+
+            transition: background-color var(--dur-base) var(--ease-standard),
+                        color var(--dur-base) var(--ease-standard),
+                        border-color var(--dur-base) var(--ease-standard);
+        }
+
+        /* Dark Mode Preparation (disabled by default) */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-primary: #1f2937;
+                --bg-secondary: #111827;
+                --text-primary: #f9fafb;
+                --text-secondary: #d1d5db;
+                --border-color: #374151;
+                --sidebar-bg: #111827;
+            }
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            transition: background-color var(--dur-base) var(--ease-standard),
+                        color var(--dur-base) var(--ease-standard);
         }
 
         /* Alternative selection styling */
