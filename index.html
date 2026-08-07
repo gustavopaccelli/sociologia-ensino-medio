@@ -335,6 +335,43 @@
             }
         }
 
+        /* Alternative selection styling */
+        .enem-alternative {
+            transition: background-color var(--dur-base) var(--ease-standard),
+                        border-color var(--dur-base) var(--ease-standard),
+                        box-shadow var(--dur-base) var(--ease-standard);
+        }
+
+        .enem-alternative:hover {
+            background-color: #f3f4f6;
+            border-color: #3b82f6;
+        }
+
+        .enem-alternative input[type="radio"],
+        .enem-alternative input[type="checkbox"] {
+            transition: transform var(--dur-fast) var(--ease-spring);
+        }
+
+        .enem-alternative input[type="radio"]:checked,
+        .enem-alternative input[type="checkbox"]:checked {
+            animation: checkmarkAppear var(--dur-fast) var(--ease-spring);
+        }
+
+        @keyframes checkmarkAppear {
+            from {
+                transform: scale(0);
+            }
+            to {
+                transform: scale(1);
+            }
+        }
+
+        .enem-alternative.selected {
+            background-color: #eff6ff;
+            border-color: #0066cc;
+            box-shadow: 0 0 0 2px rgba(0, 102, 204, 0.1);
+        }
+
         /* selo de dificuldade */
         .enem-nivel {
             display: inline-block;
@@ -8389,9 +8426,10 @@
                     `;
 
                     Object.entries(q.options).forEach(([letter, text]) => {
-                        let borderClass = 'border-gray-300 hover:border-blue-400 hover:bg-blue-50';
+                        let borderClass = 'border-gray-300';
                         let bgClass = '';
                         let isDisabled = '';
+                        let selectedClass = '';
 
                         if (isAnswered !== undefined) {
                             isDisabled = 'pointer-events-none opacity-70';
@@ -8402,7 +8440,7 @@
                         }
 
                         html += `
-                            <label class="flex items-start p-4 rounded-lg border-2 ${borderClass} cursor-pointer transition ${bgClass} ${isDisabled}">
+                            <label class="enem-alternative flex items-start p-4 rounded-lg border-2 ${borderClass} cursor-pointer ${bgClass} ${isDisabled}" data-letter="${letter}">
                                 <input type="radio" name="enem-answer" value="${letter}" class="mt-1 mr-4 w-5 h-5 cursor-pointer" ${isAnswered !== undefined ? 'disabled' : ''}>
                                 <div class="flex-1">
                                     <span class="font-bold text-gray-900">${letter})</span>
@@ -8458,6 +8496,10 @@
                     // Setup image zoom for newly rendered images
                     if (this.setupImageZoom) {
                         setTimeout(() => this.setupImageZoom(), 0);
+                    }
+                    // Setup alternative selection with smooth transitions
+                    if (this.setupAlternativeSelection) {
+                        setTimeout(() => this.setupAlternativeSelection(), 0);
                     }
                 }
 
@@ -8593,6 +8635,35 @@
             });
         }
 
+        function setupAlternativeSelection() {
+            const alternatives = document.querySelectorAll('.enem-alternative');
+            alternatives.forEach(alt => {
+                alt.addEventListener('click', (e) => {
+                    const siblings = alt.parentElement.querySelectorAll('.enem-alternative');
+                    // Remove selected class from all siblings
+                    siblings.forEach(sibling => {
+                        sibling.classList.remove('selected');
+                    });
+                    // Add selected class to clicked alternative
+                    alt.classList.add('selected');
+                });
+
+                // Also handle when radio button is checked programmatically
+                const radio = alt.querySelector('input[type="radio"]');
+                if (radio) {
+                    radio.addEventListener('change', (e) => {
+                        if (e.target.checked) {
+                            const siblings = alt.parentElement.querySelectorAll('.enem-alternative');
+                            siblings.forEach(sibling => {
+                                sibling.classList.remove('selected');
+                            });
+                            alt.classList.add('selected');
+                        }
+                    });
+                }
+            });
+        }
+
         // Close zoom modal when clicking on it
         document.getElementById('imageZoomModal').addEventListener('click', (e) => {
             if (e.target.id === 'imageZoomModal') {
@@ -8617,11 +8688,15 @@
             }
         });
 
-        // Store setupImageZoom in app object for re-initialization after rendering
+        // Store setupImageZoom and setupAlternativeSelection in app object for re-initialization after rendering
         app.setupImageZoom = setupImageZoom;
+        app.setupAlternativeSelection = setupAlternativeSelection;
 
-        // Call setupImageZoom after initial render
-        setTimeout(setupImageZoom, 100);
+        // Call setup functions after initial render
+        setTimeout(() => {
+            setupImageZoom();
+            setupAlternativeSelection();
+        }, 100);
         });
     </script>
 </body>
