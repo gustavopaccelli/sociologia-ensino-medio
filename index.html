@@ -386,6 +386,45 @@
             }
         }
 
+        /* Topic list filtering animations */
+        .nav-item {
+            animation: topicEnter var(--dur-base) var(--ease-emphasis) forwards;
+        }
+
+        .nav-item.exiting {
+            animation: topicExit var(--dur-base) var(--ease-exit) forwards;
+        }
+
+        @keyframes topicEnter {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes topicExit {
+            from {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            to {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+        }
+
+        .no-topics-message {
+            animation: fadeIn var(--dur-base) var(--ease-standard);
+            text-align: center;
+            color: #9ca3af;
+            padding: 2rem 1rem;
+            font-size: 0.875rem;
+        }
+
         /* Alternative selection styling */
         .enem-alternative {
             transition: background-color var(--dur-base) var(--ease-standard),
@@ -7990,13 +8029,23 @@
                 // If searching, show flat list
                 const isFiltered = this.filteredTopics.length !== this.allTopics.length;
                 if (isFiltered) {
-                    this.filteredTopics.forEach(topic => {
-                        const navItem = document.createElement('div');
-                        navItem.className = `nav-item p-3 rounded-lg mb-1 text-sm${this.currentTopic === topic.id ? ' active' : ''}`;
-                        navItem.innerHTML = `<span class="mr-2">${topic.emoji}</span>${topic.title}`;
-                        navItem.addEventListener('click', () => this.selectTopic(topic.id));
-                        navContainer.appendChild(navItem);
-                    });
+                    if (this.filteredTopics.length === 0) {
+                        // Show "no topics found" message with fade-in animation
+                        const noMessage = document.createElement('div');
+                        noMessage.className = 'no-topics-message';
+                        noMessage.textContent = 'Nenhum tópico encontrado';
+                        navContainer.appendChild(noMessage);
+                    } else {
+                        // Add filtered topics with staggered animations
+                        this.filteredTopics.forEach((topic, index) => {
+                            const navItem = document.createElement('div');
+                            navItem.className = `nav-item p-3 rounded-lg mb-1 text-sm${this.currentTopic === topic.id ? ' active' : ''}`;
+                            navItem.innerHTML = `<span class="mr-2">${topic.emoji}</span>${topic.title}`;
+                            navItem.style.animationDelay = `${index * 50}ms`;
+                            navItem.addEventListener('click', () => this.selectTopic(topic.id));
+                            navContainer.appendChild(navItem);
+                        });
+                    }
                     return;
                 }
 
@@ -8005,6 +8054,7 @@
                     const navItem = document.createElement('div');
                     navItem.className = `nav-item p-3 rounded-lg mb-1 text-sm text-center${this.currentTopic === topic.id ? ' active' : ''}`;
                     navItem.innerHTML = `<span class="font-bold">${topic.title}</span>`;
+                    navItem.style.animationDelay = `${index * 30}ms`;
                     navItem.addEventListener('click', () => this.selectTopic(topic.id));
                     navContainer.appendChild(navItem);
                 });
