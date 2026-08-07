@@ -9,29 +9,73 @@
     <title>Repositório de Sociologia | Ensino Médio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        /*
+         * ============================================================
+         * SISTEMA DE MOTION TOKENS
+         * ============================================================
+         * Durações padrão:
+         *   --dur-fast:  150ms  (micro-interações)
+         *   --dur-base:  250ms  (transições padrão)
+         *   --dur-slow:  400ms  (revelaçõesde conteúdo)
+         *
+         * Curvas de easing customizadas:
+         *   --ease-standard:  entrada/saída padrão de UI
+         *   --ease-emphasis:  revelações, accordion, drawer (com leve bounce)
+         *   --ease-exit:      saídas rápidas
+         *   --ease-spring:    micro-interações e confirmações (bounce)
+         */
+        :root {
+            --dur-fast: 150ms;
+            --dur-base: 250ms;
+            --dur-slow: 400ms;
+
+            --ease-standard: cubic-bezier(0.2, 0, 0.38, 0.9);
+            --ease-emphasis: cubic-bezier(0.34, 1.56, 0.64, 1);
+            --ease-exit: cubic-bezier(0.4, 0, 1, 1);
+            --ease-spring: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
         * {
             font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Arial, sans-serif;
         }
-        
+
         .sidebar-bg {
             background-color: #fbfbfa;
         }
         
+        /* MUDANÇA #1: Accordion com easing emphasis e altura dinâmica */
         .toggle-content {
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.3s ease-in-out;
+            opacity: 0;
+            transition: max-height var(--dur-base) var(--ease-emphasis),
+                        opacity var(--dur-base) var(--ease-emphasis);
         }
-        
+
         .toggle-content.active {
-            max-height: 500px;
+            max-height: 2000px;
+            opacity: 1;
         }
         
+        /* MUDANÇA #13: Callouts com fade + slide + borda animada */
         .callout {
             border-left: 4px solid;
             padding: 1rem;
             border-radius: 0.5rem;
             background-color: rgba(0,0,0,0.02);
+            animation: calloutEnter var(--dur-base) var(--ease-standard);
+            transition: border-left-color var(--dur-slow) var(--ease-emphasis);
+        }
+
+        @keyframes calloutEnter {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
         
         .callout.info {
@@ -73,25 +117,39 @@
             margin: 0 0.5rem;
         }
         
+        /* MUDANÇA #2: Transição entre páginas com fade + slide */
         .content-main {
-            animation: fadeIn 0.3s ease-in-out;
+            animation: pageEnter var(--dur-base) var(--ease-standard);
         }
-        
+
+        @keyframes pageEnter {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
         }
         
+        /* MUDANÇA #3: Nav items com transições coordenadas */
         .nav-item {
             cursor: pointer;
-            transition: background-color 0.2s;
+            transition: background-color var(--dur-base) var(--ease-standard),
+                        border-color var(--dur-base) var(--ease-standard);
         }
-        
+
         .nav-item.active {
             background-color: #f3f4f6;
             border-left: 3px solid #1f2937;
         }
-        
+
         .nav-item:hover {
             background-color: #f9fafb;
         }
@@ -100,30 +158,37 @@
             display: none;
         }
         
+        /* MUDANÇA #4: Drawer mobile com easing emphasis */
         @media (max-width: 768px) {
             .hamburger {
                 display: block;
+                transition: transform var(--dur-fast) var(--ease-spring);
             }
-            
+
+            .hamburger:hover {
+                transform: scale(1.1);
+            }
+
             .sidebar {
                 position: fixed;
                 left: -100%;
                 top: 0;
                 height: 100vh;
                 width: 280px;
-                transition: left 0.3s;
+                transition: left var(--dur-slow) var(--ease-emphasis);
                 z-index: 50;
                 overflow-y: auto;
             }
-            
+
             .sidebar.open {
                 left: 0;
             }
-            
+
             .sidebar-overlay {
                 display: none;
+                opacity: 0;
             }
-            
+
             .sidebar-overlay.open {
                 display: block;
                 position: fixed;
@@ -131,8 +196,10 @@
                 left: 0;
                 width: 100%;
                 height: 100%;
-                background: rgba(0,0,0,0.5);
+                background: rgba(0,0,0,0.4);
                 z-index: 40;
+                opacity: 1;
+                transition: opacity var(--dur-base) var(--ease-standard);
             }
         }
 
@@ -185,6 +252,7 @@
             text-align: center;
         }
 
+        /* MUDANÇA #17: Imagens com zoom modal elegante */
         .enem-figura img {
             display: inline-block;
             max-width: 100%;
@@ -194,12 +262,54 @@
             border-radius: 0.375rem;
             background: #fff;
             cursor: zoom-in;
-            transition: max-height 0.2s ease;
+            transition: opacity var(--dur-fast) var(--ease-standard),
+                        transform var(--dur-fast) var(--ease-standard);
+        }
+
+        .enem-figura img:hover {
+            opacity: 0.9;
+            transform: scale(1.02);
         }
 
         .enem-figura img.ampliada {
             max-height: none;
             cursor: zoom-out;
+        }
+
+        /* Modal de zoom */
+        .zoom-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 100;
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn var(--dur-base) var(--ease-standard);
+        }
+
+        .zoom-modal.active {
+            display: flex;
+        }
+
+        .zoom-modal img {
+            max-width: 90vw;
+            max-height: 90vh;
+            animation: zoomEnter var(--dur-slow) var(--ease-emphasis);
+        }
+
+        @keyframes zoomEnter {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
         }
 
         .enem-figura figcaption {
@@ -240,6 +350,127 @@
             font-weight: 500;
             line-height: 1.7;
             color: #111827;
+        }
+
+        /* MUDANÇA #3: Cards com elevação e transform coordenados */
+        .card {
+            transition: all var(--dur-base) var(--ease-standard);
+        }
+
+        .card:hover {
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            transform: translateY(-2px) scale(1.01);
+        }
+
+        /* MUDANÇA #9: Input com focus ring animado */
+        input[type="text"],
+        input[type="search"],
+        select {
+            transition: border-color var(--dur-fast) var(--ease-standard),
+                        box-shadow var(--dur-fast) var(--ease-standard);
+        }
+
+        input[type="text"]:focus,
+        input[type="search"]:focus,
+        select:focus {
+            border-color: #2563eb;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+            outline: none;
+        }
+
+        /* MUDANÇA #15: Botões com hover elegante */
+        button {
+            transition: all var(--dur-base) var(--ease-standard);
+        }
+
+        button:hover {
+            transform: translateY(-1px);
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+
+        /* Botão azul (ação primária) */
+        .btn-primary {
+            background-color: #2563eb;
+            color: white;
+            transition: all var(--dur-base) var(--ease-standard);
+        }
+
+        .btn-primary:hover {
+            background-color: #1d4ed8;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+            transform: translateY(-2px);
+        }
+
+        /* Botão roxo (secundário) */
+        .btn-secondary {
+            background-color: #9333ea;
+            color: white;
+            transition: all var(--dur-base) var(--ease-standard);
+        }
+
+        .btn-secondary:hover {
+            background-color: #7e22ce;
+            box-shadow: 0 4px 12px rgba(147, 51, 234, 0.3);
+            transform: translateY(-2px);
+        }
+
+        /* MUDANÇA #16: Ícones com rotação e hover */
+        .icon-chevron {
+            transition: transform var(--dur-base) var(--ease-emphasis);
+            display: inline-block;
+        }
+
+        .toggle-content.active ~ .icon-chevron {
+            transform: rotate(-180deg);
+        }
+
+        /* MUDANÇA #21: Focus ring consistente */
+        button:focus-visible,
+        input:focus-visible,
+        select:focus-visible {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+        }
+
+        /* MUDANÇA #22: Estado desabilitado com transição */
+        button:disabled,
+        input:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transition: opacity var(--dur-base) var(--ease-standard);
+        }
+
+        button:disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        /* MUDANÇA #23: Scroll suave */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Classes de stagger para listas */
+        .stagger-item {
+            animation: fadeIn var(--dur-base) var(--ease-standard);
+        }
+
+        @for i from 0 to 20 {
+            .stagger-item:nth-child(#{i + 1}) {
+                animation-delay: $(i * 50)ms;
+            }
+        }
+
+        /* Suporte a prefers-reduced-motion */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
         }
     </style>
 </head>
@@ -8386,6 +8617,67 @@
             app.closeSidebarMobile();
         });
 
+        // ============================================================
+        // MOTION DESIGN: Funções de comportamento interativo
+        // ============================================================
+
+        // MUDANÇA #1: Altura dinâmica para accordion
+        function measureAccordionHeight(contentEl) {
+            const wasActive = contentEl.classList.contains('active');
+            contentEl.classList.add('active');
+            const height = contentEl.scrollHeight;
+            if (!wasActive) {
+                contentEl.classList.remove('active');
+            }
+            return height;
+        }
+
+        // MUDANÇA #17: Zoom modal para imagens
+        function setupImageZoom() {
+            const images = document.querySelectorAll('.enem-figura img');
+            images.forEach(img => {
+                img.addEventListener('click', function() {
+                    const modal = document.createElement('div');
+                    modal.className = 'zoom-modal active';
+                    modal.innerHTML = `<img src="${this.src}" alt="Imagem ampliada">`;
+
+                    modal.addEventListener('click', () => {
+                        modal.remove();
+                    });
+
+                    document.body.appendChild(modal);
+
+                    // Suporte a ESC key
+                    const closeOnEscape = (e) => {
+                        if (e.key === 'Escape') {
+                            modal.remove();
+                            document.removeEventListener('keydown', closeOnEscape);
+                        }
+                    };
+                    document.addEventListener('keydown', closeOnEscape);
+                });
+            });
+        }
+
+        // MUDANÇA #23: Scroll suave para elementos específicos
+        function smoothScrollTo(element) {
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+
+        // Stagger animation para listas (MUDANÇA #8)
+        function applyStaggerToList(containerSelector, itemSelector) {
+            const container = document.querySelector(containerSelector);
+            if (!container) return;
+
+            const items = container.querySelectorAll(itemSelector);
+            items.forEach((item, index) => {
+                item.style.animationDelay = `${index * 50}ms`;
+                item.classList.add('stagger-item');
+            });
+        }
+
         // Initialize on load
         window.addEventListener('DOMContentLoaded', () => {
             // Load ENEM questions
@@ -8394,12 +8686,25 @@
                 .then(data => {
                     enemQuestionsData = data;
                     app.init();
+                    setupImageZoom();
+                    applyStaggerToList('#navContainer', '.nav-item');
                 })
                 .catch(error => {
                     console.warn('Could not load ENEM questions:', error);
                     app.init();
+                    setupImageZoom();
+                    applyStaggerToList('#navContainer', '.nav-item');
                 });
         });
+
+        // Reaplica stagger quando a navegação é renderizada
+        const originalRenderNavigation = app.renderNavigation.bind(app);
+        app.renderNavigation = function() {
+            originalRenderNavigation();
+            setTimeout(() => {
+                applyStaggerToList('#navContainer', '.nav-item');
+            }, 0);
+        };
     </script>
 </body>
 </html>
