@@ -9,10 +9,35 @@
     <title>Repositório de Sociologia | Ensino Médio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        /* ============================================
+           MOTION DESIGN TOKENS - Sistema Centralizado
+           ============================================ */
+        :root {
+            /* Durações Padrão */
+            --dur-fast: 150ms;
+            --dur-base: 250ms;
+            --dur-slow: 400ms;
+
+            /* Curvas de Easing Customizadas */
+            --ease-standard: cubic-bezier(0.2, 0, 0.38, 0.9);
+            --ease-emphasis: cubic-bezier(0.34, 1.56, 0.64, 1);
+            --ease-exit: cubic-bezier(0.4, 0, 1, 1);
+            --ease-spring: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        /* Respeita preferência de usuário para animações reduzidas */
+        @media (prefers-reduced-motion: reduce) {
+            :root {
+                --dur-fast: 0ms;
+                --dur-base: 0ms;
+                --dur-slow: 0ms;
+            }
+        }
+
         * {
             font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Arial, sans-serif;
         }
-        
+
         .sidebar-bg {
             background-color: #fbfbfa;
         }
@@ -20,11 +45,14 @@
         .toggle-content {
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.3s ease-in-out;
+            transition: max-height var(--dur-base) var(--ease-emphasis),
+                        opacity var(--dur-base) var(--ease-emphasis);
+            opacity: 0;
         }
-        
+
         .toggle-content.active {
             max-height: 500px;
+            opacity: 1;
         }
         
         .callout {
@@ -81,6 +109,22 @@
             from { opacity: 0; }
             to { opacity: 1; }
         }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes iconEnter {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
         
         .nav-item {
             cursor: pointer;
@@ -98,32 +142,61 @@
         
         .hamburger {
             display: none;
+            transition: transform var(--dur-fast) var(--ease-standard),
+                        color var(--dur-fast) var(--ease-standard);
+            cursor: pointer;
         }
-        
+
+        .hamburger:hover {
+            transform: scale(1.1);
+            color: #0066cc;
+        }
+
+        /* Chevron/Toggle icon for accordion */
+        .toggle-icon {
+            display: inline-block;
+            transition: transform var(--dur-base) var(--ease-emphasis);
+        }
+
+        .toggle-icon.rotated {
+            transform: rotate(-180deg);
+        }
+
+        /* Close button icon */
+        .close-icon {
+            transition: transform var(--dur-fast) var(--ease-spring);
+        }
+
+        .close-icon:hover {
+            transform: rotate(90deg);
+        }
+
         @media (max-width: 768px) {
             .hamburger {
                 display: block;
             }
-            
+
             .sidebar {
                 position: fixed;
                 left: -100%;
                 top: 0;
                 height: 100vh;
                 width: 280px;
-                transition: left 0.3s;
+                transition: left var(--dur-slow) var(--ease-emphasis);
                 z-index: 50;
                 overflow-y: auto;
             }
-            
+
             .sidebar.open {
                 left: 0;
             }
-            
+
             .sidebar-overlay {
                 display: none;
+                opacity: 0;
+                transition: opacity var(--dur-base) var(--ease-standard);
             }
-            
+
             .sidebar-overlay.open {
                 display: block;
                 position: fixed;
@@ -133,6 +206,7 @@
                 height: 100%;
                 background: rgba(0,0,0,0.5);
                 z-index: 40;
+                opacity: 1;
             }
         }
 
@@ -7840,6 +7914,12 @@
             setupToggleListeners() {
                 const toggleButtons = document.querySelectorAll('.toggle-btn');
                 toggleButtons.forEach(btn => {
+                    // Add toggle-icon class to the icon span for CSS transitions
+                    const icon = btn.querySelector('span:last-child');
+                    if (icon) {
+                        icon.classList.add('toggle-icon');
+                    }
+
                     btn.addEventListener('click', (e) => {
                         const toggleId = e.currentTarget.getAttribute('data-toggle');
                         const content = document.getElementById(toggleId);
@@ -7847,7 +7927,10 @@
 
                         content.classList.toggle('active');
                         const icon = e.currentTarget.querySelector('span:last-child');
-                        icon.textContent = content.classList.contains('active') ? '−' : '+';
+                        // Toggle the rotated class for smooth rotation
+                        if (icon) {
+                            icon.classList.toggle('rotated', content.classList.contains('active'));
+                        }
                     });
                 });
             },
