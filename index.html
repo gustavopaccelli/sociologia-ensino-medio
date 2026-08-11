@@ -88,7 +88,7 @@
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.07em;
-            color: #9ca3af;
+            color: #6b7280;
             padding: 0.75rem 0.75rem 0.25rem;
         }
 
@@ -485,6 +485,68 @@
             scroll-behavior: smooth;
         }
 
+        /* Skip Link - Accessibility for keyboard navigation */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #000;
+            color: #fff;
+            padding: 8px 12px;
+            text-decoration: none;
+            z-index: 100;
+            font-weight: bold;
+            font-size: 14px;
+            border-radius: 0 0 4px 0;
+        }
+
+        .skip-link:focus {
+            top: 0;
+            animation: slideDown 300ms ease-out forwards;
+        }
+
+        @keyframes slideDown {
+            from { top: -40px; opacity: 0; }
+            to { top: 0; opacity: 1; }
+        }
+
+        /* Screen reader only text */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+
+        /* Hamburger button - 44×44px minimum touch target */
+        .hamburger {
+            min-width: 44px;
+            min-height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            border-radius: 4px;
+        }
+
+        .hamburger:hover {
+            background-color: rgba(0, 102, 204, 0.1);
+        }
+
+        /* Navigation items - 44px minimum height */
+        .nav-item {
+            min-height: 44px;
+            display: flex;
+            align-items: center;
+            padding: 12px 8px;
+            border-radius: 4px;
+        }
+
         /* Theme Transition Support (Future Dark Mode) */
         :root {
             --bg-primary: #ffffff;
@@ -499,10 +561,17 @@
                         border-color var(--dur-base) var(--ease-standard);
         }
 
-        /* Dark Mode Preparation (desativado — o site ainda não tem suporte completo
-           a modo escuro; a maioria dos componentes usa cores claras fixas via Tailwind,
-           então deixar isto reagir a prefers-color-scheme deixa texto claro sobre
-           fundo claro. Reative somente quando um tema escuro completo for implementado. */
+        /* Dark Mode Preparation (disabled by default) */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-primary: #1f2937;
+                --bg-secondary: #111827;
+                --text-primary: #f9fafb;
+                --text-secondary: #d1d5db;
+                --border-color: #374151;
+                --sidebar-bg: #111827;
+            }
+        }
 
         body {
             background-color: var(--bg-primary);
@@ -605,44 +674,62 @@
     </style>
 </head>
 <body class="bg-white">
+    <!-- SKIP LINK - Acessibilidade para teclado -->
+    <a href="#contentArea" class="skip-link" aria-label="Pular para conteúdo principal">
+        Pular para conteúdo principal
+    </a>
+
     <div class="flex h-screen">
-        <!-- SIDEBAR -->
-        <div class="sidebar sidebar-bg w-72 border-r border-gray-200 flex flex-col">
+        <!-- SIDEBAR NAVIGATION -->
+        <aside class="sidebar sidebar-bg w-72 border-r border-gray-200 flex flex-col" role="complementary" aria-label="Navegação de tópicos">
             <div class="p-6 border-b border-gray-200">
-                <h1 class="text-xl font-bold text-gray-900 mb-4 cursor-pointer hover:text-blue-600 transition" onclick="app.goHome()" style="user-select: none;">📚 Sociologia</h1>
-                <input 
-                    type="text" 
-                    id="searchInput" 
-                    placeholder="Buscar tópicos..." 
+                <button class="text-xl font-bold text-gray-900 mb-4 cursor-pointer hover:text-blue-600 transition w-full text-left"
+                        onclick="app.goHome()"
+                        style="user-select: none;"
+                        aria-label="Voltar para página inicial do portal">
+                    <span aria-hidden="true">📚</span> Sociologia
+                </button>
+                <label for="searchInput" class="sr-only">Buscar tópicos de sociologia</label>
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Buscar tópicos..."
+                    aria-label="Campo de busca de tópicos de sociologia"
                     class="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-gray-400"
                 >
             </div>
-            
-            <nav class="flex-1 overflow-y-auto p-4">
+
+            <nav class="flex-1 overflow-y-auto p-4" aria-label="Lista de tópicos">
                 <div id="navContainer"></div>
             </nav>
-            
+
             <div class="p-4 border-t border-gray-200 text-xs text-gray-500 text-center">
                 <p>Estruturado para ENEM e Vestibulares</p>
             </div>
-        </div>
-        
+        </aside>
+
         <!-- SIDEBAR OVERLAY (mobile) -->
-        <div class="sidebar-overlay" id="sidebarOverlay"></div>
-        
+        <div class="sidebar-overlay" id="sidebarOverlay" aria-hidden="true"></div>
+
         <!-- MAIN CONTENT -->
-        <div class="flex-1 flex flex-col overflow-hidden">
+        <main class="flex-1 flex flex-col overflow-hidden">
             <!-- TOP BAR WITH HAMBURGER -->
-            <div class="border-b border-gray-200 px-6 py-4 flex items-center justify-between bg-white">
-                <button class="hamburger text-2xl text-gray-700" id="hamburgerBtn">☰</button>
-                <div id="breadcrumbContainer" class="flex-1 ml-4"></div>
-            </div>
-            
+            <header class="border-b border-gray-200 px-6 py-4 flex items-center justify-between bg-white" role="banner">
+                <button class="hamburger text-2xl text-gray-700"
+                        id="hamburgerBtn"
+                        aria-label="Abrir menu de navegação"
+                        aria-expanded="false"
+                        aria-controls="navContainer">
+                    <span aria-hidden="true">☰</span>
+                </button>
+                <nav id="breadcrumbContainer" class="flex-1 ml-4" aria-label="Breadcrumb"></nav>
+            </header>
+
             <!-- CONTENT AREA -->
             <div class="flex-1 overflow-y-auto">
                 <div class="max-w-4xl mx-auto px-8 py-12 content-main" id="contentArea">
                     <div class="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-lg p-8 mb-8">
-                        <h1 class="text-3xl font-bold text-gray-900 mb-4">🎓 Bem-vindo ao Portal de Sociologia para o Ensino Médio</h1>
+                        <h1 class="text-3xl font-bold text-gray-900 mb-4"><span aria-hidden="true">🎓</span> Bem-vindo ao Portal de Sociologia para o Ensino Médio</h1>
                         <p class="text-gray-700 text-lg mb-6">
                             Explore tópicos de Sociologia com foco na realidade brasileira.
                             Conteúdo estruturado para complementar suas aulas, preparar para o vestibular
@@ -663,30 +750,34 @@
                                 Avalie sua compreensão sobre cada tópico com <strong>200 Quizzes Interativas</strong> (Verdadeiro/Falso) e <strong>241 Questões reais do ENEM</strong>. Pratique, aprenda e se prepare para o vestibular!
                             </p>
                             <div class="flex gap-3">
-                                <button onclick="app.showQuizzes()" class="flex-1 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded transition">
-                                    📝 Ir para Quizzes
+                                <button onclick="app.showQuizzes()"
+                                        class="flex-1 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded transition"
+                                        aria-label="Acessar seção de quizzes interativas de Verdadeiro ou Falso">
+                                    <span aria-hidden="true">📝</span> Ir para Quizzes
                                 </button>
-                                <button onclick="app.showEnemQuestions()" class="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded transition">
-                                    🏆 Questões ENEM
+                                <button onclick="app.showEnemQuestions()"
+                                        class="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded transition"
+                                        aria-label="Acessar 241 questões reais do ENEM">
+                                    <span aria-hidden="true">🏆</span> Questões ENEM
                                 </button>
                             </div>
                         </div>
                     </div>
                     <div class="text-center text-gray-400 py-8">
-                        <p class="text-lg">👈 Selecione um tópico na barra lateral para começar, ou use a busca acima</p>
+                        <p class="text-lg"><span aria-hidden="true">👈</span> Selecione um tópico na barra lateral para começar, ou use a busca acima</p>
                     </div>
                 </div>
             </div>
-        </div>
+        </main>
     </div>
 
     <!-- FOOTER WITH LICENSE AND DONATION -->
-    <footer class="bg-gradient-to-r from-gray-900 to-gray-800 text-gray-100 py-12 border-t border-gray-700">
+    <footer class="bg-gradient-to-r from-gray-900 to-gray-800 text-gray-100 py-12 border-t border-gray-700" role="contentinfo">
         <div class="max-w-6xl mx-auto px-8">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
                 <!-- About Section -->
                 <div>
-                    <h3 class="text-lg font-bold text-white mb-4">📚 Sobre este Projeto</h3>
+                    <h3 class="text-lg font-bold text-white mb-4"><span aria-hidden="true">📚</span> Sobre este Projeto</h3>
                     <p class="text-gray-300 text-sm leading-relaxed mb-3">
                         Portal educacional gratuito de Sociologia para o Ensino Médio, com conteúdo estruturado e 241 questões verificadas do ENEM.
                     </p>
@@ -697,7 +788,7 @@
 
                 <!-- License Section -->
                 <div>
-                    <h3 class="text-lg font-bold text-white mb-4">📋 Licença</h3>
+                    <h3 class="text-lg font-bold text-white mb-4"><span aria-hidden="true">📋</span> Licença</h3>
                     <p class="text-gray-300 text-sm leading-relaxed mb-3">
                         Este conteúdo é licenciado sob <strong>Creative Commons BY-NC-SA 4.0</strong>.
                     </p>
@@ -715,16 +806,17 @@
 
                 <!-- Donation Section -->
                 <div>
-                    <h3 class="text-lg font-bold text-white mb-4">💝 Apoie este Projeto</h3>
+                    <h3 class="text-lg font-bold text-white mb-4"><span aria-hidden="true">💝</span> Apoie este Projeto</h3>
                     <p class="text-gray-300 text-sm leading-relaxed mb-4">
                         Sua doação ajuda na manutenção e expansão deste recurso gratuito para estudantes.
                     </p>
                     <div class="flex justify-center">
-                        <a href="#"
+                        <button
                            onclick="showPixModal(); return false;"
-                           class="inline-block bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-3 rounded text-sm text-center transition">
-                            ☕ Apoiar via Pix
-                        </a>
+                           class="inline-block bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-3 rounded text-sm text-center transition"
+                           aria-label="Abrir modal para doação via Pix">
+                            <span aria-hidden="true">☕</span> Apoiar via Pix
+                        </button>
                     </div>
                 </div>
             </div>
@@ -749,13 +841,23 @@
     </footer>
 
     <!-- PIX MODAL (for Brazil) -->
-    <div id="pixModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+    <div id="pixModal"
+         class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+         role="dialog"
+         aria-modal="true"
+         aria-labelledby="pixModalTitle"
+         aria-describedby="pixModalDesc">
         <div class="bg-white rounded-lg shadow-lg p-8 max-w-md mx-4">
             <div class="flex justify-between items-center mb-4">
-                <h2 class="text-2xl font-bold text-gray-900">Doação via Pix</h2>
-                <button onclick="closePixModal()" class="text-gray-500 hover:text-gray-700 text-2xl">✕</button>
+                <h2 id="pixModalTitle" class="text-2xl font-bold text-gray-900">Doação via Pix</h2>
+                <button onclick="closePixModal()"
+                        class="text-gray-500 hover:text-gray-700 text-2xl"
+                        aria-label="Fechar modal de doação via Pix"
+                        aria-pressed="false">
+                    ✕
+                </button>
             </div>
-            <p class="text-gray-600 mb-6 text-sm">
+            <p id="pixModalDesc" class="text-gray-600 mb-6 text-sm">
                 Pix é a forma mais rápida de contribuir para a manutenção deste projeto educacional.
             </p>
             <div class="bg-gray-50 border-2 border-gray-300 rounded-lg p-6 mb-6 text-center">
@@ -764,12 +866,13 @@
             </div>
             <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded mb-6">
                 <p class="text-xs text-gray-700">
-                    <strong>💡 Dica:</strong> Copie a chave acima e use seu app do banco ou Pix para fazer a doação.
+                    <strong><span aria-hidden="true">💡</span> Dica:</strong> Copie a chave acima e use seu app do banco ou Pix para fazer a doação.
                     Qualquer valor é bem-vindo!
                 </p>
             </div>
             <button onclick="closePixModal()"
-                    class="w-full bg-gray-600 hover:bg-gray-700 text-white font-semibold py-2 px-4 rounded transition">
+                    class="w-full bg-gray-600 hover:bg-gray-700 text-white font-semibold py-2 px-4 rounded transition"
+                    aria-label="Fechar modal">
                 Fechar
             </button>
         </div>
@@ -788,6 +891,21 @@
         document.getElementById('pixModal')?.addEventListener('click', (e) => {
             if (e.target.id === 'pixModal') {
                 closePixModal();
+            }
+        });
+
+        // Close modal when pressing Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                const pixModal = document.getElementById('pixModal');
+                if (pixModal && !pixModal.classList.contains('hidden')) {
+                    closePixModal();
+                }
+                // Close image zoom modal if open
+                const imageZoomModal = document.getElementById('imageZoomModal');
+                if (imageZoomModal && imageZoomModal.classList.contains('active')) {
+                    imageZoomModal.classList.remove('active');
+                }
             }
         });
     </script>
@@ -1321,7 +1439,7 @@
                                 <li>Proletariado = vendedores de força de trabalho</li>
                                 <li>Conflito é <strong>inevitável</strong> e <strong>progressivo</strong> (vai piorar até revolução)</li>
                             </ul>
-                            <p class="text-gray-700 mt-3"><strong>Mais-valia:</strong> Trabalhador produz valor (digamos 100 reais/dia), mas recebe salário (40 reais). Diferença vai para o capitalista como lucro. Isso é <strong>exploração sistemática</strong>.</p>
+                            <p class="text-gray-700 mt-3"><strong>Mais-valia:</strong> Trabalhador produz valor (digamos 100 reais/dia) mas recebe salário (40 reais). Diferença vai para capitalista como lucro. Isso é <strong>exploração sistemática</strong>.</p>
                         </div>
                     </div>
 
@@ -1384,7 +1502,7 @@
                             <ul class="list-disc ml-6 text-gray-700 mt-2">
                                 <li>Durkheim é <strong>conservador</strong>? Prioriza ordem demais?</li>
                                 <li>Seu conceito de "consciência coletiva" é <strong>vago</strong></li>
-                                <li><strong>Ignora poder e dominação</strong> (Marx, pelo menos, falava deles)</li>
+                                <li><strong>Ignora poder e dominação</strong> (Marx, pelo menos, falava delas)</li>
                                 <li>Presume que integração é sempre desejável (e se serve para oprimir?)</li>
                             </ul>
                         </div>
@@ -1760,7 +1878,7 @@
                                 <li>Asiáticos: 1%</li>
                                 <li>Indígenas: 1%</li>
                             </ul>
-                            <p class="text-gray-700 mt-4"><strong>Ponto teórico crítico:</strong> Essas categorias são <strong>construções sociais, não realidades biológicas</strong>. Há enorme cruzamento genético no Brasil. A categoria "raça" é uma invenção social para organizar hierarquia e acesso a recursos. Porém, porque são socialmente reconhecidas, têm efeitos reais profundos (renda, expectativa de vida, acesso à educação).</p>
+                            <p class="text-gray-700 mt-4"><strong>Ponto teórico crítico:</strong> Essas categorias são <strong>construções sociais, não realidades biológicas</strong>. Há enorme cruzamento genético no Brasil. A categoria "raça" é uma invenção social para organizar hierarquia e acesso a recursos. Porém, porque são socialmente reconhecidas, têm efeitos reais profundos (renda, expectativa de vida, acesso a educação).</p>
                         </div>
                     </div>
 
@@ -1777,7 +1895,7 @@
                                 <li><strong>Sudeste:</strong> ~45% da população brasileira (São Paulo, Rio de Janeiro, Minas Gerais concentram ~80% da riqueza)</li>
                                 <li><strong>Outras regiões:</strong> Menos populosas e menos desenvolvidas economicamente</li>
                             </ul>
-                            <p class="text-gray-700 mt-4"><strong>Migração interna:</strong> Nordestinos e nortistas historicamente migraram para o Sudeste buscando trabalho. Esse fluxo massivo de migração cria segregação urbana (favelas, periferias), onde migrantes se aglomeram sem acesso a saneamento, educação de qualidade, saúde.</p>
+                            <p class="text-gray-700 mt-4"><strong>Migração interna:</strong> Nordestinos e nortistas historicamente migraram para o Sudeste buscando trabalho. Esse fluxo massivo de migração cria segregação urbana (favelas, periferias), donde migrantes se aglomeram sem acesso a saneamento, educação de qualidade, saúde.</p>
                             <p class="text-gray-700 mt-3"><strong>Conceito: Segregação urbana</strong> - divisão espacial da cidade por classe, raça e renda. É resultado de política pública (zoneamento, locação de infraestrutura) e mercado (preço de terra)</p>
                         </div>
                     </div>
@@ -1871,7 +1989,7 @@
                             <p class="text-gray-700 mt-4"><strong>Números:</strong> ~1 milhão de pessoas distribuídas em 305+ etnias, falando 250+ línguas diferentes.</p>
                             <p class="text-gray-700 mt-3"><strong>Situação atual (e histórica):</strong></p>
                             <ul class="list-disc ml-6 text-gray-700 mt-2">
-                                <li><strong>Vulnerabilidade socioeconômica:</strong> Renda, acesso à educação e à saúde muito abaixo da média nacional</li>
+                                <li><strong>Vulnerabilidade socio-econômica:</strong> Renda, acesso a educação e saúde muito abaixo da média nacional</li>
                                 <li><strong>Conflitos com agronegócio:</strong> Terras indígenas são disputadas por grandes produtores de soja, gado</li>
                                 <li><strong>Terras demarcadas mas invadidas:</strong> A Constituição de 1988 reconheceu direito indígena à terra, mas demarcação é lenta e invasões continuam</li>
                                 <li><strong>Movimento de afirmação identitária:</strong> Indígenas não aceitam mais apagamento. Estão lutando por direitos, educação indígena, medicina tradicional</li>
@@ -1902,7 +2020,7 @@
                         <p class="font-semibold mb-2">📊 Dados do Censo 2022: Populações Quilombolas</p>
                         <p class="text-gray-700 mt-3"><strong>Realidade alarmante:</strong> A primeira metodologia rigorosa de autodeclaração étnico-quilombola (Censo 2022) revelou:</p>
                         <ul class="list-disc ml-6 text-gray-700 mt-2">
-                            <li><strong>1.327.802 quilombolas</strong> (0,65% da população nacional) em 1.696 municípios</li>
+                            <li><strong>1.327.802 quilombolas</strong> (0,65% população nacional) em 1.696 municípios</li>
                             <li><strong>PORÉM:</strong> Apenas 12,59% (167.769) vivem em territórios oficialmente demarcados</li>
                             <li><strong>87,41% (1,16 milhão)</strong> encontram-se fora de áreas regularizadas pelo INCRA</li>
                             <li><strong>32,11%</strong> estão na Amazônia Legal, zona de expansão agrícola e conflitos violentos</li>
@@ -1917,7 +2035,7 @@
                             <li><strong>Diversidade racial como mito fundador desmentido por dados:</strong> Censo 2022 oficializou: 56% negros (pretos + pardos), 42% brancos. MAS essa "diversidade" coexiste com racismo estrutural: renda negra é 1/3 da branca; homicídios de negros = 2.5x a de brancos; universidades têm 3.5x mais estudantes brancos que negros proporcionalmente.</li>
                             <li><strong>Envelhecimento populacional com precarização de idosos:</strong> Idade média sobe para 35 anos; projeção é 42 anos em 2050. Mas Brasil não investe em previdência pública — reforma de 2019 aprofundou austeridade; idosos pobres enfrentam carestia, falta de cuidado, abandono familiar.</li>
                             <li><strong>Urbanização de 88% sem urbanismo de qualidade:</strong> Êxodo rural concentrou 100+ milhões em cidades; resultado é metropolização caótica, favelas, segregação. São Paulo/Rio/Recife/Fortaleza são cidades-laboratório de desigualdade urbana racializada.</li>
-                            <li><strong>Indígenas invisibilizados por genocídio permanente:</strong> 1 milhão (Censo 2022 — número muito subcontado); 305 etnias; mas 87% de terras "demarcadas" sofrem invasões. Garimpo, agronegócio, madeireiras avançam; homicídios de líderes indígenas crescem.</li>
+                            <li><strong>Indígenas invisibilizados por genocídio permanente:</strong> 1 milhão (Censo 2022 — número muito subcont ado); 305 etnias; mas 87% de terras "demarcadas" sofrem invasões. Garimpo, agronegócio, madeireiras avançam; homicídios de líderes indígenas crescem.</li>
                             <li><strong>Quilombolas despossuídos apesar de direitos constitucionais:</strong> 1.3 milhão reconhecidos (2022); mas apenas 12% vivem em territórios regularizados. Resto está vulnerável a despossessão por agronegócio, especulação, violência. Direitos "no papel" não se realizam sem luta permanente.</li>
                         </ul>
                     </div>
@@ -1964,8 +2082,8 @@
                                 <li><strong>1822-1889:</strong> Independência, mas permanece monarquia. Elite colonial conserva poder</li>
                                 <li><strong>1888:</strong> Abolição tardia (últimas Américas). <strong>Diferença crítica:</strong> diferente dos EUA (1865), Brasil aboliu sem reforma agrária. Escravos viraram população excluída, sem terra, sem capital, sem acesso</li>
                             </ul>
-                            <p class="text-gray-700 mt-4"><strong>Consequência estrutural:</strong> Desigualdade racial brasileira não vem de "preconceito individual" ou "diversidade", mas de estrutura histórica de exclusão. Pessoa preta no Brasil herdou escravidão; pessoa branca herdou propriedade.</p>
-                            <p class="text-gray-700 mt-3"><strong>Dados contemporâneos disso:</strong> Renda média branca é ~70% maior que preta. Taxa de homicídio de preto é 2.5x maior. Acesso à educação superior: 35% de brancos vs. 20% de pretos.</p>
+                            <p class="text-gray-700 mt-4"><strong>Consequência estrutural:</strong> Desigualdade racial brasileira não vem de "preconceito individual" ou "diversidade", mas de estrutura histórica de exclusão. Pessoa preta em Brasil herdou escravidão; pessoa branca herdou propriedade.</p>
+                            <p class="text-gray-700 mt-3"><strong>Dados contemporâneos disso:</strong> Renda média branca é ~70% maior que preta. Taxa de homicídio de preto é 2.5x maior. Acesso a educação superior: 35% de brancos vs. 20% de pretos.</p>
                         </div>
                     </div>
 
@@ -2140,7 +2258,7 @@
                             <p class="text-gray-700 mt-4"><strong>Composição étnica brasileira (Censo 2022):</strong></p>
                             <ul class="list-disc ml-6 text-gray-700 mt-2">
                                 <li><strong>Indígenas:</strong> ~1 milhão (305+ povos, 250+ línguas). Historicamente discriminados e marginalizados em seus territórios</li>
-                                <li><strong>Afro-descendentes:</strong> ~130 milhões de pessoas (aproximadamente 61% da população). Trazidos na escravidão (1500-1888), depois libertos sem terra/capital. Criaram culturas sincréticas (Candomblé, Samba, Capoeira, culinária)</li>
+                                <li><strong>Afro-descendentes:</strong> ~130 milhões de pessoas (aproximadamente 61% da população). Trazidos na escravidão (1500-1888), depois libertos sem terra/capital. Criaram culturas sincrética (Candomblé, Samba, Capoeira, culinária)</li>
                                 <li><strong>Europeus:</strong> Principalmente portugueses, italianos, alemães. Tiveram privilégio de ser "normativo" - sua cultura é vista como "brasileira padrão"</li>
                                 <li><strong>Asiáticos:</strong> Japoneses, chineses, vietnamitas. Comunidades menores (1-2%) mas frequentemente bem-sucedidas economicamente</li>
                             </ul>
@@ -2273,7 +2391,7 @@
 
                     <div class="callout info mt-8">
                         <p class="font-semibold mb-2">🇧🇷 O Mito da "Democracia Racial" e a Antropofagia Cultural</p>
-                        <p class="text-gray-700 mt-3">O paradigma da "democracia racial" funcionou por décadas como <strong>grande véu ideológico</strong> que interditava debate público sobre segregação racial institucional. Frequentemente invocado hoje para:</p>
+                        <p class="text-gray-700 mt-3">O paradigma da "democracia racial" funcionou por décadas como <strong>grande véu ideológico</strong> que interditava debate público sobre segregação racial institucional. Frecamente invocado hoje para:</p>
                         <ul class="list-disc ml-6 text-gray-700 mt-2">
                             <li>Invalidar políticas de cotas raciais</li>
                             <li>Argumentar que exclusão é "puramente classista"</li>
@@ -2382,7 +2500,7 @@
                             <span>+</span>
                         </button>
                         <div class="toggle-content" id="toggle5">
-                            <p class="text-gray-700 mt-4">A publicidade conecta consumo a <strong>estilos de vida</strong> — produz desejos, constrói identidades e diferencia grupos sociais via marcas e objetos.</p>
+                            <p class="text-gray-700 mt-4">A publicidade conecta consumo a <strong>estilos de vida</strong> — produz desejos, constroe identidades e diferencia grupos sociais via marcas e objetos.</p>
                             <p class="text-gray-700 mt-3"><strong>Featherstone (1991) — <em>Cultura de Consumo e Pós-Modernismo</em>:</strong> o consumo deixou de ser apenas satisfação de necessidades; tornou-se prática de distinção social e expressão de identidade.</p>
                             <p class="text-gray-700 mt-3"><strong>Redes sociais e cultura participativa:</strong></p>
                             <ul class="list-disc ml-6 text-gray-700 mt-2">
@@ -2411,9 +2529,9 @@
                         <p class="font-semibold mb-2">🇧🇷 Indústria Cultural Contemporânea: Plataformas e Algoritmos</p>
                         <p class="text-gray-700 mt-3">A crítica de Adorno/Horkheimer à "Indústria Cultural" transmuda-se em hiper-capitalismo de plataformas digitais:</p>
                         <ul class="list-disc ml-6 text-gray-700 mt-2">
-                            <li><strong>Streaming:</strong> Recomendações automatizadas (algoritmos) consolidam a homogeneização. Conteúdo consumido não exige esforço estético - limita-se à repetição de beats formulaicos.</li>
+                            <li><strong>Streaming:</strong> Recomendações automatizadas (algoritmos) consolidam a homogeneização. Conteúdo consumido não exige esforço estético - limitase à repetição de beats formulaicos.</li>
                             <li><strong>No Brasil:</strong> Gigantesca indústria do agronegócio patrocina cena musical dominante (sertanejo universitário), fundindo reprodutibilidade técnica massiva com formação de lifestyle que venera consumo agro-rural sintético.</li>
-                            <li><strong>Pergunta crítica:</strong> Personalização algorítmica AMPLIA diversidade estética ou APROFUNDA confinamento cultural do usuário?</li>
+                            <li><strong>Pergunta crítica:</strong> Personalização algoritmica AMPLIA diversidade estética ou APROFUNDA confinamento cultural do usuário?</li>
                         </ul>
                     </div>
 
@@ -2585,9 +2703,9 @@
                         <p class="text-gray-700 mt-3">A profecia weberiana do desencantamento inexorável sofre reveses analíticos no Sul Global, particularmente no Brasil:</p>
                         <ul class="list-disc ml-6 text-gray-700 mt-2">
                             <li><strong>Avassaladora adesão:</strong> Massas populares abraçam neopentecostalismo, especialmente Teologia da Prosperidade, que assimila integralmente racionalidade corporativa na forma do sagrado.</li>
-                            <li><strong>Contrato espiritual:</strong> Relação com divino transformada em "contrato" onde a fé se materializa em ascensão social financeira no plano terreno (antítese da compensação marxista no pós-morte).</li>
+                            <li><strong>Contrato espiritual:</strong> Relação com divino transformada em "contrato" onde fé materializa-se em ascensão social financeira no plano terreno (antítese da compensação marxista no pós-morte).</li>
                             <li><strong>Contradição teórica:</strong> Weber e Marx previam que modernidade secularizaria religião, mas Teologia da Prosperidade <strong>reencanta modernidade corporativa</strong>, transformando-a em sagrado.</li>
-                            <li><strong>Crítica:</strong> Oferece esperança às populações pobres, mas pode desresponsabilizar o Estado de políticas públicas ("arrisque a Deus").</li>
+                            <li><strong>Crítica:</strong> Oferece esperança às populações pobres mas pode desresponsabilizar Estado de políticas públicas ("arrisque a Deus").</li>
                         </ul>
                     </div>
 
@@ -2909,7 +3027,7 @@
                         <li><strong>Trabalho:</strong> Mulheres ganham menos, concentram-se em setores precarizados</li>
                         <li><strong>Dupla jornada:</strong> Trabalho remunerado + trabalho doméstico e cuidados</li>
                         <li><strong>Violência:</strong> Femicídio, assédio sexual, violência doméstica</li>
-                        <li><strong>Política:</strong> Sub-representação em cargos de poder</li>
+                        <li><strong>Política:</strong> Subrepresentação em cargos de poder</li>
                     </ul>
                     
                     <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Teoria Feminista Contemporânea</h3>
@@ -2939,7 +3057,7 @@
                             <li><strong>Dupla jornada:</strong> Divisão sexual do trabalho impõe às mulheres acúmulo de labor público assalariado + rotinas domésticas não remuneradas (cuidados, limpeza, criação).</li>
                             <li><strong>Performatividade de Butler aplicada:</strong> Gênero não é essência, mas repetição contínua de atos corporais estilizados — expectativas de feminilidade/masculinidade que produzem falsa naturalidade.</li>
                             <li><strong>Feminismo Negro (Lélia Gonzalez, Patricia Hill Collins):</strong> Crítica ao feminismo hegemônico branco — mulheres negras experienciam "matriz de dominação" que intersecciona raça + pobreza + gênero, não apenas gênero isolado.</li>
-                            <li><strong>Avanços legais:</strong> Lei Maria da Penha (2006), equiparação salarial no setor público, mas enforcement permanece fraco.</li>
+                            <li><strong>Avanços legais:**  Lei Maria da Penha (2006), equiparação salarial no setor público, mas enforcement permanece fraco.</li>
                         </ul>
                     </div>
 
@@ -2980,7 +3098,7 @@
                             <p class="text-gray-700 mt-4">Foucault (1975) em <em>Vigiar e Punir</em> analisa como o poder moderno age sobre os <strong>corpos</strong> por meio de disciplina: técnicas que os tornam dóceis e úteis.</p>
                             <p class="text-gray-700 mt-3"><strong>Instituições disciplinares:</strong> escola, hospital, prisão, fábrica, exército — todos moldam corpos e comportamentos através de horários, exames, vigilância e punições.</p>
                             <p class="text-gray-700 mt-3"><strong>Biopoder</strong> (Foucault, 1976 — <em>História da Sexualidade v.1</em>): forma de poder que age sobre a vida biológica das populações — controle da natalidade, saúde pública, vacinação, eugenia. O Estado não apenas mata (soberania) — ele faz viver e deixa morrer.</p>
-                            <p class="text-gray-700 mt-3"><strong>Panóptico:</strong> estrutura de prisão de Bentham onde um único vigia pode observar todos os prisioneiros sem ser visto — metáfora de como a vigilância moderna produz corpos que se autodisciplinam.</p>
+                            <p class="text-gray-700 mt-3"><strong>Panóptico:</strong> estrutura de prisão de Bentham onde um único vigia pode observar todos os prisioneiros sem ser visto — metáfora de como a vigilância moderna produz corpos que se auto-disciplinam.</p>
                         </div>
                     </div>
 
@@ -3203,9 +3321,9 @@
                         <p class="text-gray-700 mt-3">Censos IBGE refutam ideologia tradicional de família patriarcal nuclear:</p>
                         <ul class="list-disc ml-6 text-gray-700 mt-2">
                             <li><strong>Chefias monoparentais:</strong> Crescimento expressivo de famílias chefiadas por mães solteiras, frequentemente em vulnerabilidade nas periferias nacionais — sem suporte estatal.</li>
-                            <li><strong>Uniões homoafetivas:</strong> Avanço gradual no reconhecimento civil — 2011 (STF reconhece união estável homoafetiva), 2013 (CNJ autoriza casamento civil) — legalmente formalizadas no âmbito jurídico.</li>
-                            <li><strong>Precarização do care work (trabalho de cuidado):</strong> Crises sanitárias (COVID-19) expuseram vulnerabilidades: mulheres enfrentam fusão forçada entre home-office + cuidados domésticos ilimitados, sem cômputo remunerado. Encargos de "trabalho de cuidado" (criação, limpeza, cozinha) desempenhados tacitamente por lares femininos retroalimentam a precarização no mercado capitalista.</li>
-                            <li><strong>Paradoxo invisível:</strong> Trabalho de cuidado sustenta a economia capitalista, mas permanece não remunerado e desvalorizado — estrutura que beneficia capital ao explorar afeto feminino.</li>
+                            <li><strong>Uniões homoafetivas:</strong> Avanço gradual no reconhecimento cível — 2011 (STF reconhece união estável homoafetiva), 2013 (CNJ autoriza casamento civil) — legalmente formalizadas no pacto cívico judiciário.</li>
+                            <li><strong>Precarização do care work (trabalho de cuidado):</strong> Crises sanitárias (COVID-19) expuseram vulnerabilidades: mulheres enfrentam fusão forçada entre home-office + cuidados domésticos ilimitados, sem cômputo remunerado. Encargos de "trabalho de cuidado" (criação, limpeza, cozinha) desempenhado tacitamente por lares femininos retroalimenta precarização no mercado capitalista.</li>
+                            <li><strong>Paradoxo invisível:</strong> Trabalho de cuidado sustenta economia capitalista mas permanece não remunerado e desvalorizado — estrutura que beneficia capital ao explorar afeto feminino.</li>
                         </ul>
                     </div>
 
@@ -3280,7 +3398,7 @@
                                 <li><strong>Internalizado:</strong> o sujeito absorve representações negativas sobre a própria idade</li>
                             </ul>
                             <p class="text-gray-700 mt-3"><strong>Interseccionalidade:</strong> combina-se com gênero, classe e raça — mulheres idosas são particularmente afetadas.</p>
-                            <p class="text-gray-700 mt-2"><strong>Consequências:</strong> pior saúde física e mental, isolamento social, insegurança financeira.</p>
+                            <p class="text-gray-700 mt-2"><strong>Consequências:</strong> piores saúdes física e mental, isolamento social, insegurança financeira.</p>
                         </div>
                     </div>
 
@@ -3398,7 +3516,7 @@
                             <span>+</span>
                         </button>
                         <div class="toggle-content" id="toggle3">
-                            <p class="text-gray-700 mt-4"><strong>Mannheim (1928) — "O Problema das Gerações":</strong> geração não é apenas uma faixa etária — é um conjunto de pessoas que compartilham experiências históricas formativas (uma guerra, uma crise, uma revolução tecnológica) que moldam sua visão de mundo.</p>
+                            <p class="text-gray-700 mt-4"><strong>Mannheim (1928) — "O Problema das Gerações":</strong> geração não é apenas faixa etária — é conjunto de pessoas que compartilham experiências históricas formativas (uma guerra, uma crise, uma revolução tecnológica) que moldam sua visão de mundo.</p>
                             <p class="text-gray-700 mt-3"><strong>As gerações contemporâneas (categorias do mercado, com base sociológica parcial):</strong></p>
                             <ul class="list-disc ml-6 text-gray-700 mt-2">
                                 <li><strong>Baby Boomers (1946-1964):</strong> pós-guerra, crescimento econômico, contracultura dos 60/70, televisão</li>
@@ -3456,8 +3574,8 @@
                             <li><strong>Hiato divisório de classe:</strong> Juventudes das classes protegidas (subúrbios abastados, escolas privadas) versus juventudes periféricas — segregação urbana que bloqueia encontros e homogeniza representações.</li>
                             <li><strong>Hip-hop e funk como resistência:</strong> Expressões das periferias urbanas denunciam racismo estrutural, violência policial, exclusão laboral — não mera "diversão" mas ferramenta de conscientização política.</li>
                             <li><strong>Rolezinhos (2013):</strong> Jovens periféricos ocupam shoppings em camadas médias; tensionam violentamente as divisões de classe e raça no espaço urbano, expondo segregação residencial.</li>
-                            <li><strong>Ativismo digital:</strong> Ocupações secundaristas (2015-2016) contra austeridade; manifestações de rua combinadas com mobilização em redes sociais — ferramenta amplificadora mas também sujeita à desinformação algorítmica.</li>
-                            <li><strong>Exclusão digital:</strong> Acesso desigual à internet + falta de letramento digital replicam desigualdades estruturais nas comunidades on-line; "slacktivism" como simulacro de engajamento.</li>
+                            <li><strong>Ativismo digital:** Ocupações secundaristas (2015-2016) contra austeridade; manifestações de rua combinadas com mobilização em redes sociais — ferramenta amplificadora mas também sujeita à desinformação algorítmica.</li>
+                            <li><strong>Exclusão digital:**  Acesso desigual à internet + falta de letramento digital replicam desigualdades estruturais nas comunidades on-line; "slacktivism" como simulacro de engajamento.</li>
                         </ul>
                     </div>
 
@@ -3485,11 +3603,11 @@
 
                     <div class="callout info mb-6">
                         <p class="font-semibold mb-2">🎯 Conceito Central</p>
-                        <p><strong>Educação não é neutra.</strong> Escola aparentemente "igual para todos" na verdade <strong>reproduz desigualdades</strong> de classe, raça e gênero. <strong>Socialização:</strong> Processo de internalizar normas, valores e papéis que preparam para viver em sociedade.</p>
+                        <p><strong>Educação não é neutra.</strong> Escola aparentemente "igual para todos" na verdade <strong>reproduz desigualdades</strong> de classe, raça e gênero. <strong>Socialização:</strong> Processo de internacionalizar normas, valores e papéis que prepararam para viver em sociedade.</p>
                     </div>
 
                     <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Pierre Bourdieu - Reprodução Social</h3>
-                    <p class="mb-4 text-gray-700">Sociólogo francês Pierre Bourdieu (1930-2002) mostrou que a escola reproduz desigualdades através de 3 conceitos:</p>
+                    <p class="mb-4 text-gray-700">Sociólogo francês Pierre Bourdieu (1930-2002) mostrou que escola reproduce desigualdades através de 3 conceitos:</p>
 
                     <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
                         <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle1">
@@ -3702,7 +3820,7 @@
                         <ul class="list-disc ml-6 text-gray-700 mt-2">
                             <li><strong>Novo Ensino Médio e austeridade:</strong> Reformas curriculares desacoplam educação fundamental do desenvolvimento; redução de investimento público encarniçada.</li>
                             <li><strong>Currículo oculto e branqueamento:</strong> Materiais didáticos suprimem contribuições de povos indígenas e africanos; normalização de valores euro-ocidentais como universais.</li>
-                            <li><strong>Cotas como paliativo:</strong> Lei 12.711/2012 reserva vagas (50% escola pública, 25% pretos/pardos/indígenas) — avanço cívico mas insuficiente; trata sintoma (acesso superior) não causa (educação deficiente desde fundamental).</li>
+                            <li><strong>Cotas como tapaço:</strong> Lei 12.711/2012 reserva vagas (50% escola pública, 25% pretos/pardos/indígenas) — avanço cívico mas insuficiente; trata sintoma (acesso superior) não causa (educação deficiente desde fundamental).</li>
                             <li><strong>ENEM e meritocracia falsa:</strong> Acesso ao ensino superior via SISU; privatização de preparatórios amplifica vantagem de alunos de escolas privadas.</li>
                             <li><strong>Conflito político sobre conteúdo:</strong> Disputa entre pedagogias libertárias (Freire) versus reprodução técnica (Bourdieu); lobby conservador nega questões de gênero, raça e classe no currículo.</li>
                         </ul>
@@ -3887,7 +4005,7 @@
                     <p class="mb-4 text-gray-700">Análise de Marx e historiadores:</p>
                     <ul class="list-disc ml-6 text-gray-700 mb-4">
                         <li><strong>Servidão (feudal):</strong> Trabalhador preso à terra, semi-livre</li>
-                        <li><strong>Escravidão:</strong> Trabalhador como propriedade, coerção total (ocorreu nos séculos XVII-XIX)</li>
+                        <li><strong>Escravidão:</strong> Trabalhador como propriedade, coerção total (ocorreu séculos XVII-XIX)</li>
                         <li><strong>Trabalho assalariado:</strong> Trabalhador "livre" vende sua força de trabalho por salário (capitalismo)</li>
                     </ul>
                     
@@ -3925,7 +4043,7 @@
                         <ul class="list-disc ml-6 text-gray-700 mt-2">
                             <li><strong>Informalidade estrutural:</strong> 40% da força de trabalho está no setor informal (IBGE), sem direitos trabalhistas, previdência ou proteção. Herança de ausência de direitos trabalhistas para negros/as após abolição (1888).</li>
                             <li><strong>Reforma trabalhista de 2017:</strong> Lei 13.467 precarizou ainda mais: fim de proteções (FGTS, justa causa), flexibilização de terceirização, trabalho intermitente, facilitação de demissões. Sindicatos perderam poder de negociação.</li>
-                            <li><strong>Uberização em expansão:</strong> 1,7 milhão de entregadores e motoristas de aplicativo (sem direitos); trabalho doméstico remunerado concentrado em mulheres negras (13-15% da PEA). Algoritmos determinam salários, horários, penalidades.</li>
+                            <li><strong>Uberização em expansão:</strong> 1,7 milhões de entregadores e motoristas de aplicativo (sem direitos); trabalho doméstico remunerado concentrado em mulheres negras (13-15% da PEA). Algoritmos determinam salários, horários, penalidades.</li>
                             <li><strong>Divisão racial e de gênero do trabalho:</strong> Mulheres negras concentradas em trabalho doméstico (média salarial 1/3 de homens brancos); homens negros superrepresentados em trabalho informal/precário. Isso reflete continuidade de racismo estrutural pós-abolição.</li>
                             <li><strong>Movimento sindical fragmentado e enfraquecido:</strong> CUT, Força Sindical e outras confederações enfrentam desafios: cooptação estatal, redução de taxação, enfraquecimento da negociação coletiva. Greves em 2023-2024 reemergiram contra austeridade, mas encontram Estado hostil e mídia oligopolista.</li>
                         </ul>
@@ -4043,9 +4161,9 @@
                         <ul class="list-disc ml-6 text-gray-700 mt-2">
                             <li><strong>Austeridade fiscal permanente:</strong> Teto de gastos (EC 95/2016) congela investimento em saúde, educação, previdência — Estado reduz capacidade de regulação; privatizações aceleradas (energia, água, saneamento).</li>
                             <li><strong>Financeirização extrema:</strong> Agronegócio exportador opera via especulação de commodities; bancos concentram capital fictício; empresas cortam empregos para "retorno ao acionista".</li>
-                            <li><strong>Uberização em massa:</strong> 1,7 milhão de entregadores/motoristas de app sem direitos trabalhistas; algoritmos fixam preços e cobram taxas predatórias; rachadinha digital de renda.</li>
+                            <li><strong>Uberização em massa:</strong> 1,7 milhões de entregadores/motoristas de app sem direitos trabalhistas; algoritmos fixam preços e cobram taxas predatórias; rachadinha digital de renda.</li>
                             <li><strong>Herança escravocrata ampliada:</strong> Trabalhadores rurais em condições de servidão ("debt bondage"); mulheres negras concentradas em trabalho doméstico não remunerado; informalidade estrutural atinge 40% da força de trabalho.</li>
-                            <li><strong>Paradoxo da "6ª maior economia":</strong> Brasil gera riqueza colossal mas concentra extrema desigualdade — resultado direto de séculos de espoliação que neoliberalismo contemporâneo aprofunda.</li>
+                            <li><strong>Paradoxo do "6ª maior economia":</strong> Brasil gera riqueza colossal mas concentra extrema desigualdade — resultado direto de séculos de espoliação que neoliberalismo contemporâneo aprofunda.</li>
                         </ul>
                     </div>
 
@@ -4139,7 +4257,7 @@
                         <p class="text-gray-700 mt-3">O consumo reproduz desigualdades estruturais em contexto de extrema concentração de renda:</p>
                         <ul class="list-disc ml-6 text-gray-700 mt-2">
                             <li><strong>Shopping como segregação urbana:</strong> "Rolezinhos" (2013) exponenciaram tensões de classe/raça; periféricos ocupam espaço de consumo de classe média, desencadeando policiamento racial e vigilância.</li>
-                            <li><strong>Gosto e reprodução social:</strong> Bourdieu aplicado ao Brasil — famílias de elite preservam capital cultural (artes, culinária fina, educação privada); pobres enfrentam currículo oculto que desvaloriza seus saberes.</li>
+                            <li><strong>Gosto e reprodução social:</strong> Bourdieu aplicado ao Brasil — famílias de elite preservam capital cultural (artes, culinária fina, educação privada); pobres enfrentam currículo oculto que devalida seus saberes.</li>
                             <li><strong>Publicidade e branqueamento:</strong> Indústria de consumo (moda, cosmética, mídia) historicamente apaga presença negra/indígena em anúncios; recentemente visibilidade tokenista sem redistribuição de poder.</li>
                             <li><strong>Fast fashion e exploração:</strong> Confecções brasileiras subcontratam costureiras em oficinas clandestinas (frequentemente imigrantes); lucro concentrado em marcas multinacionais.</li>
                             <li><strong>Debt bondage via crédito ao consumo:</strong> Empréstimos predatórios e financiamento de consumo mantêm pobres em endividamento perpétuo — ilusão de mobilidade via consumo.</li>
@@ -4269,8 +4387,8 @@
                             <li><strong>Divisão internacional do trabalho:</strong> Brasil permanece exportador de matérias-primas (soja, minério, petróleo) enquanto importa produtos manufaturados de alto valor — dinâmica colonial prolongada.</li>
                             <li><strong>Financeirização e fuga de capital:</strong> Investimento externo em Brasil visa lucro especulativo, não desenvolvimento; remessas de lucros superam investimentos novos (drenagem de riqueza).</li>
                             <li><strong>Precarização do trabalho global:</strong> Corporações multinacionais terceirizam à periferia; brasileiros ganham uma fração do que ganham trabalhadores no Norte — mesma tarefa, salário racializado.</li>
-                            <li><strong>Imperialismo cultural:</strong> Netflix, Disney, Big Tech dominam mídia/dados; culturas locais (cinema, música) enfrentam competição desigual; algoritmos amplificam valores eurocêntricos.</li>
-                            <li><strong>Resistências territoriais:</strong> Comunidades locais (quilombolas, indígenas, pequenos agricultores) resistem ao agronegócio globalizador; MST e movimentos ambientais defendem soberania territorial contra commodificação.</li>
+                            <li><strong>Imperialismo cultural:** Netflix, Disney, Big Tech dominam mídia/dados; culturas locais (cinema, música) enfrentam competição desigual; algoritmos amplificam valores eurocêntricos.</li>
+                            <li><strong>Resistências territoriais:** Comunidades locais (quilombolas, indígenas, pequenos agricultores) resistem ao agronegócio globalizador; MST e movimentos ambientais defendem soberania territorial contra commodificação.</li>
                         </ul>
                     </div>
 
@@ -4338,7 +4456,7 @@
                                 <li><strong>Status (prestígio):</strong> Honra e respeito social</li>
                                 <li><strong>Poder (político):</strong> Capacidade de impor vontade</li>
                             </ul>
-                            <p class="text-gray-700 mt-2">Uma pessoa pode ter alta classe mas baixo status (ricaço endinheirado), ou vice-versa.</p>
+                            <p class="text-gray-700 mt-2">Uma pessoa pode ter alta classe mas baixo status (ricão endinheirado), ou vice-versa.</p>
                         </div>
                     </div>
                     
@@ -4378,8 +4496,8 @@
                         <ul class="list-disc ml-6 text-gray-700 mt-2">
                             <li><strong>Mito da mobilidade social:</strong> Narrativa meritocrática esconde que maioria dos pobres permanece pobre; filho de pobre tem ~15% de chance de chegar à classe média, filho de rico tem ~80% de chance de se manter rico.</li>
                             <li><strong>Branquitude e capital cultural:</strong> Elite branca controla educação privada, redes profissionais, acesso a crédito; negros/pardos enfrentam discriminação em contratação apesar de mesma qualificação.</li>
-                            <li><strong>Herança de escravidão:</strong> Após abolição (1888), zero políticas de reparação; negros expulsos de terras, confinados em subempregos, sem herança familiar; séculos de espoliação não foram reparados.</li>
-                            <li><strong>Interseccionalidade de classe-raça:</strong> Mulheres negras ganham menos que homens negros, que ganham menos que homens brancos, em mesma função — desigualdade sobreposta.</li>
+                            <li><strong>Herança de escravidão:** Após abolição (1888), zero políticas de reparação; negros expulsos de terras, confinados em subempregos, sem herança familiar; séculos de espoliação não foram reparados.</li>
+                            <li><strong>Interseccionalidade de classe-raça:** Mulheres negras ganham menos que homens negros, que ganham menos que homens brancos, em mesma função — desigualdade sobreposta.</li>
                             <li><strong>Habitualização da pobreza:</strong> Bourdieu no Brasil — habitus de classe pobre internaliza subalternidade; educação pública precária não transfere capital cultural para mobilidade.</li>
                         </ul>
                     </div>
@@ -4472,8 +4590,8 @@
                             <li><strong>Racialização da pobreza:</strong> 64% dos pobres são negros/pardos (PNAD 2022); herança de escravidão cristaliza em exclusão laboral e acesso desigual a crédito.</li>
                             <li><strong>Feminização da pobreza:</strong> Mulheres (esp. chefes monoparentais) têm maior taxa de pobreza; recebem menos por mesmo trabalho; concentram-se em empregos precários (doméstico, comércio).</li>
                             <li><strong>Gini persistente:</strong> Brasil Gini ~0,54 (uma das piores do mundo); razão decil mostra top 10% ganha 30x+ que bottom 10% — desigualdade estrutural não mudou apesar de Bolsa Família.</li>
-                            <li><strong>Ciclos de intergeracionalidade:</strong> Filho de pobre tem probabilidade alta de permanecer pobre; ausência de políticas estruturais (educação de qualidade, acesso a crédito) bloqueia mobilidade.</li>
-                            <li><strong>Regressão pós-2016:</strong> Teto de gastos congelou investimento público; desemprego voltou acima de 10%; pobreza extrema cresceu; Bolsa Família reduzido em beneficiários e valor real.</li>
+                            <li><strong>Ciclos de intergeracionalidade:** Filho de pobre tem probabilidade alta de permanecer pobre; ausência de políticas estruturais (educação de qualidade, acesso a crédito) bloqueia mobilidade.</li>
+                            <li><strong>Regressão pós-2016:** Teto de gastos congelou investimento público; desemprego voltou acima de 10%; pobreza extrema cresceu; Bolsa Família reduzido em beneficiários e valor real.</li>
                         </ul>
                     </div>
 
@@ -4668,7 +4786,7 @@
                         <ul class="list-disc ml-6 text-gray-700 mt-2">
                             <li><strong>Era Vargas (1930-1945):</strong> Primeira onda de direitos sociais (leis trabalhistas, previdência) sem democracia plena — "cidadania regulada" atrelada à profissão formal.</li>
                             <li><strong>Ditadura militar (1964-1985):</strong> Ampliou direitos sociais (educação, saúde) mas suprimiu direitos políticos/civis (censura, torturas, ausência de eleições diretas).</li>
-                            <li><strong>Pós-1988:</strong> Constituição expandiu direitos civis/políticos mas implementação incompleta — pobres carecem de acesso real à justiça, educação deficiente, saúde precária.</li>
+                            <li><strong>Pós-1988:</strong> Constituição expandiu direitos civis/políticos mas implementação incompleta — pobres carecem acesso real a justiça, educação deficiente, saúde precária.</li>
                             <li><strong>Paradoxo permanente:</strong> Direitos formais na constituição não correspondem a direitos vividos — desigualdade estrutural bloqueia exercício prático da cidadania para maioria.</li>
                             <li><strong>Cidadania de segunda classe:</strong> Negros, pobres, indígenas: cidadãos nominais mas sofrem violência estatal impune; acesso negado a direitos cívicos básicos.</li>
                         </ul>
@@ -4766,8 +4884,8 @@
                         <p class="text-gray-700 mt-3">O presidencialismo de coalizão brasileiro é estruturalmente vulnerável a crises, refletindo heranças de autoritarismo e desigualdade:</p>
                         <ul class="list-disc ml-6 text-gray-700 mt-2">
                             <li><strong>Fragmentação partidária como fragilidade:</strong> O multipartidarismo extremo (30+ partidos históricos) não promove representação genuína, mas cria blocos negociáveis. Governos precisam distribuir ministérios a oligarquias regionais, reproduzindo coronelismo sem base de classes.</li>
-                            <li><strong>Financiamento privado e oligarquias midiáticas:</strong> Dinheiro corporativo domina campanhas; famílias como Marinho (Globo) controlam narrativas. Sem reforma do financiamento, legisladores dependem de doadores que os vinculam a interesses rentistas versus redistribuição.</li>
-                            <li><strong>Impeachment como arma política:</strong> Collor (1992) e Dilma (2016) revelam como sistema permite deposições sem golpe formal, mas sem proteger direitos. Dilma em 2016 mostrou: coalizão se dissolve, mídia oligopolista cria narrativa, Senado (dominado por oligarcas regionais) remove presidente eleita.</li>
+                            <li><strong>Financiamento privado e oligarquias midiáticas:</strong> Dinheiro corporativo domina campanhas; famílias como Marinho (Globo) controlam narrativas. Sem reforma do financiamento, legisladores dependem de doadores que os vinculam a interesses rentistas versus redistribution.</li>
+                            <li><strong>Impeachment como arma política:</strong> Collor (1992) e Dilma (2016) revelam como sistema permite deposições sem golpe formal, mas sem proteger direitos. Dilma em 2016 mostrou: coalizão se dissolve, mídia oligopolista cria narrativa, Senado (dominado por oligarcas regionais) remove presidente elegível.</li>
                             <li><strong>Sub-representação estrutural:</strong> Mulheres (13-17% das cadeiras), negros/as e pobres permanecem excluídos. Sistema perpetua elite branca de formação jurídica/empresarial. Cotas partidárias e regras de gênero enfrentam resistência de partidos beneficiados por status quo.</li>
                             <li><strong>Desinformação e polarização reconfigurada:</strong> WhatsApp e redes sociais (2018 em diante) radicalizaram competição entre oligarquias. Fake news circulam por grupos fechados; algoritmos amplificam ódio para manter engagement. Polarização mascara continuidades de classe/raça que transcendem Lula x Bolsonaro.</li>
                         </ul>
@@ -4846,7 +4964,7 @@
                             <span>+</span>
                         </button>
                         <div class="toggle-content" id="toggle3">
-                            <p class="text-gray-700 mt-4">Baseada em <strong>qualidades excepcionais do líder</strong>. Seguidores admiram a pessoa pelo carisma (atração pessoal).</p>
+                            <p class="text-gray-700 mt-4">Baseada em <strong>qualidades excepciais do líder</strong>. Seguidores admiram a pessoa pelo carisma (atração pessoal).</p>
                             <p class="text-gray-700 mt-2"><strong>Características:</strong></p>
                             <ul class="list-disc ml-6 text-gray-700 mt-2">
                                 <li>Conexão emocional e de admiração</li>
@@ -4860,7 +4978,7 @@
                     </div>
 
                     <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Sistemas Políticos Contemporâneos</h3>
-                    <p class="mb-4 text-gray-700">Toda sociedade moderna deve escolher como organizar o poder. Existem três sistemas principais:</p>
+                    <p class="mb-4 text-gray-700">Toda sociedade moderna deve escolher como organizar poder. Existem três principais:</p>
 
                     <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
                         <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle4">
@@ -4868,7 +4986,7 @@
                             <span>+</span>
                         </button>
                         <div class="toggle-content" id="toggle4">
-                            <p class="text-gray-700 mt-4"><strong>Definição:</strong> Sistema em que o poder reside no povo e é exercido mediante representação ou participação direta.</p>
+                            <p class="text-gray-700 mt-4"><strong>Definição:</strong> Sistema em que poder reside no povo e é exercido mediante representação ou participação direta.</p>
                             <p class="text-gray-700 mt-3"><strong>Características principais:</strong></p>
                             <ul class="list-disc ml-6 text-gray-700 mt-2">
                                 <li>Soberania popular (povo é fonte de poder)</li>
@@ -4878,7 +4996,7 @@
                                 <li>Liberdade de expressão e associação</li>
                                 <li>Accountability (governantes respondem perante povo)</li>
                             </ul>
-                            <p class="text-gray-700 mt-3"><strong>Desafios:</strong> Desigualdade de poder econômico, manipulação de opinião pública, corrupção institucional, oligarquia (poucos controlam).</p>
+                            <p class="text-gray-700 mt-3"><strong>Desafios:</strong> Desigualdade de poder económico, manipulação de opinião pública, corrupção institucional, oligarquia (poucos controlam).</p>
                         </div>
                     </div>
 
@@ -4909,7 +5027,7 @@
                             <span>+</span>
                         </button>
                         <div class="toggle-content" id="toggle6">
-                            <p class="text-gray-700 mt-4"><strong>Definição:</strong> Forma extrema de autoritarismo onde o Estado busca controlar <strong>TODOS</strong> os aspectos da vida pública E privada.</p>
+                            <p class="text-gray-700 mt-4"><strong>Definição:</strong> Forma extrema de autoritarismo onde Estado busca controlar <strong>TODOS</strong> os aspectos da vida pública E privada.</p>
                             <p class="text-gray-700 mt-3"><strong>Características (muito mais extremas que autoritarismo):</strong></p>
                             <ul class="list-disc ml-6 text-gray-700 mt-2">
                                 <li>Controle estatal total</li>
@@ -4920,7 +5038,7 @@
                                 <li>Culto de personalidade do líder</li>
                                 <li>Controle da economia, educação, cultura, família, religião</li>
                             </ul>
-                            <p class="text-gray-700 mt-3"><strong>Exemplos históricos:</strong> Alemanha nazista (Hitler), URSS (Stalin), Coreia do Norte (regime Kim).</p>
+                            <p class="text-gray-700 mt-3"><strong>Exemplos históricos:</strong> Nazi-Alemanha (Hitler), URSS (Stalin), Coreia do Norte (regime Kim).</p>
                         </div>
                     </div>
 
@@ -4979,9 +5097,9 @@
                         <ul class="list-disc ml-6 text-gray-700 mt-2">
                             <li><strong>Presidencialismo de coalizão instável:</strong> Presidente sem maioria legislativa natural; negocia com partidos clientes oferecendo cargos/orçamento — incentiva corrupção sistemática (Mensalão, Lava Jato).</li>
                             <li><strong>Oligarquias midiáticas:</strong> Rede Globo monopoliza narrativa política; agenda de elites recebe cobertura amplificada enquanto demandas de pobres/periferias ignoradas — poder simbólico obsceno.</li>
-                            <li><strong>Desgaste institucional recente:</strong> Impeachment de Dilma (2016) levantou dúvidas sobre legalidade; ataque ao Congresso/STF (2023); polarização extrema em redes sociais; erosão de confiança nas instituições.</li>
-                            <li><strong>Fragilidade de direitos civis:</strong> Negros presos desproporcionalmente; violência policial sistêmica em favelas; impunidade para crimes de colarinho branco enquanto pobres são presos por roubo; judiciário reflete desigualdades.</li>
-                            <li><strong>Exclusão da participação:</strong> Mecanismos de democracia participativa (orçamento participativo, conselhos) existem mas são simbólicos; decisões estruturais tomadas sem participação popular.</li>
+                            <li><strong>Desgaste institucional recente:** Impeachment de Dilma (2016) levantou dúvidas sobre legalidade; ataque ao Congresso/STF (2023); polarização extrema em redes sociais; erosão de confiança nas instituições.</li>
+                            <li><strong>Fragilidade de direitos civis:** Negros presos desproporcionalamente; violência policial sistêmica em favelas; impunidade para crimes de colarinho branco enquanto pobres presos por roubo; judiciário reflete desigualdades.</li>
+                            <li><strong>Excludência da participação:** Mecanismos de democracia participativa (orçamento participativo, conselhos) existem mas são simbólicos; decisões estruturais tomadas sem participação popular.</li>
                         </ul>
                     </div>
 
@@ -5040,7 +5158,7 @@
                                 <li>Número de participantes cresce</li>
                                 <li>Grupos diferentes se unem (solidariedade)</li>
                                 <li>Repertório de ações se expande (não só rua, mas outras formas)</li>
-                                <li>Cobertura midiática aumenta</li>
+                                <li>Cobertura mediática aumenta</li>
                                 <li>Mobilização atinge pico</li>
                             </ul>
                         </div>
@@ -5056,7 +5174,7 @@
                             <ul class="list-disc ml-6 text-gray-700 mt-2">
                                 <li>Reação estatal mais repressiva</li>
                                 <li>Sociedade se divide (a favor vs contra)</li>
-                                <li>Alguns grupos radicalizam ações</li>
+                                <li>Alguns grupos radicalizem ações</li>
                                 <li>Outros buscam negociação institucional</li>
                             </ul>
                         </div>
@@ -5278,7 +5396,7 @@
                             <ul class="list-disc ml-6 mt-2 text-gray-700 space-y-2">
                                 <li><strong>Detonadores:</strong> desemprego juvenil, corrupção, autoritarismo e desigualdade econômica.</li>
                                 <li><strong>Papel das redes sociais:</strong> Twitter, Facebook e YouTube foram fundamentais para coordenar protestos e transmitir imagens — mas a organização foi muito além das plataformas.</li>
-                                <li><strong>Resultados variados:</strong> Tunísia alcançou uma transição democrática; Egito voltou ao autoritarismo militar; Líbia, Iêmen e Síria mergulharam em guerras civis.</li>
+                                <li><strong>Resultados variados:</strong> Tunísia alcançou uma transição democrática; Egito voltou ao autoritarismo militar; Síbia, Iêmen e Síria mergulharam em guerras civis.</li>
                                 <li><strong>Limite das redes sociais:</strong> a mobilização digital não substitui organizações políticas e instituições capazes de sustentar a mudança.</li>
                             </ul>
                         </div>
@@ -6191,7 +6309,7 @@
                         </button>
                         <div class="toggle-content" id="toggle4">
                             <p class="text-gray-700 mt-4">O SUS é fruto do <strong>Movimento da Reforma Sanitária</strong>, articulado nos anos 1970-80 contra a ditadura militar.</p>
-                            <p class="text-gray-700 mt-3"><strong>Marco:</strong> 8ª Conferência Nacional de Saúde (1986), coordenada por <strong>Sérgio Arouca</strong> (1941-2003), médico sanitarista e principal pensador do SUS.</p>
+                            <p class="text-gray-700 mt-3"><strong>Marco:</strong> 8ª Conferência Nacional de Saúde (1986), coordenada por <strong>Sergio Arouca</strong> (1941-2003), médico sanitarista e principal pensador do SUS.</p>
                             <ul class="list-disc ml-6 text-gray-700 mt-2">
                                 <li>Arouca definiu a Reforma Sanitária como um "processo civilizatório"</li>
                                 <li>A Conferência legitimou a saúde como <strong>direito de todos e dever do Estado</strong></li>
@@ -6366,7 +6484,7 @@
                         <p class="font-semibold mb-2">🇧🇷 Migrações Brasileiras: Êxodos, Xenofobia e Direitos Precarizados</p>
                         <p class="text-gray-700 mt-3">As migrações no Brasil contemporâneo refletem desigualdades, violência e exclusão social estruturantes:</p>
                         <ul class="list-disc ml-6 text-gray-700 mt-2">
-                            <li><strong>Êxodo rural e migração interna contínua:</strong> 50 milhões+ de brasileiros vivem fora de seus estados de nascimento; migrações internas (Nordeste→Sudeste, interior→metrópole) refletem ausência de políticas de desenvolvimento regional; periferias urbanas formadas por migrantes e seus filhos enfrentam precarização habitacional e laboral.</li>
+                            <li><strong>Êxodo rural e migração interna contínua:</strong> 50 milhões+ de brasileiros vivem fora de seus estados de nascimento; migrações internas (Nordeste→Sudeste, interior→metrópole) refletem ausência de políticas de desenvolvendo regional; periferias urbanas formadas por migrantes e seus filhos enfrentam precarização habitacional e laboral.</li>
                             <li><strong>Emigração internacional de brasileiros:</strong> 2-4 milhões de brasileiros no exterior (EUA, Portugal, Itália, Paraguai, Japão); frequentemente em situação de vulnerabilidade (trabalho irregular, baixa remuneração). Remetem ~3 bilhões/ano para Brasil.</li>
                             <li><strong>Crise migratória venezuelana e xenofobia acirrada:</strong> Entrada de 260 mil+ venezuelanos (2015-2023) desencadeou onda de xenofobia; mídia oligopolista amplificou narrativas de "invasão" e "roubo de empregos". Violência contra venezuelanos documentada em Roraima; debates públicos frequentemente desumanos.</li>
                             <li><strong>Migrações climáticas emergentes:</strong> Secas no Nordeste (agravadas por mudanças climáticas) impulsionam novas migrações; desertificação de sertões; inundações urbanas removem favelas. Governo pouco investe em políticas de adaptação; expulsões de terras via agronegócio e especulação imobiliária.</li>
@@ -7724,7 +7842,7 @@
                 topicTitle: "Migrações e Deslocamentos Humanos", 
                 question: "Todas as políticas de migração são similares e baseadas nos mesmos princípios internacionais.", 
                 correctAnswer: false, 
-                explanation: "As políticas de migração variam drasticamente entre países, refletindo interesses nacionais, ideologias políticas e contextos históricos. Alguns países adotam políticas restritivas, outros mais inclusivas. Diferem em critérios de elegibilidade, processos de naturalização, direitos conferidos e integração. Fatores históricos (colonialismo, conflitos prévios), econômicos e políticos moldam abordagens distintas. Políticas xenófobas contrastam com modelos de multiculturalismo. Organismos internacionais propõem diretrizes, mas a soberania nacional permite variações significativas. Compreender essa pluralidade é fundamental para análise sociológica."
+                explanation: "As políticas de migração variam drasticamente entre países, refletindo interesses nacionais, ideologias políticas e contextos históricos. Alguns países adotam políticas restritivas, outros mais inclusivas. Diferem em critérios de elegibilidade, processos de naturalização, direitos conferidos e integração. Fatores históricos (colonialismo, conflitos prévios), económicos e políticos moldam abordagens distintas. Políticas xenófobas contrastam com modelos de multiculturalismo. Organismos internacionais propõem diretrizes, mas a soberania nacional permite variações significativas. Compreender essa pluralidade é fundamental para análise sociológica."
             },
             {
                 id: "quiz-156", 
@@ -7732,7 +7850,7 @@
                 topicTitle: "Ciência e Tecnologia", 
                 question: "A ciência é completamente objetiva e isenta de influências sociais.", 
                 correctAnswer: false, 
-                explanation: "A ciência não é totalmente objetiva; sofre influências sociais, políticas e econômicas em vários níveis. Os temas pesquisados refletem prioridades sociais e financiamento disponível. Comunidades científicas possuem culturas, normas e vieses. História da ciência mostra como preconceitos raciais, sexistas e classistas influenciaram pesquisas. Teorias científicas são interpretadas culturalmente. A construção do conhecimento científico é um processo social. Porém, isso não nega o rigor metodológico ou objetividade de evidências empíricas. Reconhecer influências sociais permite ciência mais reflexiva e responsável socialmente."
+                explanation: "A ciência não é totalmente objetiva; sofre influências sociais, políticas e económicas em vários níveis. Os temas pesquisados refletem prioridades sociais e financiamento disponível. Comunidades científicas possuem culturas, normas e vieses. História da ciência mostra como preconceitos raciais, sexistas e classistas influenciaram pesquisas. Teorias científicas são interpretadas culturalmente. A construção do conhecimento científico é um processo social. Porém, isso não nega o rigor metodológico ou objetividade de evidências empíricas. Reconhecer influências sociais permite ciência mais reflexiva e responsável socialmente."
             },
             {
                 id: "quiz-157", 
@@ -7748,15 +7866,15 @@
                 topicTitle: "Ciência e Tecnologia", 
                 question: "O conhecimento científico é igualmente acessível a todos os grupos sociais.", 
                 correctAnswer: false, 
-                explanation: "O acesso ao conhecimento científico é desigualmente distribuído. Fatores socioeconômicos, educacionais e geográficos criam barreiras. Populações de baixa renda têm menos acesso a educação científica de qualidade. Mulheres e minorias étnicas enfrentam discriminação em instituições científicas. Países em desenvolvimento possuem infraestrutura científica limitada. Publicações científicas frequentemente exigem pagamentos. Alfabetização científica varia conforme classe social e nível educacional. Linguagem científica é frequentemente inacessível. Essas disparidades perpetuam desigualdades, pois conhecimento científico influencia decisões políticas, saúde e oportunidades econômicas."
+                explanation: "O acesso ao conhecimento científico é desigualmente distribuído. Fatores socioeconômicos, educacionais e geográficos criam barreiras. Populações de baixa renda têm menos acesso a educação científica de qualidade. Mulheres e minorias étnicas enfrentam discriminação em instituições científicas. Países em desenvolvimento possuem infraestrutura científica limitada. Publicações científicas frequentemente exigem pagamentos. Alfabetização científica varia conforme classe social e nível educacional. Linguagem científica é frequentemente inacessível. Essas disparidades perpetuam desigualdades, pois conhecimento científico influencia decisões políticas, saúde e oportunidades económicas."
             },
             {
                 id: "quiz-159", 
                 topicId: "ciencia-tecnologia", 
                 topicTitle: "Ciência e Tecnologia", 
-                question: "O desenvolvimento tecnológico é independente de interesses econômicos.", 
+                question: "O desenvolvimento tecnológico é independente de interesses económicos.", 
                 correctAnswer: false, 
-                explanation: "Desenvolvimento tecnológico é profundamente conectado a interesses econômicos. Corporações direcionam pesquisa para produtos lucrativos, não necessariamente para benefício social. Financiamento privado condiciona pesquisa a objetivos comerciais. Propriedade intelectual favorece empresas poderosas. Inovações são frequentemente implementadas visando lucro, não sustentabilidade. Medicamentos para doenças de países ricos têm mais financiamento que para doenças tropicais negligenciadas. Indústria de tecnologia concentra poder econômico. Políticas publicitárias influenciam adoção tecnológica. Reconhecer essa dinâmica é essencial para compreender porque certos desenvolvimentos prosperam enquanto outros são negligenciados."
+                explanation: "Desenvolvimento tecnológico é profundamente conectado a interesses económicos. Corporações direcionam pesquisa para produtos lucrativos, não necessariamente para benefício social. Financiamento privado condiciona pesquisa a objetivos comerciais. Propriedade intelectual favorece empresas poderosas. Inovações são frequentemente implementadas visando lucro, não sustentabilidade. Medicamentos para doenças de países ricos têm mais financiamento que para doenças tropicais negligenciadas. Indústria de tecnologia concentra poder económico. Políticas publicitárias influenciam adoção tecnológica. Reconhecer essa dinâmica é essencial para compreender porque certos desenvolvimentos prosperam enquanto outros são negligenciados."
             },
             {
                 id: "quiz-160", 
@@ -7772,7 +7890,7 @@
                 topicTitle: "Sociedade e Meio Ambiente", 
                 question: "Os problemas ambientais são primariamente questões de responsabilidade moral individual.", 
                 correctAnswer: false, 
-                explanation: "Problemas ambientais não são principalmente questões individuais, mas estruturais e sistêmicas. Embora comportamentos individuais importem, a escala de degradação ambiental é determinada por estruturas econômicas (capitalismo industrial), políticas (regulação inadequada) e tecnológicas. Grandes corporações produzem maioria das emissões. Padrões de consumo refletem disponibilidade de recursos e infraestrutura. Culpabilização individual desvia responsabilidade das estruturas que moldam comportamentos. Ecologia política argumenta que injustiças ambientais refletem distribuições desiguais de poder e recursos. Solução exige transformação sistêmica, não apenas mudanças comportamentais individuais."
+                explanation: "Problemas ambientais não são principalmente questões individuais, mas estruturais e sistêmicas. Embora comportamentos individuais importem, a escala de degradação ambiental é determinada por estruturas económicas (capitalismo industrial), políticas (regulação inadequada) e tecnológicas. Grandes corporações produzem maioria das emissões. Padrões de consumo refletem disponibilidade de recursos e infraestrutura. Culpabilização individual desvia responsabilidade das estruturas que moldam comportamentos. Ecologia política argumenta que injustiças ambientais refletem distribuições desiguais de poder e recursos. Solução exige transformação sistêmica, não apenas mudanças comportamentais individuais."
             },
             {
                 id: "quiz-162", 
@@ -7786,9 +7904,9 @@
                 id: "quiz-163", 
                 topicId: "meio-ambiente", 
                 topicTitle: "Sociedade e Meio Ambiente", 
-                question: "O desenvolvimento sustentável é plenamente compatível com crescimento econômico ilimitado.", 
+                question: "O desenvolvimento sustentável é plenamente compatível com crescimento económico ilimitado.", 
                 correctAnswer: false, 
-                explanation: "Desenvolvimento sustentável e crescimento econômico ilimitado são incompatíveis. Planeta possui recursos finitos e capacidades de regeneração limitadas. Crescimento contínuo pressiona limites ecológicos. Ideias de 'desacoplamento' (crescimento sem aumento de impacto) mostram-se insuficientes empiricamente. Economia circular e eficiência melhoram, mas não eliminam pressão ambiental do crescimento. Desenvolvimento genuinamente sustentável exige redefinição de progresso além do PIB, questionando imperativo de crescimento perpétuo. Conceito original de sustentabilidade reconhecia necessidade de limites. Confundir desenvolvimento 'verde' com crescimento ilimitado é estratégia de greenwashing que mascara continuação de exploração."
+                explanation: "Desenvolvimento sustentável e crescimento económico ilimitado são incompatíveis. Planeta possui recursos finitos e capacidades de regeneração limitadas. Crescimento contínuo pressiona limites ecológicos. Ideias de 'desacoplamento' (crescimento sem aumento de impacto) mostram-se insuficientes empiricamente. Economia circular e eficiência melhoram, mas não eliminam pressão ambiental do crescimento. Desenvolvimento genuinamente sustentável exige redefinição de progresso além do PIB, questionando imperativo de crescimento perpétuo. Conceito original de sustentabilidade reconhecia necessidade de limites. Confundir desenvolvimento 'verde' com crescimento ilimitado é estratégia de greenwashing que mascara continuação de exploração."
             },
             {
                 id: "quiz-164", 
@@ -7860,7 +7978,7 @@
                 topicTitle: "Sociabilidades do Mundo Digital", 
                 question: "Espaços digitais eliminam hierarquias sociais e desigualdades.", 
                 correctAnswer: false, 
-                explanation: "Espaços digitais replicam e frequentemente amplificam hierarquias sociais existentes. Divisão digital perpetua exclusões. Discurso de ódio direciona-se a grupos marginalizados. Modulação de plataformas reflete poder econômico. Bots e contas falsas manipulam narrativas. Algoritmos amplificam vozes privilegiadas. Mulheres e minorias enfrentam assédio online desproporcionalmente. Acesso a ferramentas digitais difere por classe, raça, gênero. Mito de 'democracia digital' mascara perpetuação de poder. Ausência de presença física não neutraliza privilégios estruturais. Abordagem crítica reconhece que tecnologia nunca é meramente técnica; sempre social, política e marcada por relações de poder preexistentes."
+                explanation: "Espaços digitais replicam e frequentemente amplificam hierarquias sociais existentes. Divisão digital perpetua exclusões. Discurso de ódio direciona-se a grupos marginalizados. Modulação de plataformas reflete poder económico. Bots e contas falsas manipulam narrativas. Algoritmos amplificam vozes privilegiadas. Mulheres e minorias enfrentam assédio online desproporcionalmente. Acesso a ferramentas digitais difere por classe, raça, gênero. Mito de 'democracia digital' mascara perpetuação de poder. Ausência de presença física não neutraliza privilégios estruturais. Abordagem crítica reconhece que tecnologia nunca é meramente técnica; sempre social, política e marcada por relações de poder preexistentes."
             },
             {
                 id: "quiz-173", 
@@ -7932,7 +8050,7 @@
                 topicTitle: "Tecnologia e Transformação Social", 
                 question: "A tecnologia determina mudanças sociais; a sociedade apenas responde.", 
                 correctAnswer: false, 
-                explanation: "Determinismo tecnológico superestima influência da tecnologia. Sociedade não meramente responde; ativamente molda desenvolvimento e adoção tecnológicos. Pessoas escolhem como usar, regulam, resistem tecnologia. Contextos históricos, políticos e econômicos determinam aplicações tecnológicas. Internet foi criada em contexto guerra fria; uso subsequente foi socialmente condicionado. Mesma tecnologia tem interpretações distintas culturalmente. Agência social é primária; tecnologia é secundária. Abordagem construcionista social argumenta que tecnologia é cocriada por sociedade. Reconhecer esse mútuo constitutivo permite compreensão mais sofisticada de relações entre tecnologia e sociedade."
+                explanation: "Determinismo tecnológico superestima influência da tecnologia. Sociedade não meramente responde; ativamente molda desenvolvimento e adoção tecnológicos. Pessoas escolhem como usar, regulam, resistem tecnologia. Contextos históricos, políticos e económicos determinam aplicações tecnológicas. Internet foi criada em contexto guerra fria; uso subsequente foi socialmente condicionado. Mesma tecnologia tem interpretações distintas culturalmente. Agência social é primária; tecnologia é secundária. Abordagem construcionista social argumenta que tecnologia é cocriada por sociedade. Reconhecer esse mútuo constitutivo permite compreensão mais sofisticada de relações entre tecnologia e sociedade."
             },
             {
                 id: "quiz-182", 
@@ -7964,7 +8082,7 @@
                 topicTitle: "Tecnologia e Transformação Social", 
                 question: "Inovação tecnológica sempre aumenta mobilidade social.", 
                 correctAnswer: false, 
-                explanation: "Inovação tecnológica não garante mobilidade social ascendente. Embora crie novas oportunidades, também destrói profissões, marginalizando trabalhadores. Capacidade de aproveitar oportunidades difere por classe, educação e capital social. Tecnologia exige requalificação custosa. Acesso desigual a educação STEM perpetua exclusão. Lucros tecnológicos concentram-se entre proprietários, não beneficiando amplamente. Transição de empregos gera insegurança e precarização. Desigualdade tecnológica pode ser maior que benefícios. Mobilidade social real exige políticas redistributivas, não apenas inovação. Tecnologia é ferramenta cujos efeitos em mobilidade dependem de contextos institucionais, políticos e econômicos. Otimismo tecnológico simplista ignora estruturas de poder que determinam acesso e benefício."
+                explanation: "Inovação tecnológica não garante mobilidade social ascendente. Embora crie novas oportunidades, também destrói profissões, marginalizando trabalhadores. Capacidade de aproveitar oportunidades difere por classe, educação e capital social. Tecnologia exige requalificação custosa. Acesso desigual a educação STEM perpetua exclusão. Lucros tecnológicos concentram-se entre proprietários, não beneficiando amplamente. Transição de empregos gera insegurança e precarização. Desigualdade tecnológica pode ser maior que benefícios. Mobilidade social real exige políticas redistributivas, não apenas inovação. Tecnologia é ferramenta cujos efeitos em mobilidade dependem de contextos institucionais, políticos e económicos. Otimismo tecnológico simplista ignora estruturas de poder que determinam acesso e benefício."
             },
             {
                 id: "quiz-186", 
@@ -7972,7 +8090,7 @@
                 topicTitle: "Crise Climática e Sociedade", 
                 question: "A mudança climática é primariamente um problema ambiental, não social.", 
                 correctAnswer: false, 
-                explanation: "Mudança climática é fundamentalmente um problema social. Causas são sociais: estruturas de produção, consumo e poder. Impactos são sociais: afetam desigualmente comunidades conforme vulnerabilidade econômica e geográfica. Injustiça climática concentra danos em populações que menos contribuem. Migrações climáticas são crises sociais. Conflitos por recursos escassos amplificam-se. Saúde pública é impactada. Desigualdades existentes amplificam-se. Economia e trabalho transformam-se. Justiça climática é questão sociológica fundamental. Enquadramento exclusivamente ambiental depolitiza e despolitiza questão. Reconhecer dimensão social torna clima questão central de sociologia, colocando desigualdade estrutural no centro de compreensão e solução."
+                explanation: "Mudança climática é fundamentalmente um problema social. Causas são sociais: estruturas de produção, consumo e poder. Impactos são sociais: afetam desigualmente comunidades conforme vulnerabilidade económica e geográfica. Injustiça climática concentra danos em populações que menos contribuem. Migrações climáticas são crises sociais. Conflitos por recursos escassos amplificam-se. Saúde pública é impactada. Desigualdades existentes amplificam-se. Economia e trabalho transformam-se. Justiça climática é questão sociológica fundamental. Enquadramento exclusivamente ambiental depolitiza e despolitiza questão. Reconhecer dimensão social torna clima questão central de sociologia, colocando desigualdade estrutural no centro de compreensão e solução."
             },
             {
                 id: "quiz-187", 
@@ -7988,7 +8106,7 @@
                 topicTitle: "Crise Climática e Sociedade", 
                 question: "Escolhas individuais de consumo são suficientes para resolver a crise climática.", 
                 correctAnswer: false, 
-                explanation: "Escolhas individuais são necessárias mas insuficientes para resolver crise climática. Ênfase em consumo individual (sacos reutilizáveis, carros elétricos) coloca responsabilidade em consumidores, descapitalizando culpabilidade estrutural. Corporações produzem maioria de emissões. Políticas governamentais têm impacto maior. Infraestrutura favorece consumo poluidor. Consumo está estratificado: pobres têm pegadas menores. Culpabilização individual mascara necessidade de transformação sistêmica. Escolhas individuais importam em agregação, mas sem mudança política e econômica são insuficientes. Demanda por energia renovável exige investimento estatal. Mudança de padrões agrícolas exige regulação. Apenas ataque a estruturas de produção resolve crise. Reconhecer necessidade sistêmica é crucial para política climática efetiva."
+                explanation: "Escolhas individuais são necessárias mas insuficientes para resolver crise climática. Ênfase em consumo individual (sacos reutilizáveis, carros elétricos) coloca responsabilidade em consumidores, descapitalizando culpabilidade estrutural. Corporações produzem maioria de emissões. Políticas governamentais têm impacto maior. Infraestrutura favorece consumo poluidor. Consumo está estratificado: pobres têm pegadas menores. Culpabilização individual mascara necessidade de transformação sistêmica. Escolhas individuais importam em agregação, mas sem mudança política e económica são insuficientes. Demanda por energia renovável exige investimento estatal. Mudança de padrões agrícolas exige regulação. Apenas ataque a estruturas de produção resolve crise. Reconhecer necessidade sistêmica é crucial para política climática efetiva."
             },
             {
                 id: "quiz-189", 
@@ -8036,7 +8154,7 @@
                 topicTitle: "Futuro e Sociedade", 
                 question: "A economia de plataforma representa maior liberdade para todos os trabalhadores.", 
                 correctAnswer: false, 
-                explanation: "Economia de plataforma oferece flexibilidade aparente mas mascaras precarização. Trabalhadores carecem de benefícios, proteção, estabilidade. Algoritmos determinam trabalho, não trabalhador. Remuneração é baixa, flutuante. Sem segurança social. Risco é individualizado. Corporações desresponsabilizam-se. Acumulação de riqueza concentra-se nas plataformas. Precariedade é condição sistemática, não escolha individual. Libertad discurso mascara coerção econômica. Minorias e mulheres sofrem vulnerabilidade maior. Pesquisa documenta precarização crescente. Futuro não envolve universalização de trabalho de plataforma como emancipação. Crítica exige reconhecer natureza exploratória e regulação protecionista."
+                explanation: "Economia de plataforma oferece flexibilidade aparente mas mascaras precarização. Trabalhadores carecem de benefícios, proteção, estabilidade. Algoritmos determinam trabalho, não trabalhador. Remuneração é baixa, flutuante. Sem segurança social. Risco é individualizado. Corporações desresponsabilizam-se. Acumulação de riqueza concentra-se nas plataformas. Precariedade é condição sistemática, não escolha individual. Libertad discurso mascara coerção económica. Minorias e mulheres sofrem vulnerabilidade maior. Pesquisa documenta precarização crescente. Futuro não envolve universalização de trabalho de plataforma como emancipação. Crítica exige reconhecer natureza exploratória e regulação protecionista."
             },
             {
                 id: "quiz-195", 
@@ -8044,7 +8162,7 @@
                 topicTitle: "Futuro e Sociedade", 
                 question: "Determinismo tecnológico é melhor framework para compreender futuros sociais.", 
                 correctAnswer: false, 
-                explanation: "Determinismo tecnológico é framework inadequado para compreender futuro. Assume tecnologia como força externa não-social que molda inexoravelmente sociedade. Mascara agência humana e escolhas políticas. Diferentes futuros são possíveis com mesma tecnologia. Sociedade ativa molda desenvolvimento e implementação. Contextos sociais, políticos e econômicos determinam aplicações. Contingência é característica de mudança social. Frameworks alternativos (construcionismo social, estudos científico-tecnológicos críticos) reconhecem co-construção de tecnologia e sociedade. Futuros não são tecnicamente determinados mas politicamente abertos. Reconhecer agência e contingência é essencial para política prospectiva que reconhece poder de escolha coletiva."
+                explanation: "Determinismo tecnológico é framework inadequado para compreender futuro. Assume tecnologia como força externa não-social que molda inexoravelmente sociedade. Mascara agência humana e escolhas políticas. Diferentes futuros são possíveis com mesma tecnologia. Sociedade ativa molda desenvolvimento e implementação. Contextos sociais, políticos e económicos determinam aplicações. Contingência é característica de mudança social. Frameworks alternativos (construcionismo social, estudos científico-tecnológicos críticos) reconhecem co-construção de tecnologia e sociedade. Futuros não são tecnicamente determinados mas politicamente abertos. Reconhecer agência e contingência é essencial para política prospectiva que reconhece poder de escolha coletiva."
             },
             {
                 id: "quiz-196", 
@@ -8076,15 +8194,15 @@
                 topicTitle: "Transformações Sociais Contemporâneas", 
                 question: "Plataformas digitais são espaços neutros e democraticamente isentos de viés político.", 
                 correctAnswer: false, 
-                explanation: "Plataformas digitais não são neutras. Propriedade corporativa implica interesses econômicos e políticos. Design é política: escolhas sobre moderação, recomendação, visibilidade refletem valores. Algoritmos amplificam conteúdo sensacionalista. Transparência é limitada. Desinformação circula. Propaganda política permeia. Privacidade é violada sistematicamente. Plataformas mostram-se ferramentas de poder corporativo, não commons democráticos. Mito de 'esfera pública digital' mascara realidades de controle corporativo. Regulação é necessária. Reconhecer não-neutralidade é crucial para cidadania digital. Compreender plataformas como atores políticos com interesses particulares permite crítica estruturada e mobilização por alternativas mais democráticas."
+                explanation: "Plataformas digitais não são neutras. Propriedade corporativa implica interesses económicos e políticos. Design é política: escolhas sobre moderação, recomendação, visibilidade refletem valores. Algoritmos amplificam conteúdo sensacionalista. Transparência é limitada. Desinformação circula. Propaganda política permeia. Privacidade é violada sistematicamente. Plataformas mostram-se ferramentas de poder corporativo, não commons democráticos. Mito de 'esfera pública digital' mascara realidades de controle corporativo. Regulação é necessária. Reconhecer não-neutralidade é crucial para cidadania digital. Compreender plataformas como atores políticos com interesses particulares permite crítica estruturada e mobilização por alternativas mais democráticas."
             },
             {
                 id: "quiz-200", 
                 topicId: "transformacoes-contemporaneas", 
                 topicTitle: "Transformações Sociais Contemporâneas", 
-                question: "Políticas econômicas neoliberais reduziram desigualdade social global.", 
+                question: "Políticas económicas neoliberais reduziram desigualdade social global.", 
                 correctAnswer: false, 
-                explanation: "Neoliberalismo amplificou desigualdade. Desde 1980s, quando políticas neoliberais intensificaram-se, desigualdade cresceu em maioria dos contextos. Riqueza concentrou-se em topo. Salários reais estagnaram para trabalhadores. Precarização aumentou. Serviços públicos privatizaram-se ou definharam. Vulnerabilidade social expandiu-se. Mobilidade social reduziu. Crises financeiras intensificaram instabilidade. Sul Global sofreu imposição de neoliberalismo via instituições internacionais. Proletarização continua. Dados empíricos contradizem promessas de eficiência neoliberal. Crítica não nega ganhos em redução pobreza extrema, mas contextualiza: melhorias devem-se a crescimento, não redistribuição neoliberal. Reconhecer o fracasso neoliberal é pré-requisito para política alternativa."
+                explanation: "Neoliberalismo amplificou desigualdade. Desde 1980s, quando políticas neoliberais intensificaram-se, desigualdade cresceu em maioria dos contextos. Riqueza concentrou-se em topo. Salários reais estagnaram para trabalhadoras. Precarização aumentou. Serviços públicos privatizaram-se ou definharam. Vulnerabilidade social expandiu-se. Mobilidade social reduziu. Crises financeiras intensificaram instabilidade. Sul Global sofreu imposição de neoliberalismo via instituições internacionais. Proletarização continua. Dados empíricos contradizem promessas de eficiência neoliberal. Crítica não nega ganhos em redução pobreza extrema, mas contextualiza: melhorias devem-se a crescimento, não redistribuição neoliberal. Reconhecer falhanço neoliberal é prerequisito para política alternativa."
             }
         ];
 
@@ -8206,6 +8324,16 @@
                     const icon = btn.querySelector('span:last-child');
                     if (icon) {
                         icon.classList.add('toggle-icon');
+                        icon.setAttribute('aria-hidden', 'true');
+                    }
+
+                    // Initialize aria-expanded attribute
+                    const toggleId = btn.getAttribute('data-toggle');
+                    const content = document.getElementById(toggleId);
+                    if (content) {
+                        const isExpanded = content.classList.contains('active');
+                        btn.setAttribute('aria-expanded', isExpanded);
+                        btn.setAttribute('aria-controls', toggleId);
                     }
 
                     btn.addEventListener('click', (e) => {
@@ -8213,7 +8341,11 @@
                         const content = document.getElementById(toggleId);
                         if (!content) return;
 
+                        const isNowActive = !content.classList.contains('active');
                         content.classList.toggle('active');
+                        // Update aria-expanded state
+                        e.currentTarget.setAttribute('aria-expanded', isNowActive);
+
                         const icon = e.currentTarget.querySelector('span:last-child');
                         // Toggle the rotated class for smooth rotation
                         if (icon) {
@@ -8537,6 +8669,26 @@
                             </div>
                         </div>
 
+                        <div class="mb-8 p-6 bg-amber-50 rounded-lg border border-amber-200">
+                            <h2 class="text-xl font-semibold text-gray-900 mb-1">🎯 Nível de dificuldade</h2>
+                            <p class="text-xs text-gray-600 mb-4">
+                                Classificação editorial deste portal — o Inep não divulga a dificuldade por questão.
+                                Só parte do banco está classificada; "Todos" inclui as demais.
+                            </p>
+                            <div class="flex flex-wrap gap-3">
+                                ${[['todos', 'Todos os níveis', enemQuestionsData.length],
+                                   ['medio', 'Médio', porNivel('medio')],
+                                   ['dificil', 'Difícil', porNivel('dificil')]].map(([v, rot, n]) => `
+                                    <button onclick="app.setEnemNivel('${v}')"
+                                            class="px-5 py-2 rounded-lg font-semibold border-2 transition ${this.enemNivel === v
+                                                ? 'border-amber-500 bg-amber-100 text-amber-900'
+                                                : 'border-gray-300 bg-white text-gray-700 hover:border-amber-400'}">
+                                        ${rot} <span class="text-sm font-normal">(${n})</span>
+                                    </button>
+                                `).join('')}
+                            </div>
+                        </div>
+
                         <div class="flex gap-4">
                             <button onclick="app.sortearEnemQuestion()" class="flex-1 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-3 px-6 rounded-lg transition">
                                 🎲 Sortear Questão
@@ -8766,10 +8918,13 @@
 
         // Hamburger menu
         document.getElementById('hamburgerBtn').addEventListener('click', () => {
+            const hamburgerBtn = document.getElementById('hamburgerBtn');
             const sidebar = document.querySelector('.sidebar');
             const overlay = document.getElementById('sidebarOverlay');
-            sidebar.classList.toggle('open');
+            const isOpen = sidebar.classList.toggle('open');
             overlay.classList.toggle('open');
+            // Update aria-expanded state
+            hamburgerBtn.setAttribute('aria-expanded', isOpen);
         });
 
         document.getElementById('sidebarOverlay').addEventListener('click', () => {
@@ -8778,16 +8933,33 @@
 
         // Initialize on load
         window.addEventListener('DOMContentLoaded', () => {
+            // Setup accessibility for toggle buttons
+            function setupToggleAriaLabels() {
+                const toggleButtons = document.querySelectorAll('.toggle-btn');
+                toggleButtons.forEach(btn => {
+                    // Get the text content (first span contains the title)
+                    const titleSpan = btn.querySelector('span:first-child');
+                    if (titleSpan && !btn.hasAttribute('aria-label')) {
+                        const labelText = titleSpan.textContent.trim();
+                        btn.setAttribute('aria-label', `Expandir seção: ${labelText}`);
+                    }
+                });
+            }
+
             // Load ENEM questions
             fetch('./enem_questions.json')
                 .then(response => response.json())
                 .then(data => {
                     enemQuestionsData = data;
                     app.init();
+                    // Setup aria labels after content is rendered
+                    setTimeout(setupToggleAriaLabels, 100);
                 })
                 .catch(error => {
                     console.warn('Could not load ENEM questions:', error);
                     app.init();
+                    // Setup aria labels after content is rendered
+                    setTimeout(setupToggleAriaLabels, 100);
                 });
 
         // Setup image zoom modal
