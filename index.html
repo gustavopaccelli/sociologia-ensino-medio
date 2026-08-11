@@ -88,7 +88,7 @@
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.07em;
-            color: #9ca3af;
+            color: #6b7280;
             padding: 0.75rem 0.75rem 0.25rem;
         }
 
@@ -485,6 +485,68 @@
             scroll-behavior: smooth;
         }
 
+        /* Skip Link - Accessibility for keyboard navigation */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #000;
+            color: #fff;
+            padding: 8px 12px;
+            text-decoration: none;
+            z-index: 100;
+            font-weight: bold;
+            font-size: 14px;
+            border-radius: 0 0 4px 0;
+        }
+
+        .skip-link:focus {
+            top: 0;
+            animation: slideDown 300ms ease-out forwards;
+        }
+
+        @keyframes slideDown {
+            from { top: -40px; opacity: 0; }
+            to { top: 0; opacity: 1; }
+        }
+
+        /* Screen reader only text */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+
+        /* Hamburger button - 44×44px minimum touch target */
+        .hamburger {
+            min-width: 44px;
+            min-height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            border-radius: 4px;
+        }
+
+        .hamburger:hover {
+            background-color: rgba(0, 102, 204, 0.1);
+        }
+
+        /* Navigation items - 44px minimum height */
+        .nav-item {
+            min-height: 44px;
+            display: flex;
+            align-items: center;
+            padding: 12px 8px;
+            border-radius: 4px;
+        }
+
         /* Theme Transition Support (Future Dark Mode) */
         :root {
             --bg-primary: #ffffff;
@@ -612,44 +674,62 @@
     </style>
 </head>
 <body class="bg-white">
+    <!-- SKIP LINK - Acessibilidade para teclado -->
+    <a href="#contentArea" class="skip-link" aria-label="Pular para conteúdo principal">
+        Pular para conteúdo principal
+    </a>
+
     <div class="flex h-screen">
-        <!-- SIDEBAR -->
-        <div class="sidebar sidebar-bg w-72 border-r border-gray-200 flex flex-col">
+        <!-- SIDEBAR NAVIGATION -->
+        <aside class="sidebar sidebar-bg w-72 border-r border-gray-200 flex flex-col" role="complementary" aria-label="Navegação de tópicos">
             <div class="p-6 border-b border-gray-200">
-                <h1 class="text-xl font-bold text-gray-900 mb-4 cursor-pointer hover:text-blue-600 transition" onclick="app.goHome()" style="user-select: none;">📚 Sociologia</h1>
-                <input 
-                    type="text" 
-                    id="searchInput" 
-                    placeholder="Buscar tópicos..." 
+                <button class="text-xl font-bold text-gray-900 mb-4 cursor-pointer hover:text-blue-600 transition w-full text-left"
+                        onclick="app.goHome()"
+                        style="user-select: none;"
+                        aria-label="Voltar para página inicial do portal">
+                    <span aria-hidden="true">📚</span> Sociologia
+                </button>
+                <label for="searchInput" class="sr-only">Buscar tópicos de sociologia</label>
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Buscar tópicos..."
+                    aria-label="Campo de busca de tópicos de sociologia"
                     class="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-gray-400"
                 >
             </div>
-            
-            <nav class="flex-1 overflow-y-auto p-4">
+
+            <nav class="flex-1 overflow-y-auto p-4" aria-label="Lista de tópicos">
                 <div id="navContainer"></div>
             </nav>
-            
+
             <div class="p-4 border-t border-gray-200 text-xs text-gray-500 text-center">
                 <p>Estruturado para ENEM e Vestibulares</p>
             </div>
-        </div>
-        
+        </aside>
+
         <!-- SIDEBAR OVERLAY (mobile) -->
-        <div class="sidebar-overlay" id="sidebarOverlay"></div>
-        
+        <div class="sidebar-overlay" id="sidebarOverlay" aria-hidden="true"></div>
+
         <!-- MAIN CONTENT -->
-        <div class="flex-1 flex flex-col overflow-hidden">
+        <main class="flex-1 flex flex-col overflow-hidden">
             <!-- TOP BAR WITH HAMBURGER -->
-            <div class="border-b border-gray-200 px-6 py-4 flex items-center justify-between bg-white">
-                <button class="hamburger text-2xl text-gray-700" id="hamburgerBtn">☰</button>
-                <div id="breadcrumbContainer" class="flex-1 ml-4"></div>
-            </div>
-            
+            <header class="border-b border-gray-200 px-6 py-4 flex items-center justify-between bg-white" role="banner">
+                <button class="hamburger text-2xl text-gray-700"
+                        id="hamburgerBtn"
+                        aria-label="Abrir menu de navegação"
+                        aria-expanded="false"
+                        aria-controls="navContainer">
+                    <span aria-hidden="true">☰</span>
+                </button>
+                <nav id="breadcrumbContainer" class="flex-1 ml-4" aria-label="Breadcrumb"></nav>
+            </header>
+
             <!-- CONTENT AREA -->
             <div class="flex-1 overflow-y-auto">
                 <div class="max-w-4xl mx-auto px-8 py-12 content-main" id="contentArea">
                     <div class="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-lg p-8 mb-8">
-                        <h1 class="text-3xl font-bold text-gray-900 mb-4">🎓 Bem-vindo ao Portal de Sociologia para o Ensino Médio</h1>
+                        <h1 class="text-3xl font-bold text-gray-900 mb-4"><span aria-hidden="true">🎓</span> Bem-vindo ao Portal de Sociologia para o Ensino Médio</h1>
                         <p class="text-gray-700 text-lg mb-6">
                             Explore tópicos de Sociologia com foco na realidade brasileira.
                             Conteúdo estruturado para complementar suas aulas, preparar para o vestibular
@@ -670,30 +750,34 @@
                                 Avalie sua compreensão sobre cada tópico com <strong>200 Quizzes Interativas</strong> (Verdadeiro/Falso) e <strong>241 Questões reais do ENEM</strong>. Pratique, aprenda e se prepare para o vestibular!
                             </p>
                             <div class="flex gap-3">
-                                <button onclick="app.showQuizzes()" class="flex-1 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded transition">
-                                    📝 Ir para Quizzes
+                                <button onclick="app.showQuizzes()"
+                                        class="flex-1 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded transition"
+                                        aria-label="Acessar seção de quizzes interativas de Verdadeiro ou Falso">
+                                    <span aria-hidden="true">📝</span> Ir para Quizzes
                                 </button>
-                                <button onclick="app.showEnemQuestions()" class="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded transition">
-                                    🏆 Questões ENEM
+                                <button onclick="app.showEnemQuestions()"
+                                        class="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded transition"
+                                        aria-label="Acessar 241 questões reais do ENEM">
+                                    <span aria-hidden="true">🏆</span> Questões ENEM
                                 </button>
                             </div>
                         </div>
                     </div>
                     <div class="text-center text-gray-400 py-8">
-                        <p class="text-lg">👈 Selecione um tópico na barra lateral para começar, ou use a busca acima</p>
+                        <p class="text-lg"><span aria-hidden="true">👈</span> Selecione um tópico na barra lateral para começar, ou use a busca acima</p>
                     </div>
                 </div>
             </div>
-        </div>
+        </main>
     </div>
 
     <!-- FOOTER WITH LICENSE AND DONATION -->
-    <footer class="bg-gradient-to-r from-gray-900 to-gray-800 text-gray-100 py-12 border-t border-gray-700">
+    <footer class="bg-gradient-to-r from-gray-900 to-gray-800 text-gray-100 py-12 border-t border-gray-700" role="contentinfo">
         <div class="max-w-6xl mx-auto px-8">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
                 <!-- About Section -->
                 <div>
-                    <h3 class="text-lg font-bold text-white mb-4">📚 Sobre este Projeto</h3>
+                    <h3 class="text-lg font-bold text-white mb-4"><span aria-hidden="true">📚</span> Sobre este Projeto</h3>
                     <p class="text-gray-300 text-sm leading-relaxed mb-3">
                         Portal educacional gratuito de Sociologia para o Ensino Médio, com conteúdo estruturado e 241 questões verificadas do ENEM.
                     </p>
@@ -704,7 +788,7 @@
 
                 <!-- License Section -->
                 <div>
-                    <h3 class="text-lg font-bold text-white mb-4">📋 Licença</h3>
+                    <h3 class="text-lg font-bold text-white mb-4"><span aria-hidden="true">📋</span> Licença</h3>
                     <p class="text-gray-300 text-sm leading-relaxed mb-3">
                         Este conteúdo é licenciado sob <strong>Creative Commons BY-NC-SA 4.0</strong>.
                     </p>
@@ -722,26 +806,17 @@
 
                 <!-- Donation Section -->
                 <div>
-                    <h3 class="text-lg font-bold text-white mb-4">💝 Apoie este Projeto</h3>
+                    <h3 class="text-lg font-bold text-white mb-4"><span aria-hidden="true">💝</span> Apoie este Projeto</h3>
                     <p class="text-gray-300 text-sm leading-relaxed mb-4">
                         Sua doação ajuda na manutenção e expansão deste recurso gratuito para estudantes.
                     </p>
-                    <div class="flex flex-col gap-3">
-                        <a href="https://ko-fi.com"
-                           target="_blank"
-                           class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded text-sm text-center transition">
-                            ☕ Ko-fi
-                        </a>
-                        <a href="https://paypal.me"
-                           target="_blank"
-                           class="inline-block bg-blue-700 hover:bg-blue-800 text-white font-semibold py-2 px-4 rounded text-sm text-center transition">
-                            🅿️ PayPal
-                        </a>
-                        <a href="#"
+                    <div class="flex justify-center">
+                        <button
                            onclick="showPixModal(); return false;"
-                           class="inline-block bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded text-sm text-center transition">
-                            🟪 Pix (Brasil)
-                        </a>
+                           class="inline-block bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-3 rounded text-sm text-center transition"
+                           aria-label="Abrir modal para doação via Pix">
+                            <span aria-hidden="true">☕</span> Apoiar via Pix
+                        </button>
                     </div>
                 </div>
             </div>
@@ -766,13 +841,23 @@
     </footer>
 
     <!-- PIX MODAL (for Brazil) -->
-    <div id="pixModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+    <div id="pixModal"
+         class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+         role="dialog"
+         aria-modal="true"
+         aria-labelledby="pixModalTitle"
+         aria-describedby="pixModalDesc">
         <div class="bg-white rounded-lg shadow-lg p-8 max-w-md mx-4">
             <div class="flex justify-between items-center mb-4">
-                <h2 class="text-2xl font-bold text-gray-900">Doação via Pix</h2>
-                <button onclick="closePixModal()" class="text-gray-500 hover:text-gray-700 text-2xl">✕</button>
+                <h2 id="pixModalTitle" class="text-2xl font-bold text-gray-900">Doação via Pix</h2>
+                <button onclick="closePixModal()"
+                        class="text-gray-500 hover:text-gray-700 text-2xl"
+                        aria-label="Fechar modal de doação via Pix"
+                        aria-pressed="false">
+                    ✕
+                </button>
             </div>
-            <p class="text-gray-600 mb-6 text-sm">
+            <p id="pixModalDesc" class="text-gray-600 mb-6 text-sm">
                 Pix é a forma mais rápida de contribuir para a manutenção deste projeto educacional.
             </p>
             <div class="bg-gray-50 border-2 border-gray-300 rounded-lg p-6 mb-6 text-center">
@@ -781,12 +866,13 @@
             </div>
             <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded mb-6">
                 <p class="text-xs text-gray-700">
-                    <strong>💡 Dica:</strong> Copie a chave acima e use seu app do banco ou Pix para fazer a doação.
+                    <strong><span aria-hidden="true">💡</span> Dica:</strong> Copie a chave acima e use seu app do banco ou Pix para fazer a doação.
                     Qualquer valor é bem-vindo!
                 </p>
             </div>
             <button onclick="closePixModal()"
-                    class="w-full bg-gray-600 hover:bg-gray-700 text-white font-semibold py-2 px-4 rounded transition">
+                    class="w-full bg-gray-600 hover:bg-gray-700 text-white font-semibold py-2 px-4 rounded transition"
+                    aria-label="Fechar modal">
                 Fechar
             </button>
         </div>
@@ -805,6 +891,21 @@
         document.getElementById('pixModal')?.addEventListener('click', (e) => {
             if (e.target.id === 'pixModal') {
                 closePixModal();
+            }
+        });
+
+        // Close modal when pressing Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                const pixModal = document.getElementById('pixModal');
+                if (pixModal && !pixModal.classList.contains('hidden')) {
+                    closePixModal();
+                }
+                // Close image zoom modal if open
+                const imageZoomModal = document.getElementById('imageZoomModal');
+                if (imageZoomModal && imageZoomModal.classList.contains('active')) {
+                    imageZoomModal.classList.remove('active');
+                }
             }
         });
     </script>
@@ -8223,6 +8324,16 @@
                     const icon = btn.querySelector('span:last-child');
                     if (icon) {
                         icon.classList.add('toggle-icon');
+                        icon.setAttribute('aria-hidden', 'true');
+                    }
+
+                    // Initialize aria-expanded attribute
+                    const toggleId = btn.getAttribute('data-toggle');
+                    const content = document.getElementById(toggleId);
+                    if (content) {
+                        const isExpanded = content.classList.contains('active');
+                        btn.setAttribute('aria-expanded', isExpanded);
+                        btn.setAttribute('aria-controls', toggleId);
                     }
 
                     btn.addEventListener('click', (e) => {
@@ -8230,7 +8341,11 @@
                         const content = document.getElementById(toggleId);
                         if (!content) return;
 
+                        const isNowActive = !content.classList.contains('active');
                         content.classList.toggle('active');
+                        // Update aria-expanded state
+                        e.currentTarget.setAttribute('aria-expanded', isNowActive);
+
                         const icon = e.currentTarget.querySelector('span:last-child');
                         // Toggle the rotated class for smooth rotation
                         if (icon) {
@@ -8803,10 +8918,13 @@
 
         // Hamburger menu
         document.getElementById('hamburgerBtn').addEventListener('click', () => {
+            const hamburgerBtn = document.getElementById('hamburgerBtn');
             const sidebar = document.querySelector('.sidebar');
             const overlay = document.getElementById('sidebarOverlay');
-            sidebar.classList.toggle('open');
+            const isOpen = sidebar.classList.toggle('open');
             overlay.classList.toggle('open');
+            // Update aria-expanded state
+            hamburgerBtn.setAttribute('aria-expanded', isOpen);
         });
 
         document.getElementById('sidebarOverlay').addEventListener('click', () => {
@@ -8815,16 +8933,33 @@
 
         // Initialize on load
         window.addEventListener('DOMContentLoaded', () => {
+            // Setup accessibility for toggle buttons
+            function setupToggleAriaLabels() {
+                const toggleButtons = document.querySelectorAll('.toggle-btn');
+                toggleButtons.forEach(btn => {
+                    // Get the text content (first span contains the title)
+                    const titleSpan = btn.querySelector('span:first-child');
+                    if (titleSpan && !btn.hasAttribute('aria-label')) {
+                        const labelText = titleSpan.textContent.trim();
+                        btn.setAttribute('aria-label', `Expandir seção: ${labelText}`);
+                    }
+                });
+            }
+
             // Load ENEM questions
             fetch('./enem_questions.json')
                 .then(response => response.json())
                 .then(data => {
                     enemQuestionsData = data;
                     app.init();
+                    // Setup aria labels after content is rendered
+                    setTimeout(setupToggleAriaLabels, 100);
                 })
                 .catch(error => {
                     console.warn('Could not load ENEM questions:', error);
                     app.init();
+                    // Setup aria labels after content is rendered
+                    setTimeout(setupToggleAriaLabels, 100);
                 });
 
         // Setup image zoom modal
