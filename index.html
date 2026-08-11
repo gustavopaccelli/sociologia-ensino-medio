@@ -8689,28 +8689,7 @@
                         `;
                     });
 
-                    const porNivel = n => enemQuestionsData.filter(x => x.nivel === n).length;
                     html += `
-                            </div>
-                        </div>
-
-                        <div class="mb-8 p-6 bg-amber-50 rounded-lg border border-amber-200">
-                            <h2 class="text-xl font-semibold text-gray-900 mb-1">🎯 Nível de dificuldade</h2>
-                            <p class="text-xs text-gray-600 mb-4">
-                                Classificação editorial deste portal — o Inep não divulga a dificuldade por questão.
-                                Só parte do banco está classificada; "Todos" inclui as demais.
-                            </p>
-                            <div class="flex flex-wrap gap-3">
-                                ${[['todos', 'Todos os níveis', enemQuestionsData.length],
-                                   ['medio', 'Médio', porNivel('medio')],
-                                   ['dificil', 'Difícil', porNivel('dificil')]].map(([v, rot, n]) => `
-                                    <button onclick="app.setEnemNivel('${v}')"
-                                            class="px-5 py-2 rounded-lg font-semibold border-2 transition ${this.enemNivel === v
-                                                ? 'border-amber-500 bg-amber-100 text-amber-900'
-                                                : 'border-gray-300 bg-white text-gray-700 hover:border-amber-400'}">
-                                        ${rot} <span class="text-sm font-normal">(${n})</span>
-                                    </button>
-                                `).join('')}
                             </div>
                         </div>
 
@@ -8890,11 +8869,6 @@
                 this.renderEnemQuestions();
             },
 
-            setEnemNivel(nivel) {
-                this.enemNivel = nivel;
-                this.renderEnemQuestions();
-            },
-
             answerEnemQuestion() {
                 const selectedAnswer = document.querySelector('input[name="enem-answer"]:checked');
                 if (!selectedAnswer) {
@@ -8912,7 +8886,6 @@
             resetEnemSelection() {
                 this.selectedEnemTopics = [];
                 this.currentEnemQuestion = null;
-                this.enemNivel = 'todos';
                 this.renderEnemQuestions();
             },
 
