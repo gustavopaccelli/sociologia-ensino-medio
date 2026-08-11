@@ -8292,7 +8292,7 @@
                 // Flat list view - all topics
                 this.allTopics.forEach((topic, index) => {
                     const navItem = document.createElement('div');
-                    navItem.className = `nav-item p-3 rounded-lg mb-1 text-sm text-center${this.currentTopic === topic.id ? ' active' : ''}`;
+                    navItem.className = `nav-item p-3 rounded-lg mb-1 text-sm${this.currentTopic === topic.id ? ' active' : ''}`;
                     navItem.innerHTML = `<span class="font-bold">${topic.title}</span>`;
                     navItem.style.animationDelay = `${index * 30}ms`;
                     navItem.addEventListener('click', () => this.selectTopic(topic.id));
