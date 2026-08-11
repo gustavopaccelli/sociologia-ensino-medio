@@ -8689,16 +8689,42 @@
                         </div>
 
                         <div class="mb-8 p-6 bg-blue-50 rounded-lg border border-blue-200">
-                            <h2 class="text-xl font-semibold text-gray-900 mb-4">📋 Escolha os tópicos:</h2>
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                            <div class="mb-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+                                <h2 class="text-xl font-semibold text-gray-900">📋 Escolha os tópicos:</h2>
+                                <div class="flex gap-2">
+                                    <button onclick="app.selectAllEnemTopics()" class="px-3 py-2 text-sm font-medium border border-blue-500 text-blue-600 rounded-lg hover:bg-blue-50 transition" aria-label="Selecionar todos os tópicos">
+                                        ✓ Sel Tudo
+                                    </button>
+                                    <button onclick="app.deselectAllEnemTopics()" class="px-3 py-2 text-sm font-medium border border-gray-300 text-gray-600 rounded-lg hover:bg-gray-50 transition" aria-label="Desselecionar todos os tópicos">
+                                        ✕ Desel Tudo
+                                    </button>
+                                </div>
+                            </div>
+
+                            <input type="text"
+                                   id="enem-search"
+                                   placeholder="🔍 Buscar tópicos (ex: Raça, Gênero)..."
+                                   class="w-full mb-4 px-4 py-2 text-base border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                   aria-label="Buscar tópicos por nome">
+
+                            <div class="mb-3 p-3 bg-white rounded-lg border border-blue-200 text-sm">
+                                <span id="enem-count" class="font-medium text-gray-900">0 tópicos selecionados (0 questões)</span>
+                                <span id="enem-progress" class="ml-2 text-gray-600">Selecione pelo menos 1 tópico</span>
+                            </div>
+
+                            <div id="enem-no-results" class="hidden text-center py-8 text-gray-500">
+                                <p>Nenhum tópico encontrado. Tente outra busca.</p>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3" id="enem-topics-container">
                     `;
 
                     topicsWithCounts.forEach(topic => {
                         const isSelected = this.selectedEnemTopics.includes(topic.id);
                         const ariaLabel = `Selecionar ${this.escapeHtml(topic.title)} (${topic.count} questões)`;
                         html += `
-                            <label class="enem-topic-label flex items-center p-4 sm:p-3 md:p-3 rounded-lg border-2 min-h-[44px] ${isSelected ? 'border-blue-500 bg-blue-100' : 'border-gray-300 bg-white'} cursor-pointer hover:border-blue-400 transition">
-                                <input type="checkbox" id="enem-${topic.id}" aria-label="${ariaLabel}" class="mr-4 w-6 h-6 cursor-pointer accent-blue-600" ${isSelected ? 'checked' : ''}>
+                            <label class="enem-topic-label flex items-center p-4 sm:p-3 md:p-3 rounded-lg border-2 min-h-[44px] ${isSelected ? 'border-blue-500 bg-blue-100' : 'border-gray-300 bg-white'} cursor-pointer hover:border-blue-400 transition" data-topic-title="${this.escapeHtml(topic.title).toLowerCase()}">
+                                <input type="checkbox" id="enem-${topic.id}" aria-label="${ariaLabel}" class="mr-4 w-6 h-6 cursor-pointer accent-blue-600 enem-checkbox" ${isSelected ? 'checked' : ''}>
                                 <span class="mr-2 text-lg flex-shrink-0" aria-hidden="true">${topic.emoji}</span>
                                 <span class="font-medium text-gray-900 flex-1">${this.escapeHtml(topic.title)}</span>
                                 <span class="ml-2 text-sm text-gray-600 whitespace-nowrap">(${topic.count})</span>
@@ -8734,9 +8760,21 @@
                                 } else {
                                     this.selectedEnemTopics = this.selectedEnemTopics.filter(id => id !== topic.id);
                                 }
+                                this.updateEnemSelection();
                             });
                         }
                     });
+
+                    // Setup search input listener
+                    const searchInput = document.getElementById('enem-search');
+                    if (searchInput) {
+                        searchInput.addEventListener('input', (e) => {
+                            this.filterEnemTopics(e.target.value);
+                        });
+                    }
+
+                    // Update counter on initial render
+                    this.updateEnemSelection();
 
                 } else {
                     // Show question
@@ -8904,6 +8942,68 @@
                 this.selectedEnemTopics = [];
                 this.currentEnemQuestion = null;
                 this.renderEnemQuestions();
+            },
+
+            selectAllEnemTopics() {
+                const allTopicsData = this.getEnemTopicsWithCounts();
+                this.selectedEnemTopics = allTopicsData.map(t => t.id);
+                this.renderEnemQuestions();
+            },
+
+            deselectAllEnemTopics() {
+                this.selectedEnemTopics = [];
+                this.renderEnemQuestions();
+            },
+
+            updateEnemSelection() {
+                const totalSelected = this.selectedEnemTopics.length;
+                const allTopicsData = this.getEnemTopicsWithCounts();
+                const totalQuestions = allTopicsData
+                    .filter(t => this.selectedEnemTopics.includes(t.id))
+                    .reduce((sum, t) => sum + t.count, 0);
+
+                const countElement = document.getElementById('enem-count');
+                if (countElement) {
+                    const pluralTema = totalSelected === 1 ? 'tópico' : 'tópicos';
+                    const pluralQuestao = totalQuestions === 1 ? 'questão' : 'questões';
+                    countElement.textContent = `${totalSelected} ${pluralTema} selecionado${totalSelected === 1 ? '' : 's'} (${totalQuestions} ${pluralQuestao})`;
+                }
+
+                const progressElement = document.getElementById('enem-progress');
+                if (progressElement) {
+                    if (totalSelected === 0) {
+                        progressElement.textContent = 'Selecione pelo menos 1 tópico';
+                    } else if (totalSelected < 5) {
+                        progressElement.textContent = `Você pode adicionar mais ${5 - totalSelected} tópicos`;
+                    } else {
+                        progressElement.textContent = '✓ Pronto! Clique em "Sortear Questão"';
+                    }
+                }
+            },
+
+            filterEnemTopics(searchQuery) {
+                const query = searchQuery.toLowerCase().trim();
+                const container = document.getElementById('enem-topics-container');
+                const noResults = document.getElementById('enem-no-results');
+
+                if (!container) return;
+
+                const labels = container.querySelectorAll('.enem-topic-label');
+                let visibleCount = 0;
+
+                labels.forEach(label => {
+                    const title = label.getAttribute('data-topic-title') || '';
+                    if (query === '' || title.includes(query)) {
+                        label.style.display = '';
+                        visibleCount++;
+                    } else {
+                        label.style.display = 'none';
+                    }
+                });
+
+                if (noResults) {
+                    noResults.classList.toggle('hidden', visibleCount > 0);
+                }
             },
 
             updateBreadcrumbEnem() {
