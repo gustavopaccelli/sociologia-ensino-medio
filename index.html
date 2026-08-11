@@ -688,6 +688,22 @@
             text-decoration: none;
         }
 
+        /* ENEM Acessibilidade - FASE 1: 44×44px touch targets + focus visibility */
+        .enem-topic-label {
+            transition: all var(--dur-fast) var(--ease-standard);
+        }
+
+        .enem-topic-label:focus-within {
+            outline: none;
+            box-shadow: inset 0 0 0 2px #0066cc, 0 0 0 3px rgba(0, 102, 204, 0.2);
+            border-radius: 0.5rem;
+        }
+
+        .enem-topic-label input[type="checkbox"]:focus-visible {
+            outline: 2px solid #0066cc;
+            outline-offset: 2px;
+        }
+
         /* comando da questão */
         .enem-enunciado {
             text-align: justify;
@@ -8679,12 +8695,13 @@
 
                     topicsWithCounts.forEach(topic => {
                         const isSelected = this.selectedEnemTopics.includes(topic.id);
+                        const ariaLabel = `Selecionar ${this.escapeHtml(topic.title)} (${topic.count} questões)`;
                         html += `
-                            <label class="flex items-center p-3 rounded-lg border-2 ${isSelected ? 'border-blue-500 bg-blue-100' : 'border-gray-300 bg-white'} cursor-pointer hover:border-blue-400 transition">
-                                <input type="checkbox" id="enem-${topic.id}" class="mr-3 w-5 h-5 cursor-pointer" ${isSelected ? 'checked' : ''}>
-                                <span class="mr-2">${topic.emoji}</span>
-                                <span class="font-medium text-gray-900">${this.escapeHtml(topic.title)}</span>
-                                <span class="ml-auto text-sm text-gray-600">(${topic.count})</span>
+                            <label class="enem-topic-label flex items-center p-4 sm:p-3 md:p-3 rounded-lg border-2 min-h-[44px] ${isSelected ? 'border-blue-500 bg-blue-100' : 'border-gray-300 bg-white'} cursor-pointer hover:border-blue-400 transition">
+                                <input type="checkbox" id="enem-${topic.id}" aria-label="${ariaLabel}" class="mr-4 w-6 h-6 cursor-pointer accent-blue-600" ${isSelected ? 'checked' : ''}>
+                                <span class="mr-2 text-lg flex-shrink-0" aria-hidden="true">${topic.emoji}</span>
+                                <span class="font-medium text-gray-900 flex-1">${this.escapeHtml(topic.title)}</span>
+                                <span class="ml-2 text-sm text-gray-600 whitespace-nowrap">(${topic.count})</span>
                             </label>
                         `;
                     });
