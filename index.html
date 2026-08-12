@@ -704,6 +704,86 @@
             outline-offset: 2px;
         }
 
+        /* Toast Notifications - FASE 3 */
+        .toast-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            pointer-events: none;
+        }
+
+        .toast {
+            background: #10b981;
+            color: white;
+            padding: 16px 24px;
+            border-radius: 8px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            animation: slideIn 300ms ease-out;
+            pointer-events: auto;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 500;
+            min-width: 300px;
+            max-width: 400px;
+        }
+
+        .toast.error {
+            background: #ef4444;
+        }
+
+        .toast.warning {
+            background: #f59e0b;
+        }
+
+        .toast.info {
+            background: #3b82f6;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(400px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideOut {
+            from {
+                transform: translateX(0);
+                opacity: 1;
+            }
+            to {
+                transform: translateX(400px);
+                opacity: 0;
+            }
+        }
+
+        .toast.removing {
+            animation: slideOut 300ms ease-out forwards;
+        }
+
+        /* Responsive toast */
+        @media (max-width: 640px) {
+            .toast-container {
+                bottom: 10px;
+                right: 10px;
+                left: 10px;
+            }
+
+            .toast {
+                min-width: auto;
+                max-width: none;
+            }
+        }
+
         /* comando da questão */
         .enem-enunciado {
             text-align: justify;
@@ -8274,6 +8354,8 @@
 
             init() {
                 this.searchInput = document.getElementById('searchInput');
+                // FASE 3: Carregar seleção anterior de tópicos ENEM
+                this.loadEnemSelection();
                 this.renderNavigation();
                 this.setupToggleListeners();
             },
@@ -8761,6 +8843,7 @@
                                     this.selectedEnemTopics = this.selectedEnemTopics.filter(id => id !== topic.id);
                                 }
                                 this.updateEnemSelection();
+                                this.saveEnemSelection();
                             });
                         }
                     });
@@ -8895,9 +8978,58 @@
                 this.updateBreadcrumbEnem();
             },
 
+            showToast(message, type = 'success', duration = 3000) {
+                let container = document.getElementById('toastContainer');
+                if (!container) {
+                    container = document.createElement('div');
+                    container.id = 'toastContainer';
+                    container.className = 'toast-container';
+                    document.body.appendChild(container);
+                }
+
+                const toast = document.createElement('div');
+                toast.className = `toast ${type}`;
+                toast.innerHTML = `
+                    <span>${message}</span>
+                `;
+
+                container.appendChild(toast);
+
+                setTimeout(() => {
+                    toast.classList.add('removing');
+                    setTimeout(() => toast.remove(), 300);
+                }, duration);
+            },
+
+            saveEnemSelection() {
+                const data = {
+                    topics: this.selectedEnemTopics,
+                    timestamp: new Date().toISOString()
+                };
+                localStorage.setItem('enemSelectedTopics', JSON.stringify(data));
+            },
+
+            loadEnemSelection() {
+                try {
+                    const data = JSON.parse(localStorage.getItem('enemSelectedTopics'));
+                    if (data && Array.isArray(data.topics)) {
+                        this.selectedEnemTopics = data.topics;
+                        return true;
+                    }
+                } catch (e) {
+                    console.warn('Could not load ENEM selection:', e);
+                }
+                return false;
+            },
+
+            clearEnemSelection() {
+                localStorage.removeItem('enemSelectedTopics');
+                this.selectedEnemTopics = [];
+            },
+
             sortearEnemQuestion() {
                 if (this.selectedEnemTopics.length === 0) {
-                    alert('Selecione pelo menos um tópico!');
+                    this.showToast('⚠️ Selecione pelo menos um tópico!', 'warning', 4000);
                     return;
                 }
 
@@ -8907,9 +9039,10 @@
                 );
 
                 if (filtered.length === 0) {
-                    alert(this.enemNivel === 'todos'
+                    const msg = this.enemNivel === 'todos'
                         ? 'Nenhuma questão encontrada para o tópico selecionado!'
-                        : 'Nenhuma questão desse nível nos tópicos escolhidos. Tente outro nível ou mais tópicos.');
+                        : 'Nenhuma questão desse nível nos tópicos escolhidos. Tente outro nível ou mais tópicos.';
+                    this.showToast(msg, 'error', 4000);
                     return;
                 }
 
@@ -8921,6 +9054,14 @@
                     }
                 }
                 this.currentEnemQuestion = escolhida;
+
+                // Mostrar toast com tópico e dificuldade da questão
+                const topicos = escolhida.topicos.map(t => {
+                    const topic = this.allTopics.find(x => x.id === t);
+                    return topic ? topic.emoji : '📌';
+                }).join('');
+                this.showToast(`✓ Questão sorteada: ${topicos} ${this.escapeHtml(escolhida.source)}`, 'success', 3000);
+
                 this.renderEnemQuestions();
             },
 
@@ -8941,17 +9082,23 @@
             resetEnemSelection() {
                 this.selectedEnemTopics = [];
                 this.currentEnemQuestion = null;
+                this.clearEnemSelection();
+                this.showToast('🔄 Seleção e questão resetadas', 'info', 2000);
                 this.renderEnemQuestions();
             },
 
             selectAllEnemTopics() {
                 const allTopicsData = this.getEnemTopicsWithCounts();
                 this.selectedEnemTopics = allTopicsData.map(t => t.id);
+                this.saveEnemSelection();
+                this.showToast(`✓ ${this.selectedEnemTopics.length} tópicos selecionados!`, 'success', 2000);
                 this.renderEnemQuestions();
             },
 
             deselectAllEnemTopics() {
                 this.selectedEnemTopics = [];
+                this.clearEnemSelection();
+                this.showToast('✕ Seleção limpa', 'info', 2000);
                 this.renderEnemQuestions();
             },
 
