@@ -10,9 +10,50 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         /* ============================================
-           MOTION DESIGN TOKENS - Sistema Centralizado
+           DESIGN SYSTEM - Notion Inspired Theme
            ============================================ */
         :root {
+            /* ---- COLOR TOKENS (Notion Design) ---- */
+            /* Primary Palette */
+            --color-primary: #0075de;
+            --color-canvas: #f6f5f4;
+            --color-surface: #ffffff;
+            --color-text: #000000;
+
+            /* Secondary Palette */
+            --color-text-secondary: #615d59;
+            --color-text-muted: #757575;
+            --color-bg-secondary: #e6f3fe;
+
+            /* Accent Palette (Rotating) */
+            --color-accent-warm: #ffb110;
+            --color-accent-hot: #f64932;
+            --color-accent-blue: #097fe8;
+            --color-accent-sky: #62aef0;
+            --color-accent-dark: #02093a;
+
+            /* ---- SPACING TOKENS (Base 4px) ---- */
+            --spacing-xs: 4px;
+            --spacing-sm: 8px;
+            --spacing-md: 12px;
+            --spacing-lg: 16px;
+            --spacing-xl: 24px;
+            --spacing-2xl: 32px;
+            --spacing-3xl: 48px;
+            --spacing-4xl: 64px;
+            --spacing-5xl: 80px;
+
+            /* ---- BORDER RADIUS ---- */
+            --radius-sm: 4px;
+            --radius-button: 8px;
+            --radius-card: 12px;
+            --radius-full: 9999px;
+
+            /* ---- TYPOGRAPHY TOKENS ---- */
+            --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --font-serif: 'Lyon Text', Georgia, serif;
+
+            /* ---- MOTION DESIGN TOKENS ---- */
             /* Durações Padrão */
             --dur-fast: 150ms;
             --dur-base: 250ms;
@@ -23,6 +64,14 @@
             --ease-emphasis: cubic-bezier(0.34, 1.56, 0.64, 1);
             --ease-exit: cubic-bezier(0.4, 0, 1, 1);
             --ease-spring: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+            /* ---- LAYOUT CONSTRAINTS ---- */
+            --max-width: 1440px;
+            --section-gap: 80px;
+            --card-padding: 24px;
+
+            /* ---- FOCUS & ACCESSIBILITY ---- */
+            --ring: rgba(0, 117, 222, 0.2);
         }
 
         /* Respeita preferência de usuário para animações reduzidas */
@@ -35,11 +84,16 @@
         }
 
         * {
-            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+            font-family: var(--font-primary);
+            color: var(--color-text);
+        }
+
+        body {
+            background-color: var(--color-canvas);
         }
 
         .sidebar-bg {
-            background-color: #fbfbfa;
+            background-color: var(--color-canvas);
         }
         
         .toggle-content {
@@ -57,29 +111,30 @@
         
         .callout {
             border-left: 4px solid;
-            padding: 1rem;
-            border-radius: 0.5rem;
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-button);
             background-color: rgba(0,0,0,0.02);
+            border: 1px solid rgba(0,0,0,0.08);
         }
-        
+
         .callout.info {
-            border-color: #3b82f6;
-            background-color: #eff6ff;
+            border-left-color: var(--color-primary);
+            background-color: var(--color-bg-secondary);
         }
-        
+
         .callout.success {
-            border-color: #10b981;
-            background-color: #ecfdf5;
+            border-left-color: var(--color-accent-sky);
+            background-color: rgba(98, 174, 240, 0.1);
         }
-        
+
         .callout.warning {
-            border-color: #f59e0b;
-            background-color: #fffbeb;
+            border-left-color: var(--color-accent-warm);
+            background-color: rgba(255, 177, 16, 0.1);
         }
-        
+
         .callout.critical {
-            border-color: #ef4444;
-            background-color: #fef2f2;
+            border-left-color: var(--color-accent-hot);
+            background-color: rgba(246, 73, 50, 0.1);
         }
         
 
@@ -88,7 +143,7 @@
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.07em;
-            color: #6b7280;
+            color: var(--color-text-muted);
             padding: 0.75rem 0.75rem 0.25rem;
         }
 
@@ -97,8 +152,9 @@
         }
 
         .breadcrumb-divider {
-            color: #d1d5db;
+            color: var(--color-text-muted);
             margin: 0 0.5rem;
+            opacity: 0.5;
         }
         
         .content-main {
@@ -133,14 +189,14 @@
         }
         
         .nav-item.active {
-            background-color: #f3f4f6;
-            border-left: 3px solid #1f2937;
+            background-color: rgba(0,0,0,0.04);
+            border-left: 3px solid var(--color-primary);
         }
-        
+
         .nav-item:hover {
-            background-color: #f9fafb;
+            background-color: rgba(0,0,0,0.02);
         }
-        
+
         .hamburger {
             display: none;
             transition: transform var(--dur-fast) var(--ease-standard),
@@ -150,7 +206,7 @@
 
         .hamburger:hover {
             transform: scale(1.1);
-            color: #0066cc;
+            color: var(--color-primary);
         }
 
         /* Chevron/Toggle icon for accordion */
@@ -213,17 +269,17 @@
 
         /* ---- Questões ENEM: material de apoio ---- */
         .enem-suporte {
-            background: #fbfbfa;
-            border: 1px solid #e5e7eb;
-            border-left: 4px solid #3b82f6;
-            border-radius: 0.5rem;
-            padding: 1.5rem 1.75rem;
+            background: var(--color-canvas);
+            border: 1px solid rgba(0,0,0,0.08);
+            border-left: 4px solid var(--color-primary);
+            border-radius: var(--radius-button);
+            padding: var(--spacing-xl) calc(var(--spacing-xl) + 4px);
         }
 
         .enem-paragrafo {
             text-align: justify;
             hyphens: auto;
-            color: #1f2937;
+            color: var(--color-text-secondary);
             font-size: 1rem;
             line-height: 1.75;
             margin-bottom: 0.9rem;
@@ -237,7 +293,7 @@
             font-weight: 700;
             letter-spacing: 0.08em;
             text-transform: uppercase;
-            color: #6b7280;
+            color: var(--color-text-muted);
             margin: 1.25rem 0 0.5rem;
         }
 
@@ -249,7 +305,7 @@
             font-size: 0.8125rem;
             font-style: italic;
             font-weight: 400;
-            color: #6b7280;
+            color: var(--color-text-muted);
             line-height: 1.5;
             margin: -0.25rem 0 1.1rem;
             padding-left: 15%;
@@ -265,9 +321,9 @@
             max-width: 100%;
             max-height: 22rem;
             height: auto;
-            border: 1px solid #d1d5db;
-            border-radius: 0.375rem;
-            background: #fff;
+            border: 1px solid rgba(0,0,0,0.08);
+            border-radius: var(--radius-button);
+            background: var(--color-surface);
             cursor: zoom-in;
             transition: max-height var(--dur-fast) var(--ease-standard);
         }
@@ -279,8 +335,9 @@
 
         .enem-figura figcaption {
             font-size: 0.75rem;
-            color: #9ca3af;
+            color: var(--color-text-muted);
             margin-top: 0.5rem;
+            opacity: 0.7;
         }
 
         /* Image Zoom Modal */
@@ -421,16 +478,13 @@
         .no-topics-message {
             animation: fadeIn var(--dur-base) var(--ease-standard);
             text-align: center;
-            color: #9ca3af;
+            color: var(--color-text-muted);
             padding: 2rem 1rem;
             font-size: 0.875rem;
         }
 
         /* Accessible Focus Rings */
-        :root {
-            --color-action: #0066cc;
-            --ring: rgba(0, 102, 204, 0.5);
-        }
+        /* (Tokens consolidated above) */
 
         button:focus-visible,
         input:focus-visible,
@@ -449,7 +503,7 @@
         }
 
         #searchInput:focus {
-            border-color: var(--color-action);
+            border-color: var(--color-primary);
             box-shadow: 0 0 0 3px var(--ring);
         }
 
@@ -490,8 +544,8 @@
             position: absolute;
             top: -40px;
             left: 0;
-            background: #000;
-            color: #fff;
+            background: var(--color-text);
+            color: var(--color-surface);
             padding: 8px 12px;
             text-decoration: none;
             z-index: 100;
@@ -602,8 +656,8 @@
         }
 
         .enem-alternative:hover {
-            background-color: #eff6ff;
-            border-color: #3b82f6;
+            background-color: var(--color-bg-secondary);
+            border-color: var(--color-primary);
         }
 
         .enem-alternative input[type="radio"],
@@ -626,9 +680,9 @@
         }
 
         .enem-alternative.selected {
-            background-color: #eff6ff;
-            border-color: #0066cc;
-            box-shadow: 0 0 0 2px rgba(0, 102, 204, 0.1);
+            background-color: var(--color-bg-secondary);
+            border-color: var(--color-primary);
+            box-shadow: 0 0 0 2px var(--ring);
         }
 
         /* selo de dificuldade */
@@ -645,41 +699,44 @@
         }
 
         .enem-nivel-medio {
-            background: #fef3c7;
-            color: #92400e;
-            border: 1px solid #fcd34d;
+            background: rgba(255, 177, 16, 0.15);
+            color: var(--color-accent-warm);
+            border: 1px solid rgba(255, 177, 16, 0.3);
         }
 
         .enem-nivel-dificil {
-            background: #fee2e2;
-            color: #991b1b;
-            border: 1px solid #fca5a5;
+            background: rgba(246, 73, 50, 0.15);
+            color: var(--color-accent-hot);
+            border: 1px solid rgba(246, 73, 50, 0.3);
         }
 
         /* Link Styling - FASE 2: Tipografia & Acessibilidade */
         a {
-            color: #0066cc;
+            color: var(--color-primary);
             text-decoration: underline;
-            text-decoration-color: #0066cc;
+            text-decoration-color: var(--color-primary);
             text-underline-offset: 3px;
             text-decoration-thickness: 1px;
             transition: all var(--dur-fast) var(--ease-standard);
         }
 
         a:hover {
-            color: #0052a3;
+            color: var(--color-primary);
+            opacity: 0.8;
             text-decoration-thickness: 2px;
             text-underline-offset: 4px;
         }
 
         a:visited {
-            color: #5a1f7d;
-            text-decoration-color: #5a1f7d;
+            color: var(--color-primary);
+            opacity: 0.7;
+            text-decoration-color: var(--color-primary);
         }
 
         a:visited:hover {
-            color: #3d0a5c;
-            text-decoration-color: #3d0a5c;
+            color: var(--color-primary);
+            opacity: 0.6;
+            text-decoration-color: var(--color-primary);
             text-decoration-thickness: 2px;
         }
 
@@ -695,12 +752,12 @@
 
         .enem-topic-label:focus-within {
             outline: none;
-            box-shadow: inset 0 0 0 2px #0066cc, 0 0 0 3px rgba(0, 102, 204, 0.2);
-            border-radius: 0.5rem;
+            box-shadow: inset 0 0 0 2px var(--color-primary), 0 0 0 3px var(--ring);
+            border-radius: var(--radius-button);
         }
 
         .enem-topic-label input[type="checkbox"]:focus-visible {
-            outline: 2px solid #0066cc;
+            outline: 2px solid var(--color-primary);
             outline-offset: 2px;
         }
 
@@ -717,31 +774,40 @@
         }
 
         .toast {
-            background: #10b981;
-            color: white;
-            padding: 16px 24px;
-            border-radius: 8px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            background: var(--color-accent-sky);
+            color: var(--color-primary);
+            padding: var(--spacing-lg) var(--spacing-xl);
+            border-radius: var(--radius-button);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
             animation: slideIn 300ms ease-out;
             pointer-events: auto;
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: var(--spacing-md);
             font-weight: 500;
             min-width: 300px;
             max-width: 400px;
+            border: 1px solid rgba(0, 117, 222, 0.15);
+        }
+
+        .toast.success {
+            background: rgba(98, 174, 240, 0.15);
+            color: var(--color-primary);
         }
 
         .toast.error {
-            background: #ef4444;
+            background: rgba(246, 73, 50, 0.15);
+            color: var(--color-accent-hot);
         }
 
         .toast.warning {
-            background: #f59e0b;
+            background: rgba(255, 177, 16, 0.15);
+            color: var(--color-accent-warm);
         }
 
         .toast.info {
-            background: #3b82f6;
+            background: rgba(0, 117, 222, 0.15);
+            color: var(--color-primary);
         }
 
         @keyframes slideIn {
@@ -790,11 +856,11 @@
             font-size: 1.0625rem;
             font-weight: 500;
             line-height: 1.7;
-            color: #111827;
+            color: var(--color-text);
         }
     </style>
 </head>
-<body class="bg-white">
+<body>
     <!-- SKIP LINK - Acessibilidade para teclado -->
     <a href="#contentArea" class="skip-link" aria-label="Pular para conteúdo principal">
         Pular para conteúdo principal
