@@ -197,6 +197,105 @@
             background-color: rgba(0,0,0,0.02);
         }
 
+        /* Hierarchical Category Styles */
+        .nav-category {
+            margin-bottom: var(--spacing-sm);
+            animation: slideIn var(--dur-base) var(--ease-standard);
+        }
+
+        .nav-category-header {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            padding: var(--spacing-md) var(--spacing-lg);
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--color-text);
+            text-align: left;
+            transition: background-color var(--dur-fast) var(--ease-standard),
+                        color var(--dur-fast) var(--ease-standard);
+        }
+
+        .nav-category-header:hover {
+            background-color: rgba(0,0,0,0.02);
+            color: var(--color-primary);
+        }
+
+        .nav-category-header:focus-visible {
+            outline: 2px solid var(--color-primary);
+            outline-offset: 2px;
+            border-radius: var(--radius-button);
+        }
+
+        .category-chevron {
+            display: inline-block;
+            transition: transform var(--dur-fast) var(--ease-standard);
+            transform: rotate(-90deg);
+            font-size: 0.7rem;
+            line-height: 1;
+        }
+
+        .nav-category.collapsed .category-chevron {
+            transform: rotate(0deg);
+        }
+
+        .category-emoji {
+            display: inline-block;
+            margin-right: var(--spacing-xs);
+        }
+
+        .category-title {
+            flex: 1;
+        }
+
+        .nav-category-items {
+            display: block;
+            max-height: 1000px;
+            overflow: hidden;
+            transition: max-height var(--dur-base) var(--ease-standard),
+                        opacity var(--dur-base) var(--ease-standard);
+            opacity: 1;
+            margin-left: var(--spacing-lg);
+        }
+
+        .nav-category.collapsed .nav-category-items {
+            max-height: 0;
+            opacity: 0;
+        }
+
+        .nav-item-nested {
+            font-size: 0.85rem;
+            padding: var(--spacing-sm) var(--spacing-md);
+            margin-bottom: 2px;
+            animation: slideIn var(--dur-base) var(--ease-standard);
+        }
+
+        .nav-item-nested.active {
+            background-color: rgba(0,0,0,0.04);
+            border-left: 3px solid var(--color-primary);
+            font-weight: 500;
+        }
+
+        .nav-item-nested:hover {
+            background-color: rgba(0,0,0,0.02);
+        }
+
+        .nav-item-nested:focus-visible {
+            outline: 2px solid var(--color-primary);
+            outline-offset: -2px;
+            border-radius: var(--radius-sm);
+        }
+
+        .topic-text {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
         .hamburger {
             display: none;
             transition: transform var(--dur-fast) var(--ease-standard),
@@ -6789,6 +6888,70 @@
 }
 ];
 
+        // Transform flat topicsData into hierarchical categories
+        // All categories start CLOSED (collapsed: true)
+        const topicsCategories = [
+            {
+                id: "cat-fundamentos",
+                title: "Fundamentos",
+                emoji: "📚",
+                collapsed: true,
+                topics: topicsData.filter(t => ["sociologia-ciencia", "fundadores", "individuo-sociedade"].includes(t.id))
+            },
+            {
+                id: "cat-dimensoes-culturais",
+                title: "Dimensões Culturais",
+                emoji: "🎨",
+                collapsed: true,
+                topics: topicsData.filter(t => ["cultura-sociedade", "cultura-arte-comunicacao", "religiao-sociedade", "religioes-mundo-contemporaneo", "comunicacao-massa", "sociabilidades-mundo-digital"].includes(t.id))
+            },
+            {
+                id: "cat-identidades",
+                title: "Identidades e Diferenças",
+                emoji: "👤",
+                collapsed: true,
+                topics: topicsData.filter(t => ["identidade-social", "raca", "genero-sexualidade", "corporalidade-afetos", "culturas-juvenis"].includes(t.id))
+            },
+            {
+                id: "cat-estrutura-social",
+                title: "Estrutura Social",
+                emoji: "🏛️",
+                collapsed: true,
+                topics: topicsData.filter(t => ["familia", "envelhecimento-ciclos", "educacao-socializacao", "sistema-capitalista", "trabalho", "consumo-estilos-vida"].includes(t.id))
+            },
+            {
+                id: "cat-desigualdade",
+                title: "Desigualdade e Controle",
+                emoji: "⚖️",
+                collapsed: true,
+                topics: topicsData.filter(t => ["classes-desigualdade", "pobreza-brasil", "poder-dominacao", "desvio-controle"].includes(t.id))
+            },
+            {
+                id: "cat-politica",
+                title: "Política e Movimentos",
+                emoji: "🗳️",
+                collapsed: true,
+                topics: topicsData.filter(t => ["estado-governo-democracia", "sistema-politico-brasileiro", "politica-poder", "movimentos-sociais", "formas-contemporaneas-mobilizacao"].includes(t.id))
+            },
+            {
+                id: "cat-brasil-global",
+                title: "Brasil e Contextos Globais",
+                emoji: "🌍",
+                collapsed: true,
+                topics: topicsData.filter(t => ["sociedade-brasileira", "populacoes-brasil", "diversidade-cultural-brasil", "migracoes-deslocamentos", "conflito-mudanca", "globalizacao-sociedade", "economia-sociedade-contemporanea"].includes(t.id))
+            },
+            {
+                id: "cat-desafios",
+                title: "Desafios Contemporâneos",
+                emoji: "⚡",
+                collapsed: true,
+                topics: topicsData.filter(t => ["ciencia-tecnologia", "sociedade-meio-ambiente", "saude-sociedade", "futuro"].includes(t.id))
+            }
+        ];
+
+        // Helper: Flatten all topics from categories for backward compatibility
+        const getAllTopicsFlat = () => topicsCategories.flatMap(cat => cat.topics);
+
         // QUIZZES DATA
         const quizzesData = [
             {
@@ -8399,8 +8562,11 @@
         // Initialize app
         const app = {
             currentTopic: null,
-            allTopics: topicsData,
-            filteredTopics: topicsData,
+            allTopics: getAllTopicsFlat(),
+            allCategories: topicsCategories,
+            filteredTopics: null,
+            filteredCategories: null,
+            categoryStates: {}, // Track which categories are collapsed/expanded
             currentPage: 'topics', // 'topics', 'quizzes', or 'enem'
             currentQuizTopic: null,
             currentEnemTopic: null,
@@ -8420,6 +8586,9 @@
 
             init() {
                 this.searchInput = document.getElementById('searchInput');
+                // Initialize with full hierarchical structure
+                this.filteredCategories = JSON.parse(JSON.stringify(this.allCategories));
+                this.loadCategoryStates();
                 // FASE 3: Carregar seleção anterior de tópicos ENEM
                 this.loadEnemSelection();
                 this.renderNavigation();
@@ -8430,37 +8599,100 @@
                 const navContainer = document.getElementById('navContainer');
                 navContainer.innerHTML = '';
 
-                // If searching, show flat list
-                const isFiltered = this.filteredTopics.length !== this.allTopics.length;
-                if (isFiltered) {
-                    if (this.filteredTopics.length === 0) {
-                        // Show "no topics found" message with fade-in animation
-                        const noMessage = document.createElement('div');
-                        noMessage.className = 'no-topics-message';
-                        noMessage.textContent = 'Nenhum tópico encontrado';
-                        navContainer.appendChild(noMessage);
-                    } else {
-                        // Add filtered topics with staggered animations
-                        this.filteredTopics.forEach((topic, index) => {
-                            const navItem = document.createElement('div');
-                            navItem.className = `nav-item p-3 rounded-lg mb-1 text-sm${this.currentTopic === topic.id ? ' active' : ''}`;
-                            navItem.innerHTML = `<span class="mr-2">${topic.emoji}</span>${topic.title}`;
-                            navItem.style.animationDelay = `${index * 50}ms`;
-                            navItem.addEventListener('click', () => this.selectTopic(topic.id));
-                            navContainer.appendChild(navItem);
-                        });
-                    }
+                // Use filtered categories if searching, otherwise use all categories
+                const categoriesToRender = this.filteredCategories || this.allCategories;
+
+                // Check if any category has topics (for "no results" message)
+                const hasAnyTopics = categoriesToRender.some(cat => cat.topics && cat.topics.length > 0);
+
+                if (!hasAnyTopics) {
+                    const noMessage = document.createElement('div');
+                    noMessage.className = 'no-topics-message';
+                    noMessage.textContent = 'Nenhum tópico encontrado';
+                    navContainer.appendChild(noMessage);
                     return;
                 }
 
-                // Flat list view - all topics
-                this.allTopics.forEach((topic, index) => {
-                    const navItem = document.createElement('div');
-                    navItem.className = `nav-item p-3 rounded-lg mb-1 text-sm${this.currentTopic === topic.id ? ' active' : ''}`;
-                    navItem.innerHTML = `<span class="font-bold">${topic.title}</span>`;
-                    navItem.style.animationDelay = `${index * 30}ms`;
-                    navItem.addEventListener('click', () => this.selectTopic(topic.id));
-                    navContainer.appendChild(navItem);
+                // Render hierarchical categories
+                categoriesToRender.forEach((category, catIndex) => {
+                    // Skip empty categories
+                    if (!category.topics || category.topics.length === 0) return;
+
+                    // Create category header (button to toggle)
+                    const categoryDiv = document.createElement('div');
+                    categoryDiv.className = `nav-category${category.collapsed ? ' collapsed' : ''}`;
+                    categoryDiv.dataset.categoryId = category.id;
+                    categoryDiv.style.animationDelay = `${catIndex * 30}ms`;
+
+                    const categoryHeader = document.createElement('button');
+                    categoryHeader.className = 'nav-category-header';
+                    categoryHeader.innerHTML = `<span class="category-chevron">▼</span><span class="category-emoji">${category.emoji}</span><span class="category-title">${category.title}</span>`;
+                    categoryHeader.setAttribute('aria-expanded', !category.collapsed);
+
+                    // Toggle category on click
+                    categoryHeader.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        this.toggleCategory(category.id);
+                    });
+
+                    categoryDiv.appendChild(categoryHeader);
+
+                    // Create container for topics
+                    const topicsContainer = document.createElement('div');
+                    topicsContainer.className = 'nav-category-items';
+                    if (category.collapsed) {
+                        topicsContainer.style.display = 'none';
+                    }
+
+                    // Render topics within category
+                    category.topics.forEach((topic, topicIndex) => {
+                        const navItem = document.createElement('div');
+                        navItem.className = `nav-item nav-item-nested${this.currentTopic === topic.id ? ' active' : ''}`;
+                        navItem.innerHTML = `<span class="mr-2">${topic.emoji}</span><span class="topic-text">${topic.title}</span>`;
+                        navItem.style.animationDelay = `${(catIndex * 30) + (topicIndex * 10)}ms`;
+                        navItem.addEventListener('click', () => this.selectTopic(topic.id));
+                        topicsContainer.appendChild(navItem);
+                    });
+
+                    categoryDiv.appendChild(topicsContainer);
+                    navContainer.appendChild(categoryDiv);
+                });
+            },
+
+            toggleCategory(categoryId) {
+                // Find category in filtered or all categories
+                let category = (this.filteredCategories || this.allCategories).find(c => c.id === categoryId);
+                if (!category) return;
+
+                // Toggle collapsed state
+                category.collapsed = !category.collapsed;
+
+                // Save state to localStorage
+                this.saveCategoryState(categoryId, category.collapsed);
+
+                // Re-render navigation
+                this.renderNavigation();
+            },
+
+            saveCategoryState(categoryId, collapsed) {
+                const states = JSON.parse(localStorage.getItem('categoryStates') || '{}');
+                states[categoryId] = collapsed;
+                localStorage.setItem('categoryStates', JSON.stringify(states));
+            },
+
+            loadCategoryStates() {
+                const states = JSON.parse(localStorage.getItem('categoryStates') || '{}');
+                this.allCategories.forEach(cat => {
+                    if (states.hasOwnProperty(cat.id)) {
+                        cat.collapsed = states[cat.id];
+                    }
+                    // Sync with filtered categories
+                    if (this.filteredCategories) {
+                        const filteredCat = this.filteredCategories.find(c => c.id === cat.id);
+                        if (filteredCat) {
+                            filteredCat.collapsed = cat.collapsed;
+                        }
+                    }
                 });
             },
 
@@ -8546,14 +8778,28 @@
 
             filterTopics(query) {
                 query = query.toLowerCase().trim();
+
                 if (!query) {
-                    this.filteredTopics = this.allTopics;
+                    // No filter: show all categories with their current state
+                    this.filteredCategories = null;
                 } else {
-                    this.filteredTopics = this.allTopics.filter(topic =>
-                        topic.title.toLowerCase().includes(query) ||
-                        topic.id.toLowerCase().includes(query)
-                    );
+                    // Filter categories: keep only those with matching topics
+                    this.filteredCategories = this.allCategories.map(category => {
+                        // Filter topics within category
+                        const filteredTopics = category.topics.filter(topic =>
+                            topic.title.toLowerCase().includes(query) ||
+                            topic.id.toLowerCase().includes(query)
+                        );
+
+                        // Return category with filtered topics and AUTO-EXPANDED
+                        return {
+                            ...category,
+                            topics: filteredTopics,
+                            collapsed: filteredTopics.length > 0 ? false : true // Auto-expand if has results
+                        };
+                    });
                 }
+
                 this.renderNavigation();
             },
 
@@ -8765,7 +9011,7 @@
                 this.currentPage = 'topics';
                 this.currentQuizTopic = null;
                 this.searchInput.value = '';
-                this.filteredTopics = this.allTopics;
+                this.filteredCategories = null;
                 this.renderNavigation();
                 this.renderContent();
                 this.updateBreadcrumbHome();
