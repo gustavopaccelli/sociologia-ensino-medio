@@ -218,6 +218,12 @@
             text-align: left;
             transition: background-color var(--dur-fast) var(--ease-standard),
                         color var(--dur-fast) var(--ease-standard);
+            flex-wrap: nowrap;
+        }
+
+        .category-title {
+            flex: 1;
+            min-width: 0;
         }
 
         .nav-category-header:hover {
@@ -235,12 +241,44 @@
             display: inline-block;
             transition: transform var(--dur-fast) var(--ease-standard);
             transform: rotate(-90deg);
-            font-size: 0.7rem;
+            font-size: 1rem;
             line-height: 1;
+            color: var(--color-primary);
+            font-weight: bold;
+            min-width: 16px;
+            text-align: center;
         }
 
         .nav-category.collapsed .category-chevron {
             transform: rotate(0deg);
+        }
+
+        .nav-category-header:hover .category-chevron {
+            transform: rotate(-90deg) scale(1.15);
+        }
+
+        .nav-category.collapsed:hover .category-chevron {
+            transform: rotate(0deg) scale(1.15);
+        }
+
+        /* Badge/dot indicator para categorias fechadas */
+        .nav-category.collapsed::before {
+            content: "";
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: var(--color-primary);
+            opacity: 0.6;
+            margin-right: 4px;
+            flex-shrink: 0;
+        }
+
+        .category-count {
+            margin-left: auto;
+            font-size: 0.85rem;
+            color: var(--color-text-muted);
+            font-weight: normal;
         }
 
         .category-emoji {
@@ -257,14 +295,39 @@
             max-height: 1000px;
             overflow: hidden;
             transition: max-height var(--dur-base) var(--ease-standard),
-                        opacity var(--dur-base) var(--ease-standard);
+                        opacity var(--dur-base) var(--ease-standard),
+                        background-color 400ms var(--ease-standard);
             opacity: 1;
             margin-left: var(--spacing-lg);
+            background-color: transparent;
+        }
+
+        /* Highlight animation ao abrir */
+        .nav-category:not(.collapsed) .nav-category-items {
+            animation: highlightFlash 400ms var(--ease-standard);
+        }
+
+        @keyframes highlightFlash {
+            0% { background-color: var(--color-bg-secondary); }
+            100% { background-color: transparent; }
         }
 
         .nav-category.collapsed .nav-category-items {
             max-height: 0;
             opacity: 0;
+        }
+
+        /* Mobile: transições mais rápidas para feedback imediato */
+        @media (max-width: 768px) {
+            .nav-category-items {
+                transition: max-height 150ms var(--ease-standard),
+                            opacity 150ms var(--ease-standard),
+                            background-color 300ms var(--ease-standard);
+            }
+
+            .category-chevron {
+                transition: transform 150ms var(--ease-standard);
+            }
         }
 
         .nav-item-nested {
@@ -8626,7 +8689,8 @@
 
                     const categoryHeader = document.createElement('button');
                     categoryHeader.className = 'nav-category-header';
-                    categoryHeader.innerHTML = `<span class="category-chevron">▼</span><span class="category-emoji">${category.emoji}</span><span class="category-title">${category.title}</span>`;
+                    const topicCount = category.topics ? category.topics.length : 0;
+                    categoryHeader.innerHTML = `<span class="category-chevron">▼</span><span class="category-emoji">${category.emoji}</span><span class="category-title">${category.title}</span><span class="category-count">(${topicCount})</span>`;
                     categoryHeader.setAttribute('aria-expanded', !category.collapsed);
 
                     // Toggle category on click
@@ -8682,9 +8746,14 @@
 
             loadCategoryStates() {
                 const states = JSON.parse(localStorage.getItem('categoryStates') || '{}');
-                this.allCategories.forEach(cat => {
+                const hasVisitedBefore = localStorage.getItem('hasVisitedBefore');
+
+                this.allCategories.forEach((cat, idx) => {
                     if (states.hasOwnProperty(cat.id)) {
                         cat.collapsed = states[cat.id];
+                    } else if (!hasVisitedBefore && idx === 0) {
+                        // Primeira vez: abre FUNDAMENTOS (idx === 0)
+                        cat.collapsed = false;
                     }
                     // Sync with filtered categories
                     if (this.filteredCategories) {
@@ -8694,6 +8763,11 @@
                         }
                     }
                 });
+
+                // Marca que usuário já visitou
+                if (!hasVisitedBefore) {
+                    localStorage.setItem('hasVisitedBefore', 'true');
+                }
             },
 
             selectTopic(topicId) {
