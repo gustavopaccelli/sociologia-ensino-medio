@@ -1,0 +1,11 @@
+# GitHub Pages configuration
+theme: null
+exclude:
+  - .gitignore
+  - README.md
+  - REFERENCIAS_BIBLIOGRAFICAS.md
+  - CONSOLIDACAO_FINAL.md
+  - docs/
+
+# Disable Jekyll processing
+markdown: kramdown

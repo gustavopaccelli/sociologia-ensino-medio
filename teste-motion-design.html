@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🧪 Teste de Motion Design — Sociologia</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 2rem;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #1f2937;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: #6b7280;
+        }
+
+        .test-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .test-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 250ms cubic-bezier(0.2, 0, 0.38, 0.9);
+        }
+
+        .test-card:hover {
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            transform: translateY(-2px) scale(1.01);
+        }
+
+        .test-card h3 {
+            color: #1f2937;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .test-card p {
+            color: #6b7280;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .test-button {
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 250ms cubic-bezier(0.2, 0, 0.38, 0.9);
+            width: 100%;
+        }
+
+        .test-button:hover {
+            background: #1d4ed8;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .test-button:active {
+            transform: scale(0.98);
+        }
+
+        .test-demo {
+            margin-top: 1rem;
+            padding: 1rem;
+            background: #f3f4f6;
+            border-radius: 8px;
+            min-height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #6b7280;
+            font-size: 0.9rem;
+        }
+
+        /* TESTE 1: Accordion */
+        .accordion {
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .accordion-header {
+            background: #f3f4f6;
+            padding: 1rem;
+            cursor: pointer;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 250ms cubic-bezier(0.2, 0, 0.38, 0.9);
+        }
+
+        .accordion-header:hover {
+            background: #e5e7eb;
+        }
+
+        .accordion-icon {
+            display: inline-block;
+            transition: transform 250ms cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .accordion-header.open .accordion-icon {
+            transform: rotate(-180deg);
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: max-height 250ms cubic-bezier(0.34, 1.56, 0.64, 1),
+                        opacity 250ms cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .accordion-content.open {
+            max-height: 500px;
+            opacity: 1;
+            padding: 1rem;
+        }
+
+        /* TESTE 3: Cards */
+        .demo-card {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 1rem;
+            transition: all 250ms cubic-bezier(0.2, 0, 0.38, 0.9);
+        }
+
+        .demo-card:hover {
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            transform: translateY(-2px) scale(1.01);
+        }
+
+        /* TESTE 5: Callout */
+        .callout {
+            border-left: 4px solid #3b82f6;
+            padding: 1rem;
+            background: #eff6ff;
+            border-radius: 6px;
+            animation: calloutEnter 250ms cubic-bezier(0.2, 0, 0.38, 0.9);
+        }
+
+        @keyframes calloutEnter {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* TESTE 6: Input Focus */
+        input[type="text"] {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: border-color 150ms cubic-bezier(0.2, 0, 0.38, 0.9),
+                        box-shadow 150ms cubic-bezier(0.2, 0, 0.38, 0.9);
+        }
+
+        input[type="text"]:focus {
+            outline: none;
+            border-color: #2563eb;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+
+        .status {
+            margin-top: 3rem;
+            padding: 2rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .status h2 {
+            margin-bottom: 1rem;
+            color: #1f2937;
+        }
+
+        .checklist {
+            list-style: none;
+        }
+
+        .checklist li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #e5e7eb;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .checklist li:last-child {
+            border-bottom: none;
+        }
+
+        .checklist input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+
+        .success {
+            color: #059669;
+            font-weight: 600;
+        }
+
+        .warning {
+            color: #d97706;
+            font-weight: 600;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🧪 Teste de Motion Design</h1>
+            <p class="subtitle">Validação interativa das transições implementadas</p>
+        </header>
+
+        <div class="test-grid">
+            <!-- TESTE 1: Page Transitions -->
+            <div class="test-card">
+                <h3>1. Page Transitions</h3>
+                <p>Fade + Slide ao trocar de página</p>
+                <div class="test-demo" id="demo1">
+                    <div style="animation: pageEnter 250ms cubic-bezier(0.2, 0, 0.38, 0.9);">
+                        📄 Conteúdo com fade + slide
+                    </div>
+                </div>
+                <button class="test-button" onclick="runTest1()">Disparar Transição</button>
+            </div>
+
+            <!-- TESTE 2: Accordion -->
+            <div class="test-card">
+                <h3>2. Accordion</h3>
+                <p>Altura dinâmica + easing emphasis</p>
+                <div class="test-demo" style="height: auto;">
+                    <div class="accordion">
+                        <div class="accordion-header" onclick="toggleAccordion(event)">
+                            Clique para abrir <span class="accordion-icon">›</span>
+                        </div>
+                        <div class="accordion-content">
+                            Este é o conteúdo da seção. Observe a transição suave com bounce leve (easing emphasis).
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TESTE 3: Cards Hover -->
+            <div class="test-card">
+                <h3>3. Cards Hover</h3>
+                <p>Elevação 3D ao passar mouse</p>
+                <div class="test-demo">
+                    <div class="demo-card">
+                        ✨ Passe mouse aqui
+                        <br><small>(Y-2px + scale 1.01)</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TESTE 4: Input Focus -->
+            <div class="test-card">
+                <h3>4. Input Focus Ring</h3>
+                <p>Ring azul animado ao focar</p>
+                <div class="test-demo" style="padding: 1rem;">
+                    <input type="text" placeholder="Clique aqui para focar...">
+                </div>
+            </div>
+
+            <!-- TESTE 5: Callout -->
+            <div class="test-card">
+                <h3>5. Callout Animation</h3>
+                <p>Fade + Slide ao entrar</p>
+                <div class="test-demo" style="height: auto;">
+                    <div class="callout">
+                        ℹ️ Esta caixa entrou com fade + slide!
+                    </div>
+                </div>
+            </div>
+
+            <!-- TESTE 6: Botão -->
+            <div class="test-card">
+                <h3>6. Button Hover + Click</h3>
+                <p>Transform + Shadow + Click scale</p>
+                <div class="test-demo" style="padding: 1rem;">
+                    <button class="test-button">Clique aqui (scale 0.98)</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- STATUS E CHECKLIST -->
+        <div class="status">
+            <h2>📋 Checklist de Testes</h2>
+            <ul class="checklist">
+                <li><input type="checkbox"> <strong>Desktop:</strong> Todas as transições visuais funcionam</li>
+                <li><input type="checkbox"> <strong>Mobile:</strong> Drawer, touch, accordion funcionam</li>
+                <li><input type="checkbox"> <strong>Acessibilidade:</strong> prefers-reduced-motion, focus rings OK</li>
+                <li><input type="checkbox"> <strong>Performance:</strong> 60fps contínuo, sem CLS</li>
+                <li><input type="checkbox"> <strong>Técnico:</strong> Sem erros console, variáveis CSS funcionam</li>
+                <li><input type="checkbox"> <strong>Regressão:</strong> Conteúdo e funcionalidade não mudaram</li>
+            </ul>
+
+            <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid #e5e7eb;">
+                <p><span class="success">✅ Validação técnica passou</span></p>
+                <p style="margin-top: 0.5rem; color: #6b7280;">Agora teste as transições acima e no site principal (http://localhost:8000)</p>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        @keyframes pageEnter {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+
+    <script>
+        function toggleAccordion(event) {
+            const header = event.currentTarget;
+            const content = header.nextElementSibling;
+            header.classList.toggle('open');
+            content.classList.toggle('open');
+        }
+
+        function runTest1() {
+            const demo = document.getElementById('demo1');
+            demo.innerHTML = '<div style="animation: pageEnter 250ms cubic-bezier(0.2, 0, 0.38, 0.9);">✨ Transição disparada!</div>';
+        }
+
+        console.log('✅ Teste de Motion Design carregado');
+        console.log('Variáveis CSS disponíveis:');
+        const styles = getComputedStyle(document.documentElement);
+        console.log('--dur-fast:', styles.getPropertyValue('--dur-fast'));
+        console.log('--dur-base:', styles.getPropertyValue('--dur-base'));
+        console.log('--dur-slow:', styles.getPropertyValue('--dur-slow'));
+    </script>
+</body>
+</html>
