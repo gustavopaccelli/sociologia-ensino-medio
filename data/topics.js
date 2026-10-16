@@ -1,0 +1,5588 @@
+
+        const topicsData = [
+{
+                id: "individuo-sociedade",
+                title: "Indivíduo e Sociedade",
+                emoji: "",
+                parent: "individuo-soc",
+                
+                content: `
+                    <h2 class="text-3xl font-bold mb-2 text-gray-900">Indivíduo e Sociedade</h2>
+                    <p class="text-gray-500 mb-6">A relação dialética fundamental entre pessoa e coletivo</p>
+
+                    <div class="callout critical mb-6">
+                        <p class="font-semibold mb-2">Conceito Central</p>
+                        <p><strong>A relação indivíduo-sociedade é interdependência dialética:</strong> a sociedade molda o indivíduo através de socialização, enquanto indivíduos transformam a sociedade através de ações, criatividade e resistência. É relação de <em>reciprocidade constitutiva</em>.</p>
+                        <p class="mt-2 text-sm text-gray-600"><em>Pergunta central: Como o coletivo habita o individual, e como o individual transforma o coletivo?</em></p>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Perspectivas Clássicas</h3>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle1">
+                            <span>Durkheim: Fato Social e Coerção Externa</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle1">
+                            <p class="text-gray-700 mt-4"><strong>Conceito: Fato Social</strong></p>
+                            <p class="text-gray-700 mt-2 italic">"Fato social é toda maneira de fazer, fixada ou não, capaz de exercer uma coerção exterior sobre o indivíduo." (Durkheim, 1895)</p>
+                            <p class="text-gray-700 mt-3"><strong>Argumento central:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>A sociedade <strong>preexiste</strong> ao indivíduo</li>
+                                <li>Indivíduo nasce <strong>já dentro</strong> de instituições e normas preexistentes</li>
+                                <li>Fatos sociais (linguagem, religião, direito) <strong>coagem externamente</strong></li>
+                                <li>Consciência coletiva transcende consciências individuais</li>
+                            </ul>
+                            <p class="text-gray-700 mt-3"><strong>Exemplo Brasil:</strong> Código de conduta na escola (horários, uniformes, respeito à autoridade) é fato social que coage mesmo quem não concorda.</p>
+                            <p class="text-gray-700 mt-2 text-sm text-red-600"><strong>Crítica:</strong> Durkheim pode superestimar poder coercitivo, subestimando capacidade criativa e resistência individual.</p>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle2">
+                            <span>Weber: Ação Social e Significado</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle2">
+                            <p class="text-gray-700 mt-4"><strong>Conceito: Ação Social</strong></p>
+                            <p class="text-gray-700 mt-2 italic">"Aquela cujo sentido mentado pelo agente refere-se ao comportamento de outros, orientando-se por este em seu curso." (Weber, 1922)</p>
+                            <p class="text-gray-700 mt-3"><strong>Argumento central:</strong> Indivíduo <strong>age significativamente</strong> — suas ações têm sentido intencional, não são meros reflexos mecânicos.</p>
+                            <p class="text-gray-700 mt-3"><strong>Quatro tipos de ação social:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li><strong>Racional com relação a fins:</strong> cálculo meios-fins (empresário buscando lucro)</li>
+                                <li><strong>Racional com relação a valores:</strong> sacrifício por ideal (ativista que trabalha sem ganho)</li>
+                                <li><strong>Afetiva:</strong> emoção (abraço, raiva, medo)</li>
+                                <li><strong>Tradicional:</strong> repetição de costumes (celebrar Natal como a família sempre celebrou)</li>
+                            </ul>
+                            <p class="text-gray-700 mt-3"><strong>Exemplo Brasil:</strong> Jovem que estuda medicina não por vocação mas por status = ação racional com relação a fins.</p>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle3">
+                            <span>Elias: Figuração e Interdependências</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle3">
+                            <p class="text-gray-700 mt-4"><strong>Conceito: Figuração</strong></p>
+                            <p class="text-gray-700 mt-2">Indivíduo e sociedade não são opostos separáveis. Formam <strong>teia de interdependências mútuas</strong>. Nenhum indivíduo é "autônomo" porque todos dependem de <strong>rede de posições sociais</strong> (pais, mestres, colegas, patrões).</p>
+                            <p class="text-gray-700 mt-3"><strong>Processo Civilizador:</strong> Ao longo da história, sociedades ocidentais desenvolvem progressivo <strong>controle emocional</strong>. Comportamentos "selvagens" são reprimidos e internalizados, não apenas por coerção externa, mas por <strong>autocontrole internalizado</strong>.</p>
+                            <p class="text-gray-700 mt-3"><strong>Exemplo histórico:</strong> Idade Média tinha violência e sexualidade mais explícitas; modernidade "privatiza" e esconde tudo isso.</p>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle4">
+                            <span>Bourdieu: Habitus e Capital Social</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle4">
+                            <p class="text-gray-700 mt-4"><strong>Conceito: Habitus</strong></p>
+                            <p class="text-gray-700 mt-2 italic">"Sistemas de disposições duráveis e transferíveis, estruturas estruturadas predispostas a funcionar como estruturas estruturantes." (Bourdieu, 1980)</p>
+                            <p class="text-gray-700 mt-3"><strong>Argumento:</strong> Indivíduo não é "livre": seus gostos, comportamentos, escolhas são <strong>estruturados</strong> pela posição social que ocupa. Cada classe/grupo tem seu próprio <strong>habitus</strong> (maneira de falar, vestir, comer, pensar).</p>
+                            <p class="text-gray-700 mt-3"><strong>Os capitais que estruturam vida:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li><strong>Capital econômico:</strong> dinheiro (renda, propriedade)</li>
+                                <li><strong>Capital cultural:</strong> conhecimento, educação, bom gosto</li>
+                                <li><strong>Capital social:</strong> contatos, redes, relacionamentos</li>
+                                <li><strong>Capital simbólico:</strong> prestígio, honra, reputação</li>
+                            </ul>
+                            <p class="text-gray-700 mt-3"><strong>Violência simbólica:</strong> A sociedade naturaliza diferenças de habitus. Capital cultural da elite é apresentado como "natural" ou "melhor", enquanto quem não o possui é visto como "inferior".</p>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle5">
+                            <span>Mills: Imaginação Sociológica</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle5">
+                            <p class="text-gray-700 mt-4"><strong>Conceito: Imaginação Sociológica</strong></p>
+                            <p class="text-gray-700 mt-2 italic">"A imaginação sociológica é a capacidade intelectual de conectar a biografia individual à grande marcha da história."</p>
+                            <p class="text-gray-700 mt-3"><strong>Argumento central:</strong> O indivíduo moderno frequentemente se sente encurralado por forças que não compreende. A imaginação sociológica exige a superação da visão restrita das <strong>"inquietações pessoais e privadas"</strong> para alcançar a compreensão dos <strong>"problemas públicos e estruturais"</strong>.</p>
+                            <p class="text-gray-700 mt-3"><strong>Exemplo:</strong> O desemprego de uma pessoa (inquietação pessoal) deve ser entendido como resultado da desindustrialização de uma nação (problema estrutural). Essa perspectiva une microssociologia à macrossociologia.</p>
+                            <p class="text-gray-700 mt-3"><strong>Crítica:</strong> Mills enfatiza que devemos desnaturalizar o que o senso comum toma como "estritamente biológico ou fatalista", reconhecendo as determinações históricas e sociais.</p>
+                        </div>
+                    </div>
+
+                    <div class="callout success mt-8">
+                        <p class="font-semibold mb-2">✓ Síntese Integradora</p>
+                        <table class="w-full text-sm text-gray-700 mt-3">
+                            <tr class="border-b">
+                                <td class="font-semibold py-1">Perspectiva</td>
+                                <td class="font-semibold py-1">Ênfase</td>
+                                <td class="font-semibold py-1">Mecanismo</td>
+                            </tr>
+                            <tr class="border-b">
+                                <td class="py-1"><strong>Durkheim</strong></td>
+                                <td class="py-1">Sociedade constrange indivíduo</td>
+                                <td class="py-1">Fatos sociais coagem</td>
+                            </tr>
+                            <tr class="border-b">
+                                <td class="py-1"><strong>Weber</strong></td>
+                                <td class="py-1">Indivíduo age significativamente</td>
+                                <td class="py-1">Ação social racional</td>
+                            </tr>
+                            <tr class="border-b">
+                                <td class="py-1"><strong>Elias</strong></td>
+                                <td class="py-1">Figuração de interdependências</td>
+                                <td class="py-1">Processo histórico</td>
+                            </tr>
+                            <tr class="border-b">
+                                <td class="py-1"><strong>Bourdieu</strong></td>
+                                <td class="py-1">Habitus estrutura ação</td>
+                                <td class="py-1">Capital acumulado</td>
+                            </tr>
+                            <tr>
+                                <td class="py-1"><strong>Mills</strong></td>
+                                <td class="py-1">Conectar biografia à história</td>
+                                <td class="py-1">Imaginação sociológica</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="callout info mt-8">
+                        <p class="font-semibold mb-2">🇧🇷 Contexto Contemporâneo Brasil</p>
+                        <p class="text-gray-700 mt-3">No Brasil contemporâneo, a imaginação sociológica é crucial para compreender crises vividas como fracassos pessoais:</p>
+                        <ul class="list-disc ml-6 text-gray-700 mt-2">
+                            <li><strong>Fracasso profissional/endividamento:</strong> frequentemente vividos como falhas morais pessoais, impulsionados pela ideologia do empreendedorismo de si, mas que resultam de transformações macroeconômicas (informalidade estrutural, uberização).</li>
+                            <li><strong>Construção de identidade:</strong> sofre ingerência profunda dos algoritmos de redes sociais, uma nova e poderosa agência de socialização secundária, gerando conflitos entre autopercepção e expectativas de validação do grupo virtual.</li>
+                            <li><strong>Ansiedade entre jovens:</strong> não é apenas "problema pessoal" mas resultado de estruturas sociais que criam permanente necessidade de validação e desempenho.</li>
+                        </ul>
+                    </div>
+
+                    <div class="callout warning mt-8">
+                        <p class="font-semibold mb-2">Referências Principais</p>
+                        <ul class="list-disc ml-6 text-gray-700 mt-2 text-sm">
+                            <li>DURKHEIM, E. (1895). <em>As Regras do Método Sociológico</em>. São Paulo: Companhia das Letras, 1996.</li>
+                            <li>WEBER, M. (1922). <em>Economia e Sociedade</em>. São Paulo: Editora UNB, 1991.</li>
+                            <li>ELIAS, N. (1939). <em>O Processo Civilizador</em>. Rio de Janeiro: Zahar, 1993.</li>
+                            <li>BOURDIEU, P. (1980). <em>O Senso Prático</em>. Petrópolis: Vozes, 2009.</li>
+                            <li>MILLS, C. W. (1959). <em>A Imaginação Sociológica</em>. Rio de Janeiro: Zahar, 1975.</li>
+                        </ul>
+                    </div>
+                `
+            },
+{
+                id: "sociologia-ciencia",
+                title: "A Sociologia como Ciência",
+                emoji: "",
+                parent: "sociologia-ciencia",
+                
+                content: `
+                    <h2 class="text-3xl font-bold mb-2 text-gray-900">A Sociologia como Ciência</h2>
+                    <p class="text-gray-500 mb-6">Como estudamos sociedade de forma rigorosa quando somos parte dela?</p>
+
+                    <div class="callout critical mb-6">
+                        <p class="font-semibold mb-2">Conceito Central</p>
+                        <p><strong>A Sociologia é ciência social que busca compreender e explicar fenômenos sociais através de método científico.</strong> Mas qual é o método? O que torna algo "científico"? Essa é uma pergunta filosófica central (epistemologia).</p>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">As Matrizes Epistemológicas: O Que É Conhecimento Científico?</h3>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle4">
+                            <span>Positivismo: Augusto Comte (1830-1842)</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle4">
+                            <p class="text-gray-700 mt-4"><strong>O argumento revolucionário:</strong></p>
+                            <p class="text-gray-700 mt-2 italic">"Cada ramo do conhecimento passa sucessivamente por três estados teóricos distintos: estado teológico ou fictício; estado metafísico ou abstrato; estado científico ou positivo." (Comte, 1830)</p>
+                            <p class="text-gray-700 mt-3"><strong>Lei dos Três Estados:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li><strong>Teológico:</strong> Explicamos pelo divino (Deus criou homem assim)</li>
+                                <li><strong>Metafísico:</strong> Explicamos por essências abstratas (natureza humana é egoísta)</li>
+                                <li><strong>Positivo:</strong> Observamos regularidades e formulamos leis (em sociedades X, Y acontece com frequência Z)</li>
+                            </ul>
+                            <p class="text-gray-700 mt-3"><strong>Implicação:</strong> Sociologia é o estudo <strong>positivo</strong> da sociedade — observar regularidades, formular leis.</p>
+                            <p class="text-gray-700 mt-2 text-sm text-red-600"><strong>Crítica:</strong> Positivismo é mecanicista, trata sociedade como máquina. Não captura significado, interpretação, sentido subjetivo das ações.</p>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle5">
+                            <span>Racionalismo Crítico: Karl Popper (1934-1992)</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle5">
+                            <p class="text-gray-700 mt-4"><strong>O argumento:</strong> Uma teoria científica é aquela que pode ser <strong>falsificada</strong>.</p>
+                            <p class="text-gray-700 mt-2 italic">"A característica de uma teoria genuinamente científica não é ser verdadeira, mas ser falseável — que seja possível, pelo menos teoricamente, refutá-la." (Popper, 1959)</p>
+                            <p class="text-gray-700 mt-3"><strong>Implicações para Sociologia:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>Afirmação "a sociedade é sempre hierárquica" é científica PORQUE pode ser falsificada</li>
+                                <li>Afirmação "todos têm livre arbítrio sempre" NÃO é científica (impossível refutar)</li>
+                            </ul>
+                            <p class="text-gray-700 mt-3"><strong>Método científico popperiano:</strong></p>
+                            <ol class="list-decimal ml-6 text-gray-700 mt-2">
+                                <li>Observar fenômeno</li>
+                                <li>Formular hipótese testável</li>
+                                <li>Tentar falsificar hipótese (não provar, mas refutar)</li>
+                                <li>Se sobrevive testes rigorosos, ganha credibilidade (temporária)</li>
+                            </ol>
+                            <p class="text-gray-700 mt-3"><strong>Exemplo Brasil:</strong> Hipótese "Famílias brasileiras de baixa renda têm menos oportunidades educacionais" — é testável via comparação de taxas de escolaridade por renda.</p>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle6">
+                            <span>Paradigmas Científicos: Thomas Kuhn (1962)</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle6">
+                            <p class="text-gray-700 mt-4"><strong>O argumento:</strong> Ciência não é progresso linear. É série de <strong>revoluções</strong>.</p>
+                            <p class="text-gray-700 mt-3"><strong>O que é paradigma?</strong> Consenso compartilhado sobre:</p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>Problemas que vale a pena investigar</li>
+                                <li>Métodos aceitáveis</li>
+                                <li>Soluções "exemplares" (modelos a seguir)</li>
+                                <li>Valores científicos</li>
+                            </ul>
+                            <p class="text-gray-700 mt-3"><strong>Ciclo de mudança paradigmática:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li><strong>Ciência normal:</strong> trabalho dentro paradigma (resolver quebra-cabeças)</li>
+                                <li><strong>Anomalias:</strong> fatos que paradigma não explica bem</li>
+                                <li><strong>Crise:</strong> muitos questionam paradigma</li>
+                                <li><strong>Revolução:</strong> novo paradigma emerge</li>
+                                <li><strong>Nova normalidade:</strong> ciência normal com novo paradigma</li>
+                            </ul>
+                            <p class="text-gray-700 mt-3"><strong>Exemplos em Sociologia:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li><strong>Paradigma positivista</strong> (1870-1970): sociedade como sistema em equilíbrio, ordem é normal</li>
+                                <li><strong>Anomalias:</strong> revoluções 1968, movimentos sociais massivos, desigualdade crescente</li>
+                                <li><strong>Revolução:</strong> sociologia <strong>crítica</strong> emerge (Marx, conflito é estrutural)</li>
+                                <li><strong>Novo paradigma normal:</strong> sociedade como arena de conflito</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle7">
+                            <span>Hermenêutica e Compreensão: Wilhelm Dilthey (1883)</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle7">
+                            <p class="text-gray-700 mt-4"><strong>O argumento:</strong> Ciências humanas não funcionam como ciências naturais.</p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li><strong>Ciências Naturais:</strong> explicam por causas físicas (por que pedra cai? Gravidade)</li>
+                                <li><strong>Ciências Humanas:</strong> entendem por <strong>significado</strong> (por que pessoa respeita pais? Porque significa amor, obediência, tradição)</li>
+                            </ul>
+                            <p class="text-gray-700 mt-3"><strong>Método interpretativo:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>Não posso apenas medir comportamento externo</li>
+                                <li>Devo captar <strong>intenção, significado, vivência</strong></li>
+                                <li>Requer <strong>empatia e imaginação histórica</strong></li>
+                            </ul>
+                            <p class="text-gray-700 mt-3"><strong>Crítica:</strong> Interpretativismo pode ser muito subjetivo, difícil validar empiricamente.</p>
+                        </div>
+                    </div>
+
+                    <div class="callout success mt-8">
+                        <p class="font-semibold mb-2">✓ Abordagem Eclética Contemporânea</p>
+                        <p class="text-gray-700 mt-3">Sociologia moderna usa <strong>múltiplos métodos</strong>, conforme apropriado:</p>
+                        <ul class="list-disc ml-6 text-gray-700 mt-2">
+                            <li><strong>Positivista + quantitativo:</strong> Para regularidades e padrões (censo, survey)</li>
+                            <li><strong>Crítico-reflexivo:</strong> Para explicar estruturas e contradições (análise de classe, gênero)</li>
+                            <li><strong>Interpretativo + qualitativo:</strong> Para significado e perspectiva (entrevistas, etnografia)</li>
+                            <li><strong>Comparativo-histórico:</strong> Para mudança ao longo do tempo (análise histórica)</li>
+                        </ul>
+                    </div>
+
+                    <div class="callout info mt-8">
+                        <p class="font-semibold mb-2">🇧🇷 Contexto: O Positivismo Comtiano no Brasil</p>
+                        <p class="text-gray-700 mt-3">O lema <strong>"Ordem e Progresso"</strong>, gravado na bandeira brasileira desde a República (1889), é materialização literal do positivismo de Augusto Comte. Militares e republicanos paulistas adotaram ideologicamente o positivismo para justificar uma "modernização conservadora":</p>
+                        <ul class="list-disc ml-6 text-gray-700 mt-2">
+                            <li>Progresso econômico e tecnológico: sim</li>
+                            <li>Ruptura da ordem estamental (abolição, distribuição de terras): não</li>
+                            <li>Resultado: uma elite que se modernizava economicamente mantendo estrutura social hierárquica</li>
+                        </ul>
+                        <p class="text-gray-700 mt-3"><strong>Desafios contemporâneos:</strong> O debate sobre a demarcação da ciência retorna com força, especialmente frente aos movimentos de negacionismo científico, fake news em escala algorítmica, e à demanda por políticas públicas baseadas em evidências.</p>
+                    </div>
+
+                    <div class="callout warning mt-8">
+                        <p class="font-semibold mb-2">Referências Principais</p>
+                        <ul class="list-disc ml-6 text-gray-700 mt-2 text-sm">
+                            <li>COMTE, A. (1830-1842). <em>Curso de Filosofia Positiva</em>. São Paulo: Edições Loyola, 2000.</li>
+                            <li>POPPER, K. (1959). <em>A Lógica da Pesquisa Científica</em>. São Paulo: Cultrix, 1993.</li>
+                            <li>KUHN, T. (1962). <em>A Estrutura das Revoluções Científicas</em>. São Paulo: Perspectiva, 1998.</li>
+                            <li>DILTHEY, W. (1883). <em>Introdução às Ciências Humanas</em>. Rio de Janeiro: Forense, 1992.</li>
+                        </ul>
+                    </div>
+                `
+            },
+{
+                id: "fundadores",
+                title: "Os Fundadores da Sociologia",
+                emoji: "",
+                parent: "fundadores",
+                
+                content: `
+                    <h2 class="text-3xl font-bold mb-2 text-gray-900">Os Fundadores da Sociologia</h2>
+                    <p class="text-gray-500 mb-6">Três respostas distintas a uma crise histórica</p>
+
+                    <div class="callout critical mb-6">
+                        <p class="font-semibold mb-2">Contexto Histórico (1800-1900)</p>
+                        <p><strong>Três pensadores respondem à mesma crise:</strong> Industrialização acelerada, urbanização caótica, perda de comunidade tradicional, classe operária revolucionária, anarquismo/socialismo, crise da religião.</p>
+                        <p class="mt-2"><em>A pergunta central: Como manter ordem, moral e coesão social em mundo que estava desintegrando-se?</em></p>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">1⃣ Karl Marx (1818-1883) — Classe, Conflito, Materialismo</h3>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle6">
+                            <span>Biografia e Contexto</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle6">
+                            <p class="text-gray-700 mt-4"><strong>Formação:</strong> Jornalista, filósofo, revolucionário (exilado da Alemanha).</p>
+                            <p class="text-gray-700 mt-2"><strong>Contexto:</strong> Viveu na era do capitalismo industrial, testemunhou exploração fabril, revolucionariedade europeia.</p>
+                            <p class="text-gray-700 mt-2"><strong>Posição política:</strong> Comunista revolucionário — acreditava que sistema deveria ser derrubado, não reformado.</p>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle7">
+                            <span>Materialismo Histórico e Luta de Classes</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle7">
+                            <p class="text-gray-700 mt-4"><strong>Tese central:</strong></p>
+                            <p class="text-gray-700 mt-2 italic">"A história de todas as sociedades até agora existentes é a história de lutas de classes." (Marx & Engels, Manifesto Comunista, 1848)</p>
+                            <p class="text-gray-700 mt-3"><strong>Materialismo histórico:</strong> Não é <strong>consciência</strong> que determina vida. É <strong>base econômica</strong> que determina consciência.</p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>Modo de produção (escravismo, feudalismo, capitalismo) determina ideologia, religião, arte, família</li>
+                                <li>Exemplo: em capitalismo, até amor é "mercado de trocas"</li>
+                            </ul>
+                            <p class="text-gray-700 mt-3"><strong>Burguesia vs Proletariado:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>Burguesia = donos dos meios de produção</li>
+                                <li>Proletariado = vendedores de força de trabalho</li>
+                                <li>Conflito é <strong>inevitável</strong> e <strong>progressivo</strong> (vai piorar até revolução)</li>
+                            </ul>
+                            <p class="text-gray-700 mt-3"><strong>Mais-valia:</strong> Trabalhador produz valor (digamos 100 reais/dia) mas recebe salário (40 reais). Diferença vai para capitalista como lucro. Isso é <strong>exploração sistemática</strong>.</p>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle8">
+                            <span>Aplicação Brasil + Crítica</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle8">
+                            <p class="text-gray-700 mt-4"><strong>Exemplo Brasil:</strong> Relação entre latifundiários e trabalhadores rurais é relação de classe (grileiro vs sem-terra). Concentração de terra no Brasil materializa conflito de classe histórico.</p>
+                            <p class="text-gray-700 mt-3"><strong>Críticas:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>Marx foi muito <strong>determinista</strong>? Subestimou capacidade de capitalismo se adaptar?</li>
+                                <li>Suas previsões sobre revolução iminente <strong>não se realizaram</strong> onde esperava (foi em países atrasados, não em industriais avançados)</li>
+                                <li>Ignora aspectos não-econômicos (cultura, religião, gênero) que também estruturam sociedade</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">2⃣ Émile Durkheim (1858-1917) — Solidariedade, Integração, Ordem</h3>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle9">
+                            <span>Biografia e Contexto</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle9">
+                            <p class="text-gray-700 mt-4"><strong>Formação:</strong> Professor de sociologia, fundador de revista científica, estabeleceu sociologia na universidade francesa.</p>
+                            <p class="text-gray-700 mt-2"><strong>Contexto:</strong> Viveu na III República francesa, preocupado com estabilidade social pós-revolução.</p>
+                            <p class="text-gray-700 mt-2"><strong>Posição política:</strong> Republicano conservador — apoiava ordem, mas mudança pacífica e moral.</p>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle10">
+                            <span>Fato Social, Solidariedade e Anomia</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle10">
+                            <p class="text-gray-700 mt-4"><strong>Tese central:</strong> Sociedade é <strong>organismo vivo</strong> que requer <strong>integração</strong>. Sociologia estuda como coesão social é mantida.</p>
+                            <p class="text-gray-700 mt-3"><strong>Conceito: Fato Social</strong></p>
+                            <p class="text-gray-700 mt-2 italic">"Fato social é toda maneira de fazer, fixada ou não, capaz de exercer uma coerção exterior sobre o indivíduo." (Durkheim, 1895)</p>
+                            <p class="text-gray-700 mt-3"><strong>Tipos de solidariedade:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li><strong>Mecânica:</strong> Pessoas são iguais, fazem mesmo trabalho (agricultura, comunidades pequenas) — coesão por <strong>semelhança</strong></li>
+                                <li><strong>Orgânica:</strong> Pessoas são diferentes, especializadas (divisão do trabalho em cidades) — coesão por <strong>interdependência</strong></li>
+                            </ul>
+                            <p class="text-gray-700 mt-3"><strong>Anomia:</strong> Quando laços sociais se quebram (desemprego, migração, perda de comunidade). Durkheim provou que até <strong>suicídio</strong> é fato social — taxa varia por sociedade.</p>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle11">
+                            <span>Aplicação Brasil + Crítica</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle11">
+                            <p class="text-gray-700 mt-4"><strong>Exemplo Brasil:</strong> Brasil está em tensão entre solidariedades — ainda tem comunidades rurais e tradicionais (mecânica), mas também cidades complexas (orgânica). <strong>Anomia em metrópoles:</strong> crescimento caótico, perda de laços, taxas altas de homicídio e suicídio.</p>
+                            <p class="text-gray-700 mt-3"><strong>Críticas:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>Durkheim é <strong>conservador</strong>? Prioriza ordem demais?</li>
+                                <li>Seu conceito de "consciência coletiva" é <strong>vago</strong></li>
+                                <li><strong>Ignora poder e dominação</strong> (Marx, pelo menos, falava delas)</li>
+                                <li>Presume que integração é sempre desejável (e se serve para oprimir?)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">3⃣ Max Weber (1864-1920) — Ação Racional, Burocracia, Desencantamento</h3>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle12">
+                            <span>Biografia e Contexto</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle12">
+                            <p class="text-gray-700 mt-4"><strong>Formação:</strong> Historiador, jurista, economista — intelectual completo com vasta erudição.</p>
+                            <p class="text-gray-700 mt-2"><strong>Contexto:</strong> Viveu na Alemanha Bismarck/pós-Bismarck, testemunhou modernização acelerada, preocupado com futuro da liberdade.</p>
+                            <p class="text-gray-700 mt-2"><strong>Posição política:</strong> Nacionalista prussiano, mas preocupado com racionalização extrema e perda de significado.</p>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle13">
+                            <span>Ação Social, Autoridade, Racionalização</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle13">
+                            <p class="text-gray-700 mt-4"><strong>Conceito: Ação Social</strong></p>
+                            <p class="text-gray-700 mt-2 italic">"Aquela cujo sentido mentado pelo agente refere-se ao comportamento de outros, orientando-se por este em seu curso." (Weber, 1922)</p>
+                            <p class="text-gray-700 mt-3"><strong>Quatro tipos de ação social:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li><strong>Racional com relação a fins:</strong> Cálculo meios-fins (empresário buscando lucro)</li>
+                                <li><strong>Racional com relação a valores:</strong> Sacrifício por ideal (ativista sem ganho)</li>
+                                <li><strong>Afetiva:</strong> Emoção (abraço, raiva)</li>
+                                <li><strong>Tradicional:</strong> Repetição de costumes</li>
+                            </ul>
+                            <p class="text-gray-700 mt-3"><strong>Três tipos de autoridade legítima:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li><strong>Tradicional:</strong> Rei herda poder, monarca</li>
+                                <li><strong>Carismática:</strong> Líder tem dons pessoais extraordinários</li>
+                                <li><strong>Legal-racional:</strong> Poder por lei, não pessoa (moderno)</li>
+                            </ul>
+                            <p class="text-gray-700 mt-3"><strong>Desencantamento do mundo:</strong> Mundo pré-moderno era mágico, significativo, sagrado. Mundo moderno é desencantado — tudo é cálculo, técnica, eficiência. <strong>Perda de sentido existencial.</strong></p>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle14">
+                            <span>Aplicação Brasil + Crítica</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle14">
+                            <p class="text-gray-700 mt-4"><strong>Exemplo Brasil:</strong> Metrópoles brasileiras são altamente burocratizadas (INSS, Receita Federal, universidades). Mas também há espaços de tradição (comunidades rurais, religiões ancestrais). <strong>Tensão:</strong> Racionalização vs. desejo por significado = brecha para fundamentalismo.</p>
+                            <p class="text-gray-700 mt-3"><strong>Críticas:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>Weber é muito <strong>pessimista</strong>? Racionalidade é tão má assim?</li>
+                                <li>Sua ideia de carisma pode justificar <strong>autoritarismo</strong></li>
+                                <li>E quanto ao <strong>poder de classe</strong> (Marx)?</li>
+                                <li><strong>Eurocentrismo</strong> — "racionalização" é fenômeno ocidental?</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="callout success mt-8">
+                        <p class="font-semibold mb-2">✓ Síntese Comparativa: Os Três Paradigmas</p>
+                        <table class="w-full text-sm text-gray-700 mt-3">
+                            <tr class="border-b font-bold">
+                                <td class="py-2">Aspecto</td>
+                                <td class="py-2">Marx</td>
+                                <td class="py-2">Durkheim</td>
+                                <td class="py-2">Weber</td>
+                            </tr>
+                            <tr class="border-b">
+                                <td class="py-2"><strong>Problema</strong></td>
+                                <td>Exploração</td>
+                                <td>Desintegração</td>
+                                <td>Perda de sentido</td>
+                            </tr>
+                            <tr class="border-b">
+                                <td class="py-2"><strong>Mecanismo</strong></td>
+                                <td>Conflito de classe</td>
+                                <td>Solidariedade</td>
+                                <td>Ação significativa</td>
+                            </tr>
+                            <tr class="border-b">
+                                <td class="py-2"><strong>Futuro</strong></td>
+                                <td>Revolução comunista</td>
+                                <td>Educação moral renovada</td>
+                                <td>Gaiola de ferro / Carisma</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2"><strong>Foco</strong></td>
+                                <td>Economia</td>
+                                <td>Sociedade</td>
+                                <td>Significado</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="callout info mt-8">
+                        <p class="font-semibold mb-2">🇧🇷 Aplicação Contemporânea: Precariado Brasileiro e App-Delivery</p>
+                        <p class="text-gray-700 mt-3">A crise de desemprego e precarização no Brasil atual ilustra as três perspectivas clássicas:</p>
+                        <ul class="list-disc ml-6 text-gray-700 mt-2">
+                            <li><strong>Durkheimiana:</strong> Falta de regulação das plataformas de app gera anomia profunda, esgarçando solidariedade orgânica. Entregadores se sentem atomizados, sem comunidade.</li>
+                            <li><strong>Marxista:</strong> Entregadores formam "exército industrial de reserva" — mão de obra excedente cuja exploração máxima (hiper-exploração) extrai mais-valia relativa para corporações financeiras.</li>
+                            <li><strong>Weberiana:</strong> Foco no sentido subjetivo — entregadores buscam "autonomia" e "empreendedorismo", voluntariamente inserindo-se em arranjo racional-instrumental que os precariza.</li>
+                        </ul>
+                    </div>
+
+                    <div class="callout warning mt-8">
+                        <p class="font-semibold mb-2">Referências Principais</p>
+                        <ul class="list-disc ml-6 text-gray-700 mt-2 text-sm">
+                            <li>MARX, K. & ENGELS, F. (1848). <em>Manifesto Comunista</em>. São Paulo: Boitempo, 1998.</li>
+                            <li>MARX, K. (1867). <em>O Capital, Livro I</em>. São Paulo: Boitempo, 2013.</li>
+                            <li>DURKHEIM, E. (1895). <em>As Regras do Método Sociológico</em>. São Paulo: Companhia das Letras, 1996.</li>
+                            <li>DURKHEIM, E. (1893). <em>Da Divisão do Trabalho Social</em>. São Paulo: Martins Fontes, 1995.</li>
+                            <li>WEBER, M. (1922). <em>Economia e Sociedade</em>. São Paulo: Editora UNB, 1991.</li>
+                            <li>WEBER, M. (1905). <em>A Ética Protestante e o Espírito do Capitalismo</em>. São Paulo: Companhia das Letras, 1987.</li>
+                        </ul>
+                    </div>
+                `
+            },
+{
+                id: "cultura-sociedade",
+                title: "Cultura e Sociedade",
+                emoji: "",
+                parent: "cultura-soc",
+                
+                content: `
+                    <h2 class="text-3xl font-bold mb-2 text-gray-900">Cultura e Sociedade</h2>
+                    <p class="text-gray-500 mb-6">Conjunto de significados compartilhados que estruturam toda vida social</p>
+
+                    <div class="callout critical mb-6">
+                        <p class="font-semibold mb-2">Conceito Central</p>
+                        <p><strong>Cultura é o conjunto de significados compartilhados</strong> que um grupo usa para compreender, atribuir sentido e agir no mundo. Inclui linguagem, valores, crenças, costumes, arte, religião, conhecimento.</p>
+                        <p class="mt-2"><em>A pergunta central: Como a cultura simultaneamente une uma sociedade e a divide?</em></p>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Definições Clássicas</h3>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle9">
+                            <span>Tylor (1871) - Definição Antropológica</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle9">
+                            <p class="text-gray-700 mt-4"><strong>Definição clássica:</strong></p>
+                            <p class="text-gray-700 mt-2 italic">"Cultura é aquele complexo todo que inclui conhecimento, crença, arte, lei, moral, costume, e quaisquer outras capacidades e hábitos adquiridos pelo homem como membro da sociedade." (E. B. Tylor, 1871)</p>
+                            <p class="text-gray-700 mt-3"><strong>Implicações:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>Cultura = <strong>tudo que é aprendido</strong> (não inato biologicamente)</li>
+                                <li>Inclui tangível (ferramentas, arte) e intangível (valores, conhecimento)</li>
+                                <li>É <strong>socialmente transmitida</strong> de geração a geração</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle10">
+                            <span>Raymond Williams (1976) - Cultura como Prática Vivida</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle10">
+                            <p class="text-gray-700 mt-4"><strong>Argumento revolucionário:</strong> "Cultura é ordinária"</p>
+                            <p class="text-gray-700 mt-2">Não é apenas coisas "altas" (literatura clássica, música erudita). É <strong>modo de vida cotidiano</strong>.</p>
+                            <p class="text-gray-700 mt-3"><strong>Forma cultural de vida:</strong> Como você fala, veste, come, namora</p>
+                            <p class="text-gray-700 mt-3"><strong>Cultura de classe:</strong> Forma de vida da elite é diferente de forma de vida popular</p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>Elite apresenta sua cultura como "cultura" (capital C)</li>
+                                <li>Popular é apresentada como "folclore" ou "menos refinada"</li>
+                                <li>Isso é <strong>hierarquização cultural</strong> servindo poder</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Dimensões da Cultura</h3>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle11">
+                            <span>Valores, Crenças, Normas</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle11">
+                            <p class="text-gray-700 mt-4"><strong>Valores:</strong> Princípios abstratos sobre o que é bom, certo, importante</p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li><strong>Exemplos brasileiros:</strong> Familismo, jogo de cintura, cordialidade, hierarquia</li>
+                                <li><strong>Problema:</strong> Valores não são consenso — elite e povo podem ter valores conflitantes</li>
+                            </ul>
+                            <p class="text-gray-700 mt-3"><strong>Crenças:</strong> Convicções sobre como mundo funciona</p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>Religiosa: Deus existe, vai julgamento final</li>
+                                <li>Política: democracia é melhor que ditadura</li>
+                                <li>Científica: vacina funciona, evolução é real</li>
+                                <li><strong>Problema:</strong> Crença ≠ Fato (alguém pode acreditar em algo falso)</li>
+                            </ul>
+                            <p class="text-gray-700 mt-3"><strong>Normas:</strong> Regras sobre comportamento apropriado</p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li><strong>Formais:</strong> Lei (será preso se matar)</li>
+                                <li><strong>Informais:</strong> Costume (é mal-educado não cumprimentar)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle12">
+                            <span>Linguagem como Instituição Cultural</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle12">
+                            <p class="text-gray-700 mt-4"><strong>Dimensão simbólica da linguagem:</strong> Palavra "mãe" não é biologicamente "mãe" — é <strong>convenção que comunidade decidiu usar</strong>.</p>
+                            <p class="text-gray-700 mt-3"><strong>Hipótese Sapir-Whorf:</strong> Linguagem <strong>molda</strong> pensamento</p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>Língua inuíte tem 20 palavras para neve (foca em nuances importantes)</li>
+                                <li>Português é gendered (cadeira é feminina, livro é masculino) — isso molda percepção?</li>
+                                <li>Falta de palavras para conceitos significa dificuldade em pensar sobre eles?</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle13">
+                            <span>Rituais e Símbolos Compartilhados</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle13">
+                            <p class="text-gray-700 mt-4"><strong>Rituais:</strong> Ações que carregam significado coletivo</p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li><strong>Exemplo Brasil:</strong> Celebração de aniversário com bolo e velas (significa celebração coletiva de vida)</li>
+                                <li>Casamento: ritual que sanciona união</li>
+                            </ul>
+                            <p class="text-gray-700 mt-3"><strong>Símbolos:</strong> Objetos ou gestos que carregam significado</p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>Bandeira brasileira (significa nacionalidade, unidade)</li>
+                                <li>Cruz (cristão), Estrela de Davi (judeu), Lua e Estrela (islã)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Diversidade Cultural: Etnocentrismo vs. Relativismo</h3>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle14">
+                            <span>Etnocentrismo vs. Relativismo vs. Ética Mínima</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle14">
+                            <p class="text-gray-700 mt-4"><strong>Etnocentrismo:</strong> Sua cultura é melhor / padrão, outras são inferiores ou "primitivas"</p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li><strong>Problema histórico:</strong> Justificava colonialismo (europeus "civilizando" colônias)</li>
+                                <li>Chamava religiões africanas de "fetichismo" (inferior) vs. religiões ocidentais de "verdadeiras"</li>
+                            </ul>
+                            <p class="text-gray-700 mt-3"><strong>Relativismo cultural:</strong> Toda cultura é válida em seu próprio contexto</p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li><strong>Problema:</strong> Pode levar a tolerância de práticas opressivas (mutilação genital em nome de "respeitar cultura")</li>
+                            </ul>
+                            <p class="text-gray-700 mt-3"><strong>Posição intermediária (recomendada):</strong> Respeito pela diversidade <strong>MAS</strong> com padrões éticos mínimos universais</p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>Direitos humanos, dignidade, proibição de tortura — esses são universais</li>
+                                <li>Culturas diversas, mas com limites éticos</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Mudança Cultural: Como Culturas Evoluem</h3>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle15">
+                            <span>Mecanismos de Mudança Cultural</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle15">
+                            <p class="text-gray-700 mt-4"><strong>Difusão:</strong> Contato entre culturas, adoção de traços (ex: Brasil adota Halloween dos EUA)</p>
+                            <p class="text-gray-700 mt-3"><strong>Inovação:</strong> Criação de novos traços (ex: internet, nova gíria)</p>
+                            <p class="text-gray-700 mt-3"><strong>Seleção:</strong> Alguns traços sobrevivem, outros morrem (ex: tecnologia VHS desapareceu, streaming permanece)</p>
+                            <p class="text-gray-700 mt-3"><strong>Conflito:</strong> Mudança pode ser imposta por poder (colonialismo impôs cristianismo à força)</p>
+                            <p class="text-gray-700 mt-4"><strong>Exemplo Brasil:</strong> Cultura africana (música, dança, culinária) chegou via escravidão, foi desvalorizada, depois perseverou como samba/capoeira, viraram símbolo nacional, evoluíram para novas formas (funk)</p>
+                        </div>
+                    </div>
+
+                    <div class="callout success mt-8">
+                        <p class="font-semibold mb-2">✓ Cultura Brasileira: Características Singulares</p>
+                        <ul class="list-disc ml-6 text-gray-700 mt-2">
+                            <li><strong>Sincretismo:</strong> Mistura de tradições (indígena + africana + portuguesa + europeia)</li>
+                            <li><strong>Hierarquia e cordialidade:</strong> Aparência de igualdade, mas interior profundo respeito a hierarquia</li>
+                            <li><strong>Malandragem:</strong> Jogo de cintura e criatividade para sair de situação difícil (positivo: flexibilidade | negativo: corrupção)</li>
+                        </ul>
+                    </div>
+
+                    <div class="callout info mt-8">
+                        <p class="font-semibold mb-2">🇧🇷 Hierarquias Culturais e Políticas Reparatórias no Brasil</p>
+                        <p class="text-gray-700 mt-3">O colonialismo estruturou hierarquias estéticas duráveis que persistem no presente:</p>
+                        <ul class="list-disc ml-6 text-gray-700 mt-2">
+                            <li><strong>Marginalização:</strong> Religiões de matriz africana (Candomblé, Umbanda) sofrem perseguição e discriminação sistemáticas. Grafismos indígenas são desvalorizados frente à "arte erudita" europeia.</li>
+                            <li><strong>Políticas de reparação:</strong> Leis 10.639/2003 e 11.645/2008 tornaram obrigatório o ensino de história e cultura afro-brasileira e indígena nas escolas, como mecanismo formal de reparação de narrativa eurocêntrica hegemônica.</li>
+                            <li><strong>Relativismo cultural crítico:</strong> Reconhecer pluralismo cultural SEM cair em relativismo acrítico que defenda práticas discriminatórias contra direitos humanos fundamentais.</li>
+                        </ul>
+                    </div>
+
+                    <div class="callout warning mt-8">
+                        <p class="font-semibold mb-2">Referências Principais</p>
+                        <ul class="list-disc ml-6 text-gray-700 mt-2 text-sm">
+                            <li>TYLOR, E. B. (1871). <em>Primitive Culture</em>. Whitefish: Kessinger, 2010.</li>
+                            <li>WILLIAMS, R. (1976). <em>Palavras-chave: Um Vocabulário de Cultura e Sociedade</em>. São Paulo: Boitempo, 2007.</li>
+                            <li>GEERTZ, C. (1973). <em>A Interpretação das Culturas</em>. Rio de Janeiro: LTC, 1989.</li>
+                            <li>HOLANDA, S. B. (1936). <em>Raízes do Brasil</em>. São Paulo: Companhia das Letras, 2006.</li>
+                        </ul>
+                    </div>
+                `
+            },
+{
+                id: "populacoes-brasil",
+                title: "Populações do Brasil",
+                emoji: "",
+                parent: "populacoes-brasil",
+                
+                content: `
+                    <h2 class="text-3xl font-bold mb-2 text-gray-900">Populações do Brasil</h2>
+                    <p class="text-gray-500 mb-6">Dinâmica demográfica, distribuição espacial e composição social</p>
+
+                    <div class="callout info mb-6">
+                        <p class="font-semibold mb-2">Conceito Central: O que é População?</p>
+                        <p class="text-gray-700">População é agregado de pessoas em um território específico em um tempo específico. A demografia - estudo de população - analisa como pessoas se distribuem, nascem, morrem e se movem. A pergunta central: <em>Quem vive no Brasil? Como essa composição está mudando?</em></p>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Dados Demográficos Fundamentais (Censo 2022)</h3>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle16">
+                            <span>Indicadores Populacionais Brasileiros</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle16">
+                            <p class="text-gray-700 mt-4"><strong>População total:</strong> ~215 milhões de pessoas</p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li><strong>Taxa de natalidade:</strong> 14 nascimentos por 1.000 habitantes (em queda desde 1980s)</li>
+                                <li><strong>Taxa de mortalidade:</strong> 7 mortes por 1.000 habitantes</li>
+                                <li><strong>Esperança de vida:</strong> 76 anos (aumentou significativamente desde 1970: era ~60 anos)</li>
+                                <li><strong>Taxa de urbanização:</strong> 88% vivem em áreas urbanas</li>
+                                <li><strong>Taxa de crescimento anual:</strong> ~0,7% (em queda contínua)</li>
+                            </ul>
+                            <p class="text-gray-700 mt-4"><strong>Significado sociológico:</strong> Esses números não são apenas "dados" - refletem mudanças profundas na estrutura familiar, mercado de trabalho, pressão sobre recursos ambientais e demanda por serviços públicos.</p>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle17">
+                            <span>Transição Demográfica Brasileira</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle17">
+                            <p class="text-gray-700 mt-4"><strong>O modelo de transição demográfica tem 4 períodos:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li><strong>Período 1 (Pré-industrial):</strong> Alta natalidade + alta mortalidade = população baixa e estável</li>
+                                <li><strong>Período 2 (Modernização inicial):</strong> Natalidade alta + mortalidade caindo = explosão populacional</li>
+                                <li><strong>Período 3 (Desenvolvimento):</strong> Ambas caem gradualmente = crescimento moderado</li>
+                                <li><strong>Período 4 (Pós-industrial):</strong> Ambas baixas = crescimento zero ou até negativo</li>
+                            </ul>
+                            <p class="text-gray-700 mt-4"><strong>Onde está o Brasil?</strong> Transição de Período 2 → 3 (1960-1980: crescimento ~3% ao ano; hoje: 0,7% ao ano). <strong>Implicação futura:</strong> Brasil enfrentará envelhecimento populacional similar a Japão e Itália, com menos força de trabalho para sustentar mais idosos.</p>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Composição por Raça/Etnia (Censo 2022)</h3>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle18">
+                            <span>Diversidade Racial e Étnica</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle18">
+                            <p class="text-gray-700 mt-4"><strong>Distribuição racial (auto-identificação):</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>Pardos: 43%</li>
+                                <li>Brancos: 42%</li>
+                                <li>Pretos: 10%</li>
+                                <li>Asiáticos: 1%</li>
+                                <li>Indígenas: 1%</li>
+                            </ul>
+                            <p class="text-gray-700 mt-4"><strong>Ponto teórico crítico:</strong> Essas categorias são <strong>construções sociais, não realidades biológicas</strong>. Há enorme cruzamento genético no Brasil. A categoria "raça" é uma invenção social para organizar hierarquia e acesso a recursos. Porém, porque são socialmente reconhecidas, têm efeitos reais profundos (renda, expectativa de vida, acesso a educação).</p>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Distribuição Espacial e Urbanização</h3>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle19">
+                            <span>Concentração Urbana e Regional</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle19">
+                            <p class="text-gray-700 mt-4"><strong>Desigualdade espacial:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li><strong>Sudeste:</strong> ~45% da população brasileira (São Paulo, Rio de Janeiro, Minas Gerais concentram ~80% da riqueza)</li>
+                                <li><strong>Outras regiões:</strong> Menos populosas e menos desenvolvidas economicamente</li>
+                            </ul>
+                            <p class="text-gray-700 mt-4"><strong>Migração interna:</strong> Nordestinos e nortistas historicamente migraram para o Sudeste buscando trabalho. Esse fluxo massivo de migração cria segregação urbana (favelas, periferias), donde migrantes se aglomeram sem acesso a saneamento, educação de qualidade, saúde.</p>
+                            <p class="text-gray-700 mt-3"><strong>Conceito: Segregação urbana</strong> - divisão espacial da cidade por classe, raça e renda. É resultado de política pública (zoneamento, locação de infraestrutura) e mercado (preço de terra)</p>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Mudanças Demográficas Estruturais</h3>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle20">
+                            <span>Envelhecimento Populacional</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle20">
+                            <p class="text-gray-700 mt-4"><strong>Mudança na idade média:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>1970: idade média = 19 anos</li>
+                                <li>2022: idade média = 35 anos</li>
+                                <li>Projeção 2050: ~42 anos</li>
+                            </ul>
+                            <p class="text-gray-700 mt-4"><strong>Implicações sociais:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li><strong>Educação:</strong> Menos crianças → menos demanda por escolas, menos expansão da educação infantil</li>
+                                <li><strong>Previdência:</strong> Mais idosos → mais gasto com aposentadorias, sistema de previdência pode ficar insustentável</li>
+                                <li><strong>Família:</strong> Menos filhos por mulher → mudança no papel da mulher (pode estudar, trabalhar mais)</li>
+                                <li><strong>Saúde:</strong> Aumento de doenças crônicas (Alzheimer, câncer, pressão alta) → mudança no sistema de saúde</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle21">
+                            <span>A Revolução Urbana Brasileira</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle21">
+                            <p class="text-gray-700 mt-4"><strong>Dados de urbanização:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>1960: 45% urbano / 55% rural</li>
+                                <li>2022: 88% urbano / 12% rural</li>
+                            </ul>
+                            <p class="text-gray-700 mt-4"><strong>Consequências sociológicas desta transformação:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li><strong>Êxodo rural:</strong> "Morte" de comunidades rurais tradicionais. Idosos ficam na zona rural, jovens vão para cidades.</li>
+                                <li><strong>Expansão urbana caótica:</strong> Cidades crescem sem planejamento. Resultado: favelas, invasões, cortiços, falta de saneamento.</li>
+                                <li><strong>Impacto ambiental:</strong> Consumo massivo de água, poluição do ar, produção de lixo, desmatamento</li>
+                                <li><strong>Mudança cultural:</strong> Perda de tradições rurais (modo de vida agrícola, comunidade coesa e unida), ganho de anonimato urbano</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle22">
+                            <span>Queda de Natalidade: Por quê?</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle22">
+                            <p class="text-gray-700 mt-4"><strong>Números:</strong> Taxa de fecundidade caiu de 6.3 filhos por mulher (1970) para 1.6 (2022).</p>
+                            <p class="text-gray-700 mt-4"><strong>Causa fundamental (não é acaso, é estrutural):</strong> Expansão de educação feminina e oportunidades de trabalho.</p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li><strong>Mulher que estuda:</strong> Atrasa casamento, busca carreira, tem menos filhos</li>
+                                <li><strong>Acesso a contraceptivos:</strong> Pílula (1960s) permitiu planejamento familiar pela primeira vez</li>
+                                <li><strong>Custos de criação:</strong> Filho em cidade grande (educação privada, saúde, atividades) é muito caro</li>
+                            </ul>
+                            <p class="text-gray-700 mt-4"><strong>Impacto social potencial:</strong> Menos filhos teórico = menos dependência de mulher para trabalho doméstico/cuidado = possibilidade de mais igualdade de gênero (mas isso não é automático - depende de políticas públicas).</p>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle23">
+                            <span>Migrações Internacionais Contemporâneas</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle23">
+                            <p class="text-gray-700 mt-4"><strong>Dois movimentos simultâneos:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li><strong>Emigração brasileira:</strong> Brasileiros saem do Brasil para EUA, Europa, buscando melhor renda (muitos trabalham como domésticas na Europa, em construção nos EUA)</li>
+                                <li><strong>Imigração para Brasil:</strong> Imigrantes chegam de países mais pobres (Haiti, Venezuela, Síria, Bangladesh) buscando refúgio ou oportunidade econômica</li>
+                            </ul>
+                            <p class="text-gray-700 mt-4"><strong>Problema brasileiro:</strong> Diferença para países desenvolvidos: Brasil <strong>não tem política clara de integração de imigrantes</strong>. Resultado: xenofobia, precariedade laboral, discriminação.</p>
+                            <p class="text-gray-700 mt-3"><strong>Conceito:</strong> <em>Migração forçada</em> (refúgio) vs. <em>Migração voluntária</em> (econômica) têm raízes estruturais diferentes - uma foge de perseguição/guerra, outra foge de pobreza.</p>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Populações Tradicionais: Indígenas e Quilombolas</h3>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle24">
+                            <span>Povos Indígenas do Brasil</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle24">
+                            <p class="text-gray-700 mt-4"><strong>Números:</strong> ~1 milhão de pessoas distribuídas em 305+ etnias, falando 250+ línguas diferentes.</p>
+                            <p class="text-gray-700 mt-3"><strong>Situação atual (e histórica):</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li><strong>Vulnerabilidade socio-econômica:</strong> Renda, acesso a educação e saúde muito abaixo da média nacional</li>
+                                <li><strong>Conflitos com agronegócio:</strong> Terras indígenas são disputadas por grandes produtores de soja, gado</li>
+                                <li><strong>Terras demarcadas mas invadidas:</strong> A Constituição de 1988 reconheceu direito indígena à terra, mas demarcação é lenta e invasões continuam</li>
+                                <li><strong>Movimento de afirmação identitária:</strong> Indígenas não aceitam mais apagamento. Estão lutando por direitos, educação indígena, medicina tradicional</li>
+                            </ul>
+                            <p class="text-gray-700 mt-4"><strong>Questão teórica:</strong> Indígenas são uma <em>população subalternizada</em> - historicamente dominada, explorada, cujos conhecimentos foram negados. Sociologia estuda isso não por "pena" mas por entender dinâmicas de poder.</p>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle25">
+                            <span>Comunidades Quilombolas: Resistência e Territorialidade</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle25">
+                            <p class="text-gray-700 mt-4"><strong>O que é um quilombo?</strong> Comunidades formadas historicamente por pessoas escravizadas que fugiram da escravidão e se organizaram. Eram espaços de resistência.</p>
+                            <p class="text-gray-700 mt-4"><strong>Reconhecimento constitucional (1988):</strong> Brasil finalmente reconheceu quilombolas como sujeitos de direito. Porém, reconhecimento formal ≠ implementação real.</p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li><strong>Resistência histórica:</strong> Quilombos foram refúgios revolucionários contra escravidão (ex: Zumbi dos Palmares)</li>
+                                <li><strong>Preservação de cultura afro-brasileira:</strong> Mantêm práticas, conhecimentos, religiosidade africana/afro-brasileira</li>
+                                <li><strong>Luta por titulação de terras:</strong> Mesmo reconhecidos constitucionalmente, processo de titulação é lentíssimo</li>
+                                <li><strong>Enfrentam racismo contínuo:</strong> Marginalização, violência, falta de acesso a políticas públicas</li>
+                            </ul>
+                            <p class="text-gray-700 mt-4"><strong>Conexão teórica:</strong> Quilombolas exemplificam conceito de <em>memória histórica</em> - comunidades que mantêm memória de resistência e a transmitem gerações. Isso é uma forma de agência histórica (capacidade de agir sobre história).</p>
+                        </div>
+                    </div>
+
+                    <div class="callout info mt-8">
+                        <p class="font-semibold mb-2">Dados do Censo 2022: Populações Quilombolas</p>
+                        <p class="text-gray-700 mt-3"><strong>Realidade alarmante:</strong> A primeira metodologia rigorosa de autodeclaração étnico-quilombola (Censo 2022) revelou:</p>
+                        <ul class="list-disc ml-6 text-gray-700 mt-2">
+                            <li><strong>1.327.802 quilombolas</strong> (0,65% população nacional) em 1.696 municípios</li>
+                            <li><strong>PORÉM:</strong> Apenas 12,59% (167.769) vivem em territórios oficialmente demarcados</li>
+                            <li><strong>87,41% (1,16 milhão)</strong> encontram-se fora de áreas regularizadas pelo INCRA</li>
+                            <li><strong>32,11%</strong> estão na Amazônia Legal, zona de expansão agrícola e conflitos violentos</li>
+                        </ul>
+                        <p class="text-gray-700 mt-3">Essa vulnerabilidade fundiária é exemplo de <strong>deformação histórica</strong> — direitos constitucionais (1988) não implementados.</p>
+                    </div>
+
+                    <div class="callout info mt-6 mb-6">
+                        <p class="font-semibold mb-2">🇧🇷 Populações Brasileiras: Diversidade Mascarada por Desigualdade Estrutural</p>
+                        <p class="text-gray-700 mt-3">A composição demográfica brasileira esconde hierarquias profundas que estruturam acesso a direitos e oportunidades:</p>
+                        <ul class="list-disc ml-6 text-gray-700 mt-2">
+                            <li><strong>Diversidade racial como mito fundador desmentido por dados:</strong> Censo 2022 oficializou: 56% negros (pretos + pardos), 42% brancos. MAS essa "diversidade" coexiste com racismo estrutural: renda negra é 1/3 da branca; homicídios de negros = 2.5x a de brancos; universidades têm 3.5x mais estudantes brancos que negros proporcionalmente.</li>
+                            <li><strong>Envelhecimento populacional com precarização de idosos:</strong> Idade média sobe para 35 anos; projeção é 42 anos em 2050. Mas Brasil não investe em previdência pública — reforma de 2019 aprofundou austeridade; idosos pobres enfrentam carestia, falta de cuidado, abandono familiar.</li>
+                            <li><strong>Urbanização de 88% sem urbanismo de qualidade:</strong> Êxodo rural concentrou 100+ milhões em cidades; resultado é metropolização caótica, favelas, segregação. São Paulo/Rio/Recife/Fortaleza são cidades-laboratório de desigualdade urbana racializada.</li>
+                            <li><strong>Indígenas invisibilizados por genocídio permanente:</strong> 1 milhão (Censo 2022 — número muito subcontado); 305 etnias; mas 87% de terras "demarcadas" sofrem invasões. Garimpo, agronegócio, madeireiras avançam; homicídios de líderes indígenas crescem.</li>
+                            <li><strong>Quilombolas despossuídos apesar de direitos constitucionais:</strong> 1.3 milhão reconhecidos (2022); mas apenas 12% vivem em territórios regularizados. Resto está vulnerável a despossessão por agronegócio, especulação, violência. Direitos "no papel" não se realizam sem luta permanente.</li>
+                        </ul>
+                    </div>
+
+                    <div class="callout warning mt-8">
+                        <p class="font-semibold mb-2">Referências Principais (Formato ABNT)</p>
+                        <ul class="list-disc ml-6 text-gray-700 mt-2 text-sm">
+                            <li>IBGE. <em>Censo Demográfico 2022</em>. Rio de Janeiro: IBGE, 2023.</li>
+                            <li>SANTOS, M. <em>A Urbanização Brasileira</em>. São Paulo: Hucitec, 1993.</li>
+                            <li>RIBEIRO, D. <em>O Povo Brasileiro: a formação e o sentido do Brasil</em>. São Paulo: Companhia das Letras, 1995.</li>
+                            <li>CALDEIRA, T. P. R. <em>Cidade de Muros: crime, segregação e cidadania em São Paulo</em>. São Paulo: Editora 34, 2000.</li>
+                            <li>BRASIL. Constituição da República Federativa do Brasil (1988). Brasília: Senado Federal, 1988.</li>
+                        </ul>
+                    </div>
+                `
+            },
+{
+                id: "sociedade-brasileira",
+                title: "A Sociedade Brasileira",
+                emoji: "🇧🇷",
+                parent: "soc-brasileira",
+                
+                content: `
+                    <h2 class="text-3xl font-bold mb-2 text-gray-900">A Sociedade Brasileira</h2>
+                    <p class="text-gray-500 mb-6">Formação histórica, herança colonial e desigualdade estrutural</p>
+
+                    <div class="callout info mb-6">
+                        <p class="font-semibold mb-2">Conceito Central: Formação Singular</p>
+                        <p class="text-gray-700">Sociedade brasileira é uma <strong>formação específica</strong> com herança colonial, escravidão, desenvolvimentismo tardio, democracia recente. É mistura de <strong>modernidade com tradição</strong>, igualdade formal com desigualdade real.</p>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Características Estruturantes Brasileiras</h3>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle26">
+                            <span>Herança Colonial Persistente</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle26">
+                            <p class="text-gray-700 mt-4"><strong>Cronologia:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li><strong>1500-1822:</strong> Brasil foi colônia portuguesa</li>
+                                <li><strong>1500-1888:</strong> Escravidão foi base econômica (388 anos!)</li>
+                                <li><strong>1822-1889:</strong> Independência, mas permanece monarquia. Elite colonial conserva poder</li>
+                                <li><strong>1888:</strong> Abolição tardia (últimas Américas). <strong>Diferença crítica:</strong> diferente dos EUA (1865), Brasil aboliu sem reforma agrária. Escravos viraram população excluída, sem terra, sem capital, sem acesso</li>
+                            </ul>
+                            <p class="text-gray-700 mt-4"><strong>Consequência estrutural:</strong> Desigualdade racial brasileira não vem de "preconceito individual" ou "diversidade", mas de estrutura histórica de exclusão. Pessoa preta em Brasil herdou escravidão; pessoa branca herdou propriedade.</p>
+                            <p class="text-gray-700 mt-3"><strong>Dados contemporâneos disso:</strong> Renda média branca é ~70% maior que preta. Taxa de homicídio de preto é 2.5x maior. Acesso a educação superior: 35% de brancos vs. 20% de pretos.</p>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle27">
+                            <span>Cordialidade Hierárquica (Sérgio Buarque de Holanda, 1936)</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle27">
+                            <p class="text-gray-700 mt-4"><strong>Conceito de Raízes do Brasil:</strong> Brasileiro é "cordial" nas relações pessoais (não confronta diretamente, é simpático) MAS isso convive com profunda <strong>hierarquia social</strong> (não questiona patrão, chefe, autoridade).</p>
+                            <p class="text-gray-700 mt-3"><strong>Essa combinação única facilita:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li><strong>Manipulação e paternalismo:</strong> Chefe trata empregado com "jeito" (cordialidade) mas mantém relação desigual (hierarquia). Empregado não reclama porque tem medo de perder emprego</li>
+                                <li><strong>Perpetuação de desigualdade sem ódio aparente:</strong> Sistemas opressivos parecem "normais" e "cordiais"</li>
+                                <li><strong>Corrupção institucionalizada:</strong> Trocas de favor entre "amigos" (nepotismo, clientelismo) são vistas como relações pessoais, não como corrupção</li>
+                                <li><strong>Dificuldade com institucionalismo:</strong> Preferência por relações pessoais sobre regras formais (leis, procedimentos)</li>
+                            </ul>
+                            <p class="text-gray-700 mt-4"><strong>Crítica teórica:</strong> Holanda é brilhante diagnóstico, mas pode ser usado para essencializar Brasil ("brasileiros são assim naturalmente"). Na verdade, cordialidade hierárquica é <strong>produto histórico</strong> de colonialismo, escravidão, patrimonialismo - não é "natureza brasileira".</p>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle28">
+                            <span>Dependência Econômica Crônica</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle28">
+                            <p class="text-gray-700 mt-4"><strong>Padrão histórico de dependência:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li><strong>Colônia (1500-1822):</strong> Exportava açúcar/ouro, era dependente de metrópole portuguesa para industrializados</li>
+                                <li><strong>Império e República Velha (1822-1930):</strong> Exportava café, dependente de mercado internacional (quando café cai, economia cai)</li>
+                                <li><strong>Desenvolvimentismo (1930-1980):</strong> Getulio e depois Juscelino buscavam autonomia via industrialização. Período de otimismo, criação de Brasília, indústria automóvel</li>
+                                <li><strong>Hoje (1980-presente):</strong> Ainda dependente de capital estrangeiro, tecnologia importada, exportação de commodities (soja, minério)</li>
+                            </ul>
+                            <p class="text-gray-700 mt-4"><strong>Resultado estrutural:</strong> Brasil nunca alcançou verdadeira autonomia econômica. Economia é <strong>vulnerável a ciclos internacionais</strong> (preço de soja sobe/desce, taxa de câmbio muda, investimento estrangeiro flui/foge).</p>
+                            <p class="text-gray-700 mt-3"><strong>Conceito: Teoria da Dependência</strong> (anos 1960-70, Frank, Cardoso): economia global é hierarquizada entre centros (desenvolvidos) e periferias (subdesenvolvidas). Brasil é periferia que exporta recursos brutos e importa industrializados. Isso bloqueia desenvolvimento endógeno.</p>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle29">
+                            <span>Democracia Recente e Instituições Frágeis</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle29">
+                            <p class="text-gray-700 mt-4"><strong>Histórico político:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li><strong>1889-1930:</strong> República Velha (oligarquias dominam)</li>
+                                <li><strong>1930-1945:</strong> Era Vargas (ditadura benevolente, mas ditadura)</li>
+                                <li><strong>1945-1964:</strong> Democracia populista (Getúlio suicida, JK otimista, Jango ameaçador)</li>
+                                <li><strong>1964-1985:</strong> Ditadura Militar (21 anos de repressão, censura, tortura, desaparecimentos)</li>
+                                <li><strong>1985-presente:</strong> Redemocratização gradual (eleição indireta 1985, Constituição 1988, eleições diretas 1989)</li>
+                            </ul>
+                            <p class="text-gray-700 mt-4"><strong>Situação contemporânea:</strong> Democracia tem apenas ~40 anos. Instituições ainda são fracas e funcionam via cordialidade hierárquica (não via regra de lei).</p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li><strong>Poder executivo forte:</strong> Presidente governa mais por decreto que por lei</li>
+                                <li><strong>Poder legislativo fragmentado:</strong> Muitos partidos, pouca coesão ideológica</li>
+                                <li><strong>Corrupção institucional:</strong> Parlamentares se auto-beneficiam, mensalão, lava jato</li>
+                                <li><strong>Justiça politizada:</strong> Juízes não são imparciais (vide caso Lula/Moro)</li>
+                            </ul>
+                            <p class="text-gray-700 mt-4"><strong>Risco:</strong> Risco de golpe, autoritarismo, populismo. Democracia não está consolidada.</p>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Desigualdade Estrutural Multidimensional</h3>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle30">
+                            <span>Desigualdade de Renda</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle30">
+                            <p class="text-gray-700 mt-4"><strong>Dados:</strong> Top 1% da população ganha tanto quanto bottom 50%. Coeficiente de Gini do Brasil é 0.53 (muito alto; 0 = igualdade perfeita, 1 = máxima desigualdade).</p>
+                            <p class="text-gray-700 mt-3"><strong>Implicação:</strong> Não é apenas "alguns ricos e muitos pobres". É <strong>abismo estrutural</strong>. Mobilidade social é difícil (filho de pobre tende a ser pobre).</p>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle31">
+                            <span>Desigualdade Racial</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle31">
+                            <p class="text-gray-700 mt-4"><strong>Dados concretos:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li><strong>Renda:</strong> Pessoa branca ganha ~70% mais que pessoa preta no mesmo trabalho</li>
+                                <li><strong>Homicídios:</strong> Pessoa preta é 2.5x mais provável de ser morta (taxa de homicídio para pretos é ~40 por 100k; para brancos é ~15 por 100k)</li>
+                                <li><strong>Educação superior:</strong> 35% de brancos alcançam educação superior; 20% de pretos</li>
+                                <li><strong>Desemprego:</strong> Taxa de desemprego de pretos é 2x maior</li>
+                            </ul>
+                            <p class="text-gray-700 mt-4"><strong>Causa estrutural:</strong> Não é "preconceito individual" ou "falta de mérito". É resultado direto de escravidão (388 anos de roubo de trabalho) + 134 anos sem reparação (1888-2022).</p>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle32">
+                            <span>Desigualdade de Gênero</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle32">
+                            <p class="text-gray-700 mt-4"><strong>Dados:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li><strong>Salário:</strong> Mulher ganha 20% menos que homem no mesmo trabalho</li>
+                                <li><strong>Trabalho doméstico:</strong> Mulher faz 2x mais trabalho doméstico/cuidado (não remunerado)</li>
+                                <li><strong>Violência:</strong> 1 mulher é assassinada a cada 10 horas no Brasil</li>
+                                <li><strong>Política:</strong> Mulheres ocupam apenas 15% das cadeiras no Congresso</li>
+                            </ul>
+                            <p class="text-gray-700 mt-3"><strong>Sistema de gênero:</strong> Não é apenas "diferença", é hierarquia. Homem tem poder sobre mulher - econômico (salário), doméstico (trabalho não-pago), sexual (violência).</p>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle33">
+                            <span>Desigualdade Regional</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle33">
+                            <p class="text-gray-700 mt-4"><strong>Disparidade norte-sul:</strong> Nordeste e Norte têm renda ~40% menor que Sudeste. Educação é mais baixa em regiões pobres.</p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li><strong>PIB per capita Sudeste:</strong> ~R$ 45.000 (est.)</li>
+                                <li><strong>PIB per capita Nordeste:</strong> ~R$ 18.000 (est.)</li>
+                            </ul>
+                            <p class="text-gray-700 mt-4"><strong>Causa histórica:</strong> Concentração de investimento e infraestrutura no Sudeste desde colonialismo (café era plantado lá). Hoje mercado de trabalho, universidades, tecnologia estão no Sudeste.</p>
+                        </div>
+                    </div>
+
+                    <div class="callout info mt-8">
+                        <p class="font-semibold mb-2">🇧🇷 Estruturas Duráveis da Sociedade Brasileira</p>
+                        <p class="text-gray-700 mt-3">A interpretação macrossociológica brasileira revelou duas estruturas persistentes:</p>
+                        <ul class="list-disc ml-6 text-gray-700 mt-2">
+                            <li><strong>"Homem Cordial" (Buarque, 1936):</strong> Brasileiros governados por laços afetivos e personalismo familiar, incapazes de impessoalidade burocrática. Hoje materializa-se em patrimonialismo estatal: aparelhamento de órgãos, fisiologismo no Congresso, nepotismo.</li>
+                            <li><strong>Dependência econômica (Cardoso & Faletto):</strong> Brasil não é apenas "atrasado" mas estruturalmente dependente. Elites aliam-se ao capital do Norte, perpetuando subalternidade. Desindustrialização atual + predominância de agronegócio/mineração confirmam histórico de economia exportadora.</li>
+                            <li><strong>Segregação racial velada (Florestan):</strong> Ordem social preservou segregação racial após abolição (1888), desmistificando o "otimismo" freyriano sobre mestiçagem harmônica.</li>
+                        </ul>
+                    </div>
+
+                    <div class="callout warning mt-8">
+                        <p class="font-semibold mb-2">Referências Principais (Formato ABNT)</p>
+                        <ul class="list-disc ml-6 text-gray-700 mt-2 text-sm">
+                            <li>HOLANDA, S. B. <em>Raízes do Brasil</em>. São Paulo: Companhia das Letras, 2006 [1936].</li>
+                            <li>RIBEIRO, D. <em>O Povo Brasileiro: a formação e o sentido do Brasil</em>. São Paulo: Companhia das Letras, 1995.</li>
+                            <li>FERNANDES, F. <em>A Revolução Burguesa no Brasil</em>. Rio de Janeiro: Zahar, 1975.</li>
+                            <li>PRADO JR., C. <em>Formação do Brasil Contemporâneo</em>. São Paulo: Brasiliense, 1942.</li>
+                            <li>BRASIL. Constituição da República Federativa do Brasil (1988). Brasília: Senado Federal, 1988.</li>
+                        </ul>
+                    </div>
+                `
+            },
+{
+                id: "diversidade-cultural-brasil",
+                title: "Diversidade Cultural no Brasil",
+                emoji: "",
+                parent: "diversidade-brasil",
+                
+                content: `
+                    <h2 class="text-3xl font-bold mb-2 text-gray-900">Diversidade Cultural no Brasil</h2>
+                    <p class="text-gray-500 mb-6">Múltiplas formas de vida, valores e práticas em coexistência</p>
+
+                    <div class="callout info mb-6">
+                        <p class="font-semibold mb-2">Conceito Central: O que é Diversidade Cultural?</p>
+                        <p class="text-gray-700">Diversidade cultural refere-se à <strong>coexistência de múltiplas formas de vida, valores, linguagens, práticas dentro de um território</strong>. Brasil é um dos países mais culturalmente diversos do mundo. MAS atenção: diversidade não é harmonia. Há <strong>hierarquia</strong> - algumas culturas têm mais poder/prestígio que outras.</p>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Dimensões de Diversidade Cultural</h3>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle34">
+                            <span>Diversidade Étnica e Racial</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle34">
+                            <p class="text-gray-700 mt-4"><strong>Composição étnica brasileira (Censo 2022):</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li><strong>Indígenas:</strong> ~1 milhão (305+ povos, 250+ línguas). Historicamente discriminados e marginalizados em seus territórios</li>
+                                <li><strong>Afro-descendentes:</strong> ~130 milhões de pessoas (aproximadamente 61% da população). Trazidos na escravidão (1500-1888), depois libertos sem terra/capital. Criaram culturas sincrética (Candomblé, Samba, Capoeira, culinária)</li>
+                                <li><strong>Europeus:</strong> Principalmente portugueses, italianos, alemães. Tiveram privilégio de ser "normativo" - sua cultura é vista como "brasileira padrão"</li>
+                                <li><strong>Asiáticos:</strong> Japoneses, chineses, vietnamitas. Comunidades menores (1-2%) mas frequentemente bem-sucedidas economicamente</li>
+                            </ul>
+                            <p class="text-gray-700 mt-4"><strong>Problema estrutural:</strong> Essa diversidade étnica é <strong>hierarquizada</strong>. Ser branco/europeu tem mais prestígio social que ser preto/indígena/asiático. Isso afeta acesso a empregos, moradia, educação, justiça.</p>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle35">
+                            <span>Diversidade Religiosa em Transformação</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle35">
+                            <p class="text-gray-700 mt-4"><strong>Censo 2022 - Distribuição Religiosa:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>Católicos: 65% (em queda acentuada desde 1980s, quando era 89%)</li>
+                                <li>Evangélicos: 29% (crescimento explosivo desde 1990s)</li>
+                                <li>Sem religião: 2% (crescente)</li>
+                                <li>Espíritas, Candomblé, Budismo, Islã: <1% cada</li>
+                            </ul>
+                            <p class="text-gray-700 mt-4"><strong>Mudança estrutural:</strong> Brasil deixa de ser "católico por padrão" (como era desde colonialismo). Está se tornando plural e secularizado.</p>
+                            <p class="text-gray-700 mt-3"><strong>Tensões religiosas contemporâneas:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>Evangélicos fundamentalistas veem Candomblé/Espiritismo como "demoníaco" ou "obra do diabo"</li>
+                                <li>Ataques físicos a terreiros crescem (documentados por IPEA)</li>
+                                <li>Disputa por "alma" e influência cultural brasileira</li>
+                                <li>Espaço público: ensino religioso em escolas favorece católicos/evangélicos, marginaliza afro-brasileiros</li>
+                            </ul>
+                            <p class="text-gray-700 mt-3"><strong>Conceito: Intolerância religiosa</strong> - não é apenas "opinião diferente", é exercício de poder que nega legitimidade a certas tradições</p>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle36">
+                            <span>Diversidade Regional: Um Brasil Múltiplo</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle36">
+                            <p class="text-gray-700 mt-4"><strong>Cada região tem características culturais próprias:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li><strong>Nordeste:</strong> Cultura de seca/escassez, história forte de escravidão, tradições indígenas e africanas preservadas. Música: forró, coco, festa de São João. Imaginário: poesia, cordel, retirantes. Autoidentidade forte.</li>
+                                <li><strong>Sudeste:</strong> Urbanização acelerada, centro econômico-financeiro. Mais moderno/secular/cosmopolita. Imigração europeia (italianos, portugueses). Imaginário: progresso, trabalho, modernidade.</li>
+                                <li><strong>Sul:</strong> Herança portuguesa, espanhola, germânica/italiana. Clima temperado (não tropical). Mais "europeu" culturalmente. Gauchismo (tradição de cavalaria). Produto: churrasco, vinho.</li>
+                                <li><strong>Norte:</strong> Amazônia, floresta, biodiversidade. Populações indígenas. Isolamento relativo historicamente. Extrativismo (borracha, açaí). Imaginário: natureza, misticismo.</li>
+                                <li><strong>Centro-Oeste:</strong> Fronteira de expansão. Histórico de conflito com indígenas. Agronegócio intensivo. Imaginário: desbravamento, desenvolvimento.</li>
+                            </ul>
+                            <p class="text-gray-700 mt-4"><strong>Resultado sociológico:</strong> Ser nordestino = experiência de classe, identidade, linguagem, valores DIFERENTES de ser carioca ou sulista. Mas há hierarquia: Sudeste é "normal" Brasil; Nordeste é "exótico" ou "atrasado".</p>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle37">
+                            <span>Diversidade de Classe: Culturas de Classe</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle37">
+                            <p class="text-gray-700 mt-4"><strong>Diversidade de classe não é apenas renda:</strong> É estilo de vida, valores, visão de mundo, padrões de consumo, linguagem, expectativas de futuro.</p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li><strong>Elite urbana:</strong> Educação internacional, consumo de "alta cultura" (arte moderna, cinema europeu, opera, literatura). Móvel (pode morar em qualquer lugar). Capital cultural alto.</li>
+                                <li><strong>Classe média:</strong> Trabalho de escritório/profissional. Educação formal (universidade). Aspiração por status e mobilidade social. Consumo de bens de consumo modernos.</li>
+                                <li><strong>Classe trabalhadora urbana:</strong> Trabalho manual/serviços. Educação média. Mais enraizado territorialmente (favela, bairro). Luta diária por sobrevivência.</li>
+                                <li><strong>Pobreza rural:</strong> Trabalho agrícola ou extrativismo. Pouca educação formal. Isolamento. Maior dependência de recursos naturais.</li>
+                            </ul>
+                            <p class="text-gray-700 mt-4"><strong>Conceito: Capital Cultural (Bourdieu)</strong> - cada classe herda não apenas dinheiro, mas conhecimentos, gostos, modos de falar, credenciais que facilitam acesso a recursos. Filho de professor fala bem português, conhece museus, tem confiança em escolas - isso é capital cultural herdado.</p>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle38">
+                            <span>Diversidade Geracional: Diferentes Mundos</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle38">
+                            <p class="text-gray-700 mt-4"><strong>Diferentes gerações têm visões de mundo distintas porque viveram contextos históricos diferentes:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li><strong>Geração Silenciosa (1928-1945):</strong> Viveu Segunda Guerra Mundial, escassez. Valores: poupança, dever, disciplina, autoridade.</li>
+                                <li><strong>Baby Boomers (1946-1964):</strong> Viveu "Milagre Econômico" brasileiro (1960-70s). Otimismo, expansão, desenvolvimento. Valores: progresso, futuro brilhante.</li>
+                                <li><strong>Gen X (1965-1980):</strong> Viveu ditadura militar (1964-85) e redemocratização. Desconfiança de autoridade, ceticismo. Valores: liberdade, questionamento.</li>
+                                <li><strong>Millennials (1981-1996):</strong> Viveu internet, globalização, redemocratização. Conectados, multitarefas, esperançosos. Valores: inclusão, autenticidade, experiência.</li>
+                                <li><strong>Gen Z (1997-2012):</strong> Nativos digitais, redes sociais desde infância. Progressistas, engajados em causas sociais. Valores: justiça social, sustentabilidade, representatividade.</li>
+                            </ul>
+                            <p class="text-gray-700 mt-4"><strong>Consequência:</strong> Avó, mãe e neta vivem no "mesmo Brasil" mas em mundos culturais diferentes. Isso gera conflito (geracionalmente) mas também aprendizado mútuo.</p>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">A Questão Crítica: Hierarquia Dentro da Diversidade</h3>
+
+                    <div class="callout critical mt-6">
+                        <p class="font-semibold mb-2">Diversidade não é Harmonia!</p>
+                        <p class="text-gray-700">Diversidade é bonita em teoria (múltiplas culturas, respeito mútuo). Mas em prática há <strong>hierarquia</strong>: algumas culturas têm mais poder, legitimidade, recursos que outras.</p>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle39">
+                            <span>Hierarquia Cultural Brasileira</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle39">
+                            <p class="text-gray-700 mt-4"><strong>Padrão hierárquico invisível:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>Cultura branca/europeia é vista como "civilizada", "culta", "normal"</li>
+                                <li>Cultura negra/indígena/asiática é vista como "exótica", "folclórica", "primitiva", "diferente"</li>
+                                <li>Religiões cristãs (católicas, evangélicas) têm prestígio institucional</li>
+                                <li>Religiões afro-brasileiras (Candomblé, Orixás) são discriminadas ("superstição", "coisa de preto")</li>
+                                <li>Linguagem de elite/classe média é "português correto"; gírias populares são "erradas"</li>
+                                <li>Música de elite (clássica, jazz) é "arte"; funk carioca é "barulho" ou "coisa de favela"</li>
+                            </ul>
+                            <p class="text-gray-700 mt-4"><strong>Mecanismo invisível de poder:</strong> Quem controla instituições (escolas, museus, mídia, governo) decide o que é "legítimo" ou "digno" de respeito.</p>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle40">
+                            <span>Candomblé como Caso Exemplar de Discriminação Religiosa</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle40">
+                            <p class="text-gray-700 mt-4"><strong>O que é Candomblé?</strong> Religião com profundo sistema de crenças, mitologia, ética, prática ritual. Síntese de tradições iorubá/bantu com catolicismo. Tem sacerdotes treinados, hierarquia, comunidade.</p>
+                            <p class="text-gray-700 mt-3"><strong>Situação atual:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>É religião legítima com centenas de anos no Brasil</li>
+                                <li>MAS frequentemente é discriminada: chamada de "superstição", "coisa de preto", "inferior"</li>
+                                <li>Terreiros (templos) sofrem ataques de grupos evangélicos fundamentalistas</li>
+                                <li>Professores em escolas podem discriminar alunos que praticam Candomblé</li>
+                                <li>Em espaço público, ensino religioso escolar favorece católicos/evangélicos, não Candomblé</li>
+                            </ul>
+                            <p class="text-gray-700 mt-4"><strong>Análise sociológica:</strong> Candomblé é discriminado não por razões intrínsecas (ser "falso" ou "errado"), mas porque está associado a população negra/pobre e porque não tem poder institucional para se defender.</p>
+                        </div>
+                    </div>
+
+                    <div class="callout info mt-8">
+                        <p class="font-semibold mb-2">🇧🇷 O Mito da "Democracia Racial" e a Antropofagia Cultural</p>
+                        <p class="text-gray-700 mt-3">O paradigma da "democracia racial" funcionou por décadas como <strong>grande véu ideológico</strong> que interditava debate público sobre segregação racial institucional. Frequentemente invocado hoje para:</p>
+                        <ul class="list-disc ml-6 text-gray-700 mt-2">
+                            <li>Invalidar políticas de cotas raciais</li>
+                            <li>Argumentar que exclusão é "puramente classista"</li>
+                            <li>Negar racismo estrutural patente em indicadores sociais</li>
+                        </ul>
+                        <p class="text-gray-700 mt-3"><strong>Antropofagia cultural (Oswald, 1922):</strong> Resposta brasileira que não rejeita cultura hegemônica europeia, mas a "deglute, digere e reartícula" mesclada com raízes indígenas e africanas, criando hibridismo autêntico. Sobrevive em música popular contemporânea (funk carioca, manguebeat, sertanejo).</p>
+                    </div>
+
+                    <div class="callout warning mt-8">
+                        <p class="font-semibold mb-2">Referências Principais (Formato ABNT)</p>
+                        <ul class="list-disc ml-6 text-gray-700 mt-2 text-sm">
+                            <li>FERNANDES, F. <em>A Integração do Negro na Sociedade de Classes</em>. São Paulo: Dominus, 1965.</li>
+                            <li>HASENBALG, C. <em>Discriminação e Desigualdades Raciais no Brasil</em>. Rio de Janeiro: Graal, 1979.</li>
+                            <li>DAMATTA, R. <em>O que faz o Brasil, Brasil?</em> Rio de Janeiro: Rocco, 1986.</li>
+                            <li>BOURDIEU, P. <em>A Distinção: crítica social do julgamento</em>. São Paulo: Zouk, 2007.</li>
+                        </ul>
+                    </div>
+                `
+            },
+{
+                id: "cultura-arte-comunicacao",
+                title: "Cultura, Arte e Comunicação",
+                emoji: "",
+                parent: "cultura-arte-com",
+                
+                content: `
+                    <h2 class="text-3xl font-bold mb-2 text-gray-900">Cultura, Arte e Comunicação</h2>
+                    <p class="text-gray-500 mb-6">Compreender como a arte, a cultura e os meios de comunicação moldam a vida social</p>
+
+                    <div class="callout info mb-6">
+                        <p class="font-semibold mb-2">Conceito Central</p>
+                        <p><strong>Cultura</strong> é o conjunto de práticas, valores e produções simbólicas de um grupo. A <strong>arte</strong> é uma das formas privilegiadas de expressão cultural. Os <strong>meios de comunicação</strong> difundem cultura e constroem visões de mundo — podendo tanto diversificar quanto homogeneizar.</p>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Arte como Fato Social</h3>
+                    <p class="mb-4 text-gray-700">Para a Sociologia, a arte não é produção individual isolada — ela emerge de relações sociais, exprime tensões de classe, gênero e etnia, e é atravessada por mercados e instituições.</p>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle1">
+                            <span>Arte e Sociedade: perspectivas sociológicas</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle1">
+                            <p class="text-gray-700 mt-4"><strong>Durkheim:</strong> a arte tem função integradora — rituais, festas e obras de arte reforçam laços coletivos e identidade de grupo.</p>
+                            <p class="text-gray-700 mt-3"><strong>Marx e Engels:</strong> a arte é superestrutura — reflete a infraestrutura econômica. As ideias dominantes são as ideias da classe dominante. A arte pode ser instrumento de dominação <em>ou</em> de resistência.</p>
+                            <p class="text-gray-700 mt-3"><strong>Bourdieu (1979):</strong> em <em>A Distinção</em>, mostra que os gostos artísticos não são naturais: são aprendidos e marcam posição de classe. O <strong>capital cultural</strong> (acesso à arte "legítima") distingue frações da classe dominante.</p>
+                            <p class="text-gray-700 mt-3"><strong>Benjamin (1936):</strong> em <em>A Obra de Arte na Era de sua Reprodutibilidade Técnica</em>, analisa como a reprodução técnica (fotografia, cinema) destrói a "aura" original da obra — e pode democratizar o acesso à cultura.</p>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Escola de Frankfurt e Indústria Cultural</h3>
+                    <p class="mb-4 text-gray-700">A Escola de Frankfurt (Instituto de Pesquisa Social, fundado em 1923) desenvolveu a <strong>Teoria Crítica</strong>: análise do capitalismo moderno e seus efeitos culturais.</p>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle2">
+                            <span>Adorno e Horkheimer: Indústria Cultural</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle2">
+                            <p class="text-gray-700 mt-4">Em <em>Dialética do Esclarecimento</em> (1944), Adorno e Horkheimer cunharam o conceito de <strong>indústria cultural</strong>: a transformação da cultura em mercadoria padronizada, produzida em escala industrial.</p>
+                            <p class="text-gray-700 mt-3"><strong>Características da indústria cultural:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li><strong>Padronização:</strong> produtos culturais (música, cinema, rádio) seguem fórmulas previsíveis que não exigem reflexão</li>
+                                <li><strong>Pseudoindividualização:</strong> diferenças superficiais mascaram homogeneidade</li>
+                                <li><strong>Regressão da audição:</strong> o ouvinte perde capacidade de escuta ativa e crítica</li>
+                                <li><strong>Ideologia:</strong> entretém e distrai, impedindo consciência crítica</li>
+                            </ul>
+                            <p class="text-gray-700 mt-3"><strong>Crítica contemporânea:</strong> alguns autores acusam Adorno de elitismo — ao valorizar a "alta cultura" europeia e desprezar o jazz, o rádio popular e o cinema de massa.</p>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle3">
+                            <span>Marcuse: Homem Unidimensional e arte como resistência</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle3">
+                            <p class="text-gray-700 mt-4">Herbert Marcuse (1964) em <em>O Homem Unidimensional</em> argumenta que a sociedade industrial avançada absorve e neutraliza toda crítica: a arte radical é cooptada pela indústria cultural e vendida como produto.</p>
+                            <p class="text-gray-700 mt-3">Porém, Marcuse também vê na arte uma <strong>dimensão utópica</strong>: ao mostrar o que poderia ser diferente, a arte de vanguarda preserva a negação do existente.</p>
+                            <p class="text-gray-700 mt-3"><strong>Exemplos:</strong> Rock'n'roll foi inicialmente resistência; rapidamente absorvido pela indústria. Hip-hop nasce como crítica racial e social; torna-se produto global.</p>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Cultura das Mídias e Globalização</h3>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle4">
+                            <span>Meios de comunicação e construção da realidade</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle4">
+                            <p class="text-gray-700 mt-4">Os meios de comunicação não apenas transmitem informação — eles <strong>constroem</strong> realidades sociais. <strong>Agenda Setting</strong> (McCombs e Shaw, 1972): os meios não dizem o que pensar, mas <em>sobre o que</em> pensar.</p>
+                            <p class="text-gray-700 mt-3"><strong>McLuhan (1964) — <em>Os Meios de Comunicação como Extensões do Homem</em>:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>"O meio é a mensagem" — a forma de comunicar transforma mais do que o conteúdo</li>
+                                <li>Meios quentes vs. frios; aldeia global</li>
+                                <li>Cada novo meio muda a percepção sensorial e a organização social</li>
+                            </ul>
+                            <p class="text-gray-700 mt-3"><strong>Baudrillard (1981):</strong> na sociedade contemporânea, o simulacro (cópia sem original) substitui o real. A mídia cria <strong>hiperrealidade</strong> — mais real que o próprio real.</p>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle5">
+                            <span>Redes sociais, consumo e estilos de vida</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle5">
+                            <p class="text-gray-700 mt-4">A publicidade conecta consumo a <strong>estilos de vida</strong> — produz desejos, constroe identidades e diferencia grupos sociais via marcas e objetos.</p>
+                            <p class="text-gray-700 mt-3"><strong>Featherstone (1991) — <em>Cultura de Consumo e Pós-Modernismo</em>:</strong> o consumo deixou de ser apenas satisfação de necessidades; tornou-se prática de distinção social e expressão de identidade.</p>
+                            <p class="text-gray-700 mt-3"><strong>Redes sociais e cultura participativa:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>Jenkins (2006): convergência midiática e cultura da participação — usuários criam e compartilham conteúdo</li>
+                                <li>Plataformas como YouTube, Instagram, TikTok transformam consumidores em produtores (prosumers)</li>
+                                <li>Algoritmos criam câmaras de eco e bolhas informacionais</li>
+                                <li>Democratização x concentração de poder das big techs</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle6">
+                            <span>🇧🇷 Cultura e comunicação no Brasil</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle6">
+                            <p class="text-gray-700 mt-4"><strong>Oligopólio midiático:</strong> historicamente, a comunicação no Brasil foi concentrada em poucos grupos familiares (Globo, SBT, Record, Bandeirantes). Essa concentração influencia o debate público.</p>
+                            <p class="text-gray-700 mt-3"><strong>Tropicalismo (1967-1968):</strong> movimento cultural que misturou tradição e modernidade, MPB e guitarra elétrica, poesia concreta e cultura de massa — expressão de resistência e experimentação no período da ditadura.</p>
+                            <p class="text-gray-700 mt-3"><strong>Funk, axé, forró, sertanejo:</strong> expressões da cultura popular de massa no Brasil — objeto de disputa: são "alienação" ou <strong>cultura de resistência das periferias</strong>?</p>
+                            <p class="text-gray-700 mt-2"><strong>Internet e democratização:</strong> podcasts, canais periféricos, comunicação independente ampliam vozes antes marginalizadas.</p>
+                        </div>
+                    </div>
+
+                    <div class="callout info mt-8">
+                        <p class="font-semibold mb-2">🇧🇷 Indústria Cultural Contemporânea: Plataformas e Algoritmos</p>
+                        <p class="text-gray-700 mt-3">A crítica de Adorno/Horkheimer à "Indústria Cultural" transmuda-se em hiper-capitalismo de plataformas digitais:</p>
+                        <ul class="list-disc ml-6 text-gray-700 mt-2">
+                            <li><strong>Streaming:</strong> Recomendações automatizadas (algoritmos) consolidam a homogeneização. Conteúdo consumido não exige esforço estético - limitase à repetição de beats formulaicos.</li>
+                            <li><strong>No Brasil:</strong> Gigantesca indústria do agronegócio patrocina cena musical dominante (sertanejo universitário), fundindo reprodutibilidade técnica massiva com formação de lifestyle que venera consumo agro-rural sintético.</li>
+                            <li><strong>Pergunta crítica:</strong> Personalização algoritmica AMPLIA diversidade estética ou APROFUNDA confinamento cultural do usuário?</li>
+                        </ul>
+                    </div>
+
+                    <div class="callout warning mt-8">
+                        <p class="font-semibold mb-2">Referências Utilizadas</p>
+                        <ul class="list-disc ml-6 text-gray-700">
+                            <li>ADORNO, T.; HORKHEIMER, M. <em>Dialética do Esclarecimento</em>. Rio de Janeiro: Zahar, 1985 [1944].</li>
+                            <li>BENJAMIN, W. A obra de arte na era de sua reprodutibilidade técnica. In: <em>Magia e Técnica, Arte e Política</em>. São Paulo: Brasiliense, 1994 [1936].</li>
+                            <li>BOURDIEU, P. <em>A Distinção: crítica social do julgamento</em>. São Paulo: Edusp, 2008 [1979].</li>
+                            <li>MCLUHAN, M. <em>Os Meios de Comunicação como Extensões do Homem</em>. São Paulo: Cultrix, 1964.</li>
+                            <li>MARCUSE, H. <em>O Homem Unidimensional</em>. São Paulo: Edipro, 2015 [1964].</li>
+                        </ul>
+                    </div>
+                `
+            },
+{
+                id: "religiao-sociedade",
+                title: "Religião e Sociedade",
+                emoji: "",
+                parent: "religiao-soc",
+                
+                content: `
+                    <h2 class="text-3xl font-bold mb-2 text-gray-900">Religião e Sociedade</h2>
+                    <p class="text-gray-500 mb-6">Sistemas de significado, coesão social e poder</p>
+
+                    <div class="callout info mb-6">
+                        <p class="font-semibold mb-2">Conceito Central: Religião como Fato Social</p>
+                        <p class="text-gray-700"><strong>Religião é sistema de crenças, práticas e instituições que permitem comunidade compreender significado último de existência</strong> - "por que estamos aqui?", "o que é correto?", "o que acontece após morte?". Sociologia não julga se religião é "verdadeira" ou "falsa". Apenas estuda seu <strong>papel social</strong>.</p>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Teorias Clássicas sobre Religião</h3>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle41">
+                            <span>Durkheim: Religião como Coesão Social (1912)</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle41">
+                            <p class="text-gray-700 mt-4"><strong>Tese central:</strong> Religião não trata de Deus em primeiro lugar. Trata de <strong>sociedade</strong>.</p>
+                            <blockquote class="border-l-4 border-gray-300 pl-4 text-gray-700 mt-3 italic">"A religião é uma coisa eminentemente social. As representações religiosas exprimem a realidade coletiva." (DURKHEIM, 1912)</blockquote>
+                            <p class="text-gray-700 mt-4"><strong>Argumento de Durkheim:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>Deus = sociedade em linguagem sagrada</li>
+                                <li>Ritos religiosos = mecanismo de renovar coesão coletiva</li>
+                                <li>Quando comunidade se reúne em templo, está reforçando solidariedade</li>
+                            </ul>
+                            <p class="text-gray-700 mt-4"><strong>Exemplo: Missa católica no Brasil</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>Comunidade se reúne em templo</li>
+                                <li>Participa de ritual coordenado (de pé, ajoelhado, responde "amém")</li>
+                                <li>Sai se sentindo parte de algo maior</li>
+                                <li>Solidariedade renovada</li>
+                            </ul>
+                            <p class="text-gray-700 mt-4"><strong>Crítica:</strong> Durkheim ignora dimensão ideológica? Religião pode ser usada para opressão (justificar escravidão como "vontade de Deus", legitimar hierarquias)?</p>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle42">
+                            <span>Weber: Ética Protestante e Espírito do Capitalismo (1905)</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle42">
+                            <p class="text-gray-700 mt-4"><strong>Tese central:</strong> Religião não é apenas reflexo de economia. <strong>Molda</strong> comportamento econômico de forma inesperada.</p>
+                            <p class="text-gray-700 mt-3"><strong>O argumento de Weber:</strong> Protestantismo (especialmente Calvinismo) criou "mentalidade capitalista"</p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>Calvino: Deus predestinou quem se salva (ninguém sabe quem)</li>
+                                <li>MAS sucesso material é <strong>sinal</strong> de graça divina</li>
+                                <li>Resultado: protestante trabalha obsessivamente, acumula capital, reinveste</li>
+                                <li>Isso gera capitalismo como <strong>ethos</strong> (mentalidade), não só sistema econômico</li>
+                            </ul>
+                            <p class="text-gray-700 mt-4"><strong>Aplicação teórica:</strong> Por que capitalismos protestantes (Holanda, Inglaterra, EUA norte) eram mais "puros" e dinâmicos que católicos (Itália, Espanha, Portugal)? Resposta: religião preparou a mentalidade cultural.</p>
+                            <p class="text-gray-700 mt-3"><strong>Crítica:</strong> Isso é muito determinista? Há tantas outras causas para capitalismo (geologia, tecnologia, política). Religião é apenas uma delas?</p>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle43">
+                            <span>Marx: Religião como Ópio do Povo (1843)</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle43">
+                            <p class="text-gray-700 mt-4"><strong>Tese central:</strong> Religião é <strong>ideologia que mascara exploração</strong>.</p>
+                            <blockquote class="border-l-4 border-gray-300 pl-4 text-gray-700 mt-3 italic">"A religião é o ópio do povo... A crítica da religião é o germe da crítica da política." (MARX, 1844)</blockquote>
+                            <p class="text-gray-700 mt-4"><strong>Argumento de Marx:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>Classe dominante usa religião para docilizar povo</li>
+                                <li>Mensagem: "Sofra agora nessa vida, você será recompensado no céu"</li>
+                                <li>Povo aceita exploração porque espera recompensa celestial</li>
+                                <li>Resultado: Nenhuma revolução, apenas resignação</li>
+                            </ul>
+                            <p class="text-gray-700 mt-4"><strong>Exemplo histórico: Escravidão brasileira</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>"Escravos foram amaldiçoados por Deus" (argumento religioso)</li>
+                                <li>"Missão da Igreja é 'civilizar' escravos" (justificativa religiosa)</li>
+                                <li>Resultado: Escravos resignados, aceitavam opressão como "vontade divina"</li>
+                            </ul>
+                            <p class="text-gray-700 mt-4"><strong>Crítica importante:</strong> Marx ignora que religião pode ser <strong>resistência e libertação</strong>? (ex: teologia da libertação latino-americana nos anos 1960-80 que apoiava reforma agrária e direitos dos pobres)</p>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle44">
+                            <span>Bourdieu: Violência Simbólica e Capital Religioso (1971)</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle44">
+                            <p class="text-gray-700 mt-4"><strong>Tese central:</strong> Religião funciona através de <strong>violência simbólica</strong> - faz com que injustiça pareça legítima (não é violência física, é aceitação de desigualdade como "natural").</p>
+                            <p class="text-gray-700 mt-3"><strong>Conceitos-chave:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li><strong>Autoridade religiosa:</strong> poder de impor interpretação como "verdadeira"</li>
+                                <li><strong>Capital religioso:</strong> credibilidade acumulada por instituição religiosa</li>
+                                <li><strong>Habitus religioso:</strong> internalizamos disposições religiosas (rezamos "naturalmente", não questionamos padre/pastor)</li>
+                            </ul>
+                            <p class="text-gray-700 mt-4"><strong>Exemplo: Padre na favela</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>Tem <strong>autoridade</strong>: povo acredita que ele fala em nome de Deus</li>
+                                <li>Pode dizer: "Deus quer que vocês trabalhem honestamente mesmo ganhando pouco"</li>
+                                <li>Povo aceita porque padre tem <strong>capital religioso</strong> acumulado</li>
+                                <li>Resultado: Exploração continua, mas parece <strong>legitimada</strong> ("é vontade de Deus")</li>
+                            </ul>
+                            <p class="text-gray-700 mt-4"><strong>Insight de Bourdieu:</strong> O mais poderoso não é aquele que usa arma física (polícia pode rebelar). É aquele que faz você acreditar que sua submissão é <strong>legítima</strong> e <strong>natural</strong>.</p>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Funções Sociais da Religião</h3>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle45">
+                            <span>Cinco Funções Principais</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle45">
+                            <p class="text-gray-700 mt-4"><strong>1. Coesão Social</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>Cria comunidade (pessoas se reúnem em ritual)</li>
+                                <li>Compartilham valores comuns (moral coletiva)</li>
+                                <li>Solidariedade é reforçada em rituais periódicos</li>
+                            </ul>
+                            <p class="text-gray-700 mt-4"><strong>2. Explicação de Sofrimento</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>Morte de ente querido? Religião oferece explicação ("está no céu", "foi para melhor")</li>
+                                <li>Doença? Religião oferece significado ("é teste de Deus")</li>
+                                <li>Sem religião, sofrer é apenas acaso e vazio</li>
+                            </ul>
+                            <p class="text-gray-700 mt-4"><strong>3. Controle Social (Moral)</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>Religião ensina moral: "não roubar", "honrar pais", "ser fiel"</li>
+                                <li>Essa moralização pode ser usada para controlar população (nem sempre ruim - também gera solidariedade)</li>
+                                <li>Transgressor sente culpa, vergonha (sanções informais)</li>
+                            </ul>
+                            <p class="text-gray-700 mt-4"><strong>4. Identidade Pessoal e Coletiva</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>Religião responde "quem sou eu?" (sou católico, evangélico, muçulmano)</li>
+                                <li>Marca identidade étnica/cultural (judaísmo é religião E identidade étnica)</li>
+                                <li>Cria senso de pertencimento a comunidade histórica</li>
+                            </ul>
+                            <p class="text-gray-700 mt-4"><strong>5. Sentido e Esperança</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>Oferece respostas às grandes questões (de onde viemos, para onde vamos, por quê)</li>
+                                <li>Fornece esperança em tempos difíceis (pobreza, doença)</li>
+                                <li>Promete recompensa/justiça transcendente (mesmo que injustiça aqui)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="callout info mt-8">
+                        <p class="font-semibold mb-2">🇧🇷 Reencantamento Utilitário: Teologia da Prosperidade no Brasil</p>
+                        <p class="text-gray-700 mt-3">A profecia weberiana do desencantamento inexorável sofre reveses analíticos no Sul Global, particularmente no Brasil:</p>
+                        <ul class="list-disc ml-6 text-gray-700 mt-2">
+                            <li><strong>Avassaladora adesão:</strong> Massas populares abraçam neopentecostalismo, especialmente Teologia da Prosperidade, que assimila integralmente racionalidade corporativa na forma do sagrado.</li>
+                            <li><strong>Contrato espiritual:</strong> Relação com divino transformada em "contrato" onde fé materializa-se em ascensão social financeira no plano terreno (antítese da compensação marxista no pós-morte).</li>
+                            <li><strong>Contradição teórica:</strong> Weber e Marx previam que modernidade secularizaria religião, mas Teologia da Prosperidade <strong>reencanta modernidade corporativa</strong>, transformando-a em sagrado.</li>
+                            <li><strong>Crítica:</strong> Oferece esperança às populações pobres mas pode desresponsabilizar Estado de políticas públicas ("arrisque a Deus").</li>
+                        </ul>
+                    </div>
+
+                    <div class="callout warning mt-8">
+                        <p class="font-semibold mb-2">Referências Principais (Formato ABNT)</p>
+                        <ul class="list-disc ml-6 text-gray-700 mt-2 text-sm">
+                            <li>DURKHEIM, É. <em>As Formas Elementares da Vida Religiosa</em>. São Paulo: Paulinas, 1989 [1912].</li>
+                            <li>WEBER, M. <em>A Ética Protestante e o Espírito do Capitalismo</em>. São Paulo: Companhia das Letras, 2004 [1905].</li>
+                            <li>MARX, K. <em>Crítica da Filosofia do Direito de Hegel</em> (Introdução). In: <em>Manuscritos Econômico-Filosóficos</em>. São Paulo: Boitempo, 2010 [1843].</li>
+                            <li>BOURDIEU, P. <em>A Economia das Trocas Simbólicas</em>. São Paulo: Perspectiva, 1974 [1971].</li>
+                        </ul>
+                    </div>
+                `
+            },
+{
+                id: "religioes-mundo-contemporaneo",
+                title: "Religiões no Mundo Contemporâneo",
+                emoji: "",
+                parent: "religioes-mundo",
+                
+                content: `
+                    <h2 class="text-3xl font-bold mb-2 text-gray-900">Religiões no Mundo Contemporâneo</h2>
+                    <p class="text-gray-500 mb-6">Diversidade religiosa, laicidade, fundamentalismo e o lugar da fé na sociedade globalizada</p>
+
+                    <div class="callout info mb-6">
+                        <p class="font-semibold mb-2">Conceito Central</p>
+                        <p>O mundo contemporâneo não eliminou a religião — ao contrário, assiste a uma <strong>pluralização religiosa</strong>: coexistência de múltiplas tradições, surgimento de novas espiritualidades e intensificação de conflitos religiosos. A questão-chave é como compatibilizar <strong>liberdade de crença</strong> com o <strong>Estado laico</strong> e a convivência democrática.</p>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Diversidade Religiosa Brasileira</h3>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle1">
+                            <span>O mapa religioso do Brasil (Censo 2022)</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle1">
+                            <p class="text-gray-700 mt-4">O Brasil apresenta um dos mais complexos panoramas religiosos do mundo. Segundo o Censo IBGE 2022:</p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li><strong>Católicos:</strong> ~52% (queda histórica desde 1940, quando eram 95%)</li>
+                                <li><strong>Evangélicos:</strong> ~31% (crescimento acelerado desde os anos 1960)</li>
+                                <li><strong>Sem religião:</strong> ~10% (aumento expressivo, especialmente entre jovens)</li>
+                                <li><strong>Espíritas (Kardecistas):</strong> ~2%</li>
+                                <li><strong>Candomblé e Umbanda:</strong> ~0,7% (dados subestimados por discriminação)</li>
+                                <li>Budismo, islamismo, judaísmo e religiões indígenas: minorias significativas</li>
+                            </ul>
+                            <p class="text-gray-700 mt-3"><strong>Trânsito religioso:</strong> Pierucci e Prandi (1996) apontaram o fenômeno do trânsito — brasileiros mudam de religião com maior frequência, mostrando que a identidade religiosa se tornou mais fluida e escolhida.</p>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle2">
+                            <span>Neopentecostalismo: a nova face do protestantismo</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle2">
+                            <p class="text-gray-700 mt-4">O neopentecostalismo é a vertente mais crescente do campo evangélico no Brasil. Características:</p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li><strong>Teologia da Prosperidade:</strong> fé garante riqueza material e saúde</li>
+                                <li><strong>Guerra espiritual:</strong> luta contra demônios que causam problemas cotidianos</li>
+                                <li><strong>Mídia e marketing:</strong> uso intenso de rádio, TV e redes sociais</li>
+                                <li><strong>Megaigrejas:</strong> organizações com estrutura empresarial (IURD, Assembleia, Sara Nossa Terra)</li>
+                            </ul>
+                            <p class="text-gray-700 mt-3">Mariano (1995) analisa o crescimento neopentecostal como resposta a contextos de pobreza, insegurança e desagregação social: a igreja oferece comunidade, sentido e solução prática para problemas cotidianos.</p>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Estado Laico e Liberdade de Crença</h3>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle3">
+                            <span>O que é laicidade e por que importa</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle3">
+                            <p class="text-gray-700 mt-4"><strong>Laicidade:</strong> separação institucional entre Estado e religião. O Estado laico não adota religião oficial, garante liberdade de crença a todos e legisla com base em princípios racionais, não religiosos.</p>
+                            <p class="text-gray-700 mt-3"><strong>No Brasil:</strong> A Constituição de 1891 separou Igreja e Estado. A CF/1988 reafirma: "É vedado ao Estado estabelecer cultos religiosos ou igrejas" (art. 19).</p>
+                            <p class="text-gray-700 mt-3"><strong>Tensão contemporânea:</strong> a crescente presença de parlamentares com identidade religiosa (bancada evangélica) gera debate sobre os limites entre representação democrática e imposição de valores religiosos ao conjunto da sociedade.</p>
+                            <p class="text-gray-700 mt-2"><strong>Distinção importante:</strong> Estado laico ≠ Estado ateu. O Estado laico é <em>neutro</em> em matéria religiosa, protegendo tanto crentes quanto não-crentes.</p>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Fundamentalismo e Intolerância Religiosa</h3>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle4">
+                            <span>O que é fundamentalismo religioso</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle4">
+                            <p class="text-gray-700 mt-4"><strong>Fundamentalismo</strong> é a postura que propõe retorno às "origens puras" de uma tradição religiosa, com interpretação literal dos textos sagrados e rejeição dos valores modernos (secularismo, pluralismo, igualdade de gênero).</p>
+                            <p class="text-gray-700 mt-3"><strong>Características comuns:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>Maniqueísmo (divisão nítida bem/mal, fiéis/infiéis)</li>
+                                <li>Missão divina de combater o "mundo secular"</li>
+                                <li>Rejeição do pluralismo e da diversidade</li>
+                                <li>Pode levar ao extremismo e violência (jihadismo, terrorismo cristão)</li>
+                            </ul>
+                            <p class="text-gray-700 mt-3">Giddens (1994) associa o avanço do fundamentalismo à <strong>reflexividade moderna</strong>: em um mundo de incertezas, o fundamentalismo oferece certezas absolutas — é uma reação defensiva à modernidade tardia.</p>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle5">
+                            <span>Intolerância religiosa no Brasil: o caso das religiões de matriz africana</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle5">
+                            <p class="text-gray-700 mt-4">Candomblé e Umbanda sofrem violência sistemática no Brasil, combinando intolerância religiosa e racismo. Dados do Disque 100 (MDH) registram centenas de denúncias anuais de violação de espaços sagrados, ameaças e agressões.</p>
+                            <p class="text-gray-700 mt-3"><strong>Fatores históricos:</strong> durante a escravidão, práticas religiosas africanas eram criminalizadas. O Código Penal de 1890 punia "curandeiros" e "feiticeiros". Essa herança persiste nas formas contemporâneas de perseguição.</p>
+                            <p class="text-gray-700 mt-3"><strong>Lei nº 9.459/1997:</strong> torna a intolerância religiosa crime de racismo, passível de reclusão de 1 a 3 anos.</p>
+                            <p class="text-gray-700 mt-2"><strong>Conceito-chave:</strong> <em>Racismo religioso</em> (Nascimento, 2016) — intolerância contra religiões de matriz africana como extensão do racismo estrutural.</p>
+                        </div>
+                    </div>
+
+                    <div class="callout success mt-6">
+                        <p class="font-semibold mb-2">Religião e ciência: conflito ou diálogo?</p>
+                        <p class="text-gray-700">O argumento do "conflito eterno" entre ciência e religião é uma simplificação histórica. Muitos cientistas são religiosos; muitos teólogos aceitam a evolução. O problema surge quando grupos religiosos tentam impor crenças como políticas públicas de educação ou saúde, violando os princípios da laicidade e do método científico.</p>
+                    </div>
+
+                    <div class="callout info mt-8">
+                        <p class="font-semibold mb-2">🇧🇷 Racismo Religioso e Intolerância no Brasil</p>
+                        <p class="text-gray-700 mt-3">A diversidade religiosa brasileira sofre com uma <strong>chaga de violenta intolerância</strong>, que investigações acadêmicas recentes precisaram reclassificar como <strong>racismo religioso</strong>:</p>
+                        <ul class="list-disc ml-6 text-gray-700 mt-2">
+                            <li><strong>Destruição de terreiros:</strong> Ataques físicos sistemáticos a espaços sagrados de Candomblé e Umbanda, especialmente no Rio de Janeiro, onde há associação entre traficantes convertidos e grupos autoproclamados "narcopentecostais".</li>
+                            <li><strong>Sincretismo como resistência:</strong> O Brasil se formou através de vasto sincretismo religioso — um mecanismo de resistência de populações colonizadas — forjado na mistura de matrizes africanas, misticismo indígena e catolicismo popular imposto.</li>
+                            <li><strong>Bancadas religiosas e Estado Laico:</strong> A robusta influência de bancadas religiosas altamente organizadas no Congresso Nacional testa ininterruptamente os alicerces do Estado laico, impondo pautas moralistas aos direitos reprodutivos, uniões homoafetivas e tentativas de vetar conteúdos científicos em currículos escolares por matrizes criacionistas.</li>
+                        </ul>
+                    </div>
+
+                    <div class="callout warning mt-8">
+                        <p class="font-semibold mb-2">Referências Utilizadas</p>
+                        <ul class="list-disc ml-6 text-gray-700">
+                            <li>IBGE. <em>Censo Demográfico 2022</em>. Rio de Janeiro: IBGE, 2023.</li>
+                            <li>MARIANO, R. <em>Neopentecostais: sociologia do novo pentecostalismo no Brasil</em>. São Paulo: Loyola, 1999.</li>
+                            <li>PIERUCCI, A. F.; PRANDI, R. <em>A Realidade Social das Religiões no Brasil</em>. São Paulo: Hucitec, 1996.</li>
+                            <li>GIDDENS, A. <em>Para Além da Esquerda e da Direita</em>. São Paulo: Editora UNESP, 1996.</li>
+                            <li>NASCIMENTO, A. P. Racismo religioso. In: <em>Terreiros e Territórios</em>. Salvador: EDUFBA, 2016.</li>
+                        </ul>
+                    </div>
+                `
+            },
+{
+                id: "raca",
+                title: "Raça e Etnia",
+                emoji: "",
+                parent: "raca",
+                
+                content: `
+                    <h2 class="text-3xl font-bold mb-2 text-gray-900">Raça</h2>
+                    <p class="text-gray-500 mb-6">Entender raça como construção social, suas bases históricas e os efeitos do racismo</p>
+
+                    <div class="callout info mb-6">
+                        <p class="font-semibold mb-2">Conceito Central</p>
+                        <p><strong>Raça não é um dado biológico</strong> — é uma construção histórica e social que atribui significados diferenciados a características físicas (cor da pele, traços faciais, cabelo). O racismo usa essa construção para hierarquizar grupos, distribuir privilégios e produzir desigualdades. Compreender isso é condição para combatê-lo.</p>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Marcadores Sociais da Diferença</h3>
+                    <p class="mb-4 text-gray-700">As sociedades organizam desigualdades a partir de <strong>marcadores sociais</strong>: raça, gênero, classe, sexualidade, geração, deficiência. Esses marcadores se interseccionam — uma mulher negra pobre enfrenta opressões que não são apenas a soma de opressões separadas.</p>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle1">
+                            <span>Interseccionalidade: Kimberlé Crenshaw</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle1">
+                            <p class="text-gray-700 mt-4">Kimberlé Crenshaw (1989) desenvolveu o conceito de <strong>interseccionalidade</strong>: as identidades sociais se sobrepõem e criam formas específicas de discriminação.</p>
+                            <p class="text-gray-700 mt-3"><strong>Exemplo:</strong> mulheres negras nos EUA não cabiam nas categorias "mulher" (pensada como branca) nem "negro" (pensado como homem) dos movimentos sociais dos anos 1970. A intersecção de raça e gênero produzia opressões específicas invisíveis para cada luta separada.</p>
+                            <p class="text-gray-700 mt-3"><strong>No Brasil:</strong> pesquisas mostram que mulheres negras ganham em média 44% do salário de homens brancos — resultado da combinação de desigualdade de gênero e de raça.</p>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Os Conceitos de Raça, Cor e Etnia</h3>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle2">
+                            <span>Distinções conceituais fundamentais</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle2">
+                            <p class="text-gray-700 mt-4"><strong>Raça (sentido sociológico):</strong> categoria social que classifica pessoas com base em características físicas percebidas. A genética comprovou: não há raças biológicas humanas — somos 99,9% geneticamente idênticos. Raça é <em>real como relação social</em>, não como biologia.</p>
+                            <p class="text-gray-700 mt-3"><strong>Cor:</strong> categoria utilizada pelo IBGE nos Censos: branca, preta, parda, amarela, indígena. A autodeclaração é o critério. Preto + pardo = negro (critério do movimento negro e de políticas públicas).</p>
+                            <p class="text-gray-700 mt-3"><strong>Etnia:</strong> grupo que compartilha cultura, língua, território, ancestralidade e identidade coletiva. Etnia é menos vinculada à aparência física que "raça". Povos indígenas brasileiros são centenas de etnias distintas.</p>
+                            <p class="text-gray-700 mt-3"><strong>Preconceito, discriminação, racismo:</strong>
+                            <br>— Preconceito: atitude negativa baseada em estereótipos
+                            <br>— Discriminação: ação que trata desigualmente por raça
+                            <br>— Racismo: sistema estrutural que perpetua desigualdades raciais</p>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Teorias Raciais e Racismo Científico</h3>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle3">
+                            <span>O racismo científico do século XIX</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle3">
+                            <p class="text-gray-700 mt-4">No século XIX, sob influência do positivismo e do darwinismo, surgiu o <strong>racismo científico</strong>: tentativa de fundamentar biologicamente a hierarquia entre raças.</p>
+                            <p class="text-gray-700 mt-3"><strong>Principais teorias:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li><strong>Poligenismo:</strong> cada raça teria origem separada; raças inferiores seriam "subespécies"</li>
+                                <li><strong>Frenologia:</strong> medição de crânios para determinar inteligência e criminalidade (Lombroso)</li>
+                                <li><strong>Darwinismo social:</strong> adaptação do darwinismo: raças "superiores" venceriam a "seleção natural" social</li>
+                                <li><strong>Eugenia:</strong> "melhoramento" da espécie humana por reprodução seletiva (Francis Galton, 1883)</li>
+                            </ul>
+                            <p class="text-gray-700 mt-3"><strong>No Brasil:</strong> Nina Rodrigues, Oliveira Vianna e outros intelectuais do fim do século XIX e início do XX propagaram teorias racistas que influenciaram políticas de imigração e branqueamento.</p>
+                            <p class="text-gray-700 mt-2"><strong>Refutação:</strong> a genética moderna (Projeto Genoma Humano, anos 2000) refutou definitivamente a existência de raças biológicas humanas.</p>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Abolição, Emancipação e Direitos</h3>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle4">
+                            <span>A abolição incompleta: 1888 e suas consequências</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle4">
+                            <p class="text-gray-700 mt-4">A Lei Áurea (13 de maio de 1888) aboliu a escravidão no Brasil — o último país das Américas a fazê-lo. Porém, a abolição não foi acompanhada de políticas de inclusão: não houve reforma agrária, educação, moradia ou indenização aos ex-escravizados.</p>
+                            <p class="text-gray-700 mt-3"><strong>Resultado:</strong> negros libertos migraram para periferias das cidades, submetendo-se a trabalhos precários. A desigualdade racial que existia sob a escravidão não desapareceu com a abolição — ela se reproduziu sob novas formas.</p>
+                            <p class="text-gray-700 mt-3"><strong>Florestan Fernandes (1965) — <em>A Integração do Negro na Sociedade de Classes</em>:</strong> mostrou que a abolição não integrou o negro à ordem capitalista em igualdade de condições — ele permaneceu nas margens do mercado de trabalho.</p>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle5">
+                            <span>Racismo estrutural e políticas de reparação</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle5">
+                            <p class="text-gray-700 mt-4"><strong>Racismo estrutural</strong> (Almeida, 2019): o racismo não é apenas atitude individual — é um elemento estruturante da sociedade, que organiza instituições, distribui recursos e produz privilégios de forma sistêmica.</p>
+                            <p class="text-gray-700 mt-3"><strong>Dados do racismo estrutural no Brasil (IBGE/PNAD):</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>75% das vítimas de homicídio são negras</li>
+                                <li>Negros representam 56% da população, mas apenas 20% dos mais ricos</li>
+                                <li>Negros têm menor acesso a saneamento, saúde e educação de qualidade</li>
+                            </ul>
+                            <p class="text-gray-700 mt-3"><strong>Políticas de reparação:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>Lei nº 10.639/2003: obrigatoriedade do ensino de história e cultura afro-brasileira e africana nas escolas</li>
+                                <li>Lei de Cotas (nº 12.711/2012): reserva de vagas em universidades e institutos federais</li>
+                                <li>Estatuto da Igualdade Racial (Lei nº 12.288/2010)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="callout info mt-8">
+                        <p class="font-semibold mb-2">🇧🇷 Racismo Estrutural e Desigualdade Racial no Brasil</p>
+                        <p class="text-gray-700 mt-3">Dados empíricos da PNAD Contínua (IBGE 2025) confirmam a persistência do racismo estrutural:</p>
+                        <ul class="list-disc ml-6 text-gray-700 mt-2">
+                            <li><strong>Desemprego desproporcional:</strong> População preta foi o único grupo que sofreu queda no volume de ocupados no mercado de trabalho (2024-2025), enquanto população branca avançou — sublinhando desigualdade nos impactos da desaceleração econômica.</li>
+                            <li><strong>Desigualdade salarial persistente:</strong> Embora certos estados (como Mato Grosso do Sul) apresentem altos rendimentos agregados, o IBGE atesta a persistência invariável da desigualdade racial no rendimento médio individual.</li>
+                            <li><strong>Políticas reparatórias:</strong> Lei de Cotas Raciais (Lei nº 12.711/2012) e Lei 10.639/03 constituem instrumentos reparatórios decisivos, resultado de lutas históricas do movimento negro. Crítica importante: abolição legislativa (Lei Áurea 1888) foi projeto inacabado — libertou formalmente, mas sem distribuição fundiária, educação ou trabalho remunerado equânime.</li>
+                            <li><strong>Interseccionalidade:</strong> Kimberlé Crenshaw (1989) formula que eixos de opressão (raça, gênero, classe, capacidade) não existem isoladamente, mas convergem em malha sobreposta de estigmatização complexa.</li>
+                        </ul>
+                    </div>
+
+                    <div class="callout warning mt-8">
+                        <p class="font-semibold mb-2">Referências Utilizadas</p>
+                        <ul class="list-disc ml-6 text-gray-700">
+                            <li>ALMEIDA, S. <em>Racismo Estrutural</em>. São Paulo: Sueli Carneiro; Pólen, 2019.</li>
+                            <li>CRENSHAW, K. Demarginalizing the Intersection of Race and Sex. <em>University of Chicago Legal Forum</em>, 1989.</li>
+                            <li>FERNANDES, F. <em>A Integração do Negro na Sociedade de Classes</em>. São Paulo: Dominus, 1965.</li>
+                            <li>HASENBALG, C. <em>Discriminação e Desigualdades Raciais no Brasil</em>. Rio de Janeiro: Graal, 1979.</li>
+                            <li>MUNANGA, K. <em>Rediscutindo a Mestiçagem no Brasil</em>. Belo Horizonte: Autêntica, 2004.</li>
+                        </ul>
+                    </div>
+                `
+            },
+{
+                id: "genero-sexualidade",
+                title: "Gênero e Sexualidade",
+                emoji: "",
+                parent: "genero",
+                
+                content: `
+                    <h2 class="text-3xl font-bold mb-2 text-gray-900">Gênero e Sexualidade</h2>
+                    <p class="text-gray-500 mb-6">Categorias sociais fundamentais</p>
+                    
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Sexo, Sexualidade e Gênero</h3>
+                    
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle30">
+                            <span>Definições Importantes</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle30">
+                            <p class="text-gray-700 mt-4"><strong>Sexo:</strong> Categoria biológica (genital, cromossômica). Binário tradicional: masculino/feminino.</p>
+                            <p class="text-gray-700 mt-2"><strong>Sexualidade:</strong> Desejo, atração e práticas sexuais/afetivas. Não é binária (heterossexual, homossexual, bissexual, assexual, etc.).</p>
+                            <p class="text-gray-700 mt-2"><strong>Gênero:</strong> Construção social sobre papéis, comportamentos, características atribuídos a homens e mulheres. Não é determinado apenas por sexo biológico.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="callout success mb-6">
+                        <p class="font-semibold mb-2">✓ Conceito-chave</p>
+                        <p>Gênero é social, não biológico. Diferentes culturas e épocas definiram masculinidade e feminilidade de formas distintas.</p>
+                    </div>
+                    
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Movimento Feminista e Conquistas das Mulheres</h3>
+                    
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle31">
+                            <span>Ondas do Feminismo</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle31">
+                            <p class="text-gray-700 mt-4"><strong>Primeira onda (final séc. XIX - início XX):</strong> Direito ao voto, educação, propriedade.</p>
+                            <p class="text-gray-700 mt-2"><strong>Segunda onda (1960s-1980s):</strong> Direitos reprodutivos, igualdade no trabalho, violência doméstica.</p>
+                            <p class="text-gray-700 mt-2"><strong>Terceira onda (1990s-2000s):</strong> Diversidade, interseccionalidade, crítica ao feminismo branco/classe média.</p>
+                            <p class="text-gray-700 mt-2"><strong>Quarta onda (2010s-atual):</strong> Movimento #MeToo, feminismo negro, trans, digital.</p>
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Gênero, Trabalho e Direitos Sociais</h3>
+                    
+                    <p class="mb-4 text-gray-700">Desigualdades de gênero persistem:</p>
+                    <ul class="list-disc ml-6 text-gray-700 mb-4">
+                        <li><strong>Trabalho:</strong> Mulheres ganham menos, concentram-se em setores precarizados</li>
+                        <li><strong>Dupla jornada:</strong> Trabalho remunerado + trabalho doméstico e cuidados</li>
+                        <li><strong>Violência:</strong> Femicídio, assédio sexual, violência doméstica</li>
+                        <li><strong>Política:</strong> Subrepresentação em cargos de poder</li>
+                    </ul>
+                    
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Teoria Feminista Contemporânea</h3>
+                    
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle32">
+                            <span>Autoras Importantes</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle32">
+                            <p class="text-gray-700 mt-4"><strong>Judith Butler:</strong> "Performatividade do gênero" - gênero é repetição de atos, não essência.</p>
+                            <p class="text-gray-700 mt-2"><strong>Nancy Fraser:</strong> Justiça como redistribuição, reconhecimento e representação.</p>
+                            <p class="text-gray-700 mt-2"><strong>Feminismo Negro:</strong> Kimberlé Crenshaw, bell hooks, Patricia Hill Collins - interseccionalidade de raça, gênero, classe.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="callout info">
+                        <p class="font-semibold mb-2">Sexualidades Dissidentes</p>
+                        <p>Movimentos LGBTQIA+ questionam heteronormatividade. Brasil tem alto índice de violência contra LGBTQIA+, apesar de avanços legais recentes.</p>
+                    </div>
+
+                    <div class="callout info mt-6">
+                        <p class="font-semibold mb-2">🇧🇷 Desigualdade de Gênero e Feminismo Negro no Brasil</p>
+                        <p class="text-gray-700 mt-3">Dados do IBGE (PNAD 2025) confirmam desigualdade estrutural de gênero:</p>
+                        <ul class="list-disc ml-6 text-gray-700 mt-2">
+                            <li><strong>Desigualdade salarial persistente:</strong> Homens ganham R$ 4.127/mês vs mulheres R$ 3.210/mês — diferença de 28% — apesar de mulheres terem escolarização superior.</li>
+                            <li><strong>Dupla jornada:</strong> Divisão sexual do trabalho impõe às mulheres acúmulo de labor público assalariado + rotinas domésticas não remuneradas (cuidados, limpeza, criação).</li>
+                            <li><strong>Performatividade de Butler aplicada:</strong> Gênero não é essência, mas repetição contínua de atos corporais estilizados — expectativas de feminilidade/masculinidade que produzem falsa naturalidade.</li>
+                            <li><strong>Feminismo Negro (Lélia Gonzalez, Patricia Hill Collins):</strong> Crítica ao feminismo hegemônico branco — mulheres negras experienciam "matriz de dominação" que intersecciona raça + pobreza + gênero, não apenas gênero isolado.</li>
+                            <li><strong>Avanços legais:</strong> Lei Maria da Penha (2006), equiparação salarial no setor público, mas enforcement permanece fraco.</li>
+                        </ul>
+                    </div>
+
+                    <div class="callout warning mt-8">
+                        <p class="font-semibold mb-2">Referências Utilizadas</p>
+                        <ul class="list-disc ml-6 text-gray-700">
+                            <li>BUTLER, J. <em>Problemas de Gênero: feminismo e subversão da identidade</em>. 1990.</li>
+                            <li>SCOTT, J. Gênero: uma categoria útil de análise histórica. <em>Educação &amp; Realidade</em>, 1986.</li>
+                            <li>CRENSHAW, K. Demarginalizing the Intersection of Race and Sex. 1989.</li>
+                            <li>HOOKS, b. <em>Teoria Feminista: da margem ao centro</em>. 1984.</li>
+                        </ul>
+                    </div>
+                `
+            },
+{
+                id: "corporalidade-afetos",
+                title: "Corporalidade e Afetos",
+                emoji: "",
+                parent: "corporalidade",
+                
+                content: `
+                    <h2 class="text-3xl font-bold mb-2 text-gray-900">Corporalidade e Afetos</h2>
+                    <p class="text-gray-500 mb-6">O corpo como espaço social, as transformações da intimidade e as sexualidades dissidentes</p>
+
+                    <div class="callout info mb-6">
+                        <p class="font-semibold mb-2">Conceito Central</p>
+                        <p>O <strong>corpo</strong> não é apenas natureza — é um <strong>fato social</strong>. Ele é disciplinado, normatizado, valorizado e punido diferentemente conforme raça, gênero, classe e época. Os <strong>afetos</strong> — amor, desejo, intimidade — também são moldados socialmente: a forma como sentimos e expressamos emoções reflete relações de poder.</p>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Corpo, Controle e Poder: Michel Foucault</h3>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle1">
+                            <span>Disciplina e biopoder</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle1">
+                            <p class="text-gray-700 mt-4">Foucault (1975) em <em>Vigiar e Punir</em> analisa como o poder moderno age sobre os <strong>corpos</strong> por meio de disciplina: técnicas que os tornam dóceis e úteis.</p>
+                            <p class="text-gray-700 mt-3"><strong>Instituições disciplinares:</strong> escola, hospital, prisão, fábrica, exército — todos moldam corpos e comportamentos através de horários, exames, vigilância e punições.</p>
+                            <p class="text-gray-700 mt-3"><strong>Biopoder</strong> (Foucault, 1976 — <em>História da Sexualidade v.1</em>): forma de poder que age sobre a vida biológica das populações — controle da natalidade, saúde pública, vacinação, eugenia. O Estado não apenas mata (soberania) — ele faz viver e deixa morrer.</p>
+                            <p class="text-gray-700 mt-3"><strong>Panóptico:</strong> estrutura de prisão de Bentham onde um único vigia pode observar todos os prisioneiros sem ser visto — metáfora de como a vigilância moderna produz corpos que se auto-disciplinam.</p>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle2">
+                            <span>A medicalização do corpo e da vida</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle2">
+                            <p class="text-gray-700 mt-4"><strong>Medicalização:</strong> processo pelo qual problemas sociais, comportamentais e existenciais são reinterpretados como doenças e tratados medicinalmente.</p>
+                            <p class="text-gray-700 mt-3"><strong>Exemplos:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>Tristeza intensa → depressão (diagnóstico + antidepressivos)</li>
+                                <li>Agitação infantil → TDAH (diagnóstico + metilfenidato)</li>
+                                <li>Homossexualidade foi classificada como "doença" pelo CID até 1973 (OMS) e pelo CFM até 1985</li>
+                                <li>Transexualidade retirada da lista de doenças mentais pelo CID-11 (2018)</li>
+                            </ul>
+                            <p class="text-gray-700 mt-2">A medicalização reflete relações de poder: define o que é "normal" e o que precisa ser "tratado".</p>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Transformações da Intimidade: Anthony Giddens</h3>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle3">
+                            <span>Amor confluente e relacionamento puro</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle3">
+                            <p class="text-gray-700 mt-4">Giddens (1992) em <em>A Transformação da Intimidade</em> analisa como as formas de amor e relacionamento se transformaram na modernidade.</p>
+                            <p class="text-gray-700 mt-3"><strong>Amor romântico (tradicional):</strong> ideal do "amor eterno", destinado ao casamento indissolúvel, marcado por assimetria de gênero — a mulher se anula pelo amado.</p>
+                            <p class="text-gray-700 mt-3"><strong>Amor confluente (moderno):</strong> relacionamento baseado em igualdade, negociação e reciprocidade. Dura enquanto satisfaz ambos. A saída é possível quando o relacionamento deixa de ser gratificante.</p>
+                            <p class="text-gray-700 mt-3"><strong>Relacionamento puro:</strong> vínculo social mantido apenas pelas recompensas que oferece a cada parceiro. Implica abertura, negociação e vulnerabilidade — transformação democrática da intimidade.</p>
+                            <p class="text-gray-700 mt-2"><strong>Implicações:</strong> aumento de divórcios, novas configurações familiares, casamentos homoafetivos — expressões dessa transformação.</p>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Heterocisnorma e Corpos Dissidentes</h3>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle4">
+                            <span>Heteronormatividade e cisnormatividade</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle4">
+                            <p class="text-gray-700 mt-4"><strong>Heteronormatividade:</strong> sistema de normas que impõe a heterossexualidade como padrão natural e obrigatório, patologizando e punindo outras orientações sexuais.</p>
+                            <p class="text-gray-700 mt-3"><strong>Cisnormatividade:</strong> sistema que impõe que toda pessoa se identifique com o gênero atribuído ao nascer, invisibilizando e punindo pessoas trans e não-binárias.</p>
+                            <p class="text-gray-700 mt-3"><strong>Teoria Queer</strong> (Sedgwick, 1990; Warner, 1993): questiona todas as categorias fixas de sexualidade e gênero. "Queer" significa "estranho" — indica o que escapa à norma. Propõe resistência não pela inclusão nas normas, mas pela desconstrução delas.</p>
+                            <p class="text-gray-700 mt-3"><strong>Louro (2001) — Brasil:</strong> analisa como a escola reproduz a heteronormatividade — silenciamento de identidades LGBTQIA+, piadas, bullying e currículo que invisibiliza diversidade.</p>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle5">
+                            <span>🇧🇷 Violência e direitos LGBTQIA+ no Brasil</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle5">
+                            <p class="text-gray-700 mt-4">O Brasil figura entre os países com maior número de mortes de pessoas LGBTQIA+ no mundo. Dados do Grupo Gay da Bahia registram média de 300+ mortes/ano.</p>
+                            <p class="text-gray-700 mt-3"><strong>Marco jurídico:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>2011: STF reconhece união estável homoafetiva</li>
+                                <li>2013: CNJ autoriza casamento civil entre pessoas do mesmo sexo</li>
+                                <li>2018: STF criminaliza a LGBTfobia por analogia à Lei do Racismo</li>
+                                <li>2023: Lei nº 14.836 — criminaliza violência motivada por identidade de gênero e orientação sexual</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="callout info mt-8">
+                        <p class="font-semibold mb-2">🇧🇷 Biopolítica, Corpos Trans e Direitos Reprodutivos no Brasil</p>
+                        <p class="text-gray-700 mt-3">A análise biopolítica de Foucault revela como o Estado controla corpos para fins de poder e produção:</p>
+                        <ul class="list-disc ml-6 text-gray-700 mt-2">
+                            <li><strong>Cirurgias estéticas e wearables:</strong> Obsessão contemporânea por intervenção corporal (filtros de rede social, relógios biométricos, monitoramento contínuo) reflete biogerenciamento parametrizado — "panóptico internalizado" buscando excelência estética e saúde otimizada.</li>
+                            <li><strong>Direitos trans sob ataque:</strong> Embates parlamentares brasileiros reiteradamente invalidam direitos para corpos trans — acesso a tratamentos hormonais, retificação de documentos, proteção contra discriminação. Esses ataques exemplificam biopoder estatal sobre identidades dissidentes.</li>
+                            <li><strong>Direitos reprodutivos como campo de batalha:</strong> Debates sobre interrupção de gestação (aborto) e tratamentos biomédicos para pessoas trans revelam como o Estado assume controle sobre corporalidade e reprodução através de legislação e discurso moral religioso.</li>
+                            <li><strong>Intimidade fluida (Giddens):</strong> Aumento de divórcios consensuais em cartórios brasileiros reflete transformação do "amor confluente" — relacionamentos baseados em negociação contínua, não sacramento perpétuo.</li>
+                        </ul>
+                    </div>
+
+                    <div class="callout warning mt-8">
+                        <p class="font-semibold mb-2">Referências Utilizadas</p>
+                        <ul class="list-disc ml-6 text-gray-700">
+                            <li>FOUCAULT, M. <em>Vigiar e Punir</em>. Petrópolis: Vozes, 1987 [1975].</li>
+                            <li>FOUCAULT, M. <em>História da Sexualidade, v. 1: A Vontade de Saber</em>. Rio de Janeiro: Graal, 1988 [1976].</li>
+                            <li>GIDDENS, A. <em>A Transformação da Intimidade</em>. São Paulo: Editora UNESP, 1993 [1992].</li>
+                            <li>BUTLER, J. <em>Problemas de Gênero</em>. Rio de Janeiro: Civilização Brasileira, 2003 [1990].</li>
+                            <li>LOURO, G. L. <em>Gênero, Sexualidade e Educação</em>. Petrópolis: Vozes, 1997.</li>
+                        </ul>
+                    </div>
+                `
+            },
+{
+                id: "familia",
+                title: "Família",
+                emoji: "",
+                parent: "familia",
+                
+                content: `
+                    <h2 class="text-3xl font-bold mb-2 text-gray-900">Família</h2>
+                    <p class="text-gray-500 mb-6">O que conta como "família" e por que isso muda?</p>
+
+                    <div class="callout info mb-6">
+                        <p class="font-semibold mb-2">Conceito Central</p>
+                        <p>A família <strong>não é uma instituição natural e imutável</strong> — é uma <strong>construção social e histórica</strong>. Nas últimas décadas, passou da família patriarcal e econômica para uma <strong>pluralidade de arranjos</strong> baseados no afeto e na escolha individual.</p>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Por Que a Família Mudou?</h3>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle1">
+                            <span>Fatores da Transformação Histórica</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle1">
+                            <p class="text-gray-700 mt-4">A tradicional família patriarcal nuclear (pai provedor, mãe cuidadora, filhos) perdeu centralidade. Fatores:</p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li><strong>Tecnológicos:</strong> contraceptivos (pílula, anos 1960), reprodução assistida</li>
+                                <li><strong>Econômicos:</strong> entrada das mulheres no mercado de trabalho, dupla renda</li>
+                                <li><strong>Culturais:</strong> individuação, autonomia, igualitarismo de gênero</li>
+                                <li><strong>Políticos/Jurídicos:</strong> divórcio legalizado no Brasil (1977), casamento homoafetivo (2011/2013)</li>
+                            </ul>
+                            <p class="text-gray-700 mt-3"><strong>Ideia-chave:</strong> As pessoas recusam-se a seguir automaticamente os papéis de "marido" e "esposa" das gerações passadas.</p>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">🇧🇷 A Família Brasileira Hoje (Censo 2022 - IBGE)</h3>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle2">
+                            <span>Casais com Filhos Deixam de Ser Maioria</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle2">
+                            <p class="text-gray-700 mt-4"><strong>Dados oficiais do Censo Demográfico 2022:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>Famílias de casal com filhos caíram de <strong>56,4% (2000) para 42,0% (2022)</strong></li>
+                                <li>É a <strong>primeira vez</strong> que esse arranjo representa menos da metade das famílias</li>
+                                <li><strong>Casal sem filhos</strong> foi o que mais cresceu: de 13,0% para 24,1%</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle3">
+                            <span>Novos Arranjos e Pessoas Morando Sozinhas</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle3">
+                            <ul class="list-disc ml-6 text-gray-700 mt-4">
+                                <li><strong>Domicílios unipessoais:</strong> 18,8% dos domicílios; o número <strong>triplicou</strong> entre 2000 e 2022, chegando a 13,7 milhões (quase 1 em cada 5)</li>
+                                <li><strong>Monoparentais femininas:</strong> 7,8 milhões de mulheres criando filhos sem cônjuge (de 11,6% para 13,5%)</li>
+                                <li><strong>Monoparentais masculinas:</strong> de 1,5% para 2,0% (1,2 milhão)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle4">
+                            <span>A Ascensão da Mulher como Chefe de Família</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle4">
+                            <p class="text-gray-700 mt-4">O percentual de famílias chefiadas por mulher saltou de <strong>22,2% para 48,8%</strong> — quase equiparação com os homens.</p>
+                            <p class="text-gray-700 mt-2"><strong>Explicação:</strong> mudança de valores culturais, entrada no mercado de trabalho, maior escolaridade e queda da fecundidade.</p>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Perspectivas Teóricas</h3>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle5">
+                            <span>Talcott Parsons (Funcionalismo)</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle5">
+                            <p class="text-gray-700 mt-4"><strong>Talcott Parsons</strong> (1902-1979) via a família nuclear como <strong>funcional</strong> para a sociedade industrial.</p>
+                            <p class="text-gray-700 mt-2">Definia papéis sexuais fixos: o homem no papel "instrumental" (provedor) e a mulher no "expressivo" (cuidado).</p>
+                            <p class="text-gray-700 mt-2"><strong>Crítica:</strong> determinismo e naturalização de desigualdades de gênero.</p>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle6">
+                            <span>Anthony Giddens (Transformação da Intimidade)</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle6">
+                            <p class="text-gray-700 mt-4"><strong>Anthony Giddens</strong> (1938-), em <em>A Transformação da Intimidade</em> (1992):</p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li><strong>Relacionamento puro:</strong> relação mantida apenas enquanto satisfaz ambas as partes — por escolha e afeto, não por obrigação institucional</li>
+                                <li><strong>Democratização da esfera pessoal:</strong> a intimidade moderna aproxima-se de um ideal democrático (igualdade, autonomia, negociação)</li>
+                                <li>As <strong>mulheres</strong> têm papel central nessa transformação</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle7">
+                            <span>Philippe Ariès (História da Infância)</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle7">
+                            <p class="text-gray-700 mt-4"><strong>Philippe Ariès</strong> (1914-1984), em <em>História Social da Criança e da Família</em> (1960):</p>
+                            <p class="text-gray-700 mt-2">A <strong>infância é uma construção social</strong> — o modo como percebemos a criança mudou historicamente. Na Idade Média, a criança era vista como um "adulto em miniatura".</p>
+                        </div>
+                    </div>
+
+                    <div class="callout warning mt-8">
+                        <p class="font-semibold mb-2">🇧🇷 Dinâmicas Específicas do Brasil</p>
+                        <ul class="list-disc ml-6 text-gray-700">
+                            <li>Herança patriarcal na divisão desigual do trabalho doméstico</li>
+                            <li>Violência doméstica estrutural (Lei Maria da Penha, 2006; Lei do Feminicídio, 2015)</li>
+                            <li>Famílias extensas/multigeracionais (avós, tios convivendo)</li>
+                        </ul>
+                    </div>
+
+                    <div class="callout info mt-6">
+                        <p class="font-semibold mb-2">🇧🇷 Transformações Familiares e Precarização do Cuidado</p>
+                        <p class="text-gray-700 mt-3">Censos IBGE refutam ideologia tradicional de família patriarcal nuclear:</p>
+                        <ul class="list-disc ml-6 text-gray-700 mt-2">
+                            <li><strong>Chefias monoparentais:</strong> Crescimento expressivo de famílias chefiadas por mães solteiras, frequentemente em vulnerabilidade nas periferias nacionais — sem suporte estatal.</li>
+                            <li><strong>Uniões homoafetivas:</strong> Avanço gradual no reconhecimento cível — 2011 (STF reconhece união estável homoafetiva), 2013 (CNJ autoriza casamento civil) — legalmente formalizadas no pacto cívico judiciário.</li>
+                            <li><strong>Precarização do care work (trabalho de cuidado):</strong> Crises sanitárias (COVID-19) expuseram vulnerabilidades: mulheres enfrentam fusão forçada entre home-office + cuidados domésticos ilimitados, sem cômputo remunerado. Encargos de "trabalho de cuidado" (criação, limpeza, cozinha) desempenhado tacitamente por lares femininos retroalimenta precarização no mercado capitalista.</li>
+                            <li><strong>Paradoxo invisível:</strong> Trabalho de cuidado sustenta economia capitalista mas permanece não remunerado e desvalorizado — estrutura que beneficia capital ao explorar afeto feminino.</li>
+                        </ul>
+                    </div>
+
+                    <div class="callout warning mt-8">
+                        <p class="font-semibold mb-2">Referências Utilizadas</p>
+                        <ul class="list-disc ml-6 text-gray-700">
+                            <li>Parsons, T. (1955). <em>Family, Socialization and Interaction Process</em></li>
+                            <li>Giddens, A. (1992). <em>A Transformação da Intimidade</em>. São Paulo: UNESP</li>
+                            <li>Ariès, P. (1960). <em>História Social da Criança e da Família</em></li>
+                            <li>IBGE (2022). <em>Censo Demográfico 2022 — Nupcialidade e Família</em></li>
+                        </ul>
+                    </div>
+                `
+            },
+{
+                id: "envelhecimento-ciclos",
+                title: "Envelhecimento e Ciclos de Vida",
+                emoji: "",
+                parent: "geracao",
+                
+                content: `
+                    <h2 class="text-3xl font-bold mb-2 text-gray-900">Envelhecimento e Ciclos de Vida</h2>
+                    <p class="text-gray-500 mb-6">Como a sociedade define e trata cada fase da vida?</p>
+
+                    <div class="callout info mb-6">
+                        <p class="font-semibold mb-2">Conceito Central</p>
+                        <p><strong>Envelhecer é um processo social, não apenas biológico.</strong> A idade não é só um número — carrega significados e expectativas que a sociedade constrói. O Brasil está envelhecendo rapidamente, e a sociedade não está preparada.</p>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">A Idade como Construção Social</h3>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle1">
+                            <span>Curso de Vida (Life Course)</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle1">
+                            <p class="text-gray-700 mt-4">Ter uma certa idade não demarca apenas uma classificação biológica: carrega <strong>valores, padrões de comportamento e expectativas</strong> sobre as condutas de cada etapa.</p>
+                            <p class="text-gray-700 mt-2">As fases da vida são <strong>socialmente definidas</strong> e variam entre culturas e épocas. A adolescência é uma categoria relativamente recente; a infância (como vimos com Ariès, no tópico Família) também é uma construção histórica.</p>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle2">
+                            <span>Os Cinco Ciclos de Vida</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle2">
+                            <ul class="list-disc ml-6 text-gray-700 mt-4">
+                                <li><strong>Infância:</strong> dependência, socialização primária</li>
+                                <li><strong>Adolescência:</strong> busca de identidade, autonomia relativa</li>
+                                <li><strong>Vida adulta jovem:</strong> carreira, constituição de família</li>
+                                <li><strong>Meia-idade:</strong> responsabilidades múltiplas, reavaliação</li>
+                                <li><strong>Terceira idade:</strong> ressignificação de papéis, vulnerabilidade social</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Idadismo (Etarismo)</h3>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle3">
+                            <span>O Preconceito por Idade</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle3">
+                            <p class="text-gray-700 mt-4"><strong>Definição (OMS/Fiocruz):</strong> conjunto de <strong>estereótipos</strong> (como pensamos), <strong>preconceitos</strong> (como sentimos) e <strong>discriminação</strong> (como agimos) com base na idade.</p>
+                            <p class="text-gray-700 mt-3"><strong>Os três níveis:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li><strong>Institucional:</strong> políticas e práticas que excluem idosos</li>
+                                <li><strong>Interpessoal:</strong> piadas, infantilização ("vovózinho")</li>
+                                <li><strong>Internalizado:</strong> o sujeito absorve representações negativas sobre a própria idade</li>
+                            </ul>
+                            <p class="text-gray-700 mt-3"><strong>Interseccionalidade:</strong> combina-se com gênero, classe e raça — mulheres idosas são particularmente afetadas.</p>
+                            <p class="text-gray-700 mt-2"><strong>Consequências:</strong> piores saúdes física e mental, isolamento social, insegurança financeira.</p>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">🇧🇷 A Transição Demográfica Brasileira (Censo 2022)</h3>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle4">
+                            <span>Dados do Envelhecimento</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle4">
+                            <p class="text-gray-700 mt-4"><strong>Dados oficiais (IBGE, Censo 2022):</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>População idosa (60+): <strong>32,1 milhões</strong> (15,6%) — crescimento de 56% desde 2010</li>
+                                <li>População 65+ cresceu <strong>57,4%</strong> em 12 anos</li>
+                                <li><strong>Índice de envelhecimento:</strong> 80 idosos para cada 100 crianças (era 44,8 em 2010)</li>
+                                <li>A pirâmide etária <strong>perdeu a forma piramidal</strong> a partir dos anos 2000</li>
+                                <li>Em RS e RJ já há <strong>mais idosos que crianças</strong></li>
+                            </ul>
+                            <p class="text-gray-700 mt-3"><strong>Causas:</strong> queda da fecundidade (contraceptivos, trabalho feminino, urbanização) + aumento da expectativa de vida.</p>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle5">
+                            <span>Políticas e Direitos</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle5">
+                            <p class="text-gray-700 mt-4"><strong>Estatuto do Idoso (Lei 10.741/2003):</strong> marco legal de proteção aos direitos das pessoas idosas.</p>
+                            <p class="text-gray-700 mt-2"><strong>Desafios:</strong> sistema previdenciário, saúde geriátrica, combate ao idadismo, cuidado e moradia.</p>
+                            <div class="callout warning mt-3">
+                                <p class="text-gray-700"><strong>Alerta sociológico:</strong> o Brasil "envelhece antes de enriquecer" — a transição demográfica é mais rápida que a construção de políticas públicas adequadas.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="callout info mt-6">
+                        <p class="font-semibold mb-2">🇧🇷 Envelhecimento Brasileiro: Desafios de Seguridade e Inserção Laboral</p>
+                        <p class="text-gray-700 mt-3">A transição demográfica brasileira acelera-se sem acompanhamento de políticas estruturadas:</p>
+                        <ul class="list-disc ml-6 text-gray-700 mt-2">
+                            <li><strong>Pressão previdenciária:</strong> Nos estados do Centro-Oeste, aposentados ultrapassam 10,6% da população — gerando tensões nas contas públicas e assistência universal.</li>
+                            <li><strong>Etarismo corporativo:</strong> Discriminação normativa contra capacidade laboral de faixas maduras; exclusão sistemática do mercado de trabalho sob pretexto de "improdutividade".</li>
+                            <li><strong>Exclusão da matriz econômica:</strong> Idosos são sistematicamente barrados de vagas corporativas apesar de competências comprovadas — retroalimenta invisibilidade e marginalização social.</li>
+                            <li><strong>Interseccionalidade de vulnerabilidades:</strong> Mulheres idosas enfrentam camadas adicionais de discriminação por gênero + idade; pobres urbanos carecem de acesso à saúde geriátrica adequada.</li>
+                            <li><strong>Paradoxo brasileiro:</strong> "Envelhece antes de enriquecer" — crescimento exponencial de população idosa sem investimento correspondente em políticas de previdência, saúde e reinserção social.</li>
+                        </ul>
+                    </div>
+
+                    <div class="callout warning mt-8">
+                        <p class="font-semibold mb-2">Referências Utilizadas</p>
+                        <ul class="list-disc ml-6 text-gray-700">
+                            <li>IBGE (2022). <em>Censo Demográfico 2022 — População por idade e sexo</em></li>
+                            <li>Fiocruz. <em>Literacia sobre o Idadismo</em> (Campus Virtual)</li>
+                            <li>OMS (2021). <em>Relatório Global sobre o Idadismo</em></li>
+                            <li>Debert, G. G. (1999). <em>A Reinvenção da Velhice</em>. São Paulo: EDUSP</li>
+                            <li>Lei 10.741/2003 — <em>Estatuto do Idoso</em></li>
+                        </ul>
+                    </div>
+                `
+            },
+{
+                id: "culturas-juvenis",
+                title: "Culturas Juvenis",
+                emoji: "",
+                parent: "geracao",
+                
+                content: `
+                    <h2 class="text-3xl font-bold mb-2 text-gray-900">Culturas Juvenis</h2>
+                    <p class="text-gray-500 mb-6">A juventude como construção social, ritos de passagem e a diversidade das culturas jovens</p>
+
+                    <div class="callout info mb-6">
+                        <p class="font-semibold mb-2">Conceito Central</p>
+                        <p><strong>Juventude</strong> não é apenas uma fase biológica — é uma <strong>construção social e histórica</strong>. As formas de ser jovem variam conforme classe, raça, gênero, contexto histórico e cultura. As <strong>culturas juvenis</strong> são formas coletivas de expressão, resistência e sociabilidade que os jovens desenvolvem nos interstícios das instituições (escola, família, trabalho).</p>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Juventude como Construção Social</h3>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle1">
+                            <span>A invenção da juventude: perspectiva histórica</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle1">
+                            <p class="text-gray-700 mt-4">A "juventude" como categoria social relativamente autônoma é uma invenção moderna. Nas sociedades pré-industriais, a transição da infância para o trabalho adulto era direta — não havia uma fase intermediária prolongada de formação.</p>
+                            <p class="text-gray-700 mt-3"><strong>Philippe Ariès (1960) — <em>A História Social da Criança e da Família</em>:</strong> mostra que a infância e a adolescência como fases distintas e protegidas são construções históricas do Ocidente moderno, vinculadas à escolarização e à família nuclear burguesa.</p>
+                            <p class="text-gray-700 mt-3"><strong>Século XX:</strong> a escola de massa prolongou o período de dependência e formação. A <strong>sociedade de consumo</strong> criou mercados específicos para jovens (música, moda, entretenimento). A juventude tornou-se um valor cultural em si — toda a sociedade quer ser "jovem".</p>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Ritos de Passagem</h3>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle2">
+                            <span>Van Gennep e Turner: estrutura dos ritos</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle2">
+                            <p class="text-gray-700 mt-4">Arnold van Gennep (1909) identificou uma estrutura universal dos ritos de passagem — rituais que marcam a transição entre categorias sociais (criança/adulto, solteiro/casado, vivo/morto):</p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li><strong>Separação:</strong> afastamento da condição anterior</li>
+                                <li><strong>Liminaridade (margem):</strong> fase intermediária, ambígua — nem uma coisa nem outra</li>
+                                <li><strong>Incorporação (agregação):</strong> entrada na nova condição social</li>
+                            </ul>
+                            <p class="text-gray-700 mt-3">Victor Turner (1969) aprofundou a fase liminar: o iniciando fica "entre os mundos" — destituído de identidade anterior, vulnerável, submetido a provações. Essa ambiguidade é poderosa: cria <em>communitas</em>, vínculos igualitários entre os que passam pelo mesmo rito.</p>
+                            <p class="text-gray-700 mt-3"><strong>Exemplos contemporâneos:</strong> formatura, casamento, bar mitzvah, festa de 15 anos, ingresso na universidade, serviço militar.</p>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Gerações X, Y, Z e Alpha</h3>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle3">
+                            <span>O conceito sociológico de geração</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle3">
+                            <p class="text-gray-700 mt-4"><strong>Mannheim (1928) — "O Problema das Gerações":</strong> geração não é apenas faixa etária — é conjunto de pessoas que compartilham experiências históricas formativas (uma guerra, uma crise, uma revolução tecnológica) que moldam sua visão de mundo.</p>
+                            <p class="text-gray-700 mt-3"><strong>As gerações contemporâneas (categorias do mercado, com base sociológica parcial):</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li><strong>Baby Boomers (1946-1964):</strong> pós-guerra, crescimento econômico, contracultura dos 60/70, televisão</li>
+                                <li><strong>Geração X (1965-1980):</strong> ditaduras, redemocratização, MTV, crise do emprego</li>
+                                <li><strong>Geração Y / Millennials (1981-1996):</strong> internet, 11/9, crise financeira 2008, hiperconexão</li>
+                                <li><strong>Geração Z (1997-2010):</strong> nativos digitais, redes sociais, crise climática, pandemia COVID-19</li>
+                                <li><strong>Geração Alpha (2011-):</strong> IA, smartphones desde o berço</li>
+                            </ul>
+                            <p class="text-gray-700 mt-2"><strong>Cuidado:</strong> essas categorias são generalizações — dentro de cada "geração", há enorme diversidade de classe, raça, gênero e contexto.</p>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Culturas Juvenis e Sociabilidades</h3>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle4">
+                            <span>Subculturas e estilos juvenis</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle4">
+                            <p class="text-gray-700 mt-4">O Centro de Estudos Culturais Contemporâneos de Birmingham (CCCS) estudou subculturas juvenis britânicas dos anos 1970: punks, mods, rockers, skinheads.</p>
+                            <p class="text-gray-700 mt-3"><strong>Hebdige (1979) — <em>Subculture: The Meaning of Style</em>:</strong> os jovens usam estilo (roupas, música, linguagem) como <strong>bricolagem</strong> — combinam símbolos existentes de forma nova para expressar resistência às normas dominantes e à cultura de classe.</p>
+                            <p class="text-gray-700 mt-3"><strong>No Brasil:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li><strong>Hip-hop / Funk:</strong> expressão das periferias urbanas; denuncia racismo, violência policial e exclusão</li>
+                                <li><strong>Punk brasileiro (anos 1980):</strong> resistência à ditadura e depois à desigualdade urbana</li>
+                                <li><strong>Rolezinhos (2013):</strong> jovens periféricos ocupando shoppings — tensionaram divisões de classe e raça no espaço urbano</li>
+                                <li><strong>K-pop, anime, cosplay:</strong> culturas globais localizadas, comunidades de fãs intensas</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle5">
+                            <span>Juventude, redes sociais e ativismo digital</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle5">
+                            <p class="text-gray-700 mt-4">As gerações Z e Alpha cresceram em um ambiente de convergência digital. As redes sociais são espaços de sociabilidade, construção de identidade e mobilização política.</p>
+                            <p class="text-gray-700 mt-3"><strong>Ativismo digital juvenil:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>Movimento Fridays for Future (Greta Thunberg, 2018): jovens em greve pelo clima</li>
+                                <li>Black Lives Matter: liderado por jovens negros, amplificado pelas redes</li>
+                                <li>Ocupações secundaristas (Brasil, 2015-2016): estudantes contra a PEC do teto dos gastos</li>
+                                <li>March for Our Lives (EUA, 2018): jovens por controle de armas após massacre em escola</li>
+                            </ul>
+                            <p class="text-gray-700 mt-2"><strong>Desafio:</strong> o ativismo digital pode ser superficial (slacktivism) ou pode mobilizar ações concretas — a distinção depende da organização e do contexto.</p>
+                        </div>
+                    </div>
+
+                    <div class="callout info mt-6">
+                        <p class="font-semibold mb-2">🇧🇷 Juventudes Divididas: Classe, Raça e Acesso Digital no Brasil</p>
+                        <p class="text-gray-700 mt-3">A juventude nacional não é una; o abismo socioeconômico segmenta profundamente as experiências juvenis:</p>
+                        <ul class="list-disc ml-6 text-gray-700 mt-2">
+                            <li><strong>Hiato divisório de classe:</strong> Juventudes das classes protegidas (subúrbios abastados, escolas privadas) versus juventudes periféricas — segregação urbana que bloqueia encontros e homogeniza representações.</li>
+                            <li><strong>Hip-hop e funk como resistência:</strong> Expressões das periferias urbanas denunciam racismo estrutural, violência policial, exclusão laboral — não mera "diversão" mas ferramenta de conscientização política.</li>
+                            <li><strong>Rolezinhos (2013):</strong> Jovens periféricos ocupam shoppings em camadas médias; tensionam violentamente as divisões de classe e raça no espaço urbano, expondo segregação residencial.</li>
+                            <li><strong>Ativismo digital:** Ocupações secundaristas (2015-2016) contra austeridade; manifestações de rua combinadas com mobilização em redes sociais — ferramenta amplificadora mas também sujeita à desinformação algorítmica.</li>
+                            <li><strong>Exclusão digital:</strong> Acesso desigual à internet + falta de letramento digital replicam desigualdades estruturais nas comunidades on-line; "slacktivism" como simulacro de engajamento.</li>
+                        </ul>
+                    </div>
+
+                    <div class="callout warning mt-8">
+                        <p class="font-semibold mb-2">Referências Utilizadas</p>
+                        <ul class="list-disc ml-6 text-gray-700">
+                            <li>ARIÈS, P. <em>História Social da Criança e da Família</em>. Rio de Janeiro: LTC, 1981 [1960].</li>
+                            <li>MANNHEIM, K. O problema das gerações. In: <em>Sociologia do Conhecimento</em>. Porto: Rés, 1982 [1928].</li>
+                            <li>VAN GENNEP, A. <em>Os Ritos de Passagem</em>. Petrópolis: Vozes, 1978 [1909].</li>
+                            <li>HEBDIGE, D. <em>Subculture: The Meaning of Style</em>. Londres: Methuen, 1979.</li>
+                            <li>ABRAMO, H. W. <em>Cenas Juvenis</em>. São Paulo: Scritta, 1994.</li>
+                        </ul>
+                    </div>
+                `
+            },
+{
+                id: "educacao-socializacao",
+                title: "Educação e Socialização",
+                emoji: "",
+                parent: "educacao",
+                
+                content: `
+                    <h2 class="text-3xl font-bold mb-2 text-gray-900">Educação e Socialização</h2>
+                    <p class="text-gray-500 mb-6">A escola que temos vs. a escola que queremos</p>
+
+                    <div class="callout info mb-6">
+                        <p class="font-semibold mb-2">Conceito Central</p>
+                        <p><strong>Educação não é neutra.</strong> Escola aparentemente "igual para todos" na verdade <strong>reproduz desigualdades</strong> de classe, raça e gênero. <strong>Socialização:</strong> Processo de internacionalizar normas, valores e papéis que prepararam para viver em sociedade.</p>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Pierre Bourdieu - Reprodução Social</h3>
+                    <p class="mb-4 text-gray-700">Sociólogo francês Pierre Bourdieu (1930-2002) mostrou que escola reproduce desigualdades através de 3 conceitos:</p>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle1">
+                            <span>Habitus</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle1">
+                            <p class="text-gray-700 mt-4"><strong>Definição:</strong> Disposições duráveis internalizadas que orientam práticas. É um "saber-estar" no mundo que parece natural mas é social.</p>
+                            <p class="text-gray-700 mt-3"><strong>Características:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>Adquirido na infância (principalmente na família)</li>
+                                <li>Varia por classe social</li>
+                                <li>Incorporado no corpo e na mente</li>
+                                <li>Permanece ao longo da vida</li>
+                            </ul>
+                            <p class="text-gray-700 mt-3"><strong>Exemplos:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>Jeito de falar (sotaque, vocabulário refinado)</li>
+                                <li>Etiqueta à mesa</li>
+                                <li>Vestuário apropriado</li>
+                                <li>Gosto em música/arte</li>
+                            </ul>
+                            <p class="text-gray-700 mt-2"><strong>Problema:</strong> Criança rica herda habitus refinado; criança pobre herda habitus popular. Escola recompensa quem tem habitus burguês.</p>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle2">
+                            <span>Capital Cultural</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle2">
+                            <p class="text-gray-700 mt-4"><strong>Definição:</strong> Conhecimento, educação, gostos refinados, credenciais escolares transmitidos de pais para filhos.</p>
+                            <p class="text-gray-700 mt-3"><strong>Exemplos de Capital Cultural:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>Pais com educação superior → filhos herdam conhecimento</li>
+                                <li>Livros em casa → criança cresce lendo</li>
+                                <li>Ida a museus → criança aprende "gosto culto"</li>
+                                <li>Linguagem sofisticada → criança fala melhor</li>
+                            </ul>
+                            <p class="text-gray-700 mt-3"><strong>Problema:</strong> Escola valoriza capital cultural burguês como "único válido".</p>
+                            <p class="text-gray-700 mt-2"><strong>Resultado:</strong> Classe alta → sucesso escolar; Classe baixa → fracasso.</p>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle3">
+                            <span>Reprodução Social</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle3">
+                            <p class="text-gray-700 mt-4"><strong>Tese Central (Bourdieu & Passeron, 1970):</strong> Escola não transforma, mas <strong>reproduz</strong> desigualdades de classe.</p>
+                            <p class="text-gray-700 mt-3"><strong>Mecanismo:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>Escola define o que é "conhecimento legítimo" (gosto burguês)</li>
+                                <li>Alunos com capital cultural alto se adaptam facilmente</li>
+                                <li>Alunos com capital cultural baixo fracassam</li>
+                                <li>Escola naturaliza isso como "mérito" ("você não estudou")</li>
+                                <li>Desigualdade se perpetua de geração a geração</li>
+                            </ul>
+                            <p class="text-gray-700 mt-3"><strong>Violência Simbólica:</strong> Escola impõe cultura burguesa como universal, invisibilizando que é apenas uma cultura entre muitas.</p>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Émile Durkheim - Socialização e Coesão Social</h3>
+                    <p class="mb-4 text-gray-700">Perspectiva diferente: Durkheim vê educação como força POSITIVA:</p>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle4">
+                            <span>Função Social da Educação</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle4">
+                            <p class="text-gray-700 mt-4"><strong>Ideia:</strong> Educação transmite <strong>legado cultural e moral</strong>, criando coesão social.</p>
+                            <p class="text-gray-700 mt-3"><strong>Processo de Socialização:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>Criança NÃO é ser social ao nascer</li>
+                                <li>Educação a transforma em ser social através de:</li>
+                                <li>Transmissão de conhecimento e valores</li>
+                                <li>Aprendizagem de papéis sociais</li>
+                                <li>Desenvolvimento de moralidade</li>
+                            </ul>
+                            <p class="text-gray-700 mt-3"><strong>Função Moral:</strong> Educação "moraliza" desejos individuais, criando solidariedade entre diferentes grupos.</p>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Paulo Freire - Educação Libertadora</h3>
+                    <p class="mb-4 text-gray-700">Educador brasileiro Paulo Freire (1921-1997) propôs educação como ferramenta de libertação:</p>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle5">
+                            <span>Educação Bancária vs. Problematizadora</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle5">
+                            <p class="text-gray-700 mt-4"><strong>Modelo Tradicional (que critica):</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>Professor fala, aluno escuta (passivo)</li>
+                                <li>Aluno = "conta bancária" a ser preenchida</li>
+                                <li>Não há pensamento crítico</li>
+                                <li>Mantém opressão</li>
+                            </ul>
+                            <p class="text-gray-700 mt-3"><strong>Modelo Proposto (Educação Libertadora):</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>Diálogo entre professor e aluno</li>
+                                <li>Ambos aprendem juntos</li>
+                                <li>Problematização da realidade</li>
+                                <li>Conscientização (consciousness-raising)</li>
+                                <li>Ação para transformação (práxis)</li>
+                            </ul>
+                            <p class="text-gray-700 mt-2"><strong>Lema de Freire:</strong> "Quando a educação não é libertadora, o sonho do oprimido é ser o opressor"</p>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">🇧🇷 Desigualdade Educacional no Brasil</h3>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle6">
+                            <span>Realidade: Escolas Públicas vs. Privadas</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle6">
+                            <p class="text-gray-700 mt-4"><strong>Disparidades:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>Escolas públicas de qualidade inferior</li>
+                                <li>Escolas privadas caras mas melhores</li>
+                                <li>Maioria de pobres/negros em escolas ruins</li>
+                                <li>Recursos, professores, infraestrutura desigual</li>
+                            </ul>
+                            <p class="text-gray-700 mt-3"><strong>Resultado esperado:</strong> Reproduz desigualdade de classe (exatamente como Bourdieu previu)</p>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle7">
+                            <span>ENEM - Exame Nacional do Ensino Médio</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle7">
+                            <p class="text-gray-700 mt-4"><strong>Criado:</strong> 1998, como avaliação de desempenho.</p>
+                            <p class="text-gray-700 mt-2"><strong>Uso atual:</strong> Acesso ao ensino superior via SISU (Sistema de Seleção Unificada)</p>
+                            <p class="text-gray-700 mt-3"><strong>Desigualdade:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>Alunos de escolas privadas pontuam mais</li>
+                                <li>Alunos pobres pontuam menos</li>
+                                <li>Falta acesso a preparatórios pagos</li>
+                                <li>Educação deficiente antes do ENEM</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle8">
+                            <span>Cotas - Ações Afirmativas (Lei 12.711/2012)</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle8">
+                            <p class="text-gray-700 mt-4"><strong>O que é:</strong> Reserva de vagas em universidades para grupos historicamente excluídos.</p>
+                            <p class="text-gray-700 mt-3"><strong>Tipos:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>Cotas sociais (50% vagas para egressos escola pública)</li>
+                                <li>Cotas raciais (para negros e pardos)</li>
+                                <li>Cotas indígenas (para povos indígenas)</li>
+                            </ul>
+                            <p class="text-gray-700 mt-3"><strong>Histórico:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>2000: UERJ primeira com cotas</li>
+                                <li>2003: UERJ primeira com cotas raciais</li>
+                                <li>2004: UnB adota cotas</li>
+                                <li>2012: Lei 12.711 torna cotas federais obrigatórias</li>
+                            </ul>
+                            <p class="text-gray-700 mt-3"><strong>Impacto:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>Aumento de negros/pobres no ensino superior</li>
+                                <li>Maior pluralidade nas universidades</li>
+                                <li>Curto prazo (não resolve desigualdade estrutural)</li>
+                                <li>Não atinge fundamental/médio</li>
+                            </ul>
+                            <p class="text-gray-700 mt-2"><strong>Problema:</strong> Cotas tratam <strong>sintoma</strong> (falta de acesso), não <strong>causa</strong> (educação desigual desde cedo).</p>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle9">
+                            <span>Currículo Oculto</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle9">
+                            <p class="text-gray-700 mt-4"><strong>Conceito:</strong> Conjunto de normas, valores, comportamentos <strong>ensinados implicitamente</strong>, não mencionados no currículo oficial.</p>
+                            <p class="text-gray-700 mt-3"><strong>Exemplos:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>Obediência a autoridade ("Sente, cale-se, escuta")</li>
+                                <li>Competição entre alunos (notas, "melhor aluno")</li>
+                                <li>Divisão por gênero (meninos esportes, meninas artes)</li>
+                                <li>Branqueamento em materiais didáticos</li>
+                                <li>Supressão de diferenças (homogeneização)</li>
+                            </ul>
+                            <p class="text-gray-700 mt-3"><strong>Efeito:</strong> Socializa alunos para aceitar hierarquias e exploração como "naturais".</p>
+                        </div>
+                    </div>
+
+                    <div class="callout success mt-8">
+                        <p class="font-semibold mb-2">Para Refletir</p>
+                        <p>A educação pode ser ferramenta de <strong>libertação</strong> (Freire) ou de <strong>dominação</strong> (Bourdieu, Althusser). Depende de como é estruturada e quem a controla.</p>
+                    </div>
+
+                    <div class="callout info mt-6">
+                        <p class="font-semibold mb-2">🇧🇷 Educação Brasileira: Reprodução de Desigualdades Estruturais</p>
+                        <p class="text-gray-700 mt-3">A escola pública brasileira enfrenta disputas políticas sobre currículo e reforma, reproduzindo desigualdades:</p>
+                        <ul class="list-disc ml-6 text-gray-700 mt-2">
+                            <li><strong>Novo Ensino Médio e austeridade:</strong> Reformas curriculares desacoplam educação fundamental do desenvolvimento; redução de investimento público encarniçada.</li>
+                            <li><strong>Currículo oculto e branqueamento:</strong> Materiais didáticos suprimem contribuições de povos indígenas e africanos; normalização de valores euro-ocidentais como universais.</li>
+                            <li><strong>Cotas como tapaço:</strong> Lei 12.711/2012 reserva vagas (50% escola pública, 25% pretos/pardos/indígenas) — avanço cívico mas insuficiente; trata sintoma (acesso superior) não causa (educação deficiente desde fundamental).</li>
+                            <li><strong>ENEM e meritocracia falsa:</strong> Acesso ao ensino superior via SISU; privatização de preparatórios amplifica vantagem de alunos de escolas privadas.</li>
+                            <li><strong>Conflito político sobre conteúdo:</strong> Disputa entre pedagogias libertárias (Freire) versus reprodução técnica (Bourdieu); lobby conservador nega questões de gênero, raça e classe no currículo.</li>
+                        </ul>
+                    </div>
+
+                    <div class="callout warning mt-8">
+                        <p class="font-semibold mb-2">Referências Utilizadas</p>
+                        <ul class="list-disc ml-6 text-gray-700">
+                            <li>Bourdieu, P. & Passeron, J.C. (1970). <em>A Reprodução</em></li>
+                            <li>Freire, P. (1970). <em>Pedagogia do Oprimido</em></li>
+                            <li>Durkheim, É. (1858-1917). Contribuições em educação e socialização</li>
+                            <li>Althusser, L. (1970). Ideologia e Aparelhos Ideológicos do Estado</li>
+                            <li>Lei 12.711/2012 - Brasil (Cotas e ações afirmativas)</li>
+                        </ul>
+                    </div>
+                `
+            },
+{
+                id: "sistema-capitalista",
+                title: "Sistema Capitalista",
+                emoji: "",
+                parent: "sistema-cap",
+                
+                content: `
+                    <h2 class="text-3xl font-bold mb-2 text-gray-900">Sistema Capitalista</h2>
+                    <p class="text-gray-500 mb-6">Origens, desenvolvimento histórico e a crítica marxiana do capitalismo</p>
+
+                    <div class="callout info mb-6">
+                        <p class="font-semibold mb-2">Conceito Central</p>
+                        <p><strong>Capitalismo</strong> é um sistema econômico e social baseado na propriedade privada dos meios de produção, no trabalho assalariado e na acumulação de capital mediante produção de mercadorias para o mercado. Não é natural ou eterno: surgiu historicamente, transformou-se e é objeto de intensas disputas sociais.</p>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Origens do Capitalismo</h3>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle1">
+                            <span>A transição do Feudalismo ao Capitalismo</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle1">
+                            <p class="text-gray-700 mt-4">O <strong>feudalismo</strong> (séculos IX-XV) era baseado em:</p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>Propriedade fundiária (terra) controlada pela nobreza</li>
+                                <li>Relação de servidão: camponeses trabalhavam a terra em troca de proteção e permanência</li>
+                                <li>Produção voltada para subsistência, não para o mercado</li>
+                                <li>Corporações de ofício controlando produção artesanal nas cidades</li>
+                            </ul>
+                            <p class="text-gray-700 mt-3"><strong>Fatores que dissolviram o feudalismo:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>Peste Negra (1347-51): matou 1/3 da Europa, escasseou mão de obra, fortaleceu os servos</li>
+                                <li>Expansão do comércio e das cidades (burgos)</li>
+                                <li>Cercos (enclosures) na Inglaterra: lords expulsaram camponeses das terras comunais, criando trabalhadores "livres" (sem terra, obrigados a vender sua força de trabalho)</li>
+                                <li>Grandes Navegações: acumulação primitiva via colonialismo e tráfico de escravizados</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Fases do Capitalismo</h3>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle2">
+                            <span>Capitalismo Mercantil (séculos XV-XVIII)</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle2">
+                            <p class="text-gray-700 mt-4">O <strong>capitalismo mercantil</strong> caracterizou-se pela expansão do comércio internacional, acumulação de riqueza por meio da diferença de preços e exploração colonial.</p>
+                            <p class="text-gray-700 mt-3"><strong>Características:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>Mercantilismo: riqueza = acumulação de metais preciosos; balança comercial favorável</li>
+                                <li>Companhias de comércio monopolistas (Companhia das Índias Orientais)</li>
+                                <li>Colonialismo: extração de recursos das colônias (América, África, Ásia)</li>
+                                <li><strong>Tráfico de escravizados africanos</strong> como base da economia colonial</li>
+                                <li>Brasil: economia voltada para exportação de produtos primários (açúcar, ouro, algodão)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle3">
+                            <span>Capitalismo Industrial (séculos XVIII-XIX)</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle3">
+                            <p class="text-gray-700 mt-4">A <strong>Revolução Industrial</strong> (Inglaterra, a partir de 1760) inaugurou o capitalismo industrial: produção em fábricas, máquinas a vapor, proletariado urbano.</p>
+                            <p class="text-gray-700 mt-3"><strong>Transformações sociais:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>Urbanização acelerada e surgimento da classe operária</li>
+                                <li>Condições de trabalho brutais: 14-16h/dia, trabalho infantil, sem férias ou previdência</li>
+                                <li>Surgimento do movimento operário (sindicalismo, luddismo, cartismo)</li>
+                                <li>Liberalismo econômico (Smith, Ricardo): mercado autorregulado, "mão invisível"</li>
+                            </ul>
+                            <p class="text-gray-700 mt-3">É esse capitalismo que Marx analisa em <em>O Capital</em> (1867).</p>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle4">
+                            <span>Capitalismo Monopolista (século XX)</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle4">
+                            <p class="text-gray-700 mt-4">No final do século XIX e início do XX, a <strong>concentração de capital</strong> levou à formação de monopólios e oligopólios: grandes corporações dominando setores inteiros.</p>
+                            <p class="text-gray-700 mt-3"><strong>Lenin (1917) — <em>Imperialismo, Fase Superior do Capitalismo</em>:</strong> o capitalismo monopolista exporta capital para países periféricos e domina politicamente, inaugurando o imperialismo moderno.</p>
+                            <p class="text-gray-700 mt-3"><strong>Fordismo-taylorismo:</strong> Ford e Taylor desenvolveram métodos de produção em massa com máxima eficiência e padronização — linha de montagem, divisão extrema do trabalho, salários mais altos para consumo em massa.</p>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Mais-Valia e Valor-Trabalho: Karl Marx</h3>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle5">
+                            <span>A teoria do valor e a exploração do trabalho</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle5">
+                            <p class="text-gray-700 mt-4">Em <em>O Capital</em> (1867), Marx desenvolve a <strong>teoria do valor-trabalho</strong>: o valor de uma mercadoria é determinado pelo tempo de trabalho socialmente necessário para produzi-la.</p>
+                            <p class="text-gray-700 mt-3"><strong>Mais-valia:</strong> diferença entre o valor produzido pelo trabalhador e o salário que recebe.</p>
+                            <p class="text-gray-700 mt-2"><em>Exemplo simplificado:</em> um trabalhador é pago por 4h de trabalho, mas trabalha 8h. As 4h "extras" geram lucro para o capitalista — essa é a mais-valia.</p>
+                            <p class="text-gray-700 mt-3"><strong>Tipos de mais-valia:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li><strong>Absoluta:</strong> aumentar a jornada de trabalho</li>
+                                <li><strong>Relativa:</strong> aumentar a produtividade por meio de tecnologia, sem aumentar a jornada</li>
+                            </ul>
+                            <p class="text-gray-700 mt-3"><strong>Alienação:</strong> no capitalismo, o trabalhador se aliena de seu produto (que pertence ao capitalista), de seu processo de trabalho, de sua espécie e de outros seres humanos.</p>
+                        </div>
+                    </div>
+
+                    <div class="callout info mt-6">
+                        <p class="font-semibold mb-2">🇧🇷 Capitalismo Brasileiro: Acumulação Primitiva e Colonialismo</p>
+                        <p class="text-gray-700 mt-3">O Brasil foi forjado sob lógica capitalista mercantilista predatória desde a colonização:</p>
+                        <ul class="list-disc ml-6 text-gray-700 mt-2">
+                            <li><strong>Acumulação primitiva via escravidão africana:</strong> Tráfico negreiro estruturou economia colonial; trabalho coercitivo gerou base material de capital europeu e brasileiro.</li>
+                            <li><strong>Economia agroexportadora:</strong> Açúcar, algodão, ouro — latifúndio monocultor exportador por séculos, retroalimentando dependência periférica.</li>
+                            <li><strong>Transição para capitalismo industrial lento:</strong> Diferente de industrialização europeia; Brasil permaneceu fornecedor de matérias-primas até meados do século XX.</li>
+                            <li><strong>Capitalismo monopolista contemporâneo:</strong> Corporações multinacionais, concentração de terras, oligopólios em energia/mídia/agronegócio; Estado brasileiro reduz investimento público (austeridade).</li>
+                            <li><strong>Paradoxo de riqueza em meio à pobreza:</strong> Brasil é 6ª maior economia global mas concentra extrema desigualdade — herança de séculos de exploração racializada não superada.</li>
+                        </ul>
+                    </div>
+
+                    <div class="callout warning mt-8">
+                        <p class="font-semibold mb-2">Referências Utilizadas</p>
+                        <ul class="list-disc ml-6 text-gray-700">
+                            <li>MARX, K. <em>O Capital: crítica da economia política</em>. Livro I. São Paulo: Boitempo, 2013 [1867].</li>
+                            <li>MARX, K.; ENGELS, F. <em>Manifesto do Partido Comunista</em>. São Paulo: Boitempo, 1998 [1848].</li>
+                            <li>LÊNIN, V. I. <em>Imperialismo, Fase Superior do Capitalismo</em>. São Paulo: Global, 1987 [1917].</li>
+                            <li>WOOD, E. M. <em>A Origem do Capitalismo</em>. Rio de Janeiro: Jorge Zahar, 2001.</li>
+                            <li>BRAVERMAN, H. <em>Trabalho e Capital Monopolista</em>. Rio de Janeiro: LTC, 1974.</li>
+                        </ul>
+                    </div>
+                `
+            },
+{
+                id: "trabalho",
+                title: "Trabalho",
+                emoji: "",
+                parent: "trabalho",
+                
+                content: `
+                    <h2 class="text-3xl font-bold mb-2 text-gray-900">Trabalho</h2>
+                    <p class="text-gray-500 mb-6">Dimensão central da vida social e econômica</p>
+                    
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Origem do Trabalho</h3>
+                    
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle28">
+                            <span>Trabalho na História</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle28">
+                            <p class="text-gray-700 mt-4">O trabalho é atividade humana fundamental. Diferenças importantes:</p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li><strong>Caça e coleta:</strong> Trabalho direto pela subsistência</li>
+                                <li><strong>Agricultura:</strong> Sedentarismo, apropriação de terra</li>
+                                <li><strong>Manufatura:</strong> Divisão do trabalho inicial</li>
+                                <li><strong>Capitalismo:</strong> Trabalho como mercadoria (força de trabalho)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Formas Históricas de Trabalho Coercitivo</h3>
+                    
+                    <p class="mb-4 text-gray-700">Análise de Marx e historiadores:</p>
+                    <ul class="list-disc ml-6 text-gray-700 mb-4">
+                        <li><strong>Servidão (feudal):</strong> Trabalhador preso à terra, semi-livre</li>
+                        <li><strong>Escravidão:</strong> Trabalhador como propriedade, coerção total (ocorreu séculos XVII-XIX)</li>
+                        <li><strong>Trabalho assalariado:</strong> Trabalhador "livre" vende sua força de trabalho por salário (capitalismo)</li>
+                    </ul>
+                    
+                    <div class="callout warning">
+                        <p class="font-semibold mb-2">Crítica Marxista</p>
+                        <p>Marx argumentava que mesmo o trabalho assalariado é exploração: o trabalhador recebe menos que o valor que produz (mais-valia).</p>
+                    </div>
+                    
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Organização do Trabalho nas Sociedades Capitalistas</h3>
+                    
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle29">
+                            <span>Fordismo e Pós-Fordismo</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle29">
+                            <p class="text-gray-700 mt-4"><strong>Fordismo:</strong> Modelo de produção em massa (século XX), com linha de produção, divisão rígida do trabalho, sindicatos fortes.</p>
+                            <p class="text-gray-700 mt-2"><strong>Pós-fordismo (flexível):</strong> Produção descentralizada, terceirização, precarização, enfraquecimento sindical (desde 1980s).</p>
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Movimentos dos Trabalhadores</h3>
+                    
+                    <p class="mb-4 text-gray-700">Trabalhadores organizaram-se para conquistar direitos:</p>
+                    <ul class="list-disc ml-6 text-gray-700">
+                        <li>Luddismo (destruição de máquinas) - século XIX</li>
+                        <li>Sindicalismo e greves</li>
+                        <li>Partidos de esquerda</li>
+                        <li>Movimentos contemporâneos (precarização, trabalho digital)</li>
+                    </ul>
+                    
+                    <div class="callout info mt-6 mb-6">
+                        <p class="font-semibold mb-2">🇧🇷 Trabalho no Brasil: Informalidade, Precarização e Herança Escravocrata</p>
+                        <p class="text-gray-700 mt-3">O trabalho brasileiro é marcado por persistente precarização e profundas desigualdades estruturais:</p>
+                        <ul class="list-disc ml-6 text-gray-700 mt-2">
+                            <li><strong>Informalidade estrutural:</strong> 40% da força de trabalho está no setor informal (IBGE), sem direitos trabalhistas, previdência ou proteção. Herança de ausência de direitos trabalhistas para negros/as após abolição (1888).</li>
+                            <li><strong>Reforma trabalhista de 2017:</strong> Lei 13.467 precarizou ainda mais: fim de proteções (FGTS, justa causa), flexibilização de terceirização, trabalho intermitente, facilitação de demissões. Sindicatos perderam poder de negociação.</li>
+                            <li><strong>Uberização em expansão:</strong> 1,7 milhões de entregadores e motoristas de aplicativo (sem direitos); trabalho doméstico remunerado concentrado em mulheres negras (13-15% da PEA). Algoritmos determinam salários, horários, penalidades.</li>
+                            <li><strong>Divisão racial e de gênero do trabalho:</strong> Mulheres negras concentradas em trabalho doméstico (média salarial 1/3 de homens brancos); homens negros superrepresentados em trabalho informal/precário. Isso reflete continuidade de racismo estrutural pós-abolição.</li>
+                            <li><strong>Movimento sindical fragmentado e enfraquecido:</strong> CUT, Força Sindical e outras confederações enfrentam desafios: cooptação estatal, redução de taxação, enfraquecimento da negociação coletiva. Greves em 2023-2024 reemergiram contra austeridade, mas encontram Estado hostil e mídia oligopolista.</li>
+                        </ul>
+                    </div>
+                    <div class="callout warning mt-8">
+                        <p class="font-semibold mb-2">Referências Utilizadas</p>
+                        <ul class="list-disc ml-6 text-gray-700">
+                            <li>MARX, K. <em>O Capital</em>, Livro I. 1867.</li>
+                            <li>BRAVERMAN, H. <em>Trabalho e Capital Monopolista</em>. Rio de Janeiro: LTC, 1974.</li>
+                            <li>ANTUNES, R. <em>Os Sentidos do Trabalho</em>. São Paulo: Boitempo, 1999.</li>
+                        </ul>
+                    </div>
+                `
+            },
+{
+                id: "economia-sociedade-contemporanea",
+                title: "Economia e Sociedade Contemporânea",
+                emoji: "",
+                parent: "economia-contemp",
+                
+                content: `
+                    <h2 class="text-3xl font-bold mb-2 text-gray-900">Economia e Sociedade Contemporânea</h2>
+                    <p class="text-gray-500 mb-6">Neoliberalismo, financeirização, acumulação flexível e precarização do trabalho</p>
+
+                    <div class="callout info mb-6">
+                        <p class="font-semibold mb-2">Conceito Central</p>
+                        <p>A partir dos anos 1970-1980, o capitalismo passou por transformações profundas: crise do fordismo, ascensão do <strong>neoliberalismo</strong>, financeirização da economia e surgimento do <strong>capitalismo informacional</strong>. O resultado foi uma reestruturação do trabalho marcada pela <strong>flexibilização e precarização</strong> — com impactos desiguais conforme classe, raça e gênero.</p>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Liberalismo e Neoliberalismo</h3>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle1">
+                            <span>Do liberalismo clássico ao neoliberalismo</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle1">
+                            <p class="text-gray-700 mt-4"><strong>Liberalismo clássico</strong> (Smith, Ricardo, século XVIII): o mercado se autorregula pela "mão invisível"; o Estado deve se abster de intervir na economia.</p>
+                            <p class="text-gray-700 mt-3"><strong>Keynesianismo / Estado de Bem-Estar Social</strong> (pós-1929, pós-1945): a Grande Depressão mostrou que o mercado não se autorregula. Keynes propõe investimento estatal para estimular demanda. Os países desenvolvidos constroem o welfare state: seguro-desemprego, previdência, saúde e educação públicas, regulação do trabalho.</p>
+                            <p class="text-gray-700 mt-3"><strong>Neoliberalismo</strong> (Hayek, Friedman; implementado por Thatcher/Reagan anos 1980):</p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>Retorno ao laissez-faire: privatizações, desregulamentação, corte de gastos sociais</li>
+                                <li>Liberalização comercial e financeira (globalização econômica)</li>
+                                <li>Enfraquecimento dos sindicatos e da proteção trabalhista</li>
+                                <li>Lógica empresarial aplicada ao setor público (New Public Management)</li>
+                            </ul>
+                            <p class="text-gray-700 mt-2">Harvey (2005) define o neoliberalismo como projeto de classe: restauração do poder das elites econômicas, não simples teoria econômica.</p>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Sistema Financeiro e Ordem Global</h3>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle2">
+                            <span>Financeirização da economia</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle2">
+                            <p class="text-gray-700 mt-4"><strong>Financeirização:</strong> crescente predomínio da lógica financeira sobre a produtiva. O capital especulativo (ações, derivativos, hedge funds) supera o capital investido na produção real.</p>
+                            <p class="text-gray-700 mt-3"><strong>Consequências:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>Empresas priorizam retorno ao acionista (shareholder value) sobre investimento produtivo e empregos</li>
+                                <li>Crises financeiras frequentes: México (1994), Ásia (1997), Argentina (2001), EUA (2008)</li>
+                                <li>Crise de 2008 ("crise do subprime"): especulação imobiliária provocou colapso bancário global; o Estado foi chamado a salvar bancos — socialização das perdas, privatização dos lucros</li>
+                                <li>Paraísos fiscais e evasão de impostos por multinacionais</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Acumulação Flexível e Capitalismo Informacional</h3>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle3">
+                            <span>Do fordismo à acumulação flexível</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle3">
+                            <p class="text-gray-700 mt-4">Harvey (1989) — <em>A Condição Pós-Moderna</em>: nos anos 1970, o fordismo entrou em crise (estagflação, conflitos trabalhistas, queda de lucratividade). Surgiu o regime de <strong>acumulação flexível</strong>:</p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>Toyotismo / Just in Time: produção sob demanda, sem estoques, com qualidade total</li>
+                                <li>Terceirização e subcontratação: fragmentação da cadeia produtiva</li>
+                                <li>Trabalhador polivalente e flexível: múltiplas funções, contratos temporários</li>
+                                <li>Globalização das cadeias produtivas: montagem em diferentes países</li>
+                            </ul>
+                            <p class="text-gray-700 mt-3">Castells (1996) — <em>A Sociedade em Rede</em>: o capitalismo informacional organiza a produção em torno da informação e das redes globais. O <strong>trabalho imaterial</strong> (conhecimento, criatividade, afeto) torna-se central.</p>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle4">
+                            <span>Infoproletariado, uberização e plataformas digitais</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle4">
+                            <p class="text-gray-700 mt-4"><strong>Uberização</strong> (Abílio, 2020): modelo de trabalho mediado por plataformas digitais (Uber, iFood, Rappi) que transfere os riscos e custos ao trabalhador enquanto a plataforma retém o controle e o lucro.</p>
+                            <p class="text-gray-700 mt-3"><strong>Características do trabalho de plataforma:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>Trabalhadores classificados como "autônomos" — sem direitos trabalhistas (FGTS, férias, 13º)</li>
+                                <li>Controle algorítmico: a plataforma define preços, rotas, penalidades</li>
+                                <li>Gerenciamento gamificado: metas, pontuação, avaliações dos clientes</li>
+                                <li>No Brasil: 1,5 milhão+ de entregadores e motoristas de aplicativo (IBGE, 2022)</li>
+                            </ul>
+                            <p class="text-gray-700 mt-3"><strong>Infoproletariado</strong> (Antunes, 2020): trabalhadores do setor de tecnologia e serviços digitais que, apesar de manipularem informação, enfrentam condições precárias de trabalho.</p>
+                        </div>
+                    </div>
+
+                    <div class="callout critical mt-6">
+                        <p class="font-semibold mb-2">Desigualdade na era digital</p>
+                        <p class="text-gray-700">A digitalização da economia não beneficia igualmente todos. Há uma nova divisão entre quem possui e controla plataformas e dados (Big Tech: Apple, Google, Amazon, Meta) e quem vende sua força de trabalho — física ou digital — nessas plataformas. A riqueza gerada se concentra no topo enquanto a precarização avança nas bases.</p>
+                    </div>
+
+                    <div class="callout info mt-6">
+                        <p class="font-semibold mb-2">🇧🇷 Brasil Neoliberal: Austeridade, Financeirização e Uberização Descontrolada</p>
+                        <p class="text-gray-700 mt-3">O Brasil vivencia neoliberalismo extremado com financeirização acelerada e precarização massiva:</p>
+                        <ul class="list-disc ml-6 text-gray-700 mt-2">
+                            <li><strong>Austeridade fiscal permanente:</strong> Teto de gastos (EC 95/2016) congela investimento em saúde, educação, previdência — Estado reduz capacidade de regulação; privatizações aceleradas (energia, água, saneamento).</li>
+                            <li><strong>Financeirização extrema:</strong> Agronegócio exportador opera via especulação de commodities; bancos concentram capital fictício; empresas cortam empregos para "retorno ao acionista".</li>
+                            <li><strong>Uberização em massa:</strong> 1,7 milhões de entregadores/motoristas de app sem direitos trabalhistas; algoritmos fixam preços e cobram taxas predatórias; rachadinha digital de renda.</li>
+                            <li><strong>Herança escravocrata ampliada:</strong> Trabalhadores rurais em condições de servidão ("debt bondage"); mulheres negras concentradas em trabalho doméstico não remunerado; informalidade estrutural atinge 40% da força de trabalho.</li>
+                            <li><strong>Paradoxo do "6ª maior economia":</strong> Brasil gera riqueza colossal mas concentra extrema desigualdade — resultado direto de séculos de espoliação que neoliberalismo contemporâneo aprofunda.</li>
+                        </ul>
+                    </div>
+
+                    <div class="callout warning mt-8">
+                        <p class="font-semibold mb-2">Referências Utilizadas</p>
+                        <ul class="list-disc ml-6 text-gray-700">
+                            <li>HARVEY, D. <em>A Condição Pós-Moderna</em>. São Paulo: Loyola, 1992 [1989].</li>
+                            <li>HARVEY, D. <em>O Neoliberalismo: história e implicações</em>. São Paulo: Loyola, 2008 [2005].</li>
+                            <li>CASTELLS, M. <em>A Sociedade em Rede</em>. São Paulo: Paz e Terra, 1999 [1996].</li>
+                            <li>ANTUNES, R. <em>Coronavírus: o trabalho sob fogo cruzado</em>. São Paulo: Boitempo, 2020.</li>
+                            <li>ABÍLIO, L. C. <em>Uberização: a era do trabalhador just-in-time</em>. <em>Estudos Avançados</em>, São Paulo, v. 34, n. 98, 2020.</li>
+                        </ul>
+                    </div>
+                `
+            },
+{
+    id: "consumo-estilos-vida",
+    title: "Consumo e Estilos de Vida",
+    emoji: "",
+                parent: "consumo",
+    
+    content: `
+                    <h2 class="text-3xl font-bold mb-2 text-gray-900">Consumo e Estilos de Vida</h2>
+                    <p class="text-gray-500 mb-6">Distinção, identidade e consumerismo na sociedade moderna</p>
+                    <div class="callout info mb-6">
+                        <p class="font-semibold mb-2">Conceito-chave</p>
+                        <p>O consumo moderno vai muito além da satisfação de necessidades — é um mecanismo de distinção social, construção de identidade e expressão de pertencimento. "Diz-me o que consomes e te direi quem és."</p>
+                    </div>
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Consumo como Fenômeno Social</h3>
+                    <p class="mb-4 text-gray-700">Na sociedade capitalista contemporânea, o consumo assume um papel central na vida social que vai muito além da economia. É através do consumo que os indivíduos expressam pertencimentos, constroem identidades e afirmam posições sociais. Mas esse processo não é livre — é estruturado por relações de classe, gênero, raça e acesso.</p>
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggleCEV1">
+                            <span>Veblen: Consumo Conspícuo</span><span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggleCEV1">
+                            <p class="text-gray-700 mt-4">Thorstein Veblen, em <em>A Teoria da Classe Ociosa</em> (1899), foi um dos primeiros a analisar o consumo como fenômeno social:</p>
+                            <ul class="list-disc ml-6 mt-2 text-gray-700 space-y-2">
+                                <li><strong>Consumo conspícuo:</strong> consumo realizado para demonstrar riqueza e status aos outros, não para satisfação de necessidades.</li>
+                                <li><strong>Ócio vistoso:</strong> a exibição do não-trabalho como sinal de prestígio (a classe ociosa não precisa trabalhar).</li>
+                                <li>A ideia de que a emulação — imitar o consumo das classes superiores — é o motor psicológico do consumo nas sociedades capitalistas.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggleCEV2">
+                            <span>Bourdieu: Gosto, Distinção e Classe</span><span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggleCEV2">
+                            <p class="text-gray-700 mt-4">Pierre Bourdieu, em <em>A Distinção</em> (1979), analisou como o gosto funciona como um marcador de classe:</p>
+                            <ul class="list-disc ml-6 mt-2 text-gray-700 space-y-2">
+                                <li>O gosto (preferências estéticas e de consumo) não é natural ou individual — é <strong>socialmente construído</strong> pelo habitus de classe.</li>
+                                <li>As classes dominantes usam o "gosto legítimo" (preferência pela arte erudita, culinária refinada, destinos turísticos exclusivos) para se distinguir das classes populares.</li>
+                                <li>O consumo cultural funciona como reprodução social: as diferenças de gosto naturalizam as diferenças de classe, tornando a desigualdade parecer uma questão de "cultura" ou "educação".</li>
+                                <li><strong>Capital cultural objetivado:</strong> livros, obras de arte, instrumentos musicais — bens que incorporam capital cultural e distinguem seus proprietários.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggleCEV3">
+                            <span>Bauman e Lipovetsky: o Hiperconsumo</span><span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggleCEV3">
+                            <p class="text-gray-700 mt-4">Na contemporaneidade, o consumo assume feições novas:</p>
+                            <ul class="list-disc ml-6 mt-2 text-gray-700 space-y-2">
+                                <li><strong>Bauman — Vida para Consumo:</strong> na modernidade líquida, a identidade é construída pelo consumo. Os indivíduos se tornam "mercadorias" que precisam se vender no mercado. A insegurança existencial é aliviada (temporariamente) pela compra.</li>
+                                <li><strong>Lipovetsky — Hiperconsumo:</strong> o consumo contemporâneo é centrado na experiência e no prazer individual, não apenas no status. O luxo se democratiza; o consumo se personaliza.</li>
+                                <li><strong>Influenciadores digitais:</strong> as plataformas digitais criam novos mediadores do consumo — o consumo é performatizado e exibido nas redes sociais.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggleCEV4">
+                            <span>Consumo Consciente e Sustentabilidade</span><span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggleCEV4">
+                            <ul class="list-disc ml-6 mt-4 text-gray-700 space-y-2">
+                                <li><strong>Consumo e meio ambiente:</strong> a produção e o descarte de mercadorias geram enormes impactos ambientais — desde a extração de matérias-primas até o lixo eletrônico.</li>
+                                <li><strong>Fast fashion:</strong> a moda ultrarrápida e descartável é um dos setores mais poluentes, baseado em trabalho precário (muitas vezes em países do Sul Global).</li>
+                                <li><strong>Consumo consciente:</strong> movimento que incentiva a redução do consumo, a compra de produtos locais e sustentáveis, o uso compartilhado e o reuso.</li>
+                                <li><strong>Tensão estrutural:</strong> o consumo consciente individual não substitui mudanças estruturais — o capitalismo depende do crescimento contínuo do consumo.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="callout warning mb-6 mt-6">
+                        <p class="font-semibold mb-2">Para o ENEM</p>
+                        <p>A distinção bourdieusiana é conceito central: o gosto não é natural, mas socialmente construído e funciona como marcador de classe. A escola reproduz essas diferenças ao valorizar o capital cultural das classes dominantes.</p>
+                    </div>
+
+                    <div class="callout info mt-6 mb-6">
+                        <p class="font-semibold mb-2">🇧🇷 Consumo no Brasil: Hierarquia, Prestígio e Exclusão</p>
+                        <p class="text-gray-700 mt-3">O consumo reproduz desigualdades estruturais em contexto de extrema concentração de renda:</p>
+                        <ul class="list-disc ml-6 text-gray-700 mt-2">
+                            <li><strong>Shopping como segregação urbana:</strong> "Rolezinhos" (2013) exponenciaram tensões de classe/raça; periféricos ocupam espaço de consumo de classe média, desencadeando policiamento racial e vigilância.</li>
+                            <li><strong>Gosto e reprodução social:</strong> Bourdieu aplicado ao Brasil — famílias de elite preservam capital cultural (artes, culinária fina, educação privada); pobres enfrentam currículo oculto que devalida seus saberes.</li>
+                            <li><strong>Publicidade e branqueamento:</strong> Indústria de consumo (moda, cosmética, mídia) historicamente apaga presença negra/indígena em anúncios; recentemente visibilidade tokenista sem redistribuição de poder.</li>
+                            <li><strong>Fast fashion e exploração:</strong> Confecções brasileiras subcontratam costureiras em oficinas clandestinas (frequentemente imigrantes); lucro concentrado em marcas multinacionais.</li>
+                            <li><strong>Debt bondage via crédito ao consumo:</strong> Empréstimos predatórios e financiamento de consumo mantêm pobres em endividamento perpétuo — ilusão de mobilidade via consumo.</li>
+                        </ul>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Referências Bibliográficas</h3>
+                    <div class="bg-gray-50 rounded-lg p-4">
+                        <ul class="text-sm text-gray-600 space-y-2">
+                            <li>VEBLEN, Thorstein. <em>A Teoria da Classe Ociosa</em>. São Paulo: Pioneira, 1965.</li>
+                            <li>BOURDIEU, Pierre. <em>A Distinção</em>. São Paulo: EDUSP, 2007.</li>
+                            <li>BAUMAN, Zygmunt. <em>Vida para Consumo</em>. Rio de Janeiro: Zahar, 2008.</li>
+                            <li>LIPOVETSKY, Gilles. <em>A Felicidade Paradoxal</em>. São Paulo: Cia. das Letras, 2007.</li>
+                            <li>DOUGLAS, Mary; ISHERWOOD, Baron. <em>O Mundo dos Bens</em>. Rio de Janeiro: UFRJ, 2004.</li>
+                        </ul>
+                    </div>
+                `
+},
+{
+                id: "globalizacao-sociedade",
+                title: "Globalização e Sociedade",
+                emoji: "",
+                parent: "economia-contemp",
+                
+                content: `
+                    <h2 class="text-3xl font-bold mb-2 text-gray-900">Globalização e Sociedade</h2>
+                    <p class="text-gray-500 mb-6">A globalização une o mundo ou aprofunda as divisões?</p>
+
+                    <div class="callout info mb-6">
+                        <p class="font-semibold mb-2">Conceito Central</p>
+                        <p>A <strong>globalização</strong> é a intensificação das conexões mundiais — de pessoas, capitais, informações e culturas. Mas ela <strong>não afeta todos igualmente</strong>: gera tanto integração quanto <strong>novas desigualdades</strong>.</p>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Zygmunt Bauman - A Modernidade Líquida</h3>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle1">
+                            <span>Do Sólido ao Líquido</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle1">
+                            <p class="text-gray-700 mt-4"><strong>Zygmunt Bauman</strong> (1925-2017):</p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li><strong>Modernidade sólida</strong> (século XX): estabilidade, instituições duradouras, carreiras previsíveis</li>
+                                <li><strong>Modernidade líquida</strong> (atual): estruturas sociais instáveis e mutáveis</li>
+                            </ul>
+                            <p class="text-gray-700 mt-3"><strong>Metáfora do líquido:</strong> a sociedade contemporânea se molda ao "recipiente", não mantém forma fixa, está em movimento constante.</p>
+                            <p class="text-gray-700 mt-2"><strong>Características:</strong> mudanças aceleradas, relações frágeis, incertezas permanentes, solidão. Com a globalização vem o enfraquecimento do Estado.</p>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Arjun Appadurai - Os Cinco Fluxos (Scapes)</h3>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle2">
+                            <span>As Cinco Dimensões da Globalização Cultural</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle2">
+                            <p class="text-gray-700 mt-4"><strong>Arjun Appadurai</strong> (1949-) propõe cinco dimensões de fluxo global:</p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li><strong>Ethnoscapes:</strong> fluxo de pessoas — migrantes, turistas, refugiados</li>
+                                <li><strong>Technoscapes:</strong> fluxo de tecnologias</li>
+                                <li><strong>Financescapes:</strong> fluxo de capital, moedas e negócios</li>
+                                <li><strong>Mediascapes:</strong> fluxo de informação e imagens da mídia</li>
+                                <li><strong>Ideoscapes:</strong> fluxo de ideias políticas, ideologias e valores</li>
+                            </ul>
+                            <p class="text-gray-700 mt-3"><strong>Ideia-chave:</strong> os fluxos globais acontecem nas <strong>disjunções</strong> (descompassos) entre essas dimensões — nem tudo flui na mesma direção ou velocidade.</p>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">🇧🇷 Milton Santos - Por Uma Outra Globalização</h3>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle3">
+                            <span>As Três Faces da Globalização</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle3">
+                            <p class="text-gray-700 mt-4">O geógrafo brasileiro <strong>Milton Santos</strong> (1926-2001), uma das maiores vozes do pensamento social do país:</p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li><strong>Globalização como fábula:</strong> a narrativa otimista — "mundo interconectado, oportunidades para todos" (o discurso vendido)</li>
+                                <li><strong>Globalização como perversidade:</strong> a realidade dura — desemprego, pobreza, exclusão social, ampliação das desigualdades</li>
+                                <li><strong>Uma outra globalização:</strong> a possibilidade — baseada na solidariedade; a situação NÃO é irreversível</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle4">
+                            <span>Estado-Nação e Resistências</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle4">
+                            <ul class="list-disc ml-6 text-gray-700 mt-4">
+                                <li>O <strong>Estado-nação</strong> está ameaçado como poder autônomo, mas retém poder de disciplinar o trabalho e intervir nos mercados</li>
+                                <li>Santos defende o <strong>retorno ao território</strong>, onde nascem as resistências ao "mundo perverso"</li>
+                                <li>As <strong>culturas locais resistem e se adaptam</strong>, gerando um rico mosaico cultural (o "de baixo" contra a globalização hegemônica)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Dimensões e Tensões da Globalização</h3>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle5">
+                            <span>Quatro Dimensões</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle5">
+                            <ul class="list-disc ml-6 text-gray-700 mt-4">
+                                <li><strong>Econômica:</strong> livre fluxo de capitais, empresas transnacionais</li>
+                                <li><strong>Cultural:</strong> homogeneização (McDonaldização) × hibridização (misturas culturais)</li>
+                                <li><strong>Política:</strong> enfraquecimento relativo dos Estados, organismos supranacionais</li>
+                                <li><strong>Desigualdade:</strong> aprofundamento das distâncias entre centro e periferia global</li>
+                            </ul>
+                            <div class="callout success mt-3">
+                                <p class="text-gray-700"><strong>Conexão:</strong> a globalização se relaciona com a comunicação de massa (algoritmos e mídia global) e com os movimentos sociais (resistências globais, como o movimento ambiental e o feminismo transnacional).</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="callout info mt-6">
+                        <p class="font-semibold mb-2">🇧🇷 Brasil na Globalização: Dependência Periférica e Resistências Territoriais</p>
+                        <p class="text-gray-700 mt-3">O Brasil experimenta a "globalização como perversidade" (Santos): integrado como fornecedor de commodities, não como produtor de valor agregado:</p>
+                        <ul class="list-disc ml-6 text-gray-700 mt-2">
+                            <li><strong>Divisão internacional do trabalho:</strong> Brasil permanece exportador de matérias-primas (soja, minério, petróleo) enquanto importa produtos manufaturados de alto valor — dinâmica colonial prolongada.</li>
+                            <li><strong>Financeirização e fuga de capital:</strong> Investimento externo em Brasil visa lucro especulativo, não desenvolvimento; remessas de lucros superam investimentos novos (drenagem de riqueza).</li>
+                            <li><strong>Precarização do trabalho global:</strong> Corporações multinacionais terceirizam à periferia; brasileiros ganham uma fração do que ganham trabalhadores no Norte — mesma tarefa, salário racializado.</li>
+                            <li><strong>Imperialismo cultural:** Netflix, Disney, Big Tech dominam mídia/dados; culturas locais (cinema, música) enfrentam competição desigual; algoritmos amplificam valores eurocêntricos.</li>
+                            <li><strong>Resistências territoriais:** Comunidades locais (quilombolas, indígenas, pequenos agricultores) resistem ao agronegócio globalizador; MST e movimentos ambientais defendem soberania territorial contra commodificação.</li>
+                        </ul>
+                    </div>
+
+                    <div class="callout warning mt-8">
+                        <p class="font-semibold mb-2">Referências Utilizadas</p>
+                        <ul class="list-disc ml-6 text-gray-700">
+                            <li>Bauman, Z. (2000). <em>Modernidade Líquida</em>. Rio de Janeiro: Zahar</li>
+                            <li>Appadurai, A. (1996). <em>Modernity at Large: Cultural Dimensions of Globalization</em></li>
+                            <li>Santos, M. (2000). <em>Por uma Outra Globalização</em></li>
+                            <li>Ianni, O. (1997). <em>A Sociedade Global</em></li>
+                        </ul>
+                    </div>
+                `
+            },
+{
+                id: "classes-desigualdade",
+                title: "Classes e Desigualdade Social",
+                emoji: "",
+                parent: "classes-desig",
+                
+                content: `
+                    <h2 class="text-3xl font-bold mb-2 text-gray-900">Classes e Desigualdade Social</h2>
+                    <p class="text-gray-500 mb-6">Estrutura e mobilidade na sociedade estratificada</p>
+                    
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Conceitos Fundamentais de Estratificação</h3>
+                    
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle22">
+                            <span>Castas, Estamentos e Classes</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle22">
+                            <p class="text-gray-700 mt-4"><strong>Castas:</strong> Grupos fechados, rigidamente hierarquizados, herdados (ex: sistema de castas hindu).</p>
+                            <p class="text-gray-700 mt-2"><strong>Estamentos:</strong> Grupos com privilégios ou restrições legais, mas com alguma mobilidade (ex: nobreza, clero, povo na Idade Média).</p>
+                            <p class="text-gray-700 mt-2"><strong>Classes:</strong> Grupos definidos pela relação com meios de produção e consumo, teoricamente com mobilidade (ex: burguesia, proletariado no capitalismo).</p>
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Teorias de Classe e Desigualdade</h3>
+                    
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle23">
+                            <span>Durkheim: Solidariedade Mecânica e Orgânica</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle23">
+                            <p class="text-gray-700 mt-4">Durkheim enfatizava coesão social mais que conflito. Distinguia entre:</p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li><strong>Solidariedade mecânica:</strong> Sociedades simples, semelhança, divisão do trabalho mínima</li>
+                                <li><strong>Solidariedade orgânica:</strong> Sociedades complexas, diferenciação, interdependência</li>
+                            </ul>
+                            <p class="text-gray-700 mt-2">Desigualdade era vista como consequência natural da divisão do trabalho.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle24">
+                            <span>Weber: Três Dimensões de Estratificação</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle24">
+                            <p class="text-gray-700 mt-4">Weber ampliou Marx, propondo que desigualdade não é apenas econômica. Há três dimensões:</p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li><strong>Classe (econômica):</strong> Riqueza e propriedade</li>
+                                <li><strong>Status (prestígio):</strong> Honra e respeito social</li>
+                                <li><strong>Poder (político):</strong> Capacidade de impor vontade</li>
+                            </ul>
+                            <p class="text-gray-700 mt-2">Uma pessoa pode ter alta classe mas baixo status (ricão endinheirado), ou vice-versa.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle25">
+                            <span>Bourdieu: Capital Cultural e Habitus</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle25">
+                            <p class="text-gray-700 mt-4">Bourdieu (1930-2002) desenvolveu conceitos que explicam como desigualdade se reproduz:</p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li><strong>Capital cultural:</strong> Conhecimentos, diplomas, preferências artísticas herdadas da família</li>
+                                <li><strong>Habitus:</strong> Conjunto de disposições duráveis que estruturam comportamento e percepção</li>
+                                <li><strong>Reprodução social:</strong> Famílias ricas passam vantagens (capital econômico, cultural e social) aos filhos</li>
+                            </ul>
+                            <p class="text-gray-700 mt-2"><strong>Implicação:</strong> Desigualdade não é apenas material; é inscrita nas disposições das pessoas.</p>
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Mobilidade Social</h3>
+                    
+                    <p class="mb-4 text-gray-700">Mobilidade social é a possibilidade de mudar de posição social. Pode ser:</p>
+                    <ul class="list-disc ml-6 text-gray-700 mb-4">
+                        <li><strong>Vertical ascendente:</strong> Melhorar de posição (ex: filho de operário vira executivo)</li>
+                        <li><strong>Vertical descendente:</strong> Piorar de posição</li>
+                        <li><strong>Horizontal:</strong> Mudar de ocupação mantendo status similar</li>
+                    </ul>
+                    
+                    <div class="callout info">
+                        <p class="font-semibold mb-2">Pergunta Crítica</p>
+                        <p>No Brasil, a mobilidade social é real ou ilusória? Quantos filhos de pobres chegam a classe alta? Que mecanismos (educação, redes sociais) facilitam mobilidade?</p>
+                    </div>
+
+                    <div class="callout info mt-6">
+                        <p class="font-semibold mb-2">🇧🇷 Classe e Raça no Brasil: Herança Escravocrata e Mobilidade Bloqueada</p>
+                        <p class="text-gray-700 mt-3">A estrutura de classes brasileira é racializada e reproduz desigualdades seculares:</p>
+                        <ul class="list-disc ml-6 text-gray-700 mt-2">
+                            <li><strong>Mito da mobilidade social:</strong> Narrativa meritocrática esconde que maioria dos pobres permanece pobre; filho de pobre tem ~15% de chance de chegar à classe média, filho de rico tem ~80% de chance de se manter rico.</li>
+                            <li><strong>Branquitude e capital cultural:</strong> Elite branca controla educação privada, redes profissionais, acesso a crédito; negros/pardos enfrentam discriminação em contratação apesar de mesma qualificação.</li>
+                            <li><strong>Herança de escravidão:** Após abolição (1888), zero políticas de reparação; negros expulsos de terras, confinados em subempregos, sem herança familiar; séculos de espoliação não foram reparados.</li>
+                            <li><strong>Interseccionalidade de classe-raça:** Mulheres negras ganham menos que homens negros, que ganham menos que homens brancos, em mesma função — desigualdade sobreposta.</li>
+                            <li><strong>Habitualização da pobreza:</strong> Bourdieu no Brasil — habitus de classe pobre internaliza subalternidade; educação pública precária não transfere capital cultural para mobilidade.</li>
+                        </ul>
+                    </div>
+
+                    <div class="callout warning mt-8">
+                        <p class="font-semibold mb-2">Referências Utilizadas</p>
+                        <ul class="list-disc ml-6 text-gray-700">
+                            <li>MARX, K.; ENGELS, F. <em>Manifesto do Partido Comunista</em>. 1848.</li>
+                            <li>WEBER, M. <em>Economia e Sociedade</em>. 1922.</li>
+                            <li>DURKHEIM, É. <em>Da Divisão do Trabalho Social</em>. 1893.</li>
+                        </ul>
+                    </div>
+                `
+            },
+{
+                id: "pobreza-brasil",
+                title: "Pobreza e Desigualdade no Brasil",
+                emoji: "",
+                parent: "pobreza-brasil",
+                
+                content: `
+                    <h2 class="text-3xl font-bold mb-2 text-gray-900">Pobreza e Desigualdade no Brasil</h2>
+                    <p class="text-gray-500 mb-6">Dados, indicadores e dimensões</p>
+                    
+                    <div class="callout critical mb-6">
+                        <p class="font-semibold mb-2">Realidade Brasileira</p>
+                        <p>Brasil é uma das nações mais desiguais do mundo. A renda se concentra em poucos, enquanto milhões vivem em pobreza.</p>
+                    </div>
+                    
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Concentração de Renda</h3>
+                    
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle26">
+                            <span>Índice de Gini e Coeficientes</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle26">
+                            <p class="text-gray-700 mt-4"><strong>Índice de Gini:</strong> Medida de desigualdade (0 = igualdade perfeita; 1 = desigualdade máxima).</p>
+                            <p class="text-gray-700 mt-2">Brasil apresenta Gini em torno de 0,53-0,54 (muito alto). Para comparação, países escandinavos têm Gini ~0,25-0,27.</p>
+                            <p class="text-gray-700 mt-2"><strong>Razão decil:</strong> Os 10% mais ricos ganham cerca de 30-40 vezes mais que os 10% mais pobres no Brasil.</p>
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Definições de Pobreza</h3>
+                    
+                    <p class="mb-4 text-gray-700">Não há uma definição única de pobreza. Diferentes abordagens:</p>
+                    
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle27">
+                            <span>Pobreza Absoluta vs. Relativa</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle27">
+                            <p class="text-gray-700 mt-4"><strong>Pobreza absoluta:</strong> Incapacidade de satisfazer necessidades básicas (alimento, moradia). Medida por linha de pobreza (renda mínima).</p>
+                            <p class="text-gray-700 mt-2"><strong>Pobreza relativa:</strong> Estar significativamente abaixo do padrão de vida do grupo (por exemplo, ganhar menos que 60% da renda média).</p>
+                            <p class="text-gray-700 mt-2">No Brasil, estima-se que ~25-30% vive em pobreza (várias definições).</p>
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Indicadores de Desenvolvimento Humano (IDH)</h3>
+                    
+                    <p class="mb-4 text-gray-700">O IDH combina três dimensões:</p>
+                    <ul class="list-disc ml-6 text-gray-700 mb-4">
+                        <li><strong>Longevidade:</strong> Expectativa de vida ao nascer</li>
+                        <li><strong>Educação:</strong> Anos de estudo</li>
+                        <li><strong>Renda:</strong> PIB per capita (PPC)</li>
+                    </ul>
+                    
+                    <p class="text-gray-700 mb-4">Brasil tem IDH ~0,754 (2021), classificado como "desenvolvimento humano muito alto", mas com grande variação regional (regiões mais pobres têm IDH bem menor).</p>
+                    
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Acesso a Bens de Consumo</h3>
+                    
+                    <p class="mb-4 text-gray-700">Indicadores de qualidade de vida incluem:</p>
+                    <ul class="list-disc ml-6 text-gray-700">
+                        <li>Acesso a água potável, saneamento, energia elétrica</li>
+                        <li>Posse de telefone, internet, computador</li>
+                        <li>Tipo de moradia (alvenaria vs. favela)</li>
+                        <li>Acesso a educação e saúde</li>
+                    </ul>
+                    
+                    <div class="callout success">
+                        <p class="font-semibold mb-2">Avanços</p>
+                        <p>Nas décadas de 2000-2010, políticas redistributivas (Bolsa Família, aumentos de salário mínimo) reduziram pobreza. Mas a crise econômica pós-2014 reverteu ganhos.</p>
+                    </div>
+
+                    <div class="callout info mt-6">
+                        <p class="font-semibold mb-2">🇧🇷 Pobreza Multidimensional Brasileira: Raça, Gênero e Territorialidade</p>
+                        <p class="text-gray-700 mt-3">A pobreza no Brasil não é unidimensional; é entrelaçada com raça, gênero e localização geográfica:</p>
+                        <ul class="list-disc ml-6 text-gray-700 mt-2">
+                            <li><strong>Racialização da pobreza:</strong> 64% dos pobres são negros/pardos (PNAD 2022); herança de escravidão cristaliza em exclusão laboral e acesso desigual a crédito.</li>
+                            <li><strong>Feminização da pobreza:</strong> Mulheres (esp. chefes monoparentais) têm maior taxa de pobreza; recebem menos por mesmo trabalho; concentram-se em empregos precários (doméstico, comércio).</li>
+                            <li><strong>Gini persistente:</strong> Brasil Gini ~0,54 (uma das piores do mundo); razão decil mostra top 10% ganha 30x+ que bottom 10% — desigualdade estrutural não mudou apesar de Bolsa Família.</li>
+                            <li><strong>Ciclos de intergeracionalidade:** Filho de pobre tem probabilidade alta de permanecer pobre; ausência de políticas estruturais (educação de qualidade, acesso a crédito) bloqueia mobilidade.</li>
+                            <li><strong>Regressão pós-2016:** Teto de gastos congelou investimento público; desemprego voltou acima de 10%; pobreza extrema cresceu; Bolsa Família reduzido em beneficiários e valor real.</li>
+                        </ul>
+                    </div>
+
+                    <div class="callout warning mt-8">
+                        <p class="font-semibold mb-2">Referências Utilizadas</p>
+                        <ul class="list-disc ml-6 text-gray-700">
+                            <li>IBGE. <em>Síntese de Indicadores Sociais</em>. Rio de Janeiro: IBGE.</li>
+                            <li>IPEA. <em>Dados e estudos sobre pobreza e desigualdade no Brasil</em>.</li>
+                            <li>REGO, W. L.; PINZANI, A. <em>Vozes do Bolsa Família</em>. São Paulo: Editora UNESP, 2013.</li>
+                        </ul>
+                    </div>
+                `
+            },
+{
+    id: "poder-dominacao",
+    title: "Poder e Dominação",
+    emoji: "",
+                parent: "poder-domin",
+    
+    content: `
+                    <h2 class="text-3xl font-bold mb-2 text-gray-900">Poder e Dominação</h2>
+                    <p class="text-gray-500 mb-6">Weber, Foucault, Bourdieu e as teorias das elites</p>
+                    <div class="callout info mb-6">
+                        <p class="font-semibold mb-2">Conceito-chave</p>
+                        <p>O poder não é uma coisa que se possui, mas uma relação que se exerce. Está nas instituições, nos saberes e nas práticas cotidianas — muito além do Estado.</p>
+                    </div>
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">O que é Poder?</h3>
+                    <p class="mb-4 text-gray-700">Para Max Weber, <em>Macht</em> (poder) é a capacidade de impor a própria vontade mesmo contra resistência alheia. Já <em>Herrschaft</em> (dominação) é o poder legitimado — obedecido voluntariamente por crenças compartilhadas sobre sua validade. Toda dominação duradoura precisa de legitimidade.</p>
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="togglePD1">
+                            <span>Tipos de Dominação (Weber)</span><span>+</span>
+                        </button>
+                        <div class="toggle-content" id="togglePD1">
+                            <p class="text-gray-700 mt-4">Weber identificou três tipos ideais de dominação legítima:</p>
+                            <ul class="list-disc ml-6 mt-2 text-gray-700 space-y-2">
+                                <li><strong>Dominação tradicional:</strong> baseada em costumes imemoriáveis. Ex: monarquias hereditárias, autoridade patriarcal.</li>
+                                <li><strong>Dominação carismática:</strong> baseada nas qualidades extraordinárias de um líder. Ex: líderes religiosos ou populistas. Instável — se institucionaliza ou desaparece com o líder.</li>
+                                <li><strong>Dominação racional-legal:</strong> baseada em normas e regras formais. É o tipo predominante no Estado moderno: o poder está vinculado ao cargo, não à pessoa.</li>
+                            </ul>
+                            <p class="text-gray-700 mt-2"><strong>Burocracia:</strong> forma mais pura de dominação racional-legal — hierarquia, regras, impessoalidade, especialização técnica.</p>
+                        </div>
+                    </div>
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="togglePD2">
+                            <span>Foucault: Micropoder e Disciplina</span><span>+</span>
+                        </button>
+                        <div class="toggle-content" id="togglePD2">
+                            <p class="text-gray-700 mt-4">Michel Foucault radicalizou a análise do poder. Para ele, o poder não está centralizado no Estado, mas disperso em múltiplas relações — é exercido em hospitais, prisões, escolas e famílias.</p>
+                            <ul class="list-disc ml-6 mt-2 text-gray-700 space-y-2">
+                                <li><strong>Microfísica do poder:</strong> o poder opera nos detalhes — gestos, olhares, espaços, rotinas.</li>
+                                <li><strong>Poder disciplinar:</strong> técnicas que produzem corpos dóceis e produtivos (vigilância, exame, punição normalizadora).</li>
+                                <li><strong>Panoptismo:</strong> o Panóptico de Bentham como metáfora — a sensação permanente de ser observado produz a autovigilância.</li>
+                                <li><strong>Saber-poder:</strong> o conhecimento (psicologia, medicina, direito) é inseparável do exercício do poder.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="togglePD3">
+                            <span>Bourdieu: Poder Simbólico</span><span>+</span>
+                        </button>
+                        <div class="toggle-content" id="togglePD3">
+                            <p class="text-gray-700 mt-4">Pierre Bourdieu ampliou o conceito de poder para além da coerção física. O <strong>poder simbólico</strong> é a capacidade de fazer ver e fazer crer, de construir a realidade social.</p>
+                            <ul class="list-disc ml-6 mt-2 text-gray-700 space-y-2">
+                                <li><strong>Violência simbólica:</strong> dominação exercida com a cumplicidade (inconsciente) do dominado — ocorre quando os dominados aceitam as categorias dos dominantes como naturais.</li>
+                                <li><strong>Campo:</strong> espaço social estruturado por relações de força entre agentes que disputam capitais específicos (cultural, econômico, social, simbólico).</li>
+                                <li><strong>Habitus:</strong> disposições internalizadas que orientam as práticas — produto da posição social, reproduz (mas não determina mecanicamente) as hierarquias.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="togglePD4">
+                            <span>Teorias das Elites (Pareto, Mosca, Michels, Mills)</span><span>+</span>
+                        </button>
+                        <div class="toggle-content" id="togglePD4">
+                            <p class="text-gray-700 mt-4">As teorias elitistas questionam a possibilidade de uma democracia plena, argumentando que toda sociedade é governada por uma minoria organizada.</p>
+                            <ul class="list-disc ml-6 mt-2 text-gray-700 space-y-2">
+                                <li><strong>Vilfredo Pareto:</strong> distinção entre "leões" (elites que usam a força) e "raposas" (elites que usam a astúcia). A história é uma "circulação das elites".</li>
+                                <li><strong>Gaetano Mosca:</strong> toda sociedade tem uma "classe dirigente" minoritária e organizada que governa a maioria desorganizada.</li>
+                                <li><strong>Robert Michels:</strong> "lei de ferro da oligarquia" — mesmo organizações democráticas (como partidos operários) tendem inevitavelmente à oligarquização interna.</li>
+                                <li><strong>C. Wright Mills:</strong> nos EUA, uma "elite do poder" une militares, políticos e empresários, decidindo os grandes assuntos nacionais.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="callout warning mb-6 mt-6">
+                        <p class="font-semibold mb-2">Para o ENEM</p>
+                        <p>Saiba distinguir as abordagens: Weber (tipos de dominação), Foucault (microfísica/disciplina), Bourdieu (poder simbólico/violência simbólica). Questões sobre legitimidade do poder e burocracia são frequentes.</p>
+                    </div>
+
+                    <div class="callout info mt-6">
+                        <p class="font-semibold mb-2">🇧🇷 Poder no Brasil: Coronelismo, Elites Oligárquicas e Violência Simbólica</p>
+                        <p class="text-gray-700 mt-3">A estrutura de poder brasileira carrega legados coloniais de dominação personalista:</p>
+                        <ul class="list-disc ml-6 text-gray-700 mt-2">
+                            <li><strong>Coronelismo persiste:</strong> Apesar de formal democracia, oligarquias locais (donos de terras, meios de comunicação) exercem poder desproporcional via clientelismo — oferecem favores em troca de votos.</li>
+                            <li><strong>Poder simbólico (Bourdieu):</strong> Elite branca/abastada define "normalidade" em mídia, educação, cultura; negros/pobres internalizam hierarquias como naturais — violência simbólica silenciosa.</li>
+                            <li><strong>Violência de Estado disciplinar:</strong> Foucault no Brasil — presídios superlotados, policiais matam negros periféricos impunemente; "pacificação" de favelas via ocupação militar reproduz vigilância disciplinar.</li>
+                            <li><strong>Governo de coalizão frágil:</strong> Presidencialismo de coalizão brasileiro requer alianças com partidos clientes; Executivo negocia com oligarquias para governar (mensalão, Lava Jato expõem corrupção sistemática).</li>
+                            <li><strong>Monopólio midiático de legitimidade:</strong> Oligopólio de mídia (Rede Globo, etc.) controla narrativa política; agendas de elites ganham cobertura amplificada enquanto vozes contra-hegemônicas são marginalizadas.</li>
+                        </ul>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Referências Bibliográficas</h3>
+                    <div class="bg-gray-50 rounded-lg p-4">
+                        <ul class="text-sm text-gray-600 space-y-2">
+                            <li>WEBER, Max. <em>Economia e Sociedade</em>. Brasília: UnB, 1999.</li>
+                            <li>FOUCAULT, Michel. <em>Vigiar e Punir</em>. 42. ed. Petrópolis: Vozes, 2014.</li>
+                            <li>FOUCAULT, Michel. <em>Microfísica do Poder</em>. 12. ed. Rio de Janeiro: Graal, 1996.</li>
+                            <li>BOURDIEU, Pierre. <em>O Poder Simbólico</em>. Rio de Janeiro: Bertrand Brasil, 1989.</li>
+                            <li>MILLS, C. Wright. <em>A Elite do Poder</em>. Rio de Janeiro: Zahar, 1968.</li>
+                            <li>MICHELS, Robert. <em>Sociologia dos Partidos Políticos</em>. Brasília: UnB, 1982.</li>
+                        </ul>
+                    </div>
+                `
+},
+{
+    id: "estado-governo-democracia",
+    title: "Estado, Governo e Democracia",
+    emoji: "",
+                parent: "estado-demo",
+    
+    content: `
+                    <h2 class="text-3xl font-bold mb-2 text-gray-900">Estado, Governo e Democracia</h2>
+                    <p class="text-gray-500 mb-6">Do Estado moderno às disputas pela democracia no século XXI</p>
+                    <div class="callout info mb-6">
+                        <p class="font-semibold mb-2">Conceito-chave</p>
+                        <p>O Estado moderno se define pelo monopólio legítimo da violência (Weber) sobre um território. A democracia é tanto um regime de governo quanto um modo de organização da vida política — nunca acabada, sempre em disputa.</p>
+                    </div>
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">O que é o Estado Moderno?</h3>
+                    <p class="mb-4 text-gray-700">O Estado é uma forma de organização política caracterizada pela soberania territorial, pelo monopólio da coerção legítima e por um aparato administrativo-burocrático. Não é eterno: surge com a modernidade europeia (séculos XV–XVII) e se consolida com as revoluções liberais.</p>
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggleEGD1">
+                            <span>O Contrato Social: Hobbes, Locke e Rousseau</span><span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggleEGD1">
+                            <p class="text-gray-700 mt-4">Os contratualistas modernos justificam o Estado como resultado de um acordo entre os indivíduos para superar o "estado de natureza":</p>
+                            <ul class="list-disc ml-6 mt-2 text-gray-700 space-y-2">
+                                <li><strong>Thomas Hobbes (<em>Leviatã</em>, 1651):</strong> o estado de natureza é uma "guerra de todos contra todos". Os indivíduos cedem todos os direitos ao soberano (absoluto) em troca de segurança.</li>
+                                <li><strong>John Locke (<em>Segundo Tratado</em>, 1689):</strong> os indivíduos possuem direitos naturais (vida, liberdade, propriedade) que o Estado deve proteger. Fundamento do liberalismo e do direito de resistência.</li>
+                                <li><strong>Jean-Jacques Rousseau (<em>Contrato Social</em>, 1762):</strong> a soberania pertence ao povo — a "vontade geral" deve guiar o Estado. Base do republicanismo e da democracia popular.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggleEGD2">
+                            <span>Democracia: tipos, história e princípios</span><span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggleEGD2">
+                            <p class="text-gray-700 mt-4">Democracia (do grego: <em>demos</em> = povo + <em>kratos</em> = poder) é o regime no qual o poder emana do povo. Existem diferentes formas:</p>
+                            <ul class="list-disc ml-6 mt-2 text-gray-700 space-y-2">
+                                <li><strong>Democracia direta:</strong> o povo delibera diretamente (ex: Atenas antiga, referendos).</li>
+                                <li><strong>Democracia representativa:</strong> o povo elege representantes que tomam decisões em seu nome. Modelo dominante nos Estados modernos.</li>
+                                <li><strong>Democracia participativa:</strong> combina eleições com mecanismos de participação direta (audiências públicas, orçamento participativo, conselhos).</li>
+                            </ul>
+                            <p class="text-gray-700 mt-2"><strong>Robert Dahl</strong> propôs o conceito de "poliarquia" para descrever as democracias reais, que se aproximam mas nunca realizam plenamente o ideal democrático.</p>
+                        </div>
+                    </div>
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggleEGD3">
+                            <span>Cidadania (T.H. Marshall)</span><span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggleEGD3">
+                            <p class="text-gray-700 mt-4">O sociólogo inglês T.H. Marshall analisou o desenvolvimento histórico da cidadania em três dimensões:</p>
+                            <ul class="list-disc ml-6 mt-2 text-gray-700 space-y-2">
+                                <li><strong>Direitos civis (séc. XVIII):</strong> liberdade individual, de expressão, de ir e vir, de contratos, de justiça. Garantidos pelo sistema legal.</li>
+                                <li><strong>Direitos políticos (séc. XIX):</strong> participação no poder político — direito de votar e ser votado.</li>
+                                <li><strong>Direitos sociais (séc. XX):</strong> bem-estar econômico, segurança, educação, saúde. Garantidos pelo Estado de bem-estar (welfare state).</li>
+                            </ul>
+                            <p class="text-gray-700 mt-2">No Brasil, José Murilo de Carvalho mostrou que essa sequência foi invertida: primeiro vieram os direitos sociais (era Vargas), depois os políticos e civis foram ampliados gradualmente.</p>
+                        </div>
+                    </div>
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggleEGD4">
+                            <span>Crise da Democracia Contemporânea</span><span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggleEGD4">
+                            <p class="text-gray-700 mt-4">No século XXI, as democracias enfrentam desafios sem precedentes:</p>
+                            <ul class="list-disc ml-6 mt-2 text-gray-700 space-y-2">
+                                <li><strong>Erosão democrática ("morte lenta"):</strong> ao contrário dos golpes militares clássicos, as democracias contemporâneas podem ser desmontadas por dentro — por governantes eleitos que gradualmente concentram poder (Levitsky e Ziblatt).</li>
+                                <li><strong>Desinformação e fake news:</strong> a proliferação de informações falsas enfraquece o debate público e a confiança nas instituições.</li>
+                                <li><strong>Populismo:</strong> movimentos que invocam "o povo" contra "as elites", muitas vezes corroendo direitos de minorias e instituições de controle.</li>
+                                <li><strong>Desengajamento político:</strong> queda na participação eleitoral e desconfiança nos partidos tradicionais.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="callout warning mb-6 mt-6">
+                        <p class="font-semibold mb-2">Para o ENEM</p>
+                        <p>Saiba distinguir Hobbes, Locke e Rousseau — são frequentemente cobrados. Marshall e a sequência dos direitos de cidadania também aparecem com frequência. Relacione com a realidade brasileira.</p>
+                    </div>
+
+                    <div class="callout info mt-6">
+                        <p class="font-semibold mb-2">🇧🇷 Cidadania Invertida no Brasil: Direitos Sociais Antes dos Civis</p>
+                        <p class="text-gray-700 mt-3">José Murilo de Carvalho inverteu a sequência de Marshall para o Brasil:</p>
+                        <ul class="list-disc ml-6 text-gray-700 mt-2">
+                            <li><strong>Era Vargas (1930-1945):</strong> Primeira onda de direitos sociais (leis trabalhistas, previdência) sem democracia plena — "cidadania regulada" atrelada à profissão formal.</li>
+                            <li><strong>Ditadura militar (1964-1985):</strong> Ampliou direitos sociais (educação, saúde) mas suprimiu direitos políticos/civis (censura, torturas, ausência de eleições diretas).</li>
+                            <li><strong>Pós-1988:</strong> Constituição expandiu direitos civis/políticos mas implementação incompleta — pobres carecem acesso real a justiça, educação deficiente, saúde precária.</li>
+                            <li><strong>Paradoxo permanente:</strong> Direitos formais na constituição não correspondem a direitos vividos — desigualdade estrutural bloqueia exercício prático da cidadania para maioria.</li>
+                            <li><strong>Cidadania de segunda classe:</strong> Negros, pobres, indígenas: cidadãos nominais mas sofrem violência estatal impune; acesso negado a direitos cívicos básicos.</li>
+                        </ul>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Referências Bibliográficas</h3>
+                    <div class="bg-gray-50 rounded-lg p-4">
+                        <ul class="text-sm text-gray-600 space-y-2">
+                            <li>HOBBES, Thomas. <em>Leviatã</em>. São Paulo: Martins Fontes, 2003.</li>
+                            <li>LOCKE, John. <em>Segundo Tratado sobre o Governo Civil</em>. São Paulo: Martins Fontes, 2001.</li>
+                            <li>ROUSSEAU, Jean-Jacques. <em>O Contrato Social</em>. São Paulo: Penguin-Cia das Letras, 2011.</li>
+                            <li>MARSHALL, T.H. <em>Cidadania, Classe Social e Status</em>. Rio de Janeiro: Zahar, 1967.</li>
+                            <li>DAHL, Robert. <em>Poliarquia: Participação e Oposição</em>. São Paulo: EDUSP, 2015.</li>
+                            <li>CARVALHO, José Murilo de. <em>Cidadania no Brasil</em>. Rio de Janeiro: Civilização Brasileira, 2002.</li>
+                            <li>LEVITSKY, Steven; ZIBLATT, Daniel. <em>Como as Democracias Morrem</em>. Rio de Janeiro: Zahar, 2018.</li>
+                        </ul>
+                    </div>
+                `
+},
+{
+    id: "sistema-politico-brasileiro",
+    title: "Sistema Político Brasileiro",
+    emoji: "",
+                parent: "sistema-pol-br",
+    
+    content: `
+                    <h2 class="text-3xl font-bold mb-2 text-gray-900">Sistema Político Brasileiro</h2>
+                    <p class="text-gray-500 mb-6">Federalismo, presidencialismo de coalizão e redemocratização</p>
+                    <div class="callout info mb-6">
+                        <p class="font-semibold mb-2">Conceito-chave</p>
+                        <p>O Brasil é uma república federativa presidencialista com multipartidarismo. O conceito de "presidencialismo de coalizão" (Abranches) explica como governos constroem maiorias parlamentares por meio de negociação intensa com partidos.</p>
+                    </div>
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">A Constituição de 1988</h3>
+                    <p class="mb-4 text-gray-700">A Constituição Federal de 1988, apelidada de "Constituição Cidadã" por Ulysses Guimarães, marcou o fim do regime militar e inaugurou a democracia brasileira contemporânea. Ampliou direitos civis, políticos e sociais, criou mecanismos de participação popular e fortaleceu o Ministério Público e a magistratura como poderes independentes.</p>
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggleSPB1">
+                            <span>Estrutura do Estado Brasileiro</span><span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggleSPB1">
+                            <ul class="list-disc ml-6 mt-4 text-gray-700 space-y-2">
+                                <li><strong>Federalismo:</strong> divisão de competências entre União, estados e municípios. O Brasil é um dos raros países com federalismo tripartite (incluindo municípios como entes federados).</li>
+                                <li><strong>Três poderes:</strong> Executivo (Presidente da República, governadores, prefeitos), Legislativo (Congresso Nacional: Câmara e Senado) e Judiciário (STF, STJ, TRF etc.).</li>
+                                <li><strong>Sistema de freios e contrapesos:</strong> cada poder limita e fiscaliza os demais, prevenindo a concentração de poder.</li>
+                                <li><strong>Ministério Público:</strong> função essencial à justiça, com autonomia para fiscalizar e promover ações de interesse público.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggleSPB2">
+                            <span>Presidencialismo de Coalizão (Abranches)</span><span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggleSPB2">
+                            <p class="text-gray-700 mt-4">O cientista político Sérgio Abranches cunhou em 1988 o conceito de <strong>presidencialismo de coalizão</strong> para descrever a especificidade brasileira:</p>
+                            <ul class="list-disc ml-6 mt-2 text-gray-700 space-y-2">
+                                <li>O sistema eleitoral proporcional gera extrema fragmentação partidária — nenhum partido consegue maioria sozinho.</li>
+                                <li>O Presidente precisa montar uma ampla coalizão de partidos para governar, distribuindo ministérios e cargos em troca de apoio parlamentar.</li>
+                                <li>Isso gera custos de governabilidade, negociações permanentes e riscos de corrupção (como revelado pelas operações Lava Jato e Mensalão).</li>
+                                <li>Mas também proporciona alguma estabilidade democrática ao incluir diferentes forças políticas no governo.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggleSPB3">
+                            <span>Sistema Eleitoral e Partidos</span><span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggleSPB3">
+                            <ul class="list-disc ml-6 mt-4 text-gray-700 space-y-2">
+                                <li><strong>Voto obrigatório:</strong> para maiores de 18 anos (facultativo entre 16-17 e maiores de 70).</li>
+                                <li><strong>Sistema majoritário:</strong> para eleições de presidente, governador, senador e prefeito (maioria absoluta em dois turnos ou maioria simples).</li>
+                                <li><strong>Sistema proporcional:</strong> para deputados federais, estaduais e vereadores. Tende a eleger muitos partidos pequenos.</li>
+                                <li><strong>Multipartidarismo extremo:</strong> o Brasil chegou a ter mais de 30 partidos com representação parlamentar. A cláusula de barreira (5% dos votos) foi introduzida para reduzir a fragmentação.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggleSPB4">
+                            <span>Desafios da Democracia Brasileira</span><span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggleSPB4">
+                            <ul class="list-disc ml-6 mt-4 text-gray-700 space-y-2">
+                                <li><strong>Corrupção sistêmica:</strong> revelada por escândalos como Mensalão e Lava Jato, envolve partidos dos mais variados espectros.</li>
+                                <li><strong>Sub-representação:</strong> mulheres, negros e pobres são gravemente sub-representados nas casas legislativas.</li>
+                                <li><strong>Financiamento eleitoral:</strong> o peso do dinheiro nas campanhas favorece candidatos de partidos com mais recursos.</li>
+                                <li><strong>Desinformação e polarização:</strong> o WhatsApp e as redes sociais amplificaram fake news políticas, aprofundando a polarização.</li>
+                                <li><strong>Impeachment e instabilidade:</strong> dos 7 presidentes eleitos desde 1985, 2 sofreram impeachment (Collor e Dilma), sinalizando fragilidades institucionais.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="callout warning mb-6 mt-6">
+                        <p class="font-semibold mb-2">Para o ENEM</p>
+                        <p>O presidencialismo de coalizão é conceito essencial. Saiba relacionar multipartidarismo, negociação no Congresso e governabilidade. Também conhecer a Constituição de 1988, redemocratização e o papel dos movimentos sociais nesse processo.</p>
+                    </div>
+                    <div class="callout info mt-6 mb-6">
+                        <p class="font-semibold mb-2">🇧🇷 Sistema Político Brasileiro: Fragilidades Institucionais e Coalizões Instáveis</p>
+                        <p class="text-gray-700 mt-3">O presidencialismo de coalizão brasileiro é estruturalmente vulnerável a crises, refletindo heranças de autoritarismo e desigualdade:</p>
+                        <ul class="list-disc ml-6 text-gray-700 mt-2">
+                            <li><strong>Fragmentação partidária como fragilidade:</strong> O multipartidarismo extremo (30+ partidos históricos) não promove representação genuína, mas cria blocos negociáveis. Governos precisam distribuir ministérios a oligarquias regionais, reproduzindo coronelismo sem base de classes.</li>
+                            <li><strong>Financiamento privado e oligarquias midiáticas:</strong> Dinheiro corporativo domina campanhas; famílias como Marinho (Globo) controlam narrativas. Sem reforma do financiamento, legisladores dependem de doadores que os vinculam a interesses rentistas versus redistribution.</li>
+                            <li><strong>Impeachment como arma política:</strong> Collor (1992) e Dilma (2016) revelam como sistema permite deposições sem golpe formal, mas sem proteger direitos. Dilma em 2016 mostrou: coalizão se dissolve, mídia oligopolista cria narrativa, Senado (dominado por oligarcas regionais) remove presidente elegível.</li>
+                            <li><strong>Sub-representação estrutural:</strong> Mulheres (13-17% das cadeiras), negros/as e pobres permanecem excluídos. Sistema perpetua elite branca de formação jurídica/empresarial. Cotas partidárias e regras de gênero enfrentam resistência de partidos beneficiados por status quo.</li>
+                            <li><strong>Desinformação e polarização reconfigurada:</strong> WhatsApp e redes sociais (2018 em diante) radicalizaram competição entre oligarquias. Fake news circulam por grupos fechados; algoritmos amplificam ódio para manter engagement. Polarização mascara continuidades de classe/raça que transcendem Lula x Bolsonaro.</li>
+                        </ul>
+                    </div>
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Referências Bibliográficas</h3>
+                    <div class="bg-gray-50 rounded-lg p-4">
+                        <ul class="text-sm text-gray-600 space-y-2">
+                            <li>ABRANCHES, Sérgio. <em>Presidencialismo de Coalizão</em>. São Paulo: Companhia das Letras, 2018.</li>
+                            <li>CARVALHO, José Murilo de. <em>Cidadania no Brasil</em>. Rio de Janeiro: Civilização Brasileira, 2002.</li>
+                            <li>LIMONGI, Fernando; FIGUEIREDO, Argelina. <em>Executivo e Legislativo na nova ordem constitucional</em>. Rio de Janeiro: FGV, 1999.</li>
+                            <li>NICOLAU, Jairo. <em>O Brasil dobrou à direita</em>. Rio de Janeiro: Zahar, 2022.</li>
+                            <li>BRASIL. <em>Constituição da República Federativa do Brasil</em>. Brasília: Senado Federal, 1988.</li>
+                        </ul>
+                    </div>
+                `
+},
+{
+                id: "politica-poder",
+                title: "Política e Poder",
+                emoji: "",
+                parent: "poder-domin",
+                
+                content: `
+                    <h2 class="text-3xl font-bold mb-2 text-gray-900">Política e Poder</h2>
+                    <p class="text-gray-500 mb-6">Entender o poder e como as sociedades se organizam politicamente</p>
+
+                    <div class="callout info mb-6">
+                        <p class="font-semibold mb-2">Conceito Central</p>
+                        <p><strong>Política</strong> é a competição entre grupos por poder e recursos. <strong>Poder</strong> é a capacidade de fazer algo acontecer, frequentemente contra resistência. <strong>Autoridade</strong> é o poder que as pessoas aceitam como legítimo.</p>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Os Três Tipos de Domínio Legítimo (Max Weber)</h3>
+                    <p class="mb-4 text-gray-700">O sociólogo alemão Max Weber (1922) identificou três formas puras de domínio legítimo - formas como o poder é exercido e aceito:</p>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle1">
+                            <span>Domínio Legal-Racional</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle1">
+                            <p class="text-gray-700 mt-4">Baseada em <strong>leis formais e regras estabelecidas</strong>. As pessoas obedecem às normas, não aos indivíduos.</p>
+                            <p class="text-gray-700 mt-2"><strong>Características:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>Poder institucionalizado em órgãos</li>
+                                <li>Funções claramente definidas</li>
+                                <li>Burocracia como forma de organização</li>
+                                <li>É a forma mais moderna</li>
+                            </ul>
+                            <p class="text-gray-700 mt-3"><strong>Exemplos:</strong> Democracias modernas, legislação formal, funcionários públicos que obedecem ao cargo (não à pessoa), poder judicial baseado em lei.</p>
+                            <p class="text-gray-700 mt-2"><strong>Estabilidade:</strong> Alta - depende de instituições, não de indivíduos.</p>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle2">
+                            <span>Domínio Tradicional</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle2">
+                            <p class="text-gray-700 mt-4">Baseada em <strong>costumes e tradições</strong>. O governante é um patriarca ou senhor.</p>
+                            <p class="text-gray-700 mt-2"><strong>Características:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>Autoridade sagrada ou ancestral</li>
+                                <li>Poder baseado em sangue ou herança</li>
+                                <li>Súditos obedecem por respeito à tradição</li>
+                                <li>Perdura enquanto tradições mantêm força</li>
+                            </ul>
+                            <p class="text-gray-700 mt-3"><strong>Exemplos:</strong> Monarquias, patriarcado familiar, chefias indígenas baseadas em linhagem ancestral.</p>
+                            <p class="text-gray-700 mt-2"><strong>Estabilidade:</strong> Média - depende da força das tradições sociais.</p>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle3">
+                            <span>Domínio Carismático</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle3">
+                            <p class="text-gray-700 mt-4">Baseada em <strong>qualidades excepciais do líder</strong>. Seguidores admiram a pessoa pelo carisma (atração pessoal).</p>
+                            <p class="text-gray-700 mt-2"><strong>Características:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>Conexão emocional e de admiração</li>
+                                <li>Não é estruturado burocraticamente</li>
+                                <li>Depende da vida do líder</li>
+                                <li>Tende a se institucionalizar com o tempo</li>
+                            </ul>
+                            <p class="text-gray-700 mt-3"><strong>Exemplos:</strong> Líderes religiosos (profetas), políticos carismáticos, fundadores de movimentos sociais.</p>
+                            <p class="text-gray-700 mt-2"><strong>Estabilidade:</strong> Baixa - desaparece com a morte ou afastamento do líder.</p>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Sistemas Políticos Contemporâneos</h3>
+                    <p class="mb-4 text-gray-700">Toda sociedade moderna deve escolher como organizar poder. Existem três principais:</p>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle4">
+                            <span>Democracia</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle4">
+                            <p class="text-gray-700 mt-4"><strong>Definição:</strong> Sistema em que poder reside no povo e é exercido mediante representação ou participação direta.</p>
+                            <p class="text-gray-700 mt-3"><strong>Características principais:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>Soberania popular (povo é fonte de poder)</li>
+                                <li>Separação de poderes (Executivo, Legislativo, Judiciário)</li>
+                                <li>Direitos civis e liberdades individuais garantidas</li>
+                                <li>Eleições periódicas livres</li>
+                                <li>Liberdade de expressão e associação</li>
+                                <li>Accountability (governantes respondem perante povo)</li>
+                            </ul>
+                            <p class="text-gray-700 mt-3"><strong>Desafios:</strong> Desigualdade de poder económico, manipulação de opinião pública, corrupção institucional, oligarquia (poucos controlam).</p>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle5">
+                            <span>Autoritarismo</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle5">
+                            <p class="text-gray-700 mt-4"><strong>Definição:</strong> Poder concentrado em uma autoridade central com restrições a liberdades políticas e civis.</p>
+                            <p class="text-gray-700 mt-3"><strong>Características:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>Concentração de poder (um líder, partido ou grupo)</li>
+                                <li>Restrição a direitos civis</li>
+                                <li>Proibição/limitação de partidos políticos</li>
+                                <li>Eleições ausentes ou controladas</li>
+                                <li>Repressão política seletiva</li>
+                                <li>Permite certa autonomia à sociedade civil</li>
+                            </ul>
+                            <p class="text-gray-700 mt-3"><strong>Variantes:</strong> Ditadura militar, oligarquia (poder de poucos ricos), monopartidário (um único partido legal).</p>
+                            <p class="text-gray-700 mt-2"><strong>Exemplo histórico Brasil:</strong> Regime Militar (1964-1985) era autoritário.</p>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle6">
+                            <span>Totalitarismo</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle6">
+                            <p class="text-gray-700 mt-4"><strong>Definição:</strong> Forma extrema de autoritarismo onde Estado busca controlar <strong>TODOS</strong> os aspectos da vida pública E privada.</p>
+                            <p class="text-gray-700 mt-3"><strong>Características (muito mais extremas que autoritarismo):</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>Controle estatal total</li>
+                                <li>Um único partido político obrigatório</li>
+                                <li>Ideologia estatal imposta</li>
+                                <li>Vigilância constante de população</li>
+                                <li>Repressão e terrorismo de Estado</li>
+                                <li>Culto de personalidade do líder</li>
+                                <li>Controle da economia, educação, cultura, família, religião</li>
+                            </ul>
+                            <p class="text-gray-700 mt-3"><strong>Exemplos históricos:</strong> Nazi-Alemanha (Hitler), URSS (Stalin), Coreia do Norte (regime Kim).</p>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">🇧🇷 Política no Brasil</h3>
+                    <p class="mb-4 text-gray-700">Brasil saiu de 21 anos de Regime Militar (1964-1985) e adotou sistema democrático:</p>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle7">
+                            <span>1985 - Transição Democrática</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle7">
+                            <p class="text-gray-700 mt-4">Tancredo Neves foi eleito indiretamente (Colégio Eleitoral) em 1985, marcando o fim da ditadura militar.</p>
+                            <p class="text-gray-700 mt-2"><strong>Movimento "Diretas Já" (1983-1984):</strong> Campanha massiva pela volta às eleições diretas para presidente.</p>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle8">
+                            <span>1988 - Constituição Cidadã</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle8">
+                            <p class="text-gray-700 mt-4">A Constituição de 1988 estabeleceu:</p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>Democracia direta (eleições livres)</li>
+                                <li>Direitos sociais expandidos (saúde, educação)</li>
+                                <li>Direitos de povos indígenas</li>
+                                <li>Separação de poderes reforçada</li>
+                                <li>Liberdade de imprensa e associação</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle9">
+                            <span>Sistema Presidencial Brasileiro (2026)</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle9">
+                            <p class="text-gray-700 mt-4"><strong>Tipo:</strong> Presidencialismo (Presidente é chefe de Executivo)</p>
+                            <p class="text-gray-700 mt-3"><strong>Três Poderes:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li><strong>Executivo:</strong> Presidente, Vice, Ministros - administra Estado</li>
+                                <li><strong>Legislativo:</strong> Câmara (513 deputados) + Senado (81 senadores) - cria leis</li>
+                                <li><strong>Judiciário:</strong> Juízes, Tribunais, STF - interpreta leis</li>
+                            </ul>
+                            <p class="text-gray-700 mt-3"><strong>Sistema de Freios e Contrapesos:</strong> Cada poder limita excessos dos outros (Presidente não legisla sozinho, STF pode anular leis inconstitucionais, etc).</p>
+                            <p class="text-gray-700 mt-2"><strong>Desafios atuais:</strong> Corrupção, concentração de mídia, polarização política, violência.</p>
+                        </div>
+                    </div>
+
+                    <div class="callout info mt-6">
+                        <p class="font-semibold mb-2">🇧🇷 Democracia Brasileira: Fragilidade Institucional e Concentração Midiática</p>
+                        <p class="text-gray-700 mt-3">Apesar de Constituição 1988, democracia brasileira permanece frágil e capturada por elites:</p>
+                        <ul class="list-disc ml-6 text-gray-700 mt-2">
+                            <li><strong>Presidencialismo de coalizão instável:</strong> Presidente sem maioria legislativa natural; negocia com partidos clientes oferecendo cargos/orçamento — incentiva corrupção sistemática (Mensalão, Lava Jato).</li>
+                            <li><strong>Oligarquias midiáticas:</strong> Rede Globo monopoliza narrativa política; agenda de elites recebe cobertura amplificada enquanto demandas de pobres/periferias ignoradas — poder simbólico obsceno.</li>
+                            <li><strong>Desgaste institucional recente:** Impeachment de Dilma (2016) levantou dúvidas sobre legalidade; ataque ao Congresso/STF (2023); polarização extrema em redes sociais; erosão de confiança nas instituições.</li>
+                            <li><strong>Fragilidade de direitos civis:** Negros presos desproporcionalamente; violência policial sistêmica em favelas; impunidade para crimes de colarinho branco enquanto pobres presos por roubo; judiciário reflete desigualdades.</li>
+                            <li><strong>Exclusão da participação:** Mecanismos de democracia participativa (orçamento participativo, conselhos) existem mas são simbólicos; decisões estruturais tomadas sem participação popular.</li>
+                        </ul>
+                    </div>
+
+                    <div class="callout warning mt-8">
+                        <p class="font-semibold mb-2">Referências Utilizadas</p>
+                        <ul class="list-disc ml-6 text-gray-700">
+                            <li>Weber, M. (1922). <em>Economia e Sociedade</em></li>
+                            <li>Bobbio, N. (1986). <em>Estado, Governo, Sociedade</em></li>
+                            <li>Held, D. (1987). <em>Modelos de Democracia</em></li>
+                            <li>Constituição Federal de 1988 - Brasil</li>
+                        </ul>
+                    </div>
+                `
+            },
+{
+                id: "movimentos-sociais",
+                title: "Movimentos Sociais",
+                emoji: "",
+                parent: "movimentos-soc",
+                
+                content: `
+                    <h2 class="text-3xl font-bold mb-2 text-gray-900">Movimentos Sociais</h2>
+                    <p class="text-gray-500 mb-6">Quando coletividades se mobilizam por mudança</p>
+
+                    <div class="callout info mb-6">
+                        <p class="font-semibold mb-2">Conceito Central</p>
+                        <p><strong>Movimento Social:</strong> Ação coletiva organizada de pessoas buscando <strong>mudança ou resistência</strong> em estruturas sociais, políticas ou culturais. Exige: confrontação política, identidade coletiva compartilhada e duração temporal significativa.</p>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Ciclos de Protesto (Tarrow & Tilly)</h3>
+                    <p class="mb-4 text-gray-700">Movimentos não surgem do nada. Ocorrem em ciclos de intensificação de conflitos com 4 fases distintas:</p>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle1">
+                            <span>Fase 1: Emergência</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle1">
+                            <p class="text-gray-700 mt-4">Novos atores aparecem e articulam demandas</p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>Evento catalisador (crise, injustiça, oportunidade política)</li>
+                                <li>Primeiros protestos, frequentemente desorganizados</li>
+                                <li>Surgem lideranças e organização básica</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle2">
+                            <span>Fase 2: Expansão</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle2">
+                            <p class="text-gray-700 mt-4">Crescimento exponencial e diversificação</p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>Número de participantes cresce</li>
+                                <li>Grupos diferentes se unem (solidariedade)</li>
+                                <li>Repertório de ações se expande (não só rua, mas outras formas)</li>
+                                <li>Cobertura mediática aumenta</li>
+                                <li>Mobilização atinge pico</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle3">
+                            <span>Fase 3: Polarização</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle3">
+                            <p class="text-gray-700 mt-4">Confrontação intensifica e sociedade se divide</p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>Reação estatal mais repressiva</li>
+                                <li>Sociedade se divide (a favor vs contra)</li>
+                                <li>Alguns grupos radicalizem ações</li>
+                                <li>Outros buscam negociação institucional</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle4">
+                            <span>Fase 4: Declínio</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle4">
+                            <p class="text-gray-700 mt-4">Movimento se desativa ou se institucionaliza</p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>Desmobilização (pessoas saem das ruas)</li>
+                                <li>Repressão eficaz OU integração institucional</li>
+                                <li>Ciclo termina (até o próximo)</li>
+                                <li>Energia latente persiste nas bases</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Teorias Complementares</h3>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle5">
+                            <span>Repertório de Ação (Charles Tilly)</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle5">
+                            <p class="text-gray-700 mt-4"><strong>Conceito:</strong> Conjunto de formas de confrontação que grupos conhecem e usam.</p>
+                            <p class="text-gray-700 mt-3"><strong>Exemplos de Repertório:</strong> Greve, manifestação, passeata, ocupação, bloqueio, boicote, petição, acampamento, vigília, pichação.</p>
+                            <p class="text-gray-700 mt-2"><strong>Importante:</strong> Repertório muda historicamente. Há 200 anos pediam para reis; hoje usam redes sociais e hashtags.</p>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle6">
+                            <span>Oportunidades Políticas (Doug McAdam)</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle6">
+                            <p class="text-gray-700 mt-4"><strong>Ideia:</strong> Movimentos surgem quando há abertura política favorável.</p>
+                            <p class="text-gray-700 mt-3"><strong>Fatores:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>Abertura institucional (eleições, reformas)</li>
+                                <li>Alianças políticas (elite splits - divisão de elites)</li>
+                                <li>Capacidade repressiva estatal (se muito repressivo, menos movimento)</li>
+                                <li>Precedentes de confrontação (grupos já sabem fazer)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">🇧🇷 Caso Exemplar: Jornadas de Junho 2013</h3>
+                    <p class="mb-4 text-gray-700">O Brasil experimentou ciclo de protesto importante em 2013, começando por uma questão específica mas expandindo-se:</p>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle7">
+                            <span>Como Começou (Junho 2013)</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle7">
+                            <p class="text-gray-700 mt-4"><strong>Origem:</strong> MPL-SP (Movimento Passe Livre São Paulo) protesta contra aumento de tarifa de ônibus.</p>
+                            <p class="text-gray-700 mt-2"><strong>Estratégia:</strong> Bloqueio de catracas (não pagar passagem) em protesto.</p>
+                            <p class="text-gray-700 mt-2"><strong>Reação estatal:</strong> Repressão brutal da polícia (vídeos viralizados nas redes sociais).</p>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle8">
+                            <span>Explosão e Expansão</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle8">
+                            <p class="text-gray-700 mt-4"><strong>Dinâmica:</strong> Redes sociais (Twitter, Facebook) viralizaram vídeos de repressão.</p>
+                            <p class="text-gray-700 mt-2"><strong>Crescimento exponencial:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>Semana 1: ~10 mil manifestantes</li>
+                                <li>Semana 2: ~100 mil</li>
+                                <li>Semana 3: ~1 milhão (marchas em centenas de cidades)</li>
+                            </ul>
+                            <p class="text-gray-700 mt-2"><strong>Diversificação de pautas:</strong> De tarifa de ônibus para educação, saúde, democracia, anticorrupção.</p>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle9">
+                            <span>Declínio e Legado</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle9">
+                            <p class="text-gray-700 mt-4"><strong>Declínio:</strong> Verão, movimentos esvaziaram; foco virou Copa 2014; movimentos se fragmentaram.</p>
+                            <p class="text-gray-700 mt-2"><strong>Legado importante:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>Mostrou capacidade de mobilização urbana</li>
+                                <li>Redes sociais como ferramenta de organização</li>
+                                <li>Descontentamento permanente com Estado</li>
+                                <li>Influenciou eleições subsequentes (2014, 2018, 2022)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Tipologia de Movimentos Sociais Brasileiros</h3>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle10">
+                            <span>Movimento Operário/Trabalhista</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle10">
+                            <p class="text-gray-700 mt-4"><strong>Histórico Exemplar:</strong> ABC Paulista (1978-1980) durante ditadura militar.</p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>Metalúrgicos de indústrias automóveis</li>
+                                <li>Liderados por Lula e Jair Mendes</li>
+                                <li>Greves espontâneas conquistaram liberdade sindical</li>
+                                <li>Contribuiu para: Fundação do PT (1980) e CUT (1983)</li>
+                                <li>Ajudou a redemocratizar Brasil</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle11">
+                            <span>Movimento Indígena</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle11">
+                            <p class="text-gray-700 mt-4"><strong>Organização:</strong> APIB (Articulação dos Povos Indígenas do Brasil), criada em 2005.</p>
+                            <p class="text-gray-700 mt-2"><strong>Pauta Principal:</strong> Demarcação de terras indígenas.</p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>135+ etnias indígenas no Brasil</li>
+                                <li>Terras ameaçadas por agronegócio, mineração, garimpo</li>
+                                <li>Constituição 1988 reconheceu direitos (mas implementação lenta)</li>
+                                <li>Acampamento Terra Livre é principal mobilização anual</li>
+                            </ul>
+                            <p class="text-gray-700 mt-2"><strong>Desafios:</strong> "Marco Temporal" (tese de 1988 como limite), invasões de terras, violência contra indígenas.</p>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle12">
+                            <span>Movimento Estudantil</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle12">
+                            <p class="text-gray-700 mt-4"><strong>Pautas:</strong> Educação pública, democrática, inclusiva.</p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>UBES (União Brasileira dos Estudantes Secundaristas)</li>
+                                <li>Mobilização recente: 2016 contra reforma do ensino médio (Lei 13.415)</li>
+                                <li>Estratégia: Ocupações de escolas e universidades</li>
+                                <li>Resultado: Reforma alterada (vitória parcial)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle13">
+                            <span>Movimento LGBTQIA+</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle13">
+                            <p class="text-gray-700 mt-4"><strong>Pautas:</strong> Direitos sexuais, identidade de gênero, não discriminação.</p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>2013: STF reconheceu casamento homoafetivo</li>
+                                <li>2019: Discriminação por orientação sexual criminalizada</li>
+                                <li>Desafio: Brasil tem maior taxa de violência contra LGBTQIA+ globalmente</li>
+                                <li>Estratégia: Paradas Pride, ocupações, ações judiciais</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle14">
+                            <span>Movimento Feminista</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle14">
+                            <p class="text-gray-700 mt-4"><strong>Pautas:</strong> Igualdade de gênero, direitos reprodutivos, violência.</p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>Marcha das Mulheres Negras (2015, anuais)</li>
+                                <li>Greve Multifeminista (2018)</li>
+                                <li>Movimento negro muito ativo (interseccionalidade)</li>
+                                <li>Foco em feminicídio e violência doméstica</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="callout warning mt-8">
+                        <p class="font-semibold mb-2">Referências Utilizadas</p>
+                        <ul class="list-disc ml-6 text-gray-700">
+                            <li>Tarrow, S. (1998). <em>Power in Movement: Social Movements and Contentious Politics</em></li>
+                            <li>Tilly, C. & Tarrow, S. (2007). <em>Contentious Politics</em></li>
+                            <li>McAdam, D. (1999). <em>Political Process and the Development of Black Insurgency</em></li>
+                            <li>Snow, D. & Benford, R. (1988). Ideology, Frame Resonance and Participant Mobilization</li>
+                        </ul>
+                    </div>
+                `
+            },
+{
+    id: "formas-contemporaneas-mobilizacao",
+    title: "Formas Contemporâneas de Mobilização",
+    emoji: "",
+                parent: "movimentos-soc",
+    
+    content: `
+                    <h2 class="text-3xl font-bold mb-2 text-gray-900">Formas Contemporâneas de Mobilização</h2>
+                    <p class="text-gray-500 mb-6">Primavera Árabe, Junho de 2013 e o ativismo digital</p>
+                    <div class="callout info mb-6">
+                        <p class="font-semibold mb-2">Conceito-chave</p>
+                        <p>Os ciclos globais de protesto do início do século XXI revelaram novos repertórios de ação coletiva: horizontais, conectados digitalmente, mas também frágeis e sem lideranças definidas.</p>
+                    </div>
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Novos Ciclos de Protesto Global</h3>
+                    <p class="mb-4 text-gray-700">Desde os anos 2000, o mundo assistiu a ondas de mobilização que romperam com os padrões tradicionais dos movimentos sociais. Organizados em rede, sem partidos ou sindicatos no centro, esses protestos revelam tanto o potencial quanto os limites das mobilizações contemporâneas.</p>
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggleFCM1">
+                            <span>A Primavera Árabe (2010–2011)</span><span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggleFCM1">
+                            <p class="text-gray-700 mt-4">A Primavera Árabe foi uma onda de protestos, insurreições e revoluções que varreu o mundo árabe a partir de dezembro de 2010, iniciada na Tunísia com a autoimolação de Mohamed Bouazizi.</p>
+                            <ul class="list-disc ml-6 mt-2 text-gray-700 space-y-2">
+                                <li><strong>Detonadores:</strong> desemprego juvenil, corrupção, autoritarismo e desigualdade econômica.</li>
+                                <li><strong>Papel das redes sociais:</strong> Twitter, Facebook e YouTube foram fundamentais para coordenar protestos e transmitir imagens — mas a organização foi muito além das plataformas.</li>
+                                <li><strong>Resultados variados:</strong> Tunísia alcançou uma transição democrática; Egito voltou ao autoritarismo militar; Síbia, Iêmen e Síria mergulharam em guerras civis.</li>
+                                <li><strong>Limite das redes sociais:</strong> a mobilização digital não substitui organizações políticas e instituições capazes de sustentar a mudança.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggleFCM2">
+                            <span>🇧🇷 Jornadas de Junho de 2013 (Brasil)</span><span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggleFCM2">
+                            <p class="text-gray-700 mt-4">Em junho de 2013, o Brasil viveu a maior onda de protestos desde as Diretas Já (1984). O estopim foi o aumento de R$ 0,20 nas tarifas de transporte público.</p>
+                            <ul class="list-disc ml-6 mt-2 text-gray-700 space-y-2">
+                                <li><strong>MPL (Movimento Passe Livre):</strong> organização horizontal e apartidária que iniciou os protestos em São Paulo e Manaus.</li>
+                                <li><strong>Escala e heterogeneidade:</strong> os protestos se massificaram rapidamente, incorporando demandas diversas e contraditórias — contra a corrupção, pelo sistema de saúde, contra a PEC 37, a favor e contra o governo.</li>
+                                <li><strong>Ambiguidade política:</strong> André Singer mostrou como junho congregou tanto a "esquerda festiva" quanto setores que depois apoiaram o impeachment de 2016.</li>
+                                <li><strong>Legado:</strong> acelerou a polarização política brasileira e abriu espaço para novas forças à direita e à esquerda.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggleFCM3">
+                            <span>Occupy, Indignados e Movimentos Horizontais</span><span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggleFCM3">
+                            <ul class="list-disc ml-6 mt-4 text-gray-700 space-y-2">
+                                <li><strong>Occupy Wall Street (EUA, 2011):</strong> ocupa praças e espaços públicos com a bandeira dos "99%" contra o 1% mais rico. Sem lideranças claras ou demandas programáticas definidas.</li>
+                                <li><strong>Indignados (Espanha, 2011):</strong> movimento 15M ocupa a Puerta del Sol em Madrid contra desemprego e crise econômica. Origem do partido Podemos.</li>
+                                <li><strong>Black Lives Matter (EUA, 2013–):</strong> surgiu como hashtag após a morte de Trayvon Martin e se tornou movimento global com os protestos de 2020.</li>
+                                <li><strong>Fridays for Future:</strong> greves escolares pelo clima lideradas por Greta Thunberg (2018–), mobilizando jovens em dezenas de países.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggleFCM4">
+                            <span>Ativismo Digital: potências e limites</span><span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggleFCM4">
+                            <ul class="list-disc ml-6 mt-4 text-gray-700 space-y-2">
+                                <li><strong>Potências:</strong> baixo custo de mobilização, velocidade de difusão, capacidade de coordenação transnacional, amplificação de vozes marginalizadas.</li>
+                                <li><strong>Limites — "slacktivism":</strong> a facilidade de curtir ou compartilhar pode substituir o engajamento real. O custo baixo da participação online pode indicar comprometimento raso.</li>
+                                <li><strong>Vigilância estatal:</strong> as mesmas plataformas que facilitam a mobilização são usadas pelos Estados para monitorar e reprimir ativistas.</li>
+                                <li><strong>Desinformação:</strong> fake news e astroturfing (manifestações artificialmente fabricadas) poluem o espaço de mobilização digital.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="callout warning mb-6 mt-6">
+                        <p class="font-semibold mb-2">Para o ENEM</p>
+                        <p>As Jornadas de Junho de 2013 aparecem frequentemente nas provas. Saiba: quem iniciou (MPL), qual foi o estopim (tarifa de ônibus), como se ampliaram e quais foram suas ambiguidades políticas.</p>
+                    </div>
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Referências Bibliográficas</h3>
+                    <div class="bg-gray-50 rounded-lg p-4">
+                        <ul class="text-sm text-gray-600 space-y-2">
+                            <li>CASTELLS, Manuel. <em>Redes de Indignação e Esperança</em>. Rio de Janeiro: Zahar, 2013.</li>
+                            <li>SINGER, André. <em>Brasil, junho de 2013: classes e ideologias cruzadas</em>. <em>Novos Estudos Cebrap</em>, n. 97, 2013.</li>
+                            <li>BRINGEL, Breno; PLEYERS, Geoffrey. (org.). <em>Após Junho de 2013</em>. São Paulo: Friedrich Ebert, 2015.</li>
+                            <li>TATAGIBA, Luciana et al. <em>Protestos à direita no Brasil (2007-2015)</em>. In: VELASCO E CRUZ, S. et al. (org.). <em>Direita, Volver!</em>. São Carlos: EdUFSCar, 2015.</li>
+                            <li>MOVIMENTO PASSE LIVRE. <em>Não começou em Salvador, não vai terminar em São Paulo</em>. In: MARICATO, E. et al. <em>Cidades Rebeldes</em>. São Paulo: Boitempo, 2013.</li>
+                        </ul>
+                    </div>
+                `
+},
+{
+                id: "identidade-social",
+                title: "Identidade Social",
+                emoji: "",
+                parent: "cultura-soc",
+                
+                content: `
+                    <h2 class="text-3xl font-bold mb-2 text-gray-900">Identidade Social</h2>
+                    <p class="text-gray-500 mb-6">Como nos tornamos quem somos — e por que a sociedade nos classifica?</p>
+
+                    <div class="callout info mb-6">
+                        <p class="font-semibold mb-2">Conceito Central</p>
+                        <p>A <strong>identidade não é uma essência fixa</strong> com que nascemos. É <strong>construída socialmente</strong>, é <strong>múltipla</strong> e <strong>contextual</strong> — muda conforme a situação e as interações.</p>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Erving Goffman - A Representação do Eu e o Estigma</h3>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle1">
+                            <span>A Vida como Performance</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle1">
+                            <p class="text-gray-700 mt-4"><strong>Erving Goffman</strong> (1922-1982) via a vida social como um <strong>teatro</strong> (dramaturgia):</p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li><strong>Fachada (frontstage):</strong> o comportamento controlado que apresentamos em público</li>
+                                <li><strong>Bastidores (backstage):</strong> o comportamento privado</li>
+                                <li><strong>Gerenciamento de impressões:</strong> controlamos a imagem que os outros formam de nós</li>
+                            </ul>
+                            <p class="text-gray-700 mt-3">Pense no Instagram: mostramos a "fachada" ideal, escondendo os "bastidores".</p>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle2">
+                            <span>Estigma — A Identidade Deteriorada</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle2">
+                            <p class="text-gray-700 mt-4">Obra <em>Estigma: notas sobre a manipulação da identidade deteriorada</em> (1963):</p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li><strong>Estigma:</strong> atributo profundamente depreciativo que "deteriora" a identidade social</li>
+                                <li>Origem grega: marca no corpo que sinalizava algo "mau" sobre o status moral de quem a portava</li>
+                                <li><strong>Identidade social virtual:</strong> o que esperamos/atribuímos à pessoa (estereótipo)</li>
+                                <li><strong>Identidade social real:</strong> os atributos que a pessoa efetivamente possui</li>
+                            </ul>
+                            <p class="text-gray-700 mt-3">Quando há grande discrepância entre as duas, a pessoa é <strong>desacreditada</strong> (estigmatizada). Ex.: pessoa com tatuagem facial estereotipada como "criminoso", mas que pode ser um profissional qualquer.</p>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Stuart Hall - Identidade na Pós-Modernidade</h3>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle3">
+                            <span>O Sujeito Descentrado</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle3">
+                            <p class="text-gray-700 mt-4"><strong>Stuart Hall</strong> (1932-2014), em <em>A Identidade Cultural na Pós-Modernidade</em> (1992):</p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>As identidades modernas estão sendo <strong>"descentradas"</strong> — deslocadas e fragmentadas</li>
+                                <li>O sujeito pós-moderno assume <strong>identidades diferentes em momentos diferentes</strong></li>
+                                <li>Dentro de nós há identidades <strong>contraditórias</strong>, empurrando em várias direções</li>
+                                <li>A identidade nacional é um <strong>construto</strong> (não é natural), criado para unificar</li>
+                            </ul>
+                            <p class="text-gray-700 mt-3">A identidade é composta por múltiplas dimensões: etnia, raça, religião, gênero, nação.</p>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">🇧🇷 O Mito da Democracia Racial</h3>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle4">
+                            <span>Gilberto Freyre — A Tese da Democracia Racial</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle4">
+                            <p class="text-gray-700 mt-4"><strong>Gilberto Freyre</strong> (1900-1987), obra <em>Casa-Grande & Senzala</em> (1933):</p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>Argumentava que a <strong>miscigenação</strong> entre brancos, negros e indígenas gerou uma sociedade "mais tolerante e igualitária"</li>
+                                <li>Via a relação entre senhores e escravizados como marcada por certa "intimidade"</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle5">
+                            <span>Florestan Fernandes — A Crítica</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle5">
+                            <p class="text-gray-700 mt-4"><strong>Florestan Fernandes</strong> (1920-1995), obra <em>A Integração do Negro na Sociedade de Classes</em> (1965):</p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li><strong>Demoliu o mito:</strong> a "democracia racial" é um <strong>véu ideológico</strong> que esconde a subordinação real da população negra</li>
+                                <li>O mito serve para que o racismo <strong>não seja claramente percebido</strong></li>
+                                <li>Célebre frase: "o brasileiro tem preconceito de ter preconceito"</li>
+                            </ul>
+                            <div class="callout critical mt-3">
+                                <p class="text-gray-700"><strong>Conexão:</strong> o mito da democracia racial mascara o que os dados de saúde (Tópico 13) e de encarceramento (Tópico 16) escancaram: o racismo estrutural brasileiro.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle6">
+                            <span>Reafirmação de Identidades e Interseccionalidade</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle6">
+                            <ul class="list-disc ml-6 text-gray-700 mt-4">
+                                <li>O <strong>Movimento Negro</strong> ressignifica a negritude como fonte de orgulho e luta política</li>
+                                <li><strong>Identidades de gênero e sexualidade</strong> (LGBTQIA+, pessoas trans e não-binárias) constroem-se em contexto de discriminação</li>
+                                <li><strong>Interseccionalidade</strong> (Kimberlé Crenshaw): múltiplas marginalizações se sobrepõem (ex.: mulher + negra + pobre)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="callout warning mt-8">
+                        <p class="font-semibold mb-2">Referências Utilizadas</p>
+                        <ul class="list-disc ml-6 text-gray-700">
+                            <li>Goffman, E. (1959). <em>A Representação do Eu na Vida Cotidiana</em></li>
+                            <li>Goffman, E. (1963). <em>Estigma: notas sobre a manipulação da identidade deteriorada</em></li>
+                            <li>Hall, S. (1992). <em>A Identidade Cultural na Pós-Modernidade</em></li>
+                            <li>Freyre, G. (1933). <em>Casa-Grande & Senzala</em></li>
+                            <li>Fernandes, F. (1965). <em>A Integração do Negro na Sociedade de Classes</em></li>
+                            <li>Crenshaw, K. (1989). <em>Demarginalizing the Intersection of Race and Sex</em></li>
+                        </ul>
+                    </div>
+                `
+            },
+{
+                id: "desvio-controle",
+                title: "Desvio Social e Controle",
+                emoji: "",
+                parent: "justica-punicao",
+                
+                content: `
+                    <h2 class="text-3xl font-bold mb-2 text-gray-900">Desvio Social e Controle</h2>
+                    <p class="text-gray-500 mb-6">Quem decide o que é crime e quem vai preso?</p>
+
+                    <div class="callout info mb-6">
+                        <p class="font-semibold mb-2">Conceito Central</p>
+                        <p><strong>Desvio</strong> é o comportamento que viola normas sociais. Mas o desvio <strong>não é uma qualidade do ato em si</strong> — depende de quem define, quem julga e quem é punido. <strong>Desvio ≠ crime:</strong> crime é o desvio previsto em lei; nem todo desvio é crime (tatuagem já foi desviante, hoje é comum).</p>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">As Três Teorias Principais do Desvio</h3>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle1">
+                            <span>Durkheim — A Normalidade do Crime</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle1">
+                            <p class="text-gray-700 mt-4"><strong>Émile Durkheim</strong> (1858-1917):</p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li><strong>O crime é "normal":</strong> existe em TODAS as sociedades, é um fato social</li>
+                                <li><strong>Função social:</strong> ao ser punido, o crime reafirma os valores coletivos e reforça a coesão social</li>
+                                <li><strong>Anomia:</strong> estado de ausência ou enfraquecimento de normas, típico de mudanças sociais rápidas, em que os indivíduos ficam sem referências claras</li>
+                            </ul>
+                            <p class="text-gray-700 mt-3">Para Durkheim, uma sociedade sem nenhum crime seria impossível — e até indesejável, pois indicaria um controle sufocante.</p>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle2">
+                            <span>Becker — Teoria do Etiquetamento (Labeling)</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle2">
+                            <p class="text-gray-700 mt-4"><strong>Howard Becker</strong> (1928-2023), obra <em>Outsiders</em> (1963):</p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>"O desviante é aquele a quem o rótulo foi aplicado com sucesso"</li>
+                                <li>O desvio não é qualidade inerente ao ato, mas resultado da <strong>reação social</strong> que rotula</li>
+                                <li>A sociedade <strong>cria</strong> o desvio ao criar as regras cuja infração o constitui</li>
+                                <li><strong>Profecia autorrealizável:</strong> rotular um jovem de "criminoso" pode empurrá-lo para a carreira desviante</li>
+                            </ul>
+                            <p class="text-gray-700 mt-3">Baseada no <strong>interacionismo simbólico</strong>: a realidade é moldada pela interpretação coletiva, não apenas pelos fatos.</p>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle3">
+                            <span>Foucault — Poder, Disciplina e o Panóptico</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle3">
+                            <p class="text-gray-700 mt-4"><strong>Michel Foucault</strong> (1926-1984), obra <em>Vigiar e Punir</em> (1975):</p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>A prisão não apenas pune — <strong>controla e produz corpos dóceis</strong></li>
+                                <li><strong>Panóptico:</strong> estrutura circular em que um vigilante vê todos os presos, mas eles nunca sabem se estão sendo observados</li>
+                                <li>Resultado: o preso <strong>se autovigia</strong> e se disciplina sozinho</li>
+                                <li><strong>Sociedade disciplinar:</strong> essa lógica se espalha para escolas, fábricas, hospitais, quartéis</li>
+                            </ul>
+                            <p class="text-gray-700 mt-3">O poder disciplinar molda os indivíduos <strong>por dentro</strong>, sem necessidade de coerção física direta.</p>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Sistema de Controle Social</h3>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle4">
+                            <span>Controle Formal e Informal</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle4">
+                            <p class="text-gray-700 mt-4"><strong>Controle formal:</strong> lei, polícia, tribunais, prisão.</p>
+                            <p class="text-gray-700 mt-2"><strong>Controle informal:</strong> família, comunidade, moral, vergonha, reputação.</p>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">🇧🇷 O Encarceramento em Massa no Brasil</h3>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle5">
+                            <span>Dados e Seletividade Penal</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle5">
+                            <p class="text-gray-700 mt-4"><strong>Dados oficiais (Depen/Ministério da Justiça):</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>Brasil é o <strong>3º país do mundo</strong> em população carcerária: ~830 mil presos</li>
+                                <li><strong>69% dos presos são negros</strong> (pretos e pardos) — maior proporção da série histórica</li>
+                                <li>Perfil dominante: homem, jovem, negro, de baixa escolaridade (75% têm no máximo o fundamental)</li>
+                                <li>A <strong>Lei de Drogas (2006)</strong> é a principal responsável pelo encarceramento em massa</li>
+                            </ul>
+                            <div class="callout critical mt-3">
+                                <p class="text-gray-700"><strong>Seletividade penal:</strong> o sistema de justiça criminal incide de forma desproporcional sobre jovens negros e pobres, reforçando o <strong>racismo estrutural</strong>. Isso confirma empiricamente as teorias do labeling (Becker) e da disciplina (Foucault).</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="callout warning mt-8">
+                        <p class="font-semibold mb-2">Referências Utilizadas</p>
+                        <ul class="list-disc ml-6 text-gray-700">
+                            <li>Durkheim, É. (1895). <em>As Regras do Método Sociológico</em></li>
+                            <li>Becker, H. (1963). <em>Outsiders: Estudos de Sociologia do Desvio</em></li>
+                            <li>Foucault, M. (1975). <em>Vigiar e Punir</em></li>
+                            <li>Depen. <em>Levantamento Nacional de Informações Penitenciárias</em></li>
+                        </ul>
+                    </div>
+                `
+            },
+{
+                id: "conflito-mudanca",
+                title: "Conflito e Mudança Social",
+                emoji: "",
+                parent: "poder-domin",
+                
+                content: `
+                    <h2 class="text-3xl font-bold mb-2 text-gray-900">Conflito e Mudança Social</h2>
+                    <p class="text-gray-500 mb-6">A mudança é abrupta (revolução) ou gradual (reforma)?</p>
+
+                    <div class="callout info mb-6">
+                        <p class="font-semibold mb-2">Conceito Central</p>
+                        <p>As sociedades <strong>não são estáticas</strong> — elas mudam. Para muitos sociólogos, o <strong>motor dessa mudança é o conflito</strong> entre grupos com interesses opostos. A questão-chave: a mudança acontece por revolução ou por reforma?</p>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Karl Marx - O Conflito de Classes como Motor da História</h3>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle1">
+                            <span>Materialismo Histórico</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle1">
+                            <p class="text-gray-700 mt-4"><strong>Karl Marx</strong> (1818-1883) e <strong>Friedrich Engels</strong> (1820-1895):</p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>A história é estudada pela relação entre a produção material e as forças produtivas</li>
+                                <li><strong>Base (infraestrutura):</strong> as relações de produção econômicas</li>
+                                <li><strong>Superestrutura:</strong> Estado, direito, ideologia, religião, arte, moral</li>
+                            </ul>
+                            <p class="text-gray-700 mt-3">A base condiciona a superestrutura: o modo como produzimos a vida material molda as ideias, leis e instituições.</p>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle2">
+                            <span>A Contradição que Gera Revolução</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle2">
+                            <ul class="list-disc ml-6 text-gray-700 mt-4">
+                                <li>As <strong>forças produtivas</strong> (tecnologia, trabalho) se desenvolvem e entram em <strong>contradição</strong> com as relações de produção existentes</li>
+                                <li>Quando essas relações viram um "entrave", abre-se uma <strong>época de revolução social</strong></li>
+                                <li>A <strong>luta de classes</strong> é o "verdadeiro motor da história"</li>
+                                <li>Desfecho previsto: revolução que supera o capitalismo</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Ralf Dahrendorf - A Crítica Reformista</h3>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle3">
+                            <span>Marx vs. Dahrendorf</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle3">
+                            <p class="text-gray-700 mt-4"><strong>Ralf Dahrendorf</strong> (1929-2009), em <em>O Conflito Social Moderno</em> (1982):</p>
+                            <p class="text-gray-700 mt-3"><strong>Concorda com Marx:</strong> o conflito é permanente e é força motriz da sociedade.</p>
+                            <p class="text-gray-700 mt-2"><strong>Discorda de Marx em dois pontos:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>O conflito não gira apenas em torno da <strong>propriedade</strong>, mas principalmente da <strong>distribuição de poder e autoridade</strong> nas instituições</li>
+                                <li>A mudança não precisa ser abrupta/revolucionária — pode ser <strong>contínua e gradual</strong></li>
+                            </ul>
+                            <p class="text-gray-700 mt-3">Sua teoria é <strong>liberal e reformista</strong>.</p>
+                            <div class="callout success mt-3">
+                                <p class="text-gray-700"><strong>Síntese do debate:</strong> Marx (conflito de classes → revolução) × Dahrendorf (conflito de autoridade → reforma gradual).</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Tipos de Mudança Social</h3>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle4">
+                            <span>Quatro Formas de Mudança</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle4">
+                            <ul class="list-disc ml-6 text-gray-700 mt-4">
+                                <li><strong>Revolução:</strong> abrupta e estrutural (Revolução Francesa, Russa)</li>
+                                <li><strong>Reforma:</strong> gradual, dentro do sistema existente (mudanças na lei)</li>
+                                <li><strong>Difusão:</strong> propagação de inovações entre culturas</li>
+                                <li><strong>Transformação estrutural:</strong> reorganização de longo prazo (Agrária → Industrial → Digital)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle5">
+                            <span>🇧🇷 Mudança Social no Brasil</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle5">
+                            <ul class="list-disc ml-6 text-gray-700 mt-4">
+                                <li><strong>Abolição (1888):</strong> mudança formal SEM reparação — libertou sem integrar</li>
+                                <li><strong>Industrialização (a partir de 1930):</strong> transformação estrutural, urbanização</li>
+                                <li><strong>Ditadura e resistência (1964-1985):</strong> conflito político intenso</li>
+                                <li><strong>Redemocratização (1985):</strong> exemplo de mudança negociada/gradual (reforma)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="callout warning mt-8">
+                        <p class="font-semibold mb-2">Referências Utilizadas</p>
+                        <ul class="list-disc ml-6 text-gray-700">
+                            <li>Marx, K. & Engels, F. (1848). <em>Manifesto do Partido Comunista</em></li>
+                            <li>Marx, K. (1859). <em>Contribuição à Crítica da Economia Política</em></li>
+                            <li>Dahrendorf, R. (1982). <em>O Conflito Social Moderno</em></li>
+                            <li>Dahrendorf, R. (1957). <em>As Classes e seus Conflitos na Sociedade Industrial</em></li>
+                        </ul>
+                    </div>
+                `
+            },
+{
+                id: "comunicacao-massa",
+                title: "Comunicação de Massa",
+                emoji: "",
+                parent: "cultura-arte-com",
+                
+                content: `
+                    <h2 class="text-3xl font-bold mb-2 text-gray-900">Comunicação de Massa e Opinião Pública</h2>
+                    <p class="text-gray-500 mb-6">A mídia nos liberta ou nos controla?</p>
+
+                    <div class="callout info mb-6">
+                        <p class="font-semibold mb-2">Conceito Central</p>
+                        <p>Os <strong>meios de comunicação de massa</strong> não apenas informam — eles <strong>produzem cultura, moldam opiniões e disputam poder</strong>. A sociologia oferece respostas críticas, das mais pessimistas (Frankfurt) às que valorizam a resistência do público (Estudos Culturais).</p>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">A Indústria Cultural (Adorno & Horkheimer)</h3>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle1">
+                            <span>Origem e Conceito</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle1">
+                            <p class="text-gray-700 mt-4">Termo cunhado por <strong>Theodor Adorno</strong> (1903-1969) e <strong>Max Horkheimer</strong> (1895-1973), da <strong>Escola de Frankfurt</strong>.</p>
+                            <p class="text-gray-700 mt-2">Aparece na obra <em>Dialética do Esclarecimento</em> (1944/1947), escrita no contexto do nazifascismo e do uso do rádio como propaganda.</p>
+                            <p class="text-gray-700 mt-3"><strong>Tese central:</strong> Na sociedade capitalista, a cultura é <strong>industrializada</strong> — vira mercadoria produzida em série para gerar lucro e fazer "todos consumirem a mesma coisa", reproduzindo a ideologia dominante.</p>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle2">
+                            <span>Características da Indústria Cultural</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle2">
+                            <ul class="list-disc ml-6 text-gray-700 mt-4">
+                                <li><strong>Padronização:</strong> produtos similares, fórmulas repetidas</li>
+                                <li><strong>Pseudoindividualização:</strong> ilusão de novidade sobre o que é padronizado</li>
+                                <li><strong>Passividade:</strong> o público consome sem reflexão crítica</li>
+                                <li><strong>Alienação:</strong> arte autêntica substituída por entretenimento superficial</li>
+                                <li><strong>Controle social:</strong> manipulação mais eficaz que a violência aberta</li>
+                            </ul>
+                            <p class="text-gray-700 mt-3"><strong>Exemplos:</strong> telenovelas com estrutura idêntica, música pop de fórmula, filmes "fórmula" de Hollywood, reality shows.</p>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">A Resposta dos Estudos Culturais: Stuart Hall</h3>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle3">
+                            <span>Codificação/Decodificação (Encoding/Decoding)</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle3">
+                            <p class="text-gray-700 mt-4"><strong>Stuart Hall</strong> (1932-2014) discordou do pessimismo de Frankfurt: <strong>o público NÃO é passivo</strong>.</p>
+                            <p class="text-gray-700 mt-2">A mensagem é codificada pelo emissor, mas <strong>decodificada ativamente</strong> pelo receptor. Hall propôs três tipos de leitura:</p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li><strong>Leitura preferencial (dominante):</strong> aceita a mensagem como pretendida</li>
+                                <li><strong>Leitura negociada:</strong> aceita em parte, mas adapta ao seu contexto</li>
+                                <li><strong>Leitura oposicional:</strong> rejeita/inverte o sentido pretendido</li>
+                            </ul>
+                            <p class="text-gray-700 mt-3"><strong>Ideia-chave:</strong> O público pode resistir e ressignificar mensagens. A comunicação não é via de mão única.</p>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">O Modelo de Propaganda (Chomsky & Herman)</h3>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle4">
+                            <span>Os Cinco Filtros da Notícia</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle4">
+                            <p class="text-gray-700 mt-4">Em <em>Manufacturing Consent</em> (1988), <strong>Noam Chomsky</strong> e <strong>Edward Herman</strong> mostram como a grande mídia "fabrica o consentimento" — sem coerção aberta, por mecanismos de mercado e autocensura.</p>
+                            <p class="text-gray-700 mt-3"><strong>Os 5 filtros:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li><strong>Propriedade:</strong> concentração e orientação ao lucro das empresas</li>
+                                <li><strong>Publicidade:</strong> anunciantes como fonte principal de receita</li>
+                                <li><strong>Fontes:</strong> dependência de governo, empresas e "especialistas" do poder</li>
+                                <li><strong>Flak:</strong> pressões e represálias que disciplinam a mídia</li>
+                                <li><strong>Ideologia (inimigo comum):</strong> mecanismo de controle por medo</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Comunicação Contemporânea: Algoritmos e Desinformação</h3>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle5">
+                            <span>Bolhas, Câmaras de Eco e Fake News</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle5">
+                            <p class="text-gray-700 mt-4">A evolução Rádio → TV → Internet → Redes Sociais trouxe novos problemas:</p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li><strong>Bolha de filtro:</strong> algoritmos mostram apenas o que reforça a visão prévia do usuário</li>
+                                <li><strong>Câmara de eco:</strong> reforço de crenças dentro de grupos homogêneos</li>
+                                <li><strong>Fake news:</strong> desinformação organizada, com impacto eleitoral</li>
+                                <li><strong>Engajamento como métrica:</strong> algoritmos priorizam o que gera reação (muitas vezes o mais extremo)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">🇧🇷 Concentração de Mídia no Brasil</h3>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle6">
+                            <span>"Coronelismo Eletrônico"</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle6">
+                            <p class="text-gray-700 mt-4"><strong>Dados do Media Ownership Monitor (Repórteres sem Fronteiras):</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>Brasil tem os <strong>piores indicadores de pluralidade midiática</strong> entre 12 países em desenvolvimento analisados</li>
+                                <li>A <strong>Globo</strong> concentra <strong>43,86%</strong> da audiência nacional</li>
+                                <li>No online, 4 grupos (G1, UOL, R7, IG) dominam 58,75% da audiência</li>
+                                <li>A legislação brasileira NÃO define limites à concentração</li>
+                            </ul>
+                            <p class="text-gray-700 mt-3"><strong>Coronelismo eletrônico:</strong> concentração da propriedade de mídia em famílias, ligada ao poder político regional (espelha a concentração fundiária).</p>
+                            <div class="callout warning mt-3">
+                                <p class="text-gray-700"><strong>Impacto na democracia:</strong> sem diversidade de vozes, o debate público empobrece.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="callout warning mt-8">
+                        <p class="font-semibold mb-2">Referências Utilizadas</p>
+                        <ul class="list-disc ml-6 text-gray-700">
+                            <li>Adorno, T. & Horkheimer, M. (1947). <em>Dialética do Esclarecimento</em></li>
+                            <li>Hall, S. (1980). <em>Encoding/Decoding</em></li>
+                            <li>Chomsky, N. & Herman, E. (1988). <em>Manufacturing Consent</em></li>
+                            <li>Repórteres sem Fronteiras / Intervozes. <em>Media Ownership Monitor Brasil</em></li>
+                            <li>Pariser, E. (2011). <em>The Filter Bubble</em></li>
+                        </ul>
+                    </div>
+                `
+            },
+{
+    id: "sociabilidades-mundo-digital",
+    title: "Sociabilidades do Mundo Digital",
+    emoji: "",
+                parent: "sociabilidades-dig",
+    
+    content: `
+                    <h2 class="text-3xl font-bold mb-2 text-gray-900">Sociabilidades do Mundo Digital</h2>
+                    <p class="text-gray-500 mb-6">Redes sociais, vigilância e identidades na era digital</p>
+                    <div class="callout info mb-6">
+                        <p class="font-semibold mb-2">Conceito-chave</p>
+                        <p>A internet não é apenas um canal de comunicação — é um espaço de sociabilidade, identidade, poder e desigualdade. As plataformas digitais reconfiguram as relações sociais de formas que a Sociologia precisa compreender criticamente.</p>
+                    </div>
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">A Nova Esfera Digital</h3>
+                    <p class="mb-4 text-gray-700">O surgimento da internet e das redes sociotécnicas transformou profundamente as formas de socialização, comunicação e organização política. Não se trata apenas de uma mudança tecnológica — é uma reconfiguração das relações sociais, dos modos de produzir e consumir informação e das formas de exercer poder.</p>
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggleSMD1">
+                            <span>Castells e a Sociedade em Rede</span><span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggleSMD1">
+                            <p class="text-gray-700 mt-4">Manuel Castells desenvolveu a teoria da <strong>Sociedade em Rede</strong> para descrever a nova morfologia social dominante na era informacional:</p>
+                            <ul class="list-disc ml-6 mt-2 text-gray-700 space-y-2">
+                                <li>O poder na era digital reside no controle das redes de comunicação. As principais redes são simultaneamente globais e locais.</li>
+                                <li><strong>Identidade projeto vs. identidade de resistência:</strong> movimentos sociais usam as redes para construir novas identidades coletivas.</li>
+                                <li><strong>Poder das redes:</strong> quem programa as redes (define os valores e objetivos) e quem decide conectar ou desconectar tem poder real.</li>
+                                <li>O espaço de fluxos (informações, capital, pessoas) superpõe o espaço de lugares — mas não o elimina.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggleSMD2">
+                            <span>Bauman: identidades líquidas no digital</span><span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggleSMD2">
+                            <p class="text-gray-700 mt-4">Zygmunt Bauman aplicou seu conceito de <strong>modernidade líquida</strong> ao mundo digital:</p>
+                            <ul class="list-disc ml-6 mt-2 text-gray-700 space-y-2">
+                                <li>As identidades digitais são fluidas, construídas e reconstruídas constantemente através de perfis, curtidas e compartilhamentos.</li>
+                                <li>A busca por validação nas redes sociais substitui as formas tradicionais de pertencimento.</li>
+                                <li><strong>Comunidades guarda-roupas:</strong> agrupamentos temporários em torno de um interesse, que se desfazem tão facilmente quanto se formam.</li>
+                                <li>O consumismo digital: a busca por reconhecimento online se articula com o consumerismo — o self é uma mercadoria a ser vendida.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggleSMD3">
+                            <span>Capitalismo de Vigilância (Zuboff)</span><span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggleSMD3">
+                            <p class="text-gray-700 mt-4">Shoshana Zuboff cunhou o conceito de <strong>capitalismo de vigilância</strong> para descrever o modelo de negócios das grandes plataformas digitais:</p>
+                            <ul class="list-disc ml-6 mt-2 text-gray-700 space-y-2">
+                                <li>Os dados comportamentais dos usuários são extraídos, processados e vendidos como "excedente comportamental" para anunciantes.</li>
+                                <li>O objetivo das plataformas não é apenas prever, mas modificar o comportamento humano para maximizar o lucro.</li>
+                                <li>Isso cria uma assimetria de conhecimento e poder: as empresas sabem muito mais sobre nós do que nós sobre elas.</li>
+                                <li><strong>Fake news e câmaras de eco:</strong> os algoritmos de engajamento tendem a amplificar conteúdo emocional e polarizador, criando bolhas informacionais.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggleSMD4">
+                            <span>Exclusão Digital e Desigualdade</span><span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggleSMD4">
+                            <ul class="list-disc ml-6 mt-4 text-gray-700 space-y-2">
+                                <li><strong>Brecha digital:</strong> a desigualdade no acesso à internet e às tecnologias digitais reproduz e aprofunda desigualdades sociais pré-existentes.</li>
+                                <li>No Brasil, milhões de pessoas acessam a internet exclusivamente pelo celular (pré-pago), com dados limitados e sem acesso a computadores.</li>
+                                <li><strong>Pandemia e desigualdade digital:</strong> a COVID-19 expôs brutalmente as assimetrias no acesso à educação a distância e ao trabalho remoto.</li>
+                                <li><strong>Racismo algorítmico:</strong> sistemas de IA treinados com dados históricos podem reproduzir e amplificar discriminações raciais e de gênero (Safiya Noble).</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="callout warning mb-6 mt-6">
+                        <p class="font-semibold mb-2">Para o ENEM</p>
+                        <p>Fake news, câmaras de eco e algoritmos são temas recorrentes. Saiba relacionar as bolhas informacionais com os algoritmos de engajamento, a polarização política e os riscos para a democracia.</p>
+                    </div>
+                    <div class="callout info mt-6 mb-6">
+                        <p class="font-semibold mb-2">🇧🇷 Sociabilidades Digitais no Brasil: Polarização, Desinformação e Exclusão</p>
+                        <p class="text-gray-700 mt-3">A participação brasileira no digital é marcada por desigualdades estruturais, polarização política acelerada e concentração de poder em plataformas estrangeiras:</p>
+                        <ul class="list-disc ml-6 text-gray-700 mt-2">
+                            <li><strong>Brecha digital estrutural:</strong> 20% dos brasileiros ainda não têm acesso à internet; maioria acessa exclusivamente via celular pré-pago com dados limitados. Pobreza material reflete-se em exclusão digital — impossibilidade de participar de videoaulas, trabalho remoto, bancos digitais.</li>
+                            <li><strong>WhatsApp como espaço de desinformação massiva:</strong> Após 2018, WhatsApp tornou-se principal vetor de fake news políticas no Brasil — grupos fechados amplificam narrativas radicalizadas sem mediação, algoritmo prioriza engajamento, não verdade. Eleições 2018/2022 expostas a campanhas coordenadas de desinformação via app.</li>
+                            <li><strong>Racismo algorítmico e vigilância discriminatória:</strong> Sistemas de reconhecimento facial têm taxas de erro muito maiores em rostos negros (Buolamwini &amp; Gebru); São Paulo usa IA para "policiamento preditivo" que reforça concentração de vigilância em bairros periféricos, majoritariamente negros.</li>
+                            <li><strong>Capitalismo de vigilância integrado a Estado-segurança:</strong> Plataformas (Meta, Google, TikTok) compartilham dados com governo; ausência de regulação sobre privacidade digital; corporações de tecnologia têm mais poder sobre comportamento brasileiro que instituições eleitas.</li>
+                            <li><strong>Violência digital e assédio contra minorias:</strong> Mulheres, negros/as e LGBTQIA+ enfrentam assédio coordenado, desumanização via memes, ataques organizados ("raids"). Redes sociais reproduzem offline: racismo, misoginia, LGBTfobia — com impunidade.</li>
+                        </ul>
+                    </div>
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Referências Bibliográficas</h3>
+                    <div class="bg-gray-50 rounded-lg p-4">
+                        <ul class="text-sm text-gray-600 space-y-2">
+                            <li>CASTELLS, Manuel. <em>A Sociedade em Rede</em>. 6. ed. São Paulo: Paz e Terra, 2002.</li>
+                            <li>BAUMAN, Zygmunt. <em>Vida Líquida</em>. Rio de Janeiro: Zahar, 2009.</li>
+                            <li>ZUBOFF, Shoshana. <em>A Era do Capitalismo de Vigilância</em>. Rio de Janeiro: Intrínseca, 2021.</li>
+                            <li>PARISER, Eli. <em>O Filtro Invisível</em>. Rio de Janeiro: Zahar, 2012.</li>
+                            <li>RECUERO, Raquel. <em>Redes Sociais na Internet</em>. Porto Alegre: Sulina, 2009.</li>
+                            <li>NOBLE, Safiya Umoja. <em>Algorithms of Oppression</em>. New York: NYU Press, 2018.</li>
+                        </ul>
+                    </div>
+                `
+},
+{
+    id: "ciencia-tecnologia",
+    title: "Ciência e Tecnologia",
+    emoji: "",
+                parent: "ciencia-tech",
+    
+    content: `
+                    <h2 class="text-3xl font-bold mb-2 text-gray-900">Ciência e Tecnologia</h2>
+                    <p class="text-gray-500 mb-6">A ciência como campo social e os impactos sociais da tecnologia</p>
+                    <div class="callout info mb-6">
+                        <p class="font-semibold mb-2">Conceito-chave</p>
+                        <p>A ciência não é uma atividade neutra isolada da sociedade — é um campo social com suas regras, disputas e relações de poder. Compreender como o conhecimento é produzido é fundamental para questionar o que se apresenta como "verdade objetiva".</p>
+                    </div>
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">A Ciência como Prática Social</h3>
+                    <p class="mb-4 text-gray-700">A Sociologia da Ciência investiga como o conhecimento científico é produzido em contextos sociais específicos — com financiamentos, interesses, disputas institucionais e valores culturais que influenciam o que se pesquisa e o que se publica.</p>
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggleCT1">
+                            <span>Merton e as Normas da Ciência (CUDOS)</span><span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggleCT1">
+                            <p class="text-gray-700 mt-4">Robert Merton identificou quatro normas institucionais que governam a prática científica ideal — o ethos da ciência:</p>
+                            <ul class="list-disc ml-6 mt-2 text-gray-700 space-y-2">
+                                <li><strong>Comunalismo (C):</strong> o conhecimento científico é propriedade coletiva da humanidade, não de quem o descobriu.</li>
+                                <li><strong>Universalismo (U):</strong> afirmações científicas são avaliadas por critérios objetivos, independentemente da origem do cientista.</li>
+                                <li><strong>Desinteresse (D):</strong> os cientistas devem buscar o conhecimento em si, não ganhos pessoais.</li>
+                                <li><strong>Ceticismo organizado (OS):</strong> todas as afirmações devem ser submetidas ao escrutínio crítico e à verificação empírica.</li>
+                            </ul>
+                            <p class="text-gray-700 mt-2">Essas normas são ideais — Merton reconheceu que a ciência real frequentemente se afasta delas.</p>
+                        </div>
+                    </div>
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggleCT2">
+                            <span>Bourdieu: o Campo Científico</span><span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggleCT2">
+                            <p class="text-gray-700 mt-4">Pierre Bourdieu propôs uma análise sociológica do campo científico como um campo de forças:</p>
+                            <ul class="list-disc ml-6 mt-2 text-gray-700 space-y-2">
+                                <li>O campo científico tem suas próprias regras de jogo, onde o que está em disputa é o <strong>capital científico</strong> — o reconhecimento dos pares.</li>
+                                <li>Os agentes (cientistas, instituições) posicionam-se em relações de força: quem financia, quem publica nas melhores revistas, quem orienta os melhores alunos.</li>
+                                <li>A "autonomia relativa" do campo: a ciência tem lógica própria, mas não é impermeável a pressões externas (econômicas, políticas).</li>
+                                <li><strong>Ciência e poder:</strong> o monopólio do discurso científico legítimo é uma forma de poder simbólico.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggleCT3">
+                            <span>Weber: Racionalidade Técnica</span><span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggleCT3">
+                            <p class="text-gray-700 mt-4">Max Weber analisou o processo moderno de <strong>racionalização</strong> — a substituição da tradição, do misticismo e da emoção pelo cálculo, pela técnica e pela regra.</p>
+                            <ul class="list-disc ml-6 mt-2 text-gray-700 space-y-2">
+                                <li><strong>Desencantamento do mundo:</strong> a ciência e a técnica modernas eliminam o mistério e o sagrado do mundo — tudo é calculável e previsível.</li>
+                                <li><strong>Jaula de ferro:</strong> a racionalidade técnico-burocrática, embora eficiente, cria uma "jaula de ferro" que sufoca a criatividade e a liberdade individual.</li>
+                                <li><strong>Ciência como vocação:</strong> para Weber, a ciência não pode responder às perguntas sobre o sentido da vida — ela fornece meios, não fins.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggleCT4">
+                            <span>Inteligência Artificial e Impactos Sociais</span><span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggleCT4">
+                            <ul class="list-disc ml-6 mt-4 text-gray-700 space-y-2">
+                                <li><strong>Automação e trabalho:</strong> a IA ameaça substituir não apenas trabalhos manuais, mas também tarefas cognitivas rotineiras — impacto concentrado em trabalhadores de menor escolaridade.</li>
+                                <li><strong>Vieses algorítmicos:</strong> sistemas de IA aprendem com dados históricos e podem reproduzir e amplificar discriminações existentes (em contratações, crédito, policiamento preditivo).</li>
+                                <li><strong>Concentração de poder:</strong> poucas empresas dominam as infraestruturas de IA — Google, Meta, Microsoft, Amazon — levantando questões de monopolização do conhecimento.</li>
+                                <li><strong>Ética em IA:</strong> quem é responsável quando um algoritmo toma decisões que prejudicam pessoas? Como regular sistemas opacos e complexos?</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="callout warning mb-6 mt-6">
+                        <p class="font-semibold mb-2">Para o ENEM</p>
+                        <p>A racionalidade técnica de Weber — desencantamento do mundo, burocracia, "jaula de ferro" — é frequente nas provas. Saiba também relacionar ciência e poder (Bourdieu) e questionar a suposta neutralidade do conhecimento científico.</p>
+                    </div>
+                    <div class="callout info mt-6 mb-6">
+                        <p class="font-semibold mb-2">🇧🇷 Ciência e Tecnologia no Brasil: Subfinanciamento, Dependência e Inovação Desigual</p>
+                        <p class="text-gray-700 mt-3">A produção científico-tecnológica brasileira é estruturalmente periférica e desigual, refletindo padrões globais de dominação:</p>
+                        <ul class="list-disc ml-6 text-gray-700 mt-2">
+                            <li><strong>Subfinanciamento crônico da pesquisa:</strong> Brasil investe ~1% do PIB em C&amp;T (comparado a 2-3% em países desenvolvidos); 2023-2024 viram cortes nos orçamentos de universidades e agências de fomento (CNPq, CAPES), afastando jovens pesquisadores do país.</li>
+                            <li><strong>Dependência tecnológica de multinacionais:</strong> Brasil importa tecnologia de ponta; produção local concentra-se em commodities agrícolas (agronegócio) e recursos naturais. Indústria de semicondutores, farmacêutica avançada, tecnologia verde controladas por corporações transnacionais.</li>
+                            <li><strong>Hierarquia global de conhecimento:</strong> Citações brasileiras em revistas internacionais; mas Brasil importa mais conhecimento que exporta. Pesquisadores brasileiros frequentemente desenvolvem pesquisa em universidades norte-americanas/europeias — "fuga de cérebros" estrutural.</li>
+                            <li><strong>IA e vieses contra populações brasileiras:</strong> Sistemas de IA treinados com dados globais (predominantemente norte-americanos/europeus) não representam bem realidades brasileiras; reconhecimento facial falha em rostos negros; policiamento preditivo reforça racismo.</li>
+                            <li><strong>Corporações de tech monopolizam narrativa de "inovação":</strong> Startups brasileiras financiadas por capital estrangeiro; dados gerados por brasileiros são extraídos por Big Tech (Google, Meta, TikTok); discurso de "economia digital" mascara exploração de trabalho digital precário.</li>
+                        </ul>
+                    </div>
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Referências Bibliográficas</h3>
+                    <div class="bg-gray-50 rounded-lg p-4">
+                        <ul class="text-sm text-gray-600 space-y-2">
+                            <li>WEBER, Max. <em>A Ciência como Vocação</em>. In: <em>Ciência e Política: duas vocações</em>. São Paulo: Cultrix, 2004.</li>
+                            <li>BOURDIEU, Pierre. <em>Os Usos Sociais da Ciência</em>. São Paulo: UNESP, 2004.</li>
+                            <li>MERTON, Robert K. <em>The Sociology of Science</em>. Chicago: University of Chicago Press, 1973.</li>
+                            <li>LATOUR, Bruno; WOOLGAR, Steve. <em>A Vida de Laboratório</em>. Rio de Janeiro: Contraponto, 1997.</li>
+                            <li>BECK, Ulrich. <em>Sociedade de Risco</em>. São Paulo: Editora 34, 2010.</li>
+                        </ul>
+                    </div>
+                `
+},
+{
+    id: "sociedade-meio-ambiente",
+    title: "Sociedade e Meio Ambiente",
+    emoji: "",
+                parent: "ambiente",
+    
+    content: `
+                    <h2 class="text-3xl font-bold mb-2 text-gray-900">Sociedade e Meio Ambiente</h2>
+                    <p class="text-gray-500 mb-6">Riscos ambientais, conflitos socioambientais e sustentabilidade</p>
+                    <div class="callout info mb-6">
+                        <p class="font-semibold mb-2">Conceito-chave</p>
+                        <p>A questão ambiental não é apenas técnica — é profundamente social. Quem sofre mais os impactos da degradação? Quem decide sobre os recursos naturais? A Sociologia ambiental responde a essas perguntas articulando meio ambiente, poder e desigualdade.</p>
+                    </div>
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">A Crise Ambiental como Questão Social</h3>
+                    <p class="mb-4 text-gray-700">As sociedades industriais modernas criaram uma crise ambiental sem precedentes: mudanças climáticas, perda de biodiversidade, poluição e esgotamento de recursos. Mas essa crise não afeta a todos igualmente — as populações mais pobres e vulneráveis são as que mais sofrem seus impactos.</p>
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggleSMA1">
+                            <span>Beck: A Sociedade de Risco</span><span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggleSMA1">
+                            <p class="text-gray-700 mt-4">Ulrich Beck propôs o conceito de <strong>Sociedade de Risco</strong> para descrever a modernidade tardia:</p>
+                            <ul class="list-disc ml-6 mt-2 text-gray-700 space-y-2">
+                                <li>Na primeira modernidade, os riscos eram locais e previsíveis. Na segunda modernidade (pós-industrial), os riscos são globais, invisíveis e difíceis de calcular: poluição química, radiação nuclear, mudanças climáticas.</li>
+                                <li><strong>"Os riscos são democráticos":</strong> em tese, ninguém escapa dos riscos globais — mas na prática, os pobres são mais vulneráveis.</li>
+                                <li>A produção de riqueza (industrialização) produz simultaneamente riscos — o progresso tecnológico cria ameaças que ele mesmo não consegue controlar.</li>
+                                <li>A política de risco: decisões sobre o que é "risco aceitável" são disputas de poder, não apenas avaliações técnicas.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggleSMA2">
+                            <span>Desenvolvimento Sustentável e Agenda 2030</span><span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggleSMA2">
+                            <ul class="list-disc ml-6 mt-4 text-gray-700 space-y-2">
+                                <li><strong>Relatório Brundtland (1987):</strong> definiu desenvolvimento sustentável como "aquele que atende às necessidades do presente sem comprometer a capacidade das futuras gerações de atender às suas próprias necessidades".</li>
+                                <li><strong>Rio-92:</strong> Conferência das Nações Unidas sobre Meio Ambiente e Desenvolvimento — produziu a Agenda 21 e a Convenção do Clima.</li>
+                                <li><strong>Agenda 2030 / ODS:</strong> os 17 Objetivos de Desenvolvimento Sustentável (2015) estabelecem metas globais para erradicação da pobreza, ação climática, igualdade de gênero etc.</li>
+                                <li><strong>Tensão:</strong> o conceito de "desenvolvimento sustentável" é criticado por ambientalistas radicais — seria possível crescimento econômico infinito em um planeta finito?</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggleSMA3">
+                            <span>🇧🇷 Conflitos Socioambientais no Brasil</span><span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggleSMA3">
+                            <p class="text-gray-700 mt-4">O Brasil concentra alguns dos conflitos socioambientais mais graves do mundo:</p>
+                            <ul class="list-disc ml-6 mt-2 text-gray-700 space-y-2">
+                                <li><strong>Desmatamento da Amazônia:</strong> impulsionado pela expansão agropecuária, grilagem de terras e mineração ilegal — afeta povos indígenas, seringueiros e ribeirinhos.</li>
+                                <li><strong>Chico Mendes e os seringueiros:</strong> líder dos seringueiros do Acre, assassinado em 1988 ao organizar resistência ao desmatamento e defender a criação de reservas extrativistas.</li>
+                                <li><strong>Grandes hidrelétricas:</strong> Belo Monte (Xingu), Tucuruí e outras removeram povos indígenas e ribeirinhos sem consulta adequada.</li>
+                                <li><strong>Mineração e desastres:</strong> rompimentos de barragens (Mariana, 2015; Brumadinho, 2019) revelaram a falta de regulação e os custos sociais da mineração.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggleSMA4">
+                            <span>Mudanças Climáticas e Justiça Ambiental</span><span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggleSMA4">
+                            <ul class="list-disc ml-6 mt-4 text-gray-700 space-y-2">
+                                <li><strong>Desigualdade climática:</strong> os países e populações que menos contribuíram para as emissões de gases de efeito estufa são os que mais sofrem os impactos das mudanças climáticas (ex: povos insulares, populações costeiras pobres).</li>
+                                <li><strong>Justiça ambiental:</strong> movimento que articula questões ambientais com raça, classe e gênero — questiona quem arca com os custos da poluição e quem se beneficia da exploração dos recursos.</li>
+                                <li><strong>Ambientalismo dos pobres (Martínez Alier):</strong> movimentos de resistência de comunidades locais contra projetos que degradam seus territórios — não necessariamente se identificam como "ambientalistas", mas defendem seu modo de vida.</li>
+                                <li><strong>Governança climática:</strong> Acordo de Paris (2015), COPs, NDCs — mecanismos internacionais que dependem da cooperação entre Estados com interesses frequentemente conflitantes.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="callout warning mb-6 mt-6">
+                        <p class="font-semibold mb-2">Para o ENEM</p>
+                        <p>Os conflitos socioambientais brasileiros (Belo Monte, desmatamento, quilombolas e mineração) são frequentes. Saiba relacionar com a Sociedade de Risco (Beck), o ambientalismo dos pobres (Martínez Alier) e a noção de justiça ambiental.</p>
+                    </div>
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Referências Bibliográficas</h3>
+                    <div class="bg-gray-50 rounded-lg p-4">
+                        <ul class="text-sm text-gray-600 space-y-2">
+                            <li>BECK, Ulrich. <em>Sociedade de Risco</em>. São Paulo: Editora 34, 2010.</li>
+                            <li>LATOUR, Bruno. <em>Jamais Fomos Modernos</em>. São Paulo: Editora 34, 1994.</li>
+                            <li>MARTÍNEZ ALIER, Joan. <em>O Ecologismo dos Pobres</em>. São Paulo: Contexto, 2007.</li>
+                            <li>ACSELRAD, Henri; MELLO, Cecília; BEZERRA, Gustavo. <em>O Que é Justiça Ambiental</em>. Rio de Janeiro: Garamond, 2009.</li>
+                            <li>PORTO-GONÇALVES, Carlos Walter. <em>A Globalização da Natureza e a Natureza da Globalização</em>. Rio de Janeiro: Civilização Brasileira, 2006.</li>
+                        </ul>
+                    </div>
+                `
+},
+{
+                id: "saude-sociedade",
+                title: "Saúde e Sociedade",
+                emoji: "",
+                parent: "saude-doenca",
+                
+                content: `
+                    <h2 class="text-3xl font-bold mb-2 text-gray-900">Saúde e Sociedade</h2>
+                    <p class="text-gray-500 mb-6">Por que grupos sociais adoecem e morrem de formas diferentes?</p>
+
+                    <div class="callout info mb-6">
+                        <p class="font-semibold mb-2">Conceito Central</p>
+                        <p><strong>A saúde não é apenas biológica.</strong> As condições em que uma pessoa nasce, vive, trabalha e envelhece influenciam diretamente seu adoecimento e seu acesso ao cuidado. A saúde é um processo <strong>socialmente determinado</strong>.</p>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Determinantes Sociais da Saúde (DSS)</h3>
+                    <p class="mb-4 text-gray-700">Segundo a OMS e a Fiocruz, existem fatores sociais que determinam quem adoece e como:</p>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle1">
+                            <span>O Que São os Determinantes Sociais</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle1">
+                            <p class="text-gray-700 mt-4"><strong>Definição (OMS/Fiocruz):</strong> Fatores sociais, econômicos, culturais, étnico-raciais e ambientais que influenciam a saúde da população.</p>
+                            <p class="text-gray-700 mt-3"><strong>Principais determinantes:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>Renda e ocupação</li>
+                                <li>Escolaridade</li>
+                                <li>Moradia e saneamento básico</li>
+                                <li>Acesso a alimentos</li>
+                                <li>Redes de apoio social</li>
+                                <li>Raça/cor (racismo estrutural)</li>
+                            </ul>
+                            <p class="text-gray-700 mt-3"><strong>Ideia-chave:</strong> As desigualdades sociais transferem-se para o campo da saúde — grupos diferentes têm condições, riscos e acesso desiguais.</p>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle2">
+                            <span>Determinantes vs. Determinação Social</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle2">
+                            <p class="text-gray-700 mt-4"><strong>Determinantes sociais:</strong> visão mais descritiva (OMS) — lista de "fatores" associados ao adoecimento.</p>
+                            <p class="text-gray-700 mt-2"><strong>Determinação social:</strong> perspectiva crítica latino-americana que localiza a origem do adoecimento nas <strong>relações sociais e nas contradições do sistema capitalista</strong> — não apenas fatores isolados, mas a estrutura de classes.</p>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">🇧🇷 Desigualdades Raciais em Saúde</h3>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle3">
+                            <span>O Caso da Mortalidade Materna</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle3">
+                            <p class="text-gray-700 mt-4"><strong>Dados oficiais (Ministério da Saúde / IEPS):</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>Entre 2000 e 2020: <strong>40.907 mortes maternas</strong> no Brasil</li>
+                                <li><strong>65,9%</strong> das mortes ocorrem entre mulheres negras (pretas e pardas)</li>
+                                <li>Mulheres negras têm <strong>quase o dobro de risco</strong> de morte materna que as brancas</li>
+                                <li>Em 2024: 57 mortes por 100 mil nascidos vivos</li>
+                                <li>Regiões Norte e Nordeste têm os piores indicadores</li>
+                            </ul>
+                            <div class="callout critical mt-3">
+                                <p class="text-gray-700"><strong>Interpretação sociológica:</strong> Essa diferença NÃO é biológica — é produto do <strong>racismo estrutural</strong>: acesso desigual ao pré-natal de qualidade, tratamento diferenciado nos serviços e piores condições socioeconômicas.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Sistema Único de Saúde (SUS)</h3>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle4">
+                            <span>A Reforma Sanitária (origem do SUS)</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle4">
+                            <p class="text-gray-700 mt-4">O SUS é fruto do <strong>Movimento da Reforma Sanitária</strong>, articulado nos anos 1970-80 contra a ditadura militar.</p>
+                            <p class="text-gray-700 mt-3"><strong>Marco:</strong> 8ª Conferência Nacional de Saúde (1986), coordenada por <strong>Sergio Arouca</strong> (1941-2003), médico sanitarista e principal pensador do SUS.</p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>Arouca definiu a Reforma Sanitária como um "processo civilizatório"</li>
+                                <li>A Conferência legitimou a saúde como <strong>direito de todos e dever do Estado</strong></li>
+                                <li>Resultado: saúde universal na Constituição de 1988 e criação do SUS</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle5">
+                            <span>Os Três Princípios Doutrinários</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle5">
+                            <ul class="list-disc ml-6 text-gray-700 mt-4">
+                                <li><strong>Universalidade:</strong> acesso à saúde é direito de TODOS, sem distinção</li>
+                                <li><strong>Integralidade:</strong> atenção completa — prevenção, cura e reabilitação</li>
+                                <li><strong>Equidade:</strong> tratar desigualmente os desiguais, priorizando quem mais precisa</li>
+                            </ul>
+                            <p class="text-gray-700 mt-3"><strong>Dimensão:</strong> O SUS cobre mais de 200 milhões de pessoas — <strong>80%</strong> da população depende exclusivamente dele.</p>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle6">
+                            <span>Desafio: Subfinanciamento Crônico</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle6">
+                            <ul class="list-disc ml-6 text-gray-700 mt-4">
+                                <li>Brasil investe ~<strong>3,8% do PIB</strong> em saúde pública (abaixo da média global de 6%)</li>
+                                <li>Países com sistemas universais destinam 7-9% do PIB</li>
+                                <li>A <strong>Emenda Constitucional 95 (Teto de Gastos, 2016)</strong> congelou investimentos</li>
+                                <li>Entre 2018 e 2022, o SUS perdeu <strong>R$ 65 a 70 bilhões</strong></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Michel Foucault - Medicalização e Biopoder</h3>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle7">
+                            <span>Medicina como Poder</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle7">
+                            <p class="text-gray-700 mt-4"><strong>Medicalização:</strong> processo pelo qual a medicina passa a influenciar "todos" os domínios da vida, inscrevendo normas e regras nos indivíduos.</p>
+                            <p class="text-gray-700 mt-2"><strong>Biopoder:</strong> poder que se exerce sobre a vida coletiva, regulando corpos e populações. A saúde vira alvo de intervenção estatal.</p>
+                            <p class="text-gray-700 mt-2">Em <em>Vigiar e Punir</em> (1975), Foucault mostra como mecanismos disciplinares "docilizam" os corpos pela vigilância constante.</p>
+                        </div>
+                    </div>
+
+                    <div class="callout warning mt-8">
+                        <p class="font-semibold mb-2">Referências Utilizadas</p>
+                        <ul class="list-disc ml-6 text-gray-700">
+                            <li>Foucault, M. (1975). <em>Vigiar e Punir</em>. Petrópolis: Vozes</li>
+                            <li>Paim, J. S. (2008). <em>Reforma Sanitária Brasileira</em></li>
+                            <li>Fiocruz/CEPI-DSS. <em>Determinantes Sociais da Saúde</em></li>
+                            <li>IEPS (2023). <em>Desigualdades raciais na saúde</em>. Nota Técnica 27</li>
+                            <li>CEBES. <em>O teto dos gastos e o "desfinanciamento" do SUS</em></li>
+                            <li>Constituição Federal de 1988, arts. 196-200</li>
+                        </ul>
+                    </div>
+                `
+            },
+{
+                id: "migracoes-deslocamentos",
+                title: "Migrações e Deslocamentos Humanos",
+                emoji: "",
+                parent: "migracoes",
+                
+                content: `
+                    <h2 class="text-3xl font-bold mb-2 text-gray-900">Migrações e Deslocamentos Humanos</h2>
+                    <p class="text-gray-500 mb-6">Fluxos migratórios, refugiados, xenofobia e os direitos das pessoas em movimento</p>
+
+                    <div class="callout info mb-6">
+                        <p class="font-semibold mb-2">Conceito Central</p>
+                        <p><strong>Migrar</strong> é uma das experiências mais antigas e recorrentes da humanidade. As migrações nunca foram apenas deslocamentos geográficos — são encontros (e conflitos) entre culturas, rearranjos de identidade, expressões de desigualdades globais. Compreender as migrações é compreender o mundo contemporâneo.</p>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Movimentos Migratórios na Formação do Brasil</h3>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle1">
+                            <span>Migrações forçadas e voluntárias na história brasileira</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle1">
+                            <p class="text-gray-700 mt-4"><strong>Tráfico de africanos escravizados (1500-1850):</strong> estimativas apontam que 4,8 milhões de africanos foram trazidos ao Brasil à força — mais de 40% de todo o tráfico atlântico. São as migrações mais numerosas e mais violentas da história brasileira.</p>
+                            <p class="text-gray-700 mt-3"><strong>Imigração europeia (1850-1930):</strong> após a abolição, o governo brasileiro promoveu a imigração de europeus para substituir a mão de obra escravizada e implementar o "branqueamento" da população. Italianos, alemães, espanhóis e portugueses chegaram em massa.</p>
+                            <p class="text-gray-700 mt-3"><strong>Imigração asiática:</strong> japoneses chegaram a partir de 1908, concentrando-se em São Paulo. O Brasil tem a maior comunidade nipo-descendente fora do Japão (~1,5 milhão).</p>
+                            <p class="text-gray-700 mt-3"><strong>Migrações internas:</strong> o êxodo rural (1950-1980) transferiu 30 milhões de nordestinos para o Sudeste; as periferias das metrópoles são produto dessas migrações.</p>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Dinâmicas Globais de Migração</h3>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle2">
+                            <span>Norte e Sul: assimetria dos fluxos globais</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle2">
+                            <p class="text-gray-700 mt-4">As migrações globais contemporâneas são estruturadas por profundas assimetrias entre o Norte Global (países ricos) e o Sul Global (países pobres):</p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li><strong>Migração econômica:</strong> trabalhadores de países pobres migram para países ricos em busca de trabalho — frequentemente realizando os trabalhos mais precários e mal pagos (construção, agricultura, serviços domésticos)</li>
+                                <li><strong>Brain drain (fuga de cérebros):</strong> profissionais qualificados de países pobres migram para países ricos, aprofundando as desigualdades entre nações</li>
+                                <li><strong>Remessas:</strong> migrantes enviam dinheiro para seus países de origem — no Brasil, 3 milhões de emigrantes remetem bilhões/ano; no mundo, as remessas superam a ajuda internacional</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Deslocamentos Forçados: Refugiados e Exilados</h3>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle3">
+                            <span>Quem é refugiado? Definição e direitos</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle3">
+                            <p class="text-gray-700 mt-4"><strong>Convenção de Genebra (1951):</strong> refugiado é a pessoa que, por fundado temor de perseguição por motivos de raça, religião, nacionalidade, grupo social ou opiniões políticas, encontra-se fora de seu país e não pode ou não quer retornar.</p>
+                            <p class="text-gray-700 mt-3"><strong>ACNUR (Alto Comissariado da ONU para Refugiados):</strong> em 2023, registrou mais de 110 milhões de pessoas deslocadas à força no mundo — o maior número desde a 2ª Guerra Mundial.</p>
+                            <p class="text-gray-700 mt-3"><strong>Principais causas:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>Guerras e conflitos armados (Síria, Ucrânia, Sudão, Afeganistão)</li>
+                                <li>Perseguição política e étnica</li>
+                                <li>Desastres ambientais e mudanças climáticas (refugiados climáticos — categoria ainda não reconhecida juridicamente)</li>
+                                <li>Violência de grupos criminosos (gangs, narcotráfico)</li>
+                            </ul>
+                            <p class="text-gray-700 mt-3"><strong>No Brasil (Lei nº 9.474/1997):</strong> o Brasil tem uma das legislações mais avançadas sobre refúgio. Em 2022, o país registrava 61 mil refugiados reconhecidos — principalmente venezuelanos.</p>
+                        </div>
+                    </div>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle4">
+                            <span>🇻🇪 Crise migratória venezuelana no Brasil</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle4">
+                            <p class="text-gray-700 mt-4">A crise política e econômica na Venezuela (desde 2015) provocou a maior migração da América Latina: mais de 7 milhões de venezuelanos deixaram o país.</p>
+                            <p class="text-gray-700 mt-3">No Brasil, entraram principalmente por Roraima (fronteira com Venezuela). A Operação Acolhida (governo federal + ACNUR + sociedade civil) promoveu:</p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li>Acolhimento em abrigos em Boa Vista e Pacaraima</li>
+                                <li>Documentação e regularização migratória</li>
+                                <li>Interiorização: redistribuição para outros estados brasileiros</li>
+                                <li>Acesso a serviços de saúde e educação</li>
+                            </ul>
+                            <p class="text-gray-700 mt-2"><strong>Desafio:</strong> integração no mercado de trabalho, xenofobia e condições de vulnerabilidade persistentes.</p>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Xenofobia, Assimilação e Direitos</h3>
+
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggle5">
+                            <span>Xenofobia: medo e rejeição do estrangeiro</span>
+                            <span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggle5">
+                            <p class="text-gray-700 mt-4"><strong>Xenofobia:</strong> preconceito, medo ou hostilidade em relação a estrangeiros ou pessoas de outras origens culturais. É reforçada em contextos de crise econômica, quando imigrantes são usados como bode expiatório.</p>
+                            <p class="text-gray-700 mt-3"><strong>Teorias de integração:</strong></p>
+                            <ul class="list-disc ml-6 text-gray-700 mt-2">
+                                <li><strong>Assimilação:</strong> o imigrante abandona sua cultura e adota completamente a do país receptor (modelo EUA clássico — "melting pot" / cadinho)</li>
+                                <li><strong>Multiculturalismo:</strong> coexistência de culturas distintas no mesmo espaço, sem hierarquia (modelo canadense)</li>
+                                <li><strong>Interculturalidade:</strong> diálogo ativo entre culturas, com reconhecimento das diferenças e construção conjunta de algo novo</li>
+                            </ul>
+                            <p class="text-gray-700 mt-3"><strong>Direitos dos migrantes no Brasil (Lei de Migração, nº 13.445/2017):</strong> garante igualdade de direitos aos migrantes — saúde, educação, previdência, acesso à justiça — independentemente da situação documental.</p>
+                        </div>
+                    </div>
+
+                    <div class="callout info mt-6 mb-6">
+                        <p class="font-semibold mb-2">🇧🇷 Migrações Brasileiras: Êxodos, Xenofobia e Direitos Precarizados</p>
+                        <p class="text-gray-700 mt-3">As migrações no Brasil contemporâneo refletem desigualdades, violência e exclusão social estruturantes:</p>
+                        <ul class="list-disc ml-6 text-gray-700 mt-2">
+                            <li><strong>Êxodo rural e migração interna contínua:</strong> 50 milhões+ de brasileiros vivem fora de seus estados de nascimento; migrações internas (Nordeste→Sudeste, interior→metrópole) refletem ausência de políticas de desenvolvendo regional; periferias urbanas formadas por migrantes e seus filhos enfrentam precarização habitacional e laboral.</li>
+                            <li><strong>Emigração internacional de brasileiros:</strong> 2-4 milhões de brasileiros no exterior (EUA, Portugal, Itália, Paraguai, Japão); frequentemente em situação de vulnerabilidade (trabalho irregular, baixa remuneração). Remetem ~3 bilhões/ano para Brasil.</li>
+                            <li><strong>Crise migratória venezuelana e xenofobia acirrada:</strong> Entrada de 260 mil+ venezuelanos (2015-2023) desencadeou onda de xenofobia; mídia oligopolista amplificou narrativas de "invasão" e "roubo de empregos". Violência contra venezuelanos documentada em Roraima; debates públicos frequentemente desumanos.</li>
+                            <li><strong>Migrações climáticas emergentes:</strong> Secas no Nordeste (agravadas por mudanças climáticas) impulsionam novas migrações; desertificação de sertões; inundações urbanas removem favelas. Governo pouco investe em políticas de adaptação; expulsões de terras via agronegócio e especulação imobiliária.</li>
+                            <li><strong>Lei de Migração (2017) avançada mas descumprida:</strong> Legislação garante direitos iguais a migrantes; mas falta implementação, financiamento, integração no mercado formal. Migrantes regularizados enfrentam racismo, discriminação, segregação em periferias; xenofobia bate mais forte em crises econômicas.</li>
+                        </ul>
+                    </div>
+                    <div class="callout warning mt-8">
+                        <p class="font-semibold mb-2">Referências Utilizadas</p>
+                        <ul class="list-disc ml-6 text-gray-700">
+                            <li>ACNUR. <em>Tendências Globais: Deslocamento Forçado 2023</em>. Genebra: ACNUR, 2024.</li>
+                            <li>SAYAD, A. <em>A Imigração ou os Paradoxos da Alteridade</em>. São Paulo: Edusp, 1998.</li>
+                            <li>SASSEN, S. <em>Expulsões: brutalidade e complexidade na economia global</em>. Rio de Janeiro: Paz e Terra, 2016.</li>
+                            <li>BAENINGER, R. (org.). <em>Imigração Boliviana no Brasil</em>. Campinas: NEPO/UNICAMP, 2012.</li>
+                            <li>CAVALCANTI, L.; OLIVEIRA, T.; SILVA, B. G. <em>Relatório Anual 2022: Migrações e Refúgio no Brasil</em>. Brasília: OBMigra, 2022.</li>
+                        </ul>
+                    </div>
+                `
+            },
+{
+    id: "futuro",
+    title: "Futuro",
+    emoji: "",
+                parent: "futuro",
+    
+    content: `
+                    <h2 class="text-3xl font-bold mb-2 text-gray-900">Futuro</h2>
+                    <p class="text-gray-500 mb-6">Tendências contemporâneas, limites do crescimento e o papel da Sociologia</p>
+                    <div class="callout info mb-6">
+                        <p class="font-semibold mb-2">Conceito-chave</p>
+                        <p>A Sociologia não prevê o futuro, mas fornece instrumentos para compreender as tendências do presente, identificar alternativas possíveis e questionar o que é apresentado como inevitável. O futuro é uma construção social — depende das escolhas coletivas que fazemos hoje.</p>
+                    </div>
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">O Mundo que se Anuncia</h3>
+                    <p class="mb-4 text-gray-700">O início do século XXI é marcado por múltiplas crises sobrepostas: climática, democrática, de desigualdade e de sentido. Como pensar sociologicamente o futuro? Não como previsão, mas como análise de tendências, identificação de alternativas e engajamento com as disputas sobre o que queremos que o mundo seja.</p>
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggleFUT1">
+                            <span>Automação, IA e o Futuro do Trabalho</span><span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggleFUT1">
+                            <ul class="list-disc ml-6 mt-4 text-gray-700 space-y-2">
+                                <li>A automação e a IA ameaçam substituir não apenas trabalhos manuais, mas também tarefas cognitivas rotineiras — desde análise de dados até diagnóstico médico e produção de conteúdo.</li>
+                                <li>O impacto é desigual: trabalhadores com menor escolaridade e menor renda são mais vulneráveis à substituição tecnológica.</li>
+                                <li><strong>Renda básica universal (RBU):</strong> proposta crescentemente debatida como resposta à redução do emprego formal — garantir uma renda mínima a todos os cidadãos.</li>
+                                <li>A questão não é apenas econômica: o trabalho é central na identidade e na socialização humana. O que fazemos quando não precisamos (ou não podemos) trabalhar?</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggleFUT2">
+                            <span>Limites do Crescimento e Pós-Crescimento</span><span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggleFUT2">
+                            <p class="text-gray-700 mt-4">Em 1972, o Clube de Roma publicou <em>Limites do Crescimento</em> (Meadows et al.), mostrando que o crescimento econômico e populacional ilimitados levariam ao colapso ecológico e social.</p>
+                            <ul class="list-disc ml-6 mt-2 text-gray-700 space-y-2">
+                                <li><strong>Decrescimento (Latouche):</strong> proposta de redução voluntária da produção e do consumo nas sociedades ricas, para viver melhor com menos.</li>
+                                <li><strong>Economia do estado estacionário:</strong> uma economia que não cresce em tamanho, mas pode se desenvolver qualitativamente.</li>
+                                <li><strong>Fronteiras planetárias:</strong> o conceito científico de que existem limites biofísicos que a humanidade não pode ultrapassar sem riscos sistêmicos.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggleFUT3">
+                            <span>Para que Serve a Sociologia?</span><span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggleFUT3">
+                            <p class="text-gray-700 mt-4">A pergunta sobre a utilidade da Sociologia é, em si, uma questão sociológica — sobre o papel do conhecimento crítico na sociedade:</p>
+                            <ul class="list-disc ml-6 mt-2 text-gray-700 space-y-2">
+                                <li><strong>Desnaturalizar o social:</strong> mostrar que o que parece natural, inevitável ou "sempre foi assim" é, na verdade, resultado de processos históricos e relações de poder — e pode ser diferente.</li>
+                                <li><strong>Desenvolver a imaginação sociológica (Mills):</strong> a capacidade de conectar biografias individuais com contextos históricos e estruturais.</li>
+                                <li><strong>Emancipação e cidadania:</strong> o conhecimento sociológico é instrumento de crítica, mas também de ação — movimentos sociais, políticas públicas, participação democrática.</li>
+                                <li><strong>Reflexividade:</strong> a Sociologia questiona inclusive a si mesma — seus métodos, seus valores, suas limitações, sua posição no campo do poder.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="toggle-box bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                        <button class="toggle-btn font-semibold text-gray-800 w-full text-left flex justify-between items-center" data-toggle="toggleFUT4">
+                            <span>Utopias e Alternativas</span><span>+</span>
+                        </button>
+                        <div class="toggle-content" id="toggleFUT4">
+                            <p class="text-gray-700 mt-4">Contra o "fim da história", as ciências sociais mantêm viva a possibilidade de alternativas:</p>
+                            <ul class="list-disc ml-6 mt-2 text-gray-700 space-y-2">
+                                <li><strong>Buen vivir (Sumak Kawsay):</strong> conceito andino de bem-estar coletivo em harmonia com a natureza — alternativa ao desenvolvimento como crescimento econômico.</li>
+                                <li><strong>Commons (bens comuns):</strong> o resgate de formas de gestão coletiva de recursos (água, código, conhecimento, terra) fora da lógica mercantil.</li>
+                                <li><strong>Feminismo e cuidado:</strong> colocar o trabalho de cuidado no centro da organização social e econômica, valorizando o que sustenta a vida.</li>
+                                <li><strong>Pós-colonialismo:</strong> aprender com cosmovisões e práticas de povos subalternizados — saberes que o colonialismo tentou apagar.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="callout success mb-6 mt-6">
+                        <p class="font-semibold mb-2">Reflexão Final</p>
+                        <p>A Sociologia não oferece respostas prontas para o futuro — mas forma pessoas capazes de fazer as perguntas certas, questionar o que parece inevitável e imaginar mundos melhores. Essa é sua contribuição fundamental para a democracia.</p>
+                    </div>
+                    <div class="callout info mt-6 mb-6">
+                        <p class="font-semibold mb-2">🇧🇷 Futuro Brasileiro: Encruzilhadas entre Colapso, Neofascismo e Emancipação</p>
+                        <p class="text-gray-700 mt-3">O Brasil enfrenta múltiplas crises entrelaçadas que exigem escolhas coletivas urgentes sobre que futura sociedade queremos:</p>
+                        <ul class="list-disc ml-6 text-gray-700 mt-2">
+                            <li><strong>Crise climática acelerada em país tropical:</strong> Brasil é principal regulador climático do planeta (Amazônia); degradação acelerada via agronegócio ameaça "ponto de inflexão" climático global. Seca histórica no litoral, inundações urbanas nas periferias — população pobre e negra sofre desproporcionalmente.</li>
+                            <li><strong>Ameaça fascista e erosão democrática recente:</strong> 2018-2022 vivenciou onda autoritária; instituições débeis; Congresso Nacional dominado por oligarcas que votam contra interesses da maioria. Democracia brasileira é frágil — exige vigilância permanente de movimentos sociais, sindicatos, academia.</li>
+                            <li><strong>Automação e desemprego estrutural em contexto de informalidade:</strong> Brasil pode viver desemprego tecnológico acelerado sem rede de proteção social; renda básica pouco debatida; trabalho ainda é principal forma de acesso a direitos (saúde, previdência vinculadas ao emprego formal).</li>
+                            <li><strong>Aprofundamento de desigualdades raciais e de gênero:</strong> Mulheres negras enfrentam tripla opressão (raça, gênero, classe); taxas de feminicídio crescem; população LGBTQIA+ sofre violência sistemática. Futuro igualitário exige combate ao patriarcado racializado, não apenas crescimento econômico.</li>
+                            <li><strong>Renovação democrática via participação expansiva:</strong> Movimentos negros, indígenas, LGBTQIA+, feministas, estudantis, ambientalistas apontam alternativas — decolonialidade, ecofeminismo, pluralismo político radical. Futuro não é dado; depende da luta presente pelo direito de imaginar mundos outros.</li>
+                        </ul>
+                    </div>
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-gray-800">Referências Bibliográficas</h3>
+                    <div class="bg-gray-50 rounded-lg p-4">
+                        <ul class="text-sm text-gray-600 space-y-2">
+                            <li>MEADOWS, Donella et al. <em>Limites do Crescimento</em>. São Paulo: Perspectiva, 1972.</li>
+                            <li>LATOUCHE, Serge. <em>Pequeno Tratado do Decrescimento Sereno</em>. São Paulo: WMF Martins Fontes, 2009.</li>
+                            <li>ACOSTA, Alberto. <em>O Bem Viver</em>. São Paulo: Autonomia Literária, 2016.</li>
+                            <li>MILLS, C. Wright. <em>A Imaginação Sociológica</em>. Rio de Janeiro: Zahar, 1975.</li>
+                            <li>ONU. <em>Transformando Nosso Mundo: A Agenda 2030 para o Desenvolvimento Sustentável</em>. 2015.</li>
+                            <li>SANTOS, Boaventura de Sousa. <em>A Crítica da Razão Indolente</em>. São Paulo: Cortez, 2000.</li>
+                        </ul>
+                    </div>
+                `
+}
+];
+
+        // Transform flat topicsData into hierarchical categories
+        // All categories start CLOSED (collapsed: true)
+        const topicsCategories = [
+            {
+                id: "cat-fundamentos",
+                title: "Fundamentos",
+                emoji: "",
+                collapsed: true,
+                topics: topicsData.filter(t => ["sociologia-ciencia", "fundadores", "individuo-sociedade"].includes(t.id))
+            },
+            {
+                id: "cat-dimensoes-culturais",
+                title: "Dimensões Culturais",
+                emoji: "",
+                collapsed: true,
+                topics: topicsData.filter(t => ["cultura-sociedade", "cultura-arte-comunicacao", "religiao-sociedade", "religioes-mundo-contemporaneo", "comunicacao-massa", "sociabilidades-mundo-digital"].includes(t.id))
+            },
+            {
+                id: "cat-identidades",
+                title: "Identidades e Diferenças",
+                emoji: "",
+                collapsed: true,
+                topics: topicsData.filter(t => ["identidade-social", "raca", "genero-sexualidade", "corporalidade-afetos", "culturas-juvenis"].includes(t.id))
+            },
+            {
+                id: "cat-estrutura-social",
+                title: "Estrutura Social",
+                emoji: "",
+                collapsed: true,
+                topics: topicsData.filter(t => ["familia", "envelhecimento-ciclos", "educacao-socializacao", "sistema-capitalista", "trabalho", "consumo-estilos-vida"].includes(t.id))
+            },
+            {
+                id: "cat-desigualdade",
+                title: "Desigualdade e Controle",
+                emoji: "",
+                collapsed: true,
+                topics: topicsData.filter(t => ["classes-desigualdade", "pobreza-brasil", "poder-dominacao", "desvio-controle"].includes(t.id))
+            },
+            {
+                id: "cat-politica",
+                title: "Política e Movimentos",
+                emoji: "",
+                collapsed: true,
+                topics: topicsData.filter(t => ["estado-governo-democracia", "sistema-politico-brasileiro", "politica-poder", "movimentos-sociais", "formas-contemporaneas-mobilizacao"].includes(t.id))
+            },
+            {
+                id: "cat-brasil-global",
+                title: "Brasil e Contextos Globais",
+                emoji: "",
+                collapsed: true,
+                topics: topicsData.filter(t => ["sociedade-brasileira", "populacoes-brasil", "diversidade-cultural-brasil", "migracoes-deslocamentos", "conflito-mudanca", "globalizacao-sociedade", "economia-sociedade-contemporanea"].includes(t.id))
+            },
+            {
+                id: "cat-desafios",
+                title: "Desafios Contemporâneos",
+                emoji: "",
+                collapsed: true,
+                topics: topicsData.filter(t => ["ciencia-tecnologia", "sociedade-meio-ambiente", "saude-sociedade", "futuro"].includes(t.id))
+            }
+        ];
+
+        // Helper: Flatten all topics from categories for backward compatibility
+        const getAllTopicsFlat = () => topicsCategories.flatMap(cat => cat.topics);
+
+        // QUIZZES DATA

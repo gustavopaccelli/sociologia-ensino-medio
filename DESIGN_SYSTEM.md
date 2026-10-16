@@ -20,7 +20,7 @@
 | Name | Value | CSS Variable | Purpose |
 |------|-------|---|---------|
 | Graphite | `#615d59` | `--color-text-secondary` | Body text with warm cast |
-| Stone | `#757575` | `--color-text-muted` | Secondary text, helper text |
+| Stone | `#6b6b6b` | `--color-text-muted` | Secondary text, helper text (5.1:1 on canvas) |
 | Sky Tint | `#e6f3fe` | `--color-bg-secondary` | Ghost buttons, soft accents |
 
 ### Accent Palette (Rotating)
@@ -174,16 +174,18 @@
 - ✅ Apply negative letter-spacing to display sizes (>40px)
 - ✅ Keep motion at 150-250ms for responsiveness
 - ✅ Use accent colors for feature block backgrounds
-- ✅ Build text hierarchy through alpha values on black
+- ✅ Build text hierarchy through solid colors: #000000, #615d59, #6b6b6b
 
 ### Don't
 - ❌ Use pure white as page background (use warm `#f6f5f4`)
 - ❌ Add shadows to content cards (hairline borders only)
 - ❌ Use multiple chromatic button colors in same view
-- ❌ Apply 100% black to all text (use alpha: 100%, 95%, 60%, 40%)
+- ❌ Use reduced opacity on body or helper text (solid colors only)
 - ❌ Use border-radius > 12px on rectangular elements
 - ❌ Use gradients (flat fills only)
 - ❌ Use multiple accent colors for CTAs (one per screen)
+- ❌ Use white text on marigold, coral, sky or signal blue (use black; white fails contrast)
+- ❌ Use the primary blue as text on sky tint (use #005bab, 6.0:1)
 
 ---
 
@@ -201,8 +203,8 @@
 Headline:       #000000 (100%, 72px, weight 700)
 Subheading:     #000000 (95%, 40px, weight 600)
 Body:           #615d59 (100%, 16px, weight 400)
-Secondary:      #757575 (100%, 14px, weight 400)
-Muted:          #000000 (40%, 12px, weight 400)
+Secondary:      #6b6b6b (100%, 14px, weight 400)
+Muted:          #615d59 (100%, 12px, weight 400)
 ```
 
 ---
@@ -218,7 +220,7 @@ Muted:          #000000 (40%, 12px, weight 400)
   --color-surface: #ffffff;
   --color-text: #000000;
   --color-text-secondary: #615d59;
-  --color-text-muted: #757575;
+  --color-text-muted: #6b6b6b;
   
   /* Accents */
   --color-accent-warm: #ffb110;
@@ -262,6 +264,22 @@ Muted:          #000000 (40%, 12px, weight 400)
 - Cards: `#ffffff` with 1px `rgba(0,0,0,0.08)` borders
 
 ---
+
+## ♿ Contrast Rules
+
+| Pair | Ratio | Result |
+|------|-------|--------|
+| #000000 on #f6f5f4 | 19.3:1 | AAA |
+| #615d59 on #f6f5f4 | 6.0:1 | AA |
+| #6b6b6b on #f6f5f4 | ~4.9:1 | AA |
+| #ffffff on #0075de | 4.57:1 | AA (limit) |
+| #005bab on #e6f3fe | 6.0:1 | AA (use for blue text on tint) |
+| #000000 on #ffb110 | 11.6:1 | AAA |
+| #000000 on #f64932 | 5.9:1 | AA |
+| #000000 on #62aef0 | 8.8:1 | AAA |
+| #ffffff on #ffb110 / #62aef0 / #f64932 / #097fe8 | < 4.1:1 | Fails for text |
+
+Text on accent backgrounds is always #000000. Text on dark #02093a is #ffffff or #62aef0.
 
 ## 🔗 References
 
